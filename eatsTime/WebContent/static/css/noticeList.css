@@ -45,6 +45,7 @@ ul {
 /* 고객센터 메뉴창 ul 태그 */
 ul {
     list-style-type: none !important;
+    margin-block-start: 0 !important;
 }
 
 /* 고객센터 메뉴창 각 li에 적용되는 스타일 */
@@ -255,6 +256,14 @@ svg:not(:root) {
     padding: 20px 0px;
     color: rgb(76, 76, 76);
     flex-basis: 100px;
+}
+
+/* 작성날짜 표기된 곳 */
+.css-b1hszl {
+    text-align: center;
+    padding: 20px 0px;
+    flex-basis: 100px;
+    color: rgb(153, 153, 153);
 }
 
 /* 게시판 앞/뒤로 가기 파트 컨테이너 */
