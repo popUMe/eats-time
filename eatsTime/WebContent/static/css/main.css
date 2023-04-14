@@ -1,0 +1,782 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: Noto Sans;
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(https://res.kurly.com/fonts/NotoSansKR-Light.woff2)
+		format("woff2"),
+		url(https://res.kurly.com/fonts/NotoSansKR-Light.woff) format("woff"),
+		url(https://res.kurly.com/fonts/NotoSansKR-Light.otf)
+		format("truetype")
+}
+
+@font-face {
+	font-family: Noto Sans;
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://res.kurly.com/fonts/NotoSansKR-Regular.woff2)
+		format("woff2"),
+		url(https://res.kurly.com/fonts/NotoSansKR-Regular.woff)
+		format("woff"),
+		url(https://res.kurly.com/fonts/NotoSansKR-Regular.otf)
+		format("truetype")
+}
+
+@font-face {
+	font-family: Noto Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(https://res.kurly.com/fonts/NotoSansKR-Medium.woff2)
+		format("woff2"),
+		url(https://res.kurly.com/fonts/NotoSansKR-Medium.woff) format("woff"),
+		url(https://res.kurly.com/fonts/NotoSansKR-Medium.otf)
+		format("truetype")
+}
+
+@font-face {
+	font-family: Noto Sans;
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://res.kurly.com/fonts/NotoSansKR-Bold.woff2)
+		format("woff2"), url(https://res.kurly.com/fonts/NotoSansKR-Bold.woff)
+		format("woff"), url(https://res.kurly.com/fonts/NotoSansKR-Bold.otf)
+		format("truetype")
+}
+
+/* 헤더 전체 css */
+*, :after, :before {
+	box-sizing: border-box;
+/* 	margin: 0; */
+}
+
+*, :after, :before, legend, td, th {
+	padding: 0;
+}
+
+body, button, input, select, textarea {
+	font-size: 14px;
+	color: #333;
+}
+
+body {
+	margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: #fff;
+	-webkit-tap-highlight-color: transparent;
+}
+
+div {
+	display: block;
+}
+
+html {
+	touch-action: manipulation;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.15;
+}
+
+*, :after, :before {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+*, :after, :before, legend, td, th {
+	padding: 0;
+}
+
+*, :after, :before {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+*, :after, :before, legend, td, th {
+	padding: 0;
+}
+
+/* 헤더 윗부분 */
+.css-t79vuj {
+	position: relative;
+	width: 1050px;
+	height: 100px;
+	margin: 0px auto;
+	letter-spacing: -0.3px;
+}
+
+/* 헤더 오른쪽 위(회원가입, 로그인, 고객센터) 부분*/
+.css-fexq9b {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 20;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	font-size: 12px;
+}
+
+/* 고객센터 역삼각형 부분 */
+.css-1lrerrk {
+	width: 8px;
+	height: 5px;
+	background-image:
+		url(https://res.kurly.com/pc/ico/1908/ico_down_16x10.png);
+	background-size: cover;
+	background-position: center center;
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 1px;
+}
+
+/* 헤더 회원가입 버튼 부분 */
+.css-1g7d8zf {
+	display: block;
+	color: rgb(95, 0, 128);
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+a {
+	background-color: transparent;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* 헤더 회원가입 로그인 사이에 있는 '|' */
+.css-1qgm48u {
+	width: 1px;
+	height: 13px;
+	margin: 0px 12px;
+	background-color: rgb(217, 217, 217);
+}
+
+/* 헤더 로그인 버튼 부분 */
+.css-1pu21l0 {
+	display: block;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+/* 헤더 고객센터 버튼 부분 1 */
+.css-1qolcqm {
+	line-height: 35px;
+	position: relative;
+}
+
+/* 헤더 고객센터 버튼 부분 2 */
+.css-1pu21l0 {
+	display: block;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+/* 헤더 고객센터 마우스 올릴 때 부분 */
+.css-1qolcqm .menu {
+	display: none;
+}
+
+/* 헤더 고객센터 마우스 올릴 때 부분 */
+.css-1ia5eje {
+	position: absolute;
+	right: 0px;
+	top: 34px;
+	width: 120px;
+	padding: 3px 9px;
+	border: 1px solid rgb(221, 221, 221);
+	background-color: rgb(255, 255, 255);
+}
+
+/* 헤더 고객센터 마우스 올리고 나오는 공지사항, 1:1문의 부분 */
+.css-12olpw6 {
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	cursor: pointer;
+}
+
+/* 헤더 로고, 검색창, 장바구니 등 있는 라인 부분 */
+.css-r7wmjj {
+	height: 100px;
+	padding-top: 36px;
+}
+
+/* 로고, 마켓컬리, 뷰티컬리 부분 */
+.css-boc80u {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	height: 63px;
+}
+
+/* 마켓컬리 로고 부분 */
+.css-17mnrrx {
+	flex: 0 0 82px;
+}
+
+img, legend {
+	border: 0;
+	vertical-align: top;
+}
+
+canvas, img, video {
+	max-width: 100%;
+}
+
+img {
+	overflow-clip-margin: content-box;
+	overflow: clip;
+}
+
+/* 로고 옆에 마켓컬리 버튼 부분 */
+.css-j0ug0x.active, .css-j0ug0x:hover {
+	font-weight: 500;
+	color: rgb(95, 0, 128);
+}
+
+/* 로고 옆에 마켓컬리 버튼 부분 */
+.css-j0ug0x {
+	flex-shrink: 0;
+	margin-left: 20px;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.33;
+	letter-spacing: normal;
+	color: rgb(181, 181, 181);
+	cursor: pointer;
+}
+
+html, button, input, select, textarea {
+	font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum,
+		sans-serif;
+}
+
+button {
+	border-radius: 0;
+	overflow: visible;
+	background-color: transparent;
+	border: none;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button, select {
+	text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* 로고 옆에 뷰티컬리 부분 */
+.css-1sia941 {
+	flex-shrink: 0;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.33;
+	letter-spacing: normal;
+	color: rgb(181, 181, 181);
+	cursor: pointer;
+	position: relative;
+	margin-left: 22px;
+}
+
+/* 뷰티컬리 N 부분 */
+.css-1sia941::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgNyA3IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGggZD0iTTUuMTA4IDd2LS4wMDdMMS45MTEgMi41NzdWN0guMDQ2VjBoMS44NjdsMy4xOTYgNC40MTlWMGgxLjg2N3Y3SDUuMTA4eiIgZmlsbD0iI0ZBNjIyRiIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=)
+		0px 0px no-repeat;
+	width: 10px;
+	height: 10px;
+	top: 3px;
+	right: -13px;
+}
+
+/* 검색창 부분 */
+.css-pqw0uk {
+	position: relative;
+	width: 1050px;
+	margin: 0px auto;
+}
+
+/* 검색창 부분 */
+.css-w444a2 {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	position: absolute;
+	left: 325px;
+	top: -55px;
+	width: 400px;
+	height: 48px;
+	padding-left: 14px;
+	border: 1px solid rgb(95, 0, 128);
+	border-radius: 6px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgb(247, 247, 247) 0px 0px 0px 1px inset;
+}
+
+/* 검색창 입력 부분 */
+.css-11ntk83 {
+	width: 300px;
+	background-color: inherit;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	letter-spacing: -0.33px;
+}
+
+input {
+	writing-mode: horizontal-tb !important;
+	text-rendering: auto;
+	color: fieldtext;
+	letter-spacing: normal;
+	word-spacing: normal;
+	line-height: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	appearance: auto;
+	-webkit-rtl-ordering: logical;
+	cursor: text;
+	background-color: field;
+	margin: 0em;
+	padding: 1px 2px;
+	border-width: 2px;
+	border-style: inset;
+	border-color: -internal-light-dark(rgb(118, 118, 118),
+		rgb(133, 133, 133));
+	border-image: initial;
+}
+
+/* 검색창 돋보기 부분 */
+.css-ywxmlw {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	bottom: 3px;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgzNnYzNkgweiIvPgogICAgICAgIDxnIHN0cm9rZT0iIzVGMDA4MCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Im0yNi4wODEgMjYuMDgxLTQuMTItNC4xMk0xNi40NjcgMjMuMzM0YTYuODY3IDYuODY3IDAgMSAwIDAtMTMuNzM0IDYuODY3IDYuODY3IDAgMCAwIDAgMTMuNzM0eiIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==)
+		0px 0px no-repeat;
+}
+
+/* 장바구니 등 부분 */
+.css-pqw0uk {
+	position: relative;
+	width: 1050px;
+	margin: 0px auto;
+}
+
+/* 장바구니 등 부분 */
+.css-c4pbxv {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	position: absolute;
+	right: -6px;
+	top: -49px;
+}
+
+/* 헤더 위치 이미지 부분 */
+.css-1n4p7us {
+	width: 36px;
+	height: 36px;
+	margin-right: 20px;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTM2IDM2SDBWMGgzNnoiLz4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4LjcgNikiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjciPgogICAgICAgICAgICA8cGF0aCBkPSJNOS4zMDYgMjRTMCAxNi41NDQgMCA5LjMwNmE5LjMwNiA5LjMwNiAwIDAgMSAxOC42MTIgMEMxOC42MTIgMTYuNTQ0IDkuMzA2IDI0IDkuMzA2IDI0eiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICAgICAgICAgIDxjaXJjbGUgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgY3g9IjkuMjEyIiBjeT0iOS4xMjMiIHI9IjIuNzg0Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K)
+		50% 50% no-repeat;
+	cursor: pointer;
+}
+
+/* 헤더 좋아요 이미지 부분 */
+.css-231fw3 {
+	width: 36px;
+	height: 36px;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yOC45MjcgOC44OTNhNi40NiA2LjQ2IDAgMCAwLTkuMTM5IDBsLTEuODI5IDEuODI4LTEuODI3LTEuODI4YTYuNDYyIDYuNDYyIDAgMSAwLTkuMTQgOS4xMzhMOC44MiAxOS44Nmw4LjQzMiA4LjQzNGExIDEgMCAwIDAgMS40MTQgMGw4LjQzMy04LjQzNGgwbDEuODI4LTEuODI4YTYuNDYgNi40NiAwIDAgMCAwLTkuMTM4eiIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNyIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==)
+		50% 50% no-repeat;
+}
+
+/* 헤더 장바구니 이미지 부분 */
+.css-ff2aah {
+	position: relative;
+	margin-left: 20px;
+}
+
+.css-g25h97 {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTM2IDM2SDBWMGgzNnoiLz4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1LjE2NCA2LjU0NykiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjciPgogICAgICAgICAgICA8cGF0aCBkPSJtMjUuNjggMy42Ni0yLjcyIDExLjU3SDcuMzdMNC42NiAzLjY2eiIvPgogICAgICAgICAgICA8Y2lyY2xlIGN4PSIyMC41MiIgY3k9IjIwLjc4IiByPSIyLjE0Ii8+CiAgICAgICAgICAgIDxjaXJjbGUgY3g9IjkuODEiIGN5PSIyMC43OCIgcj0iMi4xNCIvPgogICAgICAgICAgICA8cGF0aCBkPSJNMCAwaDMuOGwxLjc2IDcuNSIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==);
+	cursor: pointer;
+}
+
+/* 헤더 메뉴 부분 전체 */
+.css-19ndp9a {
+	min-width: 1050px;
+	letter-spacing: -0.3px;
+	background-color: rgb(255, 255, 255);
+	position: relative;
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+	width: 100%;
+	z-index: 10;
+}
+
+/* 헤더 메뉴 부분 */
+.css-mlddcv {
+	position: relative;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	width: 1050px;
+	height: 56px;
+	margin: 0px auto;
+}
+
+/* 헤더 카테고리 부분 */
+.css-axtlq9 {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	height: 100%;
+}
+
+/* 헤더 카데고리 햄버거 버튼 부분 */
+.css-1k5gn9s {
+	width: 16px;
+	height: 14px;
+	margin-right: 14px;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0wIDBoMTZ2MS43SDBWMHptMCA2LjE1aDE2djEuN0gwdi0xLjd6bTAgNi4xNWgxNlYxNEgwdi0xLjd6IiBmaWxsPSIjMzMzIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPC9zdmc+Cg==)
+		0px 0px/16px 14px no-repeat;
+}
+
+/* 헤더 카테고리 버튼 부분 */
+.css-t75x7c {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: -0.3px;
+	color: rgb(51, 51, 51);
+}
+
+/* 헤더 메뉴 부분 전체 */
+.css-1887xqd {
+	display: flex;
+	margin-left: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+}
+
+ol, ul {
+	list-style-type: none;
+}
+
+
+
+/* 헤더 메뉴 부분 */
+.css-59mmhh {
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	width: 150px;
+	height: 55px;
+	padding-top: 18px;
+	line-height: 20px;
+	text-align: center;
+}
+
+/* 헤더 메뉴 버튼 부분 */
+.css-1xyu7j9 {
+	height: fit-content;
+	font-size: 16px;
+	font-weight: 500;
+	color: rgb(51, 51, 51);
+	cursor: pointer;
+}
+
+/* 헤더 샛별,택배 배송안내 부분 */
+.css-s5xdrg {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+/* 헤더 샛별,택배 배송안내 부분 */
+.css-dnwaeo {
+	height: 32px;
+	padding: 6px 16px;
+	border-radius: 18px;
+	border: 1px solid rgb(238, 238, 238);
+	color: rgb(102, 102, 102);
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: -0.32px;
+}
+
+/* 헤더 샛별, 택배 부분 */
+.css-1s2o3jp {
+	font-weight: 500;
+	color: rgb(95, 0, 128);
+}
+
+/* 헤더 hidden class 부분 */
+.css-1px7x3s {
+	min-height: 56px;
+	display: none;
+}
+
+/* 푸터 전체 */
+.css-odadb1 {
+    padding-top: 30px;
+    border-top: 1px solid rgb(247, 247, 247);
+}
+
+/* 푸터 부분 */
+.css-1i60c0e {
+    width: 1050px;
+    margin: 0px auto;
+}
+
+.css-j6zuv6 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+/* 푸터 왼쪽 부분 */
+.css-4iyald {
+    padding-bottom: 17px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+/* 푸터 왼쪽 번호 부분 */
+.css-9jqcug {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+b, optgroup, strong {
+    font-weight: 700;
+}
+
+/* 푸터 왼쪽 번호 옆 부분 */
+.css-1uz1ro8 {
+    margin-left: 8px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+/* 푸터 왼쪽 카카오톡 문의 1:1 문의 ... 부분 */
+.css-1fttcpj {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 푸터 카카오톡 문의 부분 */
+.css-ho1qnd {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 푸터 카카오톡 문의 버튼 부분 */
+.css-hupzfj {
+    display: block;
+    width: 140px;
+    height: 40px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 3px;
+    line-height: 39px;
+    text-align: center;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+/* 푸터 카카오톡 문의 내용 부분 */
+.css-1lxmeik {
+    margin-top: 2px;
+    color: rgb(153, 153, 153);
+    letter-spacing: -0.5px;
+    line-height: 16.8px;   
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.css-w0fx7a {
+    margin: 0px 6px;
+}
+
+/* 푸터 1:1 문의 부분 */
+
+.css-ho1qnd {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 푸터 1:1 문의 버튼 부분 */
+.css-1pgo3vb {
+    display: block;
+    width: 140px;
+    height: 40px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 3px;
+    line-height: 39px;
+    text-align: center;
+}
+
+/* 푸터 1:1 문의 내용 부분 */
+.css-1lxmeik {
+    margin-top: 2px;
+    color: rgb(153, 153, 153);
+    letter-spacing: -0.5px;
+    line-height: 16.8px;
+}
+
+/* 푸터 대량주문 문의 부분 */
+.css-ho1qnd {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 푸터 대량주문 문의 버튼 부분 */
+.css-1pgo3vb {
+    display: block;
+    width: 140px;
+    height: 40px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 3px;
+    line-height: 39px;
+    text-align: center;
+}
+
+/* 푸터 대량주문 문의 내용 부분 */
+.css-1lxmeik {
+    margin-top: 2px;
+    color: rgb(153, 153, 153);
+    letter-spacing: -0.5px;
+    line-height: 16.8px;
+}
+
+/* 푸터 비회원 문의 부분 */
+.css-vtjvf {
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(153, 153, 153);
+}
+
+
+/* 푸터 오른쪽 부분 */
+.css-1fttcpj {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 푸터 오른쪽 컬리소개 컬리소개 영상 ... ul 부분 */
+.css-17hse91 {
+    display: flex;
+    width: 100%;
+    padding-bottom: 29px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+/* 푸터 컬리소개 컬리소개 영상 ... li 부분 */
+.css-1tayzmu:first-of-type {
+    margin-left: 0px;
+}
+
+.css-1tayzmu {
+    margin-left: 14px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+/* 푸터 컬리소개 ... 각 버튼 부분 */
+.css-1tfhwyj {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+ol, ul {
+	list-style-type: none;
+}
+
+/* 푸터 법인명 부분 */
+.css-bz7mfs {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(153, 153, 153);
+    margin-bottom: 40px;
+}
+
+/* 푸터 법인명 쪽 '|' 부분 */
+.css-1ekjygq {
+    padding-left: 4px;
+}
+
+.css-1ekjygq::after {
+    content: "|";
+    padding-right: 4px;
+    font-size: 10px;
+    vertical-align: top;
+}
+
+/* 푸터 법인명 쪽 보라색 부분 */
+.css-1tby8gd {
+    margin-left: 3px;
+    color: rgb(95, 0, 128);
+}
+
+/* 푸터 SNS 부분 */
+.css-zjik7 {
+    display: flex;
+}
+
+/* 푸터 인스타그램 */
+.css-9ipg3 {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
