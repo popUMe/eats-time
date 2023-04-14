@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>푸터영역</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/static/css/main.css" />
 </style>
 </head>
 <body>
@@ -162,8 +163,8 @@
 		<div class="css-175n8cp etk3uz81">
 			컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.<br>마켓플레이스(오픈마켓)
 			상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와
-			책임을 부담하지 않습니다.<em class="css-1vhhy2d etk3uz80">© KURLY CORP. ALL
-				RIGHTS RESERVED</em>
+			책임을 부담하지 않습니다. <em class="css-1vhhy2d etk3uz80">© KURLY CORP.
+				ALL RIGHTS RESERVED</em>
 		</div>
 	</div>
 </body>

@@ -780,3 +780,48 @@ ol, ul {
     height: 30px;
     margin-right: 10px;
 }
+
+/* 푸터 아래 부분 */
+.css-81eeg3 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 26px 0px 33px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+
+/* 푸터 아래 부분 */
+.css-12t5wjq {
+    display: flex;
+    text-align: left;
+}
+
+/* 푸터 아래 이미지 부분 */
+.css-1262i6n {
+    width: 34px;
+    margin-right: 10px;
+}
+
+/* 푸터 아래 내용 부분 */
+.css-bft4sh {
+    font-size: 10px;
+    line-height: 14.5px;
+    color: rgb(153, 153, 153);
+    word-break: break-word;
+}
+
+/* 푸터 바닥 부분 */
+.css-175n8cp {
+    padding: 20px 0px 30px;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    color: rgb(153, 153, 153);
+}
+/* 푸터 맨 바닥 부분 */
+.css-1vhhy2d {
+    display: block;
+    padding-top: 7px;
+    font-style: normal;
+}
