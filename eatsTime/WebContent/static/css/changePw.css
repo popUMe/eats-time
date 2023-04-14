@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+
+/* 전체 묶은 태그 */
+.css-140915z {
+    min-width: 1050px;
+    padding: 50px 0;
+    background-color: white;
+}
+
+/* 비밀번호 재설정 태그 */
+.css-7500ra {
+    padding-bottom: 30px;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* 아래 입력들을 감싼 div태그*/
+
+.css-u3y03b {
+    max-width: 400px;
+    padding: 0 10px 6px 10px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+
+/* 입력들을 감싼 form 태그 */
+
+.css-s3iz85 {
+    padding: 24px 20px;
+}
+
+/* 새 비밀번호 등록 감싼 div 태그 */
+/* 그안에 레이블이랑 새비밀번호 input 태그를 감싼 div 태그 */
+.css-1yjqrpx {
+    padding-bottom: 12px;
+}
+
+/* 새비밀번호 label 태그 */
+.css-c3g9of {
+    display: inline-block;
+    padding: 8px 0 11px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #333;
+}
+
+
+/* 새비밀번호 input태그를 감싼 div 태그  */
+.css-176lya2 {
+    position: relative;
+    height: 48px;
+}
+
+/* 그안에 새비밀번호 input 태그 */
+.css-u52dqk {
+    width: 100%;
+    height: 46px;
+    padding: 0 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 한번에 지울 수 있는 x 이미지 버튼 태그  */
+
+.css-118q5z4 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    height: 16px;
+    width: 16px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBmaWxsPSIjOTk5IiBvcGFjaXR5PSIuNSIgY3g9IjgiIGN5PSI4IiByPSI4Ii8+CiAgICAgICAgPGcgc3Ryb2tlPSIjRkZGIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij4KICAgICAgICAgICAgPHBhdGggZD0ibTEwLjg5NyAxMC43ODYtNS43Ny01Ljc2OU01LjEyMiAxMC43ODVsNS43NzUtNS43NzUiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=) 0% 0% / 16px 16px no-repeat transparent;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+
+/* 새비밀번호 확인을 감싸는 div 태그 */
+
+.css-1blp8ou:not(:first-of-type) {
+    margin-top: 8px;
+}
+
+/* 새비밀번호 확인을 감싸는 그 다음 div 태그 */
+.css-1yjqrpx {
+    padding-bottom: 12px;
+}
+
+/* 레이블 태그 */
+.css-c3g9of {
+    display: inline-block;
+    padding: 8px 0 11px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #333;
+}
+
+/* input과 x버튼을 감싸는 div 태그 */
+.css-176lya2 {
+    position: relative;
+    height: 48px;
+}
+
+/* input 태그 */
+
+.css-u52dqk {
+    width: 100%;
+    height: 46px;
+    padding: 0 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.css-u52dqk:focus {
+    border: 1px solid #333;
+    background: none;
+}
+
+
+/* x버튼 위에 또 있다 */
+
+/* 유효성검사 p태그 속성도 위에 있음 */
+
+/* 확인 버튼을 감싸는 div 태그 */
+.css-3vxi16 {
+    margin-top: 18px;
+}
+
+/* 확인 버튼 태그  */
+
+.css-1s9rhb5:disabled {
+    background-color: #ddd;
+}
+
+button[disabled], input[disabled] {
+    cursor: default;
+}
+
+.css-1s9rhb5 {
+    display: block;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 52px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #5f0080;
+    border: 0 none;
+}
+
+/* disabled 두값이 다르면 그 속성이 적용되면서 커서가 디폴트고 회색으로 바뀜 #ddd */
+
+/* 그안에 확인 스판태그 */
+.css-ymwvow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 아래 유효성 검사 초록 p 태그 css  */
+
+.css-1319hys {
+    font-size: 12px;
+    color: rgb(14, 133, 26) !important;
+    line-height: 18px;
+    letter-spacing: -0.3px;
+}
+
+.css-1319hys::before {
+    content: "✓";
+    display: inline-block;
+    padding: 0px 4px 0px 2px;
+    font-size: 12px;
+    vertical-align: 0px;
+}
+
+/* 오류 빨간색 p태그 */
+
+.css-ua37vt {
+    font-size: 12px;
+    color: rgb(240, 63, 64);
+    line-height: 18px;
+    letter-spacing: -0.3px;
+}
+
+.css-ua37vt::before {
+    content: "✕";
+    display: inline-block;
+    padding: 0px 4px 0px 2px;
+    font-size: 12px;
+    vertical-align: 0px;
+}
+
+
+
+
+
+
