@@ -75,6 +75,9 @@ function fn_emailChk(email){
 	if(nameCheck && emailCheck){
 		$(".button").removeAttr("disabled");
 		$(".button").prop("background", "rgb(95, 0, 128)");
+	} else{
+		$(".button").prop("background", "rgb(221, 221, 221);");
+		$(".button").attr("disabled", "");
 	}
 
 		
