@@ -26,6 +26,7 @@
 								class="css-u52dqk" value="">
 						</div>
 					</div>
+					<p class="css-1ozil7i error1" name="error1"></p>
 				</div>
 				<div class="css-1blp8ou">
 					<div class="css-1yjqrpx">
@@ -36,9 +37,10 @@
 								class="css-u52dqk e1uzxhvi2" value="">
 						</div>
 					</div>
+					<p class="css-1ozil7i error2" name="error2"></p>
 				</div>
 				<div class="css-3vxi16">
-					<button class="css-1s9rhb5" type="submit" disabled=""
+					<button class="css-1s9rhb5 button" type="submit" disabled=""
 						radius="4">
 						<span class="css-ymwvow">확인</span>
 					</button>
@@ -47,5 +49,6 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/findPw.js"></script>
 </html>

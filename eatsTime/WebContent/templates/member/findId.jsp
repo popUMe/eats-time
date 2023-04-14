@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findId.css">
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
+<style>
+</style>
 <body>
 	<div class="css-140915z">
 		<div class="css-7500ra">아이디 찾기</div>
@@ -16,7 +18,7 @@
 			<div class="css-1izr46f">
 				<button type="button" class="css-j8h1l4">이메일 인증</button>
 			</div>
-			<form class="css-s3iz85">
+			<form class="css-s3iz85" name="findIdForm">
 				<div class="css-1blp8ou">
 					<div class="css-1yjqrpx">
 						<label for="name" class="css-c3g9of">이름</label>
@@ -26,6 +28,7 @@
 								class="css-u52dqk" value="">
 						</div>
 					</div>
+					<p class="css-1ozil7i error1" name="error1"></p>
 				</div>
 				<div class="css-1blp8ou">
 					<div class="css-1yjqrpx">
@@ -36,9 +39,10 @@
 								class="css-u52dqk e1uzxhvi2" value="">
 						</div>
 					</div>
+					<p class="css-1ozil7i error2" name="error2"></p>
 				</div>
 				<div class="css-3vxi16">
-					<button class="css-1s9rhb5" type="submit" disabled=""
+					<button class="css-1s9rhb5 button" type="submit" disabled=""
 						radius="4">
 						<span class="css-ymwvow">확인</span>
 					</button>
@@ -47,5 +51,6 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/findId.js"></script>
 </html>
