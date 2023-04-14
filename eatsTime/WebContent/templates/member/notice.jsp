@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/notice.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
 <title>Insert title here</title>
 </head>
 <body>
@@ -19,28 +20,28 @@
 				<ul class="css-1x9bshx ecbxmj1">
 					<li>
 						<a class="active css-g4g0eu ecbxmj0">
-							"공지사항"
+							공지사항
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
 						</a>
 					</li>
 					<li>
 						<a class=" css-g4g0eu ecbxmj0">
-							"자주하는 질문"
+							자주하는 질문
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
 						</a>
 					</li>
 					<li>
 						<a class=" css-g4g0eu ecbxmj0">
-							"1:1 문의"
+							1:1 문의
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
 						</a>
 					</li>
 					<li>
 						<a class=" css-g4g0eu ecbxmj0">
-							"대량주문 문의"
+							대량주문 문의
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
 						</a>
@@ -48,20 +49,37 @@
 				</ul>
 				<!-- 1:1 문의하기 -->
 				<a class="css-196gwz9 e19l01ug3">
-					<span class="css-1sdidca e19l01ug1">도움이 필요하신가요?</span>
-					<span class="css-rnnx2x e19l01ug0">1:1 문의하기</span>
-					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
-					</svg>
+					<div class="css-rmee6s e19l01ug2">
+						<span class="css-1sdidca e19l01ug1">도움이 필요하신가요?</span>
+						<span class="css-rnnx2x e19l01ug0">1:1 문의하기</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
+								<defs>
+									<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657">
+									</path>
+								</defs>
+								<g fill="none" fill-rule="evenodd">
+									<g>
+										<g>
+											<g>
+												<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
+													<use stroke="#333" stroke-linecap="round" stroke-width="1.8" stroke-linejoin="round" transform="rotate(45 5.657 5.657)" xlink:href="#gfk9q0rhta">
+													</use>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+					</div>	
 				</a>
 			</div>
-		</div>
-	<!-- 게시판 부분 -->
+				<!-- 게시판 부분 -->
 		<div class="css-171zbec eug5r8l0">
 		<!-- 게시판 상단부 '공지사항' -->
 			<div class="css-j0lifa ed9qr673">
 				<div class="css-fhxb3m ed9qr672">
 					<h2 class="css-1268zpe ed9qr671">공지사항</h2>
-					<span class="css-1268zpe ed9qr671">이츠타임의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</span>
+					<span class="css-a3vgo2 ed9qr670">이츠타임의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</span>
 				</div>
 			</div>
 		<!-- 게시글 칼럼 구분 -->
@@ -96,6 +114,8 @@
 				</div>
 			</div>
 		</div>
+		</div>
+
 		<!-- 우측 샛별 택배 배송안내 /등급별 혜택 / 레시피/ 최근 본 상품 부분 -->
 		<div class="css-2bdgy6 eltjwjt99">
 			<div class="css-18f2sbi e1tjwjt98">
@@ -150,7 +170,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </body>
