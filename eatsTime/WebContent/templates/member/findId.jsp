@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <link rel="icon" href="https://www.kurly.com//favicon.ico" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/findId.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/static/css/all.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/static/css/findId.css">
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <style>
@@ -23,20 +25,24 @@
 					<div class="css-1yjqrpx">
 						<label for="name" class="css-c3g9of">이름</label>
 						<div class="css-176lya2">
-							<input data-testid="input-box" id="name" name="name"
-								placeholder="이름을 입력해 주세요" type="text"
-								class="css-u52dqk" value="">
+							<input id="name" name="name" placeholder="이름을 입력해 주세요"
+								type="text" class="css-u52dqk input-content1" value="">
+							<button class="css-118q5z4 textbutton1" size="16" id="delete-input"
+								aria-label="delete-input" type="button"
+								style="visibility: hidden"></button>
 						</div>
 					</div>
 					<p class="css-1ozil7i error1" name="error1"></p>
 				</div>
 				<div class="css-1blp8ou">
 					<div class="css-1yjqrpx">
-						<label for="email" class="css-c3g9of e1uzxhvi4">이메일</label>
+						<label for="email" class="css-c3g9of">이메일</label>
 						<div class="css-176lya2 e1uzxhvi3">
-							<input data-testid="input-box" id="email" name="email"
-								placeholder="이메일을 입력해 주세요" type="email"
-								class="css-u52dqk e1uzxhvi2" value="">
+							<input id="email" name="email" placeholder="이메일을 입력해 주세요"
+								type="email" class="css-u52dqk input-content2" value="">
+							<button class="css-118q5z4 textbutton2" size="16" id="delete-input"
+								aria-label="delete-input" type="button"
+								style="visibility: hidden"></button>
 						</div>
 					</div>
 					<p class="css-1ozil7i error2" name="error2"></p>
