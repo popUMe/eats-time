@@ -1,0 +1,461 @@
+@charset "UTF-8";
+/*회원가입 감싸는 div태그*/
+.css-pculus {
+    min-width: 1050px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    background-color: rgb(255, 255, 255);
+}
+/*회원가입 div태그*/
+.css-o5dw7d {
+    margin-bottom: 50px;
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -1px;
+    color: rgb(51, 51, 51);
+}
+/*회원가입 전체 박스 div태그*/
+.css-mhmtvt {
+    width: 640px;
+    margin: 0px auto;
+}
+/*회원가입 틀잡는 div태그*/
+.css-rb0i47 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(51, 51, 51);
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    line-height: 17px;
+    text-align: right;
+}
+/*필수 입력사항의 span태그*/
+.css-qq9ke6 {
+    color: rgb(238, 106, 123);
+}
+/*회원가입 박스div태그*/
+.css-y8aj3r {
+    padding: 0px;
+}
+
+/*아이디 박스부분 div태그*/
+.css-1pjgd36 {
+    display: inline-flex;
+    width: 100%;
+    padding: 10px 20px;
+}
+/*아이디 부분 라벨태그*/
+.css-1obgjqh {
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    line-height: 20px;
+}
+/*아이디 옆 *span 태그*/
+.css-qq9ke6 {
+    color: rgb(238, 106, 123);
+}
+/*아이디 입력 div태그*/
+.css-82a6rk {
+    flex: 1 1 0%;
+}
+/*아이디 입력 div태그*/
+.css-jmalg {
+    padding-bottom: 0px;
+}
+/*아이디 입력 div태그*/
+.css-176lya2 {
+    position: relative;
+    height: 48px;
+}
+/*아이디 입려부분 input 태그*/
+.css-u52dqk {
+    width: 100%;
+    height: 46px;
+    padding: 0 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+/*아이디 중복확인*/
+.css-1w0ksfz {
+    width: 120px;
+    margin-left: 8px;
+}
+/*아이디 중복확인 버튼부분*/
+.css-1w0ksfz > button {
+    height: 44px;
+    border-radius: 3px;
+}
+/*아이디 중복확인 버튼부분*/
+.css-ufulao {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    color: rgb(95, 0, 128);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(95, 0, 128);
+}
+/*중복확인 부분 span태그*/
+.css-1w0ksfz > button > span {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/*중복확인 부분 span태그*/
+.css-ymwvow {
+    display: inline-block;
+}
+/*주소검색 버튼 부분*/
+.css-1schgvv {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    color: rgb(95, 0, 128);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(95, 0, 128);
+}
+/*주소 검색부분 span태그*/
+.css-1schgvv > span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*주소 검색부분	*/
+.css-1m3kac1 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+/*주소 검색 밑의  span태그*/
+.css-vukl2m {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(102, 102, 102);
+}
+
+/*성별부분 감싸는 div태그*/
+.css-14wodj6 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/*성별부분 label 태그*/
+.css-z9g6s0 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+/*성별부분 input태그*/
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/*성별부분 input태그*/
+.css-1pes2r6 {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0px, 0px, 0px, 0px);
+}
+/*성별 선택 체그박스 span태그*/
+.css-14wodj6 > label > span {
+    font-size: 14px;
+}
+/*성별 선택 체그박스 span태그*/
+.css-198i9ca {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+/*성별 선택 div태그*/
+.css-1dahn5m {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+/**/
+.css-mgd87h {
+    position: relative;
+    margin-left: 12px;
+}
+/*성별 선택안함 부분 span태그*/
+.css-5xw1m2 {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgb(95, 0, 128);
+}
+
+/*성별 선택 안함 부분div태그*/
+.css-1vic0rk {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+}
+/*생년월일 입력 div태그*/
+.css-18n8lnw {
+    height: 44px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+    padding: 0px 15px;
+}
+/*생년월일 입력 div태그*/
+.css-1dkwuq4 {
+    padding-bottom: 0px;
+}
+/*생년월일 입력 div태그*/
+.css-xsmgyi {
+    position: relative;
+    height: 40px;
+}
+/*생년월일 입력 input태그*/
+.css-1dkwuq4 input {
+    text-align: center;
+    font-size: 14px;
+    border: none;
+}
+/*생년월일 입력 input태그*/
+.css-151eme7 {
+    width: 100%;
+    height: 40px;
+    padding: 0px 11px 1px 15px;
+    border-radius: 4px;
+    font-weight: 400;
+    line-height: 38px;
+    color: rgb(51, 51, 51);
+    outline: none;
+    box-sizing: border-box;
+}
+/*생년월일 입력 span태그*/
+.css-5lnvt6 {
+    height: 100%;
+}
+/*생년월일 입력 after태그*/
+.css-5lnvt6::after {
+    content: "/";
+    font-size: 14px;
+    color: rgb(204, 204, 204);
+    text-align: center;
+    line-height: 40px;
+}
+/*생년월일 입력 div태그*/
+.css-xsmgyi {
+    position: relative;
+    height: 40px;
+}
+/**/
+.css-1eo0fey {
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+/*이용약관동의 div태그*/
+.css-2yzr8b {
+    display: inline-flex;
+    width: 100%;
+    padding: 10px 0px 10px 20px;
+}
+/*이용약관동의 div태그*/
+.css-1y8737n {
+    width: 139px;
+    padding-top: 12px;
+}
+/*전체동의 div first태그*/
+.css-ov2xfu:first-of-type {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 12px;
+}
+/*전체동의 div태그*/
+.css-ov2xfu {
+    display: flex;
+    padding: 8px 0px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+}
+/*전체동의 label태그*/
+.css-msja7w {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: top;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+    padding: 0px;
+    font-weight: 500;
+    font-size: 18px;
+}
+/**/
+input[type=checkbox] {
+    box-sizing: border-box;
+    padding: 0;
+}
+/*전체동의 input태그*/
+.css-agvwxo {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0px, 0px, 0px, 0px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+}
+/*약관 버튼선택 div태그*/
+.css-79hxr7 {
+    margin-right: 12px;
+}
+.css-79hxr7 svg {
+    vertical-align: middle;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+/*약관동의 p태그*/
+.css-nygcgj {
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    padding-top: 4px;
+    padding-left: 36px;
+}
+
+/*이용약관동의 div태그*/
+.css-s5xdrg {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/*이용약관동의 label태그*/
+.css-1mjkje9 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: top;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+    padding: 0px;
+    font-size: 14px;
+}
+/*필수 span태그*/
+.css-g5xq45 {
+    padding-left: 5px;
+    color: rgb(153, 153, 153);
+}
+/*약관보기 a태그*/
+.css-7chi73 {
+    padding-right: 22px;
+    color: rgb(95, 0, 128);
+    letter-spacing: 0px;
+}
+/*약관보기 after*/
+.css-7chi73::after {
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    width: 6px;
+    height: 9px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiB2aWV3Qm94PSIwIDAgNiAxMSI+CiAgICA8cGF0aCBmaWxsPSIjNUYwMDgwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDExTDYgNS41IDEgMCAwIDEuMSA0IDUuNSAwIDkuOXoiLz4KPC9zdmc+Cg==) 50% 50% / 6px 9px no-repeat;
+}
+
+/*약관동의 sns선택 div태그*/
+.css-1qsjbts {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-left: 24px;
+}
+/*약관동의 sns선택 label태그*/
+.css-1j1mor8 {
+    padding: 14px 80px 9px 0px;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: top;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+}
+/*약관동의 sns선택 p태그*/
+.css-e4ph5f {
+    margin-left: 36px;
+    padding-left: 16px;
+    background: url(https://res.kurly.com/pc/service/common/2006/ico_sub_dot.svg) 0px 0px / 16px 20px no-repeat;
+    font-size: 12px;
+    color: rgb(95, 0, 128);
+    line-height: 18px;
+    letter-spacing: -0.5px;
+}
+/*가입하기 버튼 div태그*/
+.css-137ca2h {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-top: 1px solid rgb(247, 247, 247);
+    padding: 40px 0px;
+}
+/*가입하기 버튼 태그*/
+.css-18m884r {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 240px;
+    height: 56px; 
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 0, 128);
+    border: 0px none;
+}
+/*가입하기 버튼 span태그*/
+.css-ymwvow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
