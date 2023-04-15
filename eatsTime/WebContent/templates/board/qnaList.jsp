@@ -103,6 +103,7 @@
 						</div>
 					</div>
 				</li>
+				<!-- Q&A 내용 -->
 				<li class="css-d3v9zr e1cfowvj0" style="opacity: 1; height: auto;">
 					<div class="css-br5cai e1vd1n2i0">
 						<div class="css-193iudv e94cdlt1">
@@ -185,4 +186,42 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+/* 누르면 세부내용이 나타남 */    
+/* const qna = $(".e1cfowvj0");
+const title = $("ul");
+
+title.children().on("click", function(){
+    if(qna.css('display') == 'none'){
+        return qna.slideDown();
+        
+    }
+    
+    if(qna.css('display') == 'list-item'){
+        console.log("들어옴");
+        return qna.slideUp();
+    }
+
+}); */
+
+$(".e1cfowvj3").click(function(){
+	if($(this).next(".e1cfowvj0").css('display') == 'none'){
+		return $(this).next(".e1cfowvj0").slideDown();
+	}
+	
+	if($(this).next(".e1cfowvj0").css('display') == 'list-item'){
+		return $(this).next(".e1cfowvj0").slideUp();
+	}
+});
+
+/* $(document).ready(function(){
+    // memu 클래스 바로 하위에 있는 a 태그를 클릭했을때
+    $(".menu>a").click(function(){
+        // 현재 클릭한 태그가 a 이기 때문에
+        // a 옆의 태그중 ul 태그에 hide 클래스 태그를 넣던지 빼던지 한다.
+        $(this).next("ul").toggleClass("hide");
+    });
+}); */
+</script>
 </html>

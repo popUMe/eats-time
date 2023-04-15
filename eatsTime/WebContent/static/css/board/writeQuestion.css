@@ -142,11 +142,617 @@ svg:not(:root) {
     -webkit-box-align: center;
     align-items: center;
 }
-/* '1:1문의 텍스트 */
+
+/* '1:1문의' 텍스트 */
 .css-1268zpe {
     font-weight: 500;
     font-size: 24px;
     color: rgb(51, 51, 51);
     letter-spacing: -0.5px;
     line-height: 48px;
+}
+
+/* 문의 작성 폼 컨테이너 */
+.css-185m8ch {
+    width: 820px;
+    padding: 4px 20px;
+    border-top: 2px solid rgb(51, 51, 51);
+}
+
+/* 문의 작성 폼 문의 유형 선택 부분 */
+.css-17bp14q {
+    display: flex;
+    padding: 12px 0px;
+    -webkit-box-align: start;
+    align-items: start;
+}
+
+/* 좌측 유형/제목/내용 구분 표시 컨테이너 */
+.css-mm5tap {
+    width: 140px;
+    font-size: 14px;
+    line-height: 44px;
+}
+
+/* 좌측 유형/제목/내용 구분 표시 */
+.css-mm5tap {
+    width: 140px;
+    font-size: 14px;
+    line-height: 44px;
+}
+
+/* '유형' 우측면 별표 */
+.css-hwfcu5 {
+    color: red;
+}
+
+/* 문의 유형/상세 유형 컨테이너 */
+.css-12l4j2c {
+    width: 640px;
+}
+
+/* 문의 유형과 상세 유형을 나란히 flex */
+.css-zjik7 {
+    display: flex;
+}
+
+/* */
+.css-1a8mkrv {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+/* 문의 유형 컨테이너 우측 마진 설정 */
+.css-1a8mkrv > div:first-of-type {
+    margin-right: 8px;
+}
+
+/* 문의 유형 컨테이너 너비 */
+.css-1a8mkrv > div {
+    width: 316px;
+}
+
+/* 문의 유형/상세유형 바 스타일 */
+.css-tzsjye {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.jss2 {
+    font-family: Noto Sans;
+}
+
+/* */
+.css-eg1co4 {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.87);
+    box-sizing: border-box;
+    cursor: text;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    height: 44px;
+    border-color: rgb(221, 221, 221);
+    border-radius: 0px;
+}
+
+/* '문의 유형을 선택해주세요' 스타일 적용 */
+.css-qiwgdb.MuiSelect-select {
+    height: auto;
+    min-height: 1.4375em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* '문의 유형을 선택해주세요' 스타일 적용 */
+.css-qiwgdb.css-qiwgdb.css-qiwgdb {
+    padding-right: 32px;
+}
+
+/* '문의 유형을 선택해주세요' 스타일 적용 */
+.css-qiwgdb {
+    appearance: none;
+    user-select: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentcolor;
+    border: 0px;
+    box-sizing: content-box;
+    background: none;
+    height: 1.4375em;
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    min-width: 0px;
+    width: 100%;
+    animation-name: mui-auto-fill-cancel;
+    animation-duration: 10ms;
+    padding: 16.5px 14px;
+}
+
+/* 문의 유형 input 태그 */
+.css-1k3x8v3 {
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* '문의 유형을 선택해주세요' 우측 화살표 표시 */
+.jss2 .MuiSelect-iconOutlined {
+    right: 10px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* '문의 유형~', '상세 유형~' 박스 스타일 */
+.jss2 .MuiOutlinedInput-notchedOutline {
+    border-color: #ddd !important;
+}
+
+/* '문의 유형~', '상세 유형~' 박스 스타일 */
+.css-igs3ac {
+    text-align: left;
+    position: absolute;
+    inset: -5px 0px 0px;
+    margin: 0px;
+    padding: 0px 8px;
+    pointer-events: none;
+    border-radius: inherit;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    min-width: 0%;
+    border-color: rgba(0, 0, 0, 0.23);
+}
+
+/* '문의 유형~', '상세 유형~' 박스 스타일 */
+.css-nnbavb {
+    float: unset;
+    padding: 0px;
+    line-height: 11px;
+    transition: width 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.css-1636szt {
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 7px;
+    top: calc(50% - 0.5em);
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+/* legend 태그 스타일 */
+img, legend {
+    border: 0;
+    vertical-align: top;
+}
+
+/* '상세유형을 선택해주세요' */
+.css-1a8mkrv {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+/* '상세 유형을 선택해주세요' */
+.css-nnbavb {
+    float: unset;
+    padding: 0px;
+    line-height: 11px;
+    transition: width 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+/* 제목* */
+.css-mm5tap {
+    width: 140px;
+    font-size: 14px;
+    line-height: 44px;
+}
+
+/* 제목을 입력해주세요 */
+.css-1waqr6j {
+    padding: 0px;
+}
+
+/* 제목을 입력해주세요 */
+.css-t7kbxx {
+    position: relative;
+    height: 44px;
+}
+
+/* 제목을 입력해주세요 */
+.css-1waqr6j input {
+    font-size: 14px;
+}
+
+/* 제목을 입력해주세요 */
+.css-1quw3ub {
+    width: 100%;
+    height: 44px;
+    padding: 0px 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 42px;
+    color: rgb(51, 51, 51);
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 내용 부분 컨테이너 */
+.css-rm6te4 > div {
+    padding-bottom: 0px;
+}
+
+/* 좌측 '내용' */
+.css-rm6te4 > div > div:first-of-type {
+    padding-top: 5px;
+}
+
+/* '내용' 우측 별표 */
+.css-hwfcu5 {
+    color: red;
+}
+
+/* 내용 작성 구역 스타일 적용 */
+.css-1gua357 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 536px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+}
+
+/* 내용 작성 구역 폰트 설정 */
+.css-rm6te4 textarea {
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* 내용 작성 구역 폰트 설정 */
+.css-5etceh {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px 16px;
+    font-size: 16px;
+    line-height: 21px;
+    word-break: break-all;
+    z-index: 1;
+    background: none;
+    border-radius: 4px;
+    color: rgb(51, 51, 51);
+    outline: none;
+    resize: none;
+    border: none;
+}
+
+/* 내용 작성 구역 위치, padding 등 설정 */
+.css-1ofzfyp {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 15px 15px 32px;
+}
+
+/* 내용 작성 구역 placeholder에 해당하는 부분 폰트스타일 설정 */
+.css-168e7y9 {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(153, 153, 153);
+}
+
+/* 내용 작성 구역 placeholder에 해당하는 부분 폰트스타일 설정 */
+.css-c2iqrm {
+    display: block;
+    margin: 0px 0px 4px;
+    font-weight: 500;
+}
+
+/* 내용 작성 구역 placeholder에 해당하는 부분 폰트스타일 설정 */
+.css-1sz9zst {
+    display: block;
+    margin: 16px 0px 4px;
+    font-weight: 500;
+}
+
+/* 내용 작성 구역 placeholder에 해당하는 부분 폰트스타일 설정 */
+.css-1cdremq {
+    padding: 4px 0px 0px 10px;
+}
+
+/* 내용 작성 구역 placeholder에 해당하는 부분 폰트스타일 설정 */
+.css-1bawe5n {
+    color: rgb(240, 63, 64);
+    padding-left: 15px;
+}
+
+/*  */
+.css-dbwxb9 {
+    padding: 0px 16px 16px;
+    font-size: 12px;
+    text-align: right;
+}
+
+/* 0/5000자 */
+.css-14kcwq8 {
+    color: rgb(153, 153, 153);
+}
+
+/* 파일 불러오는 구간 */
+.css-17bp14q {
+    display: flex;
+    padding: 12px 0px;
+    -webkit-box-align: start;
+    align-items: start;
+}
+
+.css-v3zc4x {
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+/*  */
+.css-mm5tap {
+    width: 140px;
+    font-size: 14px;
+    line-height: 44px;
+}
+
+/* 파일 불러오는 구간 컨테이너 내부 */
+.css-mlazth > div {
+    padding: 3px 0px 0px;
+}
+
+/* 파일 불러오는 구간 컨테이너 내부 */
+.css-g8ewo8 {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0px;
+}
+
+/* 사진 첨부하는 구간 */
+.css-175wokr {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 9px;
+    font-size: 20px !important;
+}
+
+/* 사진기 이미지 박스 크기 */
+.css-175wokr > div {
+    height: 72px;
+    width: 72px;
+}
+
+/* 첨부 버튼 박스 모양 */
+.css-j9ybaa {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+}
+
+.css-175wokr span {
+    font-size: 20px;
+}
+
+/* 사진기 아이콘 */
+.css-113ip0v {
+    display: inline-block;
+    width: 1.875rem;
+    height: 1.875rem;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwYXRoIGQ9Ik0wIDBoMzB2MzBIMHoiLz4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0Ljc3OSA2LjExMSkiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIxLjMiPgogICAgICAgICAgICA8cGF0aCBkPSJNMTEuNzkyIDBjLjM5OSAwIC43MTcuMDU2Ljk1NS4xNy4xNzkuMDg0LjM0Ni4xOTkuNTAzLjM0NGwuMTUzLjE1NS42MzEuNzAzYy4xMjIuMTMuMjM0LjIzMy4zMzcuMzFhLjk1Ljk1IDAgMCAwIC4zNC4xNmMuMTI1LjAzMS4yOTIuMDQ3LjUwMy4wNDdsMi45MDYtLjAwM2MxLjI4NCAwIDIuMzI0IDEuMDYyIDIuMzI0IDIuMzd2MTEuMTUxYzAgMS4zMS0xLjA0IDIuMzctMi4zMjQgMi4zN0gyLjMyNGMtMS4yODMgMC0yLjMyNC0xLjA2LTIuMzI0LTIuMzdWNC4yNTdjMC0xLjMxIDEuMDQtMi4zNyAyLjMyNC0yLjM3aDIuOTgzYy4yNDUtLjAwOS40MzItLjA0NS41NTktLjEwOC4xMS0uMDU1LjIzLS4xNDUuMzYtLjI3bC4xMzQtLjEzNy42MzEtLjcwM2MuMi0uMjIuNDE4LS4zODcuNjU3LS41LjE5LS4wOS40MzItLjE0NC43MjUtLjE2Mkw4LjYwMyAwaDMuMTg5eiIvPgogICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMC4xNDIiIGN5PSI5LjUyOSIgcj0iMy41NTYiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.css-eivff4 {
+    display: none;
+}
+
+/* 이미지 파일 첨부 관련 안내문 부분 */
+.css-sqqcql {
+    margin: 11px 0px 7px;
+    line-height: 16px;
+    font-size: 13px;
+    color: rgb(153, 153, 153);
+}
+
+/* 이미지 파일 첨부 관련 안내문 텍스트 부분 */
+.css-7n55a5 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7px;
+}
+
+.css-mm5tap {
+    width: 140px;
+    font-size: 14px;
+    line-height: 44px;
+}
+
+/* 전화화번, 문자/알림톡 체크박스 부분 */
+.css-1wnowod {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+/* 전화번호 박스 */
+.css-n7yl5s {
+    width: 160px;
+    margin-top: 5px;
+}
+
+/* 전화번호 박스 */
+.css-bg7ww1 {
+    padding: 0px;
+}
+
+/* 전화번호 박스 위치 설정 */
+.css-t7kbxx {
+    position: relative;
+    height: 44px;
+}
+
+/* 전화번호 박스 */
+.css-bg7ww1 input:disabled {
+    color: rgb(204, 204, 204);
+}
+
+/* 전화번호 박스 */
+.css-1quw3ub:disabled {
+    opacity: 1;
+    background-color: rgb(250, 250, 250);
+    color: rgb(153, 153, 153);
+}
+
+/* 전화번호 박스 */
+.css-bg7ww1 input {
+    font-size: 14px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* 문자/알림톡 수신 여부 체크박스 구역 */
+.css-1s6b9a2 {
+    flex: 1 1 0%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+/* 문자/알림톡 수신 여부 체크박스 구역 폰트사이즈 */
+.css-1s6b9a2 label {
+    font-size: 14px;
+}
+
+/* 문자/알림톡 수신 여부 체크박스 구역 스타일 */
+.css-izsmfv {
+    padding: 14px 0px 9px;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    vertical-align: top;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+
+/* 인풋태그(체크박스) */
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/* 체크박스 표시 이미지 위치 설정 */
+.css-agvwxo {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0px, 0px, 0px, 0px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+}
+
+/* 문자/알림톡 받기 위치 설정 */
+.css-79hxr7 {
+    margin-right: 12px;
+}
+
+/* 체크박스 구역 높낮이 조정하여 정렬 */
+.css-79hxr7 svg {
+    vertical-align: middle;
+}
+
+/* '개인정보 수정' 커서 설정 */
+.css-1ybcx6v {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* '야간에도 답변 완료 알림톡이 발송 되는 점 참고 부탁드립니다.' */
+.css-3ky9df {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 16px 0px 4px;
+    color: rgb(153, 153, 153);
+}
+
+/* 등록 버튼 컨테이너 */
+.css-1spu0j4 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* 등록 버튼 스타일 */
+.css-114fr9p {
+    width: 160px;
+    height: 56px;
+    padding: 0px 10px;
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(95, 0, 128);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    border-radius: 3px !important;
+}
+
+.css-1ybcx6v::after {
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin-left: 4px;
+    background: url(https://res.kurly.com/kurly/ico/2021/arrow_right_6_9_black.svg) 0px 0px no-repeat;
+    content: "";
 }
