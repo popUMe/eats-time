@@ -198,16 +198,7 @@ svg:not(:root) {
     color: rgb(51, 51, 51);
 }
 
-/* 작성자 */
-.css-16tcewl {
-    flex-basis: 100px;
-    text-align: center;
-    line-height: 20px;
-    font-weight: 400;
-    color: rgb(51, 51, 51);
-}
-
-/* 작성일 */
+/* 작성자, 작성일 */
 .css-16tcewl {
     flex-basis: 100px;
     text-align: center;

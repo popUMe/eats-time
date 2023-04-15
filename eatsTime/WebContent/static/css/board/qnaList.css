@@ -1,0 +1,484 @@
+@charset "UTF-8";
+
+/* 페이지 메인 부분 태그 */
+.css-2b29tl {
+    position: relative;
+    min-width: 1050px;
+}
+
+ul {
+	padding-inline-start: 0px !important;
+}
+
+/* 좌측 고객센터 메뉴창 및 게시글 부분 태그 */
+.css-luwwab {
+    display: flex;
+    width: 1050px;
+    padding: 50px 0px 80px;
+    margin: 0px auto;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+/* 좌측 고객센터 부분 태그 */
+
+.css-833hqy {
+    width: 200px;
+}
+
+/* '고객센터' 텍스트 */
+.css-1v4whg {
+    height: 75px;
+    padding: 5px 0 35px 1px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+
+/* 고객센터 메뉴창 ul 태그 */
+.css-1x9bshx {
+    border: 1px solid #f2f2f2;
+}
+
+
+/* 고객센터 메뉴창 ul 태그 */
+ul {
+    list-style-type: none !important;
+    margin-block-start: 0 !important;
+}
+
+/* 고객센터 메뉴창 각 li에 적용되는 스타일 */
+.css-g4g0eu {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(242, 242, 242);
+    padding: 15px 13px 15px 20px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+}
+
+
+/* 고객센터 -> 메뉴창 '공지사항'의 a태그 스타일 */
+.css-g4g0eu.active, .css-g4g0eu:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgb(95, 0, 128);
+    font-weight: 500;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 용도 모름. 주석 보류 */
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* 1:1 문의하기 컨테이너 */
+.css-196gwz9 {
+    width: 100%;
+    height: 60px;
+    padding: 0px 14px 0px 20px;
+    margin-top: 36px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    line-height: 20px;
+}
+
+/* 1:1 문의하기 컨테이너 내부 flex하기 */
+.css-rmee6s {
+    display: flex;
+    flex-direction: column;
+    color: rgb(51, 51, 51);
+}
+
+/* "도움이 필요하신가요?" */
+.css-1sdidca {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* "1:1 문의하기" */
+.css-rnnx2x {
+    font-size: 12px;
+}
+
+/* 게시판 구역 너비 */
+.css-171zbec {
+    width: 820px;
+}
+
+/* 상단 1:1 문의 스타일 적용 */
+.css-j0lifa {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 27px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+/* 상단 '1:1문의' 컨테이너 내부 텍스트 스타일 적용 */
+.css-fhxb3m {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/* '1:1 문의' 텍스트 */
+.css-1268zpe {
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.5px;
+    line-height: 48px;
+}
+
+/* 제목, 작성일, 답변상태 컨테이너 */
+.css-e23nfx {
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    border-top: 2px solid rgb(51, 51, 51);
+}
+
+/* 제목 */
+.css-1ym8aqm {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+
+/* 작성일, 답변상태 */
+.css-16tcewl {
+    flex-basis: 100px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+
+/* 게시글 목록 ul태그 */
+.css-1fttcpj {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/* 게시글 목록 ul>li 커서 포인터 설정 */
+.css-e0dnmk {
+    cursor: pointer;
+}
+
+/* 게시글 목록 flex */
+.css-nfcc9b {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 제목 부분 */
+.css-wqw6mu {
+    color: rgb(76, 76, 76);
+    width: 620px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+/* 제목의 내용 */
+.css-4l2co {
+    overflow: hidden;
+    display: block;
+    width: 580px;
+    cursor: pointer;
+}
+
+/* 작성일 */
+.css-8e1vc1 {
+    padding: 20px 0px;
+    color: rgb(76, 76, 76);
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+/* 작성일의 내용 */
+.css-14kcwq8 {
+    color: rgb(153, 153, 153);
+}
+
+/* 답변 상태 */
+.css-8e1vc1 {
+    padding: 20px 0px;
+    color: rgb(76, 76, 76);
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+/* 답변 완료 */
+.css-1kxzrwz {
+    color: rgb(95, 0, 128);
+}
+
+/* 답변 대기 */
+.css-14kcwq8 {
+    color: rgb(153, 153, 153);
+}
+
+element.style {
+    opacity: 1;
+    height: auto;
+}
+
+.css-d3v9zr {
+    overflow: hidden;
+}
+
+/* qna 컨테이너 */
+.css-br5cai {
+    padding: 20px 20px 30px;
+    background-color: rgb(250, 250, 250);
+}
+
+/* 문의 분류 카테고리 */
+.css-193iudv {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 20px;
+    letter-spacing: -0.075em;
+    margin-bottom: 20px;
+}
+
+/* 문의 유형 */
+.css-16ts9vc {
+    font-size: 14px;
+    font-family: "Noto Sans", serif;
+    color: rgb(153, 153, 153);
+}
+
+/* '>' */
+.css-a5dfz6 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0wIDBIMTZWMTZIMHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzkgLTEzNTUpIHRyYW5zbGF0ZSgwIDY0KSB0cmFuc2xhdGUoMCAxMjcxKSB0cmFuc2xhdGUoMzM5IDIwKSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBzdHJva2U9IiM5OTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTQgNUwxMCA1IDEwIDExIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzM5IC0xMzU1KSB0cmFuc2xhdGUoMCA2NCkgdHJhbnNsYXRlKDAgMTI3MSkgdHJhbnNsYXRlKDMzOSAyMCkgcm90YXRlKDQ1IDcgOCkiLz4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=);
+    margin: 0px 5px;
+}
+
+/* 질문 컨테이너 */
+.css-zjik7 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* 질문 'Q' 이미지 */
+.css-1ylw081 {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQ0NSAtODc2KSB0cmFuc2xhdGUoNDIzIDI3NikgdHJhbnNsYXRlKDIgMzE2KSB0cmFuc2xhdGUoMjAgMjg0KSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEyIiBmaWxsPSIjQTg2NEQ4Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMS45NDYgNy41YzIuNDU2IDAgNC40NDYgMS45OSA0LjQ0NiA0LjQ0NiAwIC45MDctLjI3MSAxLjc1LS43MzcgMi40NTNsLjg0NS44NDMtMS4yNTggMS4yNTgtLjg0My0uODQ1Yy0uNzAzLjQ2Ni0xLjU0Ni43MzctMi40NTMuNzM3LTIuNDU1IDAtNC40NDYtMS45OS00LjQ0Ni00LjQ0NkM3LjUgOS40OTEgOS40OSA3LjUgMTEuOTQ2IDcuNXptMCAxLjc3OGMtMS40NzMgMC0yLjY2OCAxLjE5NS0yLjY2OCAyLjY2OHMxLjE5NSAyLjY2OCAyLjY2OCAyLjY2OGMuNDEyIDAgLjgwMi0uMDk0IDEuMTUtLjI2bC0uMzY5LS4zNyAxLjI1OC0xLjI1Ny4zNjkuMzY5Yy4xNjYtLjM0OC4yNi0uNzM4LjI2LTEuMTUgMC0xLjQ3My0xLjE5NS0yLjY2OC0yLjY2OC0yLjY2OHoiLz4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+/* 질문 내용 컨테이너 */
+.css-145c1ga {
+    width: 744px;
+    margin-top: 3px;
+    margin-left: 12px;
+}
+
+/* 질문 내용 텍스트 */
+.css-190bjnp {
+    font-size: 14px;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+}
+
+/* 질문 컨테이너 하단 공간 */
+.css-1kl96ir {
+    max-width: 744px;
+    margin-top: 20px;
+}
+
+/* 답변 컨테이너 padding-top */
+.css-1tsgnig {
+    padding-top: 20px;
+}
+
+/* 답변창 내부 */
+.css-1tsgnig > div {
+    margin-top: 0px;
+}
+
+/* 답변창 내부 */
+.css-b41fnw {
+    width: 100%;
+    padding-bottom: 0px;
+    margin-top: 0.75rem;
+    display: flex;
+}
+
+/* 'A' */
+.css-1i2xt0r span {
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    display: block;
+}
+
+/* 'A' 이미지 */
+.css-1non6l6 {
+    width: 28px;
+    height: 28px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQ0NSAtMTkxOCkgdHJhbnNsYXRlKDQyMyAyNzYpIHRyYW5zbGF0ZSgyIDE2MjIpIHRyYW5zbGF0ZSgyMCAyMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMiIgZmlsbD0iIzVGMDA4MCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBmaWxsPSIjRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik05Ljc2IDE1LjcwOGwuNTQtMS40MDRoMy40NTZsLjU1MiAxLjQwNGgyLjE0OEwxMyA3LjVoLTEuOTMyTDcuNiAxNS43MDhoMi4xNnptMy4zMjQtMy4xMzJoLTIuMTEybDEuMDU2LTIuNzEyIDEuMDU2IDIuNzEyeiIvPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* 답변 내용 컨테이너 */
+.css-wm215i {
+    width: 100%;
+    margin-left: 9px;
+    padding-top: 2px;
+    word-break: break-all;
+}
+
+/* 답변 텍스트 */
+.css-kfh61x {
+    font-size: 14px;
+    line-height: 23px;
+    color: rgb(102, 102, 102);
+}
+
+/* 답변 내용 하단부 공간 */
+.css-iqoq9n {
+    margin-top: 20px;
+}
+
+/* 답변 작성일자 */
+.css-1kna94k {
+    margin-top: 9px;
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+}
+
+/* 앞/뒤 화살표, 문의하기 버튼 컨테이너 */
+.css-15jhycr {
+    position: relative;
+    min-height: 44px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* '이전' 버튼 스타일 */
+.css-rzcdhr {
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(https://res.kurly.com/kurly/ico/2021/paging-prev-activated.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* '이전' */
+.css-7qb0sc {
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+}
+
+.css-sxxs1g button + button {
+    margin-left: 12px;
+}
+
+/* '다음' 버튼 */
+.css-1jwilit {
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(https://res.kurly.com/kurly/ico/2021/paging-next-activated.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 문의하기 버튼 */
+.css-15jhycr > button {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+/* 문의하기 버튼 스타일 적용 */
+.css-1ibxj4m {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 120px;
+    height: 44px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 0, 128);
+    border: 0px none;
+}
+
+/* 문의하기 텍스트 */
+.css-1ibxj4m span {
+    font-size: 13px;
+}
+
+/* 문의하기 텍스트 */
+.css-ymwvow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}

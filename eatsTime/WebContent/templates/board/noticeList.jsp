@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/noticeList.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/noticeList.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
 <title>Insert title here</title>
 </head>
@@ -48,7 +48,7 @@
 					</li>
 				</ul>
 				<!-- 1:1 문의하기 -->
-				<a class="css-196gwz9 e19l01ug3">
+				<a href="" class="css-196gwz9 e19l01ug3">
 					<div class="css-rmee6s e19l01ug2">
 						<span class="css-1sdidca e19l01ug1">도움이 필요하신가요?</span>
 						<span class="css-rnnx2x e19l01ug0">1:1 문의하기</span>
