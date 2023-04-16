@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css"	href="../../static/css/admin/index.css">
+<link rel="stylesheet" type="text/css"	href="../../static/css/admin/qna.css">
 <meta charset="UTF-8">
 <title>Dashboard</title>
 
@@ -20,59 +20,53 @@
 	<div id=:logo></div>
 	
 	<div class="content">
-		<h1>공지사항 관리</h1>
+		<h1>문의 관리</h1>
 		<div class="btn">
-		  <button id="add-btn">공지사항 작성</button>
+		  <button id="add-btn">답변 작성</button>
   		<button id="delete-btn">삭제</button>
   		</div>
 		<table>
 			<tr>
-			<th style="width:30px"><input type="checkbox" id="chkAll" name="chkAll"/></th>
-				<th>공지번호</th>
+				<th>문의번호</th>
 				<th>제목</th>
-				<th>내용</th>
+				<th>작성자</th>
 				<th>작성날짜</th>
-				<th>수정</th>
+				<th>상태</th>
 			</tr>
 			<tr>
-			    <td><input type="checkbox" name="chk"></td>
-				<td>1</td>
+				<td>5</td>
 				<td><a href="noticeView.jsp?noticeNo=1">2,500</a></td>
-				<td>100</td>
 				<td>$500</td>
 				<td>$500</td>
+				<td>답변 완료</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox" name="chk"></td>
-				<td>2</td>
+				<td>4</td>
 				<td>3,000</td>
 				<td>110</td>
 				<td>$550</td>
-				<td>$550</td>
+				<td>답변 대기</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox" name="chk"></td>
 				<td>3</td>
 				<td>2,800</td>
 				<td>120</td>
 				<td>120</td>
-				<td>$600</td>
+				<td>답변 대기</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox" name="chk"></td>
-				<td>4</td>
+				<td>2</td>
 				<td>3,200</td>
 				<td>130</td>
 				<td>$650</td>
-				<td>$650</td>
+				<td>답변 대기</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox" name="chk"></td>
-				<td>5</td>
+				<td>1</td>
 				<td>3,500</td>
 				<td>140</td>
 				<td>$700</td>
-				<td>$700</td>
+				<td>답변 대기</td>
 			</tr>
 		</table>
 		<div class="paging">
@@ -129,6 +123,34 @@
 			  });
 			});
 		
+		$(document).ready(function() {
+
+			  $("td:contains('답변 완료')").css("color", "green");
+			  $("td:contains('답변 대기')").css("color", "red");
+			});
+		
+		
+
+		$(document).ready(function() {
+			  $("#add-btn").click(function() {
+			    $("input[name=chk]:checked").each(function() {
+			      $(this).closest("tr").find("td:eq(5)").text("답변 완료");
+			      $(this).closest("tr").find("td:eq(5)").css("color", "green");
+			    });
+			  });
+			});
+		
+		$(document).ready(function() {
+			  $("#delete-btn").click(function() {
+			    $("input[name=chk]:checked").each(function() {
+			      $(this).closest("tr").find("td:eq(5)").text("답변 대기");
+			      $(this).closest("tr").find("td:eq(5)").css("color", "red");
+			    });
+			  });
+			});
+
+
+
 		
 	</script>
 </html>

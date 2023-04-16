@@ -30,50 +30,44 @@
 			<th style="width:30px"><input type="checkbox" id="chkAll" name="chkAll"/></th>
 				<th>공지번호</th>
 				<th>제목</th>
-				<th>내용</th>
+				<th>작성자</th>
 				<th>작성날짜</th>
-				<th>수정</th>
 			</tr>
 			<tr>
 			    <td><input type="checkbox" name="chk"></td>
-				<td>1</td>
-				<td><a href="noticeView.jsp?noticeNo=1">2,500</a></td>
-				<td>100</td>
-				<td>$500</td>
-				<td>$500</td>
+				<td>공지</td>
+				<td><a href="noticeView.jsp">[안내]배송 서비스 확장 안내</a></td>
+				<td>관리자</td>
+				<td>2023.04.15</td>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="chk"></td>
-				<td>2</td>
-				<td>3,000</td>
-				<td>110</td>
-				<td>$550</td>
-				<td>$550</td>
+				<td>공지</td>
+				<td><a href="noticeView.jsp">[안내]소비자 분쟁해결 기준 안내</a></td>
+				<td>관리자</td>
+				<td>2023.04.15</td>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="chk"></td>
-				<td>3</td>
-				<td>2,800</td>
-				<td>120</td>
-				<td>120</td>
-				<td>$600</td>
+				<td>공지</td>
+				<td><a href="noticeView.jsp">[이벤트]</a></td>
+				<td>관리자</td>
+				<td>2023.04.15</td>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="chk"></td>
-				<td>4</td>
-				<td>3,200</td>
-				<td>130</td>
-				<td>$650</td>
-				<td>$650</td>
+				<td>공지</td>
+				<td><a href="noticeView.jsp">[안내]서비스 점검 안내</a></td>
+				<td>관리자</td>
+				<td>2023.04.15</td>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="chk"></td>
-				<td>5</td>
-				<td>3,500</td>
-				<td>140</td>
-				<td>$700</td>
-				<td>$700</td>
-			</tr>
+				<td>공지</td>
+				<td><a href="noticeView.jsp">3,500</a></td>
+				<td>관리자</td>
+				<td>2023.04.15</td>
+				</tr>
 		</table>
 		<div class="paging">
 			<a href="#" class="active">1</a>

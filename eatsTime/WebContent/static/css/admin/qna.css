@@ -117,7 +117,7 @@ th, td {
 	border-right: 1px solid #ddd;
 }
 
-th:nth-child(2) {
+th:nth-child(1) {
   width: 70px;
 }
 

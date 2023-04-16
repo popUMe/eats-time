@@ -23,8 +23,8 @@
                 </div>
             </div>
             <div class="btn">
-                <a href="view.html" class="on">등록</a>
-                <a href="list.html">취소</a>
+                <a href="qna.jsp" class="on">등록</a>
+                <a href="qna.jsp">취소</a>
             </div>
         </div>
     </div>

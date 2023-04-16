@@ -20,7 +20,7 @@
 	<div id=:logo></div>
 	
 	<div class="content">
-		<h1>공지사항 관리</h1>
+		<h1>회원 관리</h1>
 		<div class="btn">
 		  <button id="add-btn">활성화</button>
   		<button id="delete-btn">비활성화</button>
@@ -28,51 +28,45 @@
 		<table>
 			<tr>
 			<th style="width:30px"><input type="checkbox" id="chkAll" name="chkAll"/></th>
-				<th>공지번호</th>
-				<th>제목</th>
-				<th>내용</th>
-				<th>작성날짜</th>
-				<th>수정</th>
+				<th>회원번호</th>
+				<th>이름</th>
+				<th>가입날짜</th>
+				<th>상태</th>
 			</tr>
 			<tr>
 			    <td><input type="checkbox" name="chk"></td>
-				<td>1</td>
-				<td><a href="noticeView.jsp?noticeNo=1">2,500</a></td>
-				<td>100</td>
-				<td>$500</td>
-				<td>$500</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="chk"></td>
-				<td>2</td>
-				<td>3,000</td>
-				<td>110</td>
-				<td>$550</td>
-				<td>$550</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="chk"></td>
-				<td>3</td>
-				<td>2,800</td>
-				<td>120</td>
-				<td>120</td>
-				<td>$600</td>
+				<td>5</td>
+				<td>조세연</td>
+				<td>2023.04.15</td>
+				<td>활성</td>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="chk"></td>
 				<td>4</td>
-				<td>3,200</td>
-				<td>130</td>
-				<td>$650</td>
-				<td>$650</td>
+				<td>조세연</td>
+				<td>2023.04.15</td>
+				<td>비활성</td>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="chk"></td>
-				<td>5</td>
-				<td>3,500</td>
-				<td>140</td>
-				<td>$700</td>
-				<td>$700</td>
+				<td>3</td>
+				<td>조세연</td>
+				<td>2023.04.15</td>
+				<td>비활성</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="chk"></td>
+				<td>2</td>
+				<td>조세연</td>
+				<td>2023.04.15</td>
+				<td>비활성</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="chk"></td>
+				<td>1</td>
+				<td>조세연</td>
+				<td>2023.04.15</td>
+				<td>비활성</td>
 			</tr>
 		</table>
 		<div class="paging">
@@ -111,23 +105,35 @@
 			  });
 			});
 		
-		$(function() {
-			  $('#add-btn').click(function() {
-			    location.href = 'noticeWrite.jsp';
+			
+		
+		$(document).ready(function() {
+
+			  $("td:contains('활성')").css("color", "green");
+			  $("td:contains('비활성')").css("color", "red");
+			});
+		
+		
+
+		$(document).ready(function() {
+			  $("#add-btn").click(function() {
+			    $("input[name=chk]:checked").each(function() {
+			      $(this).closest("tr").find("td:eq(4)").text("활성");
+			      $(this).closest("tr").find("td:eq(4)").css("color", "green");
+			    });
+			  });
+			});
+		
+		$(document).ready(function() {
+			  $("#delete-btn").click(function() {
+			    $("input[name=chk]:checked").each(function() {
+			      $(this).closest("tr").find("td:eq(4)").text("비활성");
+			      $(this).closest("tr").find("td:eq(4)").css("color", "red");
+			    });
 			  });
 			});
 
-		$(document).ready(function() {
-			  $("#delete-btn").click(function() {
-			    var checkedItems = $("input[name='chk']:checked");
-			    var checkedItemIds = [];
-			    checkedItems.each(function() {
-			      checkedItemIds.push($(this).closest("tr").find("td:nth-child(2)").text());
-			      $(this).closest("tr").remove();
-			    });
-			    console.log("Deleted item ids: " + checkedItemIds.join(", "));
-			  });
-			});
+		
 		
 		
 	</script>

@@ -2,13 +2,13 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko"><head>
-    <title>공지사항</title>
+    <title>문의내역</title>
     <link rel="stylesheet" href="../../static/css/admin/noticeWrite.css">
 </head>
 <body>
     <div class="board_wrap">
         <div class="board_title">
-            <strong>공지사항</strong>
+            <strong>문의내역</strong>
         </div>
         <div class="board_view_wrap">
             <div class="board_view">
@@ -37,8 +37,8 @@
                 </div>
             </div>
             <div class="btn">
-                <a href="index.jsp" class="on">목록</a>
-                <a href="noticeEdit.jsp">수정</a>
+                <a href="qna.jsp" class="on">목록</a>
+                <a href="qnaEdit.jsp">수정</a>
             </div>
         </div>
     </div>
