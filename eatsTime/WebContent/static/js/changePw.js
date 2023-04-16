@@ -2,53 +2,284 @@
  * 
  */
 
+let pwCheck = false;
+let rePwCheck = false;
+
+
+
+/*새 비밀번호 등록*/
+$("#password").one('click', function() {
+	$(".checkPw").removeClass("css-ua37vt css-1319hys")
+	$(".checkPw").addClass("css-alright")
+	$(".checkPw").eq(0).text("8자리 ~ 20자리 이내로 입력해주세요.");
+	$(".checkPw").eq(1).text("비밀번호는 공백 없이 입력해주세요.");
+	$(".checkPw").eq(2).text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+
+})
+
+$("#password").blur(function(e) {
+	if ($(e.target).val() == "") {
+		$(".checkPw").removeClass("css-alright css-1319hys")
+		$(".checkPw").addClass("css-ua37vt")
+		$(".checkPw").eq(0).text("8자리 ~ 20자리 이내로 입력해주세요.");
+		$(".checkPw").eq(1).text("비밀번호는 공백 없이 입력해주세요.");
+		$(".checkPw").eq(2).text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+	}
+
+})
+
+
+/*새 비밀번호 확인*/
+$("#passwordConfirm").one('click', function() {
+	$(".checkConfirm").removeClass("css-ua37vt css-1319hys")
+	$(".checkConfirm").addClass("css-alright")
+	$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
+
+
+})
+
+$("#passwordConfirm").blur(function(e) {
+
+	if ($(e.target).val() == "") {
+		$(".checkConfirm").removeClass("css-alright css-1319hys")
+		$(".checkConfirm").addClass("css-ua37vt")
+		$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
+	}
+
+})
 
 
 
 
+// 새 비밀번호 실시간 검사 	
+
+
+/*function chkPW() {
+
+	let checkPw1 = true;
+	let checkPw2 = true;
+	let checkPw3 = true;
+
+	let pw = $("#password").val();
+	let num = pw.search(/[0-9]/g);
+	let eng = pw.search(/[a-z]/ig);
+	let spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+	if (pw.length < 8 || pw.length > 20) {
+		checkPw1 = false;
+	}
+	if (pw.search(/\s/) != -1) {
+		checkPw2 = false;
+	}
+
+	if (num < 0 || eng < 0 || spe < 0) {
+		checkPw3 = false;
+	}
+
+}*/
+
+
+
+// 새비밀번호 등록
+$("#password").keyup(function() {
+
+
+	// jQuery 객체 선언부 (태그선언)
+	let pw = $("#password");
+	let rePw = $("#passwordConfirm");
+	let checkPws = $(".checkPw");
+	let reChecks = $(".checkConfirm");
+
+	// 비밀번호 정규식
+	let num = pw.val().search(/[0-9]/g);
+	let eng = pw.val().search(/[a-z]/ig);
+	let spe = pw.val().search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+	//입력을 하는 순가 빨간색
+	checkPws.removeClass("css-alright css-1319hys")
+	checkPws.addClass("css-ua37vt")
+
+
+	if (rePw.val()) {
+		if (rePw.val() != "" && rePw.val() == pw.val()) {
+			reChecks.removeClass("css-alright css-ua37vt")
+			reChecks.addClass("css-1319hys")
+		} else {
+			reChecks.removeClass("css-alright css-1319hys")
+			reChecks.addClass("css-ua37vt")
+		}
+	}
+
+	// 첫번째 checkPw 검사
+	if (pw.val().length < 8 || pw.val().length > 20) {
+		checkPws.eq(0).removeClass("css-alright css-1319hys")
+		checkPws.eq(0).addClass("css-ua37vt")
+	} else {
+		checkPws.eq(0).removeClass("css-alright css-ua37vt")
+		checkPws.eq(0).addClass("css-1319hys")
+	}
+
+	// 두번째 checkPw 검사
+	if (pw.val().search(/\s/) != -1) {
+		checkPws.eq(1).removeClass("css-alright css-1319hys")
+		checkPws.eq(1).addClass("css-ua37vt")
+	} else {
+		checkPws.eq(1).removeClass("css-alright css-ua37vt")
+		checkPws.eq(1).addClass("css-1319hys")
+	}
+
+
+	// 세번째 checkPw 검사
+
+	if (num < 0 || eng < 0 || spe < 0) {
+		checkPws.eq(2).removeClass("css-alright css-1319hys")
+		checkPws.eq(2).addClass("css-ua37vt")
+	} else {
+		checkPws.eq(2).removeClass("css-alright css-ua37vt")
+		checkPws.eq(2).addClass("css-1319hys")
+	}
+	
+	checkButton()
+
+
+})
+
+
+// 새 비밀번호 확인
+$("#passwordConfirm").keyup(function() {
+
+	let pw = $('#password');
+	let rePw = $("#passwordConfirm");
+	let reChecks = $(".checkConfirm");
+
+	if (rePw.val() != "" && rePw.val() == pw.val()) {
+		reChecks.removeClass("css-alright css-ua37vt")
+		reChecks.addClass("css-1319hys")
+	} else {
+		reChecks.removeClass("css-alright css-1319hys")
+		reChecks.addClass("css-ua37vt")
+	}
+	
+	checkButton()
+
+});
+
+function checkButton(){
+if ($(".checkPw").hasClass("css-1319hys") &&
+	$(".checkConfirm").hasClass("css-1319hys") &&
+	$("#password").val() == $('#passwordConfirm').val()) {
+	$(".button").removeAttr("disabled");
+	$(".button").prop("background", "rgb(95, 0, 128)");
+} else {
+	$(".button").prop("background", "rgb(221, 221, 221)");
+	$(".button").attr("disabled", "");
+}
+}
 
 
 
 
+/*$("#email").bind('focus', function()  
+
+	$("#email").blur(function(e) {
+
+		if ($(e.target).val() == "") {
+			$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
+		} else if (!fn_emailChk($(e.target).val())) {
+			$(".error2").text("올바른 이메일 형식을 입력해 주세요");
+		} else {
+			$(".error2").text("");
+		}
+
+	})
+
+})*/
 
 
-	/*x 버튼 js*/
+/*키를 입력할 때마다 검사해서 아래 문구나오기*/
+
+
+/*let nameCheck = false;
+let emailCheck = false;
+
+$("#name").keyup(function() {
+	if ($("#name").val() == "") {
+		$(".error1").text("가입 시 등록한 이름을 입력해주세요");
+		nameCheck = false;
+	} else {
+		$(".error1").text("");
+		nameCheck = true;
+	}
+	checkflag()
+})
+
+$("#email").keyup(function() {
+	if ($("#email").val() == "") {
+		$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
+		emailCheck = false;
+	} else if (!fn_emailChk($("#email").val())) {
+		$(".error2").text("올바른 이메일 형식을 입력해 주세요");
+		emailCheck = false;
+	} else {
+		$(".error2").text("");
+		emailCheck = true;
+	}
+
+	checkflag()
+
+})
+
+
+function checkflag() {
+	if (nameCheck && emailCheck) {
+		$(".button").removeAttr("disabled");
+		$(".button").prop("background", "rgb(95, 0, 128)");
+	} else {
+		$(".button").prop("background", "rgb(221, 221, 221)");
+		$(".button").attr("disabled", "");
+	}
+}
+*/
+
+
+
+/*x 버튼 js*/
 
 /*나중에 코드 정리...*/
-/*위에 비밀번호*/	
-$(".input-content1").keyup(function(){
-	if($(".input-content1").val().length == 0){
+/*위에 비밀번호*/
+$(".input-content1").keyup(function() {
+	if ($(".input-content1").val().length == 0) {
 		$(".textbutton1").css('visibility', 'hidden');
-	}else{
+	} else {
 		$(".textbutton1").css('visibility', 'visible');
 	}
 });
 
-$('.textbutton1').on("click", function(){
-    $(".button").prop("background", "rgb(221, 221, 221)");
-    $(".button").attr("disabled", "");
+$('.textbutton1').on("click", function() {
+	$(".button").prop("background", "rgb(221, 221, 221)");
+	$(".button").attr("disabled", "");
 	$(".input-content1").val("");
-	$(".textbutton1").css('visibility', 'hidden');
-	$(".error1").text("가입 시 등록한 이름을 입력해주세요");
+	$(".checkPw").removeClass("css-alright css-1319hys")
+	$(".checkPw").addClass("css-ua37vt")
+
 })
-	
+
 
 /*비밀번호재설정*/
-$(".input-content2").keyup(function(){
-	if($(".input-content2").val().length == 0){
+$(".input-content2").keyup(function() {
+	if ($(".input-content2").val().length == 0) {
 		$(".textbutton2").css('visibility', 'hidden');
-	}else{
+	} else {
 		$(".textbutton2").css('visibility', 'visible');
 	}
 });
 
-$('.textbutton2').on("click", function(){
-    $(".button").prop("background", "rgb(221, 221, 221)");
-    $(".button").attr("disabled", "");
+$('.textbutton2').on("click", function() {
+	$(".button").prop("background", "rgb(221, 221, 221)");
+	$(".button").attr("disabled", "");
 	$(".input-content2").val("");
-	$(".textbutton2").css('visibility', 'hidden');
-	$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
-	
-});	
-	
-	
+	$(".checkConfirm").removeClass("css-alright css-1319hys")
+	$(".checkConfirm").addClass("css-ua37vt")
+
+});
+

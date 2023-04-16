@@ -14,6 +14,7 @@
 <style>
 </style>
 <body>
+<jsp:include page="../header.jsp" />
 	<div class="css-140915z">
 		<div class="css-7500ra">아이디 찾기</div>
 		<div class="css-u3y03b">
@@ -56,6 +57,7 @@
 			</form>
 		</div>
 	</div>
+<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/findId.js"></script>

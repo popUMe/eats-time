@@ -12,6 +12,7 @@
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
+	<jsp:include page="../header.jsp" />
 	<div class="css-140915z">
 		<div class="css-7500ra">비밀번호 찾기</div>
 		<div class="css-u3y03b">
@@ -21,10 +22,10 @@
 			<form class="css-s3iz85">
 				<div class="css-1blp8ou">
 					<div class="css-1yjqrpx">
-						<label for="name" class="css-c3g9of">이름</label>
+						<label for="name" class="css-c3g9of">아이디</label>
 						<div class="css-176lya2">
-							<input id="name" name="name" placeholder="이름을 입력해 주세요"
-								type="text" class="css-u52dqk input-content1" value="">
+							<input id="memberId" name="memberId" placeholder="아이디를 입력해주세요."
+								type="text" class="css-u52dqk input-content1" value="" >
 						<button class="css-118q5z4 textbutton1" size="16" id="delete-input"
 							aria-label="delete-input" type="button"
 							style="visibility: hidden"></button>
@@ -54,6 +55,7 @@
 			</form>
 		</div>
 	</div>
+	<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/findPw.js"></script>

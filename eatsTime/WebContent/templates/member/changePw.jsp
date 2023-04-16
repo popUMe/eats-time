@@ -12,6 +12,7 @@
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
+<jsp:include page="../header.jsp" />
 	<div class="css-140915z">
 		<div class="css-7500ra">비밀번호 재설정</div>
 		<div class="css-u3y03b">
@@ -28,9 +29,9 @@
 								style="visibility: hidden"></button>
 						</div>
 					</div>
-					<p class="css-ua37vt">10자 이상 입력</p>
-					<p class="css-ua37vt">영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합</p>
-					<p class="css-1319hys">동일한 숫자 3개 이상 연속 사용 불가</p>
+					<p class="checkPw"></p>
+					<p class="checkPw"></p>
+					<p class="checkPw"></p>
 				</div>
 				<div class="css-1blp8ou">
 					<div class="css-1yjqrpx">
@@ -44,16 +45,17 @@
 							style="visibility: hidden"></button>
 						</div>
 					</div>
-					<p class="css-ua37vt">동일한 비밀번호를 입력해 주세요.</p>
+					<p class="checkConfirm"></p>
 				</div>
 				<div class="css-3vxi16">
-					<button class="css-1s9rhb5" type="submit" disabled="" radius="4">
+					<button class="css-1s9rhb5 button" type="submit" disabled="" radius="4">
 						<span class="css-ymwvow">확인</span>
 					</button>
 				</div>
 			</form>
 		</div>
 	</div>
+<jsp:include page="../footer.jsp" />	
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/changePw.js"></script>

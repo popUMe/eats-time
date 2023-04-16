@@ -4,13 +4,17 @@
 
  */
 
-function fn_emailChk(email){
-  var regExp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{1,4}$/;
-  if(!regExp.test(email)){
-    return false;
-  }
-  return true;
-}
+
+
+/*이름에 특수문자 금지*/
+
+$("#name").bind("input",function(){
+ re = /[~!@\#$%^&*\()\-=+_']/gi; 
+ let temp=$("#name").val();
+ if(re.test(temp)){ //특수문자가 포함되면 삭제하여 값으로 다시셋팅
+ $("#name").val(temp.replace(re,"")); } });
+
+
 
 
 /*유효성검사 이름 뭐라도 입력해야됌*/
@@ -54,8 +58,8 @@ function fn_emailChk(email){
 let nameCheck = false;
 let emailCheck = false;
 
-$("input").eq(0).keyup(function(){
-  if ($("input").eq(0).val() == ""){
+$("#name").keyup(function(){
+  if ($("#name").val() == ""){
     $(".error1").text("가입 시 등록한 이름을 입력해주세요");
     nameCheck = false;
   } else {
@@ -65,11 +69,11 @@ $("input").eq(0).keyup(function(){
 checkflag()
 })
 
-$("input").eq(1).keyup(function(){
-  if ($("input").eq(1).val() == ""){
+$("#email").keyup(function(){
+  if ($("#email").val() == ""){
     $(".error2").text("가입 시 등록한 이메일을 입력해주세요");
     emailCheck = false;
-  } else if (!fn_emailChk($("input").eq(1).val())){ 
+  } else if (!fn_emailChk($("#email").val())){ 
     $(".error2").text("올바른 이메일 형식을 입력해 주세요");
     emailCheck = false;
   } else {
