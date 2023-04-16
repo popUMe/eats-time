@@ -14,22 +14,22 @@
 <style>
 </style>
 <body>
-<jsp:include page="../header.jsp" />
+	<jsp:include page="../header.jsp" />
 	<div class="css-140915z">
 		<div class="css-7500ra">아이디 찾기</div>
 		<div class="css-u3y03b">
 			<div class="css-1izr46f">
 				<button type="button" class="css-j8h1l4">이메일 인증</button>
 			</div>
-			<form class="css-s3iz85" name="findIdForm">
+			<form action="findIdOk.jsp" class="css-s3iz85" name="findIdForm">
 				<div class="css-1blp8ou">
 					<div class="css-1yjqrpx">
 						<label for="name" class="css-c3g9of">이름</label>
 						<div class="css-176lya2">
 							<input id="name" name="name" placeholder="이름을 입력해 주세요"
 								type="text" class="css-u52dqk input-content1" value="">
-							<button class="css-118q5z4 textbutton1" size="16" id="delete-input"
-								aria-label="delete-input" type="button"
+							<button class="css-118q5z4 textbutton1" size="16"
+								id="delete-input" aria-label="delete-input" type="button"
 								style="visibility: hidden"></button>
 						</div>
 					</div>
@@ -41,8 +41,8 @@
 						<div class="css-176lya2 e1uzxhvi3">
 							<input id="email" name="email" placeholder="이메일을 입력해 주세요"
 								type="email" class="css-u52dqk input-content2" value="">
-							<button class="css-118q5z4 textbutton2" size="16" id="delete-input"
-								aria-label="delete-input" type="button"
+							<button class="css-118q5z4 textbutton2" size="16"
+								id="delete-input" aria-label="delete-input" type="button"
 								style="visibility: hidden"></button>
 						</div>
 					</div>
@@ -57,7 +57,15 @@
 			</form>
 		</div>
 	</div>
-<jsp:include page="../footer.jsp" />
+	<jsp:include page="../footer.jsp" />
+	<div id="modal">
+		<div class="banner-online">
+			<div class="modal-content">가입시 입력하신 회원 정보가 맞는지 다시 한번 확인해 주세요.</div>
+			<div class="close-button" style="cursor: pointer;">
+				확인
+			</div>
+		</div>
+	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/findId.js"></script>

@@ -2,7 +2,9 @@
  * 
  */
 
-let pwCheck = false;
+let pwCheck1 = false;
+let pwCheck2 = false;
+let pwCheck3 = false;
 let rePwCheck = false;
 
 
@@ -51,35 +53,6 @@ $("#passwordConfirm").blur(function(e) {
 
 
 
-// 새 비밀번호 실시간 검사 	
-
-
-/*function chkPW() {
-
-	let checkPw1 = true;
-	let checkPw2 = true;
-	let checkPw3 = true;
-
-	let pw = $("#password").val();
-	let num = pw.search(/[0-9]/g);
-	let eng = pw.search(/[a-z]/ig);
-	let spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
-
-	if (pw.length < 8 || pw.length > 20) {
-		checkPw1 = false;
-	}
-	if (pw.search(/\s/) != -1) {
-		checkPw2 = false;
-	}
-
-	if (num < 0 || eng < 0 || spe < 0) {
-		checkPw3 = false;
-	}
-
-}*/
-
-
-
 // 새비밀번호 등록
 $("#password").keyup(function() {
 
@@ -100,6 +73,7 @@ $("#password").keyup(function() {
 	checkPws.addClass("css-ua37vt")
 
 
+
 	if (rePw.val()) {
 		if (rePw.val() != "" && rePw.val() == pw.val()) {
 			reChecks.removeClass("css-alright css-ua37vt")
@@ -114,18 +88,22 @@ $("#password").keyup(function() {
 	if (pw.val().length < 8 || pw.val().length > 20) {
 		checkPws.eq(0).removeClass("css-alright css-1319hys")
 		checkPws.eq(0).addClass("css-ua37vt")
+			pwCheck1 = false;
 	} else {
 		checkPws.eq(0).removeClass("css-alright css-ua37vt")
 		checkPws.eq(0).addClass("css-1319hys")
+			pwCheck1 = true;
 	}
 
 	// 두번째 checkPw 검사
 	if (pw.val().search(/\s/) != -1) {
 		checkPws.eq(1).removeClass("css-alright css-1319hys")
 		checkPws.eq(1).addClass("css-ua37vt")
+			pwCheck2 = false;
 	} else {
 		checkPws.eq(1).removeClass("css-alright css-ua37vt")
 		checkPws.eq(1).addClass("css-1319hys")
+			pwCheck2 = true;
 	}
 
 
@@ -134,13 +112,14 @@ $("#password").keyup(function() {
 	if (num < 0 || eng < 0 || spe < 0) {
 		checkPws.eq(2).removeClass("css-alright css-1319hys")
 		checkPws.eq(2).addClass("css-ua37vt")
+			pwCheck3 = false;
 	} else {
 		checkPws.eq(2).removeClass("css-alright css-ua37vt")
 		checkPws.eq(2).addClass("css-1319hys")
+			pwCheck3 = true;
 	}
 	
 	checkButton()
-
 
 })
 
@@ -152,12 +131,15 @@ $("#passwordConfirm").keyup(function() {
 	let rePw = $("#passwordConfirm");
 	let reChecks = $(".checkConfirm");
 
+
 	if (rePw.val() != "" && rePw.val() == pw.val()) {
 		reChecks.removeClass("css-alright css-ua37vt")
 		reChecks.addClass("css-1319hys")
+		rePwCheck= true;
 	} else {
 		reChecks.removeClass("css-alright css-1319hys")
 		reChecks.addClass("css-ua37vt")
+		rePwCheck= false;
 	}
 	
 	checkButton()
@@ -165,81 +147,15 @@ $("#passwordConfirm").keyup(function() {
 });
 
 function checkButton(){
-if ($(".checkPw").hasClass("css-1319hys") &&
-	$(".checkConfirm").hasClass("css-1319hys") &&
-	$("#password").val() == $('#passwordConfirm').val()) {
-	$(".button").removeAttr("disabled");
-	$(".button").prop("background", "rgb(95, 0, 128)");
-} else {
-	$(".button").prop("background", "rgb(221, 221, 221)");
-	$(".button").attr("disabled", "");
-}
+    if (pwCheck1 && pwCheck2 && pwCheck3 && rePwCheck) {
+        $(".button").removeAttr("disabled");
+        $(".button").css("background-color", "rgb(95, 0, 128)");
+    } else {
+        $(".button").css("background-color", "rgb(221, 221, 221)");
+        $(".button").attr("disabled", "");
+    }
 }
 
-
-
-
-/*$("#email").bind('focus', function()  
-
-	$("#email").blur(function(e) {
-
-		if ($(e.target).val() == "") {
-			$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
-		} else if (!fn_emailChk($(e.target).val())) {
-			$(".error2").text("올바른 이메일 형식을 입력해 주세요");
-		} else {
-			$(".error2").text("");
-		}
-
-	})
-
-})*/
-
-
-/*키를 입력할 때마다 검사해서 아래 문구나오기*/
-
-
-/*let nameCheck = false;
-let emailCheck = false;
-
-$("#name").keyup(function() {
-	if ($("#name").val() == "") {
-		$(".error1").text("가입 시 등록한 이름을 입력해주세요");
-		nameCheck = false;
-	} else {
-		$(".error1").text("");
-		nameCheck = true;
-	}
-	checkflag()
-})
-
-$("#email").keyup(function() {
-	if ($("#email").val() == "") {
-		$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
-		emailCheck = false;
-	} else if (!fn_emailChk($("#email").val())) {
-		$(".error2").text("올바른 이메일 형식을 입력해 주세요");
-		emailCheck = false;
-	} else {
-		$(".error2").text("");
-		emailCheck = true;
-	}
-
-	checkflag()
-
-})
-
-
-function checkflag() {
-	if (nameCheck && emailCheck) {
-		$(".button").removeAttr("disabled");
-		$(".button").prop("background", "rgb(95, 0, 128)");
-	} else {
-		$(".button").prop("background", "rgb(221, 221, 221)");
-		$(".button").attr("disabled", "");
-	}
-}
-*/
 
 
 

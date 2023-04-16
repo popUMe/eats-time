@@ -1,8 +1,68 @@
 @charset "UTF-8";
 
 
-/* 아래는 */
+/* 전체를 감싸는 div */
+.css-140915z {
+    min-width: 1050px;
+    padding: 50px 0;
+    background-color: white;
+}
 
+/* 그안에 내용을 또 감싸는 div 태그 */
+
+.css-1y6q2fw {
+    max-width: 400px;
+    padding: 60px 30px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+
+/* 가운데 내용을 감싸는 div */
+
+.css-1azakc {
+    text-align: center;
+}
+
+
+
+/*첫번쨰 p태그 앞에 before  */
+.css-eipuol::before {
+    content: "";
+    display: block;
+    width: 54px;
+    height: 54px;
+    margin: 0px auto 20px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iNTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxjaXJjbGUgZmlsbD0iIzhENENDNCIgY3g9IjI3IiBjeT0iMjciIHI9IjI3Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQgMTcuNSkiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIj4KICAgICAgICAgICAgPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjE3IiByeD0iMyIvPgogICAgICAgICAgICA8cGF0aCBkPSJNMy4yMi45NjRBMi4xNTIgMi4xNTIgMCAwIDAgLjk3MyAzLjAyMnYuM2EyLjUgMi41IDAgMCAwIDEuMDkyIDIuMDY2bDguMTIgNS41MzZhNSA1IDAgMCAwIDUuNjMxIDBsOC4xMjQtNS41MzZhMi41IDIuNSAwIDAgMCAxLjA5My0yLjA2NnYtLjNjMC0uOTI0LS44MjMtMi4wNTgtMi4xNzEtMi4wNThIMy4yMnoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=) 50% 50% no-repeat;
+}
+
+
+/* 위 div 안에 첫번쨰 p태그  */
+
+
+.css-eipuol {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+/* 첫번째 p태그 안에 span태그 */
+.css-1fhnwod {
+    font-weight: 700;
+    color: rgb(95, 0, 128);
+    word-break: break-all;
+}
+
+
+
+/* 두번쨰 p태그 */
+
+.css-h90wig {
+    padding-top: 14px;
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+    line-height: 19px;
+}
 
 
 

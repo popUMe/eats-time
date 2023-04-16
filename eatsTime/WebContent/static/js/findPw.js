@@ -142,3 +142,21 @@ $('.textbutton2').on("click", function(){
 	$(".textbutton2").css('visibility', 'hidden');
 	$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
 })
+
+
+/* 모달창 구현해보기*/
+
+
+	$('.button').on("click", function(){
+		$('.banner-online').fadeIn();
+		$('#modal').fadeIn();
+		$("html").css("overflow-y", "hidden");
+	})
+
+	$('.close-button').click(function() {
+		$('.banner-online').fadeOut();
+		$('#modal').fadeOut();
+		$("html").css("overflow-y", "");	
+	})
+
+

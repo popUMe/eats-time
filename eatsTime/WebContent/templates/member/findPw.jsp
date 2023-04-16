@@ -19,7 +19,7 @@
 			<div class="css-1izr46f">
 				<button type="button" class="css-j8h1l4">이메일 인증</button>
 			</div>
-			<form class="css-s3iz85">
+			<form action="findIdPwOk.jsp" class="css-s3iz85">
 				<div class="css-1blp8ou">
 					<div class="css-1yjqrpx">
 						<label for="name" class="css-c3g9of">아이디</label>
@@ -56,6 +56,14 @@
 		</div>
 	</div>
 	<jsp:include page="../footer.jsp" />
+		<div id="modal">
+		<div class="banner-online">
+			<div class="modal-content">가입시 입력하신 회원 정보가 맞는지 다시 한번 확인해 주세요.</div>
+			<div class="close-button" style="cursor: pointer;">
+				확인
+			</div>
+		</div>
+	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/findPw.js"></script>

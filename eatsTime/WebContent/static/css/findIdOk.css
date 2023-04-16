@@ -1,150 +1,130 @@
 @charset "UTF-8";
 
-
 /* 전체 div태그 */
-
 .css-140915z {
-    min-width: 1050px;
-    padding: 50px 0px;
-    background-color: white;
+	min-width: 1050px;
+	padding: 50px 0px;
+	background-color: white;
 }
 
-
 /* 그 안에 태그 */
-
 .css-6mht10 {
-    max-width: 400px;
-    padding: 0px 30px 30px;
-    margin: auto;
-    position: relative;
-    background-color: white;
+	max-width: 400px;
+	padding: 0px 30px 30px;
+	margin: auto;
+	position: relative;
+	background-color: white;
 }
 
 /* 고객님의 컬리 계정을 찾았습니다. 아이디 확인 후 로그인해주세요. 묶은 태그 */
-
 .css-1ymrnwr {
-    padding-top: 30px;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 23px;
+	padding-top: 30px;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 23px;
 }
 
 /* 아이디 확인 후 로그인해 주세요. 감싸는 div 태그  */
-
 .css-1jlgal3 {
-    display: block;
-    padding-top: 4px;
-    font-weight: 400;
-    font-size: 13px;
-    color: rgb(153, 153, 153);
-    line-height: 18px;
+	display: block;
+	padding-top: 4px;
+	font-weight: 400;
+	font-size: 13px;
+	color: rgb(153, 153, 153);
+	line-height: 18px;
 }
-
 
 /* 아이디 전체를 감싼 ui  */
-
 .css-14o5m2r {
-    padding: 12px 0px;
+	padding: 12px 0px;
 }
-
 
 /* li 태그  */
 .css-1qp8f6i {
-    display: flex;
+	display: flex;
 }
 /* li 태그 안에 이미지 */
-
 .css-ate73y {
-    width: 40px;
-    height: 40px;
-    display: block;
-    margin: 17px 12px 16px 0px;
+	width: 40px;
+	height: 40px;
+	display: block;
+	margin: 17px 12px 16px 0px;
 }
 
 /* 찾은 아이디 묶은 태그 */
-
-.css-1qp8f6i:first-of-type > div {
-    border: none;
+.css-1qp8f6i:first-of-type>div {
+	border: none;
 }
 
 .css-yzpdz {
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    border-top: 1px solid rgb(238, 238, 238);
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	border-top: 1px solid rgb(238, 238, 238);
 }
-
 
 /* 아이디  */
 .css-1kkr6j1 {
-    padding-top: 17px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
+	padding-top: 17px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 21px;
 }
 
 /* 가입일 태그 */
-
 .css-1081952 {
-    display: block;
-    padding-top: 4px;
-    font-size: 12px;
-    color: rgb(153, 153, 153);
+	display: block;
+	padding-top: 4px;
+	font-size: 12px;
+	color: rgb(153, 153, 153);
 }
 
 /* 아이디 전체보기/ 로그인 묶은 div */
-
 .css-gyfngb {
-    margin-top: 60px;
+	margin-top: 60px;
 }
 
-
 /* 아이디 전체보기 버튼 태그 */
-.css-gyfngb > button:first-of-type {
-    margin-bottom: 10px;
+.css-gyfngb>button:first-of-type {
+	margin-bottom: 10px;
 }
 
 .css-ufulao {
-    display: block;
-    padding: 0px 10px;
-    text-align: center;
-    overflow: hidden;
-    width: 100%;
-    height: 52px;
-    border-radius: 3px;
-    color: rgb(95, 0, 128);
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(95, 0, 128);
+	display: block;
+	padding: 0px 10px;
+	text-align: center;
+	overflow: hidden;
+	width: 100%;
+	height: 52px;
+	border-radius: 3px;
+	color: rgb(95, 0, 128);
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(95, 0, 128);
 }
 
 /* 아이디 전체보기 안에 span 태그 */
-
 .css-ymwvow {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 500;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
 }
 
 /* 로그인 버튼 태그 */
-
 .css-1qirdbn {
-    display: block;
-    padding: 0px 10px;
-    text-align: center;
-    overflow: hidden;
-    width: 100%;
-    height: 52px;
-    border-radius: 3px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(95, 0, 128);
-    border: 0px none;
+	display: block;
+	padding: 0px 10px;
+	text-align: center;
+	overflow: hidden;
+	width: 100%;
+	height: 52px;
+	border-radius: 3px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(95, 0, 128);
+	border: 0px none;
 }
 
 /* 그안 스판태그 */
-
 .css-ymwvow {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 500;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
 }
-
-
