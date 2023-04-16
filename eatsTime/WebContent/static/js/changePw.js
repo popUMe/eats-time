@@ -147,7 +147,7 @@ $("#passwordConfirm").keyup(function() {
 });
 
 function checkButton(){
-    if (pwCheck1 && pwCheck2 && pwCheck3 && rePwCheck) {
+    if (pwCheck1 && pwCheck2 && pwCheck3 && rePwCheck && ($("#password").val() == $("#passwordConfirm").val())){
         $(".button").removeAttr("disabled");
         $(".button").css("background-color", "rgb(95, 0, 128)");
     } else {
