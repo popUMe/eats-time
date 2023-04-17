@@ -126,9 +126,7 @@
 						</div>
 					</div>
 					<div class="css-1w0ksfz">
-						<button class="css-ufulao" type="button" disabled="">
-							<span class="css-ymwvow">인증번호 받기</span>
-						</button>
+						
 					</div>
 				</div>
 				<div class="css-1pjgd36">
@@ -333,4 +331,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/signup.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </html>
