@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>푸터영역</title>
+<title>푸터</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 </style>

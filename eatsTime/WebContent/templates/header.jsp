@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>헤더영역</title>
+<title>헤더</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main.css" />
 </head>
 <body>
