@@ -437,6 +437,15 @@ img{
 /*     color: rgb(153, 153, 153); */
 /* } */
 
+.css-2xiujm .inquiry-detail-content > .actions-wrap > .btn-text {
+    position: relative;
+    padding: 0px 11px;
+    font-size: 14px;
+    line-height: 20px;
+    border: 0px;
+    background: none;
+    color: rgb(153, 153, 153);
+}
 .css-2xiujm .inquiry-detail-content > .actions-wrap > .btn-text:last-child {
     padding-right: 0px;
 }

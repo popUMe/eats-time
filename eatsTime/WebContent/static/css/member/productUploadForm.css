@@ -116,11 +116,15 @@
     font-size: 14px;
 }
 
-/*중복확인 부분 span태그*/
 .css-ymwvow {
     display: inline-block;
 }
-/*주소검색 버튼 부분*/
+
+.css-imagerule{
+	
+	font-weight: 200;
+    font-size: 10px;
+}
 .css-1schgvv {
     display: block;
     padding: 0px 10px;
@@ -150,7 +154,7 @@
 
 
 .css-14wodj6 {
-    display: flex;
+    display: block;
     -webkit-box-pack: justify;
     justify-content: space-between;
     flex-direction: row;
@@ -165,13 +169,11 @@
     padding: 12px 0px 9px;
 }
 
-/*성별부분 input태그*/
 input[type=radio] {
     box-sizing: border-box;
     padding: 0;
 }
 
-/*성별부분 input태그*/
 .css-1pes2r6 {
     overflow: hidden;
     position: absolute;
@@ -179,11 +181,9 @@ input[type=radio] {
     height: 1px;
     clip: rect(0px, 0px, 0px, 0px);
 }
-/*성별 선택 체그박스 span태그*/
 .css-14wodj6 > label > span {
     font-size: 14px;
 }
-/*성별 선택 체그박스 span태그*/
 .css-198i9ca {
     min-width: 24px;
     min-height: 24px;
@@ -194,7 +194,6 @@ input[type=radio] {
     border: 1px solid rgb(221, 221, 221);
 }
 
-/*성별 선택 div태그*/
 .css-1dahn5m {
     width: 10px;
     height: 10px;
@@ -205,12 +204,10 @@ input[type=radio] {
     border-radius: 50%;
 }
 
-/**/
 .css-mgd87h {
     position: relative;
     margin-left: 12px;
 }
-/*성별 선택안함 부분 span태그*/
 .css-5xw1m2 {
     min-width: 24px;
     min-height: 24px;
@@ -220,7 +217,6 @@ input[type=radio] {
     background-color: rgb(95, 0, 128);
 }
 
-/*성별 선택 안함 부분div태그*/
 .css-1vic0rk {
     width: 10px;
     height: 10px;
@@ -231,7 +227,6 @@ input[type=radio] {
     border-radius: 50%;
     background-color: white;
 }
-/*생년월일 입력 div태그*/
 .css-18n8lnw {
     height: 44px;
     display: flex;
@@ -242,16 +237,13 @@ input[type=radio] {
     border-radius: 3px;
     padding: 0px 15px;
 }
-/*생년월일 입력 div태그*/
 .css-1dkwuq4 {
     padding-bottom: 0px;
 }
-/*생년월일 입력 div태그*/
 .css-xsmgyi {
     position: relative;
     height: 40px;
 }
-/*생년월일 입력 input태그*/
 .css-1dkwuq4 input {
     text-align: center;
     font-size: 14px;
@@ -458,3 +450,36 @@ svg:not(:root) {
     font-size: 16px;
     font-weight: 500;
 }
+
+.css-z9g6s0 {
+	display: block;
+	line-height: 20px;
+	vertical-align: middle;
+}
+
+/*  .css-z9g6s0::before { */
+/* 	content: ""; */
+/* 	display: inline-block; */
+/* 	width: 10px; */
+/* 	height: 10px; */
+/* 	background: #ffffff; */
+/* 	border: 1px solid #e0e0e0; */
+/* 	margin-right: 8px; */
+/* } */
+
+/* .css-z9g6s0::before { */
+/* 	border-radius: 50%; */
+/* } */
+
+/* .css-1pes2r6 { */
+/* 	display: none; */
+/* } */
+
+/* .css-1pes2r6:checked+.css-z9g6s0::before */
+/* 	{ */
+/* 	background-color: rgb(95, 0, 128); */
+/* } */
+
+/* .css-1pes2r6:checked+.css-z9g6s0 { */
+/* 	background-color: rgb(95, 0, 128); */
+/* } */
