@@ -20,7 +20,7 @@ $(".deletebtn").on("click", function(){
 	return false;
 });
 
-/*모달창 삭제*/
+/*모달창 없애기*/
 $(".canceldeletion").on("click", function(){
 	$(".swal2-container").hide();
 	$("body").css('overflow', 'scroll');
