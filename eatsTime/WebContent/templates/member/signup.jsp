@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<jsp:include page="../header.jsp" />
 <link rel="icon" href="https://www.kurly.com//favicon.ico" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/signup.css" />
@@ -30,6 +31,9 @@
 									placeholder="아이디를 입력해주세요" type="text" required=""
 									class="css-u52dqk" value="">
 							</div>
+						</div>
+						<div class="css-shoa2s">
+							<p class="css-1ozi17i">6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합</p>
 						</div>
 					</div>
 					<div class="css-1w0ksfz">
@@ -122,9 +126,7 @@
 						</div>
 					</div>
 					<div class="css-1w0ksfz">
-						<button class="css-ufulao" type="button" disabled="">
-							<span class="css-ymwvow">인증번호 받기</span>
-						</button>
+						
 					</div>
 				</div>
 				<div class="css-1pjgd36">
@@ -210,26 +212,11 @@
 				</div>
 				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
-						<label class="css-1obgjqh">추가입력 사항</label>
+						
 					</div>
 					<div class="css-82a6rk">
 						<div class="css-14wodj6">
-							<label class="css-z9g6s0" for="additional-recommender"><input
-								data-testid="radio-RECOMMEND" id="additional-recommender"
-								name="joinExtraInputType" type="radio"
-								class="css-1pes2r6" value="RECOMMEND"><span
-								class="css-198i9ca"><div
-										class="css-1dahn5m"></div></span><span
-								aria-labelledby="additional-recommender"
-								class="css-mgd87h">친구초대 추천인 아이디</span></label><label
-								class="css-z9g6s0" for="additional-event"><input
-								data-testid="radio-EVENT" id="additional-event"
-								name="joinExtraInputType" type="radio"
-								class="css-1pes2r6" value="EVENT"><span
-								class="css-198i9ca">
-								<div class="css-1dahn5m"></div></span><span
-								aria-labelledby="additional-event" class="css-mgd87h">참여
-									이벤트명</span></label>
+						
 						</div>
 					</div>
 					<div class="css-1w0ksfz"></div>
@@ -301,77 +288,14 @@
 							</div>
 							<a class="css-7chi73">약관보기</a>
 						</div>
-						<div class="css-ov2xfu">
-							<div class="css-s5xdrg">
-								<label class="css-1mjkje9"
-									for="OptionalTermsOfPrivacy"><input
-									id="OptionalTermsOfPrivacy" type="checkbox"
-									class="css-agvwxo">
-								<div class="css-79hxr7">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z"
-												stroke="#ddd" fill="#fff"></path>
-											<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd"
-												stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round"></path></svg>
-									</div>
-									<span>개인정보 수집∙이용 동의</span></label><span class="css-g5xq45">(선택)</span>
-							</div>
-							<a class="css-7chi73">약관보기</a>
-						</div>
+					
 						<div class="css-ob6kg2">
 							<div class="css-s5xdrg">
 								<label class="css-1mjkje9" for="SignupEventAll"><input
 									id="SignupEventAll" type="checkbox"
 									class="css-agvwxo">
-								<div class="css-79hxr7">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z"
-												stroke="#ddd" fill="#fff"></path>
-											<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd"
-												stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round"></path></svg>
-									</div>
-									<span>무료배송, 할인쿠폰 등 혜택/정보 수신 동의</span></label><span
-									class="css-g5xq45">(선택)</span>
-							</div>
-							<div class="css-1qsjbts">
-								<label class="css-1j1mor8" for="OptionalTermsOfSms"><input
-									id="OptionalTermsOfSms" type="checkbox"
-									class="css-agvwxo">
-								<div class="css-79hxr7">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z"
-												stroke="#ddd" fill="#fff"></path>
-											<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd"
-												stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round"></path></svg>
-									</div>
-									<span>SMS</span></label><label class="css-1j1mor8"
-									for="OptionalTermsOfMailing"><input
-									id="OptionalTermsOfMailing" type="checkbox"
-									class="css-agvwxo">
-								<div class="css-79hxr7">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z"
-												stroke="#ddd" fill="#fff"></path>
-											<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd"
-												stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round"></path></svg>
-									</div>
-									<span>이메일</span></label>
-							</div>
-							<div class="css-1qsjbts">
-								<p class="css-e4ph5f">동의 시 한 달간 [5%적립] + [2만원 이상
-									무료배송] 첫 주문 후 안내</p>
+								
+								
 							</div>
 						</div>
 						<div class="css-ov2xfu">
@@ -403,5 +327,9 @@
 			</div>
 		</div>
 	</div>
+	<jsp:include page="../footer.jsp" />
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/signup.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </html>
