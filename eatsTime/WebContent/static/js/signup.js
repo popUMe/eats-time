@@ -1,10 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/layout/header.jsp" %>
-<script>
-/* 22.11.23 인진 회원가입 폼 작성 */
-  	
-	function check() {
+function check() {
 		
 // 		이름 유효성 검사
 		if(document.input.member_name.value == ""){
@@ -154,7 +148,7 @@
 		
 			var httpMethod = "GET";
 			var httpParam = "member_email=" + encodeURIComponent(member_email.value);
-			var httpURL = "${pageContext.request.contextPath}/member/checkEmail?"+httpParam;
+			var httpURL = "${pageContext.request.contextPath}templates/member/signup.jsp;
 			
 			httpRequest.open(httpMethod, httpURL, true);
 			
@@ -205,112 +199,3 @@
 				}
 			});
 		});
-
-			
-</script>
-<div align = "center" style="padding-top: 150px">
-	<div  align = "center" style ="border:1px solid black; height:1300px; width:400px">
-		<form action="${ pageContext.request.contextPath }/member/insert" method="post" name = "input">
-		<h2>회원가입</h2>
-		<div align = "left" style="margin-left:20px; margin-right:20px; margin-top:20px;">
-			<label for="exampleFormControlInput1" class="form-label">이름</label>
-		<br>
-			<input type = "text" name = "member_name" class="form-control" id="exampleFormControlInput1" placeholder="이름을 입력해주세요">
-		</div>
-		<div align = "left" style="margin-left: 20px; margin-top:20px">
-	  		<input type="radio" name="member_gender" id="male" value="0" checked>
-	  		<label for="male">남자</label>
-	  		<input type="radio" name="member_gender" id="female" value="1">
-	  		<label for="female">여자</label>
-		</div>
-		<div align = "left" style="margin-left:20px; margin-right:20px; margin-top:20px;">
-			<label for="exampleFormControlInput2" class="form-label">생년월일</label>
-		<br>
-			<input type = "date" name = "member_birthday" class="form-control" id="exampleFormControlInput2">
-		</div>
-		<div align = "left" style="margin-left:20px; margin-right:20px; margin-top:20px;">
-			<label for="member_email" class="form-label">이메일</label>
-		<br>
-			<div style="margin-right:20px; display:flex; justify-content: space-around">
-				<input type = "text" name = "member_email" id="member_email" class="form-control" placeholder="ID@example.com">
-				<button type = "button" name = "member_emailB" id="member_emailB" style = "width:40%; margin-left:30px; font-size: 8px;" class="btn btn-success" onclick="checkEmail()">중복확인</button>
-			</div>
-		</div>
-			<div align = "left" style="margin-left:20px;">
-			<span id="check"></span>
-			</div>
-<!--  				<input type= "button" style = "width:40%; margin-left:30px; font-size: 8px;" id="checkEmail" class="btn btn-success" value="중복 확인"> -->
-<!-- 			<!-- id ajax 중복체크 -->
-<!--  				<span class="member_email_ok">사용 가능한 이메일입니다</span> -->
-<!--  				<span class="member_email_already">이미 사용중인 이메일 입니다</span> -->
-		<br>
-		<div align = "left" style="margin-left:20px; margin-right:20px; margin-top:20px;">
-			<label for="exampleFormControlInput4" class="form-label">비밀번호</label>
-		<br>
-			<input type = "password" name = "member_pw" class="form-control" id="exampleFormControlInput4" placeholder="대문자, 소문자, 숫자, 특수문자를 포함하여  8 ~ 15자">
-		</div>
-		<br>
-		<div align = "left" style="margin-left:20px; margin-right:20px; margin-top:20px;">
-			<label for="exampleFormControlInput5" class="form-label">비밀번호확인</label>
-		<br>
-			<input type = "password" name = "member_repw" class="form-control" id="exampleFormControlInput5" placeholder="비밀번호를 한번 더 입력해주세요.">
-		</div>
-		<br>
-		<div align = "left" style="margin-left:20px; margin-right:20px; margin-top:20px;">
-			<label for="exampleFormControlInput6" class="form-label">연락처</label>	
-		<br>
-			<input type = "text" name = "member_ph" class="form-control" id="exampleFormControlInput6" placeholder="연락처를 입력해주세요.">
-			<div align = "left" style="margin-top:20px;">
-			<p style="font-size: 5px">연락처는 '-' 를 포함하여 입력해주시기 바랍니다 ex)010-1111-2222</p>
-			</div>
-		</div>
-		<br>
-		<div align = "left" style="margin-left: 20px; margin-top:20px">
-		  <input type="radio" name="member_role" id="inlineRadio1" value="0">
-		  <label for="inlineRadio1">개발자</label>&nbsp;
-		  <input type="radio" name="member_role" id="inlineRadio2" value="1">
-		  <label for="inlineRadio2">관리자</label>&nbsp;
-		  <input type="radio" name="member_role" id="inlineRadio3" value="2">
-		  <label for="inlineRadio3">업체</label>&nbsp;
-		  <input type="radio" name="member_role" id="inlineRadio4" value="3" checked>
-		  <label for="inlineRadio4">사용자</label>
-		</div>
-	<div>
-			<div align = "left" style="margin-left: 20px; margin-top:20px;">
-				<input type='checkbox' id="allCheck" name="allCheck" class="checks"> 
-				<label for="allCheck">전체 약관 동의</label>
-			</div>
-			<div align = "left" style="margin-left: 20px; margin-top:20px;">
-				<input type = "checkbox" class="checks" id= "agree1" name = "agree1" >
-				<label for="agree">만 14세 이상입니다.(필수)</label>
-			</div>
-			<div align = "left" style="margin-left: 20px; margin-top:20px;">
-				<input type = "checkbox" class="checks" id= "agree2" name = "agree2">
-				<label for="agree">회원 가입 및 운영약관 동의(필수)</label>
-			</div>
-			<div align = "left" style="margin-left: 20px; margin-top:20px;">
-				<input type = "checkbox" class="checks" id= "agree3" name = "agree3">
-				<label for="agree">개인정보 수집 및 이용(필수)</label>
-			</div>
-			<div align = "left" style="margin-left: 20px; margin-top:20px;">
-				<input type = "checkbox" class="checks" id= "agree4" name = "agree4">
-				<label for="agree">위치정보 이용약관(필수)</label>
-			</div>
-			<div align = "left" style="margin-left: 20px; margin-top:20px;">
-				<input type = "checkbox" class="checks" id="member_clause" name = "member_clause" value = "1">
-				<label for="member_clause">특가 항공권 및 할인 혜택 안내 동의(선택)</label>
-			</div>
-		</div>
-		<div align = "left" style="margin-left: 20px; margin-top:20px;">
-		<p style="font-size: 5px">선택 항목을 동의 하지 않아도 서비스를 이용하실 수 있습니다.</p>
-		</div>
-		<br>				
-		<div align = "center">
-		
-			<button style = "width: 100%" id="join" type = "button" class="btn btn-dark"  onclick = "check()">회원가입</button>
-		</div>
-		</form>
-	</div>
-</div>
-<div style="height: 150px"></div>	
-<%@ include file = "/WEB-INF/views/layout/footer.jsp"%>
