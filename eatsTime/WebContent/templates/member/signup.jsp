@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<jsp:include page="../header.jsp" />
 <link rel="icon" href="https://www.kurly.com//favicon.ico" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/signup.css" />
@@ -328,6 +329,7 @@
 			</div>
 		</div>
 	</div>
+	<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/signup.js"></script>
