@@ -124,6 +124,9 @@ $('.textbutton1').on("click", function(){
 	$(".textbutton1").css('visibility', 'hidden');
 	$(".error1").text("가입 시 등록한 아이디를 입력해주세요");
 })
+
+/* 탭으로 이동금지 */
+$('.textbutton1').attr("tabindex", "-1");
 	
 
 /*이메일*/

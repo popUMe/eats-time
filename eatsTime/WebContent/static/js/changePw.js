@@ -43,10 +43,20 @@ $("#passwordConfirm").one('click', function() {
 $("#passwordConfirm").blur(function(e) {
 
 	if ($(e.target).val() == "") {
+		$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
 		$(".checkConfirm").removeClass("css-alright css-1319hys")
 		$(".checkConfirm").addClass("css-ua37vt")
-		$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
 	}
+
+
+})
+
+/*탭으로 이동할때 오류 막기*/
+$("#passwordConfirm").focus(function() {
+
+		$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
+		$(".checkConfirm").removeClass("css-alright css-1319hys")
+		$(".checkConfirm").addClass("css-ua37vt")
 
 })
 
@@ -54,7 +64,7 @@ $("#passwordConfirm").blur(function(e) {
 
 
 // 새비밀번호 등록
-$("#password").keyup(function() {
+$("#password").keyup(function(e) {
 
 
 	// jQuery 객체 선언부 (태그선언)
@@ -180,6 +190,10 @@ $('.textbutton1').on("click", function() {
 
 })
 
+/* 탭으로 이동금지 */
+$('.textbutton1').attr("tabindex", "-1");
+
+
 
 /*비밀번호재설정*/
 $(".input-content2").keyup(function() {
@@ -198,4 +212,22 @@ $('.textbutton2').on("click", function() {
 	$(".checkConfirm").addClass("css-ua37vt")
 
 });
+
+/* 모달창 구현해보기*/
+
+
+	$('.button').on("click", function(){
+		$('.banner-online').fadeIn();
+		$('#modal').fadeIn();
+		$("html").css("overflow-y", "hidden");
+	})
+
+	$('.close-button').click(function() {
+		$('.banner-online').fadeOut();
+		$('#modal').fadeOut();
+		$("html").css("overflow-y", "");
+		location.href= "login.jsp";	
+	})
+
+
 

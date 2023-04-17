@@ -196,22 +196,14 @@
 /* 모달 창 */
 .banner-online {
 	height: 200px;
-	border: 1px solid black;
 	box-shadow: 3px 3px 7px 1px grey;
-	background-color: white;
 	z-index: 9999;
 	margin-left: 41%;
 	margin-top: 19%;
-	display: none;
-	position: fixed;
-	display: none;
 	position: relative;
 	box-sizing: border-box;
 	width: 32em;
-	max-width: 100%;
-	padding: 1.25em;
 	border: none;
-	border-radius: 5px;
 	background: #fff;
 	font-family: inherit;
 	font-size: 1rem;
@@ -220,6 +212,7 @@
 	border-radius: 12px;
 	padding: 0;
 }
+
 
 #modal {
 	position: fixed;

@@ -126,6 +126,9 @@ $('.textbutton1').on("click", function() {
 	$(".error1").text("가입 시 등록한 이름을 입력해주세요");
 })
 
+/* 탭으로 이동금지 */
+$('.textbutton1').attr("tabindex", "-1");
+
 
 /*이메일*/
 $(".input-content2").keyup(function() {

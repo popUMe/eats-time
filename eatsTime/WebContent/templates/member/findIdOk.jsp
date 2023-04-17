@@ -29,7 +29,7 @@
 					</div></li>
 			</ul>
 			<div class="css-gyfngb">
-				<button class="css-ufulao" type="button">
+				<button class="css-ufulao sendMail-button" type="button">
 					<span class="css-ymwvow">아이디 전체보기</span>
 				</button>
 				<button class="css-1qirdbn login-button" type="button">
@@ -39,7 +39,14 @@
 		</div>
 	</div>
 	<jsp:include page="../footer.jsp" />
+		<div id="modal">
+		<div class="banner-online">
+			<div class="modal-content">가입하신 이메일로 아이디가 발송되었습니다.<br>메일을 받지 못하셨다면 스팸함을 확인해 보세요.</div>
+			<div class="close-button" style="cursor: pointer;">
+				확인
+			</div>
+		</div>
+	</div>
 </body>
-<script> let path = "${pageContext.request.contextPath}"</script>
 <script src="${pageContext.request.contextPath}/static/js/findIdOk.js"></script>
 </html>

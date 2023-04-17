@@ -48,14 +48,22 @@
 					<p class="checkConfirm"></p>
 				</div>
 				<div class="css-3vxi16">
-					<button class="css-1s9rhb5 button" type="submit" disabled="" radius="4">
+					<button class="css-1s9rhb5 button" type="button" disabled="" radius="4">
 						<span class="css-ymwvow">확인</span>
 					</button>
 				</div>
 			</form>
 		</div>
 	</div>
-<jsp:include page="../footer.jsp" />	
+<jsp:include page="../footer.jsp" />
+	<div id="modal">
+		<div class="banner-online">
+			<div class="modal-content">비밀번호 변경이 완료되었습니다.</div>
+			<div class="close-button" style="cursor: pointer;">
+				확인
+			</div>
+		</div>
+	</div>	
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/changePw.js"></script>
