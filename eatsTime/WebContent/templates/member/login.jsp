@@ -18,12 +18,12 @@
 		<div class="css-46b038">
 			<div class="css-1accgqb">
 			<div class="css-176lya2">
-					<input type="text" data-testid="input-box" name="id" value="" placeholder="아이디를 입력해주세요" class="css-u52dqk">
+					<input type="text" data-testid="input-box" name="userid" placeholder="아이디를 입력해주세요" class="css-u52dqk">
 						</div>
 							</div>
 								<div class="css-1accgqb">
 									<div class="css-176lya2">
-										<input type="password" data-testid="input-box" name="password" value="" placeholder="비밀번호를 입력해주세요" autocomplete="off" class="css-u52dqk">
+										<input type="password" data-testid="input-box" name="password" placeholder="비밀번호를 입력해주세요" autocomplete="off" class="css-u52dqk">
 											</div>
 												</div>
 													</div>
@@ -33,7 +33,7 @@
 										<a class="css-i4t6me">비밀번호 찾기</a>
 										</div>
 									<div class="css-s4i9n2">
-									<button class="css-qaxuc4" type="submit" height="54" radius="3">
+									<button class="css-qaxuc4" type="submit" value="login" height="54" radius="3">
 									<span class="css-ymwvow">로그인</span>
 									</button>
 									<button class="css-hxorrg" type="button" height="54" radius="3"><span class="css-ymwvow">회원가입</span>
