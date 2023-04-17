@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/writeQuestion.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/writeQuestion.css" />
 <title>Insert title here</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 				<!-- 메뉴창 -->
 				<ul class="css-1x9bshx ecbxmj1">
 					<li>
-						<a class=" css-g4g0eu ecbxmj0">
+						<a href="${pageContext.request.contextPath}/templates/board/noticeList.jsp" class=" css-g4g0eu ecbxmj0">
 							공지사항
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
@@ -33,7 +33,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="active css-g4g0eu ecbxmj0">
+						<a href="${pageContext.request.contextPath}/templates/board/qnaList.jsp" class="active css-g4g0eu ecbxmj0">
 							1:1 문의
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
@@ -98,8 +98,7 @@
 									<div>
 										<div class="MuiFormControl-root css-tzsjye">
 											<div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl jss2 css-eg1co4">
-												<div class="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-qiwgdb">문의유형을 선택해주세요</div>
-												<input aria-hidden="true" tabindex="-1" class="MuiSelect-nativeInput css-1k3x8v3" value="">
+												
 												<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1636szt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
 													<path d="M7 10l5 5 5-5z">
 													</path>
@@ -118,8 +117,6 @@
 									<div>
 										<div class="MuiFormControl-root css-tzsjye">
 											<div variant="outlined" class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl jss2 css-eg1co4">
-												<div role="button" aria-disabled="true" aria-expanded="false" aria-haspopup="listbox" aria-label="Without label" class="MuiSelect-select MuiSelect-outlined Mui-disabled MuiOutlinedInput-input MuiInputBase-input Mui-disabled css-qiwgdb">상세유형을 선택해주세요</div>
-												<input aria-hidden="true" tabindex="-1" disabled="" class="MuiSelect-nativeInput css-1k3x8v3" value="">
 												<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined Mui-disabled css-1636szt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
 													<path d="M7 10l5 5 5-5z">
 													</path>
@@ -164,7 +161,7 @@
 							<div class="css-12l4j2c e1vbjq4w1">
 								<div class="css-0 e1tjt2bn7">
 									<div class="css-1gua357 e1tjt2bn5">
-										<textarea id="inquiry-contents" inputmode="text" aria-label="textarea-message" name="contents" class="css-5etceh e1tjt2bn1"></textarea>
+										<textarea id="inquiry-contents" inputmode="text" aria-label="textarea-message" name="contents" class="css-5etceh e1tjt2bn1" maxlength="5000"></textarea>
 										<div class="placeholder css-1ofzfyp e1tjt2bn6">
 											<div class="css-168e7y9 e1fgvk593">
 												<strong class="css-c2iqrm e1fgvk592">1:1 문의 작성 전 확인해주세요</strong>
@@ -208,12 +205,17 @@
 							<div class="css-mlazth edd8l6o3">
 								<div class="css-g8ewo8 e9bfpi41">
 									<div class="css-175wokr e9bfpi40">
+										<!-- 파일 업로드 -->
+										<div class="css-o4030c e5xt3dr1">
+											<img src="" alt="" class="css-idj2s4 e5xt3dr4">					
+											<button type="button" class="css-v96m37 e5xt3dr2"></button>
+										</div>
 										<div class="css-0">
 											<label for="photo-picker" class="css-0 e1l8vpkx2">
 												<button type="button" class="css-j9ybaa e1l8vpkx0">
 													<span class="css-113ip0v e1tcjz8t0"></span>
 												</button>
-												<input multiple="" type="file" accept="image/jpg, image/jpeg, image/png, image/bmp" class="css-eivff4 e1l8vpkx1">
+												<input multiple="multiple" type="file" accept="image/jpg, image/jpeg, image/png, image/bmp" class="css-eivff4 e1l8vpkx1">
 											</label>
 										</div>
 									</div>
@@ -272,11 +274,14 @@
 						</div>
 					</div>
 					<div class="css-1spu0j4 ebvrvv11">
-						<button type="submit" class="css-114fr9p ebvrvv10">등록</button>
+						<button disabled="disabled" type="submit" class="css-13kn1it ebvrvv10">등록</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
+	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/writeQuestion.js"></script>
 </html>

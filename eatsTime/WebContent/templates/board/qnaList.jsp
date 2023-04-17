@@ -19,7 +19,7 @@
 				<!-- 메뉴창 -->
 				<ul class="css-1x9bshx ecbxmj1">
 					<li>
-						<a class=" css-g4g0eu ecbxmj0">
+						<a href="noticeList.jsp" class=" css-g4g0eu ecbxmj0">
 							공지사항
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
@@ -33,7 +33,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="active css-g4g0eu ecbxmj0">
+						<a href="qnaList.jsp" class="active css-g4g0eu ecbxmj0">
 							1:1 문의
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
@@ -178,7 +178,7 @@
 						<div class="css-7qb0sc e1ilyb3p0">다음</div>
 					</button>
 				</div>
-				<button class="css-1ibxj4m e4nu7ef3" type="button" width="120" height="44" radius="3">
+				<button onclick="location.href='${pageContext.request.contextPath}/templates/member/writeQuestion.jsp'" class="css-1ibxj4m e4nu7ef3" type="button" width="120" height="44" radius="3">
 					<span class="css-ymwvow e4nu7ef1">문의하기</span>
 				</button>
 			</div>
@@ -187,41 +187,5 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-/* 누르면 세부내용이 나타남 */    
-/* const qna = $(".e1cfowvj0");
-const title = $("ul");
-
-title.children().on("click", function(){
-    if(qna.css('display') == 'none'){
-        return qna.slideDown();
-        
-    }
-    
-    if(qna.css('display') == 'list-item'){
-        console.log("들어옴");
-        return qna.slideUp();
-    }
-
-}); */
-
-$(".e1cfowvj3").click(function(){
-	if($(this).next(".e1cfowvj0").css('display') == 'none'){
-		return $(this).next(".e1cfowvj0").slideDown();
-	}
-	
-	if($(this).next(".e1cfowvj0").css('display') == 'list-item'){
-		return $(this).next(".e1cfowvj0").slideUp();
-	}
-});
-
-/* $(document).ready(function(){
-    // memu 클래스 바로 하위에 있는 a 태그를 클릭했을때
-    $(".menu>a").click(function(){
-        // 현재 클릭한 태그가 a 이기 때문에
-        // a 옆의 태그중 ul 태그에 hide 클래스 태그를 넣던지 빼던지 한다.
-        $(this).next("ul").toggleClass("hide");
-    });
-}); */
-</script>
+<script src="${pageContext.request.contextPath}/static/js/qnaList.js"></script>
 </html>

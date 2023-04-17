@@ -19,7 +19,7 @@
 				<!-- 메뉴창 -->
 				<ul class="css-1x9bshx ecbxmj1">
 					<li>
-						<a class="active css-g4g0eu ecbxmj0">
+						<a href="noticeList.jsp" class="active css-g4g0eu ecbxmj0">
 							공지사항
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
@@ -33,7 +33,7 @@
 						</a>
 					</li>
 					<li>
-						<a class=" css-g4g0eu ecbxmj0">
+						<a href="qnaList.jsp" class=" css-g4g0eu ecbxmj0">
 							1:1 문의
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
@@ -92,7 +92,7 @@
 		<!-- 게시글 목록 -->
 			<ul class="css-1fttcpj e1cfowvj5">
 				<li>
-					<a href="">
+					<a href="notice.jsp">
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
 							<div class="css-fzefrb e1cfowvj2">제목</div>
@@ -101,8 +101,8 @@
 						</div>
 					</a>
 				</li>
-								<li>
-					<a href="">
+				<li>
+					<a href="notice.jsp">
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
 							<div class="css-fzefrb e1cfowvj2">제목</div>

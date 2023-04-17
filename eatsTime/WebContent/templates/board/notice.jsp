@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			<div class="css-d7qwpj e1p3kiis0">
-				<button class="css-214ym4 e4nu7ef3" type="button" width="150" height="42" radius="0">
+				<button onclick="location.href='noticeList.jsp'" class="css-214ym4 e4nu7ef3" type="button" width="150" height="42" radius="0">
 					<span class="css-ymwvow e4nu7ef1">목록</span>
 				</button>
 			</div>		
