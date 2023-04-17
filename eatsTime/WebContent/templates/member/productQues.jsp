@@ -109,13 +109,8 @@
 										style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
 											alt="" aria-hidden="true"
 											src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e"
-											style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
-										alt="[스윗밸런스] 오늘의 샐러드 10종 (리뉴얼) (택1)"
-										src="https://img-cf.kurly.com/shop/data/goods/1655775823772s0.jpg"
-										decoding="async" data-nimg="intrinsic"
-										class="product-image css-0"
-										srcset="https://img-cf.kurly.com/shop/data/goods/1655775823772s0.jpg 1x, https://img-cf.kurly.com/shop/data/goods/1655775823772s0.jpg 2x"
-										style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span></a>
+											style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span>
+										</span></a>
 								<div class="product-info-wrap">
 									<p class="product-name">[스윗밸런스] 오늘의 샐러드 10종 (리뉴얼) (택1)</p>
 									<div class="product-subject-wrap">
