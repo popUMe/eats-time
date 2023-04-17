@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>결제 성공</title>
+<link rel="icon" href="https://www.kurly.com//favicon.ico" />
+<title>컬리 - 마켓컬리/뷰티컬리</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <link rel="stylesheet"
@@ -204,7 +205,7 @@
 					<button class="css-o6ldsh e4nu7ef3" type="button">
 						<span class="css-ymwvow e4nu7ef1">주문 상세보기</span>
 					</button>
-					<button class="css-6682oh e4nu7ef3" type="button">
+					<button class="css-6682oh e4nu7ef3" type="button" onclick="location.href='../index.jsp';">
 						<span class="css-ymwvow e4nu7ef1">쇼핑 계속하기</span>
 					</button>
 				</div>

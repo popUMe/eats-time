@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>결제</title>
+<link rel="icon" href="https://www.kurly.com//favicon.ico" />
+<title>컬리 - 마켓컬리/뷰티컬리</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <link rel="stylesheet"
@@ -287,7 +288,7 @@
 						<p class="css-1tak4sl eh5sxvr3">컬리 내 개별 판매자가 등록한 오픈마켓 상품의 경우
 							컬리는 통신판매중개자로서 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.</p>
 						<!-- 결제하기 버튼 -->
-						<div class="css-1azakc el0c5j40">
+						<div class="css-1azakc el0c5j40" onclick="location.href='purchaseSuccess.jsp';">
 							<button class="css-1lha8en e4nu7ef3" type="button" width="240"
 								height="56" radius="3">
 								<span class="css-ymwvow e4nu7ef1">14,900원 결제하기</span>

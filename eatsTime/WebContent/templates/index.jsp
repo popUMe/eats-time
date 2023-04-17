@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>배너</title>
+<link rel="icon" href="https://www.kurly.com//favicon.ico" />
+<title>컬리 - 마켓컬리/뷰티컬리</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <link rel="stylesheet"
