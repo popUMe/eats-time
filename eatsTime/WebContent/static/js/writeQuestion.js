@@ -3,7 +3,7 @@
  */
 
 
-
+/*글자수 카운트*/
 $('.e1tjt2bn1').keyup(function (e) {
 	let content = $(this).val();
     
@@ -21,11 +21,13 @@ $('.e1tjt2bn1').keyup(function (e) {
     };
 });
 
+/*내용 입력창 focus 이벤트*/
 $("#inquiry-contents").focus(function() {
 	$(".placeholder").css('display', 'none');
 	$(".css-1gua357").css('border-color', 'rgb(51, 51, 51)');
 });
 
+/*내용 입력창 focus out*/
 $("#inquiry-contents").blur(function(){
   $(".placeholder").css('display', 'block');
   $(".css-1gua357").css('border-color', 'rgb(221, 221, 221)');
@@ -35,10 +37,7 @@ $("#inquiry-contents").blur(function(){
 
 });
 
-$(".e1l8vpkx0").click(function() {
-	$(".e1l8vpkx1").click();
-});
-
+/* 제목과 내용을 입력했을 때만 '등록'버튼 활성화 */
 $("#inquiry-subject").on('input', checkInput);
 $("#inquiry-contents").on('input', checkInput);
 
@@ -46,7 +45,6 @@ $("#inquiry-contents").on('input', checkInput);
 function checkInput() {	
 	
 	if($("#inquiry-subject").val() && $("#inquiry-contents").val()) {
-		console.log("들어옴");
 		$('.ebvrvv10').css('background-color', 'rgb(95, 0, 128)');
 		$('.ebvrvv10').css('cursor', 'pointer');
 		$('.ebvrvv10').attr('disabled', false);
@@ -57,3 +55,11 @@ function checkInput() {
 	}
 	
 }
+
+/*모달창 활성화*/
+$(".ebvrvv10").on("click", function(){
+	console.log("들어옴");
+	$(".swal2-container").show();
+	$("body").css('overflow', 'hidden');
+	return false;
+});

@@ -48,7 +48,7 @@
 					</li>
 				</ul>
 				<!-- 1:1 문의하기 -->
-				<a href="" class="css-196gwz9 e19l01ug3">
+				<a href="qnaList.jsp" class="css-196gwz9 e19l01ug3">
 					<div class="css-rmee6s e19l01ug2">
 						<span class="css-1sdidca e19l01ug1">도움이 필요하신가요?</span>
 						<span class="css-rnnx2x e19l01ug0">1:1 문의하기</span>
@@ -118,6 +118,11 @@
 								<br>
 								<div class="css-1kl96ir ewad2cu1"></div>
 							</div>
+						</div>
+						<div class="css-1oe9o3r eula2qn2">
+							<button type="button" class="css-qv4hdm eula2qn1">수정</button>
+							<div class="css-ord49b eula2qn0"></div>
+							<button type="button" class="css-qv4hdm deletebtn">삭제</button>
 						</div>			
 					</div>
 				</li>			
@@ -183,6 +188,46 @@
 				</button>
 			</div>
 		</div>			
+		</div>
+	</div>
+	<!-- 모달창  -->
+	<div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none">
+	<!-- 모달박스 -->
+		<div class="swal2-popup swal2-modal swal2-show" style="display: flex;">
+			<div class="swal2-content">
+				<div id="swal2-content" class="swal2-html-container" style="display: block;">
+					<style>
+					
+  					.swal2-html-container {
+  					 	 padding: 0;
+  					}
+
+  					.swal2-container {
+   						 padding: 0 24px;
+ 					 }
+
+ 					 .swal2-popup {
+  					  	max-width: 360px;
+  					  border-radius: 12px;
+   					 padding: 0;
+  					}
+
+ 					 .swal2-content {
+  					  	padding: 0;
+ 					 }
+
+ 					 .swal2-show {
+    					animation: none;
+  					}
+					
+					</style>
+					<div class="popup-content css-15yaaju e1k5padi2">해당 글을 삭제하시겠습니까?</div>
+					<div class="popup-footer css-1ol9ch1 e1k5padi0">
+						<button <%-- onclick="location.href='${pageContext.request.contextPath}/templates/board/qnaList.jsp'" --%> class="css-1necch4 e1k5padi1">확인</button>
+						<button class="css-1necch4 canceldeletion">취소</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

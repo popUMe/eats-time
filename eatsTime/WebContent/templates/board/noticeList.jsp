@@ -48,7 +48,7 @@
 					</li>
 				</ul>
 				<!-- 1:1 문의하기 -->
-				<a href="" class="css-196gwz9 e19l01ug3">
+				<a href="qnaList.jsp" class="css-196gwz9 e19l01ug3">
 					<div class="css-rmee6s e19l01ug2">
 						<span class="css-1sdidca e19l01ug1">도움이 필요하신가요?</span>
 						<span class="css-rnnx2x e19l01ug0">1:1 문의하기</span>

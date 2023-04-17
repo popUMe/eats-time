@@ -12,3 +12,16 @@ $(".e1cfowvj3").click(function(){
 		return $(this).next(".e1cfowvj0").slideUp();
 	}
 });
+
+/*모달창 띄우기*/
+$(".deletebtn").on("click", function(){
+	$(".swal2-container").show();
+	$("body").css('overflow', 'hidden');
+	return false;
+});
+
+/*모달창 삭제*/
+$(".canceldeletion").on("click", function(){
+	$(".swal2-container").hide();
+	$("body").css('overflow', 'scroll');
+});
