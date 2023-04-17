@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+/* 가장 큰 메인 */
+.css-1yyw8xd {
+	position: relative;
+	margin-bottom: 40px;
+}
+/* 두번쨰 큰 메인 */
+.css-bjn8wh {
+	position: relative;
+}
+
+/* 왜 있는지 모르는 메인 */
+.css-16hymll {
+	position: relative;
+	width: 1050px;
+	margin: 0px auto;
+	z-index: 9999;
+}
+
+/* 진짜 메인 */
+.css-1b87835 {
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+/* 슬라이드 배너 */
+.css-127g5zj {
+	min-height: auto;
+}
+
+/* 슬라이드 배너 시작 */
+.css-lj9hak {
+	position: relative;
+	max-width: 1900px;
+	height: 320px;
+	margin: 0px auto 40px;
+}
+
+/* 슬라이드 배너 */
+.swiper-pointer-events {
+	touch-action: pan-y;
+}
+
+.swiper {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+
+/* 슬라이드 배너 wrapper */
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	transition-property: transform;
+	box-sizing: content-box;
+}
+
+.swiper-slide {
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition-property: transform;
+}
+
+.css-sf7gh {
+	position: relative;
+	width: 100%;
+	min-width: 1050px;
+	padding-bottom: 370px;
+}
+
+/* 동석쌤 배너 슬라이드 */
+section.container {
+	position: relative;
+	width: 1500px;
+	height: 375px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+div.banner {
+	width: 12000px;
+	height: 375px;
+	transform: translate(-1500px);
+}
+
+div.banner div {
+	width: 1500px;
+	height: 375px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+div.arrow {
+	cursor: pointer;
+	position: absolute;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 2rem;
+	background-color: #0000005c;
+	color: white;
+}
+
+div.prev {
+	left: 70px;
+	bottom: 61%;
+	transform: translateY(50%);
+}
+
+div.next {
+	right: 70px;
+	bottom: 61%;
+	transform: translateY(50%);
+}
+
+div.dots {
+	position: absolute;
+	width: 110px;
+	display: flex;
+	justify-content: space-between;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 10px;
+}
+
+div.dot {
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 2px solid #313131;
+}
+
+/* 슬라이드 배너 화살표 부분 */
+.css-1lsz3kj {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 50%;
+	margin: auto 590px auto 0px;
+	z-index: 10;
+	width: 52px;
+	height: 52px;
+	transition: all 0.5s ease 0s;
+	opacity: 0;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxjaXJjbGUgZmlsbC1vcGFjaXR5PSIuMiIgZmlsbD0iIzAwMCIgY3g9IjI1IiBjeT0iMjUiIHI9IjI1Ii8+CiAgICAgICAgPHBhdGggZD0iTTIyLjI4NSAzMy42OTlhMSAxIDAgMCAwIDEuMzE5LjA5OGwuMDk1LS4wODIgOC03LjgxN2ExIDEgMCAwIDAgLjEwOC0xLjMwNmwtLjA4LS4wOTYtNy43MjMtOC4xODJhMSAxIDAgMCAwLTEuNTM1IDEuMjc2bC4wOC4wOTYgNy4wNDkgNy40NjktNy4yOTcgNy4xM2ExIDEgMCAwIDAtLjA5OCAxLjMxOWwuMDgyLjA5NXoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K)
+		50% 50% no-repeat;
+	transform: rotate(180deg);
+}
+
+.css-kfz8up {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 50%;
+	margin: auto 0px auto 590px;
+	z-index: 10;
+	width: 52px;
+	height: 52px;
+	transition: all 0.5s ease 0s;
+	opacity: 0;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxjaXJjbGUgZmlsbC1vcGFjaXR5PSIuMiIgZmlsbD0iIzAwMCIgY3g9IjI1IiBjeT0iMjUiIHI9IjI1Ii8+CiAgICAgICAgPHBhdGggZD0iTTIyLjI4NSAzMy42OTlhMSAxIDAgMCAwIDEuMzE5LjA5OGwuMDk1LS4wODIgOC03LjgxN2ExIDEgMCAwIDAgLjEwOC0xLjMwNmwtLjA4LS4wOTYtNy43MjMtOC4xODJhMSAxIDAgMCAwLTEuNTM1IDEuMjc2bC4wOC4wOTYgNy4wNDkgNy40NjktNy4yOTcgNy4xM2ExIDEgMCAwIDAtLjA5OCAxLjMxOWwuMDgyLjA5NXoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K)
+		50% 50% no-repeat;
+	transform: rotate(0deg);
+}
+
+/* 핵심 쏙쏙 부분 */
+.css-127g5zj {
+	min-height: auto;
+	padding-top: 0px;
+}
+
+.css-59n5un {
+	width: 1050px;
+	margin: 0px auto;
+	padding-bottom: 40px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	
+}
+
+.css-1lougm2 {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 140px;
+}

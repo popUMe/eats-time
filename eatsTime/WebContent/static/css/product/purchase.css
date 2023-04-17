@@ -1,0 +1,1606 @@
+@charset "UTF-8";
+
+/* 주문 전체 부분 */
+.css-1ykiyus>div {
+	padding-top: 50px;
+}
+
+.css-1uom1od {
+	width: 1050px;
+	padding: 60px 0px;
+	margin: 0px auto;
+}
+
+/* 주문서 */
+.css-1ykiyus h2 {
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 36px;
+	letter-spacing: -0.5px;
+}
+
+.css-10owlr {
+	padding-bottom: 48px;
+	font-size: 30px;
+	line-height: 50px;
+	text-align: center;
+}
+
+/* 주문서 제외 전체 부분 */
+.css-ixlb9s {
+	letter-spacing: -0.5px;
+}
+
+/* 주문 상품 */
+.css-zo1i6f {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.css-1ddzp0m {
+	padding: 16px 0px;
+	font-weight: 500;
+	font-size: 20px;
+	color: rgb(51, 51, 51);
+	line-height: 29px;
+}
+
+/* 주문 상품 상세보기 버튼 */
+.css-lvqq7y {
+	border: 0px;
+	background: none;
+	outline: none;
+}
+
+.css-hvzkdq {
+	width: 30px;
+	height: 30px;
+}
+
+/* 상품 내용 부분(삭제예정) */
+.css-r6muhy {
+	padding: 28px 0px;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+	text-align: center;
+	border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+/* 상품 내용 부분 */
+.css-bd9p1l {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 25px 0px;
+	border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+/* 상품 내용 부분 이미지 */
+.css-1ixzt3f {
+	width: 60px;
+	height: 78px;
+	margin-right: 20px;
+	cursor: pointer;
+	background-color: rgb(245, 245, 245);
+}
+
+/* 상품 내용 부분 내용 */
+.css-10nl60h {
+	overflow: hidden;
+	width: 720px;
+	padding: 0px 20px;
+	flex: 1 1 0%;
+}
+
+.css-9j7jhp {
+	max-height: 48px;
+	font-size: 16px;
+	line-height: 24px;
+	color: rgb(0, 0, 0);
+	display: -webkit-box;
+	overflow: hidden;
+	word-break: break-all;
+	white-space: normal;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* 상품 내용 부분 수량 */
+.css-1efb5i1 {
+	width: 100px;
+	font-size: 14px;
+	line-height: 22px;
+	text-align: center;
+}
+
+/* 상품 내용 부분 가격 */
+.css-1j31gob {
+	width: 126px;
+	text-align: right;
+}
+
+.css-jnogx7 {
+	display: block;
+	font-weight: 700;
+	font-size: 16px;
+	color: rgb(51, 51, 51);
+	line-height: 22px;
+	word-break: break-all;
+}
+
+/* 주문자 정보 부분 */
+.css-12aowi2 {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-top: 75px;
+	border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+/* 주문자 정보 */
+.css-1ddzp0m {
+	padding: 16px 0px;
+	font-weight: 500;
+	font-size: 20px;
+	color: rgb(51, 51, 51);
+	line-height: 29px;
+}
+
+/* 주문자 정보 부분 내용 */
+.css-shoa2s {
+	padding: 10px 0px;
+}
+
+/* 주문자 정보 부분 보내는 분, 휴대폰, 이메일 */
+.css-yazyg9 {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding: 8px 0px;
+}
+
+.css-yazyg9>span {
+	line-height: 24px;
+}
+
+.css-ln1csn {
+	display: inline-block;
+	width: 160px;
+	margin-right: 30px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 44px;
+	color: rgb(51, 51, 51);
+	letter-spacing: -0.32px;
+	vertical-align: top;
+}
+
+.css-82a6rk {
+	flex: 1 1 0%;
+}
+
+.css-t6o2y8 {
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+	line-height: 24px;
+}
+
+/* 주문자 정보 부분 이메일 내용 */
+.css-1r0yqr6 {
+	margin-top: 10px;
+}
+
+.css-i7dt79 {
+	font-size: 12px;
+	line-height: 21px;
+	color: rgb(102, 102, 102);
+}
+
+/* 배송정보 */
+.css-12aowi2 {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-top: 75px;
+	border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.css-1ddzp0m {
+	padding: 16px 0px;
+	font-weight: 500;
+	font-size: 20px;
+	color: rgb(51, 51, 51);
+	line-height: 29px;
+}
+
+/* 배송 정보 배송지 */
+.css-5d6nlw {
+	border-bottom: 1px solid rgb(244, 244, 244);
+	padding-bottom: 20px;
+}
+
+.css-1gshg9u {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
+.css-5d6nlw>div>span:first-of-type {
+	line-height: 24px;
+}
+
+.css-ln1csn {
+	display: inline-block;
+	width: 160px;
+	margin-right: 30px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 44px;
+	color: rgb(51, 51, 51);
+	letter-spacing: -0.32px;
+	vertical-align: top;
+}
+
+.css-82a6rk {
+	flex: 1 1 0%;
+}
+
+.css-3uygi7 {
+	display: inline-block;
+	height: 22px;
+	padding: 0px 8px;
+	margin-bottom: 8px;
+	border-radius: 11px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 22px;
+	color: rgb(102, 102, 102);
+	background-color: rgb(247, 247, 247);
+	vertical-align: top;
+}
+
+.css-36j4vu {
+	display: block;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgb(51, 51, 51);
+}
+
+/* 배송 정보 상세 정보 */
+.css-1gshg9u {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
+.css-1y0xj4c>div>span:first-of-type {
+	line-height: 24px;
+}
+
+.css-ln1csn {
+	display: inline-block;
+	width: 160px;
+	margin-right: 30px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 44px;
+	color: rgb(51, 51, 51);
+	letter-spacing: -0.32px;
+	vertical-align: top;
+}
+
+.css-82a6rk {
+	flex: 1 1 0%;
+}
+
+.css-f170u1 {
+	color: rgb(240, 63, 64);
+	font-size: 14px;
+	line-height: 24px;
+}
+
+/* 배송 정보 상세 정보 입력 */
+.css-iqoq9n {
+	margin-top: 20px;
+}
+
+.css-q8bpgr {
+	display: block;
+	padding: 0px 10px;
+	text-align: center;
+	overflow: hidden;
+	width: 60px;
+	height: 30px;
+	border-radius: 3px;
+	color: rgb(95, 0, 128);
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(95, 0, 128);
+}
+
+.css-q8bpgr>span {
+	font-size: 12px;
+	line-height: 28px;
+	font-weight: 500;
+}
+
+.css-ymwvow {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+}
+/* 배송 정보 상세 정보 내용 */
+.css-kc45zq {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+
+.css-1y0xj4c>div>span:first-of-type {
+	line-height: 24px;
+}
+
+.css-ln1csn {
+    display: inline-block;
+    width: 160px;
+    margin-right: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 44px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.32px;
+    vertical-align: top;
+}
+
+.css-82a6rk {
+    flex: 1 1 0%;
+}
+
+
+/* 배송 정보 상세 정보 정보 */
+.css-1p5vzx4 {
+    margin-bottom: 9px;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    line-height: 24px;
+}
+
+/* 배송 정보 상세 수령 위치 */
+.css-7unc75 {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    line-height: 24px;
+}
+
+/* 배송 정보 상세 현관비밀번호 */
+.css-4jyz7e {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    line-height: 24px;
+}
+
+/* 배송 정보 상세 메시지 */
+.css-1soh0gv {
+    margin-top: 4px;
+}
+
+.css-7unc75 {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    line-height: 24px;
+}
+
+.css-4jyz7e::before {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 6px 8px 0px;
+    background-color: rgb(221, 221, 221);
+    vertical-align: top;
+    box-sizing: border-box;
+    content: "";
+}
+
+/* 배송 정보 상세 수정 */
+.css-iqoq9n {
+    margin-top: 20px;
+}
+
+.css-117jo2j {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 60px;
+    height: 30px;
+    border-radius: 3px;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.css-117jo2j > span {
+    font-size: 12px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.css-ymwvow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.css-4jyz7e {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    line-height: 24px;
+}
+
+
+/* 배송 정보 상세 정보 입력 부분 */
+.css-1adi5ma {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 21;
+    width: 100%;
+    padding: 30px 30px 14px;
+    background: rgb(255, 255, 255);
+}
+
+.css-17mphey {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgb(51, 51, 51);
+}
+
+.css-17mphey + label {
+    padding: 6px 0px;
+}
+
+.css-1pw1ewe {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: top;
+    line-height: normal;
+    color: rgb(51, 51, 51);
+    margin-top: 9px;
+    font-size: 14px;
+    padding: 12px 0px;
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.css-agvwxo {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0px, 0px, 0px, 0px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+}
+
+.css-79hxr7 {
+    margin-right: 12px;
+}
+
+.css-79hxr7 svg {
+    vertical-align: middle;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.css-lgy2fd {
+    overflow-y: auto;
+    padding: 90px 30px 0px;
+    height: 600px;
+    box-sizing: border-box;
+    width: 660px;
+    padding-left: 0px
+}
+
+.css-acvisw {
+    padding-bottom: 25px;
+}
+
+
+.css-acvisw > label {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px 0px 8px;
+}
+
+.css-c3g9of {
+    display: inline-block;
+    padding: 8px 0px 11px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    color: rgb(51, 51, 51);
+}
+
+.css-19lkxd2 {
+    color: rgb(250, 98, 47);
+}
+
+.css-t7kbxx {
+    position: relative;
+    height: 44px;
+}
+
+.css-acvisw input {
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.css-1quw3ub {
+    width: 100%;
+    height: 44px;
+    padding: 0px 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 42px;
+    color: rgb(51, 51, 51);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.css-118q5z4 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    height: 16px;
+    width: 16px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBmaWxsPSIjOTk5IiBvcGFjaXR5PSIuNSIgY3g9IjgiIGN5PSI4IiByPSI4Ii8+CiAgICAgICAgPGcgc3Ryb2tlPSIjRkZGIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij4KICAgICAgICAgICAgPHBhdGggZD0ibTEwLjg5NyAxMC43ODYtNS43Ny01Ljc2OU01LjEyMiAxMC43ODVsNS43NzUtNS43NzUiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=) 0% 0% / 16px 16px no-repeat transparent;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+.css-acvisw {
+    padding-bottom: 25px;
+}
+
+.css-acvisw > label {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px 0px 8px;
+}
+
+.css-c3g9of {
+    display: inline-block;
+    padding: 8px 0px 11px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    color: rgb(51, 51, 51);
+}
+
+.css-19lkxd2 {
+    color: rgb(250, 98, 47);
+}
+
+.css-t7kbxx {
+    position: relative;
+    height: 44px;
+}
+
+
+.css-acvisw input {
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.css-1quw3ub {
+    width: 100%;
+    height: 44px;
+    padding: 0px 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 42px;
+    color: rgb(51, 51, 51);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.css-118q5z4 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    height: 16px;
+    width: 16px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBmaWxsPSIjOTk5IiBvcGFjaXR5PSIuNSIgY3g9IjgiIGN5PSI4IiByPSI4Ii8+CiAgICAgICAgPGcgc3Ryb2tlPSIjRkZGIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij4KICAgICAgICAgICAgPHBhdGggZD0ibTEwLjg5NyAxMC43ODYtNS43Ny01Ljc2OU01LjEyMiAxMC43ODVsNS43NzUtNS43NzUiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=) 0% 0% / 16px 16px no-repeat transparent;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+.css-snlcph {
+    display: inline-block;
+    padding: 0px 0px 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.css-19lkxd2 {
+    color: rgb(250, 98, 47);
+}
+
+.css-pfcyp7 > label {
+    height: 44px;
+    padding: 0px;
+}
+
+.css-z9g6s0 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+.css-1pes2r6 {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0px, 0px, 0px, 0px);
+}
+
+.css-pfcyp7 > label > span {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.css-5xw1m2 {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgb(95, 0, 128);
+}
+
+.css-1vic0rk {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.css-pfcyp7 > label > span {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.css-mgd87h {
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.css-pfcyp7 > label {
+    height: 44px;
+    padding: 0px;
+}
+
+.css-z9g6s0 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+.css-pfcyp7 > label > span {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.css-198i9ca {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.css-1dahn5m {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.css-pfcyp7 > label > span {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.css-mgd87h {
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.css-pfcyp7 > label {
+    height: 44px;
+    padding: 0px;
+}
+
+.css-pfcyp7 > label {
+    height: 44px;
+    padding: 0px;
+}
+
+.css-pfcyp7 > label > span {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.css-198i9ca {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.css-1dahn5m {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.css-pfcyp7 > label > span {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.css-mgd87h {
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.css-pfcyp7 > label {
+    height: 44px;
+    padding: 0px;
+}
+
+.css-z9g6s0 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+.css-198i9ca {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.css-1dahn5m {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.css-pfcyp7 > label > span {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.css-mgd87h {
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.css-p29h8t {
+    display: inline-block;
+    padding: 8px 0px 3px;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.css-19lkxd2 {
+    color: rgb(250, 98, 47);
+}
+
+.css-7g0q88 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+.css-1dahn5m {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.css-7g0q88 > span {
+    font-size: 14px;
+}
+
+.css-mgd87h {
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.css-7g0q88 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+.css-7g0q88 > span {
+    font-size: 14px;
+}
+
+.css-5xw1m2 {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgb(95, 0, 128);
+}
+
+.css-1vic0rk {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.css-7g0q88 > span {
+    font-size: 14px;
+}
+
+.css-mgd87h {
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.css-7g0q88 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+.css-1dahn5m {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.css-7g0q88 > span {
+    font-size: 14px;
+}
+
+.css-mgd87h {
+    position: relative;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.css-1c7v6dd {
+    margin: 20px 0px 16px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: rgba(95, 0, 128, 0.04);
+}
+
+.css-1xi0wk2 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: rgb(95, 0, 128);
+}
+
+.css-1xi0wk2 span {
+    margin-right: 5px;
+}
+
+.css-3pix7a {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBzdHJva2U9IiM1RjAwODAiIHN0cm9rZS13aWR0aD0iMS4yIiBjeD0iNyIgY3k9IjciIHI9IjYuNCIvPgogICAgICAgIDxjaXJjbGUgZmlsbD0iIzVGMDA4MCIgY3g9IjciIGN5PSI0LjQiIHI9IjEiLz4KICAgICAgICA8cmVjdCBmaWxsPSIjNUYwMDgwIiB4PSI2LjMiIHk9IjYuMiIgd2lkdGg9IjEuNCIgaGVpZ2h0PSI0LjQiIHJ4PSIuNyIvPgogICAgPC9nPgo8L3N2Zz4K);
+    background-size: cover;
+    background-position: center center;
+}
+
+.css-1c5fe9p {
+    display: flex;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(95, 0, 128);
+}
+
+.css-195jr2y {
+    display: inline-block;
+    padding: 8px 0px 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.css-zjik7 {
+    display: flex;
+}
+
+.css-15lbyxr:first-of-type {
+    margin-right: 72px;
+}
+
+.css-15lbyxr {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+.css-15lbyxr > span {
+    font-size: 14px;
+}
+
+.css-1vic0rk {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.css-15lbyxr {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 0px 9px;
+}
+
+.css-15lbyxr > span {
+    font-size: 14px;
+}
+
+.css-198i9ca {
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.css-1dahn5m {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.css-oticys {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.css-1t93ala {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 56px;
+    border-radius: 3px;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.css-1t93ala > span {
+    font-weight: 500;
+}
+
+.css-ymwvow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.css-oticys > button + button {
+    margin-left: 10px;
+}
+
+.css-1kuswgm {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 56px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 0, 128);
+    border: 0px none;
+}
+
+
+/* 결제수단 + 결제금액 flex */
+.css-4c6dm7 {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+
+.css-134fy6p {
+	width: 742px;
+}
+
+/* 결제수단 */
+.css-12aowi2 {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-top: 75px;
+	border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.css-1ddzp0m {
+	padding: 16px 0px;
+	font-weight: 500;
+	font-size: 20px;
+	color: rgb(51, 51, 51);
+	line-height: 29px;
+}
+
+/* 결제수단 선택 */
+.css-1gshg9u {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
+.css-ln1csn {
+	display: inline-block;
+	width: 160px;
+	margin-right: 30px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 44px;
+	color: rgb(51, 51, 51);
+	letter-spacing: -0.32px;
+	vertical-align: top;
+}
+
+.css-82a6rk {
+	flex: 1 1 0%;
+}
+
+.css-gd125q {
+	width: 414px;
+}
+
+/* 결제수단 선택 부트페이 */
+.css-18dvwsu:not(:first-of-type) {
+	margin-top: 12px;
+}
+
+.css-18dvwsu {
+	display: flex;
+}
+
+.css-1wlyg0y:not(:last-of-type) {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.css-1wlyg0y {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	height: 48px;
+	border: 1px solid rgb(226, 226, 226);
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 3px;
+}
+
+.css-1oanxtx {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	height: 17px;
+	padding: 0px 7px;
+	border: 1px solid rgb(250, 98, 47);
+	border-radius: 9px;
+	background-color: rgb(255, 255, 255);
+	font-weight: 500;
+	font-size: 10px;
+	color: rgb(250, 98, 47);
+	white-space: nowrap;
+	position: absolute;
+	right: 10px;
+	top: -7px;
+}
+
+.css-1pvbmgb:not(:first-of-type) {
+	border-left: none;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.css-1pvbmgb {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	height: 48px;
+	border: 1px solid rgb(95, 0, 128);
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	background: rgb(95, 0, 128);
+	font-weight: 500;
+	border-radius: 3px;
+}
+
+/* 혜택 안내 */
+.css-p04ye2 {
+	margin-top: 20px;
+	padding: 16px 20px;
+	background-color: rgb(250, 250, 250);
+	border-radius: 6px;
+}
+
+.css-fzwzwt {
+	display: flex;
+	font-size: 13px;
+	color: rgb(102, 102, 102);
+	line-height: 18px;
+	font-weight: 400;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	margin-bottom: 17px;
+}
+
+.css-xok1if {
+	word-break: keep-all;
+}
+
+.css-1rlhglk {
+	padding-bottom: 4px;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 18px;
+	color: rgb(250, 98, 47);
+}
+
+.css-5jw6s3 {
+	padding-bottom: 2px;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+	color: rgb(76, 76, 76);
+}
+
+.css-95xna2 {
+	font-size: 12px;
+	color: rgb(153, 153, 153);
+	line-height: 16px;
+	font-weight: 400;
+	padding-bottom: 2px;
+}
+
+/* 결제수단 맨 아래 */
+.css-wx42bm {
+	margin-top: 20px;
+	border-top: 1px solid rgb(244, 244, 244);
+	padding-top: 20px;
+	font-size: 12px;
+	line-height: 16px;
+	color: rgb(102, 102, 102);
+}
+
+.css-wx42bm li+li {
+	padding-top: 4px;
+}
+
+/* 개인정보 수집, 제공 */
+.css-12aowi2 {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	margin-top: 75px;
+	border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.css-1ddzp0m {
+	padding: 16px 0px;
+	font-weight: 500;
+	font-size: 20px;
+	color: rgb(51, 51, 51);
+	line-height: 29px;
+}
+
+.css-37px7p {
+	padding: 20px 0px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+.css-vtybye {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.css-1q6jmiw {
+	color: rgb(153, 153, 153);
+	text-decoration: underline;
+}
+
+.css-vtybye+div {
+	padding-top: 12px;
+}
+
+.css-vtybye+strong {
+	padding-top: 20px;
+}
+
+.css-87vide {
+	display: block;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 21px;
+	color: rgb(51, 51, 51);
+}
+
+/* 개인정보 수집,제공 맨 아래 */
+.css-1tak4sl {
+	padding-left: 16px;
+	font-size: 12px;
+	line-height: 16px;
+	color: rgb(102, 102, 102);
+}
+
+.css-1tak4sl::before {
+	display: inline-block;
+	width: 16px;
+	margin-left: -16px;
+	content: "※";
+}
+
+.css-1tak4sl+p {
+	padding-top: 4px;
+}
+
+/* 결제하기 버튼 */
+.css-1azakc {
+	text-align: center;
+}
+
+.css-1lha8en {
+	display: block;
+	padding: 0px 10px;
+	text-align: center;
+	overflow: hidden;
+	width: 240px;
+	height: 56px;
+	border-radius: 3px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(95, 0, 128);
+	border: 0px none;
+	margin: 40px auto 30px;
+	font-weight: 500;
+}
+
+.css-ymwvow {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+/* 결제 금액 전체 */
+.css-1rz7w0y {
+	position: relative;
+	width: 284px;
+}
+
+/* 결제 금액 위치 */
+.css-1gxrfiw {
+	width: 284px;
+	position: sticky;
+	top: 60px;
+}
+
+/* 결제 금액 위치 */
+.css-9i9om4 {
+	position: absolute;
+	width: 284px;
+	top: 0px;
+}
+
+/* 결제 금액 제목 */
+.css-6hge48 {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.css-1ddzp0m {
+	padding: 16px 0px;
+	font-weight: 500;
+	font-size: 20px;
+	color: rgb(51, 51, 51);
+	line-height: 29px;
+}
+
+/* 결제 금액 내용 */
+.css-hdnk73 {
+	width: 100%;
+	padding: 17px 16px 18px 18px;
+	background: rgb(250, 250, 250);
+	border: 1px solid rgb(242, 242, 242);
+}
+
+/* 결제 금액 내용 주문금액 */
+.css-11quaim:first-of-type {
+	margin-top: 0px;
+}
+
+.css-11quaim {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	margin-top: 16px;
+	font-size: 16px;
+	color: rgb(51, 51, 51);
+	padding-bottom: 8px;
+}
+
+.css-yct5co {
+	width: 96px;
+}
+
+.css-2pg1ps {
+	font-size: 18px;
+}
+
+.css-rfpchb {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.css-vu318a {
+	margin-left: 4px;
+	vertical-align: 1px;
+}
+
+/* 결제 금액 내용 주문금액 하단 */
+.css-ulbnf2 {
+	display: flex;
+	padding-left: 16px;
+	margin-top: 8px;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	font-size: 14px;
+	color: rgb(153, 153, 153);
+	background-image:
+		url(https://res.kurly.com/mobile/service/common/2003/ico_sub_price_dot.png);
+	background-repeat: no-repeat;
+	background-size: 16px 20px;
+	background-position: 0px 50%;
+}
+
+.css-yct5co {
+	width: 96px;
+}
+
+.css-ulbnf2 .eahaaoi8 {
+	font-size: 14px;
+}
+
+.css-2pg1ps {
+	font-size: 18px;
+}
+
+.css-rfpchb {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.css-vu318a {
+	margin-left: 4px;
+	vertical-align: 1px;
+}
+
+.css-ulbnf2 {
+	display: flex;
+	padding-left: 16px;
+	margin-top: 8px;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	font-size: 14px;
+	color: rgb(153, 153, 153);
+	background-image:
+		url(https://res.kurly.com/mobile/service/common/2003/ico_sub_price_dot.png);
+	background-repeat: no-repeat;
+	background-size: 16px 20px;
+	background-position: 0px 50%;
+}
+
+.css-yct5co {
+	width: 96px;
+}
+
+.css-ulbnf2 .eahaaoi8 {
+	font-size: 14px;
+}
+
+/* 결제 금액 주문내용 배송비 */
+.css-1bj5qaf {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	margin-top: 16px;
+	font-size: 16px;
+	color: rgb(51, 51, 51);
+}
+
+.css-2pg1ps {
+	font-size: 18px;
+}
+
+.css-vu318a {
+	margin-left: 4px;
+	vertical-align: 1px;
+}
+
+/* 결제 금액 최종결제금액 */
+.css-gs4y0w {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	margin-top: 16px;
+	padding: 16px 0px 1px;
+	border-top: 1px solid rgb(244, 244, 244);
+	font-size: 16px;
+	color: rgb(76, 76, 76);
+}
+
+.css-gs4y0w .eahaaoi9 {
+	display: flex;
+	flex-shrink: 0;
+	font-weight: 400;
+}
+
+.css-gs4y0w .eahaaoi8 {
+	font-size: 22px;
+	font-weight: bold;
+}
