@@ -96,36 +96,6 @@
 				alt="purpleArrowRight" class="e1jm6dy10 css-cb2xrd eflljbi0">
 		</a></span>
 	</div>
-	<div class="css-mrxscg ecmuszp10">
-		<img src="https://img-cf.kurly.com/shop/data/goods/1637154387515l0.jpg"
-			alt="[KF365] 감자 1kg" class="css-1ixzt3f ecmuszp9">
-		<div class="css-1t5xcqm ecmuszp8">
-			<a href="/goods/5026448" class="css-15vlnp ecmuszp7">[KF365] 감자
-				1kg</a>
-			<div class="css-s5xdrg ecmuszp5">
-				<span data-testid="goods-price" class="css-1ngn8p4 ecmuszp4">5,980원</span><span
-					class="css-1ekh7sh ecmuszp2">1개</span>
-			</div>
-		</div>
-		<span class="css-l71t3l ecmuszp1">배송완료</span>
-		
-	</div>	
-	<div class="css-mrxscg ecmuszp10">
-		<img
-			src="https://img-cf.kurly.com/shop/data/goods/1653035852198l0.jpeg"
-			alt="[풀무원] 새콤달콤유부초밥" class="css-1ixzt3f ecmuszp9">
-		<div class="css-1t5xcqm ecmuszp8">
-			<a href="/goods/5103618" class="css-15vlnp ecmuszp7">[풀무원]
-				새콤달콤유부초밥</a>
-			<div class="css-s5xdrg ecmuszp5">
-				<span data-testid="goods-price" class="css-1ngn8p4 ecmuszp4">4,780원</span><span
-					data-testid="original-price" class="css-11ny283 ecmuszp3">5,680원</span><span
-					class="css-1ekh7sh ecmuszp2">1개</span>
-			</div>
-		</div>
-		<span class="css-l71t3l ecmuszp1">배송완료</span>
-		
-	</div>
 	
 	<div class="css-mrxscg ecmuszp10">
 		<img src="https://img-cf.kurly.com/shop/data/goods/1637154387515l0.jpg"
@@ -160,9 +130,7 @@
 
 
 
-				<li class="css-hvdq8h e1ysbs753"><span
-					class="css-11h8hn9 e1ysbs752">결제방법</span>
-					<div class="css-1r21krv e1sh1vdm1">신용카드</div></li>
+				
 			</ul>
 
 
