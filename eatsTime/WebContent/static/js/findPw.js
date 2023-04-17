@@ -127,6 +127,7 @@ $('.textbutton1').on("click", function(){
 
 /* 탭으로 이동금지 */
 $('.textbutton1').attr("tabindex", "-1");
+$('.textbutton2').attr("tabindex", "-1");
 	
 
 /*이메일*/
