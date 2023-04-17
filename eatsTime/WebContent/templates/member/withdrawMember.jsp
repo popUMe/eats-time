@@ -9,6 +9,7 @@
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
+	<jsp:include page="../header.jsp" />
 	<div class="css-luwwab eug5r8l1">
 		<div class="css-833hqy ecbxmj3">
 			<div class="css-1v4whg ecbxmj2">마이컬리</div>
@@ -183,8 +184,8 @@
 							</div>
 						</div>
 						<div class="css-1w0ksfz e744wfw2">
-							<button class="css-ufulao e4nu7ef3" type="button" disabled="">
-								<span class="css-ymwvow e4nu7ef1">중복확인</span>
+							<button class="css-ufulao e4nu7ef3" type="button">
+								<span class="css-ymwvow e4nu7ef1">다른 메일 인증</span>
 							</button>
 						</div>
 					</div>
@@ -202,9 +203,7 @@
 							</div>
 						</div>
 						<div class="css-1w0ksfz e744wfw2">
-							<button class="css-ufulao e4nu7ef3" type="button">
-								<span class="css-ymwvow e4nu7ef1">다른번호 인증</span>
-							</button>
+						
 						</div>
 					</div>
 					<div class="css-1pjgd36 e744wfw6">
@@ -268,87 +267,9 @@
 						</div>
 						<div class="css-1w0ksfz e744wfw2"></div>
 					</div>
-					<div class="css-1pjgd36 e744wfw6">
-						<div class="css-1y8737n e744wfw5">
-							<label class="css-1obgjqh e744wfw4">선택약관동의</label>
-						</div>
-						<div class="css-82a6rk e744wfw3">
-							<div class="css-bcffy2 e8in3f65">
-								<div class="css-1n729k6 e8in3f64">
-									<label class="css-1mjkje9 e1dcessg3"><input
-										type="checkbox" class="css-agvwxo e1dcessg2">
-									<div class="css-79hxr7 e1dcessg1">
-											<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z"
-													stroke="#ddd" fill="#fff"></path>
-												<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd"
-													stroke-width="1.5" stroke-linecap="round"
-													stroke-linejoin="round"></path></svg>
-										</div>
-										<span>개인정보 수집·이용 동의</span></label><span class="css-14kcwq8 e8in3f63">(선택)</span>
-								</div>
-								<a class="css-qj3jn7 e8in3f62">약관보기</a>
-							</div>
-						</div>
-						<div class="css-1w0ksfz e744wfw2"></div>
-					</div>
+			
 					<div class="css-10a7gq2 e8in3f60"></div>
-					<div class="css-1pjgd36 e744wfw6">
-						<div class="css-1y8737n e744wfw5">
-							<label class="css-1obgjqh e744wfw4">이용약관동의</label>
-						</div>
-						<div class="css-82a6rk e744wfw3">
-							<div class="css-1n729k6 e8in3f64">
-								<label class="css-1mjkje9 e1dcessg3"><input
-									type="checkbox" class="css-agvwxo e1dcessg2" checked="true">
-								<div class="css-79hxr7 e1dcessg1">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path class="check1"
-												d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
-												fill="#5f0080"></path>
-											<path class="check1-1" d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
-												stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round"></path></svg>
-									</div>
-									<span>무료배송, 할인쿠폰 등 혜택/정보 수신 동의</span></label><span
-									class="css-14kcwq8 e8in3f63">(선택)</span>
-							</div>
-							<div class="css-1rgde34 e8in3f61">
-								<label class="css-1mjkje9 e1dcessg3" for="OptionalTermsOfSms"><input
-									id="OptionalTermsOfSms" type="checkbox"
-									class="css-agvwxo e1dcessg2" checked="true">
-								<div class="css-79hxr7 e1dcessg1">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path class="check2"
-												d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
-												fill="#5f0080"></path>
-											<path class="check2-1" d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
-												stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round"></path></svg>
-									</div>
-									<span>SMS</span></label><label class="css-1mjkje9 e1dcessg3"
-									for="OptionalTermsOfMailing"><input
-									id="OptionalTermsOfMailing" type="checkbox"
-									class="css-agvwxo e1dcessg2" checked="true">
-								<div class="css-79hxr7 e1dcessg1">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path class="check3"
-												d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
-												fill="#5f0080"></path>
-											<path class="check3-1" d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
-												stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round"></path></svg>
-									</div>
-									<span>이메일</span></label>
-							</div>
-						</div>
-						<div class="css-1w0ksfz e744wfw2"></div>
-					</div>
+	
 					<div class="css-14332pf e1m8ervv0">
 						<button class="css-ufulao e4nu7ef3" type="button">`
 							<span class="css-ymwvow e4nu7ef1">탈퇴하기</span>
