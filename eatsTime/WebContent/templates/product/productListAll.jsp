@@ -21,10 +21,6 @@
 			
 			<!-- [S] contents -->
 			<div class="css-pzlq5x e13nsthd1">
-
-
-				
-				
 				
 				<!-- [S] 제품리스트 -->
 				<div class="css-1d3w5wq ef36txc6">
@@ -411,6 +407,6 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/productList.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/product.js"></script>
 
 </html>

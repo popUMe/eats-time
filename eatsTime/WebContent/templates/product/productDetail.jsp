@@ -16,10 +16,10 @@
 		
 		<main id="product-atf" class="css-1eoy87d e17iylht4">
 			
-			<!-- 이미지 섹션 : background로 image 구현 -->
+		<!-- 이미지 섹션 : background로 image 구현 -->
 			<div class="css-fyfynr e17iylht3"></div>
 			
-			<!-- 텍스트 섹션 -->
+		<!-- 텍스트 섹션 -->
 			<section class="css-1ua1wyk e17iylht2">
 				<div class="css-12lw2qc ezpe9l14">배송</div>
 				<div class="css-1fttcpj ezpe9l13">
@@ -30,24 +30,30 @@
 				</div>
 				
 				<h2 class="css-liviaq e1q8tigr5">
-					<span class="css-9pf1ze e1q8tigr3">18,990</span>
+					<span class="css-9pf1ze e1q8tigr3">00,000</span>
 					<span class="css-1x9cx9j e1q8tigr2">원</span>
 				</h2>
 				
+				
 				<div class="css-iqoq9n e6qx2kx2">
+				
+				<!-- 판매유형 -->
 					<dl class="css-e6zlnr epzddad2">
 						<dt class="css-lytdfk epzddad1">배송</dt>
 						<dd class="css-1k8t52o epzddad0">
-							<p class="css-c02hqi e6qx2kx1">샛별배송</p>
-							<p class="css-uy94b2 e6qx2kx0">23시 전 주문 시 내일 아침 7시 전 도착 (대구·부산·울산 샛별배송 운영시간 별도 확인)</p>
+							<p class="css-c02hqi e6qx2kx1">배송</p>
+							<p class="css-uy94b2 e6qx2kx0">업체 별도 배송 (픽업제품의 경우 운영시간 별도 확인 요망)</p>
 						</dd>
 					</dl>
+					
+				<!-- 판매자 -->
 					<dl class="css-e6zlnr epzddad2">
 						<dt class="css-lytdfk epzddad1">판매자</dt>
 						<dd class="css-1k8t52o epzddad0">
-							<p class="css-c02hqi e6qx2kx1">컬리</p>
+							<p class="css-c02hqi e6qx2kx1">판매자명</p>
 						</dd>
 					</dl>
+					<!-- 
 					<dl class="css-e6zlnr epzddad2">
 						<dt class="css-lytdfk epzddad1">포장타입</dt>
 						<dd class="css-1k8t52o epzddad0">
@@ -61,12 +67,34 @@
 							<p class="css-c02hqi e6qx2kx1">1개</p>
 						</dd>
 					</dl>
+					 -->
+					 
+					
+				<!-- 유통기한 -->
 					<dl class="css-e6zlnr epzddad2">
-						<dt class="css-lytdfk epzddad1">중량/용량</dt>
+						<dt class="css-lytdfk epzddad1">유통기한</dt>
 						<dd class="css-1k8t52o epzddad0">
-							<p class="css-c02hqi e6qx2kx1">1Kg</p>
+							<p class="css-c02hqi e6qx2kx1">0000.00.00</p>
 						</dd>
 					</dl>
+					 
+				<!-- 판매 수량(재고) -->
+					<dl class="css-e6zlnr epzddad2">
+						<dt class="css-lytdfk epzddad1">판매 수량</dt>
+						<dd class="css-1k8t52o epzddad0">
+							<p class="css-c02hqi e6qx2kx1">000</p>
+						</dd>
+					</dl>
+					
+				<!-- 판매지 -->
+					<dl class="css-e6zlnr epzddad2">
+						<dt class="css-lytdfk epzddad1">발송/픽업 주소</dt>
+						<dd class="css-1k8t52o epzddad0">
+							<p class="css-c02hqi e6qx2kx1">Address</p>
+						</dd>
+					</dl>
+					
+					<!-- 
 					<dl class="css-e6zlnr epzddad2">
 						<dt class="css-7ypij epzddad1">원산지</dt>
 						<dd class="css-1k8t52o epzddad0">
@@ -91,6 +119,8 @@
 							<p class="css-c02hqi e6qx2kx1">해당 상품은 냉장 제품입니다 상품 수령 후 최대한 빠른 시일내에 섭취를 권장드립니다.</p>
 						</dd>
 					</dl>
+					 -->
+					 
 				</div>
 				
 				<div class="css-1bp09d0 e17iylht1">
@@ -100,13 +130,18 @@
 							<dd class="css-1k8t52o epzddad0">
 								<div class="cart-option-item css-1cb5lnc e1bjklo17">
 									<div class="css-1qdyvok e1bjklo15">
-										<span class="css-100vshh e1bjklo13">[KF365] 양념 소불고기 1kg (냉장)</span>
+										<span class="css-100vshh e1bjklo13">product title</span>
 									</div>
+									
+									<!-- 
 									<span class="css-1fnacti e1bjklo12">적립제외상품</span>
+									 -->
+									 
+								<!-- 제품 수량 선택 섹션 -->	
 									<div class="css-1liqj4s e1bjklo14">
 										<div class="css-16dy8wz e1cqr3m40">
 											<button type="button" aria-label="수량내리기" disabled="" class="css-1e90glc e1hx75jb0"></button>
-											<div class="count css-6m57y0 e1cqr3m41">1</div>
+											<div id="count-num" class="count css-6m57y0 e1cqr3m41">1</div>
 											<button type="button" aria-label="수량올리기" class="css-18y6jr4 e1hx75jb0"></button>
 										</div>
 										<div>
@@ -133,6 +168,8 @@
 							 -->
 						</div>
 					</div>
+					
+				<!-- 하단 장바구니 및 구매하기 버튼 -->
 					<div class="css-gnxbjx e10vtr1i2">
 						<!-- 
 						<button class="css-3z91zj e4nu7ef3" type="button" width="56" height="56" radius="3">
@@ -146,7 +183,7 @@
 						 -->
 						<div class="css-14jnwd7 e10vtr1i0">
 							<button class="cart-button css-1qirdbn e4nu7ef3" type="button" radius="3">
-								<span class="css-ymwvow e4nu7ef1">장바구니 담기</span>
+								<span class="css-ymwvow e4nu7ef1">구매하기</span>
 							</button>
 						</div>
 					</div>
@@ -164,6 +201,6 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/productList.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/product.js"></script>
 
 </html>
