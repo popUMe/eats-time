@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/withdrawMember.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/withdrawMember.css">
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
@@ -14,49 +14,45 @@
 			<div class="css-1v4whg ecbxmj2">마이컬리</div>
 			<!--css-1v4whg ecbxmj2  -->
 			<ul class="css-1x9bshx ecbxmj1">
-				<li><a class="css-g4g0eu ecbxmj0">주문내역 <svg
-							xmlns="http://www.w3.org/2000/svg" width="19" height="19"
-							viewBox="0 0 24 24">
+				<li><a class="css-g4g0eu ecbxmj0">주문내역
+				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"viewBox="0 0 24 24">
 							<defs>
 							<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657"></path></defs>
 							<g fill="none" fill-rule="evenodd">
 							<g>
 							<g>
 							<g>
-							<g
-								transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
+							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
+							<use stroke="#999" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 
-				<li><a class=" css-g4g0eu ecbxmj0">상품 문의 <svg
-							xmlns="http://www.w3.org/2000/svg" width="19" height="19"
-							viewBox="0 0 24 24">
+				<li> <a class=" css-g4g0eu ecbxmj0">상품 문의
+				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
 							<defs>
 							<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657"></path></defs>
 							<g fill="none" fill-rule="evenodd">
 							<g>
 							<g>
 							<g>
-							<g
-								transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
+							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
 							<use stroke="#999" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg>
-				</a></li>
-
-				<li><a class="active css-g4g0eu ecbxmj0">개인 정보 수정 <svg
-							xmlns="http://www.w3.org/2000/svg" width="19" height="19"
-							viewBox="0 0 24 24">
+					</a>
+				</li>
+				
+					<li>
+					<a class="active css-g4g0eu ecbxmj0">개인 정보 수정
+					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
 							<defs>
 							<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657"></path></defs>
 							<g fill="none" fill-rule="evenodd">
 							<g>
 							<g>
 							<g>
-							<g
-								transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use stroke="#999" stroke-linecap="round" stroke-width="1.8"
+							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
+							<use stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 			</ul>
@@ -306,14 +302,14 @@
 						<div class="css-82a6rk e744wfw3">
 							<div class="css-1n729k6 e8in3f64">
 								<label class="css-1mjkje9 e1dcessg3"><input
-									type="checkbox" class="css-agvwxo e1dcessg2" checked="">
+									type="checkbox" class="css-agvwxo e1dcessg2" checked="true">
 								<div class="css-79hxr7 e1dcessg1">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
-											<path
+											<path class="check1"
 												d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
 												fill="#5f0080"></path>
-											<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
+											<path class="check1-1" d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
 												stroke-width="1.5" stroke-linecap="round"
 												stroke-linejoin="round"></path></svg>
 									</div>
@@ -323,28 +319,28 @@
 							<div class="css-1rgde34 e8in3f61">
 								<label class="css-1mjkje9 e1dcessg3" for="OptionalTermsOfSms"><input
 									id="OptionalTermsOfSms" type="checkbox"
-									class="css-agvwxo e1dcessg2" checked="">
+									class="css-agvwxo e1dcessg2" checked="true">
 								<div class="css-79hxr7 e1dcessg1">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
-											<path
+											<path class="check2"
 												d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
 												fill="#5f0080"></path>
-											<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
+											<path class="check2-1" d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
 												stroke-width="1.5" stroke-linecap="round"
 												stroke-linejoin="round"></path></svg>
 									</div>
 									<span>SMS</span></label><label class="css-1mjkje9 e1dcessg3"
 									for="OptionalTermsOfMailing"><input
 									id="OptionalTermsOfMailing" type="checkbox"
-									class="css-agvwxo e1dcessg2" checked="">
+									class="css-agvwxo e1dcessg2" checked="true">
 								<div class="css-79hxr7 e1dcessg1">
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
-											<path
+											<path class="check3"
 												d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
 												fill="#5f0080"></path>
-											<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
+											<path class="check3-1" d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff"
 												stroke-width="1.5" stroke-linecap="round"
 												stroke-linejoin="round"></path></svg>
 									</div>
@@ -354,7 +350,7 @@
 						<div class="css-1w0ksfz e744wfw2"></div>
 					</div>
 					<div class="css-14332pf e1m8ervv0">
-						<button class="css-ufulao e4nu7ef3" type="button">
+						<button class="css-ufulao e4nu7ef3" type="button">`
 							<span class="css-ymwvow e4nu7ef1">탈퇴하기</span>
 						</button>
 						<button class="css-1qirdbn e4nu7ef3" type="submit">
@@ -366,5 +362,26 @@
 		</div>
 		</div>
 		</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+const $checkboxes1=$(".check1");
+const $check1=$(".check1-1");
+const $checkboxes2=$(".check2");
+const $check2=$(".check2-1");
+const $checkboxes3=$(".check3");
+const $check3=$(".check3-3");
+
+$checkboxes1.on("click", function(){
+    $checkboxes1.css("fill", "#999");
+    $check1.css("stroke", "#ddd");
+    
+    $checkboxes2.css("fill", "#999");
+    $check2.css("stroke", "#ddd");
+    
+    $checkboxes3.css("fill", "#999");
+    $check3.css("stroke", "#ddd");
+}); //전체 동의 누르면, 모든 항목을 check상대로 바꾸기
+
+</script>
 		</html>
 		
