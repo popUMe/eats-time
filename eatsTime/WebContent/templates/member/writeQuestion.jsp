@@ -89,7 +89,7 @@
 						<div class="css-12l4j2c e1vbjq4w1">
 							<div class="css-1waqr6j e1uzxhvi6">
 								<div height="44" class="css-t7kbxx e1uzxhvi3">
-									<input data-testid="input-box" id="inquiry-subject" name="subject" placeholder="제목을 입력해주세요" type="text" height="44" class="css-1quw3ub e1uzxhvi2" value="">
+									<input data-testid="input-box" id="inquiry-subject" name="subject" placeholder="제목을 입력해주세요" type="text" height="44" class="css-1quw3ub e1uzxhvi2" value="" autocomplete="off">
 								</div>
 							</div>
 						</div>
