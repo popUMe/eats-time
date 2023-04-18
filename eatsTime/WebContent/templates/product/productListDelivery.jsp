@@ -93,7 +93,7 @@
 							
 								<!-- 최신순 -->
 								<li class="css-5uzvtq eudxpx31 firstLi">
-									<a href="#" class="css-126imjl eudxpx30">최신순</a>
+									<a href="#" class="css-126imjl css-19ce13b eudxpx30">최신순</a>
 								</li>
 								
 								<!-- 낮은 가격순 -->
