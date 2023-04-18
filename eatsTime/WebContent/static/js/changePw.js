@@ -54,14 +54,11 @@ $("#passwordConfirm").blur(function(e) {
 /*탭으로 이동할때 오류 막기*/
 $("#passwordConfirm").focus(function() {
 
-		$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
-		$(".checkConfirm").removeClass("css-alright css-1319hys")
-		$(".checkConfirm").addClass("css-ua37vt")
+	$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
+	$(".checkConfirm").removeClass("css-alright css-1319hys")
+	$(".checkConfirm").addClass("css-ua37vt")
 
 })
-
-
-
 
 // 새비밀번호 등록
 $("#password").keyup(function(e) {
@@ -98,22 +95,22 @@ $("#password").keyup(function(e) {
 	if (pw.val().length < 8 || pw.val().length > 20) {
 		checkPws.eq(0).removeClass("css-alright css-1319hys")
 		checkPws.eq(0).addClass("css-ua37vt")
-			pwCheck1 = false;
+		pwCheck1 = false;
 	} else {
 		checkPws.eq(0).removeClass("css-alright css-ua37vt")
 		checkPws.eq(0).addClass("css-1319hys")
-			pwCheck1 = true;
+		pwCheck1 = true;
 	}
 
 	// 두번째 checkPw 검사
 	if (pw.val().search(/\s/) != -1) {
 		checkPws.eq(1).removeClass("css-alright css-1319hys")
 		checkPws.eq(1).addClass("css-ua37vt")
-			pwCheck2 = false;
+		pwCheck2 = false;
 	} else {
 		checkPws.eq(1).removeClass("css-alright css-ua37vt")
 		checkPws.eq(1).addClass("css-1319hys")
-			pwCheck2 = true;
+		pwCheck2 = true;
 	}
 
 
@@ -122,13 +119,13 @@ $("#password").keyup(function(e) {
 	if (num < 0 || eng < 0 || spe < 0) {
 		checkPws.eq(2).removeClass("css-alright css-1319hys")
 		checkPws.eq(2).addClass("css-ua37vt")
-			pwCheck3 = false;
+		pwCheck3 = false;
 	} else {
 		checkPws.eq(2).removeClass("css-alright css-ua37vt")
 		checkPws.eq(2).addClass("css-1319hys")
-			pwCheck3 = true;
+		pwCheck3 = true;
 	}
-	
+
 	checkButton()
 
 })
@@ -145,25 +142,25 @@ $("#passwordConfirm").keyup(function() {
 	if (rePw.val() != "" && rePw.val() == pw.val()) {
 		reChecks.removeClass("css-alright css-ua37vt")
 		reChecks.addClass("css-1319hys")
-		rePwCheck= true;
+		rePwCheck = true;
 	} else {
 		reChecks.removeClass("css-alright css-1319hys")
 		reChecks.addClass("css-ua37vt")
-		rePwCheck= false;
+		rePwCheck = false;
 	}
-	
+
 	checkButton()
 
 });
 
-function checkButton(){
-    if (pwCheck1 && pwCheck2 && pwCheck3 && rePwCheck && ($("#password").val() == $("#passwordConfirm").val())){
-        $(".button").removeAttr("disabled");
-        $(".button").css("background-color", "rgb(95, 0, 128)");
-    } else {
-        $(".button").css("background-color", "rgb(221, 221, 221)");
-        $(".button").attr("disabled", "");
-    }
+function checkButton() {
+	if (pwCheck1 && pwCheck2 && pwCheck3 && rePwCheck && ($("#password").val() == $("#passwordConfirm").val())) {
+		$(".button").removeAttr("disabled");
+		$(".button").css("background-color", "rgb(95, 0, 128)");
+	} else {
+		$(".button").css("background-color", "rgb(221, 221, 221)");
+		$(".button").attr("disabled", "");
+	}
 }
 
 
@@ -182,7 +179,7 @@ $(".input-content1").keyup(function() {
 });
 
 $('.textbutton1').on("click", function() {
-	$(".button").prop("background", "rgb(221, 221, 221)");
+	$(".button").css("background-color", "rgb(221, 221, 221)");
 	$(".button").attr("disabled", "");
 	$(".input-content1").val("");
 	$(".checkPw").removeClass("css-alright css-1319hys")
@@ -192,6 +189,7 @@ $('.textbutton1').on("click", function() {
 
 /* 탭으로 이동금지 */
 $('.textbutton1').attr("tabindex", "-1");
+$('.textbutton2').attr("tabindex", "-1");
 
 
 
@@ -205,7 +203,7 @@ $(".input-content2").keyup(function() {
 });
 
 $('.textbutton2').on("click", function() {
-	$(".button").prop("background", "rgb(221, 221, 221)");
+	$(".button").css("background-color", "rgb(221, 221, 221)");
 	$(".button").attr("disabled", "");
 	$(".input-content2").val("");
 	$(".checkConfirm").removeClass("css-alright css-1319hys")
@@ -216,18 +214,18 @@ $('.textbutton2').on("click", function() {
 /* 모달창 구현해보기*/
 
 
-	$('.button').on("click", function(){
-		$('.banner-online').fadeIn();
-		$('#modal').fadeIn();
-		$("html").css("overflow-y", "hidden");
-	})
+$('.button').on("click", function() {
+	$('.banner-online').fadeIn();
+	$('#modal').fadeIn();
+	$("html").css("overflow-y", "hidden");
+})
 
-	$('.close-button').click(function() {
-		$('.banner-online').fadeOut();
-		$('#modal').fadeOut();
-		$("html").css("overflow-y", "");
-		location.href= "login.jsp";	
-	})
+$('.close-button').click(function() {
+	$('.banner-online').fadeOut();
+	$('#modal').fadeOut();
+	$("html").css("overflow-y", "");
+	location.href = "login.jsp";
+})
 
 
 
