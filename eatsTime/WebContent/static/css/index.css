@@ -110,20 +110,20 @@ div.arrow {
 	line-height: 40px;
 	text-align: center;
 	font-size: 2rem;
-	background-color: #0000005c;
+	background-color: #e0e0e0;
 	color: white;
+	opacity: 0.4;
 }
 
 div.prev {
 	left: 70px;
-	bottom: 61%;
-	transform: translateY(50%);
+	bottom: 55%;
+	transform: rotate(180deg);
 }
 
 div.next {
 	right: 70px;
-	bottom: 61%;
-	transform: translateY(50%);
+	bottom: 55%;
 }
 
 div.dots {
