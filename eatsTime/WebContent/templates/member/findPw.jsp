@@ -54,8 +54,8 @@
 						<label for="phone" class="css-c3g9of">휴대폰 번호</label>
 						<div height="46" class="css-1iilz1t">
 							<input id="phone" name="phone" placeholder="휴대폰 번호를 입력해 주세요"
-								type="number" height="46" class="css-17iio5j input-content3"
-								maxlength='11' oninput="maxLengthCheck(this)" value="">
+								type="text" height="46" class="css-17iio5j input-content3"
+								maxlength='11' numberOnly value="">
 							<button class="css-118q5z4 textbutton3" size="16"
 								id="delete-input" aria-label="delete-input" type="button"
 								style="visibility: hidden"></button>
@@ -69,7 +69,7 @@
 							<label for="verification-number" class="css-c3g9of">인증번호</label>
 							<div height="46" class="css-1iilz1t">
 								<input id="verification-number" name="verificationNumber"
-									type="number" maxlength='7' oninput="maxLengthCheck(this)"
+									type="text" maxlength='7' numberOnly
 									placeholder="인증번호 7자리" height="46"
 									class="css-17iio5j input-content4" value="">
 								<button class="css-118q5z4 textbutton4" size="16"
