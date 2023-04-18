@@ -4,11 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/all.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/member/seller_list.css">
-<title>컬리 - 마켓컬리/뷰티컬리</title>
+<title>Insert title here</title>
+</head>
+<body>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/sellingList.css">
+	<title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
 	<div class="css-luwwab">
@@ -16,7 +17,7 @@
 			<div class="css-1v4whg">마이컬리</div>
 			<!--css-1v4whg ecbxmj2  -->
 			<ul class="css-1x9bshx">
-				<li><a class="active css-g4g0eu" id="li-1">상품 목록 <svg
+				<li><a class="css-g4g0eu" id="li-1">상품 목록 <svg
 							xmlns="http://www.w3.org/2000/svg" width="19" height="19"
 							viewBox="0 0 24 24">
 							<defs>
@@ -27,11 +28,11 @@
 							<g>
 							<g
 								transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use class="point1" stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
-								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
-								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
+							<use class="point1" stroke="#999" stroke-linecap="round"
+								stroke-width="1.8" stroke-linejoin="round"
+								transform="rotate(45 5.657 5.657)" xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 
-				<li><a class="css-g4g0eu" id="li-2">판매 목록 <svg
+				<li><a class="active css-g4g0eu" id="li-2">판매 목록 <svg
 							xmlns="http://www.w3.org/2000/svg" width="19" height="19"
 							viewBox="0 0 24 24">
 							<defs>
@@ -42,9 +43,9 @@
 							<g>
 							<g
 								transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use class="point2" stroke="#999" stroke-linecap="round" stroke-width="1.8"
-								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
-								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
+							<use class="point2" stroke="#5f0080" stroke-linecap="round"
+								stroke-width="1.8" stroke-linejoin="round"
+								transform="rotate(45 5.657 5.657)" xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 
 
 				<li><a class="css-g4g0eu" id="li-3">개인 정보 수정 <svg
@@ -58,9 +59,9 @@
 							<g>
 							<g
 								transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use class="point3" stroke="#999" stroke-linecap="round" stroke-width="1.8"
-								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
-								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
+							<use class="point3" stroke="#999" stroke-linecap="round"
+								stroke-width="1.8" stroke-linejoin="round"
+								transform="rotate(45 5.657 5.657)" xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 			</ul>
 
 			<a href="/mypage/inquiry/list" class="css-196gwz9">
@@ -88,9 +89,9 @@
 		<div class="css-171zbec">
 			<div class="css-j0lifa">
 				<div class="css-fhxb3m">
-					<h2 class="css-1268zpe">내 상품</h2>
-					<button type="button" class="css-a3vgo2"
-						onclick="location.href='productUploadForm.jsp'">> 상품 등록하기</button>
+					<h2 class="css-1268zpe">판매 상품</h2>
+<!-- 					<button type="button" class="css-a3vgo2" -->
+<!-- 						onclick="location.href='productUploadForm.jsp'">> 상품 등록하기</button> -->
 
 				</div>
 
@@ -125,10 +126,14 @@
 							</div>
 						</div>
 						<div class="content-alter">
+
+							<div class="icon1">
+								<img class="icon-insert" src="insert.png" />
+							</div>
 						
-				<div class="icon1"><img class="icon-insert" src="insert.png"/></div>
-						
-				<div class="icon2"><img class="icon-delete" src="delete.png"/></div>
+				<div class="icon2">
+								<img class="icon-delete" src="delete.png" />
+							</div>
 						
 						
 						</div>
@@ -182,30 +187,12 @@
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/seller_list.js"></script>
+<script
+	src="${pageContext.request.contextPath}/static/js/sellingList.js"></script>
 </html>
 
 
 
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>

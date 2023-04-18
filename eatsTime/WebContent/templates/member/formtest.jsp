@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/productUploadForm.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/formtest.css">
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
@@ -24,14 +24,15 @@
 					</div>
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
-							<div class="css-176lya2">
+<!-- 							<div class="css-176lya2"> -->
 							
 								<label for="attach"> 
 								
-								<div class="css-u52dqk">
-								<span class="css-ymwvow">상품 사진을 등록해주세요.</span>
-								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p>
-								</div>
+								<img src="plus.png" class="css-plusimage">
+<!-- 								<div class="css-u52dqk"> -->
+<!-- 								<span class="css-ymwvow">상품 사진을 등록해주세요.</span> -->
+<!-- 								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p> -->
+<!-- 								</div> -->
 								
 								</label>
 								<input type="file" id="attach" style="display: none;">
@@ -41,7 +42,7 @@
 									<!--이미지를 없애는 X 버튼-->
 								</div>
 
-							</div>
+<!-- 							</div> -->
 						</div>
 					</div>
 <!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
