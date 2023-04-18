@@ -6,47 +6,17 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/noticeList.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
-<title>Insert title here</title>
+<title>이츠타임 - 공지사항 목록</title>
 </head>
 <body>
+<jsp:include page="../header.jsp" />
 <!-- 페이지의 메인 부분 -->
 	<div class="css-2b29tl">
 	<!-- 좌측 고객센터 메뉴창 및 게시글 부분 -->
 		<div class="css-luwwab eug5r811">
 		<!-- 좌측 고객센터 메뉴창 -->
 			<div class="css-833hqy ecbxmj3">
-				<div class="css-1v4whg ecbxmj2">고객센터</div>
-				<!-- 메뉴창 -->
-				<ul class="css-1x9bshx ecbxmj1">
-					<li>
-						<a href="noticeList.jsp" class="active css-g4g0eu ecbxmj0">
-							공지사항
-							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a class=" css-g4g0eu ecbxmj0">
-							자주하는 질문
-							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a href="qnaList.jsp" class=" css-g4g0eu ecbxmj0">
-							1:1 문의
-							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a class=" css-g4g0eu ecbxmj0">
-							대량주문 문의
-							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
-							</svg>
-						</a>
-					</li>
-				</ul>
+				
 				<!-- 1:1 문의하기 -->
 				<a href="qnaList.jsp" class="css-196gwz9 e19l01ug3">
 					<div class="css-rmee6s e19l01ug2">
@@ -95,8 +65,8 @@
 					<a href="notice.jsp">
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
-							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">작성자</div>
+							<div class="css-fzefrb e1cfowvj2">[안내] 샛별배송 서비스 확장 안내(2023.04.01~)</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
 							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
 						</div>
 					</a>
@@ -106,7 +76,47 @@
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
 							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">작성자</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
+							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="notice.jsp">
+						<div class="css-14yglsw e1cfowvj4">
+							<div class="css-3o6rrk e1cfowvj2">공지</div>
+							<div class="css-fzefrb e1cfowvj2">제목</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
+							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="notice.jsp">
+						<div class="css-14yglsw e1cfowvj4">
+							<div class="css-3o6rrk e1cfowvj2">공지</div>
+							<div class="css-fzefrb e1cfowvj2">제목</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
+							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="notice.jsp">
+						<div class="css-14yglsw e1cfowvj4">
+							<div class="css-3o6rrk e1cfowvj2">공지</div>
+							<div class="css-fzefrb e1cfowvj2">제목</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
+							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="notice.jsp">
+						<div class="css-14yglsw e1cfowvj4">
+							<div class="css-3o6rrk e1cfowvj2">공지</div>
+							<div class="css-fzefrb e1cfowvj2">제목</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
 							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
 						</div>
 					</a>
@@ -126,5 +136,6 @@
 		</div>
 		</div>		
 	</div>
+	<jsp:include page="../footer.jsp" />
 </body>
 </html>

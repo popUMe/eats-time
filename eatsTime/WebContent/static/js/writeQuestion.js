@@ -41,7 +41,7 @@ $("#inquiry-contents").blur(function(){
 $("#inquiry-subject").on('input', checkInput);
 $("#inquiry-contents").on('input', checkInput);
 
-
+/* 등록버튼 활성화 함수 */
 function checkInput() {	
 	
 	if($("#inquiry-subject").val() && $("#inquiry-contents").val()) {
@@ -59,7 +59,7 @@ function checkInput() {
 /*모달창 활성화*/
 $(".ebvrvv10").on("click", function(){
 	console.log("들어옴");
-	$(".swal2-container").show();
+	$(".swal2-container").fadeIn();
 	$("body").css('overflow', 'hidden');
 	return false;
 });
