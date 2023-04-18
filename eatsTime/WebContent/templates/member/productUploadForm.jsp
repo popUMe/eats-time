@@ -10,23 +10,29 @@
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
-	<div class="css-pculus e1ovi4141">
-		<div class="css-o5dw7d e1ovi4140">상품 등록</div>
-		<div class="css-mhmtvt e15so55l1">
-			<div class="css-rb0i47 e1yyjjij1">
-				<span class="css-qq9ke6 e1yyjjij0">*</span> 필수입력사항
+	<div class="css-pculus">
+		<div class="css-o5dw7d">상품 등록</div>
+		<div class="css-mhmtvt">
+			<div class="css-rb0i47">
+				<span class="css-qq9ke6">*</span> 필수입력사항
 			</div>
-			<div class="css-y8aj3r eo6ykj40">
-			<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">상품 이미지<span
-							class="css-qq9ke6 e744wfw0">*</span></label>
+			<div class="css-y8aj3r">
+			<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">상품 이미지<span
+							class="css-qq9ke6">*</span></label>
 					</div>
-					<div class="css-82a6rk e744wfw3">
-						<div class="css-jmalg e1uzxhvi6">
-							<div class="css-176lya2 e1uzxhvi3">
-								<button class="css-u52dqk e1uzxhvi2" type="button">
-								<span class="css-ymwvow e4nu7ef1">상품 사진을 등록해주세요.</span>
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
+							
+								<label for="imageUpload"> </label>
+<!-- 							<input type="file" class="css-u52dqk" id="imageUpload"> -->
+<!-- 								<span class="css-ymwvow">상품 사진을 등록해주세요.</span> -->
+<!-- 								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p> -->
+								
+								<button class="css-u52dqk" type="button">
+								<span class="css-ymwvow">상품 사진을 등록해주세요.</span>
 								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p>
 								</button>
 							</div>
@@ -37,17 +43,17 @@
 
 						
 				</div>
-				<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">상품명<span
-							class="css-qq9ke6 e744wfw0">*</span></label>
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">상품명<span
+							class="css-qq9ke6">*</span></label>
 					</div>
-					<div class="css-82a6rk e744wfw3">
-						<div class="css-jmalg e1uzxhvi6">
-							<div class="css-176lya2 e1uzxhvi3">
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
 								<input data-testid="input-box" id="memberId" name="memberId"
 									placeholder="상품명을 입력해주세요" type="text" required=""
-									class="css-u52dqk e1uzxhvi2" value="">
+									class="css-u52dqk" value="">
 							</div>
 						</div>
 					</div>
@@ -55,50 +61,50 @@
 				</div>
 				
 				
-						<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">판매 가격<span
-							class="css-qq9ke6 e744wfw0">*</span></label>
+						<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">판매 가격<span
+							class="css-qq9ke6">*</span></label>
 					</div>
-					<div class="css-82a6rk e744wfw3">
-						<div class="css-jmalg e1uzxhvi6">
-							<div class="css-176lya2 e1uzxhvi3">
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
 								<input data-testid="input-box" id="password" name="password"
 									placeholder="판매 가격을 입력해주세요" type="password" autocomplete="off"
-									class="css-u52dqk e1uzxhvi2" value="">
+									class="css-u52dqk" value="">
 							</div>
 						</div>
 					</div>
 <!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
 				
-				<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">판매 수량<span
-							class="css-qq9ke6 e744wfw0">*</span></label>
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">판매 수량<span
+							class="css-qq9ke6">*</span></label>
 					</div>
-					<div class="css-82a6rk e744wfw3">
-						<div class="css-jmalg e1uzxhvi6">
-							<div class="css-176lya2 e1uzxhvi3">
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
 								<input data-testid="input-box" id="password" name="password"
 									placeholder="판매 가능한 수량을 입력해주세요" type="password" autocomplete="off"
-									class="css-u52dqk e1uzxhvi2" value="">
+									class="css-u52dqk" value="">
 							</div>
 						</div>
 					</div>
 <!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
-				<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">판매 및 발송지 주소<span
-							class="css-qq9ke6 e744wfw0">*</span></label>
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">판매 및 발송지 주소<span
+							class="css-qq9ke6">*</span></label>
 					</div>
-					<div class="css-82a6rk e744wfw3">
-						<div class="css-jmalg e1uzxhvi6">
-							<div class="css-176lya2 e1uzxhvi3">
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
 								<input data-testid="input-box" id="passwordConfirm"
 									name="passwordConfirm" placeholder="판매할 주소를 입력해주세요"
-									type="password" autocomplete="off" class="css-u52dqk e1uzxhvi2"
+									type="password" autocomplete="off" class="css-u52dqk"
 									value="">
 							</div>
 						</div>
@@ -106,43 +112,43 @@
 <!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
 				
-				<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">판매 유형<span
-							class="css-qq9ke6 e744wfw0">*</span></label></label>
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">판매 유형<span
+							class="css-qq9ke6">*</span></label></label>
 					</div>
-					<div class="css-82a6rk e744wfw3">
-						<div class="css-14wodj6 es1pbny0">
+					<div class="css-82a6rk">
+						<div class="css-14wodj6">
 
 								<label
-								class="css-z9g6s0 et8nqc33" for="delivery"><input
+								class="css-z9g6s0" for="delivery"><input
 								id="delivery" name="how"
-								type="radio" class="css-1pes2r6 et8nqc32" value="delivery"><span
-								class="css-198i9ca e2sqze61"><div
-										class="css-1dahn5m e2sqze60"></div></span><span
-								 class="css-mgd87h et8nqc31">배송</span></label><label
-								class="css-z9g6s0 et8nqc33" for="pickup"><input
+								type="radio" class="css-1pes2r6" value="delivery"><span
+								class="css-198i9ca"><div
+										class="css-1dahn5m"></div></span><span
+								 class="css-mgd87h">배송</span></label><label
+								class="css-z9g6s0" for="pickup"><input
 								 id="pickup
 								 " name="how"
-								type="radio" class="css-1pes2r6 et8nqc32" value="pickup"
-								checked=""><span class="css-5xw1m2 e2sqze61"><div
-										class="css-1vic0rk e2sqze60"></div></span><span
-								 class="css-mgd87h et8nqc31">픽업</span></label>
+								type="radio" class="css-1pes2r6" value="pickup"
+								checked=""><span class="css-5xw1m2"><div
+										class="css-1vic0rk"></div></span><span
+								 class="css-mgd87h">픽업</span></label>
 						</div>
 					</div>
 <!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
 				
-				<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">유통 기간<span
-							class="css-qq9ke6 e744wfw0">*</span></label>
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">유통 기간<span
+							class="css-qq9ke6">*</span></label>
 					</div>
-					<div class="css-82a6rk e744wfw3">
-						<div class="css-jmalg e1uzxhvi6">
-							<div class="css-176lya2 e1uzxhvi3">
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
 <!-- 							<form> -->
-      						<p><input class="css-u52dqk e1uzxhvi2" type="date" value="sysdate"></p>
+      						<p><input class="css-u52dqk" type="date" value="sysdate"></p>
      						
 <!-- 	    					</form> -->
 									
@@ -156,17 +162,17 @@
 <!-- 					</div> -->
 				</div>
 		
-				<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">제품정보<span
-							class="css-qq9ke6 e744wfw0">*</span></label>
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">제품정보<span
+							class="css-qq9ke6">*</span></label>
 					</div>
-					<div class="css-82a6rk e744wfw3">
-						<div class="css-jmalg e1uzxhvi6">
-							<div class="css-detailwrite e1uzxhvi3">
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-detailwrite">
 								<input data-testid="input-box" id="password" name="password"
 									placeholder="안내사항을 작성해주세요" type="password" autocomplete="off"
-									class="productDetail e1uzxhvi2" value="">
+									class="productDetail" value="">
 							</div>
 						</div>
 					</div>
@@ -175,12 +181,12 @@
 			
 				
 			</div>
-			<div class="css-1eo0fey e1j7jtti0"></div>
+			<div class="css-1eo0fey"></div>
 
-			<div class="css-137ca2h e1utgeno0">
-				<button class="css-18m884r e4nu7ef3" type="submit" width="240"
+			<div class="css-137ca2h">
+				<button class="css-18m884r" type="submit" width="240"
 					height="56" radius="3">
-					<span class="css-ymwvow e4nu7ef1">등록하기</span>
+					<span class="css-ymwvow">등록하기</span>
 				</button>
 			</div>
 		</div>

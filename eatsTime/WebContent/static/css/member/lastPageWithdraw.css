@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+.css-191mpdx{
+	width: 640px;
+    margin: 0px auto;
+	
+}
+
+.css-1n0iowd {
+    padding: 50px 0px 51px;
+    border-bottom: 2px solid rgb(51, 51, 51);
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.css-lmufyc {
+    color: rgb(102, 102, 102);
+    line-height: 22px;
+}
+
+.css-w9v2bl {
+    display: inline-flex;
+    width: 100%;
+    padding: 10px 0px 10px 20px;
+}.css-1y8737n {
+    width: 139px;
+    padding-top: 12px;
+}.css-1obgjqh {
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    line-height: 20px;
+}
+
+
+.css-82a6rk {
+    flex: 1 1 0%;
+}
+
+.css-11v4spm {
+	display: block;
+	padding: 12px 0px 12px;
+	font-weight: normal;
+	color: rgb(95, 0, 128);
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+.css-1fb6x3 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 40px 0px 60px;
+}
+
+
+.css-h1qqcg {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    height: 44px;
+    color: rgb(95, 0, 128);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(95, 0, 128);
+    width: 120px;
+    margin: 0px 4px;
+    border-radius: 3px;
+}
+
+.css-h1qqcg > span {
+    font-size: 14px;
+}
+
+
+.css-ymwvow {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.css-1vv342v {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    height: 44px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 0, 128);
+    border: 0px none;
+    width: 120px;
+    margin: 0px 4px;
+    border-radius: 3px;
+}
+
+.css-1vv342v > span {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
