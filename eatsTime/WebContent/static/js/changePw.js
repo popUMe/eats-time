@@ -60,9 +60,6 @@ $("#passwordConfirm").focus(function() {
 
 })
 
-
-
-
 // 새비밀번호 등록
 $("#password").keyup(function(e) {
 
