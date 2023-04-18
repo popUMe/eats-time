@@ -2,11 +2,12 @@
  * 
  */
 
-const input_file = document.querySelector("#attach"); //추가할 이미지 <input type="file" id="attach" style="display: none;">
 
 const image_div = document.querySelectorAll("div.image"); //선택한 이미지
 const cancel_div = document.querySelector("div.cancel");  //취소 버튼
+const input_file = document.querySelector("#attach"); //추가할 이미지 <input type="file" id="attach" style="display: none;">
 
+const plusB=document.querySelectorAll(".css-82a6rk"); //첨부버튼
 
 // x버튼 눌렀을 때 
     cancel_div.addEventListener("click", () => {
@@ -16,7 +17,12 @@ const cancel_div = document.querySelector("div.cancel");  //취소 버튼
         cancel_div.style.display = "none";//x없어지고
     });
 
-
+//파일 추가 버튼 눌렀을 때
+plusB.addEventListener("click", ()=>{
+	plusB.style.display="none"; // +버튼은 없어져야함
+	
+	
+});
 
 
 
@@ -35,6 +41,7 @@ const cancel_div = document.querySelector("div.cancel");  //취소 버튼
         // function(a){} 와 a => {} 같음
         // function(e){} 와 e => {} 같음
         reader.onload = e => {
+			plusB.style.display="none";
             image_div[1].style.display = "block"; //선택한 이미지 : 보여야할 것
             image_div[1].style.backgroundImage = `url('${e.target.result}')`
             image_div[0].style.display = "none"; //없어져야 될 것 : + 이미지(파일 추가하는)
