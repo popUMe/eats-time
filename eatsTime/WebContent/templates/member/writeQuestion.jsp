@@ -9,39 +9,33 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="../header.jsp" />
 <!-- 페이지의 메인 부분 -->
 	<div class="css-2b29tl">
 		<!-- 좌측 고객센터 메뉴창 및 게시글 부분 -->
 		<div class="css-luwwab eug5r811">
 				<!-- 좌측 고객센터 메뉴창 -->
 			<div class="css-833hqy ecbxmj3">
-				<div class="css-1v4whg ecbxmj2">고객센터</div>
+				<div class="css-1v4whg ecbxmj2">마이컬리</div>
 				<!-- 메뉴창 -->
 				<ul class="css-1x9bshx ecbxmj1">
 					<li>
-						<a href="${pageContext.request.contextPath}/templates/board/noticeList.jsp" class=" css-g4g0eu ecbxmj0">
-							공지사항
+						<a href="${pageContext.request.contextPath}/templates/product/productListAll.jsp" class=" css-g4g0eu ecbxmj0">
+							상품목록
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
 						</a>
 					</li>
 					<li>
-						<a class=" css-g4g0eu ecbxmj0">
-							자주하는 질문
+						<a href="${pageContext.request.contextPath}/templates/member/seller_list.jsp" class=" css-g4g0eu ecbxmj0">
+							판매목록
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
 						</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}/templates/board/qnaList.jsp" class="active css-g4g0eu ecbxmj0">
-							1:1 문의
-							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a class=" css-g4g0eu ecbxmj0">
-							대량주문 문의
+						<a href="${pageContext.request.contextPath}/templates/member/editPersonal.jsp" class="css-g4g0eu ecbxmj0">
+							개인정보 수정
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">						
 							</svg>
 						</a>
@@ -85,55 +79,6 @@
 			<!-- 1:1 문의 게시글 작성 폼  -->
 			<div class="css-185m8ch e1153ede0">
 				<form>
-					<div class="css-17bp14q e1vbjq4w3">
-						<div class="css-mm5tap e1vbjq4w2">
-							<label>
-								유형
-								<span class="css-hwfcu5 e1vbjq4w0">*</span>
-							</label>
-						</div>
-						<div class="css-12l4j2c e1vbjq4w1">
-							<div class="css-zjik7 epfrwk70">
-								<div class="css-1a8mkrv e1u0xj870">
-									<div>
-										<div class="MuiFormControl-root css-tzsjye">
-											<div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl jss2 css-eg1co4">
-												
-												<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1636szt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
-													<path d="M7 10l5 5 5-5z">
-													</path>
-												</svg>
-												<fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
-													<legend class="css-nnbavb">
-														<span class="notranslate">
-														​</span>
-													</legend>
-												</fieldset>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="css-1a8mkrv e1u0xj870">
-									<div>
-										<div class="MuiFormControl-root css-tzsjye">
-											<div variant="outlined" class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl jss2 css-eg1co4">
-												<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined Mui-disabled css-1636szt" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
-													<path d="M7 10l5 5 5-5z">
-													</path>
-												</svg>
-												<fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
-													<legend class="css-nnbavb">
-														<span class="notranslate">​
-														</span>
-													</legend>
-												</fieldset>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div class="css-17bp14q e1vbjq4w3">
 						<div class="css-mm5tap e1vbjq4w2">
 							<label for="inquiry-subject">
@@ -197,82 +142,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="css-17bp14q e1vbjq4w3">
-						<div class="css-mm5tap e1vbjq4w2">
-							<label></label>
-						</div>
-						<div class="css-12l4j2c e1vbjq4w1">
-							<div class="css-mlazth edd8l6o3">
-								<div class="css-g8ewo8 e9bfpi41">
-									<div class="css-175wokr e9bfpi40">
-										<!-- 파일 업로드 -->
-										<div class="css-o4030c e5xt3dr1">
-											<img src="" alt="" class="css-idj2s4 e5xt3dr4">					
-											<button type="button" class="css-v96m37 e5xt3dr2"></button>
-										</div>
-										<div class="css-0">
-											<label for="photo-picker" class="css-0 e1l8vpkx2">
-												<button type="button" class="css-j9ybaa e1l8vpkx0">
-													<span class="css-113ip0v e1tcjz8t0"></span>
-												</button>
-												<input multiple="multiple" type="file" accept="image/jpg, image/jpeg, image/png, image/bmp" class="css-eivff4 e1l8vpkx1">
-											</label>
-										</div>
-									</div>
-									<div class="css-sqqcql edd8l6o2">
-										<div class="css-7n55a5 edd8l6o1">
-											<span class="css-1xbds45 edd8l6o0"></span>
-											30MB 이하의 이미지만 업로드 가능합니다.
-										</div>
-										<div class="css-7n55a5 edd8l6o1">
-											<span class="css-1xbds45 edd8l6o0"></span>
-											상품과 무관한 내용이거나 음란 및 불법적인 내용은 통보없이 삭제 될 수 있습니다.
-										</div>
-										<div class="css-7n55a5 edd8l6o1">
-											<span class="class="css-1xbds45 edd8l6o0""></span>
-											사진은 최대 8장까지 등록 가능합니다.
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="css-v3zc4x effwtd5">
-						<div class="css-17bp14q e1vbjq4w3">
-							<div class="css-mm5tap e1vbjq4w2">
-								<label for="inquiryAllowsNotificationCheck" data-testid="label-text">답변 수신</label>
-							</div>
-							<div class="css-12l4j2c e1vbjq4w1">
-								<div class="css-1wnowod effwtd4">
-									<div class="css-n7yl5s effwtd3">
-										<div class="css-bg7ww1 e1uzxhvi6">
-											<div height="44" class="css-t7kbxx e1uzxhvi3">
-												<input data-testid="input-box" id="inquiryAllowsNotificationCheck" disabled="" type="text" height="44" class="css-1quw3ub e1uzxhvi2" value="010-5128-****">
-											</div>
-										</div>
-									</div>
-									<div class="css-1s6b9a2 effwtd0">
-										<label class="css-izsmfv e1dcessg3" for="InputAllowsNotificationCheck">
-											<input name="allowsNotification" id="InputAllowsNotificationCheck" type="checkbox" class="css-agvwxo e1dcessg2" checked="">
-											<div class="css-79hxr7 e1dcessg1">
-												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#5f0080">
-													</path>
-													<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-													</path>
-												</svg>
-											</div>
-											<span>문자/알림톡 받기</span>
-										</label>
-										<a class="css-1ybcx6v effwtd1">개인정보 수정</a>
-									</div>
-								</div>
-								<div class="css-3ky9df effwtd2">
-									<span>※ 야간에도 답변 완료 알림톡이 발송 되는 점 참고 부탁드립니다.</span>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div class="css-1spu0j4 ebvrvv11">
 						<button disabled="disabled" type="submit" class="css-13kn1it ebvrvv10">등록</button>
 					</div>
@@ -281,6 +150,7 @@
 		</div>
 	</div>
 	</div>
+	<jsp:include page="../footer.jsp" />
 	<!-- 모달창  -->
 	<div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none;">
 	<!-- 모달박스 -->

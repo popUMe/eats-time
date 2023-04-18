@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<jsp:include page="../header.jsp" />
 	<!-- 페이지의 메인 부분 -->
 	<div class="css-1i60c0e emilzgk3">
 		<div class="css-1uvp5r6 emilzgk2">
@@ -42,5 +43,6 @@
 			</div>		
 		</div>
 	</div>
+	<jsp:include page="../footer.jsp" />
 </body>
 </html>
