@@ -84,7 +84,7 @@
 								radius="4">
 								<span class="css-ymwvow">재발송</span>
 							</button>
-							<p class="css-1ec0hfe">01:29</p>
+							<p class="css-1ec0hfe timer"></p>
 						</div>
 						<p class="css-1ozil7i error4">인증번호를 입력해 주세요</p>
 					</div>

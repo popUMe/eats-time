@@ -6,6 +6,69 @@
 
 let checkNumber = false;
 
+
+/*타이머 구현*/
+// 토큰 유효시간 타이머
+let counter = 0;
+let timeleft = 180; // 제한 시간 지정 값
+let setinterval = setInterval(timeIt, 1200);
+
+
+function convertSeconds(s) {
+	console.log(s)
+	let min = Math.floor(s / 60);
+	let sec = s % 60;
+
+	/*시간이 다되면 모달창 띄우기*/
+	if ((s) == 0) {
+		timeoutModal();
+	}
+
+
+	if (sec.toString().length == 1) {
+		return min + ':' + "0" + sec;
+	}
+	return min + ':' + sec;
+}
+
+function timeoutModal() {
+	/*시간 완료되었다는 모달창 띄우기*/
+	$('.banner-online').fadeIn();
+	$('#modalSubmit').fadeIn();
+	$("html").css("overflow-y", "hidden");
+	$(".modal-content").html("3분이 지났습니다.");
+
+	$('.close-button-submit').click(function() {
+		$('.banner-online').fadeOut();
+		$('#modalSubmit').fadeOut();
+		$("html").css("overflow-y", "");
+		/*확인 버튼 비활성화*/
+		$(".phone-confirmButton").attr("disabled", "");
+		$(".phone-confirmButton").prop("background", "rgb(221, 221, 221)");
+
+	})
+
+}
+
+
+$(".timer").html(convertSeconds(timeleft - counter))
+
+function timeIt() {
+
+	/*30초후 모달*/
+
+	if (counter == 180) {
+		clearInterval(setinterval);
+		return;   // 시간이 끝났을 때 멈추는 역할
+	}
+	counter++
+	$(".timer").html(convertSeconds(timeleft - counter));
+}
+
+
+
+
+
 /*이메일*/
 function fn_emailChk(email) {
 	let regExp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{1,4}$/;
@@ -42,7 +105,6 @@ function maxLengthCheck(object) {
 		object.value = object.value.slice(0, object.maxLength);
 	}
 }
-
 
 
 
@@ -92,10 +154,12 @@ let phoneCheck = false;
 $("#name").keyup(function() {
 	if ($("#name").val() == "") {
 		$(".error1").text("가입 시 등록한 이름을 입력해주세요");
-		nameCheck = false;
+		nameCheck1 = false;
+		nameCheck2 = false;
 	} else {
 		$(".error1").text("");
-		nameCheck = true;
+		nameCheck1 = true;
+		nameCheck2 = true;
 	}
 	EmailCheckflag()
 	PhoneCheckflag()
@@ -154,7 +218,7 @@ $("#phone").keyup(function() {
 
 /*이메일 일때*/
 function EmailCheckflag() {
-	if (nameCheck && emailCheck) {
+	if (nameCheck1 && emailCheck) {
 		$(".email-button").removeAttr("disabled");
 		$(".email-button").prop("background", "rgb(95, 0, 128)");
 		$(".phone-button").prop("background", "rgb(221, 221, 221)");
@@ -168,7 +232,7 @@ function EmailCheckflag() {
 /*휴대폰일때*/
 
 function PhoneCheckflag() {
-	if (nameCheck && phoneCheck) {
+	if (nameCheck2 && phoneCheck) {
 		$(".phone-button").removeAttr("disabled");
 		$(".phone-button").prop("background", "rgb(95, 0, 128)");
 		$(".email-button").prop("background", "rgb(221, 221, 221)");
@@ -258,6 +322,11 @@ $('.textbutton4').on("click", function() {
 	$(".error4").text("인증번호를 입력해 주세요");
 })
 
+
+
+
+
+
 /*인증번호 입력창*/
 $(".input-content4").keyup(function() {
 	if ($(".input-content4").val().length == 0) {
@@ -302,7 +371,6 @@ $(".certification-button").eq(0).on("click", function() {
 /*인증번호 입력 창이 block이면 클릭이벤트 막고 모달창 띄우기*/
 
 
-
 $(".certification-button").eq(1).on("click", function() {
 
 	if ($(".certification-number-wrap").css("display") == "block") {
@@ -313,8 +381,6 @@ $(".certification-button").eq(1).on("click", function() {
 		$(".certification-button").eq(0).on("click", function() {
 			phoneCertification()
 		})
-
-
 
 
 		$('.close-button-cancle').click(function() {
@@ -329,6 +395,7 @@ $(".certification-button").eq(1).on("click", function() {
 			$("html").css("overflow-y", "");
 
 			emailCertification();
+
 
 
 		})
@@ -350,7 +417,20 @@ $('.phone-button').on("click", function() {
 	$(".modal-content1").html("인증번호가 발송되었습니다. \n 3분 안에 인증번호를 입력해 주세요.");
 	$("#name").attr('readonly', true);
 	$("#phone").attr('readonly', true);
+
+	/*인증번호 입력창 초기화*/
+	$(".input-content4").val("");
+
+	/*지움 버튼 안보이게*/
+	$(".textbutton1").css('visibility', 'hidden');
+	$(".textbutton3").css('visibility', 'hidden');
+
+
 })
+
+
+
+
 
 $(".close-button").on("click", function() {
 	$('.banner-online').fadeOut();
@@ -359,6 +439,9 @@ $(".close-button").on("click", function() {
 	$(".phone-button").attr("disabled", "");
 	$(".phone-button").css("display", "none");
 	$(".phone-confirmButton").css("display", "block");
+	//인증번호 누르고 타이머함수
+	counter = 0;
+	setinterval = setInterval(timeIt, 1200);
 })
 
 
@@ -370,6 +453,17 @@ $(".resend-button").on("click", function() {
 	$('#modal').fadeIn();
 	$("html").css("overflow-y", "hidden");
 	$(".modal-content1").html("재발송 되었습니다.");
+	/*인증번호 재발송누르면 안에 인증번호 값 초기화후 밑에 에러메세지 다시*/
+	$("#verification-number").val("");
+	$(".error4").text("인증번호를 입력해 주세요");
+	/*확인 버튼 비활성화*/
+	$(".phone-confirmButton").attr("disabled", "");
+	$(".phone-confirmButton").prop("background", "rgb(221, 221, 221)");
+	//인증번호누르고 타이머 함수
+	counter = 0;
+	setinterval = setInterval(timeIt, 1200);
+
+
 })
 
 
@@ -381,6 +475,37 @@ $(".phone-confirmButton").on("click", function() {
 	$('.banner-online').css("display", "none");
 	$('#modal').css("display", "none");
 	$("html").css("overflow-y", "");
+	/*다시 초기화*/
+	counter = 0;
+	clearInterval(setinterval);
+	/*내용초기화*/
+	$("#name").val("");
+	$("#phone").val("");
+	/*이름입력칸 핸드폰입력칸 수정가능하게 수정*/
+	$("#name").attr('readonly', false);
+	$("#phone").attr('readonly', false);
+
+	/*뒤로가기를 했을때 인증번호 받기로 바꾸기 위한 작업*/
+	/*버튼체인지*/
+	/*무조건 초기값은 비활성화*/
+	$(".phone-button").css("display", "block");
+	$(".phone-button").prop("background", "rgb(221, 221, 221)");
+	$(".phone-button").attr("disabled", "");
+	$(".phone-confirmButton").css("display", "none");
+
+	/*확인칸 비활성화*/
+	$(".phone-confirmButton").prop("background", "rgb(221, 221, 221)");
+	$(".phone-confirmButton").attr("disabled", "");
+
+	/*인증번호칸 없애기*/
+	$(".certification-number-wrap").css("display", "none");
+
+	/*버튼플래그 초기화*/
+	nameCheck1 = false;
+	nameCheck2 = false;
+	emailCheck = false;
+	phoneCheck = false;
+
 	location.href = "findIdOk.jsp";
 })
 
@@ -403,6 +528,25 @@ $("#verification-number").keyup(function() {
 		$(".phone-confirmButton").removeAttr("disabled");
 		$(".phone-confirmButton").prop("background", "rgb(95, 0, 128)");
 	}
+})
+
+
+/*인증번호 입력창 focus*/
+
+$("#verification-number").bind('focus', function() {
+
+	$("#verification-number").blur(function(e) {
+
+		if ($(e.target).val() == "") {
+		$(".error4").text("인증번호를 입력해주세요");
+		} else if ($("#verification-number").val().length < 7) {
+		$(".error4").text("7자리를 입력해주세요.");
+		} else {
+		$(".error4").text("");
+		}
+
+	})
+
 })
 
 
@@ -457,6 +601,18 @@ function phoneCertification() {
 	/*이름이랑 폰번호 수정가능하게 바꾸기*/
 	$("#name").attr('readonly', false);
 	$("#phone").attr('readonly', false);
+
+
+	/*버튼플래그 초기화*/
+	nameCheck1 = false;
+	nameCheck2 = false;
+	emailCheck = false;
+	phoneCheck = false;
+
+	/*다시 초기화*/
+	counter = 0;
+	clearInterval(setinterval);
+
 }
 
 /* 이메일 인증 버튼 내용 함수로 담기*/
@@ -511,4 +667,21 @@ function emailCertification() {
 	$("#phone").attr('readonly', false);
 
 
+	/*인증번호 value 초기화*/
+	$(".input-content4").text("");
+
+	/*버튼플래그 초기화*/
+	nameCheck1 = false;
+	nameCheck2 = false;
+	emailCheck = false;
+	phoneCheck = false;
+
+	/*다시 초기화*/
+	counter = 0;
+	clearInterval(setinterval);
+
 }
+
+
+
+
