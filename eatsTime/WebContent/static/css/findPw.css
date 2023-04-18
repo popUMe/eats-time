@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 /* 아이디찾기 전체를 감싸는 div */
 .css-140915z {
 	min-width: 1050px px;
@@ -25,7 +24,7 @@
 	background-color: white;
 }
 
-/* 이메일인증 감싸는 div 태그 */
+/* 이메일인증과 휴대폰인증을 감싸는 div 태그 */
 .css-1izr46f {
 	background-color: white;
 	padding: 0px 15px;
@@ -34,6 +33,19 @@
 	display: flex;
 	flex-wrap: nowrap;
 	text-align: center;
+}
+
+/* 휴대폰 인증 버튼 */
+.css-1vhrqx7 {
+	display: block;
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	position: relative;
+	height: 48px;
+	font-weight: 400;
+	font-size: 16px;
+	color: rgb(102, 102, 102);
+	line-height: 18px;
 }
 
 /* 이메일 인증부분 div */
@@ -135,6 +147,49 @@
 	padding: 0px 11px 1px 15px;
 }
 
+/* 휴대폰 번호 부분 */
+
+/* 휴대폰 none */
+.phone-input {
+	display: none;
+}
+
+.css-1blp8ou:not(:first-of-type) {
+	margin-top: 8px;
+}
+
+.css-1yjqrpx {
+	padding-bottom: 12px;
+}
+
+.css-c3g9of {
+	display: inline-block;
+	padding: 8px 0px 11px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+	color: rgb(51, 51, 51);
+}
+
+.css-1iilz1t {
+	position: relative;
+	height: 46px;
+}
+
+.css-17iio5j {
+	width: 100%;
+	height: 46px;
+	padding: 0px 11px 1px 15px;
+	border-radius: 4px;
+	border: 1px solid rgb(221, 221, 221);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 44px;
+	color: rgb(51, 51, 51);
+	outline: none;
+	box-sizing: border-box;
+}
+
 /* 확인 버튼을 감싸는 div 태그 */
 .css-3vxi16 {
 	margin-top: 18px;
@@ -165,10 +220,33 @@
 	font-weight: 500;
 }
 
-
 .css-u52dqk:focus {
-    border: 1px solid rgb(51, 51, 51);
-    background: none;
+	border: 1px solid rgb(51, 51, 51);
+	background: none;
+}
+
+/* 오류메세지 p태그  */
+.css-1ozil7i {
+	font-size: 13px;
+	color: rgb(240, 63, 64);
+	margin-top: -4px;
+}
+
+/* x버튼  */
+.css-118q5z4 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 12px;
+	height: 16px;
+	width: 16px;
+	background:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBmaWxsPSIjOTk5IiBvcGFjaXR5PSIuNSIgY3g9IjgiIGN5PSI4IiByPSI4Ii8+CiAgICAgICAgPGcgc3Ryb2tlPSIjRkZGIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41Ij4KICAgICAgICAgICAgPHBhdGggZD0ibTEwLjg5NyAxMC43ODYtNS43Ny01Ljc2OU01LjEyMiAxMC43ODVsNS43NzUtNS43NzUiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=)
+		0% 0%/16px 16px no-repeat transparent;
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
 }
 
 /* 모달 창 */
@@ -192,9 +270,13 @@
 	padding: 0;
 }
 
-#modal {
+#modal, #modal2, #modalSubmit {
 	position: fixed;
+<<<<<<< HEAD
+	width: 100vW;
+=======
 	width: 100vw;
+>>>>>>> master
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.5);
 	top: 0;
@@ -203,7 +285,7 @@
 	display: none;
 }
 
-.modal-content {
+.modal-content, .modal-content1 {
 	font-size: 16px;
 	height: 140px;
 	color: rgb(51, 51, 51);
@@ -216,12 +298,24 @@
 	font-weight: 500;
 }
 
+.modal-content2 {
+	font-size: 16px;
+	height: 140px;
+	color: rgb(51, 51, 51);
+	line-height: 25px;
+	margin-top: 0px;
+	white-space: pre-line;
+	padding-top: 22px;
+	padding-left: 24px;
+	padding-right: 24px;
+	font-weight: 500;
+}
 
-.close-button {
+.close-button, .close-button-submit {
 	width: auto;
 	height: 40px;
-	border-top: 1px solid rgb(211,211,211);
-	padding : 0px 18px;
+	border-top: 1px solid rgb(211, 211, 211);
+	padding: 0px 18px;
 	font-size: 16px;
 	font-weight: 500;
 	color: rgb(95, 0, 128);
@@ -229,4 +323,133 @@
 	padding-top: 18px;
 }
 
+.close-button-cancle, .email-move-button {
+	width: 180px;
+	height: 60px;
+	border-top: 1px solid rgb(211, 211, 211);
+	padding: 0px 18px;
+	font-size: 16px;
+	font-weight: 500;
+	color: rgb(95, 0, 128);
+	background: transparent;
+	padding-top: 18px;
+}
 
+/* 이메일화면 이동  모달창 확인버튼 */
+.email-move-button {
+	border-left: 1px solid rgb(211, 211, 211);
+}
+
+.modal-wrap {
+	display: flex;
+}
+
+/* erro2 마진 */
+.error2 {
+	margin-top: 5px
+}
+
+.error3 {
+	margin-top: 7px;
+}
+
+/* 휴대폰번호 입력칸 화살표 제거 */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* 처음 인증번호 받기 버튼 안보이게하기 */
+.phone-button {
+	display: none;
+}
+
+/* 인증번호 받은 후 인증번호 입력칸 */
+.certification-number-wrap {
+	display: none;
+}
+
+.css-5g3j4g {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+}
+
+.css-5g3j4g>div {
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+}
+
+/* 인증번호 label 태그 */
+.css-c3g9of {
+	display: inline-block;
+	padding: 8px 0px 11px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+	color: rgb(51, 51, 51);
+}
+
+.css-1iilz1t {
+	position: relative;
+	height: 46px;
+}
+
+/* 인증번호 입력태그 */
+.css-17iio5j {
+	width: 100%;
+	height: 46px;
+	padding: 0px 11px 1px 15px;
+	border-radius: 4px;
+	border: 1px solid rgb(221, 221, 221);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 44px;
+	color: rgb(51, 51, 51);
+	outline: none;
+	box-sizing: border-box;
+}
+
+/* 재발송버튼 */
+.css-m5a8v7 {
+	display: block;
+	padding: 0px 10px;
+	text-align: center;
+	overflow: hidden;
+	width: 88px;
+	height: 48px;
+	border-radius: 4px;
+	color: rgb(51, 51, 51);
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(221, 221, 221);
+	margin-bottom: 0px;
+	margin-left: 12px;
+	flex-shrink: 0;
+}
+
+/* 시간초 */
+.css-1ec0hfe {
+	position: absolute;
+	right: 112px;
+	bottom: 11px;
+	font-size: 15px;
+	color: rgb(240, 63, 64);
+	line-height: 24px;
+}
+/* 오류 */
+.css-1ozil7i {
+	font-size: 13px;
+	color: rgb(240, 63, 64);
+	margin-top: 4px;
+}
+
+/* 인증번호 x 버튼만 */
+.textbutton4 {
+	right: 56px;
+}
+
+/* 폰 인증번호 입력후 새로운 확인버튼 */
+.phone-confirmButton {
+	display: none;
+}
