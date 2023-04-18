@@ -35,7 +35,7 @@
 			</tr>
 			<tr>
 				<td>5</td>
-				<td><a href="noticeView.jsp?noticeNo=1">2,500</a></td>
+				<td><a href="qnaView.jsp?noticeNo=1">2,500</a></td>
 				<td>$500</td>
 				<td>$500</td>
 				<td>답변 완료</td>
@@ -107,7 +107,7 @@
 		
 		$(function() {
 			  $('#add-btn').click(function() {
-			    location.href = 'noticeWrite.jsp';
+			    location.href = 'qnaWrite.jsp';
 			  });
 			});
 

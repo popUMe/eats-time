@@ -8,7 +8,7 @@
 <body>
     <div class="board_wrap">
         <div class="board_title">
-            <strong>공지사항</strong>
+            <strong>문의내역</strong>
         </div>
         <div class="board_write_wrap">
             <div class="board_write">
