@@ -1,8 +1,5 @@
-/**
- * 
-게시글 클릭시 펼쳐지기
- */
 
+/*클릭 시 게시글 펼쳐지*/
 $(".e1cfowvj3").click(function(){
 	if($(this).next(".e1cfowvj0").css('display') == 'none'){
 		return $(this).next(".e1cfowvj0").slideDown();
@@ -13,15 +10,29 @@ $(".e1cfowvj3").click(function(){
 	}
 });
 
-/*모달창 띄우기*/
+/*삭제 확인 모달창*/
 $(".deletebtn").on("click", function(){
-	$(".swal2-container").show();
+	$("#modal1").fadeIn();
 	$("body").css('overflow', 'hidden');
 	return false;
 });
 
-/*모달창 삭제*/
+/*삭제여부 모달창 취소버튼*/
 $(".canceldeletion").on("click", function(){
-	$(".swal2-container").hide();
+	$("#modal1").fadeOut();
+	$("body").css('overflow', 'scroll');
+});
+
+/*확인버튼 클릭 시 모달창 : 삭제 완료*/
+$(".yesdeletion").click(function(){
+		console.log("들어옴");
+        $(this).closest("#modal1").fadeOut();
+       /* $("#modal2").css('display', 'block');*/
+		$("#modal2").fadeIn();
+    });
+
+
+$(".deleteioncomplete").on("click", function(){
+	$("#modal2").fadeOut();
 	$("body").css('overflow', 'scroll');
 });

@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/* 스크롤 나타날때마다 레이아웃 움직이는 거 막기 */
+body {
+	overflow-y:scroll;
+}
+
 /* 페이지 메인 부분 태그 */
 .css-2b29tl {
     position: relative;

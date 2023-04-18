@@ -6,14 +6,15 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/notice.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
-<title>Insert title here</title>
+<title>이츠타임 - 공지사항</title>
 </head>
 <body>
+	<jsp:include page="../header.jsp" />
 	<!-- 페이지의 메인 부분 -->
 	<div class="css-1i60c0e emilzgk3">
 		<div class="css-1uvp5r6 emilzgk2">
 			<div class="css-qwe8mt emilzgk1">공지사항</div>
-			<div class="css-1funedv emilzgk0">컬리의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</div>
+			<div class="css-1funedv emilzgk0">이츠타임의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</div>
 		</div>
 		<div class="css-1t45bai erzmnr90">
 			<div class="css-1dhg94g e1pwb5hv0">
@@ -22,7 +23,7 @@
 			</div>
 			<div class="css-1dhg94g e1pwb5hv0">
 				<div class="css-1xrh39a e1pwb5hv2">작성자</div>
-				<div class="css-8vgw34 e1pwb5hv1">컬리</div>
+				<div class="css-8vgw34 e1pwb5hv1">이츠타임</div>
 			</div>
 			<div class="css-1dhg94g e1pwb5hv0">
 				<div class="css-1xrh39a e1pwb5hv2">작성일</div>
@@ -42,5 +43,6 @@
 			</div>		
 		</div>
 	</div>
+	<jsp:include page="../footer.jsp" />
 </body>
 </html>
