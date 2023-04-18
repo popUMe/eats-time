@@ -160,8 +160,8 @@
 				장소</span><span class="css-thgwm0">문 앞</span></li>
 		<li class="css-8homh5"><span class="css-9i2eur">공동현관
 				출입방법</span><span class="css-thgwm0">자유 출입 가능</span></li>
-		<li class="css-8homh5"><span class="css-9i2eur">포장
-				방법</span><span class="css-thgwm0">종이 포장재</span></li>
+		<li class="css-8homh5"><span class="css-9i2eur">--
+				</span><span class="css-thgwm0">-----</span></li>
 		</ul>
 		
 		

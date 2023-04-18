@@ -118,11 +118,11 @@
 									class="css-qq9ke6">*</span></label>
 							</div>
 							<div class="css-82a6rk">
-								<div class="css-1waqr6j">
+								<div class="css-1waqr6j-pw">
 									<div class="css-176lya2">
 										<input data-testid="input-box" id="password" name="password"
 											placeholder="현재 비밀번호를 입력해주세요" type="password"
-											autocomplete="off" class="css-u52dqk"
+											autocomplete="off" class="css-u52dqk" id="color-pw"
 											value="ansthdud2559!">
 									</div>
 								</div>
