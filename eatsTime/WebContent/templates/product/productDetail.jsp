@@ -140,9 +140,9 @@
 								<!-- 제품 수량 선택 섹션 -->	
 									<div class="css-1liqj4s e1bjklo14">
 										<div class="css-16dy8wz e1cqr3m40">
-											<button type="button" aria-label="수량내리기" disabled="" class="css-1e90glc e1hx75jb0"></button>
-											<div id="count-num" class="count css-6m57y0 e1cqr3m41">1</div>
-											<button type="button" aria-label="수량올리기" class="css-18y6jr4 e1hx75jb0"></button>
+											<button id="decreaseQuantity" type="button" aria-label="수량내리기" disabled="" class="css-1e90glc e1hx75jb0"></button>
+											<div id="numberUpDown" class="count css-6m57y0 e1cqr3m41">1</div>
+											<button id="increaseQuantity" type="button" aria-label="수량올리기" class="css-18y6jr4 e1hx75jb0"></button>
 										</div>
 										<div>
 											<span class="css-fburr9 e1bjklo11">00,000원</span>
