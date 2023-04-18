@@ -158,7 +158,9 @@
 								<span class="css-198i9ca">
 								<div class="css-1dahn5m"></div>
 								</span>
+								
 								<span aria-labelledby="gender-man" class="css-mgd87h">남자</span></label>
+								
 								<label class="css-z9g6s0 et8nqc33" for="gender-woman">
 								<input data-testid="radio-FEMALE" id="gender-woman" name="gender"
 								type="radio" class="css-1pes2r6" value="FEMALE">
@@ -223,6 +225,7 @@
 				</div>
 			</div>
 			<div class="css-1eo0fey"></div>
+			<form name="termForm">
 			<div class="css-y8aj3r">
 				<div class="css-2yzr8b">
 					<div class="css-1y8737n">
@@ -319,6 +322,7 @@
 					</div>
 				</div>
 			</div>
+			</form>
 			<div class="css-137ca2h">
 				<button class="css-18m884r" type="submit" width="240"
 					height="56" radius="3">

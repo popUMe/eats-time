@@ -55,17 +55,28 @@ function validateRequiredFields() {
     return false;
   }
   
-  // 비밀번호 검사 (영문, 숫자, 특수문자 조합, 8~20자)
-  const password = document.getElementById('password').value;
-  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/;
-  if (!passwordRegex.test(password)) {
-    alert('비밀번호는 영문, 숫자, 특수문자를 조합하여 8~20자 이내로 입력해주세요.');
+  // 비밀번호 검사
+  var pw = $("#password").val();
+  var num = pw.search(/[0-9]/g);
+  var eng = pw.search(/[a-z]/ig);
+  var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+  if(pw.length < 8 || pw.length > 20){
+    alert("8자리 ~ 20자리 이내로 입력해주세요.");
     return false;
+  } else if(pw.search(/\s/) != -1){
+    alert("비밀번호는 공백 없이 입력해주세요.");
+    return false;
+  } else if(num < 0 || eng < 0 || spe < 0 ){
+    alert("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+    return false;
+  } else {
+    console.log("통과"); 
   }
   
   // 비밀번호 확인 검사
   const passwordConfirm = document.getElementById('passwordConfirm').value;
-  if (password !== passwordConfirm) {
+  if (pw !== passwordConfirm) {
     alert('비밀번호가 일치하지 않습니다.');
     return false;
   }
@@ -121,3 +132,44 @@ function findAddr(){
         }
     }).open();
 }
+// 성별 라디오 버튼 요소들을 가져옵니다.
+const maleRadio = document.getElementById("gender-man");
+		const femaleRadio = document.getElementById("gender-woman");
+		const noneRadio = document.getElementById("gender-none");
+
+		maleRadio.addEventListener("click", () => {
+			maleRadio.checked = true;
+			femaleRadio.checked = false;
+			noneRadio.checked = false;
+		});
+
+		femaleRadio.addEventListener("click", () => {
+			maleRadio.checked = false;
+			femaleRadio.checked = true;
+			noneRadio.checked = false;
+		});
+
+		noneRadio.addEventListener("click", () => {
+			maleRadio.checked = false;
+			femaleRadio.checked = false;
+			noneRadio.checked = true;
+		});
+
+const $all = $(".all");
+const $checkboxes = $(".term");
+
+$all.on("click", function(){
+  $checkboxes.prop("checked", $(this).is(":checked"));
+});
+
+// 체크 박스 중 한 개라도 false일 경우 전체동의 해제
+$checkboxes.on("click", function(){
+  $all.prop("checked", $checkboxes.filter(":checked").length == 3);
+});
+
+$('#RequiredTermsOfPrivacy').click(function() {
+  // 체크박스 클릭시 동작할 코드 작성
+  if ($('#RequiredTermsOfPrivacy').is(":checked")) {
+    $('#buttonId').click();
+  }
+});
