@@ -79,12 +79,11 @@ svg:not(:root) {
     color: rgb(102, 102, 102);
 }
 
-/* 개인 정보 수정 
 .css-g4g0eu.active, .css-g4g0eu:hover {
     background-color: rgb(250, 250, 250);
     color: rgb(95, 0, 128);
     font-weight: 500;
-}*/
+} 
 
 .css-g4g0eu {
     cursor: pointer;

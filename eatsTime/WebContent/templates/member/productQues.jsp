@@ -9,12 +9,12 @@
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
-<div class="css-luwwab eug5r8l1">
-		<div class="css-833hqy ecbxmj3">
-			<div class="css-1v4whg ecbxmj2">마이컬리</div>
+<div class="css-luwwab">
+		<div class="css-833hqy">
+			<div class="css-1v4whg">마이컬리</div>
 			<!--css-1v4whg ecbxmj2  -->
-			<ul class="css-1x9bshx ecbxmj1">
-				<li><a class="css-g4g0eu ecbxmj0">주문내역
+			<ul class="css-1x9bshx">
+				<li><a class="css-g4g0eu" id="li-1">주문내역
 				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"viewBox="0 0 24 24">
 							<defs>
 							<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657"></path></defs>
@@ -23,11 +23,11 @@
 							<g>
 							<g>
 							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use stroke="#999#5f0080" stroke-linecap="round" stroke-width="1.8"
+							<use class="point1" stroke="#999" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 
-				<li> <a class="active css-g4g0eu ecbxmj0">상품 문의
+				<li> <a class="active css-g4g0eu" id="li-2">상품 문의
 				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
 							<defs>
 							<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657"></path></defs>
@@ -36,14 +36,14 @@
 							<g>
 							<g>
 							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
+							<use class="point2" stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg>
 					</a>
 				</li>
 
 				<li>
-					<a class="css-g4g0eu ecbxmj0">개인 정보 수정
+					<a class="css-g4g0eu"  id="li-3">개인 정보 수정
 					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
 							<defs>
 							<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657"></path></defs>
@@ -52,16 +52,16 @@
 							<g>
 							<g>
 							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use stroke="#999" stroke-linecap="round" stroke-width="1.8"
+							<use class="point3" stroke="#999" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 			</ul>
 
-			<a href="/mypage/inquiry/list" class="css-196gwz9 e19l01ug3">
+			<a href="/mypage/inquiry/list" class="css-196gwz9">
 			
-			<div class="css-rmee6s e19l01ug2">
-					<span class="css-1sdidca e19l01ug1">도움이 필요하신가요 ?</span>
-					<span class="css-rnnx2x e19l01ug0">1:1 문의하기</span>
+			<div class="css-rmee6s">
+					<span class="css-1sdidca">도움이 필요하신가요 ?</span>
+					<span class="css-rnnx2x">1:1 문의하기</span>
 			</div> 
 			<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
 				<defs>
@@ -76,16 +76,16 @@
 		</div>
 		<!-- css-833hqy ecbxmj3 -->
 		
-		<div class="css-171zbec eug5r8l0">
-		<div class="css-171zbec e1nlszg00">
-			<div class="css-jdmlr9 e1af7ryb7">
-				<div class="css-tq074a e1af7ryb6">
-					<div class="css-fhxb3m e1af7ryb4">
-						<span class="css-1268zpe e1af7ryb5">상품문의</span>
+		<div class="css-171zbec">
+		<div class="css-171zbec">
+			<div class="css-jdmlr9">
+				<div class="css-tq074a">
+					<div class="css-fhxb3m">
+						<span class="css-1268zpe">상품문의</span>
 					</div>
 					<div></div>
 				</div>
-				<ul class="css-4hsfe0 ew1a30m0">
+				<ul class="css-4hsfe0">
 					<li>상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로
 						이동될 수 있습니다.</li>
 					<li>배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내 <span
@@ -94,7 +94,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="css-1jdq78j e1cucsfi1">
+			<div class="css-1jdq78j">
 				<div class="css-3fr0n1 e1cucsfi0">제목</div>
 				<div class="css-1aqlhfo e1cucsfi0">작성일</div>
 				<div class="css-1aqlhfo e1cucsfi0">답변상태</div>
@@ -104,13 +104,13 @@
 					<li class="css-2xiujm e7p0xvw0"><button type="button"
 							class="row-product">
 							<div class="column-product-title">
-								<a href="/goods/5066426" class="product-image-wrap"><span
-									style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
-										style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
-											alt="" aria-hidden="true"
-											src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e"
-											style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span>
-										</span></a>
+<!-- 								<a href="/goods/5066426" class="product-image-wrap"><span -->
+<!-- 									style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span -->
+<!-- 										style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img -->
+<!-- 											alt="" aria-hidden="true" -->
+<!-- 											src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2760%27%20height=%2760%27/%3e" -->
+<!-- 											style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span> -->
+<!-- 										</span></a> -->
 								<div class="product-info-wrap">
 									<p class="product-name">[스윗밸런스] 오늘의 샐러드 10종 (리뉴얼) (택1)</p>
 									<div class="product-subject-wrap">
@@ -181,6 +181,7 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/productQues.js"></script>
 <script>
 $(document).ready(function(){
     // menu 클래스 바로 하위에 있는 a 태그를 클릭했을때
