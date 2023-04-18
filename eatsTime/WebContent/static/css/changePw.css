@@ -229,7 +229,6 @@ button[disabled], input[disabled] {
     vertical-align: 0px;
 }
 
-
 /* 모달 창 */
 .banner-online {
 	height: 200px;
@@ -251,10 +250,13 @@ button[disabled], input[disabled] {
 	padding: 0;
 }
 
-
 #modal {
 	position: fixed;
+<<<<<<< HEAD
 	width: 100vW;
+=======
+	width: 100vw;
+>>>>>>> master
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.5);
 	top: 0;
@@ -288,3 +290,7 @@ button[disabled], input[disabled] {
 	background: transparent;
 	padding-top: 18px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master

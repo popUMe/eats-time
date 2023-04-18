@@ -270,9 +270,15 @@
 	padding: 0;
 }
 
+<<<<<<< HEAD
 #modal, #modal2, #modalSubmit {
 	position: fixed;
 	width: 100vW;
+=======
+#modal {
+	position: fixed;
+	width: 100vw;
+>>>>>>> master
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.5);
 	top: 0;

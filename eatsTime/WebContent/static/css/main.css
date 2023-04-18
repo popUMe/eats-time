@@ -116,7 +116,7 @@ html {
 .css-fexq9b {
 	position: absolute;
 	right: 0px;
-	top: 0px;
+	top: 22px;
 	z-index: 20;
 	display: flex;
 	-webkit-box-align: center;
@@ -206,7 +206,7 @@ a {
 /* 헤더 로고, 검색창, 장바구니 등 있는 라인 부분 */
 .css-r7wmjj {
 	height: 100px;
-	padding-top: 36px;
+	padding-top: 24px;
 }
 
 /* 로고, 마켓컬리, 뷰티컬리 부분 */
@@ -799,6 +799,11 @@ ol, ul {
 /* 푸터 아래 이미지 부분 */
 .css-1262i6n {
     width: 34px;
+    margin-right: 10px;
+}
+
+.css-as7ifw {
+    width: 102px;
     margin-right: 10px;
 }
 

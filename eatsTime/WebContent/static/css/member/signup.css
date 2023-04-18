@@ -68,6 +68,15 @@
     position: relative;
     height: 48px;
 }
+.css-shoa2s {
+    padding: 10px 0px;
+}
+/*아이디 중복확인*/
+.css-1ozil7i {
+    font-size: 13px;
+    color: rgb(240, 63, 64);
+    margin-top: -4px;
+}
 /*아이디 입려부분 input 태그*/
 .css-u52dqk {
     width: 100%;
