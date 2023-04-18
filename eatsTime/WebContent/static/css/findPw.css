@@ -272,11 +272,7 @@
 
 #modal, #modal2, #modalSubmit {
 	position: fixed;
-<<<<<<< HEAD
-	width: 100vW;
-=======
 	width: 100vw;
->>>>>>> master
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.5);
 	top: 0;

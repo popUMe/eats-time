@@ -4,8 +4,52 @@
 
  */
 
-let checkNumber = false;
 
+/*태그들 선언*/
+
+/*이메일인증 / 휴대폰인증 버튼들*/
+let certificationButtons = $(".certification-button");
+
+/*이름 입력창 태그*/
+let name = $("#name");
+
+/*이메일 입력창 태그*/
+let email = $("#email");
+
+/*휴대폰 번호 입력창 태그*/
+let phone = $("#phone");
+
+/*폰 인증 후 확인 버튼*/
+let phoneConfirmButton = $(".phone-confirmButton");
+
+/*인증번호 입력창 태그*/
+let verificationNumber = $("#verification-number");
+
+/*휴대폰 인증번호 받기 버튼*/
+let phoneButton = $(".phone-button");
+
+/*이메일 인증 버튼*/
+let emailButton = $(".email-button");
+
+/*휴대폰 번호 입력창 input 태그 */
+let phoneInput = $(".phone-input");
+
+/*이메일 입력창 input 태그*/
+let emailInput =$(".email-input");
+
+/*모달 #modalSumit의 확인 버튼*/
+let closeButtonSubmit =  $('.close-button-submit');
+
+/*이메일 인증 버튼 / 폰인증 번호 받기 버튼/ 인증번호 입력후 확인 버튼 3개 변수 선언*/
+let buttons = $('.button');
+
+
+
+/*플래그선언*/
+let nameCheck1 = false;
+let nameCheck2 = false;
+let emailCheck = false;
+let phoneCheck = false;
 
 /*타이머 구현*/
 // 토큰 유효시간 타이머
@@ -14,97 +58,23 @@ let timeleft = 180; // 제한 시간 지정 값
 let setinterval = setInterval(timeIt, 1200);
 
 
-function convertSeconds(s) {
-	console.log(s)
-	let min = Math.floor(s / 60);
-	let sec = s % 60;
-
-	/*시간이 다되면 모달창 띄우기*/
-	if ((s) == 0) {
-		timeoutModal();
-	}
 
 
-	if (sec.toString().length == 1) {
-		return min + ':' + "0" + sec;
-	}
-	return min + ':' + sec;
-}
 
-function timeoutModal() {
-	/*시간 완료되었다는 모달창 띄우기*/
-	$('.banner-online').fadeIn();
-	$('#modalSubmit').fadeIn();
-	$("html").css("overflow-y", "hidden");
-	$(".modal-content").html("3분이 지났습니다.");
-
-	$('.close-button-submit').click(function() {
-		$('.banner-online').fadeOut();
-		$('#modalSubmit').fadeOut();
-		$("html").css("overflow-y", "");
-		/*확인 버튼 비활성화*/
-		$(".phone-confirmButton").attr("disabled", "");
-		$(".phone-confirmButton").prop("background", "rgb(221, 221, 221)");
-
-	})
-
-}
-
-
+/*convertSeconds타이머 함수 사용*/
+/*타이머 태그 안에 남은 시간 넣기*/
 $(".timer").html(convertSeconds(timeleft - counter))
 
-function timeIt() {
-
-	/*30초후 모달*/
-
-	if (counter == 180) {
-		clearInterval(setinterval);
-		return;   // 시간이 끝났을 때 멈추는 역할
-	}
-	counter++
-	$(".timer").html(convertSeconds(timeleft - counter));
-}
-
-
-
-
-
-/*이메일*/
-function fn_emailChk(email) {
-	let regExp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{1,4}$/;
-	if (!regExp.test(email)) {
-		return false;
-	}
-	return true;
-}
 
 /*이름에 특수문자 금지*/
 
-$("#name").bind("input", function() {
+name.bind("input", function() {
 	re = /[~!@\#$%^&*\()\-=+_']/gi;
-	let temp = $("#name").val();
+	let temp = name.val();
 	if (re.test(temp)) { //특수문자가 포함되면 삭제하여 값으로 다시셋팅
-		$("#name").val(temp.replace(re, ""));
+		name.val(temp.replace(re, ""));
 	}
 });
-
-
-/*휴대폰 유효성검사*/
-function fn_mbtlnumChk(mbtlnum) {
-	let phoneExp = /^(?:(010\d{4})|(01[1|6|7|8|9]\d{3,4}))(\d{4})$/;
-	if (!phoneExp.test(mbtlnum)) {
-		return false;
-	}
-	return true;
-}
-
-
-/*휴대폰 11자리로 설정*/
-function maxLengthCheck(object) {
-	if (object.value.length > object.maxLength) {
-		object.value = object.value.slice(0, object.maxLength);
-	}
-}
 
 
 
@@ -112,9 +82,9 @@ function maxLengthCheck(object) {
 
 
 /* 포커스 입력을 안해도 입력태그 밖으로 나가면 아래 경고문구나오기*/
-$("#name").bind('focus', function() {
+name.bind('focus', function() {
 
-	$("#name").blur(function(e) {
+	name.blur(function(e) {
 
 		if ($(e.target).val() == "") {
 			$(".error1").text("가입 시 등록한 이름을 입력해주세요");
@@ -126,9 +96,9 @@ $("#name").bind('focus', function() {
 
 })
 
-$("#email").bind('focus', function() {
+email.bind('focus', function() {
 
-	$("#email").blur(function(e) {
+	email.blur(function(e) {
 
 		if ($(e.target).val() == "") {
 			$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
@@ -146,13 +116,9 @@ $("#email").bind('focus', function() {
 /*키를 입력할 때마다 검사해서 아래 문구나오기*/
 
 
-let nameCheck1 = false;
-let nameCheck2 = false;
-let emailCheck = false;
-let phoneCheck = false;
 
-$("#name").keyup(function() {
-	if ($("#name").val() == "") {
+name.keyup(function() {
+	if (name.val() == "") {
 		$(".error1").text("가입 시 등록한 이름을 입력해주세요");
 		nameCheck1 = false;
 		nameCheck2 = false;
@@ -166,11 +132,11 @@ $("#name").keyup(function() {
 
 })
 
-$("#email").keyup(function() {
-	if ($("#email").val() == "") {
+email.keyup(function() {
+	if (email.val() == "") {
 		$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
 		emailCheck = false;
-	} else if (!fn_emailChk($("#email").val())) {
+	} else if (!fn_emailChk(email.val())) {
 		$(".error2").text("올바른 이메일 형식을 입력해 주세요");
 		emailCheck = false;
 	} else {
@@ -185,9 +151,9 @@ $("#email").keyup(function() {
 
 /*휴대폰 번호 유효성 검사*/
 
-$("#phone").bind('focus', function() {
+phone.bind('focus', function() {
 
-	$("#phone").blur(function(e) {
+	phone.blur(function(e) {
 		if ($(e.target).val() == "") {
 			$(".error3").text("가입 시 등록한 휴대폰 번호를 입력해주세요");
 		} else {
@@ -199,12 +165,12 @@ $("#phone").bind('focus', function() {
 })
 
 
-
-$("#phone").keyup(function() {
-	if ($("#phone").val() == "") {
+/*휴대폰 번호 입력 실시간 검사*/
+phone.keyup(function() {
+	if (phone.val() == "") {
 		$(".error3").text("가입 시 등록한 휴대폰 번호를 입력해주세요");
 		phoneCheck = false;
-	} else if (!fn_mbtlnumChk($("#phone").val())) {
+	} else if (!fn_mbtlnumChk(phone.val())) {
 		$(".error3").text("휴대폰을 정확히 입력해주세요");
 		phoneCheck = false;
 	} else {
@@ -216,32 +182,7 @@ $("#phone").keyup(function() {
 
 
 
-/*이메일 일때*/
-function EmailCheckflag() {
-	if (nameCheck1 && emailCheck) {
-		$(".email-button").removeAttr("disabled");
-		$(".email-button").prop("background", "rgb(95, 0, 128)");
-		$(".phone-button").prop("background", "rgb(221, 221, 221)");
-		$(".phone-button").attr("disabled", "");
-	} else {
-		$(".email-button").prop("background", "rgb(221, 221, 221)");
-		$(".email-button").attr("disabled", "");
-	}
-}
 
-/*휴대폰일때*/
-
-function PhoneCheckflag() {
-	if (nameCheck2 && phoneCheck) {
-		$(".phone-button").removeAttr("disabled");
-		$(".phone-button").prop("background", "rgb(95, 0, 128)");
-		$(".email-button").prop("background", "rgb(221, 221, 221)");
-		$(".email-button").attr("disabled", "");
-	} else {
-		$(".phone-button").prop("background", "rgb(221, 221, 221)");
-		$(".phone-button").attr("disabled", "");
-	}
-}
 
 
 
@@ -259,13 +200,16 @@ $(".input-content1").keyup(function() {
 
 /*이름 지움 x 버튼*/
 $('.textbutton1').on("click", function() {
-	$(".email-button").prop("background", "rgb(221, 221, 221)");
-	$(".email-button").attr("disabled", "");
-	$(".phone-button").prop("background", "rgb(221, 221, 221)");
-	$(".phone-button").attr("disabled", "");
+	emailButton.prop("background", "rgb(221, 221, 221)");
+	emailButton.attr("disabled", "");
+	phoneButton.prop("background", "rgb(221, 221, 221)");
+	phoneButton.attr("disabled", "");
 	$(".input-content1").val("");
 	$(".textbutton1").css('visibility', 'hidden');
 	$(".error1").text("가입 시 등록한 이름을 입력해주세요");
+	/*플래그 초기화*/
+	nameCheck1 = false;
+	nameCheck2 = false;
 })
 
 /* 탭으로 이동금지 */
@@ -286,11 +230,13 @@ $(".input-content2").keyup(function() {
 
 /*이메일 지움 x 버튼*/
 $('.textbutton2').on("click", function() {
-	$(".email-button").prop("background", "rgb(221, 221, 221)");
-	$(".email-button").attr("disabled", "");
+	emailButton.prop("background", "rgb(221, 221, 221)");
+	emailButton.attr("disabled", "");
 	$(".input-content2").val("");
 	$(".textbutton2").css('visibility', 'hidden');
 	$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
+	/*플래그초기화*/
+	emailCheck = false;
 })
 
 
@@ -305,18 +251,20 @@ $(".input-content3").keyup(function() {
 
 /* 휴대폰 번호 지움 x 버튼*/
 $('.textbutton3').on("click", function() {
-	$(".phone-button").prop("background", "rgb(221, 221, 221)");
-	$(".phone-button").attr("disabled", "");
+	phoneButton.prop("background", "rgb(221, 221, 221)");
+	phoneButton.attr("disabled", "");
 	$(".input-content3").val("");
 	$(".textbutton3").css('visibility', 'hidden');
 	$(".error3").text("가입 시 등록한 휴대폰 번호를 입력해 주세요");
+	/*플래그초기화*/
+	phoneCheck = false;
 })
 
 
 /*인증번호 x 버튼*/
 $('.textbutton4').on("click", function() {
-	$(".phone-button").prop("background", "rgb(221, 221, 221)");
-	$(".phone-button").attr("disabled", "");
+	phoneConfirmButton.prop("background", "rgb(221, 221, 221)");
+	phoneConfirmButton.attr("disabled", "");
 	$(".input-content4").val("");
 	$(".textbutton4").css('visibility', 'hidden');
 	$(".error4").text("인증번호를 입력해 주세요");
@@ -342,15 +290,15 @@ $(".input-content4").keyup(function() {
 
 /* 모달창 구현해보기*/
 /*회원정보가 안맞을때*/
-
-$('.email-button').on("click", function() {
+/*이메일 버튼쪽*/
+emailButton.on("click", function() {
 	$('.banner-online').fadeIn();
 	$('#modalSubmit').fadeIn();
 	$("html").css("overflow-y", "hidden");
 	$(".modal-content").html("가입시 입력하신 회원 정보가 맞는지 다시 한번 확인해 주세요.");
 })
 
-$('.close-button-submit').click(function() {
+closeButtonSubmit.click(function() {
 	$('.banner-online').fadeOut();
 	$('#modalSubmit').fadeOut();
 	$("html").css("overflow-y", "");
@@ -361,7 +309,7 @@ $('.close-button-submit').click(function() {
 /*휴대폰인증버튼 누를때*/
 
 
-$(".certification-button").eq(0).on("click", function() {
+certificationButtons.eq(0).on("click", function() {
 	phoneCertification();
 
 })
@@ -371,14 +319,14 @@ $(".certification-button").eq(0).on("click", function() {
 /*인증번호 입력 창이 block이면 클릭이벤트 막고 모달창 띄우기*/
 
 
-$(".certification-button").eq(1).on("click", function() {
+certificationButtons.eq(1).on("click", function() {
 
 	if ($(".certification-number-wrap").css("display") == "block") {
 		$('.banner-online').fadeIn();
 		$('#modal2').fadeIn();
 		$("html").css("overflow-y", "hidden");
 
-		$(".certification-button").eq(0).on("click", function() {
+		certificationButtons.eq(0).on("click", function() {
 			phoneCertification()
 		})
 
@@ -415,8 +363,8 @@ $('.phone-button').on("click", function() {
 	$("html").css("overflow-y", "hidden");
 	/*db와 검사해서 아래 모달이 뜨면 닫기 버튼 누르면 이제 */
 	$(".modal-content1").html("인증번호가 발송되었습니다. \n 3분 안에 인증번호를 입력해 주세요.");
-	$("#name").attr('readonly', true);
-	$("#phone").attr('readonly', true);
+	name.attr('readonly', true);
+	phone.attr('readonly', true);
 
 	/*인증번호 입력창 초기화*/
 	$(".input-content4").val("");
@@ -431,15 +379,16 @@ $('.phone-button').on("click", function() {
 
 
 
-
+/*#modal 안에 확인 버튼 클릭시*/
 $(".close-button").on("click", function() {
 	$('.banner-online').fadeOut();
 	$('#modal').fadeOut();
 	$(".certification-number-wrap").css("display", "block");
-	$(".phone-button").attr("disabled", "");
-	$(".phone-button").css("display", "none");
-	$(".phone-confirmButton").css("display", "block");
+	phoneButton.attr("disabled", "");
+	phoneButton.css("display", "none");
+	phoneConfirmButton.css("display", "block");
 	//인증번호 누르고 타이머함수
+	clearInterval(setinterval);
 	counter = 0;
 	setinterval = setInterval(timeIt, 1200);
 })
@@ -454,12 +403,13 @@ $(".resend-button").on("click", function() {
 	$("html").css("overflow-y", "hidden");
 	$(".modal-content1").html("재발송 되었습니다.");
 	/*인증번호 재발송누르면 안에 인증번호 값 초기화후 밑에 에러메세지 다시*/
-	$("#verification-number").val("");
+	verificationNumber.val("");
 	$(".error4").text("인증번호를 입력해 주세요");
 	/*확인 버튼 비활성화*/
-	$(".phone-confirmButton").attr("disabled", "");
-	$(".phone-confirmButton").prop("background", "rgb(221, 221, 221)");
+	phoneConfirmButton.attr("disabled", "");
+	phoneConfirmButton.prop("background", "rgb(221, 221, 221)");
 	//인증번호누르고 타이머 함수
+	clearInterval(setinterval);
 	counter = 0;
 	setinterval = setInterval(timeIt, 1200);
 
@@ -470,7 +420,7 @@ $(".resend-button").on("click", function() {
 
 
 /*인증번호 입력후 새로운 확인 버튼 이벤트*/
-$(".phone-confirmButton").on("click", function() {
+phoneConfirmButton.on("click", function() {
 	/*뒤로가기해도 모달창없애기*/
 	$('.banner-online').css("display", "none");
 	$('#modal').css("display", "none");
@@ -479,23 +429,23 @@ $(".phone-confirmButton").on("click", function() {
 	counter = 0;
 	clearInterval(setinterval);
 	/*내용초기화*/
-	$("#name").val("");
-	$("#phone").val("");
+	name.val("");
+	phone.val("");
 	/*이름입력칸 핸드폰입력칸 수정가능하게 수정*/
-	$("#name").attr('readonly', false);
-	$("#phone").attr('readonly', false);
+	name.attr('readonly', false);
+	phone.attr('readonly', false);
 
 	/*뒤로가기를 했을때 인증번호 받기로 바꾸기 위한 작업*/
 	/*버튼체인지*/
 	/*무조건 초기값은 비활성화*/
-	$(".phone-button").css("display", "block");
-	$(".phone-button").prop("background", "rgb(221, 221, 221)");
-	$(".phone-button").attr("disabled", "");
-	$(".phone-confirmButton").css("display", "none");
+	phoneButton.css("display", "block");
+	phoneButton.prop("background", "rgb(221, 221, 221)");
+	phoneButton.attr("disabled", "");
+	phoneConfirmButton.css("display", "none");
 
 	/*확인칸 비활성화*/
-	$(".phone-confirmButton").prop("background", "rgb(221, 221, 221)");
-	$(".phone-confirmButton").attr("disabled", "");
+	phoneConfirmButton.prop("background", "rgb(221, 221, 221)");
+	phoneConfirmButton.attr("disabled", "");
 
 	/*인증번호칸 없애기*/
 	$(".certification-number-wrap").css("display", "none");
@@ -513,36 +463,45 @@ $(".phone-confirmButton").on("click", function() {
 
 
 
-/*인증번호 유효성 검사*/
-$("#verification-number").keyup(function() {
-	if ($("#verification-number").val() == "") {
+/*인증번호 정규식*/
+
+
+/*인증번호 입력창에 번호만 입력할 수 있게*/
+$("input:text[numberOnly]").bind("input", function() {
+    $(this).val($(this).val().replace(/[^0-9]/g,""));
+});
+
+/*인증번호 입력창 실시간검사*/
+verificationNumber.keyup(function() {
+
+	if (verificationNumber.val() == "") {
 		$(".error4").text("인증번호를 입력해주세요");
-		$(".phone-button").prop("background", "rgb(221, 221, 221)");
-		$(".phone-button").attr("disabled", "");
-	} else if ($("#verification-number").val().length < 7) {
+		phoneConfirmButton.prop("background", "rgb(221, 221, 221)");
+		phoneConfirmButton.attr("disabled", "");
+	} else if (verificationNumber.val().length < 7) {
 		$(".error4").text("7자리를 입력해주세요.");
-		$(".phone-button").prop("background", "rgb(221, 221, 221)");
-		$(".phone-button").attr("disabled", "");
+		phoneConfirmButton.prop("background", "rgb(221, 221, 221)");
+		phoneConfirmButton.attr("disabled", "");
 	} else {
 		$(".error4").text("");
-		$(".phone-confirmButton").removeAttr("disabled");
-		$(".phone-confirmButton").prop("background", "rgb(95, 0, 128)");
+		phoneConfirmButton.removeAttr("disabled");
+		phoneConfirmButton.prop("background", "rgb(95, 0, 128)");
 	}
 })
 
 
 /*인증번호 입력창 focus*/
 
-$("#verification-number").bind('focus', function() {
+verificationNumber.bind('focus', function() {
 
-	$("#verification-number").blur(function(e) {
+	verificationNumber.blur(function(e) {
 
 		if ($(e.target).val() == "") {
-		$(".error4").text("인증번호를 입력해주세요");
-		} else if ($("#verification-number").val().length < 7) {
-		$(".error4").text("7자리를 입력해주세요.");
+			$(".error4").text("인증번호를 입력해주세요");
+		} else if (verificationNumber.val().length < 7) {
+			$(".error4").text("7자리를 입력해주세요.");
 		} else {
-		$(".error4").text("");
+			$(".error4").text("");
 		}
 
 	})
@@ -550,32 +509,137 @@ $("#verification-number").bind('focus', function() {
 })
 
 
+/*함수 선언부 ##############################################*/
 
+
+/*휴대폰 유효성검사*/
+function fn_mbtlnumChk(mbtlnum) {
+	let phoneExp = /^(?:(010\d{4})|(01[1|6|7|8|9]\d{3,4}))(\d{4})$/;
+	if (!phoneExp.test(mbtlnum)) {
+		return false;
+	}
+	return true;
+}
+
+/*실시간 인터벌 주기전 타이머 변경 함수*/
+function timeIt() {
+
+	/*30초후 모달*/
+
+	if (counter == 180) {
+		clearInterval(setinterval);
+		return;   // 시간이 끝났을 때 멈추는 역할
+	}
+	counter++
+	$(".timer").html(convertSeconds(timeleft - counter));
+}
+
+
+
+
+
+/*이메일 유효성검사 함수*/
+function fn_emailChk(email) {
+	let regExp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{1,4}$/;
+	if (!regExp.test(email)) {
+		return false;
+	}
+	return true;
+}
+
+
+
+/*convertSeconds타이머 함수*/
+function convertSeconds(s) {
+	console.log(s)
+	let min = Math.floor(s / 60);
+	let sec = s % 60;
+
+	/*시간이 다되면 모달창 띄우기*/
+	if ((s) == 0) {
+		timeoutModal();
+	}
+
+
+	if (sec.toString().length == 1) {
+		return min + ':' + "0" + sec;
+	}
+	return min + ':' + sec;
+}
+
+/*시간 완료 되면 뜰 모달창을 함수로 선언*/
+function timeoutModal() {
+	/*시간 완료되었다는 모달창 띄우기*/
+	$('.banner-online').fadeIn();
+	$('#modalSubmit').fadeIn();
+	$("html").css("overflow-y", "hidden");
+	$(".modal-content").html("3분이 지났습니다.");
+
+	closeButtonSubmit.click(function() {
+		$('.banner-online').fadeOut();
+		$('#modalSubmit').fadeOut();
+		$("html").css("overflow-y", "");
+		/*확인 버튼 비활성화*/
+		phoneConfirmButton.attr("disabled", "");
+		phoneConfirmButton.prop("background", "rgb(221, 221, 221)");
+
+	})
+
+}
+
+
+/*이메일인증 이랑 휴대폰 인증 때 버튼 활성화 플래그 함수*/
+/*이메일 일때*/
+function EmailCheckflag() {
+	if (nameCheck1 && emailCheck) {
+		emailButton.removeAttr("disabled");
+		emailButton.prop("background", "rgb(95, 0, 128)");
+		phoneButton.prop("background", "rgb(221, 221, 221)");
+		phoneButton.attr("disabled", "");
+	} else {
+		emailButton.prop("background", "rgb(221, 221, 221)");
+		emailButton.attr("disabled", "");
+	}
+}
+
+/*휴대폰일때*/
+
+function PhoneCheckflag() {
+	if (nameCheck2 && phoneCheck) {
+		phoneButton.removeAttr("disabled");
+		phoneButton.prop("background", "rgb(95, 0, 128)");
+		emailButton.prop("background", "rgb(221, 221, 221)");
+		emailButton.attr("disabled", "");
+	} else {
+		phoneButton.prop("background", "rgb(221, 221, 221)");
+		phoneButton.attr("disabled", "");
+	}
+}
 
 
 /*휴대폰인증 버튼 내용 함수로 담기*/
 
 function phoneCertification() {
-	$(".certification-button").eq(0).css("color", "rgb(95, 0, 128)");
-	$(".certification-button").eq(0).css("font-weight", "bold");
-	$(".certification-button").eq(0).css("box-shadow", "0px -2px 0px 0px rgb(95, 0, 128) inset");
-	$(".certification-button").eq(1).css("color", "rgb(102, 102, 102)");
-	$(".certification-button").eq(1).css("font-weight", "400");
-	$(".certification-button").eq(1).css("box-shadow", "0px -0.5px 0px 0px rgb(221, 221, 221) inset");
+	certificationButtons.eq(0).css("color", "rgb(95, 0, 128)");
+	certificationButtons.eq(0).css("font-weight", "bold");
+	certificationButtons.eq(0).css("box-shadow", "0px -2px 0px 0px rgb(95, 0, 128) inset");
+	certificationButtons.eq(1).css("color", "rgb(102, 102, 102)");
+	certificationButtons.eq(1).css("font-weight", "400");
+	certificationButtons.eq(1).css("box-shadow", "0px -0.5px 0px 0px rgb(221, 221, 221) inset");
 
 	/*이메일 입력창 사라지게하기*/
-	$(".email-input").css("display", "none");
-	$(".phone-input").css("display", "block");
+	emailInput.css("display", "none");
+	phoneInput.css("display", "block");
 
 	/*버튼체인지*/
-	$(".phone-button").css("display", "block");
-	$(".email-button").css("display", "none");
+	phoneButton.css("display", "block");
+	emailButton.css("display", "none");
 
 
 
 	/*안에 입력값 날려주기*/
-	$("#name").val("");
-	$("#email").val("");
+	name.val("");
+	email.val("");
 
 	/*지우는 버튼도 숨기기*/
 	$(".textbutton1").css('visibility', 'hidden');
@@ -588,19 +652,19 @@ function phoneCertification() {
 
 
 	/*버튼 비활성화*/
-	$(".phone-button").prop("background", "rgb(221, 221, 221)");
-	$(".phone-button").attr("disabled", "");
-	$(".email-button").prop("background", "rgb(221, 221, 221)");
-	$(".email-button").attr("disabled", "");
+	phoneButton.prop("background", "rgb(221, 221, 221)");
+	phoneButton.attr("disabled", "");
+	emailButton.prop("background", "rgb(221, 221, 221)");
+	emailButton.attr("disabled", "");
 
 	/*인증번호 확인버튼*/
-	$(".phone-confirmButton").prop("background", "rgb(221, 221, 221)");
-	$(".phone-confirmButton").attr("disabled", "");
-	$(".phone-confirmButton").css("display", "none");
+	phoneConfirmButton.prop("background", "rgb(221, 221, 221)");
+	phoneConfirmButton.attr("disabled", "");
+	phoneConfirmButton.css("display", "none");
 
 	/*이름이랑 폰번호 수정가능하게 바꾸기*/
-	$("#name").attr('readonly', false);
-	$("#phone").attr('readonly', false);
+	name.attr('readonly', false);
+	phone.attr('readonly', false);
 
 
 	/*버튼플래그 초기화*/
@@ -618,25 +682,25 @@ function phoneCertification() {
 /* 이메일 인증 버튼 내용 함수로 담기*/
 
 function emailCertification() {
-	$(".certification-button").eq(1).css("color", "rgb(95, 0, 128)");
-	$(".certification-button").eq(1).css("font-weight", "bold");
-	$(".certification-button").eq(1).css("box-shadow", "0px -2px 0px 0px rgb(95, 0, 128) inset");
-	$(".certification-button").eq(0).css("color", "rgb(102, 102, 102)");
-	$(".certification-button").eq(0).css("font-weight", "400");
-	$(".certification-button").eq(0).css("box-shadow", "0px -0.5px 0px 0px rgb(221, 221, 221) inset");
+	certificationButtons.eq(1).css("color", "rgb(95, 0, 128)");
+	certificationButtons.eq(1).css("font-weight", "bold");
+	certificationButtons.eq(1).css("box-shadow", "0px -2px 0px 0px rgb(95, 0, 128) inset");
+	certificationButtons.eq(0).css("color", "rgb(102, 102, 102)");
+	certificationButtons.eq(0).css("font-weight", "400");
+	certificationButtons.eq(0).css("box-shadow", "0px -0.5px 0px 0px rgb(221, 221, 221) inset");
 
 	/*이메일인증때는 휴대폰입력칸 사라지게하기*/
-	$(".email-input").css("display", "block");
-	$(".phone-input").css("display", "none");
+	emailInput.css("display", "block");
+	phoneInput.css("display", "none");
 
 	/*버튼체인지*/
-	$(".phone-button").css("display", "none");
-	$(".email-button").css("display", "block");
+	phoneButton.css("display", "none");
+	emailButton.css("display", "block");
 
 
 	/*안에 입력값 날려주기*/
-	$("#name").val("");
-	$("#phone").val("");
+	name.val("");
+	phone.val("");
 
 	/*지우는 버튼도 숨기기*/
 	$(".textbutton1").css('visibility', 'hidden');
@@ -648,23 +712,23 @@ function emailCertification() {
 	$(".error3").text("");
 
 	/*버튼 비활성화*/
-	$(".phone-button").prop("background", "rgb(221, 221, 221)");
-	$(".phone-button").attr("disabled", "");
-	$(".email-button").prop("background", "rgb(221, 221, 221)");
-	$(".email-button").attr("disabled", "");
+	phoneButton.prop("background", "rgb(221, 221, 221)");
+	phoneButton.attr("disabled", "");
+	emailButton.prop("background", "rgb(221, 221, 221)");
+	emailButton.attr("disabled", "");
 
 
 	/*인증번호 확인버튼*/
-	$(".phone-confirmButton").prop("background", "rgb(221, 221, 221)");
-	$(".phone-confirmButton").attr("disabled", "");
-	$(".phone-confirmButton").css("display", "none");
+	phoneConfirmButton.prop("background", "rgb(221, 221, 221)");
+	phoneConfirmButton.attr("disabled", "");
+	phoneConfirmButton.css("display", "none");
 
 	/*인증번호 칸 초기화*/
 	$(".certification-number-wrap").css("display", "none");
 
 	/*이름이랑 폰번호 수정가능하게 바꾸기*/
-	$("#name").attr('readonly', false);
-	$("#phone").attr('readonly', false);
+	name.attr('readonly', false);
+	phone.attr('readonly', false);
 
 
 	/*인증번호 value 초기화*/
