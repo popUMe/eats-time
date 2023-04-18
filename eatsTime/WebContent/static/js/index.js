@@ -14,9 +14,9 @@ let check = true;
 let clickCheck = false;
 let temp;
 
-image_divs.forEach((image_div, i) => (image_div.style.backgroundImage = `url(00${i + 1}.png)`));
-first_div.style.backgroundImage = `url(006.png)`;
-last_div.style.backgroundImage = `url(001.png)`;
+image_divs.forEach((image_div, i) => (image_div.style.backgroundImage = `url(../static/image/00${i + 1}.png)`));
+first_div.style.backgroundImage = `url(../static/image/006.png)`;
+last_div.style.backgroundImage = `url(../static/image/001.png)`;
 
 let slide = setInterval(() => autoSlide(), 2000);
 
