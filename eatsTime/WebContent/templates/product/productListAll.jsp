@@ -29,8 +29,9 @@
 					<!-- [S] 필터 -->
 					<div class="css-1jgnig9 ev2ab494">
 						<div class="css-11y1fso ev2ab493">
+							<!-- 
 							<span class="css-wy76no ev2ab492">배송유형</span>
-							
+							 -->
 								
 								<!-- [S] 변경될 필터 -->
 								<ul>
@@ -48,7 +49,7 @@
 												</svg>
 											</button>
 											<span class="css-1buhy1h ee933652">배송</span>
-											<span class="css-ryw54y ee933651">1</span>
+											<span class="css-ryw54y ee933651">00</span>
 										</a>
 									</li>
 									<li class="css-x67gaa e1isxf3i1">
@@ -64,7 +65,7 @@
 												</svg>
 											</button>
 											<span class="css-1buhy1h ee933652">픽업</span>
-											<span class="css-ryw54y ee933651">1</span>
+											<span class="css-ryw54y ee933651">00</span>
 										</a>
 									</li>
 								</ul>
@@ -97,7 +98,7 @@
 							
 								<!-- 최신순 -->
 								<li class="css-5uzvtq eudxpx31 firstLi">
-									<a href="#" class="css-126imjl eudxpx30">최신순</a>
+									<a href="#" class="css-126imjl css-19ce13b eudxpx30">최신순</a>
 								</li>
 								
 								<!-- 낮은 가격순 -->
