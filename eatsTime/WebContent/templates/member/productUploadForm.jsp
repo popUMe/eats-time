@@ -26,15 +26,29 @@
 						<div class="css-jmalg">
 							<div class="css-176lya2">
 							
-								<label for="imageUpload"> </label>
+								<label for="attach">
+								
+								
+								<div class="css-u52dqk" type="button">
+								<span class="css-ymwvow">상품 사진을 등록해주세요.</span>
+								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p>
+								</div>
+								
+								 </label>
+								<input type="file" id="attach" style="display: none;">
+								
+								<div class="image">
+       							 <div class="cancel" style="display: none";>X</div>  <!--이미지를 없애는 X 버튼-->
+  								  </div>
 <!-- 							<input type="file" class="css-u52dqk" id="imageUpload"> -->
 <!-- 								<span class="css-ymwvow">상품 사진을 등록해주세요.</span> -->
 <!-- 								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p> -->
 								
-								<button class="css-u52dqk" type="button">
-								<span class="css-ymwvow">상품 사진을 등록해주세요.</span>
-								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p>
-								</button>
+								
+<!-- 								<button class="css-u52dqk" type="button"> -->
+<!-- 								<span class="css-ymwvow">상품 사진을 등록해주세요.</span> -->
+<!-- 								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p> -->
+<!-- 								</button> -->
 							</div>
 						</div>
 					</div>
@@ -194,12 +208,10 @@
 	<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/productUploadForm.js"></script>
+
 <script>
 
-    const $radioPUD = $(".css-1pes2r6"); //(전체동의 제외) 나머지 체크박스 가져오기
-    $radioPUD.on("click", function(){
-        $radioPUD.prop("checked", true);
-        $radioPUD.css("background-color", "#5f0080");
-    }); //전체 동의 누르면, 모든 항목을 check상대로 바꾸기
+    
 </script>
 </html>
