@@ -38,9 +38,9 @@
                 <button class="css-qaxuc4" type="submit" value="login" height="54" radius="3">
                     <span class="css-ymwvow">로그인</span>
                 </button>
-                <button class="css-hxorrg" type="button" height="54" radius="3">
-                    <span class="css-ymwvow">회원가입</span>
-                </button>
+               <button class="css-hxorrg" type="button" onclick="location.href='signup.jsp'" height="54" radius="3">
+    					<span class="css-ymwvow">회원가입</span>
+				</button>
             </div>
         </form>
     </div>
