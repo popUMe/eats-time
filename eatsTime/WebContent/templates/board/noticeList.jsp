@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/noticeList.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
-<title>Insert title here</title>
+<title>이츠타임 - 공지사항 목록</title>
 </head>
 <body>
 <jsp:include page="../header.jsp" />
@@ -65,8 +65,8 @@
 					<a href="notice.jsp">
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
-							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">작성자</div>
+							<div class="css-fzefrb e1cfowvj2">[안내] 샛별배송 서비스 확장 안내(2023.04.01~)</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
 							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
 						</div>
 					</a>
@@ -76,7 +76,7 @@
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
 							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">작성자</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
 							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
 						</div>
 					</a>
@@ -86,7 +86,7 @@
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
 							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">작성자</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
 							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
 						</div>
 					</a>
@@ -96,7 +96,7 @@
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
 							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">작성자</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
 							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
 						</div>
 					</a>
@@ -106,7 +106,7 @@
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
 							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">작성자</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
 							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
 						</div>
 					</a>
@@ -116,7 +116,7 @@
 						<div class="css-14yglsw e1cfowvj4">
 							<div class="css-3o6rrk e1cfowvj2">공지</div>
 							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">작성자</div>
+							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
 							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
 						</div>
 					</a>

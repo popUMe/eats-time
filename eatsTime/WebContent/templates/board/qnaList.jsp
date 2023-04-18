@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/qnaList.css" />
-<title>Insert title here</title>
+<title>이츠타임 - 1:1 문의</title>
 </head>
 <body>
 <jsp:include page="../header.jsp" />
@@ -221,45 +221,6 @@
 					<div class="popup-content css-15yaaju e1k5padi2">해당 글을 삭제하시겠습니까?</div>
 					<div class="popup-footer css-1ol9ch1 e1k5padi0">
 						<button type="submit" class="css-1necch4 yesdeletion">확인</button>
-						<button class="css-1necch4 canceldeletion">취소</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- 모달창(삭제가 완료되었습니다.)  -->
-	<div class="swal2-container2 swal2-center swal2-backdrop-show" style="overflow-y: auto; display: none">
-	<!-- 모달박스 -->
-		<div class="swal2-popup swal2-modal swal2-show" style="display: flex;">
-			<div class="swal2-content">
-				<div id="swal2-content" class="swal2-html-container" style="display: block;">
-					<style>
-					
-  					.swal2-html-container {
-  					 	 padding: 0;
-  					}
-
-  					.swal2-container {
-   						 padding: 0 24px;
- 					 }
-
- 					 .swal2-popup {
-  					  	max-width: 360px;
-  					  border-radius: 12px;
-   					 padding: 0;
-  					}
-
- 					 .swal2-content {
-  					  	padding: 0;
- 					 }
-
- 					 .swal2-show {
-    					animation: none;
-  					}
-					
-					</style>
-					<div class="popup-content css-15yaaju e1k5padi2">삭제가 완료되었습니다.</div>
-					<div class="popup-footer css-1ol9ch1 e1k5padi0">
 						<button class="css-1necch4 canceldeletion">취소</button>
 					</div>
 				</div>

@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/writeQuestion.css" />
-<title>Insert title here</title>
+<title>이츠타임 - 1:1 문의 작성</title>
 </head>
 <body>
 <jsp:include page="../header.jsp" />

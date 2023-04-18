@@ -17,15 +17,9 @@ $(".deletebtn").on("click", function(){
 	return false;
 });
 
-/*삭제여부 모달창 확인버튼*/
-$(".yesdeletion").on("click", function(){
-	console.log("들어옴");
-	$(".swal2-container").hide();
-	console.log($(".swal2-container2"));
-});
-
 /*삭제여부 모달창 취소버튼*/
 $(".canceldeletion").on("click", function(){
 	$(".swal2-container").hide();
 	$("body").css('overflow', 'scroll');
 });
+
