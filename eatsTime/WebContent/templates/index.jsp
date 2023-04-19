@@ -196,12 +196,11 @@
 				<div class="css-127g5zj e17fdfn91">
 					<div class="css-59n5un e1ne12di0">
 						<a
-							href="https://www.kurly.com/shop/event/kurlyEvent.php?htmid=event/2023/0410/beautykurly_festa&amp;site=beauty"
+							href="${pageContext.request.contextPath}/templates/serviceInfo.jsp"
 							class="css-1lougm2 ezbfqia4"><span
 							style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
 								alt="" sizes="100vw"
-								srcset="https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png 640w, https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png 750w, https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png 828w, https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png 1080w, https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png 1200w, https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png 1920w, https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png 2048w, https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png 3840w"
-								src="https://product-image.kurly.com/banner/random-band/pc/img/19d596ae-b42d-4af4-b964-2096ea5eacfb.png"
+								src="${pageContext.request.contextPath}/static/image/service_info.jpg"
 								decoding="async" data-nimg="fill" class="css-0"
 								style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span></a>
 					</div>
