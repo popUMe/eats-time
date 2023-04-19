@@ -19,7 +19,7 @@
 		<div class="css-1t45bai erzmnr90">
 			<div class="css-1dhg94g e1pwb5hv0">
 				<div class="css-1xrh39a e1pwb5hv2">제목</div>
-				<div class="css-8vgw34 e1pwb5hv1">[안내] 샛별배송 서비스 확장 안내(2023.04.01~)</div>
+				<div class="css-8vgw34 e1pwb5hv1">[안내] 서비스 오픈 안내문</div>
 			</div>
 			<div class="css-1dhg94g e1pwb5hv0">
 				<div class="css-1xrh39a e1pwb5hv2">작성자</div>
@@ -27,12 +27,12 @@
 			</div>
 			<div class="css-1dhg94g e1pwb5hv0">
 				<div class="css-1xrh39a e1pwb5hv2">작성일</div>
-				<div class="css-8vgw34 e1pwb5hv1">2023.03.31</div>
+				<div class="css-8vgw34 e1pwb5hv1">2023.05.03</div>
 			</div>
 			<div class="css-1xvp3jp ezf0ge90">
 				<div>
 					<p>
-						<img alt="image" src="//lacms-board.kurly.com/board/notice/20230407/8b2ef08f-be2c-4d82-871e-eed523248423.jpg">
+						<img alt="image" src="${pageContext.request.contextPath}/static/image/notice_001.jpg">
 					</p>
 				</div>
 			</div>

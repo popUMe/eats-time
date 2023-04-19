@@ -71,56 +71,6 @@
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href="notice.jsp">
-						<div class="css-14yglsw e1cfowvj4">
-							<div class="css-3o6rrk e1cfowvj2">공지</div>
-							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
-							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="notice.jsp">
-						<div class="css-14yglsw e1cfowvj4">
-							<div class="css-3o6rrk e1cfowvj2">공지</div>
-							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
-							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="notice.jsp">
-						<div class="css-14yglsw e1cfowvj4">
-							<div class="css-3o6rrk e1cfowvj2">공지</div>
-							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
-							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="notice.jsp">
-						<div class="css-14yglsw e1cfowvj4">
-							<div class="css-3o6rrk e1cfowvj2">공지</div>
-							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
-							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="notice.jsp">
-						<div class="css-14yglsw e1cfowvj4">
-							<div class="css-3o6rrk e1cfowvj2">공지</div>
-							<div class="css-fzefrb e1cfowvj2">제목</div>
-							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
-							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
-						</div>
-					</a>
-				</li>
 			</ul>
 		<!-- 페이지 앞/뒤로 넘기기 버튼 -->
 			<div class="css-1kbzkwh e14yho7m0">
