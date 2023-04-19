@@ -5,9 +5,10 @@
 <head>
 <link rel="stylesheet" type="text/css"	href="../../static/css/admin/qna.css">
 <meta charset="UTF-8">
-<title>Dashboard</title>
+<title>문의내역</title>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap');
 </style>
 </head>
 <body>
@@ -16,13 +17,14 @@
 		<a href="index.jsp">공지사항</a> 
 		<a href="member.jsp">회원관리</a> 
 		<a href="qna.jsp">문의내역</a>
+		<button id=logout-btn><a href="logout.jsp">로그아웃</a></button>
 	</div>
 	<div id=:logo></div>
 	
 	<div class="content">
 		<h1>문의 관리</h1>
 		<div class="btn">
-		  <button id="add-btn">답변 작성</button>
+		  <button id="add-btn">작성</button>
   		<button id="delete-btn">삭제</button>
   		</div>
 		<table>
@@ -35,7 +37,7 @@
 			</tr>
 			<tr>
 				<td>5</td>
-				<td><a href="noticeView.jsp?noticeNo=1">2,500</a></td>
+				<td><a href="qnaView.jsp?noticeNo=1">2,500</a></td>
 				<td>$500</td>
 				<td>$500</td>
 				<td>답변 완료</td>
@@ -107,7 +109,7 @@
 		
 		$(function() {
 			  $('#add-btn').click(function() {
-			    location.href = 'noticeWrite.jsp';
+			    location.href = 'qnaWrite.jsp';
 			  });
 			});
 

@@ -5,9 +5,10 @@
 <head>
 <link rel="stylesheet" type="text/css"	href="../../static/css/admin/index.css">
 <meta charset="UTF-8">
-<title>Dashboard</title>
+<title>회원 관리</title>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap');
 </style>
 </head>
 <body>
@@ -16,14 +17,16 @@
 		<a href="index.jsp">공지사항</a> 
 		<a href="member.jsp">회원관리</a> 
 		<a href="qna.jsp">문의내역</a>
+		<button id=logout-btn><a href="logout.jsp">로그아웃</a></button>
 	</div>
 	<div id=:logo></div>
 	
 	<div class="content">
 		<h1>회원 관리</h1>
 		<div class="btn">
-		  <button id="add-btn">활성화</button>
-  		<button id="delete-btn">비활성화</button>
+		  <button id="add-btn">활성</button>
+  		<button id="delete-btn">비활성</button>
+  		
   		</div>
 		<table>
 			<tr>
