@@ -1,7 +1,28 @@
 /**
- * 
+ * 비밀번호 재설정 
  */
 
+
+// jQuery 객체 선언부 (태그선언)
+/*새 비밀번호 등록 입력창 태그*/
+let pw = $("#password");
+/*새 비밀번호 확인 입력창 태그*/
+let rePw = $("#passwordConfirm");
+/* 새 비밀번호 등록 입력창 아래 p태그 3개*/
+let checkPws = $(".checkPw");
+/* 새비밀번호 확인 입력창 태그 아래 p태그 1개*/
+let reChecks = $(".checkConfirm");
+
+/*마지막 비밀번호 재설정 확인 버튼*/
+let button = $(".button");
+
+/*새 비밀번호 등록 x 버튼*/
+let textbutton1 = $('.textbutton1');
+/*새 비밀번호 확인 x 버튼*/
+let textbutton2 = $('.textbutton2');
+
+
+/*플래그 선언*/
 let pwCheck1 = false;
 let pwCheck2 = false;
 let pwCheck3 = false;
@@ -10,76 +31,69 @@ let rePwCheck = false;
 
 
 /*새 비밀번호 등록*/
-$("#password").one('click', function() {
-	$(".checkPw").removeClass("css-ua37vt css-1319hys")
-	$(".checkPw").addClass("css-alright")
-	$(".checkPw").eq(0).text("8자리 ~ 20자리 이내로 입력해주세요.");
-	$(".checkPw").eq(1).text("비밀번호는 공백 없이 입력해주세요.");
-	$(".checkPw").eq(2).text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+pw.one('click', function() {
+	checkPws.removeClass("css-ua37vt css-1319hys")
+	checkPws.addClass("css-alright")
+	checkPws.eq(0).text("8자리 ~ 20자리 이내로 입력해주세요.");
+	checkPws.eq(1).text("비밀번호는 공백 없이 입력해주세요.");
+	checkPws.eq(2).text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
 
 })
 
-$("#password").blur(function(e) {
+pw.blur(function(e) {
 	if ($(e.target).val() == "") {
-		$(".checkPw").removeClass("css-alright css-1319hys")
-		$(".checkPw").addClass("css-ua37vt")
-		$(".checkPw").eq(0).text("8자리 ~ 20자리 이내로 입력해주세요.");
-		$(".checkPw").eq(1).text("비밀번호는 공백 없이 입력해주세요.");
-		$(".checkPw").eq(2).text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+		checkPws.removeClass("css-alright css-1319hys")
+		checkPws.addClass("css-ua37vt")
+		checkPws.eq(0).text("8자리 ~ 20자리 이내로 입력해주세요.");
+		checkPws.eq(1).text("비밀번호는 공백 없이 입력해주세요.");
+		checkPws.eq(2).text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
 	}
 
 })
 
 
 /*새 비밀번호 확인*/
-$("#passwordConfirm").one('click', function() {
-	$(".checkConfirm").removeClass("css-ua37vt css-1319hys")
-	$(".checkConfirm").addClass("css-alright")
-	$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
+rePw.one('click', function() {
+	reChecks.removeClass("css-ua37vt css-1319hys")
+	reChecks.addClass("css-alright")
+	reChecks.text("동일한 비밀번호를 입력해주세요.");
 
 
 })
 
-$("#passwordConfirm").blur(function(e) {
+rePw.blur(function(e) {
 
 	if ($(e.target).val() == "") {
-		$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
-		$(".checkConfirm").removeClass("css-alright css-1319hys")
-		$(".checkConfirm").addClass("css-ua37vt")
+		reChecks.text("동일한 비밀번호를 입력해주세요.");
+		reChecks.removeClass("css-alright css-1319hys")
+		reChecks.addClass("css-ua37vt")
 	}
 
 
 })
 
 /*탭으로 이동할때 오류 막기*/
-$("#passwordConfirm").focus(function() {
+rePw.focus(function() {
 
-	$(".checkConfirm").text("동일한 비밀번호를 입력해주세요.");
-	$(".checkConfirm").removeClass("css-alright css-1319hys")
-	$(".checkConfirm").addClass("css-ua37vt")
+	reChecks.text("동일한 비밀번호를 입력해주세요.");
+	reChecks.removeClass("css-alright css-1319hys")
+	reChecks.addClass("css-ua37vt")
 
 })
 
 // 새비밀번호 등록
-$("#password").keyup(function(e) {
+pw.keyup(function() {
 
-
-	// jQuery 객체 선언부 (태그선언)
-	let pw = $("#password");
-	let rePw = $("#passwordConfirm");
-	let checkPws = $(".checkPw");
-	let reChecks = $(".checkConfirm");
-
+	/*함수 안에서 선언*/
 	// 비밀번호 정규식
 	let num = pw.val().search(/[0-9]/g);
 	let eng = pw.val().search(/[a-z]/ig);
 	let spe = pw.val().search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
 
+
 	//입력을 하는 순가 빨간색
 	checkPws.removeClass("css-alright css-1319hys")
 	checkPws.addClass("css-ua37vt")
-
-
 
 	if (rePw.val()) {
 		if (rePw.val() != "" && rePw.val() == pw.val()) {
@@ -120,9 +134,11 @@ $("#password").keyup(function(e) {
 		checkPws.eq(2).removeClass("css-alright css-1319hys")
 		checkPws.eq(2).addClass("css-ua37vt")
 		pwCheck3 = false;
+		console.log("드러옴1")
 	} else {
 		checkPws.eq(2).removeClass("css-alright css-ua37vt")
 		checkPws.eq(2).addClass("css-1319hys")
+		console.log("드러옴")
 		pwCheck3 = true;
 	}
 
@@ -132,11 +148,17 @@ $("#password").keyup(function(e) {
 
 
 // 새 비밀번호 확인
-$("#passwordConfirm").keyup(function() {
+rePw.keyup(function() {
 
-	let pw = $('#password');
+	/*함수안에서 선언*/
+	// jQuery 객체 선언부 (태그선언)
+	/*새 비밀번호 등록 입력창 태그*/
+	let pw = $("#password");
+	/*새 비밀번호 확인 입력창 태그*/
 	let rePw = $("#passwordConfirm");
+	/* 새비밀번호 확인 입력창 태그 아래 p태그 1개*/
 	let reChecks = $(".checkConfirm");
+
 
 
 	if (rePw.val() != "" && rePw.val() == pw.val()) {
@@ -153,68 +175,56 @@ $("#passwordConfirm").keyup(function() {
 
 });
 
-function checkButton() {
-	if (pwCheck1 && pwCheck2 && pwCheck3 && rePwCheck && ($("#password").val() == $("#passwordConfirm").val())) {
-		$(".button").removeAttr("disabled");
-		$(".button").css("background-color", "rgb(95, 0, 128)");
-	} else {
-		$(".button").css("background-color", "rgb(221, 221, 221)");
-		$(".button").attr("disabled", "");
-	}
-}
-
-
-
 
 /*x 버튼 js*/
 
 /*나중에 코드 정리...*/
 /*위에 비밀번호*/
-$(".input-content1").keyup(function() {
-	if ($(".input-content1").val().length == 0) {
-		$(".textbutton1").css('visibility', 'hidden');
+pw.keyup(function() {
+	if (pw.val().length == 0) {
+		textbutton1.css('visibility', 'hidden');
 	} else {
-		$(".textbutton1").css('visibility', 'visible');
+		textbutton1.css('visibility', 'visible');
 	}
 });
 
-$('.textbutton1').on("click", function() {
-	$(".button").css("background-color", "rgb(221, 221, 221)");
-	$(".button").attr("disabled", "");
-	$(".input-content1").val("");
-	$(".checkPw").removeClass("css-alright css-1319hys")
-	$(".checkPw").addClass("css-ua37vt")
+textbutton1.on("click", function() {
+	button.css("background-color", "rgb(221, 221, 221)");
+	button.attr("disabled", "");
+	pw.val("");
+	checkPws.removeClass("css-alright css-1319hys")
+	checkPws.addClass("css-ua37vt")
 
 })
 
 /* 탭으로 이동금지 */
-$('.textbutton1').attr("tabindex", "-1");
-$('.textbutton2').attr("tabindex", "-1");
+textbutton1.attr("tabindex", "-1");
+textbutton2.attr("tabindex", "-1");
 
 
 
 /*비밀번호재설정*/
-$(".input-content2").keyup(function() {
-	if ($(".input-content2").val().length == 0) {
-		$(".textbutton2").css('visibility', 'hidden');
+rePw.keyup(function() {
+	if (rePw.val().length == 0) {
+		textbutton2.css('visibility', 'hidden');
 	} else {
-		$(".textbutton2").css('visibility', 'visible');
+		textbutton2.css('visibility', 'visible');
 	}
 });
 
-$('.textbutton2').on("click", function() {
-	$(".button").css("background-color", "rgb(221, 221, 221)");
-	$(".button").attr("disabled", "");
-	$(".input-content2").val("");
-	$(".checkConfirm").removeClass("css-alright css-1319hys")
-	$(".checkConfirm").addClass("css-ua37vt")
+textbutton2.on("click", function() {
+	button.css("background-color", "rgb(221, 221, 221)");
+	button.attr("disabled", "");
+	rePw.val("");
+	reChecks.removeClass("css-alright css-1319hys")
+	reChecks.addClass("css-ua37vt")
 
 });
 
 /* 모달창 구현해보기*/
 
 
-$('.button').on("click", function() {
+button.on("click", function() {
 	$('.banner-online').fadeIn();
 	$('#modal').fadeIn();
 	$("html").css("overflow-y", "hidden");
@@ -228,4 +238,17 @@ $('.close-button').click(function() {
 })
 
 
+
+/*함수 선언부 ###################################*/
+
+/*새 비밀번호 등록 새비밀번호 확인 검사후 확인 버튼 활성화 함수 선언*/
+function checkButton() {
+	if (pwCheck1 && pwCheck2 && pwCheck3 && rePwCheck && (pw.val() == rePw.val())) {
+		button.removeAttr("disabled");
+		button.css("background-color", "rgb(95, 0, 128)");
+	} else {
+		button.css("background-color", "rgb(221, 221, 221)");
+		button.attr("disabled", "");
+	}
+}
 
