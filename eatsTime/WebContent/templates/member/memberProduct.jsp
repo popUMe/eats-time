@@ -108,8 +108,8 @@
 							<dd class="css-1i58pf4">2300016310030</dd>
 						</dl>
 						<dl class="css-1ccl3pq">
-							<dt class="css-dzjp62">결제방법</dt>
-							<dd class="css-1i58pf4">신용카드</dd>
+							<dt class="css-dzjp62">구매 방법</dt>
+							<dd class="css-1i58pf4">픽업</dd>
 						</dl>
 						<dl class="css-1ccl3pq">
 							<dt class="css-dzjp62">결제금액</dt>
@@ -147,8 +147,8 @@
 							<dd class="css-1i58pf4">2300016280007</dd>
 						</dl>
 						<dl class="css-1ccl3pq">
-							<dt class="css-dzjp62">결제방법</dt>
-							<dd class="css-1i58pf4">신용카드</dd>
+							<dt class="css-dzjp62">구매방법</dt>
+							<dd class="css-1i58pf4">배송</dd>
 						</dl>
 						<dl class="css-1ccl3pq">
 							<dt class="css-dzjp62">결제금액</dt>
