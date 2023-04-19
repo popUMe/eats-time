@@ -19,12 +19,12 @@
                     </dl>
                 </div>
                 <div class="cont">
-                    <textarea placeholder="내용 입력"></textarea>
+                    <input type="text" placeholder="내용 입력"></input>
                 </div>
             </div>
             <div class="btn">
-                <a href="index.jsp" class="on">등록</a>
-                <a href="index.jsp">취소</a>
+                <a href="adminIndex.jsp" class="on">등록</a>
+                <a href="adminIndex.jsp">취소</a>
             </div>
         </div>
     </div>
