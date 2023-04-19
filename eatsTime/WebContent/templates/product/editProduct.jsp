@@ -181,6 +181,21 @@
 					<!-- 					</div> -->
 				</div>
 
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">제품정보<span class="css-qq9ke6">*</span></label>
+					</div>
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-detailwrite">
+								<input data-testid="input-box" id="password" name="password"
+									placeholder="안내사항을 작성해주세요" type="password" autocomplete="off"
+									class="productDetail" value="">
+							</div>
+						</div>
+					</div>
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+				</div>
 
 
 			</div>
