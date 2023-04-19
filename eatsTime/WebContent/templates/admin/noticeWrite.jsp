@@ -19,7 +19,7 @@
                     </dl>
                 </div>
                 <div class="cont">
-                    <input type="text" placeholder="내용 입력"></input>
+                    <textarea inputmode="text" placeholder="내용 입력"></textarea>
                 </div>
             </div>
             <div class="btn">
