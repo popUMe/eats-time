@@ -160,7 +160,7 @@
 }
 
 .css-z9g6s0 {
-	display: block;
+	display: inline-block;
 	line-height: 20px;
 	vertical-align: middle;
 }
@@ -168,6 +168,10 @@
 input[type=radio] {
     box-sizing: border-box;
     padding: 0;
+}
+
+.deliverydiv{
+	display:inline-block;
 }
 
 .css-1pes2r6 {
@@ -210,7 +214,8 @@ input[type=radio] {
     display: inline-block;
     position: relative;
     border-radius: 50%;
-    background-color: rgb(95, 0, 128);
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
 }
 
 .css-1vic0rk {
@@ -448,10 +453,18 @@ svg:not(:root) {
 }
 
 .css-z9g6s0 {
-	display: block;
+	display: inline-block;
 	line-height: 20px;
 	vertical-align: middle;
 }
+
+/* input[type='radio'] { */
+/*   background-color: */
+/*   border:  */
+/* } */
+/* input[type='radio']:checked { */
+/*   background-color: $font-color-2; */
+/* } */
 
 /*  .css-z9g6s0::before { */
 /* 	content: ""; */

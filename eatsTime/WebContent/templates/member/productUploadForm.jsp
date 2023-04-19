@@ -1,14 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/productUploadForm.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/static/css/all.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/static/css/member/productUploadForm.css">
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
+	<input id="delivery" name="how" type="radio" class="css-1pes2r6"
+		value="delivery" style="background-color: rgb(95, 0, 128);">
+	<input id="pickup" name="how" type="radio" class="css-1pes2r6"
+		value="pickup" checked="" style="background-color: rgb(95, 0, 128);">
+
 	<jsp:include page="../header.jsp" />
 	<div class="css-pculus">
 		<div class="css-o5dw7d">상품 등록</div>
@@ -17,24 +24,22 @@
 				<span class="css-qq9ke6">*</span> 필수입력사항
 			</div>
 			<div class="css-y8aj3r">
-			<div class="css-1pjgd36">
+				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
-						<label class="css-1obgjqh">상품 이미지<span
-							class="css-qq9ke6">*</span></label>
+						<label class="css-1obgjqh">상품 이미지<span class="css-qq9ke6">*</span></label>
 					</div>
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-							
-								<label for="attach"> 
-								
-								<div class="css-u52dqk">
-								<span class="css-ymwvow">상품 사진을 등록해주세요.</span>
-								<p class="css-imagerule"> * 이미지 규격 : 123x123 </p>
-								</div>
-								
-								</label>
-								<input type="file" id="attach" style="display: none;">
+
+								<label for="attach">
+
+									<div class="css-u52dqk">
+										<span class="css-ymwvow">상품 사진을 등록해주세요.</span>
+										<p class="css-imagerule">* 이미지 규격 : 123x123</p>
+									</div>
+
+								</label> <input type="file" id="attach" style="display: none;">
 
 								<div class="image">
 									<div class="cancel" style="display: none";>X</div>
@@ -44,15 +49,14 @@
 							</div>
 						</div>
 					</div>
-<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 
 
-						
+
 				</div>
 				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
-						<label class="css-1obgjqh">상품명<span
-							class="css-qq9ke6">*</span></label>
+						<label class="css-1obgjqh">상품명<span class="css-qq9ke6">*</span></label>
 					</div>
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
@@ -63,42 +67,40 @@
 							</div>
 						</div>
 					</div>
-<!-- 						<div class="css-1w0ksfz e744wfw2"></div> -->
+					<!-- 						<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
-				
-				
-						<div class="css-1pjgd36">
-					<div class="css-1y8737n">
-						<label class="css-1obgjqh">판매 가격<span
-							class="css-qq9ke6">*</span></label>
-					</div>
-					<div class="css-82a6rk">
-						<div class="css-jmalg">
-							<div class="css-176lya2">
-								<input data-testid="input-box" id="password" name="password"
-									placeholder="판매 가격을 입력해주세요" type="password" autocomplete="off"
-									class="css-u52dqk" value="">
-							</div>
-						</div>
-					</div>
-<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
-				</div>
-				
+
+
 				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
-						<label class="css-1obgjqh">판매 수량<span
-							class="css-qq9ke6">*</span></label>
+						<label class="css-1obgjqh">판매 가격<span class="css-qq9ke6">*</span></label>
 					</div>
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="password" name="password"
-									placeholder="판매 가능한 수량을 입력해주세요" type="password" autocomplete="off"
+								<input type="text" id="price" name="price"
+									placeholder="판매 가격을 입력해주세요" autocomplete="off"
 									class="css-u52dqk" value="">
 							</div>
 						</div>
 					</div>
-<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+				</div>
+
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">판매 수량<span class="css-qq9ke6">*</span></label>
+					</div>
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
+								<input type="text" id="sellcount" name="sellcount"
+									placeholder="판매 가능한 수량을 입력해주세요" 
+									autocomplete="off" class="css-u52dqk" value="">
+							</div>
+						</div>
+					</div>
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
 				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
@@ -108,70 +110,72 @@
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="passwordConfirm"
+								<input id="passwordConfirm"
 									name="passwordConfirm" placeholder="판매할 주소를 입력해주세요"
-									type="password" autocomplete="off" class="css-u52dqk"
-									value="">
+									type="text" autocomplete="off" class="css-u52dqk" value="">
 							</div>
 						</div>
 					</div>
-<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
-				
+
 				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
-						<label class="css-1obgjqh">판매 유형<span
-							class="css-qq9ke6">*</span></label></label>
+						<label class="css-1obgjqh">판매 유형<span class="css-qq9ke6">*</span></label>
 					</div>
 					<div class="css-82a6rk">
 						<div class="css-14wodj6">
-
-								<label
-								class="css-z9g6s0" for="delivery"><input
-								id="delivery" name="how"
-								type="radio" class="css-1pes2r6" value="delivery"><span
-								class="css-198i9ca"><div
-										class="css-1dahn5m"></div></span><span
-								 class="css-mgd87h">배송</span></label><label
-								class="css-z9g6s0" for="pickup"><input
-								 id="pickup
-								 " name="how"
-								type="radio" class="css-1pes2r6" value="pickup"
-								checked=""><span class="css-5xw1m2"><div
-										class="css-1vic0rk"></div></span><span
-								 class="css-mgd87h">픽업</span></label>
+						
+							<div class="deliverydiv">
+							<label class="css-z9g6s0" for="delivery">
+							<input id="delivery" name="how" type="radio" class="css-1pes2r6" value="delivery">
+								<span class="css-198i9ca">
+								<div class="css-1dahn5m"></div>
+								</span>
+								<span class="css-mgd87h">배송</span>
+								
+								</label>
+								</div>	
+								
+							<div class="pickupdiv">
+							<label class="css-z9g6s0" for="pickup">
+							<input id="pickup" name="how" type="radio" class="css-1pes2r6" value="pickup" checked="">
+								<span class="css-5xw1m2"><div class="css-1vic0rk"></div>
+							</span><span class="css-mgd87h">픽업</span>
+							</label>
+							</div>
 						</div>
 					</div>
-<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
-				
+
 				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
-						<label class="css-1obgjqh">유통 기간<span
-							class="css-qq9ke6">*</span></label>
+						<label class="css-1obgjqh">유통 기간<span class="css-qq9ke6">*</span></label>
 					</div>
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-<!-- 							<form> -->
-      						<p><input class="css-u52dqk" type="date" value="sysdate"></p>
-     						
-<!-- 	    					</form> -->
-									
+								<!-- 							<form> -->
+								<p>
+									<input class="css-u52dqk" type="date" value="sysdate">
+								</p>
+
+								<!-- 	    					</form> -->
+
 							</div>
 						</div>
 					</div>
-<!-- 					<div class="css-1w0ksfz e744wfw2"> -->
-<!-- 						<button class="css-ufulao e4nu7ef3" type="button" disabled=""> -->
-<!-- 							<span class="css-ymwvow e4nu7ef1">인증번호 받기</span> -->
-<!-- 						</button> -->
-<!-- 					</div> -->
+					<!-- 					<div class="css-1w0ksfz e744wfw2"> -->
+					<!-- 						<button class="css-ufulao e4nu7ef3" type="button" disabled=""> -->
+					<!-- 							<span class="css-ymwvow e4nu7ef1">인증번호 받기</span> -->
+					<!-- 						</button> -->
+					<!-- 					</div> -->
 				</div>
-		
+
 				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
-						<label class="css-1obgjqh">제품정보<span
-							class="css-qq9ke6">*</span></label>
+						<label class="css-1obgjqh">제품정보<span class="css-qq9ke6">*</span></label>
 					</div>
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
@@ -182,16 +186,16 @@
 							</div>
 						</div>
 					</div>
-<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
-			
-				
+
+
 			</div>
 			<div class="css-1eo0fey"></div>
 
 			<div class="css-137ca2h">
-				<button class="css-18m884r" type="submit" width="240"
-					height="56" radius="3">
+				<button class="css-18m884r" type="submit" width="240" height="56"
+					radius="3">
 					<span class="css-ymwvow">등록하기</span>
 				</button>
 			</div>
@@ -200,12 +204,13 @@
 	<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
+<script src="${pageContext.request.contextPath}/static/js/productUploadForm.js"></script>
 
-    const $radioPUD = $(".css-1pes2r6"); //(전체동의 제외) 나머지 체크박스 가져오기
-    $radioPUD.on("click", function(){
-        $radioPUD.prop("checked", true);
-        $radioPUD.css("background-color", "#5f0080");
-    }); //전체 동의 누르면, 모든 항목을 check상대로 바꾸기
+<script>
+	const $radioPUD = $(".css-1pes2r6"); //(전체동의 제외) 나머지 체크박스 가져오기
+	$radioPUD.on("click", function() {
+		$radioPUD.prop("checked", true);
+		$radioPUD.css("background-color", "#5f0080");
+	}); //전체 동의 누르면, 모든 항목을 check상대로 바꾸기
 </script>
 </html>

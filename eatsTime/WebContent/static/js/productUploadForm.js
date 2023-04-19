@@ -7,7 +7,7 @@ const image_div = document.querySelectorAll("div.image"); //선택한 이미지
 const cancel_div = document.querySelector("div.cancel");  //취소 버튼
 const input_file = document.querySelector("#attach"); //추가할 이미지 <input type="file" id="attach" style="display: none;">
 
-const plusB=document.querySelectorAll(".css-82a6rk"); //첨부버튼
+//const plusB=document.querySelectorAll(".css-82a6rk"); //첨부버튼
 
 // x버튼 눌렀을 때 
     cancel_div.addEventListener("click", () => {
@@ -41,10 +41,46 @@ plusB.addEventListener("click", ()=>{
         // function(a){} 와 a => {} 같음
         // function(e){} 와 e => {} 같음
         reader.onload = e => {
-			plusB.style.display="none";
             image_div[1].style.display = "block"; //선택한 이미지 : 보여야할 것
             image_div[1].style.backgroundImage = `url('${e.target.result}')`
             image_div[0].style.display = "none"; //없어져야 될 것 : + 이미지(파일 추가하는)
             cancel_div.style.display = "block"; //X 버튼은 파일이 업로드 되어 화면이 보일 때 같이 보여야한다
         };
     });
+
+
+
+
+
+
+/*input radio가 check 이면 span 태그 색깔 변경 (보라), 체크 해제이면 하얀색으로 변경*/
+
+
+const $inputdelivery=$("#delivery");
+const $inputpickup=$("#pickup");
+const $spandelivery=$(".css-198i9ca")
+const $spanpickup=$(".css-5xw1m2");
+
+ $inputdelivery.on("checked", function(){
+        $spandelivery.css("background-color", "#5f0080");
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -114,8 +114,8 @@
 									<dd class="css-1o8e829">[상품명]</dd>
 								</dl>
 								<dl class="css-1ccl3pq">
-									<dt class="css-dzjp62">주문번호</dt>
-									<dd class="css-1i58pf4">2300016310030</dd>
+									<dt class="css-dzjp62">판매유형</dt>
+									<dd class="css-1i58pf4">배송</dd>
 								</dl>
 
 								<dl class="css-1ccl3pq">
@@ -151,8 +151,8 @@
 									<dd class="css-1o8e829">[Kurly's] 국산콩 두부 300g 외 4건</dd>
 								</dl>
 								<dl class="css-1ccl3pq">
-									<dt class="css-dzjp62">주문번호</dt>
-									<dd class="css-1i58pf4">2300016280007</dd>
+									<dt class="css-dzjp62">판매유형</dt>
+									<dd class="css-1i58pf4">픽업</dd>
 								</dl>
 
 								<dl class="css-1ccl3pq">
