@@ -33,6 +33,7 @@
 }
 .css-y8aj3r {
     padding: 0px;
+    padding-top:30px;
 }
 
 .css-1pjgd36 {
@@ -165,10 +166,7 @@
 	vertical-align: middle;
 }
 
-input[type=radio] {
-    box-sizing: border-box;
-    padding: 0;
-}
+
 
 .deliverydiv{
 	display:inline-block;
@@ -208,15 +206,7 @@ input[type=radio] {
     position: relative;
     margin-left: 12px;
 }
-.css-5xw1m2 {
-    min-width: 24px;
-    min-height: 24px;
-    display: inline-block;
-    position: relative;
-    border-radius: 50%;
-    background-color: white;
-    border: 1px solid rgb(221, 221, 221);
-}
+
 
 .css-1vic0rk {
     width: 10px;
@@ -453,9 +443,10 @@ svg:not(:root) {
 }
 
 .css-z9g6s0 {
-	display: inline-block;
+	display: flex;
 	line-height: 20px;
 	vertical-align: middle;
+	padding-bottom:10px;
 }
 
 /* input[type='radio'] { */

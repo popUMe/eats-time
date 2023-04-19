@@ -3,6 +3,42 @@
  */
 
 
+
+/*input radio가 check 이면 span 태그 색깔 변경 (보라), 체크 해제이면 하얀색으로 변경*/
+
+
+const $inputdelivery=$("#delivery");
+const $inputpickup=$("#pickup");
+
+const $divdelivery=$("#divdelivery");
+const $divpickup=$("#divpickup")
+const $spandelivery=$("#deliveryspan");
+const $spanpickup=$("#pickupspan");
+
+ $inputdelivery.on("click", function(){
+		$inputdelivery.prop("checked", $(this).is(":checked"));
+        $spandelivery.css("background-color", "#5f0080");
+		$divdelivery.css("background-color","#fff")
+    });
+
+$inputpickup.on("click", function(){
+		$inputpickup.prop("checked", true);
+        $spanpickup.css("background-color", "#5f0080");
+		$divpickup.css("background-color","#fff")
+
+    });
+
+//	 $inputdelivery.on("click", function(){
+//		$inputdelivery.prop("checked", $(this).is(":checked"));
+//        $spandelivery.css("background-color", "#dddddd");
+//		$divdelivery.css("background-color","#fff")
+//    });
+//}
+
+
+
+
+
 const image_div = document.querySelectorAll("div.image"); //선택한 이미지
 const cancel_div = document.querySelector("div.cancel");  //취소 버튼
 const input_file = document.querySelector("#attach"); //추가할 이미지 <input type="file" id="attach" style="display: none;">
@@ -17,12 +53,12 @@ const input_file = document.querySelector("#attach"); //추가할 이미지 <inp
         cancel_div.style.display = "none";//x없어지고
     });
 
-//파일 추가 버튼 눌렀을 때
-plusB.addEventListener("click", ()=>{
-	plusB.style.display="none"; // +버튼은 없어져야함
-	
-	
-});
+////파일 추가 버튼 눌렀을 때
+//plusB.addEventListener("click", ()=>{
+//	plusB.style.display="none"; // +버튼은 없어져야함
+//	
+//	
+//});
 
 
 
@@ -49,21 +85,6 @@ plusB.addEventListener("click", ()=>{
     });
 
 
-
-
-
-
-/*input radio가 check 이면 span 태그 색깔 변경 (보라), 체크 해제이면 하얀색으로 변경*/
-
-
-const $inputdelivery=$("#delivery");
-const $inputpickup=$("#pickup");
-const $spandelivery=$(".css-198i9ca")
-const $spanpickup=$(".css-5xw1m2");
-
- $inputdelivery.on("checked", function(){
-        $spandelivery.css("background-color", "#5f0080");
-    });
 
 
 
