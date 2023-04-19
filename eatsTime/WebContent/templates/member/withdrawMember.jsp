@@ -216,26 +216,26 @@
 								<label class="css-z9g6s0" for="gender-man">
 								<input id="gender-man" name="gender" type="radio" 
 								class="css-1pes2r6" value="MALE">
-									<span class="css-198i9ca">
-									<div class="css-1dahn5m"></div></span>
+									<span class="css-198i9ca" id="male">
+									<div class="css-1dahn5m" id=divmale></div></span>
 									<span class="css-mgd87h">남자</span>
 								</label> 
 								
 								
 								<label class="css-z9g6s0" for="gender-woman"> 
 								<input id="gender-woman" name="gender" type="radio"
-								class="css-1pes2r6 et8nqc32" value="FEMALE" checked="">
+								class="css-1pes2r6" value="FEMALE" checked="">
 
-									<span class="css-5xw1m2">
-										<div class="css-1vic0rk"></div>
-								</span> <span class="css-mgd87h et8nqc31">여자</span>
+									<span class="css-5xw1m2" id="female">
+										<div class="css-1vic0rk" id="divfemale"></div>
+								</span> <span class="css-mgd87h">여자</span>
 								
 								</label> 
 
 								<label class="css-z9g6s0" for="gender-none">
 								<input id="gender-none" name="gender" type="radio" class="css-1pes2r6" value="NONE">
-									<span class="css-198i9ca">
-										<div class="css-1dahn5m"></div>
+									<span class="css-198i9ca" id="none">
+										<div class="css-1dahn5m" id="divnone"></div>
 									</span>
 									<span class="css-mgd87h">선택안함</span>
 								</label>

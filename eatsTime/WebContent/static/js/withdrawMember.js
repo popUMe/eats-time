@@ -55,8 +55,68 @@ $mousepoint3.on("mouseover",function(){
 	
 });
 
+const inputmale=document.querySelector("#gender-man");
+const inputfemale=document.querySelector("#gender-woman");
+const inputnone=document.querySelector("#gender-none");
 
 
 
 
+const spanmale=document.querySelector("#male");
+const spanfemale=document.querySelector("#female");
+const spannone=document.querySelector("#none");
+
+const divmale=document.querySelector("#divmale");
+const divfemale=document.querySelector("#divfemale");
+const divnone=document.querySelector("#divnone");
+
+
+ inputmale.addEventListener("click", () => {
+        spanmale.style.background="#5f0080";
+		divmale.style.background="#fff";
+		
+		spanfemale.style.background="#fff";
+		divfemale.style.border="1px";
+		divfemale.style.border="rgb(221, 221, 221)";
+//		divfemale.style.border="solid"
+		
+		spannone.style.background="#fff";
+		spannone.style.border="1px";
+		spannone.style.border="rgb(221, 221, 221)";
+//		spannone.style.border="solid"
+		
+		
+    });
+
+
+ inputfemale.addEventListener("click", () => {
+        spanfemale.style.background="#5f0080";
+		divfemale.style.background="#fff";
+		
+		spanmale.style.background="#fff";
+		spanmale.style.border="1px";
+		spanmale.style.border="#dddddd";
+		spanmale.style.border="solid";
+		
+		spannone.style.background="#fff";
+		spannone.style.border="1px";
+		spannone.style.border="#dddddd";
+		spannone.style.border="solid";
+    });
+
+
+ inputnone.addEventListener("click", () => {
+        spannone.style.background="#5f0080";
+		divnone.style.background="#fff";
+		
+		spanmale.style.background="#fff";
+		spanmale.style.border="1px";
+		spanmale.style.border="#dddddd";
+		spanmale.style.border="solid";
+		
+		spanfemale.style.background="#fff";
+		spanfemale.style.border="1px";
+		spanfemale.style.border="#dddddd";
+		spanfemale.style.border="solid";
+    });
 

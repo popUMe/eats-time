@@ -11,7 +11,7 @@
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
-	
+
 
 	<jsp:include page="../header.jsp" />
 	<div class="css-pculus">
@@ -92,8 +92,8 @@
 						<div class="css-jmalg">
 							<div class="css-176lya2">
 								<input type="text" id="sellcount" name="sellcount"
-									placeholder="판매 가능한 수량을 입력해주세요" 
-									autocomplete="off" class="css-u52dqk" value="">
+									placeholder="판매 가능한 수량을 입력해주세요" autocomplete="off"
+									class="css-u52dqk" value="">
 							</div>
 						</div>
 					</div>
@@ -107,9 +107,9 @@
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input id="passwordConfirm"
-									name="passwordConfirm" placeholder="판매할 주소를 입력해주세요"
-									type="text" autocomplete="off" class="css-u52dqk" value="">
+								<input id="passwordConfirm" name="passwordConfirm"
+									placeholder="판매할 주소를 입력해주세요" type="text" autocomplete="off"
+									class="css-u52dqk" value="">
 							</div>
 						</div>
 					</div>
@@ -120,40 +120,33 @@
 					<div class="css-1y8737n">
 						<label class="css-1obgjqh">판매 유형<span class="css-qq9ke6">*</span></label>
 					</div>
-					
-					
-					
-		<div class="css-82a6rk">
-			<div class="css-14wodj6">
-		
-			<label class="css-z9g6s0" for="delivery">
-			<input id="delivery" name="pickup" type="radio"
-			class="css-1pes2r6" value="DELIVERY">
-				
-			<span class="css-198i9ca" id="deliveryspan">
-			<div class="css-1dahn5m" id="divdelivery"></div>
-			</span>
-				
-			<span class="css-mgd87h">배송</span>
-			</label>
-		
-		
-			<label class="css-z9g6s0" for="pickup">
-			<input id="pickup" name="pickup"
-			type="radio" class="css-1pes2r6" value="">
-			<span class="css-198i9ca" id="pickupspan">
-			<div class="css-1dahn5m" id="divpickup"></div></span>
-			<span class="css-mgd87h">픽업</span>
-			</label>
-				
-				
-		</div>
-	</div>				
-					
-					
-					
-					
-					
+
+
+
+					<div class="css-82a6rk">
+						<div class="css-14wodj6">
+
+							<label class="css-z9g6s0" for="delivery"> <input
+								id="delivery" name="pickup" type="radio" class="css-1pes2r6"
+								value="DELIVERY"> <span class="css-198i9ca"
+								id="deliveryspan">
+									<div class="css-1dahn5m" id="divdelivery"></div>
+							</span> <span class="css-mgd87h">배송</span>
+							</label> <label class="css-z9g6s0" for="pickup"> <input
+								id="pickup" name="pickup" type="radio" class="css-1pes2r6"
+								value=""> <span class="css-198i9ca" id="pickupspan">
+									<div class="css-1dahn5m" id="divpickup"></div>
+							</span> <span class="css-mgd87h">픽업</span>
+							</label>
+
+
+						</div>
+					</div>
+
+
+
+
+
 					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
 
@@ -212,7 +205,8 @@
 	<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/productUploadForm.js"></script>
+<script
+	src="${pageContext.request.contextPath}/static/js/productUploadForm.js"></script>
 
 
 </html>
