@@ -7,6 +7,11 @@ html {
     font-size: 10px;
 }
 
+h1{
+	font-weight:400;
+	font-size:36px;
+	color: #000000ab;
+}
 
 a {
     text-decoration: none;
@@ -59,7 +64,7 @@ a {
 
 .board_view {
     width: 100%;
-    border-top: 2px solid #000;
+    border-top: 1px solid #e2d7d77d;
 }
 
 .board_view .title {
@@ -122,7 +127,7 @@ a {
 }
 
 .board_write {
-    border-top: 2px solid #000;
+    border-top: 1px solid #e2d7d77d;
 }
 
 .board_write .title {

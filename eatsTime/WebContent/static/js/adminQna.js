@@ -1,87 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel="stylesheet" type="text/css"	href="../../static/css/admin/qna.css">
-<meta charset="UTF-8">
-<title>문의내역</title>
+/**
+ * 문의내역
+ */
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap');
-</style>
-</head>
-<body>
-<div id="sidebar">
-	 	 <div id="logo"></div>
-		<a href="adminIndex.jsp">공지사항</a> 
-		<a href="member.jsp">회원관리</a> 
-		<a href="qna.jsp">문의내역</a>
-	</div>
-	<div id=:logo></div>
-	
-	<div class="content">
-		<h1>문의 관리</h1>
-		<div class="btn">
-		  <button id="add-btn">작성</button>
-  		<button id="delete-btn">삭제</button>
-  		</div>
-		<table>
-			<tr>
-				<th>문의번호</th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>작성날짜</th>
-				<th>상태</th>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td><a href="qnaView.jsp?noticeNo=1">2,500</a></td>
-				<td>$500</td>
-				<td>$500</td>
-				<td>답변 완료</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>3,000</td>
-				<td>110</td>
-				<td>$550</td>
-				<td>답변 대기</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>2,800</td>
-				<td>120</td>
-				<td>120</td>
-				<td>답변 대기</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>3,200</td>
-				<td>130</td>
-				<td>$650</td>
-				<td>답변 대기</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>3,500</td>
-				<td>140</td>
-				<td>$700</td>
-				<td>답변 대기</td>
-			</tr>
-		</table>
-		<div class="paging">
-			<a href="#" class="active">1</a>
-			<a href="#">2</a>
-			<a href="#">3</a>
-			<a href="#">4</a>
-			<a href="#">5</a>
-		</div>
-	</div>
-</body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
+	$(document).ready(function() {
 			$("#chkAll").click(function() {
 				if($("#chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
 				else $("input[name=chk]").prop("checked", false);
@@ -108,7 +29,7 @@
 		
 		$(function() {
 			  $('#add-btn').click(function() {
-			    location.href = 'qnaWrite.jsp';
+			    location.href = 'adminQnaWrite.jsp';
 			  });
 			});
 
@@ -150,8 +71,3 @@
 			  });
 			});
 
-
-
-		
-	</script>
-</html>
