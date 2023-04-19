@@ -88,7 +88,7 @@
 					
 				<!-- 판매지 -->
 					<dl class="css-e6zlnr epzddad2">
-						<dt class="css-lytdfk epzddad1">발송/픽업 주소</dt>
+						<dt class="css-lytdfk epzddad1">배송/픽업 주소</dt>
 						<dd class="css-1k8t52o epzddad0">
 							<p class="css-c02hqi e6qx2kx1">Address</p>
 						</dd>
