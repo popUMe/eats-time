@@ -7,18 +7,31 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a class=" css-g4g0eu ecbxmj0">선물내역
-	<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
-			<defs>
-			<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657"></path></defs>
-			<g fill="none" fill-rule="evenodd">
-			<g>
-			<g>
-			<g>
-			<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-			<use stroke="#999" stroke-linecap="round" stroke-width="1.8"
-				stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
-				xlink:href="#gfk9q0rhta"></use>
-				</g></g></g></g></g></svg></a>
+	<div class="css-82a6rk">
+		<div class="css-14wodj6">
+		
+			<label class="css-z9g6s0" for="delivery">
+			<input id="delivery" name="pickup" type="radio"
+			class="css-1pes2r6" value="DELIVERY">
+				
+			<span class="css-198i9ca">
+			<div class="css-1dahn5m e2sqze60"></div>
+			</span>
+				
+			<span class="css-mgd87h">배송</span>
+			</label>
+		
+		
+			<label class="css-z9g6s0" for="pickup">
+			<input id="pickup" name="pickup"
+			type="radio" class="css-1pes2r6" value="">
+			<span class="css-198i9ca">
+			<div class="css-1dahn5m"></div></span>
+			<span class="css-mgd87h">픽업</span>
+			</label>
+				
+				
+		</div>
+	</div>
 </body>
 </html>

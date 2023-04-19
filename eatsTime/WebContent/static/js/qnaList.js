@@ -20,7 +20,7 @@ $(".deletebtn").on("click", function(){
 /*삭제여부 모달창 취소버튼*/
 $(".canceldeletion").on("click", function(){
 	$("#modal1").fadeOut();
-	$("body").css('overflow', 'scroll');
+	$("body").css('overflow', 'auto');
 });
 
 /*확인버튼 클릭 시 모달창 : 삭제 완료*/
@@ -31,8 +31,8 @@ $(".yesdeletion").click(function(){
 		$("#modal2").fadeIn();
     });
 
-
+/* 확인 버튼 클릭 시 '삭제 완료' 종료*/
 $(".deleteioncomplete").on("click", function(){
 	$("#modal2").fadeOut();
-	$("body").css('overflow', 'scroll');
+	$("body").css('overflow', 'auto');
 });

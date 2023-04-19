@@ -6,18 +6,41 @@ const emailInput = document.querySelector("#email");
 const duplicateCheckButtons = document.querySelectorAll(".css-ufulao");
 
 // 중복확인 버튼 클릭 이벤트 핸들러 등록
+const modal = document.getElementById("modal");
+const modalContent = modal.querySelector(".modal-content");
+const closeButton = modal.querySelector(".close-button");
+
 duplicateCheckButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const targetInput = button.parentElement.previousElementSibling.querySelector("input");
-    if (targetInput.value) {
-      // 서버와 통신하여 아이디나 이메일 중복 여부 확인하는 코드
-      // 중복이 아닌 경우 해당 아이디나 이메일을 사용할 수 있다는 메시지 출력
-      // 중복인 경우 해당 아이디나 이메일을 사용할 수 없다는 메시지 출력
+    const inputRegex = /^[a-zA-Z0-9]{6,16}$/; // 6자이상 16자 이하의 영문 혹은 영문과 숫자 조합을 검사하는 정규표현식
+
+    if (!inputRegex.test(targetInput.value)) { // 입력값이 정규표현식과 매치되지 않을 경우
+      modalContent.innerText = "6자 이상 16자 이하의 영문 혹은 영문과 숫자 조합으로 입력해주세요.";
+      modal.style.display = "block";
     } else {
-      alert("아이디나 이메일을 입력해주세요.");
+      checkDuplicate(targetInput.value, (isDuplicate) => {
+        if (isDuplicate) { // 중복되는 경우
+          modalContent.innerText = "중복된 아이디/이메일입니다.";
+          modal.style.display = "block";
+        } else { // 중복되지 않는 경우
+          modalContent.innerText = "사용 가능한 아이디/이메일입니다.";
+          modal.style.display = "block";
+        }
+      });
     }
   });
 });
+
+closeButton.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+function checkDuplicate(value, callback) {
+  // 서버와 통신하여 value에 해당하는 아이디나 이메일이 중복되는지 확인하는 코드
+  // 중복이 아닌 경우 true를, 중복인 경우 false를 반환
+  callback(false); // 임시로 항상 중복이라고 가정함
+}
 
 // 회원가입 버튼 클릭 이벤트 핸들러 등록
 const signUpButton = document.querySelector(".css-o5dw7d");
@@ -88,18 +111,37 @@ function validateRequiredFields() {
     alert('유효한 이메일 주소를 입력해주세요.');
     return false;
   }
+
   
   // 모든 검사를 통과한 경우
   return true;
 }
 
-const submitButton = document.getElementById('submit-button');
-submitButton.addEventListener('click', function() {
+const button = document.querySelector('.css-18m884r');
+button.addEventListener('click', function() {
   if (validateRequiredFields()) {
     // 유효성 검사를 통과한 경우, 회원가입 로직 실행
     // ...
   }
 });
+
+// 필수 입력 필드 검사 함수
+function validateRequiredFields() {
+  // 필수 입력 필드 선택자
+  var requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
+  
+  // 필수 입력 필드를 하나씩 검사
+  for (var i = 0; i < requiredFields.length; i++) {
+    if (!requiredFields[i].value) {
+      // 필수 입력 필드 중 입력되지 않은 필드가 있을 경우 오류 메시지 출력
+      alert(requiredFields[i].getAttribute('name') + '을(를) 입력해주세요.');
+      return false;
+    }
+  }
+  
+  // 모든 필수 입력 필드가 입력되었을 경우 true 반환
+  return true;
+}
 
 // 휴대폰 유효성 검사
 function isHpFormat(hp){
@@ -110,50 +152,65 @@ function isHpFormat(hp){
 	return phoneRule.test(hp);
 }
 
-function findAddr(){
-	new daum.Postcode({
-        oncomplete: function(data) {
-        	
-        	console.log(data);
-        	
-            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-            // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
-            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-            var roadAddr = data.roadAddress; // 도로명 주소 변수
-            var jibunAddr = data.jibunAddress; // 지번 주소 변수
-            // 우편번호와 주소 정보를 해당 필드에 넣는다.
-            document.getElementById('member_post').value = data.zonecode;
-            if(roadAddr !== ''){
-                document.getElementById("member_addr").value = roadAddr;
-            } 
-            else if(jibunAddr !== ''){
-                document.getElementById("member_addr").value = jibunAddr;
-            }
-        }
-    }).open();
+
+$('.css-1schgvv').on('click', function() {
+  new daum.Postcode({
+    oncomplete: function(data) {
+      console.log(data);
+
+      var roadAddr = data.roadAddress;
+      var jibunAddr = data.jibunAddress;
+      
+      document.getElementById('member_post').value = data.zonecode;
+      
+      if (roadAddr !== '') {
+        document.getElementById('member_addr').value = roadAddr;
+      } else if (jibunAddr !== '') {
+        document.getElementById('member_addr').value = jibunAddr;
+      }
+    }
+  }).open();
+});
+
+
+
+
+$(document).ready(function() {
+  // 성별 라디오 버튼 클릭 이벤트
+  $('input[type="radio"][name="gender"]').on('click', function() {
+    // 선택한 라디오 버튼의 값을 가져옴
+    var selectedValue = $(this).val();
+    
+    // 선택한 라디오 버튼에 해당하는 체크박스를 체크 처리
+    $('input[type="checkbox"][value="' + selectedValue + '"]').prop('checked', true);
+    
+    // 선택하지 않은 라디오 버튼에 해당하는 체크박스를 체크 해제 처리
+    $('input[type="checkbox"][value!="' + selectedValue + '"]').prop('checked', false);
+  });
+});
+function validateBirthday() {
+  var year = document.getElementsByName("birthYear")[0].value;
+  var month = document.getElementsByName("birthMonth")[0].value;
+  var day = document.getElementsByName("birthDay")[0].value;
+
+  // 생년월일이 입력되지 않았을 경우
+  if (year == "" || month == "" || day == "") {
+    alert("생년월일을 모두 입력해주세요.");
+    return false;
+  }
+
+  // 생년월일이 유효하지 않은 경우
+  var date = new Date(year, month - 1, day);
+  if (isNaN(date.getTime())) {
+    alert("올바른 생년월일을 입력해주세요.");
+    return false;
+  }
+
+  // 생년월일이 유효한 경우
+  return true;
 }
-// 성별 라디오 버튼 요소들을 가져옵니다.
-const maleRadio = document.getElementById("gender-man");
-		const femaleRadio = document.getElementById("gender-woman");
-		const noneRadio = document.getElementById("gender-none");
 
-		maleRadio.addEventListener("click", () => {
-			maleRadio.checked = true;
-			femaleRadio.checked = false;
-			noneRadio.checked = false;
-		});
 
-		femaleRadio.addEventListener("click", () => {
-			maleRadio.checked = false;
-			femaleRadio.checked = true;
-			noneRadio.checked = false;
-		});
-
-		noneRadio.addEventListener("click", () => {
-			maleRadio.checked = false;
-			femaleRadio.checked = false;
-			noneRadio.checked = true;
-		});
 
 const $all = $(".all");
 const $checkboxes = $(".term");
@@ -167,7 +224,7 @@ $checkboxes.on("click", function(){
   $all.prop("checked", $checkboxes.filter(":checked").length == 3);
 });
 
-$('#RequiredTermsOfPrivacy').click(function() {
+$('#RequiredTermsOfPrivacy').on("click", function() {
   // 체크박스 클릭시 동작할 코드 작성
   if ($('#RequiredTermsOfPrivacy').is(":checked")) {
     $('#buttonId').click();
