@@ -123,7 +123,7 @@
 					</div>
 					<div class="css-1pjgd36">
 						<div class="css-1y8737n">
-							<label for="newPassword" class="css-1obgjqh e744wfw4">
+							<label for="newPassword" class="css-1obgjqh">
 							새 비밀번호</label>
 						</div>
 						<div class="css-82a6rk">

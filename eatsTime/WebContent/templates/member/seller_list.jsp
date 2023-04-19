@@ -101,7 +101,7 @@
 				<div class="css-4wlxei">
 					<div class="css-1hbtwy0">
 						<span class="css-asma03">2023.03.20 (16시 31분)</span><a
-							class="css-l9y4tx">판매내역 상세보기</a>
+							class="css-l9y4tx">상품 상세보기</a>
 					</div>
 					<div class="css-7apail">
 						<div class="css-fhxb3m">
@@ -111,16 +111,16 @@
 							<div class="css-1fttcpj e1437c647">
 								<dl class="css-1ccl3pq">
 									<dt class="css-dzjp62">상품명</dt>
-									<dd class="css-1o8e829">[KF365] 감자 1kg 외 5건</dd>
+									<dd class="css-1o8e829">[상품명]</dd>
 								</dl>
 								<dl class="css-1ccl3pq">
-									<dt class="css-dzjp62">주문번호</dt>
-									<dd class="css-1i58pf4">2300016310030</dd>
+									<dt class="css-dzjp62">판매유형</dt>
+									<dd class="css-1i58pf4">배송</dd>
 								</dl>
 
 								<dl class="css-1ccl3pq">
-									<dt class="css-dzjp62">결제금액</dt>
-									<dd class="css-1i58pf4">31,937원</dd>
+									<dt class="css-dzjp62">판매 가격</dt>
+									<dd class="css-1i58pf4">****원</dd>
 								</dl>
 							</div>
 						</div>
@@ -138,7 +138,7 @@
 				<div class="css-4wlxei">
 					<div class="css-1hbtwy0">
 						<span class="css-asma03">2023.03.20 (16시 28분)</span><a
-							class="css-l9y4tx">판매내역 상세보기</a>
+							class="css-l9y4tx">상품 상세보기</a>
 					</div>
 					<div class="css-7apail">
 						<div class="css-fhxb3m">
@@ -151,8 +151,8 @@
 									<dd class="css-1o8e829">[Kurly's] 국산콩 두부 300g 외 4건</dd>
 								</dl>
 								<dl class="css-1ccl3pq">
-									<dt class="css-dzjp62">주문번호</dt>
-									<dd class="css-1i58pf4">2300016280007</dd>
+									<dt class="css-dzjp62">판매유형</dt>
+									<dd class="css-1i58pf4">픽업</dd>
 								</dl>
 
 								<dl class="css-1ccl3pq">

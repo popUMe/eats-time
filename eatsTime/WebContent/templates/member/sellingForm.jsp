@@ -15,7 +15,7 @@
 
 	<jsp:include page="../header.jsp" />
 	<div class="css-pculus">
-		<div class="css-o5dw7d">상품 등록</div>
+		<div class="css-o5dw7d">판매하기</div>
 		<div class="css-mhmtvt">
 			<div class="css-rb0i47">
 				<span class="css-qq9ke6">*</span> 필수입력사항
@@ -32,8 +32,10 @@
 								<label for="attach">
 
 									<div class="css-u52dqk">
-										<span class="css-ymwvow">상품 사진을 등록해주세요.</span>
-										<p class="css-imagerule">* 이미지 규격 : 123x123</p>
+										<span class="css-ymwvow">등록된 이미지가 썸네일로 뜰것</span>
+										<p class="css-imagerule">~</p>
+<!-- 										<span class="css-ymwvow">상품 사진을 등록해주세요.</span> -->
+<!-- 										<p class="css-imagerule">* 이미지 규격 : 123x123</p> -->
 									</div>
 
 								</label> <input type="file" id="attach" style="display: none;">
@@ -60,7 +62,7 @@
 							<div class="css-176lya2">
 								<input data-testid="input-box" id="memberId" name="memberId"
 									placeholder="상품명을 입력해주세요" type="text" required=""
-									class="css-u52dqk" value="">
+									class="css-u52dqk" value="닭가슴살 1kg">
 							</div>
 						</div>
 					</div>
@@ -77,7 +79,7 @@
 							<div class="css-176lya2">
 								<input type="text" id="price" name="price"
 									placeholder="판매 가격을 입력해주세요" autocomplete="off"
-									class="css-u52dqk" value="">
+									class="css-u52dqk" value="20,000">
 							</div>
 						</div>
 					</div>
@@ -93,7 +95,7 @@
 							<div class="css-176lya2">
 								<input type="text" id="sellcount" name="sellcount"
 									placeholder="판매 가능한 수량을 입력해주세요" 
-									autocomplete="off" class="css-u52dqk" value="">
+									autocomplete="off" class="css-u52dqk" value="10">
 							</div>
 						</div>
 					</div>
@@ -109,7 +111,7 @@
 							<div class="css-176lya2">
 								<input id="passwordConfirm"
 									name="passwordConfirm" placeholder="판매할 주소를 입력해주세요"
-									type="text" autocomplete="off" class="css-u52dqk" value="">
+									type="text" autocomplete="off" class="css-u52dqk" value="종문님 house">
 							</div>
 						</div>
 					</div>
@@ -181,6 +183,21 @@
 					<!-- 					</div> -->
 				</div>
 
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">제품정보<span class="css-qq9ke6">*</span></label>
+					</div>
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-detailwrite">
+								<input data-testid="input-box" id="password" name="password"
+									placeholder="안내사항을 작성해주세요" type="password" autocomplete="off"
+									class="productDetail" value="">
+							</div>
+						</div>
+					</div>
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+				</div>
 
 
 			</div>
