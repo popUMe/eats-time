@@ -14,7 +14,7 @@
 <body>
 <div id="sidebar">
 	 	 <div id="logo"></div>
-		<a href="index.jsp">공지사항</a> 
+		<a href="adminIndex.jsp">공지사항</a> 
 		<a href="member.jsp">회원관리</a> 
 		<a href="qna.jsp">문의내역</a>
 		<button id=logout-btn><a href="logout.jsp">로그아웃</a></button>

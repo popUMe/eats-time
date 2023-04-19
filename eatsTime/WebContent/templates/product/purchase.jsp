@@ -87,6 +87,18 @@
 					<div class="css-12aowi2 edbbr7c2">
 						<h3 class="css-1ddzp0m edbbr7c1">배송 정보&픽업 정보</h3>
 					</div>
+					<div class="css-iqoq9n e1pxan880">
+						<button class="css-q8bpgr e4nu7ef3" type="button" width="60"
+							height="30" radius="3">
+							<span class="css-ymwvow e4nu7ef1" id="addressTest">픽업</span>
+						</button>
+					</div>
+					<div class="css-iqoq9n e1pxan880">
+						<button class="css-q8bpgr e4nu7ef3" type="button" width="60"
+							height="30" radius="3">
+							<span class="css-ymwvow e4nu7ef1" id="addressTest2">배송</span>
+						</button>
+					</div>
 					<!-- 배송 정보 배송지 -->
 					<!-- 					<div class="css-5d6nlw e17yjk9v2">
 						<div class="css-1gshg9u e150alo82">
@@ -98,12 +110,12 @@
 							</div>
 						</div>
 					</div> -->
-
-					<div id="checkout-shipping-details" class="css-1y0xj4c e1pxan881">
+					<!-- 배송주소 부분 -->
+					<div id="checkout-shipping-details" class="css-1y0xj4c e1pxan881 addressDelivery">
 						<div class="css-1gshg9u e150alo82">
-							<span class="css-ln1csn e150alo81">배송(픽업) 주소</span>
+							<span class="css-ln1csn e150alo81">배송 주소</span>
 							<div class="css-82a6rk e150alo80">
-								<p class="css-f170u1 erv3izt0">배송(픽업) 주소를 입력해 주세요</p>
+								<p class="css-f170u1 erv3izt0">배송 주소를 입력해 주세요</p>
 								<div class="css-lgy2fd e12ad82f1"
 									style="padding-top: 0px; height: 240px">
 									<div class="css-acvisw e1uzxhvi6"
@@ -137,24 +149,57 @@
 												readonly>
 										</div>
 										<br>
-										<p class="css-1tak4sl eh5sxvr3" style="display: padding-top: 5px;">주문 상품이 <span style="font-weight: bold">'픽업'</span>일 경우 판매자의 주소를
-											입력해주세요</p>
+										<!-- <p class="css-1tak4sl eh5sxvr3" style="display: padding-top: 5px;">주문 상품이 <span style="font-weight: bold">'픽업'</span>일 경우 판매자의 주소를
+											입력해주세요</p> -->
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
 
-
-						<!-- 						<div height="44" class="css-t7kbxx e1uzxhvi3">
-							<input data-testid="input-box" id="receiver-name" name="name"
-								placeholder="이름을 입력해 주세요" type="text" required="" height="44"
-								class="css-1quw3ub e1uzxhvi2" value="김인진">
-							<button class="css-118q5z4 e8bjkbi0" size="16" id="delete-input"
-								tabindex="-1" aria-label="delete-input" type="button"></button>
-						</div> -->
-
-
-
+					<!-- 픽업주소 부분 -->
+					<div id="checkout-shipping-details" class="css-1y0xj4c e1pxan881 addressPickup"
+						style="display: none">
+						<div class="css-1gshg9u e150alo82">
+							<span class="css-ln1csn e150alo81">픽업 주소</span>
+							<div class="css-82a6rk e150alo80">
+								<div class="css-lgy2fd e12ad82f1"
+									style="padding-top: 0px; height: 240px">
+									<div class="css-acvisw e1uzxhvi6"
+										style="display: height:175px;">
+										<div style="display: flex; justify-content: space-between">
+											<div height="44" class="css-t7kbxx e1uzxhvi3">
+												<input data-testid="input-box" id="receiver-name"
+													name="name" placeholder="이름을 입력해 주세요" type="text"
+													required="" height="44" class="css-1quw3ub e1uzxhvi2"
+													value="김인진" style="visibility: hidden">
+											</div>
+											<div class="css-iqoq9n e1pxan880">
+												<button class="css-q8bpgr e4nu7ef3" type="button" width="60"
+													height="30" radius="3">
+													<span class="css-ymwvow e4nu7ef1">입력</span>
+												</button>
+											</div>
+										</div>
+										<br>
+										<div height="44" class="css-t7kbxx e1uzxhvi3">
+											<input data-testid="input-box" id="receiver-name" name="name"
+												placeholder="이름을 입력해 주세요" type="text" required=""
+												height="44" class="css-1quw3ub e1uzxhvi2" value="(주소)"
+												readonly>
+										</div>
+										<br>
+										<div height="44" class="css-t7kbxx e1uzxhvi3">
+											<input data-testid="input-box" id="receiver-name" name="name"
+												placeholder="이름을 입력해 주세요" type="text" required=""
+												height="44" class="css-1quw3ub e1uzxhvi2" value="(상세주소)"
+												readonly>
+										</div>
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="css-yazyg9 e150alo82">
 						<span class="css-ln1csn e150alo81"> 배송비</span>
@@ -230,8 +275,10 @@
 								</div>
 								<div class="css-acvisw e1uzxhvi6">
 									<label for="receiver-input3" class="css-c3g9of e1uzxhvi4">받으실
-										장소</label><span class="css-19lkxd2 e1uzxhvi5">*</span> (주문 상품이 <span style="font-weight: bold">'픽업'</span> 일
-									때 <span class="css-19lkxd2 e1uzxhvi5" style="font-size: 15px;"> 주소지 </span> 라고 작성해주세요)
+										장소</label><span class="css-19lkxd2 e1uzxhvi5">*</span> (주문 상품이 <span
+										style="font-weight: bold">'픽업'</span> 일 때 <span
+										class="css-19lkxd2 e1uzxhvi5" style="font-size: 15px;">
+										주소지 </span> 라고 작성해주세요)
 									<div height="44" class="css-t7kbxx e1uzxhvi3">
 										<input data-testid="input-box" id="receiver-input3"
 											name="name" placeholder="ex)문앞, 경비실, 택배함, 기타장소" type="text"
@@ -276,7 +323,9 @@
 								</div> -->
 								<div class="css-acvisw e1uzxhvi6">
 									<label for="receiver-input4" class="css-c3g9of e1uzxhvi4">공동현관
-										출입방법 (주문 상품이 <span style="font-weight: bold">'배송'</span> 일 때 입력해주세요) </label>
+										출입방법 (주문 상품이 <span style="font-weight: bold">'배송'</span> 일 때
+										입력해주세요)
+									</label>
 									<div height="44" class="css-t7kbxx e1uzxhvi3">
 										<input data-testid="input-box" id="receiver-input4"
 											name="name" placeholder="ex)공동현관 비밀번호는 1234 입니다, 자유 출입 가능합니다"
@@ -767,7 +816,18 @@
 	function clearInput4() {
 		document.getElementById("receiver-input4").value = "";
 	}
-
+	
+	/* 픽업정보 테스트 */
+	$('#addressTest').on('click', function(){
+		$('.addressDelivery').hide();
+		$('.addressPickup').show();
+	});
+	
+	/* 배송정보 테스트 */
+	$('#addressTest2').on('click', function(){
+		$('.addressDelivery').show();
+		$('.addressPickup').hide();
+	});
 	/* let $input = $('receiver-name');
 	$(clearInput).on('click', function(){
 		$input.value = "";
