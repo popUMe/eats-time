@@ -332,7 +332,6 @@
 	<div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <p>중복 확인 결과: 사용 가능한 아이디입니다.</p>
   </div>
 </div>
 	<jsp:include page="../footer.jsp" />
