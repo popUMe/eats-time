@@ -137,12 +137,12 @@
 							<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHN0cm9rZT0iI0NDQyIgc3Ryb2tlLXdpZHRoPSIxLjYiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTEyLjY2NiAyM2EzLjMzMyAzLjMzMyAwIDEgMCA2LjY2NiAwIi8+CiAgICAgICAgPHBhdGggZD0iTTI1Ljk5OCAyMi43MzhINmwuMDEzLS4wM2MuMDc2LS4xMzUuNDcxLS43MDQgMS4xODYtMS43MDlsLjc1LTEuMDV2LTYuNjM1YzAtNC40ODUgMy40MzgtOC4xNCA3Ljc0MS04LjMwOEwxNiA1YzQuNDQ2IDAgOC4wNSAzLjcyMiA4LjA1IDguMzE0djYuNjM0bDEuNzA3IDIuNDExYy4xNzMuMjUzLjI1NC4zOC4yNDIuMzh6IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="" class="css-0"></span>
 						</button>
 						 -->
-						<div class="css-14jnwd7 e10vtr1i0">
+						<div class="css-14jnwd7 css-insert">
 							<button class="insert-button css-1qirdbn e4nu7ef3" type="button" radius="3">
 								<span class="css-ymwvow e4nu7ef1">수정하기</span>
 							</button>
 						</div>
-						<div class="css-14jnwd7 e10vtr1i0">
+						<div class="css-14jnwd7 css-sell">
 							<button class="sell-button css-1qirdbn e4nu7ef3" type="button" radius="3">
 								<span class="css-ymwvow e4nu7ef1">판매하기</span>
 							</button>

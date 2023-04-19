@@ -134,7 +134,7 @@
 			<div class="css-1dahn5m" id="divdelivery"></div>
 			</span>
 				
-			<span class="css-mgd87h">배송</span>
+												<span class="css-mgd87h">배송</span>
 			</label>
 		
 		

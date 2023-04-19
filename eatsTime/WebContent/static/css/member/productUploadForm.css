@@ -493,10 +493,7 @@ div.image {
         }
         
         
-#Preview,
-#Preview li{
-    float:left
-}
+
 
 div.cancel {
 	position: absolute;
@@ -509,3 +506,6 @@ div.cancel {
 	text-align: center;
 	line-height: 15px;
 }
+
+
+

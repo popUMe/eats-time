@@ -7,33 +7,67 @@
 /*input radio가 check 이면 span 태그 색깔 변경 (보라), 체크 해제이면 하얀색으로 변경*/
 
 
-const $inputdelivery=$("#delivery");
-const $inputpickup=$("#pickup");
+//const $inputdelivery=$("#delivery");
+//const $inputpickup=$("#pickup");
+//
+//const $divdelivery=$("#divdelivery");
+//const $divpickup=$("#divpickup")
+//const $spandelivery=$("#deliveryspan");
+//const $spanpickup=$("#pickupspan");
 
-const $divdelivery=$("#divdelivery");
-const $divpickup=$("#divpickup")
-const $spandelivery=$("#deliveryspan");
-const $spanpickup=$("#pickupspan");
 
- $inputdelivery.on("click", function(){
-		$inputdelivery.prop("checked", $(this).is(":checked"));
-        $spandelivery.css("background-color", "#5f0080");
-		$divdelivery.css("background-color","#fff")
+
+
+
+
+
+
+const inputdelivery=document.querySelector("#delivery");
+const inputpickup=document.querySelector("#pickup");
+
+
+const divdelivery=document.querySelector("#divdelivery");
+const divpickup=document.querySelector("#divpickup");
+
+const spandelivery=document.querySelector("#deliveryspan");
+const spanpickup=document.querySelector("#pickupspan");
+
+/*input radio가 check 이면 span 태그 색깔 변경 (보라), 체크 해제이면 하얀색으로 변경*/
+
+let deliveryclickcheck=false;
+let pickupclickcheck=false;
+
+ inputdelivery.addEventListener("click", () => {
+//        if(deliveryclickcheck){return;} //clickCheck가 true이면 if문 안에 들어오고 return통해 종료
+        spandelivery.style.background="#5f0080";
+		divdelivery.style.background="#fff";
+		
+		spanpickup.style.background="#fff";
+		spanpickup.style.border="#dddddd";
+		deliveryclickcheck=true;
+		pickupclickcheck=false;``
     });
 
-$inputpickup.on("click", function(){
-		$inputpickup.prop("checked", true);
-        $spanpickup.css("background-color", "#5f0080");
-		$divpickup.css("background-color","#fff")
-
+ inputpickup.addEventListener("click", () => {
+	console.log("들어옴");
+//        if(pickupclickcheck){return;} //clickCheck가 true이면 if문 안에 들어오고 return통해 종료
+        spanpickup.style.background="#5f0080";
+		divpickup.style.background="#fff";
+		
+		spandelivery.style.background="#fff";
+		spandelivery.style.border="#dddddd";
+		pickupclickcheck=true;
+		deliveryclickcheck=false;
     });
 
-//	 $inputdelivery.on("click", function(){
-//		$inputdelivery.prop("checked", $(this).is(":checked"));
-//        $spandelivery.css("background-color", "#dddddd");
+// $inputdelivery.on("click", function(){
+////		$inputdelivery.prop("checked", $(this).is(":checked"));
+//		$inputdelivery.prop("checked", true);
+//		$inputpickup.prop("checked",false);
+//        $spandelivery.css("background-color", "#5f0080");
 //		$divdelivery.css("background-color","#fff")
 //    });
-//}
+
 
 
 

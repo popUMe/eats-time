@@ -12,7 +12,7 @@ let $point3 = $("use.point3");
 
 $mousepoint1.on("mouseover",function(){
 	
-	$point1.css("stroke","#5f0080");
+	$point1.css("stroke","#5f0080"); 
 	
 });
 
