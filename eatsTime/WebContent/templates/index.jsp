@@ -196,11 +196,11 @@
 				<div class="css-127g5zj e17fdfn91">
 					<div class="css-59n5un e1ne12di0">
 						<a
-							href="${pageContext.request.contextPath}/templates/serviceInfo.jsp"
+							href="${pageContext.request.contextPath}/templates/service_info.jsp"
 							class="css-1lougm2 ezbfqia4"><span
 							style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
 								alt="" sizes="100vw"
-								src="${pageContext.request.contextPath}/static/image/service_info.jpg"
+								src="${pageContext.request.contextPath}/static/image/main_banner_min01.jpg"
 								decoding="async" data-nimg="fill" class="css-0"
 								style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span></a>
 					</div>
