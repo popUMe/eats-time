@@ -26,13 +26,13 @@
 						alt="" class="css-ypnlzr e1hwfd030">
 					<div class="css-yb4g98 e190vd4y3">
 						<p class="css-14is9qy e190vd4y0">김인진님의 주문이 완료되었습니다.</p>
-						<p class="css-1efi8gv e190vd4y2">
+						<!-- <p class="css-1efi8gv e190vd4y2">
 							내일 새벽에 만나요!<br>
-						</p>
+						</p> -->
 					</div>
 				</div>
-				<div class="css-a0w530 e13kpt4l4">
-					<!-- 감사혜택 1 -->
+				<!-- <div class="css-a0w530 e13kpt4l4">
+					감사혜택 1
 					<div class="css-16jg3zy e13kpt4l3">
 						<span class="css-1s2o3jp e13kpt4l2">첫 구매 감사혜택 1</span><strong
 							class="css-1l4a3ml e13kpt4l1">삭제예정</strong>
@@ -43,7 +43,7 @@
 							class="css-1l4a3ml e13kpt4l1">삭제예정</strong>
 						<p class="css-1o1wbrw e13kpt4l0">여기 부분 꾸미기 용 예비 2</p>
 					</div>
-				</div>
+				</div> -->
 				<!-- 결제금액 -->
 				<div class="css-1y8r6xo epyeklp0">
 					<div class="css-1a1jcfo ea1mry77">
@@ -121,9 +121,9 @@
 						</div>
 						<div>
 							<p class="css-1erf9v6 ervvhjr1">
-								다음 주문에 <span>3만원 할인</span> 받기
+								결제 금액의 <span>3%는</span> 후원됩니다
 							</p>
-							<p class="css-1pgxldh ervvhjr0">여기 감사문구</p>
+							<p class="css-1pgxldh ervvhjr0">결식 아동을 위해 사용하겠습니다</p>
 						</div>
 						<div style="max-width: 67px;">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 429"
