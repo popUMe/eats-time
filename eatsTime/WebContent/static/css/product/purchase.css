@@ -328,9 +328,9 @@
 	width: 60px;
 	height: 30px;
 	border-radius: 3px;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background-color: rgb(255, 255, 255);
-	border: 1px solid rgb(95, 0, 128);
+	border: 1px solid #ff4f32;
 }
 
 .css-q8bpgr>span {
@@ -698,7 +698,7 @@ svg:not(:root) {
 	display: inline-block;
 	position: relative;
 	border-radius: 50%;
-	background-color: rgb(95, 0, 128);
+	background-color: #ff4f32;
 }
 
 .css-1vic0rk {
@@ -921,7 +921,7 @@ svg:not(:root) {
 	display: inline-block;
 	position: relative;
 	border-radius: 50%;
-	background-color: rgb(95, 0, 128);
+	background-color: #ff4f32;
 }
 
 .css-1vic0rk {
@@ -988,7 +988,7 @@ svg:not(:root) {
 	line-height: 16px;
 	padding-bottom: 5px;
 	font-weight: 500;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 }
 
 .css-1xi0wk2 span {
@@ -1009,7 +1009,7 @@ svg:not(:root) {
 	display: flex;
 	font-size: 12px;
 	line-height: 16px;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 }
 
 .css-195jr2y {
@@ -1125,7 +1125,7 @@ svg:not(:root) {
 	height: 56px;
 	border-radius: 3px;
 	color: rgb(255, 255, 255);
-	background-color: rgb(95, 0, 128);
+	background-color: #ff4f32;
 	border: 0px none;
 }
 
@@ -1251,10 +1251,10 @@ svg:not(:root) {
 	position: relative;
 	width: 100%;
 	height: 48px;
-	border: 1px solid rgb(95, 0, 128);
+	border: 1px solid #ff4f32;
 	font-size: 14px;
 	color: rgb(255, 255, 255);
-	background: rgb(95, 0, 128);
+	background: #ff4f32;
 	font-weight: 500;
 	border-radius: 3px;
 }
@@ -1410,7 +1410,7 @@ svg:not(:root) {
 	height: 56px;
 	border-radius: 3px;
 	color: rgb(255, 255, 255);
-	background-color: rgb(95, 0, 128);
+	background-color: #ff4f32;
 	border: 0px none;
 	margin: 40px auto 30px;
 	font-weight: 500;
@@ -1810,7 +1810,7 @@ th {
     width: 100%;
     height: 56px;
     border-radius: 0px;
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
     background-color: rgb(255, 255, 255);
     border: 0px;
     font-weight: 700;
