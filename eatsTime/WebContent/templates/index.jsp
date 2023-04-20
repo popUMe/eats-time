@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="icon" href="https://www.kurly.com//favicon.ico" />
-<title>이츠타임</title>
+<title>이츠타임 - [메인]</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <link rel="stylesheet"
