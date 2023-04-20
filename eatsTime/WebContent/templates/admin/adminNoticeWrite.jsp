@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html lang="ko"><head>
     <title>공지사항</title>
-    <link rel="stylesheet" href="../../static/css/admin/noticeWrite.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminNoticeWrite.css">
 </head>
 <body>
     <div class="board_wrap">
         <div class="board_title">
-            <strong>공지사항</strong>
+            <h1>공지사항</h1>
         </div>
         <div class="board_write_wrap">
             <div class="board_write">
@@ -19,12 +19,12 @@
                     </dl>
                 </div>
                 <div class="cont">
-                    <textarea placeholder="내용 입력"></textarea>
+                    <textarea inputmode="text" placeholder="내용 입력"></textarea>
                 </div>
             </div>
             <div class="btn">
-                <a href="index.jsp" class="on">등록</a>
-                <a href="index.jsp">취소</a>
+                <a href="adminIndex.jsp" class="on">등록</a>
+                <a href="adminIndex.jsp">취소</a>
             </div>
         </div>
     </div>

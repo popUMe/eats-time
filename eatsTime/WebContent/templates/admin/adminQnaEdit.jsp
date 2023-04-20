@@ -4,12 +4,12 @@
 <html lang="ko">
 <head>
 <title>공지사항</title>
-<link rel="stylesheet" href="../../static/css/admin/noticeWrite.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminNoticeWrite.css">
 </head>
 <body>
 	<div class="board_wrap">
 		<div class="board_title">
-			<strong>공지사항</strong>
+			<h1>문의내역</h1>
 		</div>
 		<div class="board_write_wrap">
 			<div class="board_write">
@@ -17,7 +17,7 @@
 					<dl>
 						<dt>제목</dt>
 						<dd>
-							<input type="text" placeholder="제목 입력" value="제목">
+							<input type="text" placeholder="제목 입력" value="문의">
 						</dd>
 					</dl>
 				</div>
@@ -30,8 +30,8 @@
 				</div>
 			</div>
 			<div class="btn">
-			 <a href="noticeView.jsp" class="on">수정</a>
-			 <a href="noticeView.jsp">취소</a>
+			 <a href="adminQnaView.jsp" class="on">수정</a>
+			 <a href="adminQnaView.jsp">취소</a>
 			</div>
 		</div>
 	</div>
