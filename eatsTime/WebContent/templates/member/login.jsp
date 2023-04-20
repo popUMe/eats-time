@@ -54,6 +54,14 @@
 			</div>
 		</div>
 	</div>
+	<div id="modal-Disabled">
+		<div class="banner-online">
+			<div class="modal-content">비활성화된 계정입니다 활성화하시겠습니까?</div>
+			<div class="close-button" style="cursor: pointer;">
+				확인
+			</div>
+		</div>
+	</div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/login.js"></script>
 </body>

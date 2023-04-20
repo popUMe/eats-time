@@ -173,21 +173,36 @@ $('.css-1schgvv').on('click', function() {
 });
 
 
-
-
 $(document).ready(function() {
-  // 성별 라디오 버튼 클릭 이벤트
-  $('input[type="radio"][name="gender"]').on('click', function() {
-    // 선택한 라디오 버튼의 값을 가져옴
-    var selectedValue = $(this).val();
-    
-    // 선택한 라디오 버튼에 해당하는 체크박스를 체크 처리
-    $('input[type="checkbox"][value="' + selectedValue + '"]').prop('checked', true);
-    
-    // 선택하지 않은 라디오 버튼에 해당하는 체크박스를 체크 해제 처리
-    $('input[type="checkbox"][value!="' + selectedValue + '"]').prop('checked', false);
+  const $maleLabel = $("label[for='gender-man']");
+  const $maleInput = $("#gender-man");
+  const $maleSpan = $maleLabel.find(".css-198i9ca");
+
+  $maleLabel.on("click", function() {
+    $maleInput.prop("checked", true);
+    $maleSpan.addClass("checked");
+  });
+
+  const $femaleLabel = $("label[for='gender-woman']");
+  const $femaleInput = $("#gender-woman");
+  const $femaleSpan = $femaleLabel.find(".css-198i9ca");
+
+  $femaleLabel.on("click", function() {
+    $femaleInput.prop("checked", true);
+    $femaleSpan.addClass("checked");
+  });
+
+  const $noneLabel = $("label[for='gender-none']");
+  const $noneInput = $("#gender-none");
+  const $noneSpan = $noneLabel.find(".css-5xw1m2");
+
+  $noneLabel.on("click", function() {
+    $noneInput.prop("checked", true);
+    $maleSpan.removeClass("checked");
+    $femaleSpan.removeClass("checked");
   });
 });
+
 function validateBirthday() {
   var year = document.getElementsByName("birthYear")[0].value;
   var month = document.getElementsByName("birthMonth")[0].value;
@@ -212,8 +227,8 @@ function validateBirthday() {
 
 
 
-const $all = $(".all");
-const $checkboxes = $(".term");
+const $all = $("#TermsAgreeAll"); // id 선택자로 변경
+const $checkboxes = $("input[type='checkbox']:not(#TermsAgreeAll)"); // 전체동의 제외한 체크박스 선택자 수정
 
 $all.on("click", function(){
   $checkboxes.prop("checked", $(this).is(":checked"));
@@ -221,12 +236,12 @@ $all.on("click", function(){
 
 // 체크 박스 중 한 개라도 false일 경우 전체동의 해제
 $checkboxes.on("click", function(){
-  $all.prop("checked", $checkboxes.filter(":checked").length == 3);
+  $all.prop("checked", $checkboxes.filter(":checked").length == $checkboxes.length); // 체크박스 개수에 따라 동적으로 처리하도록 수정
 });
 
 $('#RequiredTermsOfPrivacy').on("click", function() {
-  // 체크박스 클릭시 동작할 코드 작성
   if ($('#RequiredTermsOfPrivacy').is(":checked")) {
     $('#buttonId').click();
   }
 });
+
