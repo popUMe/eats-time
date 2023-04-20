@@ -53,6 +53,14 @@ let timeleft = 180; // 제한 시간 지정 값
 let setinterval = setInterval(timeIt, 1200);
 
 
+/*혹시 모를 이 페이지가 열리면 타이머 값 초기화*/
+$(document).ready(function(){
+	clearInterval(setinterval);
+	counter = 0;
+})
+
+
+
 
 
 /*타이머 태그 안에 값 넣기*/

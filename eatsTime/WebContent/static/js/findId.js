@@ -59,6 +59,13 @@ let setinterval = setInterval(timeIt, 1200);
 
 
 
+/*혹시 모를 이 페이지가 열리면 타이머 값 초기화*/
+$(document).ready(function(){
+	clearInterval(setinterval);
+	counter = 0;
+})
+
+
 
 
 /*convertSeconds타이머 함수 사용*/
