@@ -136,8 +136,10 @@
 		</div>
 		
 <!-- 		시간 표시 -->
+		<div class="clocktime">
 		<div id="date" class="date"></div>
 		<div class="time" id="time"></div>
+		</div>
 <!-- 			<span>09</span><span>12</span><span>52</span> -->
 	</div>
  

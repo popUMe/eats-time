@@ -11,9 +11,14 @@ function setClock(){
     var year = dateInfo.getFullYear(); //년
     var month = dateInfo.getMonth()+1; //monthIndex를 반환해주기 때문에 1을 더해준다.
     var date = dateInfo.getDate();//날짜
-    document.getElementById("time").innerHTML = hour + ":" + min  + ":" + sec;
-    document.getElementById("date").innerHTML = split()year + "년 " + month + "월 " + date + "일";
+    
+	var twoyear=String(year).slice(-2);
+	
+	document.getElementById("time").innerHTML = hour + ":" + min  + ":" + sec;
+    document.getElementById("date").innerHTML = twoyear + "년 " + month + "월 " + date + "일";
 }
+
+
 function modifyNumber(time){
     if(parseInt(time)<10){
         return "0"+ time;

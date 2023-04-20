@@ -1,503 +1,509 @@
 @charset "UTF-8";
 
-
 /* wrap */
 .css-16c0d8l {
-    position: relative;
-    width: 1050px;
-    margin: 0px auto;
-    padding-top: 50px;
+	position: relative;
+	width: 1050px;
+	margin: 0px auto;
+	padding-top: 50px;
 }
 
 .css-1eoy87d {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
 }
 
 /* 이미지 섹션 */
 .css-fyfynr {
-    width: 430px;
-    height: 552px;
-    background: url(https://img-cf.kurly.com/shop/data/goods/165304027922l0.jpg) 0% 0% / cover, url(https://res.kurly.com/_next/static/images/noimg-150x195-2c819ff….svg) 50% 50% / contain no-repeat rgb(245, 245, 245);
+	width: 430px;
+	height: 552px;
+	background:
+		url(https://img-cf.kurly.com/shop/data/goods/165304027922l0.jpg) 0% 0%/cover,
+		url(https://res.kurly.com/_next/static/images/noimg-150x195-2c819ff….svg)
+		50% 50%/contain no-repeat rgb(245, 245, 245);
 }
 
 /* 텍스트 섹션 */
 .css-1ua1wyk {
-    width: 560px;
+	width: 560px;
 }
 
 .css-12lw2qc {
-    font-weight: 500;
-    line-height: 1.36;
-    letter-spacing: -0.5px;
-    color: rgb(153, 153, 153);
-    margin-bottom: 6px;
-    width: 500px;
+	font-weight: 500;
+	line-height: 1.36;
+	letter-spacing: -0.5px;
+	color: rgb(153, 153, 153);
+	margin-bottom: 6px;
+	width: 500px;
 }
 
 .css-1fttcpj {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .css-1bhm8h2 {
-    display: flex;
-    flex: 1 1 0%;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+	display: flex;
+	flex: 1 1 0%;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
 }
 
 .css-47pv1l {
-    padding-top: 5px;
-    font-size: 14px;
-    font-weight: 400;
-    color: rgb(181, 181, 181);
-    line-height: 19px;
-    letter-spacing: -0.5px;
+	padding-top: 5px;
+	font-size: 14px;
+	font-weight: 400;
+	color: rgb(181, 181, 181);
+	line-height: 19px;
+	letter-spacing: -0.5px;
 }
 
 .css-liviaq {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    padding-top: 19px;
-    font-weight: bold;
-    line-height: 30px;
-    letter-spacing: -0.5px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	padding-top: 19px;
+	font-weight: bold;
+	line-height: 30px;
+	letter-spacing: -0.5px;
 }
 
 .css-9pf1ze {
-    padding-right: 4px;
-    font-size: 28px;
-    color: rgb(51, 51, 51);
+	padding-right: 4px;
+	font-size: 28px;
+	color: rgb(51, 51, 51);
 }
 
 .css-1x9cx9j {
-    display: inline-block;
-    position: relative;
-    top: 3px;
-    font-size: 18px;
-    color: rgb(51, 51, 51);
-    vertical-align: top;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	font-size: 18px;
+	color: rgb(51, 51, 51);
+	vertical-align: top;
 }
 
 .css-1tv2o0g {
-    display: inline-block;
-    font-size: 16px;
-    color: rgb(181, 181, 181);
-    letter-spacing: -0.5px;
-    padding-top: 9px;
-    text-decoration: line-through;
-    margin-right: 0px;
+	display: inline-block;
+	font-size: 16px;
+	color: rgb(181, 181, 181);
+	letter-spacing: -0.5px;
+	padding-top: 9px;
+	text-decoration: line-through;
+	margin-right: 0px;
 }
 
-	/* 하단 텍스트 */
+/* 하단 텍스트 */
 .css-iqoq9n {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .css-e6zlnr {
-    display: flex;
-    flex: 1 1 0%;
-    flex-direction: row;
-    align-items: flex-start;
-    overflow: hidden;
-    width: 100%;
-    padding: 7px 5px;
-    border-top: 1px solid rgb(244, 244, 244);
-    font-size: 14px;
-    letter-spacing: -0.5px;
+	display: flex;
+	flex: 1 1 0%;
+	flex-direction: row;
+	align-items: flex-start;
+	overflow: hidden;
+	width: 100%;
+	padding: 7px 5px;
+	border-top: 1px solid rgb(244, 244, 244);
+	font-size: 14px;
+	letter-spacing: -0.5px;
 }
 
 .css-lytdfk {
-    width: 128px;
-    height: 100%;
-    color: rgb(102, 102, 102);
-    font-weight: 400;
-    line-height: 19px;
+	width: 128px;
+	height: 100%;
+	color: rgb(102, 102, 102);
+	font-weight: 400;
+	line-height: 19px;
 }
 
 .css-1k8t52o {
-    display: flex;
-    flex: 1 1 0%;
-    flex-direction: column;
+	display: flex;
+	flex: 1 1 0%;
+	flex-direction: column;
 }
 
 .css-c02hqi {
-    color: rgb(51, 51, 51);
-    font-weight: 400;
-    line-height: 19px;
-    white-space: pre-line;
-    word-break: break-all;
-    overflow: hidden;
+	color: rgb(51, 51, 51);
+	font-weight: 400;
+	line-height: 19px;
+	white-space: pre-line;
+	word-break: break-all;
+	overflow: hidden;
 }
 
 .css-uy94b2 {
-    display: block;
-    font-size: 12px;
-    color: rgb(102, 102, 102);
-    padding-top: 4px;
-    line-height: 16px;
-    white-space: pre-line;
+	display: block;
+	font-size: 12px;
+	color: rgb(102, 102, 102);
+	padding-top: 4px;
+	line-height: 16px;
+	white-space: pre-line;
 }
 
-	/* 상품선택 */
+/* 상품선택 */
 .css-1bp09d0 {
-    padding-bottom: 40px;
+	padding-bottom: 40px;
 }
 
 .css-2lvxh7 {
-    border-bottom: 1px solid rgb(244, 244, 244);
+	border-bottom: 1px solid rgb(244, 244, 244);
 }
 
-
-
 .css-lytdfk {
-    width: 128px;
-    height: 100%;
-    color: rgb(102, 102, 102);
-    font-weight: 400;
-    line-height: 19px;
+	width: 128px;
+	height: 100%;
+	color: rgb(102, 102, 102);
+	font-weight: 400;
+	line-height: 19px;
 }
 
 .css-1k8t52o {
-    display: flex;
-    flex: 1 1 0%;
-    flex-direction: column;
+	display: flex;
+	flex: 1 1 0%;
+	flex-direction: column;
 }
 
 .css-1cb5lnc {
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    padding: 11px 10px 11px 15px;
-    font-size: 12px;
-    border-left: 1px solid rgb(244, 244, 244);
-    border-top: 1px solid rgb(244, 244, 244);
-    border-right: 1px solid rgb(244, 244, 244);
+	display: flex;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding: 11px 10px 11px 15px;
+	font-size: 12px;
+	border-left: 1px solid rgb(244, 244, 244);
+	border-top: 1px solid rgb(244, 244, 244);
+	border-right: 1px solid rgb(244, 244, 244);
 }
 
 .css-1cb5lnc:last-of-type {
-    border-bottom: 1px solid rgb(244, 244, 244);
+	border-bottom: 1px solid rgb(244, 244, 244);
 }
 
 .css-1qdyvok {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    align-items: flex-start;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
 .css-100vshh {
-    line-height: 16px;
-    width: 320px;
-    color: rgb(51, 51, 51);
-    overflow-wrap: break-word;
+	line-height: 16px;
+	width: 320px;
+	color: rgb(51, 51, 51);
+	overflow-wrap: break-word;
 }
 
 .css-1liqj4s {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    padding-top: 12px;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	padding-top: 12px;
 }
 
 .css-16dy8wz {
-    display: inline-flex;
-    flex-direction: row;
-    -webkit-box-align: center;
-    align-items: center;
-    border: 1px solid rgb(221, 223, 225);
-    width: 88px;
-    border-radius: 3px;
+	display: inline-flex;
+	flex-direction: row;
+	-webkit-box-align: center;
+	align-items: center;
+	border: 1px solid rgb(221, 223, 225);
+	width: 88px;
+	border-radius: 3px;
 }
 
 .css-1e90glc {
-    display: inline-flex;
-    width: 28px;
-    height: 28px;
-    border: none;
-    font-size: 1px;
-    color: transparent;
-    background-size: cover;
-    background-color: transparent;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMCAxNHYySDEwdi0yeiIgZmlsbD0iI0RERCIgZmlsbC1ydWxlPSJub256ZXJvIi8+Cjwvc3ZnPgo=);
-    vertical-align: top;
+	display: inline-flex;
+	width: 28px;
+	height: 28px;
+	border: none;
+	font-size: 1px;
+	color: transparent;
+	background-size: cover;
+	background-color: transparent;
+	background-image:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMCAxNHYySDEwdi0yeiIgZmlsbD0iI0RERCIgZmlsbC1ydWxlPSJub256ZXJvIi8+Cjwvc3ZnPgo=);
+	vertical-align: top;
 }
 
 button[disabled], input[disabled] {
-    cursor: default;
+	cursor: default;
 }
 
 button.css-8azp8 {
-    display: inline-flex;
-    width: 28px;
-    height: 28px;
-    border: none;
-    font-size: 1px;
-    color: transparent;
-    background-size: cover;
-    background-color: transparent;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMCAxNHYySDEwdi0yeiIgZmlsbD0iIzMzMyIgZmlsbC1ydWxlPSJub256ZXJvIi8+Cjwvc3ZnPgo=);
-    vertical-align: top;
+	display: inline-flex;
+	width: 28px;
+	height: 28px;
+	border: none;
+	font-size: 1px;
+	color: transparent;
+	background-size: cover;
+	background-color: transparent;
+	background-image:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMCAxNHYySDEwdi0yeiIgZmlsbD0iIzMzMyIgZmlsbC1ydWxlPSJub256ZXJvIi8+Cjwvc3ZnPgo=);
+	vertical-align: top;
 }
 
 .css-6m57y0 {
-    display: inline-flex;
-    overflow: hidden;
-    white-space: nowrap;
-    -webkit-box-pack: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(51, 51, 51);
-    text-align: center;
-    width: 31px;
-    height: 28px;
-    line-height: 28px;
+	display: inline-flex;
+	overflow: hidden;
+	white-space: nowrap;
+	-webkit-box-pack: center;
+	justify-content: center;
+	font-size: 14px;
+	font-weight: 600;
+	color: rgb(51, 51, 51);
+	text-align: center;
+	width: 31px;
+	height: 28px;
+	line-height: 28px;
 }
 
 .css-16dy8wz .count {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 .css-18y6jr4 {
-    display: inline-flex;
-    width: 28px;
-    height: 28px;
-    border: none;
-    font-size: 1px;
-    color: transparent;
-    background-size: cover;
-    background-color: transparent;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xNiAxMHY0aDR2MmgtNHY0aC0ydi00aC00di0yaDR2LTRoMnoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgo8L3N2Zz4K);
-    vertical-align: top;
+	display: inline-flex;
+	width: 28px;
+	height: 28px;
+	border: none;
+	font-size: 1px;
+	color: transparent;
+	background-size: cover;
+	background-color: transparent;
+	background-image:
+		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xNiAxMHY0aDR2MmgtNHY0aC0ydi00aC00di0yaDR2LTRoMnoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgo8L3N2Zz4K);
+	vertical-align: top;
 }
 
-button.plus-on{display: inline-flex;
-    width: 28px;
-    height: 28px;
-    border: none;
-    font-size: 1px;
-    color: transparent;
-	background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=plus-sm&color=ddd");
+button.plus-on {
+	display: inline-flex;
+	width: 28px;
+	height: 28px;
+	border: none;
+	font-size: 1px;
+	color: transparent;
+	background-image:
+		url("https://s2.svgbox.net/hero-solid.svg?ic=plus-sm&color=ddd");
 	background-color: transparent;
-    background-repeat : no-repeat;
-    background-position : center;
-    background-size: 72%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 72%;
 	vertical-align: top;
-	fill : #ddd;
+	fill: #ddd;
 }
 
 .css-fburr9 {
-    margin-right: 4px;
-    font-weight: normal;
-    font-size: 12px;
-    color: rgb(181, 181, 181);
-    text-decoration: line-through;
+	margin-right: 4px;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgb(181, 181, 181);
+	text-decoration: line-through;
 }
 
 .css-1foiu5e {
-    font-weight: bold;
-    font-size: 12px;
-    color: rgb(51, 51, 51);
-    padding-right: 5px;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgb(51, 51, 51);
+	padding-right: 5px;
 }
 
 .css-9y0nwt {
-    padding-top: 30px;
+	padding-top: 30px;
 }
 
 .css-ixlb9s {
-    letter-spacing: -0.5px;
+	letter-spacing: -0.5px;
 }
 
 .css-yhijln {
-    display: flex;
-    -webkit-box-pack: end;
-    justify-content: flex-end;
-    align-items: flex-end;
+	display: flex;
+	-webkit-box-pack: end;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 
 .css-w1is7v {
-    padding-right: 12px;
-    font-size: 13px;
-    font-weight: 500;
-    color: rgb(51, 51, 51);
-    line-height: 20px;
+	padding-right: 12px;
+	font-size: 13px;
+	font-weight: 500;
+	color: rgb(51, 51, 51);
+	line-height: 20px;
 }
 
 .css-x4cdgl {
-    font-weight: bold;
-    font-size: 32px;
-    color: rgb(51, 51, 51);
-    line-height: 36px;
+	font-weight: bold;
+	font-size: 32px;
+	color: rgb(51, 51, 51);
+	line-height: 36px;
 }
 
 .css-1jb8hmu {
-    padding-left: 5px;
-    font-size: 20px;
-    font-weight: 600;
-    color: rgb(51, 51, 51);
-    line-height: 30px;
+	padding-left: 5px;
+	font-size: 20px;
+	font-weight: 600;
+	color: rgb(51, 51, 51);
+	line-height: 30px;
 }
 
 .css-gnxbjx {
-    gap: 8px;
-    margin-top: 9.7px;
+	gap: 8px;
+	margin-top: 9.7px;
 }
 
-
-.css-insert{
+.css-insert {
 	-webkit-box-flex: 1;
-    flex-grow: 1;
-    width:80%
-	
+	flex-grow: 1;
+	width: 80%
 }
-.css-sell{
+
+.css-sell {
 	-webkit-box-flex: 1;
-    flex-grow: 1;
-    width:80%;
-    margin-top:15px;
-}
-
-
-.css-1qirdbn {
-    display: block;
-    padding: 0px 10px;
-    text-align: center;
-    overflow: hidden;
-    width: 100%;
-    height: 52px;
-    border-radius: 3px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 79, 50);
-    border: 0px none;
+	flex-grow: 1;
+	width: 80%;
+	margin-top: 15px;
 }
 
 .css-1qirdbn {
-    height: 56px;
- 	
+	display: block;
+	padding: 0px 10px;
+	text-align: center;
+	overflow: hidden;
+	width: 100%;
+	height: 52px;
+	border-radius: 3px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 79, 50);
+	border: 0px none;
+}
+
+.css-1qirdbn {
+	height: 56px;
 }
 
 .css-14jnwd7 .insert-button {
-	color:rgb(255, 79, 50);
+	color: rgb(255, 79, 50);
 	border: 1px solid rgb(255, 79, 50);
 	background-color: rgb(255, 255, 255);
 	font-weight: 500;
 }
 
 .css-14jnwd7 .sell-button {
-    font-weight: 500;
-}
-.css-ymwvow {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 500;
+	font-weight: 500;
 }
 
+.css-ymwvow {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+}
 
 .css-we1gxf {
-    display: flex;
-    padding: 10px 0px 6px;
+	display: flex;
+	padding: 10px 0px 6px;
 }
 
-
-
 .css-we1gxf .lottie-timer {
-    width: 36px;
-    height: 47px;
-    margin-right: 5px;
+	width: 36px;
+	height: 47px;
+	margin-right: 5px;
 }
 
 .css-8q344o {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 136px;
-    font-size: 32px;
-    font-weight: 800;
-    color: rgb(51, 51, 51);
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	width: 136px;
+	font-size: 32px;
+	font-weight: 800;
+	color: rgb(51, 51, 51);
 }
 
 .css-we1gxf .time-units span:not(:last-of-type) {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .css-we1gxf .time-units span {
-    position: relative;
-    flex-shrink: 0;
-    min-width: 38px;
-    line-height: 47px;
+	position: relative;
+	flex-shrink: 0;
+	min-width: 38px;
+	line-height: 47px;
 }
 
 .css-we1gxf .time-units span:not(:last-of-type)::after {
-    content: ":";
-    position: absolute;
-    width: 11px;
-    height: 50px;
-    top: 0px;
-    right: -11px;
-    font-size: 25px;
+	content: ":";
+	position: absolute;
+	width: 11px;
+	height: 50px;
+	top: 0px;
+	right: -11px;
+	font-size: 25px;
 }
 
 .css-we1gxf .time-units span:not(:last-of-type)::after {
-    content: ":";
-    position: absolute;
-    width: 11px;
-    height: 50px;
-    top: 0px;
-    right: -11px;
-    font-size: 25px;
+	content: ":";
+	position: absolute;
+	width: 11px;
+	height: 50px;
+	top: 0px;
+	right: -11px;
+	font-size: 25px;
 }
 
 .css-we1gxf .time-units span {
-    position: relative;
-    flex-shrink: 0;
-    min-width: 38px;
-    line-height: 47px;
+	position: relative;
+	flex-shrink: 0;
+	min-width: 38px;
+	line-height: 47px;
 }
+
 .css-d0y7nj {
-    padding-top: 26px;
-    font-size: 14px;
-    color: rgb(204, 204, 204);
-    font-weight: normal;
-    line-height: 1.43;
-    letter-spacing: -0.4px;
+	padding-top: 26px;
+	font-size: 14px;
+	color: rgb(204, 204, 204);
+	font-weight: normal;
+	line-height: 1.43;
+	letter-spacing: -0.4px;
 }
-.sellnotice{
-	
+
+.sellnotice {
 	padding-top: 20px;
-    font-size: 25px;
-    color: rgb(51, 51, 51);
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: -0.26px;
-	
+	font-size: 25px;
+	color: rgb(51, 51, 51);
+	font-weight: 500;
+	line-height: 1.1;
+	letter-spacing: -0.26px;
 }
-.timenotice{
+
+.timenotice {
 	padding-top: 11px;
-    font-size: 16px;
-    color: rgb(153, 153, 153);
-    font-weight: normal;
-    line-height: 1.3;
-    letter-spacing: normal;
+	font-size: 16px;
+	color: rgb(153, 153, 153);
+	font-weight: normal;
+	line-height: 1.3;
+	letter-spacing: normal;
 }
 
-.date{
-    font-size: 30px; 
-    color: rgb(255, 79, 50);  /* 흰색 */
-    font-weight: bold;
-}
-.time{
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(255, 79, 50);  /*보라색 */
+.date {
+	font-size: 20px;
+	color: rgb(255, 79, 50); 
+	font-weight: bold;
 }
 
+.time {
+	font-size: 30px;
+	font-weight: bold;
+	color: rgb(255, 79, 50); 
+	text-align: center;
+}
+
+.clocktime {
+	display: block;
+}
