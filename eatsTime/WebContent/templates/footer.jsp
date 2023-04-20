@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
-<title>푸터</title>
+<title>이츠타임 - [푸터]</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 </head>
