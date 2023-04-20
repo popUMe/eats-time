@@ -16,7 +16,7 @@
 		<div class="css-luwwab eug5r811">
 				<!-- 좌측 고객센터 메뉴창 -->
 			<div class="css-833hqy ecbxmj3">
-				<div class="css-1v4whg ecbxmj2">마이컬리</div>
+				<div class="css-1v4whg ecbxmj2">마이이츠</div>
 				<!-- 메뉴창 -->
 				<ul class="css-1x9bshx ecbxmj1">
 					<li>
