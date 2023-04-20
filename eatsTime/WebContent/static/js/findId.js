@@ -401,7 +401,7 @@ $(".resend-button").on("click", function() {
 	$('.banner-online').fadeIn();
 	$('#modal').fadeIn();
 	$("html").css("overflow-y", "hidden");
-	$(".modal-content1").html("재발송 되었습니다.");
+	$(".modal-content1").html("인증번호가 발송되었습니다. <br> 3분 안에 인증번호를 입력해 주세요.");
 	/*인증번호 재발송누르면 안에 인증번호 값 초기화후 밑에 에러메세지 다시*/
 	verificationNumber.val("");
 	$(".error4").text("인증번호를 입력해 주세요");
@@ -573,7 +573,7 @@ function timeoutModal() {
 	$('.banner-online').fadeIn();
 	$('#modalSubmit').fadeIn();
 	$("html").css("overflow-y", "hidden");
-	$(".modal-content").html("3분이 지났습니다.");
+	$(".modal-content").html("인증번호가 발송되었습니다. \n 3분 안에 인증번호를 입력해 주세요.");
 
 	closeButtonSubmit.click(function() {
 		$('.banner-online').fadeOut();
