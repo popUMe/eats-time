@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html lang="ko"><head>
     <title>공지사항</title>
-    <link rel="stylesheet" href="../../static/css/admin/noticeWrite.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminNoticeWrite.css">
 </head>
 <body>
     <div class="board_wrap">
         <div class="board_title">
-            <strong>문의내역</strong>
+            <h1>문의내역</h1>
         </div>
         <div class="board_write_wrap">
             <div class="board_write">
@@ -23,10 +23,11 @@
                 </div>
             </div>
             <div class="btn">
-                <a href="qna.jsp" class="on">등록</a>
-                <a href="qna.jsp">취소</a>
+                <a href="adminQna.jsp" class="on">등록</a>
+                <a href="adminQna.jsp">취소</a>
             </div>
         </div>
     </div>
 
-</body></html>
+</body>
+</html>
