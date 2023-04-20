@@ -13,7 +13,7 @@
 	<div class="css-luwwab">
 		<div class="css-833hqy">
 			<div class="css-1v4whg">마이컬리</div>
-			<!--css-1v4whg ecbxmj2  -->
+			<!--css-1v4whg ecbxmj2  --> 
 			<ul class="css-1x9bshx">
 				<li><a class="css-g4g0eu" id="li-1">주문내역
 				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"viewBox="0 0 24 24">
@@ -95,7 +95,7 @@
 						<div class="css-82a6rk">
 							<div class="css-1waqr6j">
 								<div class="css-176lya2">
-									<input data-testid="input-box" id="userId" name="userId"
+									<input id="userId" name="userId"
 										type="text" readonly="" class="css-u52dqk"
 										value="사용자 ID">
 								</div>
@@ -111,7 +111,7 @@
 						<div class="css-82a6rk">
 							<div class="css-1waqr6j">
 								<div class="css-176lya2">
-									<input data-testid="input-box" id="originalPassword"
+									<input id="originalPassword"
 										name="originalPassword" placeholder="비밀번호를 입력해 주세요"
 										type="password" autocomplete="off"
 										class="css-u52dqk" value="password"

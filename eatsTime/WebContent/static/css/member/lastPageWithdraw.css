@@ -42,7 +42,7 @@
 	display: block;
 	padding: 12px 0px 12px;
 	font-weight: normal;
-	color: rgb(95, 0, 128);
+	color:#ff4f32;
 }
 
 ul {
@@ -64,9 +64,9 @@ ul {
     text-align: center;
     overflow: hidden;
     height: 44px;
-    color: rgb(95, 0, 128);
+    color:#ff4f32;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(95, 0, 128);
+    border: 1px solid#ff4f32;
     width: 120px;
     margin: 0px 4px;
     border-radius: 3px;
@@ -90,7 +90,7 @@ ul {
     overflow: hidden;
     height: 44px;
     color: rgb(255, 255, 255);
-    background-color: rgb(95, 0, 128);
+    background-color:#ff4f32;
     border: 0px none;
     width: 120px;
     margin: 0px 4px;

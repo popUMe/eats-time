@@ -13,9 +13,9 @@
 				width="36" height="36" preserveAspectRatio="xMidYMid meet"
 				style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
 				<defs>
-				<clipPath id="__lottie_element_22">
+				<clipPath id="__lottie_element_2">
 				<rect width="36" height="36" x="0" y="0"></rect></clipPath></defs>
-				<g clip-path="url(#__lottie_element_22)">
+				<g clip-path="url(#__lottie_element_2)">
 				<g transform="matrix(1,0,0,1,3.75,3.75)" opacity="1"
 					style="display: block;">
 				<g opacity="1" transform="matrix(1,0,0,1,14.25,14.25)">
@@ -26,15 +26,14 @@
 					fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1"
 					stroke-width="2"
 					d=" M14.25,8.293999671936035 C14.25,8.293999671936035 14.25,14.293999671936035 14.25,14.293999671936035"></path></g>
-				<g opacity="1"
-					transform="matrix(0.5588499307632446,-0.8292688131332397,0.8292688131332397,0.5588499307632446,-5.597440719604492,18.105995178222656)">
+				<g opacity="1" transform="matrix(1,0,0,1,0,0)">
 				<path stroke-linecap="round" stroke-linejoin="round"
 					fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1"
 					stroke-width="2"
 					d=" M20.25,14.293999671936035 C20.25,14.293999671936035 14.25,14.293999671936035 14.25,14.293999671936035"></path></g></g></g></svg>
 		</div>
 		<div class="time-units css-8q344o e17lobue0">
-			<span>14</span><span>53</span><span>31</span>
+			<span>09</span><span>12</span><span>52</span>
 		</div>
 	</div>
 </body>

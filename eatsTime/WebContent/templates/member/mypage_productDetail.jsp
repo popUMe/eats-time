@@ -68,13 +68,13 @@
 					 -->
 					 
 					
-				<!-- 유통기한 -->
-					<dl class="css-e6zlnr epzddad2">
-						<dt class="css-lytdfk epzddad1">유통기한</dt>
-						<dd class="css-1k8t52o epzddad0">
-							<p class="css-c02hqi e6qx2kx1">0000.00.00</p>
-						</dd>
-					</dl>
+<!-- 				유통기한 -->
+<!-- 					<dl class="css-e6zlnr epzddad2"> -->
+<!-- 						<dt class="css-lytdfk epzddad1">유통기한</dt> -->
+<!-- 						<dd class="css-1k8t52o epzddad0"> -->
+<!-- 							<p class="css-c02hqi e6qx2kx1">0000.00.00</p> -->
+<!-- 						</dd> -->
+<!-- 					</dl> -->
 					 
 				<!-- 판매 수량(재고) -->
 					<dl class="css-e6zlnr epzddad2">
@@ -92,41 +92,64 @@
 						</dd>
 					</dl>
 					
-					<!-- 
-					<dl class="css-e6zlnr epzddad2">
-						<dt class="css-7ypij epzddad1">원산지</dt>
-						<dd class="css-1k8t52o epzddad0">
-							<p class="css-y1eoge e6qx2kx1">상품설명/상세정보 참조</p>
-						</dd>
-					</dl>
-					<dl class="css-e6zlnr epzddad2">
-						<dt class="css-lytdfk epzddad1">알레르기정보</dt>
-						<dd class="css-1k8t52o epzddad0">
-							<p class="css-c02hqi e6qx2kx1">- 쇠고기, 대두, 밀 함유 본 제품은 돼지고기, 닭고기, 우유, 계란, 새우, 토마토, 오징어, 조개류(굴,바지락,개량조개)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.</p>
-						</dd>
-					</dl>
-					<dl class="css-e6zlnr epzddad2">
-						<dt class="css-lytdfk epzddad1">유통기한(또는 소비기한)정보</dt>
-						<dd class="css-1k8t52o epzddad0">
-							<p class="css-c02hqi e6qx2kx1">수령일 포함 최소 3일 남은 제품을 보내 드립니다.</p>
-						</dd>
-					</dl>
-					<dl class="css-e6zlnr epzddad2">
-						<dt class="css-lytdfk epzddad1">안내사항</dt>
-						<dd class="css-1k8t52o epzddad0">
-							<p class="css-c02hqi e6qx2kx1">해당 상품은 냉장 제품입니다 상품 수령 후 최대한 빠른 시일내에 섭취를 권장드립니다.</p>
-						</dd>
-					</dl>
-					 -->
+				
 					 
 				</div>
+<!-- 				여기 초시계 -->
+				<h2 class="sellnotice">판매임박!</h2>
+				<h3 class="timenotice">유통기간 : **********까지</h3>
+				<div class="e1e6st7u5 css-we1gxf e17lobue1">
 				
+				
+		<div class="lottie-timer">
+		
+		
+		
+		
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"
+				width="36" height="36" preserveAspectRatio="xMidYMid meet"
+				style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
+				<defs>
+				<clipPath id="__lottie_element_2">
+				<rect width="36" height="36" x="0" y="0"></rect></clipPath></defs>
+				<g clip-path="url(#__lottie_element_2)">
+				<g transform="matrix(1,0,0,1,3.75,3.75)" opacity="1"
+					style="display: block;">
+				<g opacity="1" transform="matrix(1,0,0,1,14.25,14.25)">
+				<path fill="#ff4f32" fill-opacity="1"
+					d=" M14,0 C14,7.73199987411499 7.73199987411499,14 0,14 C-7.73199987411499,14 -14,7.73199987411499 -14,0 C-14,-7.73199987411499 -7.73199987411499,-14 0,-14 C7.73199987411499,-14 14,-7.73199987411499 14,0z"></path></g>
+				<g opacity="1" transform="matrix(1,0,0,1,0,0)">
+				<path stroke-linecap="round" stroke-linejoin="round"
+					fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1"
+					stroke-width="2"
+					d=" M14.25,8.293999671936035 C14.25,8.293999671936035 14.25,14.293999671936035 14.25,14.293999671936035"></path></g>
+				<g opacity="1" transform="matrix(1,0,0,1,0,0)">
+				<path stroke-linecap="round" stroke-linejoin="round"
+					fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1"
+					stroke-width="2"
+					d=" M20.25,14.293999671936035 C20.25,14.293999671936035 14.25,14.293999671936035 14.25,14.293999671936035"></path></g></g></g></svg>
+					
+					
+					
+					
+					
+		</div>
+		
+<!-- 		시간 표시 -->
+		<div id="date" class="date"></div>
+		<div class="time" id="time"></div>
+<!-- 			<span>09</span><span>12</span><span>52</span> -->
+	</div>
+ 
+
+
+
 				<div class="css-1bp09d0 e17iylht1">
 					
 					
 					
 				<!-- 하단 장바구니 및 구매하기 버튼 -->
-					<div class="css-gnxbjx e10vtr1i2">
+					<div class="css-gnxbjx">
 						<!-- 
 						<button class="css-3z91zj e4nu7ef3" type="button" width="56" height="56" radius="3">
 							<span class="css-ymwvow e4nu7ef1">
@@ -162,6 +185,6 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/product.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mypage_productDetail.js"></script>
 
 </html>

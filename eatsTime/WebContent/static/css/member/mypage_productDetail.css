@@ -104,7 +104,7 @@
     align-items: flex-start;
     overflow: hidden;
     width: 100%;
-    padding: 30px 0px 29px;
+    padding: 7px 5px;
     border-top: 1px solid rgb(244, 244, 244);
     font-size: 14px;
     letter-spacing: -0.5px;
@@ -347,7 +347,6 @@ button.plus-on{display: inline-flex;
 }
 
 .css-gnxbjx {
-    display: flex;
     gap: 8px;
     margin-top: 9.7px;
 }
@@ -376,7 +375,7 @@ button.plus-on{display: inline-flex;
     height: 52px;
     border-radius: 3px;
     color: rgb(255, 255, 255);
-    background-color: rgb(95, 0, 128);
+    background-color: rgb(255, 79, 50);
     border: 0px none;
 }
 
@@ -386,8 +385,8 @@ button.plus-on{display: inline-flex;
 }
 
 .css-14jnwd7 .insert-button {
-	color:rgb(95, 0, 128);
-	border: 1px solid rgb(95, 0, 128);
+	color:rgb(255, 79, 50);
+	border: 1px solid rgb(255, 79, 50);
 	background-color: rgb(255, 255, 255);
 	font-weight: 500;
 }
@@ -400,3 +399,105 @@ button.plus-on{display: inline-flex;
     font-size: 16px;
     font-weight: 500;
 }
+
+
+.css-we1gxf {
+    display: flex;
+    padding: 10px 0px 6px;
+}
+
+
+
+.css-we1gxf .lottie-timer {
+    width: 36px;
+    height: 47px;
+    margin-right: 5px;
+}
+
+.css-8q344o {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 136px;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(51, 51, 51);
+}
+
+.css-we1gxf .time-units span:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.css-we1gxf .time-units span {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 38px;
+    line-height: 47px;
+}
+
+.css-we1gxf .time-units span:not(:last-of-type)::after {
+    content: ":";
+    position: absolute;
+    width: 11px;
+    height: 50px;
+    top: 0px;
+    right: -11px;
+    font-size: 25px;
+}
+
+.css-we1gxf .time-units span:not(:last-of-type)::after {
+    content: ":";
+    position: absolute;
+    width: 11px;
+    height: 50px;
+    top: 0px;
+    right: -11px;
+    font-size: 25px;
+}
+
+.css-we1gxf .time-units span {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 38px;
+    line-height: 47px;
+}
+.css-d0y7nj {
+    padding-top: 26px;
+    font-size: 14px;
+    color: rgb(204, 204, 204);
+    font-weight: normal;
+    line-height: 1.43;
+    letter-spacing: -0.4px;
+}
+.sellnotice{
+	
+	padding-top: 20px;
+    font-size: 25px;
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.26px;
+	
+}
+.timenotice{
+	padding-top: 11px;
+    font-size: 16px;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+}
+
+.date{
+    font-size: 30px; 
+    color: rgb(255, 79, 50);  /* 흰색 */
+    font-weight: bold;
+}
+.time{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 79, 50);  /*보라색 */
+}
+

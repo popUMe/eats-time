@@ -43,7 +43,9 @@ let pickupclickcheck=false;
 		divdelivery.style.background="#fff";
 		
 		spanpickup.style.background="#fff";
-		spanpickup.style.border="#dddddd";
+		spanpickup.style.border="1px solid #dddddd";
+		
+		
 		deliveryclickcheck=true;
 		pickupclickcheck=false;``
     });
@@ -55,7 +57,6 @@ let pickupclickcheck=false;
 		divpickup.style.background="#fff";
 		
 		spandelivery.style.background="#fff";
-		spandelivery.style.border="#dddddd";
 		pickupclickcheck=true;
 		deliveryclickcheck=false;
     });
@@ -76,15 +77,14 @@ let pickupclickcheck=false;
 const image_div = document.querySelectorAll("div.image"); //선택한 이미지
 const cancel_div = document.querySelector("div.cancel");  //취소 버튼
 const input_file = document.querySelector("#attach"); //추가할 이미지 <input type="file" id="attach" style="display: none;">
-
-//const plusB=document.querySelectorAll(".css-82a6rk"); //첨부버튼
+const plusB=document.querySelectorAll("div.css-u52dqk"); //첨부버튼
 
 // x버튼 눌렀을 때 
     cancel_div.addEventListener("click", () => {
-        input_file.value = ""; 
-        image_div[0].style.display = "block";//+ 이미지(파일 추가하는) 보이고
-        image_div[1].style.display = "none";//원래 표시돼 있던 이미지 없어지고
-        cancel_div.style.display = "none";//x없어지고
+       input_file.value = ""; 
+       image_div[0].style.display = "none";//원래 표시돼 있던 이미지 없어지고
+       cancel_div.style.display = "none";//x없어지고
+       plusB[0].style.display="block";//+ 이미지(파일 추가하는) 보이고
     });
 
 ////파일 추가 버튼 눌렀을 때
@@ -111,10 +111,10 @@ const input_file = document.querySelector("#attach"); //추가할 이미지 <inp
         // function(a){} 와 a => {} 같음
         // function(e){} 와 e => {} 같음
         reader.onload = e => {
-            image_div[1].style.display = "block"; //선택한 이미지 : 보여야할 것
-            image_div[1].style.backgroundImage = `url('${e.target.result}')`
-            image_div[0].style.display = "none"; //없어져야 될 것 : + 이미지(파일 추가하는)
-            cancel_div.style.display = "block"; //X 버튼은 파일이 업로드 되어 화면이 보일 때 같이 보여야한다
+			plusB[0].style.display = "none";
+            image_div[0].style.display="block"; //선택한 이미지 : 보여야할 것
+            image_div[0].style.backgroundImage=`url('${e.target.result}')`;
+			cancel_div.style.display="block";
         };
     });
 

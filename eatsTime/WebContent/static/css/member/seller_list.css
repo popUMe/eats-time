@@ -82,7 +82,7 @@ svg:not(:root) {
 /* 개인 정보 수정 
 .css-g4g0eu.active, .css-g4g0eu:hover {
     background-color: rgb(250, 250, 250);
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
     font-weight: 500;
 }*/
 
@@ -103,7 +103,7 @@ svg:not(:root) {
 
 .css-g4g0eu.active, .css-g4g0eu:hover {
     background-color: rgb(250, 250, 250);
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
     font-weight: 500;
 }
 
@@ -408,13 +408,13 @@ img, legend {
 /* 수정 삭제 */
 
 .content-alter{
-	display: flex;
-    align-items: center;
+	display: block;
+	margin-top:auto;
 }
 
 .icon1{
-	padding-right:20px;
 	cursor: pointer;
+	margin: auto;
 }
 
 .icon2{
@@ -493,9 +493,9 @@ img, legend {
     width: 100%;
     height: 36px;
     border-radius: 3px;
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(95, 0, 128);
+    border: 1px solid #ff4f32;
 }
 
 
@@ -515,10 +515,24 @@ img, legend {
     height: 1px;
 }
 
+.content-alter{
+}
 
+.icon{
+	display:flex;
+	padding-top:15px;
+}
 
-
-
+.selling{
+	text-align: center;
+    overflow: hidden;
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: #ff4f32;
+    border: 0px none;
+}
 
 
 
