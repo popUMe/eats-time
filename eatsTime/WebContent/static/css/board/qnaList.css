@@ -499,7 +499,7 @@ element.style {
     height: 44px;
     border-radius: 3px;
     color: rgb(255, 255, 255);
-    background-color: rgb(95, 0, 128);
+    background-color: #ff4f32;
     border: 0px none;
 }
 
@@ -676,6 +676,6 @@ element.style {
     padding: 0px 18px;
     font-size: 16px;
     font-weight: 600;
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
     background: transparent;
 }
