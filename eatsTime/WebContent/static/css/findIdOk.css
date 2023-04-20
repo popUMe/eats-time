@@ -96,9 +96,9 @@
 	width: 100%;
 	height: 52px;
 	border-radius: 3px;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background-color: rgb(255, 255, 255);
-	border: 1px solid rgb(95, 0, 128);
+	border: 1px solid #ff4f32;
 }
 
 /* 아이디 전체보기 안에 span 태그 */
@@ -118,7 +118,7 @@
 	height: 52px;
 	border-radius: 3px;
 	color: rgb(255, 255, 255);
-	background-color: rgb(95, 0, 128);
+	background-color: #ff4f32;
 	border: 0px none;
 }
 
@@ -182,7 +182,7 @@
 	padding : 0px 18px;
 	font-size: 16px;
 	font-weight: 500;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background: transparent;
 	padding-top: 18px;
 }
