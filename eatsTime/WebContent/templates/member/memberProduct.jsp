@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/memberProduct.css">
 <title>컬리 - 마켓컬리/뷰티컬리</title>

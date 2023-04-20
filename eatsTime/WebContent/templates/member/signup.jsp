@@ -4,7 +4,7 @@
 <html>
 <head>
 <jsp:include page="../header.jsp" />
-<link rel="icon" href="https://www.kurly.com//favicon.ico" />
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/signup.css" />
 <meta charset="UTF-8">

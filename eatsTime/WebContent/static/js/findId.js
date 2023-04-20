@@ -94,9 +94,9 @@ name.bind('focus', function() {
 	name.blur(function(e) {
 
 		if ($(e.target).val() == "") {
-			$(".error1").text("가입 시 등록한 이름을 입력해주세요");
+			$(".error4").text("이름을 입력해주세요");
 		} else {
-			$(".error1").text("");
+			$(".error4").text("");
 		}
 
 	})

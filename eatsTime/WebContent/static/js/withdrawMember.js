@@ -99,3 +99,98 @@ const divnone = document.querySelector("#divnone");
 		spanfemale.style.border="1px solid #dddddd";
     });
 
+
+
+/*비밀번호 입력창 태그*/
+let password = $("#originalPassword");
+
+
+
+/*이름 입력창 태그*/
+let name = $("#name");
+let email = $("#email");
+let newPassword=$("#newPassword");
+
+/*이메일 유효성검사 함수*/
+function fn_emailChk(email) {
+	let regExp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{1,4}$/;
+	if (!regExp.test(email)) {
+		return false;
+	}
+	return true;
+}
+
+
+email.bind('focus', function() {
+
+	email.blur(function(e) {
+
+		if ($(e.target).val() == "") {
+			$(".error5").text("이메일을 입력해주세요");
+		} else if (!fn_emailChk($(e.target).val())) {
+			$(".error5").text("올바른 이메일 형식을 입력해 주세요");
+		} else {
+			$(".error5").text("");
+		}
+
+	})
+
+})
+
+name.bind('focus', function() {
+
+	name.blur(function(e) {
+
+		if ($(e.target).val() == "") {
+			$(".error4").text("이름을 입력해주세요");
+		} else {
+			$(".error4").text("");
+		}
+
+	})
+
+})
+
+
+
+newPassword.bind('focus', function() {
+
+	newPassword.blur(function(e) {
+
+		if ($(e.target).val() == ""){
+			$(".error2").text("10자 이상 입력");
+		} if($(e.target).val().length<10){
+		
+			$(".error2").text("10자 이상 입력");
+		}
+		if($(e.target).val().length>9){
+			$(".error2").text("영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합");
+		}
+//		else{
+//			$(".error2").text("");
+//		}
+
+	})
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
