@@ -51,7 +51,7 @@
 /* 헤더 전체 css */
 *, :after, :before {
 	box-sizing: border-box;
-/* 	margin: 0; */
+	/* 	margin: 0; */
 }
 
 *, :after, :before, legend, td, th {
@@ -329,7 +329,7 @@ button, input, optgroup, select, textarea {
 	width: 400px;
 	height: 48px;
 	padding-left: 14px;
-	border: 1px solid #ff4f32;
+	border: 1px solid #ff4f32;;
 	border-radius: 6px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: rgb(247, 247, 247) 0px 0px 0px 1px inset;
@@ -373,13 +373,14 @@ input {
 /* 검색창 돋보기 부분 */
 .css-ywxmlw {
 	position: relative;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	margin: 10px;
-	bottom: 3px;
 	background:
-		url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgzNnYzNkgweiIvPgogICAgICAgIDxnIHN0cm9rZT0iIzVGMDA4MCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Im0yNi4wODEgMjYuMDgxLTQuMTItNC4xMk0xNi40NjcgMjMuMzM0YTYuODY3IDYuODY3IDAgMSAwIDAtMTMuNzM0IDYuODY3IDYuODY3IDAgMCAwIDAgMTMuNzM0eiIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==)
-		0px 0px no-repeat;
+		url('https://s2.svgbox.net/octicons.svg?ic=search-bold&color=ff4f32 ');
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 /* 장바구니 등 부분 */
@@ -496,8 +497,6 @@ ol, ul {
 	list-style-type: none;
 }
 
-
-
 /* 헤더 메뉴 부분 */
 .css-59mmhh {
 	display: flex;
@@ -541,7 +540,7 @@ ol, ul {
 /* 헤더 샛별, 택배 부분 */
 .css-1s2o3jp {
 	font-weight: 500;
-	color: #ff4f32;
+	color: #ff4f32;;
 }
 
 /* 헤더 hidden class 부분 */
@@ -552,189 +551,187 @@ ol, ul {
 
 /* 푸터 전체 */
 .css-odadb1 {
-    padding-top: 30px;
-    border-top: 1px solid rgb(247, 247, 247);
+	padding-top: 30px;
+	border-top: 1px solid rgb(247, 247, 247);
 }
 
 /* 푸터 부분 */
 .css-1i60c0e {
-    width: 1050px;
-    margin: 0px auto;
+	width: 1050px;
+	margin: 0px auto;
 }
 
 .css-j6zuv6 {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    overflow: hidden;
-    padding-bottom: 30px;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	overflow: hidden;
+	padding-bottom: 30px;
 }
 
 /* 푸터 왼쪽 부분 */
 .css-4iyald {
-    padding-bottom: 17px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 29px;
+	padding-bottom: 17px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 29px;
 }
 
 /* 푸터 왼쪽 번호 부분 */
 .css-9jqcug {
-    display: block;
-    padding-bottom: 20px;
-    font-size: 28px;
-    line-height: 40px;
+	display: block;
+	padding-bottom: 20px;
+	font-size: 28px;
+	line-height: 40px;
 }
 
 b, optgroup, strong {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 /* 푸터 왼쪽 번호 옆 부분 */
 .css-1uz1ro8 {
-    margin-left: 8px;
-    font-weight: normal;
-    font-size: 16px;
+	margin-left: 8px;
+	font-weight: normal;
+	font-size: 16px;
 }
 
 /* 푸터 왼쪽 카카오톡 문의 1:1 문의 ... 부분 */
 .css-1fttcpj {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 /* 푸터 카카오톡 문의 부분 */
 .css-ho1qnd {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 /* 푸터 카카오톡 문의 버튼 부분 */
 .css-hupzfj {
-    display: block;
-    width: 140px;
-    height: 40px;
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 3px;
-    line-height: 39px;
-    text-align: center;
-    margin-right: 16px;
-    margin-bottom: 16px;
+	display: block;
+	width: 140px;
+	height: 40px;
+	border: 1px solid rgb(226, 226, 226);
+	border-radius: 3px;
+	line-height: 39px;
+	text-align: center;
+	margin-right: 16px;
+	margin-bottom: 16px;
 }
 
 /* 푸터 카카오톡 문의 내용 부분 */
 .css-1lxmeik {
-    margin-top: 2px;
-    color: rgb(153, 153, 153);
-    letter-spacing: -0.5px;
-    line-height: 16.8px;   
+	margin-top: 2px;
+	color: rgb(153, 153, 153);
+	letter-spacing: -0.5px;
+	line-height: 16.8px;
 }
 
 svg:not(:root) {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .css-w0fx7a {
-    margin: 0px 6px;
+	margin: 0px 6px;
 }
 
 /* 푸터 1:1 문의 부분 */
-
 .css-ho1qnd {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 /* 푸터 1:1 문의 버튼 부분 */
 .css-1pgo3vb {
-    display: block;
-    width: 140px;
-    height: 40px;
-    margin-bottom: 16px;
-    margin-right: 16px;
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 3px;
-    line-height: 39px;
-    text-align: center;
+	display: block;
+	width: 140px;
+	height: 40px;
+	margin-bottom: 16px;
+	margin-right: 16px;
+	border: 1px solid rgb(226, 226, 226);
+	border-radius: 3px;
+	line-height: 39px;
+	text-align: center;
 }
 
 /* 푸터 1:1 문의 내용 부분 */
 .css-1lxmeik {
-    margin-top: 2px;
-    color: rgb(153, 153, 153);
-    letter-spacing: -0.5px;
-    line-height: 16.8px;
+	margin-top: 2px;
+	color: rgb(153, 153, 153);
+	letter-spacing: -0.5px;
+	line-height: 16.8px;
 }
 
 /* 푸터 대량주문 문의 부분 */
 .css-ho1qnd {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 /* 푸터 대량주문 문의 버튼 부분 */
 .css-1pgo3vb {
-    display: block;
-    width: 140px;
-    height: 40px;
-    margin-bottom: 16px;
-    margin-right: 16px;
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 3px;
-    line-height: 39px;
-    text-align: center;
+	display: block;
+	width: 140px;
+	height: 40px;
+	margin-bottom: 16px;
+	margin-right: 16px;
+	border: 1px solid rgb(226, 226, 226);
+	border-radius: 3px;
+	line-height: 39px;
+	text-align: center;
 }
 
 /* 푸터 대량주문 문의 내용 부분 */
 .css-1lxmeik {
-    margin-top: 2px;
-    color: rgb(153, 153, 153);
-    letter-spacing: -0.5px;
-    line-height: 16.8px;
+	margin-top: 2px;
+	color: rgb(153, 153, 153);
+	letter-spacing: -0.5px;
+	line-height: 16.8px;
 }
 
 /* 푸터 비회원 문의 부분 */
 .css-vtjvf {
-    font-size: 12px;
-    line-height: 18px;
-    color: rgb(153, 153, 153);
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb(153, 153, 153);
 }
-
 
 /* 푸터 오른쪽 부분 */
 .css-1fttcpj {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 /* 푸터 오른쪽 컬리소개 컬리소개 영상 ... ul 부분 */
 .css-17hse91 {
-    display: flex;
-    width: 100%;
-    padding-bottom: 29px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 0px;
+	display: flex;
+	width: 100%;
+	padding-bottom: 29px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 0px;
 }
 
 /* 푸터 컬리소개 컬리소개 영상 ... li 부분 */
 .css-1tayzmu:first-of-type {
-    margin-left: 0px;
+	margin-left: 0px;
 }
 
 .css-1tayzmu {
-    margin-left: 14px;
+	margin-left: 14px;
 }
 
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+	display: list-item;
+	text-align: -webkit-match-parent;
 }
 
 /* 푸터 컬리소개 ... 각 버튼 부분 */
 .css-1tfhwyj {
-    font-size: 14px;
-    line-height: 18px;
+	font-size: 14px;
+	line-height: 18px;
 }
 
 ol, ul {
@@ -743,90 +740,90 @@ ol, ul {
 
 /* 푸터 법인명 부분 */
 .css-bz7mfs {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: rgb(153, 153, 153);
-    margin-bottom: 40px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb(153, 153, 153);
+	margin-bottom: 40px;
 }
 
 /* 푸터 법인명 쪽 '|' 부분 */
 .css-1ekjygq {
-    padding-left: 4px;
+	padding-left: 4px;
 }
 
 .css-1ekjygq::after {
-    content: "|";
-    padding-right: 4px;
-    font-size: 10px;
-    vertical-align: top;
+	content: "|";
+	padding-right: 4px;
+	font-size: 10px;
+	vertical-align: top;
 }
 
 /* 푸터 법인명 쪽 보라색 부분 */
 .css-1tby8gd {
-    margin-left: 3px;
-    color: #ff4f32;
+	margin-left: 3px;
+	color: #ff4f32;;
 }
 
 /* 푸터 SNS 부분 */
 .css-zjik7 {
-    display: flex;
+	display: flex;
 }
 
 /* 푸터 인스타그램 */
 .css-9ipg3 {
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
 }
 
 /* 푸터 아래 부분 */
 .css-81eeg3 {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    padding: 26px 0px 33px;
-    border-top: 1px solid rgb(238, 238, 238);
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding: 26px 0px 33px;
+	border-top: 1px solid rgb(238, 238, 238);
 }
 
 /* 푸터 아래 부분 */
 .css-12t5wjq {
-    display: flex;
-    text-align: left;
+	display: flex;
+	text-align: left;
 }
 
 /* 푸터 아래 이미지 부분 */
 .css-1262i6n {
-    width: 34px;
-    margin-right: 10px;
+	width: 34px;
+	margin-right: 10px;
 }
 
 .css-as7ifw {
-    width: 102px;
-    margin-right: 10px;
+	width: 102px;
+	margin-right: 10px;
 }
 
 /* 푸터 아래 내용 부분 */
 .css-bft4sh {
-    font-size: 10px;
-    line-height: 14.5px;
-    color: rgb(153, 153, 153);
-    word-break: break-word;
+	font-size: 10px;
+	line-height: 14.5px;
+	color: rgb(153, 153, 153);
+	word-break: break-word;
 }
 
 /* 푸터 바닥 부분 */
 .css-175n8cp {
-    padding: 20px 0px 30px;
-    font-size: 10px;
-    line-height: 15px;
-    text-align: center;
-    background-color: rgb(247, 247, 247);
-    color: rgb(153, 153, 153);
+	padding: 20px 0px 30px;
+	font-size: 10px;
+	line-height: 15px;
+	text-align: center;
+	background-color: rgb(247, 247, 247);
+	color: rgb(153, 153, 153);
 }
 /* 푸터 맨 바닥 부분 */
 .css-1vhhy2d {
-    display: block;
-    padding-top: 7px;
-    font-style: normal;
+	display: block;
+	padding-top: 7px;
+	font-style: normal;
 }
