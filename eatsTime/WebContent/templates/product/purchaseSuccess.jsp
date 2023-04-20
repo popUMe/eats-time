@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="icon" href="https://www.kurly.com//favicon.ico" />
-<title>컬리 - 마켓컬리/뷰티컬리</title>
+<title>이츠타임 - [결제 완료]</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <link rel="stylesheet"
@@ -22,7 +22,7 @@
 				<!-- 김인진님 주문 완료 -->
 				<div class="css-u2z835 e190vd4y4">
 					<img
-						src="https://res.kurly.com/mobile/service/order/1909/img_success_order_end.gif"
+						src="${pageContext.request.contextPath}/static/image/check.png"
 						alt="" class="css-ypnlzr e1hwfd030">
 					<div class="css-yb4g98 e190vd4y3">
 						<p class="css-14is9qy e190vd4y0">김인진님의 주문이 완료되었습니다.</p>
