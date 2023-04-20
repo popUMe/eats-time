@@ -12,7 +12,7 @@ function setClock(){
     var month = dateInfo.getMonth()+1; //monthIndex를 반환해주기 때문에 1을 더해준다.
     var date = dateInfo.getDate();//날짜
     document.getElementById("time").innerHTML = hour + ":" + min  + ":" + sec;
-    document.getElementById("date").innerHTML = year + "년 " + month + "월 " + date + "일";
+    document.getElementById("date").innerHTML = split()year + "년 " + month + "월 " + date + "일";
 }
 function modifyNumber(time){
     if(parseInt(time)<10){
