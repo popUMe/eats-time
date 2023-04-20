@@ -206,7 +206,7 @@
 			<div class="css-137ca2h">
 				<button class="css-18m884r" type="submit" width="240" height="56"
 					radius="3">
-					<span class="css-ymwvow">등록하기</span>
+					<span class="css-ymwvow">판매하기</span>
 				</button>
 			</div>
 		</div>

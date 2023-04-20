@@ -13,7 +13,7 @@
 	<div class="css-luwwab">
 		<div class="css-833hqy">
 			<div class="css-1v4whg">마이컬리</div>
-			<!--css-1v4whg ecbxmj2  -->
+			<!--css-1v4whg ecbxmj2  --> 
 			<ul class="css-1x9bshx">
 				<li><a class="css-g4g0eu" id="li-1">주문내역
 				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"viewBox="0 0 24 24">
@@ -95,7 +95,7 @@
 						<div class="css-82a6rk">
 							<div class="css-1waqr6j">
 								<div class="css-176lya2">
-									<input data-testid="input-box" id="userId" name="userId"
+									<input id="userId" name="userId"
 										type="text" readonly="" class="css-u52dqk"
 										value="사용자 ID">
 								</div>
@@ -111,7 +111,7 @@
 						<div class="css-82a6rk">
 							<div class="css-1waqr6j">
 								<div class="css-176lya2">
-									<input data-testid="input-box" id="originalPassword"
+									<input id="originalPassword"
 										name="originalPassword" placeholder="비밀번호를 입력해 주세요"
 										type="password" autocomplete="off"
 										class="css-u52dqk" value="password"
@@ -164,7 +164,7 @@
 								<div class="css-176lya2">
 									<input data-testid="input-box" id="name" name="name"
 										placeholder="이름을 입력해 주세요" type="text"
-										class="css-u52dqk" value="문소영">
+										class="css-u52dqk" value="사용자 이름">
 								</div>
 							</div>
 						</div>
@@ -178,8 +178,8 @@
 							<div class="css-1waqr6j">
 								<div class="css-176lya2">
 									<input data-testid="input-box" id="email" name="email"
-										placeholder="이메일을 입력해 주세요" type="text"
-										class="css-u52dqk" value="msy2559@naver.com">
+										placeholder="이메일을 입력해 주세요" type="text" readonly=""
+										class="css-u52dqk" value="******@******">
 								</div>
 							</div>
 						</div>
@@ -198,7 +198,7 @@
 								<div class="css-176lya2">
 									<input data-testid="input-box" id="mobileNumber"
 										name="mobileNumber" placeholder="숫자만 입력해 주세요" type="text"
-										readonly="" class="css-u52dqk" value="01085532559">
+										 class="css-u52dqk" value="사용자 휴대폰">
 								</div>
 							</div>
 						</div>
@@ -212,26 +212,38 @@
 						</div>
 						<div class="css-82a6rk">
 							<div class="css-14wodj6">
-								<label class="css-z9g6s0" for="gender-man"><input
-									id="gender-man" name="gender"
-									type="radio" class="css-1pes2r6" value="MALE"><span
-									class="css-198i9ca"><div
-											class="css-1dahn5m"></div></span><span
-									aria-labelledby="gender-man" class="css-mgd87h">남자</span></label><label
-									class="css-z9g6s0" for="gender-woman"><input
-									 id="gender-woman" name="gender"
-									type="radio" class="css-1pes2r6 et8nqc32" value="FEMALE"
-									checked=""><span class="css-5xw1m2"><div
-											class="css-1vic0rk"></div></span><span
-									aria-labelledby="gender-woman" class="css-mgd87h et8nqc31">여자</span></label><label
-									class="css-z9g6s0" for="gender-none"><input
-									id="gender-none" name="gender"
-									type="radio" class="css-1pes2r6" value="NONE"><span
-									class="css-198i9ca"><div
-											class="css-1dahn5m"></div></span><span
-									 class="css-mgd87h">선택안함</span></label>
+							
+								<label class="css-z9g6s0" for="gender-man">
+								<input id="gender-man" name="gender" type="radio" 
+								class="css-1pes2r6" value="MALE">
+									<span class="css-198i9ca" id="male">
+									<div class="css-1dahn5m" id=divmale></div></span>
+									<span class="css-mgd87h">남자</span>
+								</label> 
+								
+								
+								<label class="css-z9g6s0" for="gender-woman"> 
+								<input id="gender-woman" name="gender" type="radio"
+								class="css-1pes2r6" value="FEMALE" checked="">
+
+									<span class="css-5xw1m2" id="female">
+										<div class="css-1vic0rk" id="divfemale"></div>
+								</span> <span class="css-mgd87h">여자</span>
+								
+								</label> 
+
+								<label class="css-z9g6s0" for="gender-none">
+								<input id="gender-none" name="gender" type="radio" class="css-1pes2r6" value="NONE">
+									<span class="css-198i9ca" id="none">
+										<div class="css-1dahn5m" id="divnone"></div>
+									</span>
+									<span class="css-mgd87h">선택안함</span>
+								</label>
+									
 							</div>
+							
 						</div>
+						
 						<div class="css-1w0ksfz"></div>
 					</div>
 					<div class="css-1pjgd36">
@@ -244,7 +256,7 @@
 									<div height="40" class="css-xsmgyi">
 										<input data-testid="input-box" name="birthYear"
 											placeholder="YYYY" type="text" height="40"
-											class="css-151eme7" value="2000">
+											class="css-151eme7" value="----">
 									</div>
 								</div>
 								<span class="css-5lnvt6"></span>
@@ -252,7 +264,7 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input name="birthMonth"
 											placeholder="MM" type="text" height="40"
-											class="css-151eme7" value="02">
+											class="css-151eme7" value="--">
 									</div>
 								</div>
 								<span class="css-5lnvt6"></span>
@@ -260,7 +272,7 @@
 									<div height="40" class="css-xsmgyi">
 										<input name="birthDay"
 											placeholder="DD" type="text" height="40"
-											class="css-151eme7" value="10">
+											class="css-151eme7" value="--">
 									</div>
 								</div>
 							</div>
@@ -286,25 +298,6 @@
 		
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/withdrawMember.js"></script>
-<script>
-const $checkboxes1=$(".check1");
-const $check1=$(".check1-1");
-const $checkboxes2=$(".check2");
-const $check2=$(".check2-1");
-const $checkboxes3=$(".check3");
-const $check3=$(".check3-3");
 
-$checkboxes1.on("click", function(){
-    $checkboxes1.css("fill", "#999");
-    $check1.css("stroke", "#ddd");
-    
-    $checkboxes2.css("fill", "#999");
-    $check2.css("stroke", "#ddd");
-    
-    $checkboxes3.css("fill", "#999");
-    $check3.css("stroke", "#ddd");
-}); //전체 동의 누르면, 모든 항목을 check상대로 바꾸기
-
-</script>
 		</html>
 		

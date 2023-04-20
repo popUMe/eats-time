@@ -36,7 +36,7 @@
 							<g>
 							<g>
 							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use class="point2" stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
+							<use class="point2" stroke="#ff4f32" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg>
 					</a>
