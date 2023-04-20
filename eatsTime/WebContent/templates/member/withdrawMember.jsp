@@ -7,7 +7,7 @@
 <link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/withdrawMember.css">
-<title>컬리 - 마켓컬리/뷰티컬리</title>
+<title>이츠타임 - 개인 정보 수정</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
@@ -54,7 +54,7 @@
 							<g>
 							<g>
 							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use class="point3" stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
+							<use class="point3" stroke="#ff4f32" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 			</ul>
@@ -115,7 +115,7 @@
 							<input data-testid="input-box" id="originalPassword"
 								name="originalPassword" placeholder="비밀번호를 입력해 주세요"
 								type="password" autocomplete="off" class="css-u52dqk e1uzxhvi2"
-								value="" data-gtm-form-interact-field-id="1">
+								value="12345" data-gtm-form-interact-field-id="1">
 						</div>
 					</div>
 					<div class="css-shoa2s e1g8vpbl0">
@@ -160,7 +160,7 @@
 						</div>
 					</div>
 					<div class="css-shoa2s">
-						<p class="css-1ozil7i error3">동일한 비밀번호를 입력해주세요.</p>
+						<p class="css-1ozil7i error3"></p>
 					</div>
 				</div>
 				<div class="css-1w0ksfz"></div>
@@ -314,6 +314,8 @@
 	</div>
 		</div>
 		</div>
+			<jsp:include page="../footer.jsp" />
+		
 		</body>
 		
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

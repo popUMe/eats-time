@@ -96,8 +96,8 @@
 					 
 				</div>
 <!-- 				여기 초시계 -->
-				<h2 class="sellnotice">판매임박!</h2>
-				<h3 class="timenotice">유통기간 : **********까지</h3>
+				<h2 class="sellnotice">판매임박</h2>
+				<h3 class="timenotice">서두르세요!</h3>
 				<div class="e1e6st7u5 css-we1gxf e17lobue1">
 				
 				
@@ -143,7 +143,6 @@
 <!-- 			<span>09</span><span>12</span><span>52</span> -->
 	</div>
  
-
 
 
 				<div class="css-1bp09d0 e17iylht1">

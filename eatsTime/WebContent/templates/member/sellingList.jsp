@@ -13,6 +13,8 @@
 	<title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
+	<jsp:include page="../header.jsp" />
+
 	<div class="css-luwwab">
 		<div class="css-833hqy">
 			<div class="css-1v4whg">마이컬리</div>
@@ -185,6 +187,7 @@
 			</div>
 		</div>
 	</div>
+	<jsp:include page="../footer.jsp" />
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

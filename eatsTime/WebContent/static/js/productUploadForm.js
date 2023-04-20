@@ -39,7 +39,7 @@ let pickupclickcheck=false;
 
  inputdelivery.addEventListener("click", () => {
 //        if(deliveryclickcheck){return;} //clickCheck가 true이면 if문 안에 들어오고 return통해 종료
-        spandelivery.style.background="#5f0080";
+        spandelivery.style.background="#ff4f32";
 		divdelivery.style.background="#fff";
 		
 		spanpickup.style.background="#fff";
@@ -53,7 +53,7 @@ let pickupclickcheck=false;
  inputpickup.addEventListener("click", () => {
 	console.log("들어옴");
 //        if(pickupclickcheck){return;} //clickCheck가 true이면 if문 안에 들어오고 return통해 종료
-        spanpickup.style.background="#5f0080";
+        spanpickup.style.background="#ff4f32";
 		divpickup.style.background="#fff";
 		
 		spandelivery.style.background="#fff";
@@ -65,7 +65,7 @@ let pickupclickcheck=false;
 ////		$inputdelivery.prop("checked", $(this).is(":checked"));
 //		$inputdelivery.prop("checked", true);
 //		$inputpickup.prop("checked",false);
-//        $spandelivery.css("background-color", "#5f0080");
+//        $spandelivery.css("background-color", "#ff4f32");
 //		$divdelivery.css("background-color","#fff")
 //    });
 

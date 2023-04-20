@@ -29,7 +29,7 @@
 							<g>
 							<g
 								transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use class="point1" stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
+							<use class="point1" stroke="#ff4f32" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 
@@ -130,9 +130,9 @@
 						<div class="content-alter">
 				<div class="selldiv"><input type="button" class="selling" value="판매하기"> </div>
 				<div class="icon">		
-				<div class="icon1"><img class="icon-insert" src="insert.png"/></div>
+				<div class="icon1"><img class="icon-insert" src="${pageContext.request.contextPath}/static/image/insert.png"/></div>
 						
-				<div class="icon2"><img class="icon-delete" src="delete.png"/></div>
+				<div class="icon2"><img class="icon-delete" src="${pageContext.request.contextPath}/static/image/delete.png"/></div>
 						
 						</div>
 						</div>
@@ -168,9 +168,9 @@
 							<div class="content-alter">
 				<div class="selldiv"><input type="button" class="selling" value="판매하기"> </div>
 				<div class="icon">		
-				<div class="icon1"><img class="icon-insert" src="insert.png"/></div>
+				<div class="icon1"><img class="icon-insert" src="${pageContext.request.contextPath}/static/image/insert.png"/></div>
 						
-				<div class="icon2"><img class="icon-delete" src="delete.png"/></div>
+				<div class="icon2"><img class="icon-delete" src="${pageContext.request.contextPath}/static/image/delete.png"/></div>
 						
 						</div>
 						</div>

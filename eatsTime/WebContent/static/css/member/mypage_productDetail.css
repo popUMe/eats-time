@@ -403,10 +403,12 @@ button.plus-on{display: inline-flex;
 
 .css-we1gxf {
     display: flex;
-    padding: 10px 0px 6px;
+    padding: 10px 0px 39.5px;
 }
 
-
+.timenotice h2{
+	text-align: center;
+}
 
 .css-we1gxf .lottie-timer {
     width: 40px;
