@@ -162,35 +162,46 @@
 					</div>
 				</div>
 				<!-- 성별 -->
-				<div class="css-1pjgd36 e744wfw6">
-					<div class="css-1y8737n e744wfw5">
-						<label class="css-1obgjqh e744wfw4">성별</label>
-					</div>
-					<div class="css-82a6rk">
-						<div class="css-14wodj6">
-							<label class="css-z9g6s0" for="gender-man"> <input
-								data-testid="radio-MALE" id="gender-man" name="gender"
-								type="radio" class="css-1pes2r6" value="MALE"> <span
-								class="css-198i9ca">
-									<div class="css-1dahn5m"></div>
-							</span> <span aria-labelledby="gender-man" class="css-mgd87h">남자</span>
-							</label> <label class="css-z9g6s0" for="gender-woman"> <input
-								data-testid="radio-FEMALE" id="gender-woman" name="gender"
-								type="radio" class="css-1pes2r6" value="FEMALE"> <span
-								class="css-198i9ca">
-									<div class="css-1dahn5m"></div>
-							</span> <span aria-labelledby="gender-woman" class="css-mgd87h">여자</span>
-							</label> <label class="css-z9g6s0" for="gender-none"> <input
-								data-testid="radio-NONE" id="gender-none" name="gender"
-								type="radio" class="css-1pes2r6" value="NONE" checked="">
-								<span class="css-5xw1m2">
-									<div class="css-1vic0rk"></div>
-							</span> <span aria-labelledby="gender-none" class="css-mgd87h">선택안함</span>
-							</label>
+					<div class="css-1pjgd36">
+						<div class="css-1y8737n">
+							<label class="css-1obgjqh">성별</label>
 						</div>
+						<div class="css-82a6rk">
+							<div class="css-14wodj6">
+							
+								<label class="css-z9g6s0" for="gender-man">
+								<input id="gender-man" name="gender" type="radio" 
+								class="css-1pes2r6" value="MALE">
+									<span class="css-198i9ca" id="male">
+									<div class="css-1dahn5m" id=divmale></div></span>
+									<span class="css-mgd87h">남자</span>
+								</label> 
+								
+								
+								<label class="css-z9g6s0" for="gender-woman"> 
+								<input id="gender-woman" name="gender" type="radio"
+								class="css-1pes2r6" value="FEMALE" checked="">
+
+									<span class="css-5xw1m2" id="female">
+										<div class="css-1vic0rk" id="divfemale"></div>
+								</span> <span class="css-mgd87h">여자</span>
+								
+								</label> 
+
+								<label class="css-z9g6s0" for="gender-none">
+								<input id="gender-none" name="gender" type="radio" class="css-1pes2r6" value="NONE">
+									<span class="css-198i9ca" id="none">
+										<div class="css-1dahn5m" id="divnone"></div>
+									</span>
+									<span class="css-mgd87h">선택안함</span>
+								</label>
+									
+							</div>
+							
+						</div>
+						
+						<div class="css-1w0ksfz"></div>
 					</div>
-					<div class="css-1w0ksfz"></div>
-				</div>
 
 				<!-- 생년월일 -->
 				<div class="css-1pjgd36 ">
