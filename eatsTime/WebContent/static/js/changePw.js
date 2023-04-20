@@ -245,7 +245,7 @@ $('.close-button').click(function() {
 function checkButton() {
 	if (pwCheck1 && pwCheck2 && pwCheck3 && rePwCheck && (pw.val() == rePw.val())) {
 		button.removeAttr("disabled");
-		button.css("background-color", "rgb(95, 0, 128)");
+		button.css("background-color", "#ff4f32");
 	} else {
 		button.css("background-color", "rgb(221, 221, 221)");
 		button.attr("disabled", "");
