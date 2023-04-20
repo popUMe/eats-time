@@ -744,3 +744,25 @@ input[type=checkbox], input[type=radio] {
     display: inline-block;
     font-weight: 500;
 }
+
+
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    color: fieldtext !important;
+}
+input.css-u52dqk:focus{
+	border:1.3px solid #000000;
+}
+
+
+#originalPassword{
+	font-size: 14px;
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: rgb(232, 240, 254);
+    color: fieldtext !important;
+	
+	
+}

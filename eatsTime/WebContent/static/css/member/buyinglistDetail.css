@@ -82,7 +82,7 @@ svg:not(:root) {
 /* 개인 정보 수정 
 .css-g4g0eu.active, .css-g4g0eu:hover {
     background-color: rgb(250, 250, 250);
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
     font-weight: 500;
 }*/
 
@@ -103,7 +103,7 @@ svg:not(:root) {
 
 .css-g4g0eu.active, .css-g4g0eu:hover {
     background-color: rgb(250, 250, 250);
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
     font-weight: 500;
 }
 
@@ -197,7 +197,7 @@ a {
 
 .css-1s2o3jp {
     font-weight: 500;
-    color: #5f0080;
+    color: #ff4f32;
 }
 
 
