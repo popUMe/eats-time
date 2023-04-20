@@ -59,6 +59,13 @@ let setinterval = setInterval(timeIt, 1200);
 
 
 
+/*혹시 모를 이 페이지가 열리면 타이머 값 초기화*/
+$(document).ready(function(){
+	clearInterval(setinterval);
+	counter = 0;
+})
+
+
 
 
 /*convertSeconds타이머 함수 사용*/
@@ -485,7 +492,7 @@ verificationNumber.keyup(function() {
 	} else {
 		$(".error4").text("");
 		phoneConfirmButton.removeAttr("disabled");
-		phoneConfirmButton.prop("background", "rgb(95, 0, 128)");
+		phoneConfirmButton.prop("background", "#ff4f32");
 	}
 })
 
@@ -593,7 +600,7 @@ function timeoutModal() {
 function EmailCheckflag() {
 	if (nameCheck1 && emailCheck) {
 		emailButton.removeAttr("disabled");
-		emailButton.prop("background", "rgb(95, 0, 128)");
+		emailButton.prop("background", "#ff4f32");
 		phoneButton.prop("background", "rgb(221, 221, 221)");
 		phoneButton.attr("disabled", "");
 	} else {
@@ -607,7 +614,7 @@ function EmailCheckflag() {
 function PhoneCheckflag() {
 	if (nameCheck2 && phoneCheck) {
 		phoneButton.removeAttr("disabled");
-		phoneButton.prop("background", "rgb(95, 0, 128)");
+		phoneButton.prop("background", "#ff4f32");
 		emailButton.prop("background", "rgb(221, 221, 221)");
 		emailButton.attr("disabled", "");
 	} else {
@@ -620,9 +627,9 @@ function PhoneCheckflag() {
 /*휴대폰인증 버튼 내용 함수로 담기*/
 
 function phoneCertification() {
-	certificationButtons.eq(0).css("color", "rgb(95, 0, 128)");
+	certificationButtons.eq(0).css("color", "#ff4f32");
 	certificationButtons.eq(0).css("font-weight", "bold");
-	certificationButtons.eq(0).css("box-shadow", "0px -2px 0px 0px rgb(95, 0, 128) inset");
+	certificationButtons.eq(0).css("box-shadow", "0px -2px 0px 0px #ff4f32 inset");
 	certificationButtons.eq(1).css("color", "rgb(102, 102, 102)");
 	certificationButtons.eq(1).css("font-weight", "400");
 	certificationButtons.eq(1).css("box-shadow", "0px -0.5px 0px 0px rgb(221, 221, 221) inset");
@@ -682,9 +689,9 @@ function phoneCertification() {
 /* 이메일 인증 버튼 내용 함수로 담기*/
 
 function emailCertification() {
-	certificationButtons.eq(1).css("color", "rgb(95, 0, 128)");
+	certificationButtons.eq(1).css("color", "#ff4f32");
 	certificationButtons.eq(1).css("font-weight", "bold");
-	certificationButtons.eq(1).css("box-shadow", "0px -2px 0px 0px rgb(95, 0, 128) inset");
+	certificationButtons.eq(1).css("box-shadow", "0px -2px 0px 0px #ff4f32 inset");
 	certificationButtons.eq(0).css("color", "rgb(102, 102, 102)");
 	certificationButtons.eq(0).css("font-weight", "400");
 	certificationButtons.eq(0).css("box-shadow", "0px -0.5px 0px 0px rgb(221, 221, 221) inset");
