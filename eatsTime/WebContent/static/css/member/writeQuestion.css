@@ -958,6 +958,6 @@ input[type=checkbox], input[type=radio] {
     padding: 0px 18px;
     font-size: 16px;
     font-weight: 600;
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
     background: transparent;
 }
