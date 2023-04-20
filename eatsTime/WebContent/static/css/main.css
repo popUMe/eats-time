@@ -140,7 +140,7 @@ html {
 /* 헤더 회원가입 버튼 부분 */
 .css-1g7d8zf {
 	display: block;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	cursor: pointer;
 	vertical-align: middle;
 }
@@ -239,7 +239,7 @@ img {
 /* 로고 옆에 마켓컬리 버튼 부분 */
 .css-j0ug0x.active, .css-j0ug0x:hover {
 	font-weight: 500;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 }
 
 /* 로고 옆에 마켓컬리 버튼 부분 */
@@ -329,7 +329,7 @@ button, input, optgroup, select, textarea {
 	width: 400px;
 	height: 48px;
 	padding-left: 14px;
-	border: 1px solid rgb(95, 0, 128);
+	border: 1px solid #ff4f32;
 	border-radius: 6px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: rgb(247, 247, 247) 0px 0px 0px 1px inset;
@@ -541,7 +541,7 @@ ol, ul {
 /* 헤더 샛별, 택배 부분 */
 .css-1s2o3jp {
 	font-weight: 500;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 }
 
 /* 헤더 hidden class 부분 */
@@ -765,7 +765,7 @@ ol, ul {
 /* 푸터 법인명 쪽 보라색 부분 */
 .css-1tby8gd {
     margin-left: 3px;
-    color: rgb(95, 0, 128);
+    color: #ff4f32;
 }
 
 /* 푸터 SNS 부분 */

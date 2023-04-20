@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html lang="ko"><head>
     <title>공지사항</title>
-    <link rel="stylesheet" href="../../static/css/admin/noticeWrite.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminNoticeWrite.css">
 </head>
 <body>
     <div class="board_wrap">
         <div class="board_title">
-            <strong>공지사항</strong>
+            <h1>공지사항</h1>
         </div>
         <div class="board_view_wrap">
             <div class="board_view">
@@ -37,8 +37,8 @@
                 </div>
             </div>
             <div class="btn">
-                <a href="index.jsp" class="on">목록</a>
-                <a href="noticeEdit.jsp">수정</a>
+                <a href="adminIndex.jsp" class="on">목록</a>
+                <a href="adminNoticeEdit.jsp">수정</a>
             </div>
         </div>
     </div>

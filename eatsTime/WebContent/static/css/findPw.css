@@ -57,9 +57,9 @@
 	height: 48px;
 	font-weight: bold;
 	font-size: 16px;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	line-height: 18px;
-	box-shadow: rgb(95, 0, 128) 0px -2px 0px 0px inset;
+	box-shadow: #ff4f32 0px -2px 0px 0px inset;
 }
 
 /* 이름 이메일 확인버튼을 감싸는 form 태그  */
@@ -209,7 +209,7 @@
 	height: 52px;
 	border-radius: 4px;
 	color: rgb(255, 255, 255);
-	background-color: rgb(95, 0, 128);
+	background-color: #ff4f32;
 	border: 0px none;
 }
 
@@ -314,7 +314,7 @@
 	padding: 0px 18px;
 	font-size: 16px;
 	font-weight: 500;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background: transparent;
 	padding-top: 18px;
 }
@@ -326,7 +326,7 @@
 	padding: 0px 18px;
 	font-size: 16px;
 	font-weight: 500;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background: transparent;
 	padding-top: 18px;
 }

@@ -7,33 +7,68 @@
 /*input radio가 check 이면 span 태그 색깔 변경 (보라), 체크 해제이면 하얀색으로 변경*/
 
 
-const $inputdelivery=$("#delivery");
-const $inputpickup=$("#pickup");
+//const $inputdelivery=$("#delivery");
+//const $inputpickup=$("#pickup");
+//
+//const $divdelivery=$("#divdelivery");
+//const $divpickup=$("#divpickup")
+//const $spandelivery=$("#deliveryspan");
+//const $spanpickup=$("#pickupspan");
 
-const $divdelivery=$("#divdelivery");
-const $divpickup=$("#divpickup")
-const $spandelivery=$("#deliveryspan");
-const $spanpickup=$("#pickupspan");
 
- $inputdelivery.on("click", function(){
-		$inputdelivery.prop("checked", $(this).is(":checked"));
-        $spandelivery.css("background-color", "#5f0080");
-		$divdelivery.css("background-color","#fff")
+
+
+
+
+
+
+const inputdelivery=document.querySelector("#delivery");
+const inputpickup=document.querySelector("#pickup");
+
+
+const divdelivery=document.querySelector("#divdelivery");
+const divpickup=document.querySelector("#divpickup");
+
+const spandelivery=document.querySelector("#deliveryspan");
+const spanpickup=document.querySelector("#pickupspan");
+
+/*input radio가 check 이면 span 태그 색깔 변경 (보라), 체크 해제이면 하얀색으로 변경*/
+
+let deliveryclickcheck=false;
+let pickupclickcheck=false;
+
+ inputdelivery.addEventListener("click", () => {
+//        if(deliveryclickcheck){return;} //clickCheck가 true이면 if문 안에 들어오고 return통해 종료
+        spandelivery.style.background="#5f0080";
+		divdelivery.style.background="#fff";
+		
+		spanpickup.style.background="#fff";
+		spanpickup.style.border="1px solid #dddddd";
+		
+		
+		deliveryclickcheck=true;
+		pickupclickcheck=false;``
     });
 
-$inputpickup.on("click", function(){
-		$inputpickup.prop("checked", true);
-        $spanpickup.css("background-color", "#5f0080");
-		$divpickup.css("background-color","#fff")
-
+ inputpickup.addEventListener("click", () => {
+	console.log("들어옴");
+//        if(pickupclickcheck){return;} //clickCheck가 true이면 if문 안에 들어오고 return통해 종료
+        spanpickup.style.background="#5f0080";
+		divpickup.style.background="#fff";
+		
+		spandelivery.style.background="#fff";
+		pickupclickcheck=true;
+		deliveryclickcheck=false;
     });
 
-//	 $inputdelivery.on("click", function(){
-//		$inputdelivery.prop("checked", $(this).is(":checked"));
-//        $spandelivery.css("background-color", "#dddddd");
+// $inputdelivery.on("click", function(){
+////		$inputdelivery.prop("checked", $(this).is(":checked"));
+//		$inputdelivery.prop("checked", true);
+//		$inputpickup.prop("checked",false);
+//        $spandelivery.css("background-color", "#5f0080");
 //		$divdelivery.css("background-color","#fff")
 //    });
-//}
+
 
 
 
@@ -42,15 +77,14 @@ $inputpickup.on("click", function(){
 const image_div = document.querySelectorAll("div.image"); //선택한 이미지
 const cancel_div = document.querySelector("div.cancel");  //취소 버튼
 const input_file = document.querySelector("#attach"); //추가할 이미지 <input type="file" id="attach" style="display: none;">
-
-//const plusB=document.querySelectorAll(".css-82a6rk"); //첨부버튼
+const plusB=document.querySelectorAll("div.css-u52dqk"); //첨부버튼
 
 // x버튼 눌렀을 때 
     cancel_div.addEventListener("click", () => {
-        input_file.value = ""; 
-        image_div[0].style.display = "block";//+ 이미지(파일 추가하는) 보이고
-        image_div[1].style.display = "none";//원래 표시돼 있던 이미지 없어지고
-        cancel_div.style.display = "none";//x없어지고
+       input_file.value = ""; 
+       image_div[0].style.display = "none";//원래 표시돼 있던 이미지 없어지고
+       cancel_div.style.display = "none";//x없어지고
+       plusB[0].style.display="block";//+ 이미지(파일 추가하는) 보이고
     });
 
 ////파일 추가 버튼 눌렀을 때
@@ -77,10 +111,10 @@ const input_file = document.querySelector("#attach"); //추가할 이미지 <inp
         // function(a){} 와 a => {} 같음
         // function(e){} 와 e => {} 같음
         reader.onload = e => {
-            image_div[1].style.display = "block"; //선택한 이미지 : 보여야할 것
-            image_div[1].style.backgroundImage = `url('${e.target.result}')`
-            image_div[0].style.display = "none"; //없어져야 될 것 : + 이미지(파일 추가하는)
-            cancel_div.style.display = "block"; //X 버튼은 파일이 업로드 되어 화면이 보일 때 같이 보여야한다
+			plusB[0].style.display = "none";
+            image_div[0].style.display="block"; //선택한 이미지 : 보여야할 것
+            image_div[0].style.backgroundImage=`url('${e.target.result}')`;
+			cancel_div.style.display="block";
         };
     });
 

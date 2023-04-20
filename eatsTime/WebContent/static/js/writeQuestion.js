@@ -45,7 +45,7 @@ $("#inquiry-contents").on('input', checkInput);
 function checkInput() {	
 	
 	if($("#inquiry-subject").val() && $("#inquiry-contents").val()) {
-		$('.ebvrvv10').css('background-color', 'rgb(95, 0, 128)');
+		$('.ebvrvv10').css('background-color', '#ff4f32');
 		$('.ebvrvv10').css('cursor', 'pointer');
 		$('.ebvrvv10').attr('disabled', false);
 	}else{

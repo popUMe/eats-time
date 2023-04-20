@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="https://www.kurly.com//favicon.ico" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet"
@@ -11,6 +12,7 @@
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
+	<jsp:include page="../header.jsp" />
 	<div class="css-luwwab">
 		<div class="css-833hqy">
 			<div class="css-1v4whg">마이컬리</div>
@@ -124,13 +126,15 @@
 								</dl>
 							</div>
 						</div>
+				
 						<div class="content-alter">
-						
+				<div class="selldiv"><input type="button" class="selling" value="판매하기"> </div>
+				<div class="icon">		
 				<div class="icon1"><img class="icon-insert" src="insert.png"/></div>
 						
 				<div class="icon2"><img class="icon-delete" src="delete.png"/></div>
 						
-						
+						</div>
 						</div>
 
 					</div>
@@ -161,25 +165,23 @@
 								</dl>
 							</div>
 						</div>
-						<div class="content-alter">
-
-							<div class="icon1">
-								<img class="icon-insert" src="insert.png" />
-							</div>
-
-							<div class="icon2">
-								<img class="icon-delete" src="delete.png" />
-							</div>
-
-
+							<div class="content-alter">
+				<div class="selldiv"><input type="button" class="selling" value="판매하기"> </div>
+				<div class="icon">		
+				<div class="icon1"><img class="icon-insert" src="insert.png"/></div>
+						
+				<div class="icon2"><img class="icon-delete" src="delete.png"/></div>
+						
 						</div>
+						</div>
+
 					</div>
 				</div>
 				<div class="css-bx0kqw"></div>
 			</div>
 		</div>
 	</div>
-
+<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/seller_list.js"></script>

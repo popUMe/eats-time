@@ -24,10 +24,7 @@
 .css-1jgnig9 {
 	display: inline-block;
     width: 249px;
-    /* margin-right: 47px; */
-    border-bottom: 1px solid rgb(238, 238, 238);
     vertical-align:center;
-    line-height: 21px;
 }
 
 .css-11y1fso {
@@ -97,7 +94,7 @@
 }
 
 .css-1buhy1h:hover {
-    color: rgb(141, 76, 196);
+    color: #ff4f32;
 }
 
 .css-ryw54y {
@@ -157,6 +154,10 @@
 
 .css-1d3w5wq {
     width: 100%;
+}
+
+.css-1stur9s.all-filter {
+    justify-content: flex-end;
 }
 
 .css-1stur9s {

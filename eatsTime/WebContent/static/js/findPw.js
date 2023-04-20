@@ -53,6 +53,14 @@ let timeleft = 180; // 제한 시간 지정 값
 let setinterval = setInterval(timeIt, 1200);
 
 
+/*혹시 모를 이 페이지가 열리면 타이머 값 초기화*/
+$(document).ready(function(){
+	clearInterval(setinterval);
+	counter = 0;
+})
+
+
+
 
 
 /*타이머 태그 안에 값 넣기*/
@@ -362,7 +370,7 @@ verificationNumber.keyup(function() {
    } else {
       $(".error4").text("");
       phoneConfirmButton.removeAttr("disabled");
-      phoneConfirmButton.prop("background", "rgb(95, 0, 128)");
+      phoneConfirmButton.prop("background", "#ff4f32");
    }
 })
 
@@ -469,7 +477,7 @@ $(".resend-button").on("click", function() {
 	$('.banner-online').fadeIn();
 	$('#modal').fadeIn();
 	$("html").css("overflow-y", "hidden");
-	$(".modal-content1").html("재발송 되었습니다.");
+	$(".modal-content1").html("인증번호가 발송되었습니다. <br> 3분 안에 인증번호를 입력해 주세요.");
 	/*인증번호 재발송누르면 안에 인증번호 값 초기화후 밑에 에러메세지 다시*/
 	verificationNumber.val("");
 	$(".error4").text("인증번호를 입력해 주세요");
@@ -493,7 +501,7 @@ $(".resend-button").on("click", function() {
 function EmailCheckflag() {
 	if (memberIdCheck1 && emailCheck) {
 		emailButton.removeAttr("disabled");
-		emailButton.prop("background", "rgb(95, 0, 128)");
+		emailButton.prop("background", "#ff4f32");
 	} else {
 		emailButton.prop("background", "rgb(221, 221, 221)");
 		emailButton.attr("disabled", "");
@@ -505,7 +513,7 @@ function EmailCheckflag() {
 function PhoneCheckflag() {
 	if (memberIdCheck2 && phoneCheck) {
 		phoneButton.removeAttr("disabled");
-		phoneButton.prop("background", "rgb(95, 0, 128)");
+		phoneButton.prop("background", "#ff4f32");
 		emailButton.prop("background", "rgb(221, 221, 221)");
 		emailButton.attr("disabled", "");
 	} else {
@@ -579,7 +587,7 @@ function timeoutModal() {
 	$('.banner-online').fadeIn();
 	$('#modalSubmit').fadeIn();
 	$("html").css("overflow-y", "hidden");
-	$(".modal-content").html("3분이 지났습니다.");
+	$(".modal-content").html("유효 시간이 만료되었습니다. <br> 재발송 후 다시 시도해 주세요.");
 
 	$('.close-button-submit').click(function() {
 		$('.banner-online').fadeOut();
@@ -598,9 +606,9 @@ function timeoutModal() {
 /*휴대폰인증 버튼 내용 함수로 담기*/
 
 function phoneCertification() {
-	certificationButtons.eq(0).css("color", "rgb(95, 0, 128)");
+	certificationButtons.eq(0).css("color", "#ff4f32");
 	certificationButtons.eq(0).css("font-weight", "bold");
-	certificationButtons.eq(0).css("box-shadow", "0px -2px 0px 0px rgb(95, 0, 128) inset");
+	certificationButtons.eq(0).css("box-shadow", "0px -2px 0px 0px #ff4f32 inset");
 	certificationButtons.eq(1).css("color", "rgb(102, 102, 102)");
 	certificationButtons.eq(1).css("font-weight", "400");
 	certificationButtons.eq(1).css("box-shadow", "0px -0.5px 0px 0px rgb(221, 221, 221) inset");
@@ -660,9 +668,9 @@ function phoneCertification() {
 /* 이메일 인증 버튼 내용 함수로 담기*/
 
 function emailCertification() {
-	certificationButtons.eq(1).css("color", "rgb(95, 0, 128)");
+	certificationButtons.eq(1).css("color", "#ff4f32");
 	certificationButtons.eq(1).css("font-weight", "bold");
-	certificationButtons.eq(1).css("box-shadow", "0px -2px 0px 0px rgb(95, 0, 128) inset");
+	certificationButtons.eq(1).css("box-shadow", "0px -2px 0px 0px #ff4f32 inset");
 	certificationButtons.eq(0).css("color", "rgb(102, 102, 102)");
 	certificationButtons.eq(0).css("font-weight", "400");
 	certificationButtons.eq(0).css("box-shadow", "0px -0.5px 0px 0px rgb(221, 221, 221) inset");

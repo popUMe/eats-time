@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/all.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/editPersonal.css">
+<link rel="icon" href="https://www.kurly.com//favicon.ico" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/editPersonal.css">
 <title>컬리 - 마켓컬리/뷰티컬리</title>
 </head>
 <body>
@@ -55,7 +54,7 @@
 							<g>
 							<g>
 							<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use class="point3" stroke="#5f0080" stroke-linecap="round" stroke-width="1.8"
+							<use class="point3" stroke="#ff4f32" stroke-linecap="round" stroke-width="1.8"
 								stroke-linejoin="round" transform="rotate(45 5.657 5.657)"
 								xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 			</ul>
@@ -142,6 +141,7 @@
 		<!-- .css-1268zpe  -->
 	</div>
 	<!--css-luwwab eug5r8l1-->
+	<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/editPersonal.js"></script>

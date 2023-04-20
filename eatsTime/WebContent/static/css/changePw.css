@@ -165,7 +165,7 @@ button[disabled], input[disabled] {
     height: 52px;
     border-radius: 4px;
     color: #fff;
-    background-color: #5f0080;
+    background-color: #ff4f32;
     border: 0 none;
 }
 
@@ -282,7 +282,7 @@ button[disabled], input[disabled] {
 	padding : 0px 18px;
 	font-size: 16px;
 	font-weight: 500;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background: transparent;
 	padding-top: 18px;
 }
