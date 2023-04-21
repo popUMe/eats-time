@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/product/productListAll.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/product/productList.css">
-<title>마켓 베스트 - 컬리</title>
+<title>이츠타임 - 배송 제품목록</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />

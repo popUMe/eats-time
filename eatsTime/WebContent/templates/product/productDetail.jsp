@@ -7,7 +7,7 @@
 <link rel="icon" href="https://www.kurly.com//favicon.ico" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/product/productDetail.css">
-<title>제품명</title>
+<title>이츠타임 - 제품 상세</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
