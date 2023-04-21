@@ -10,14 +10,14 @@
 <body>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/sellingList.css">
-	<title>컬리 - 마켓컬리/뷰티컬리</title>
+	<title>이츠타임 - 판매목록</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
 
 	<div class="css-luwwab">
 		<div class="css-833hqy">
-			<div class="css-1v4whg">마이컬리</div>
+			<div class="css-1v4whg">마이타임</div>
 			<!--css-1v4whg ecbxmj2  -->
 			<ul class="css-1x9bshx">
 				<li><a class="css-g4g0eu" id="li-1">상품 목록 <svg

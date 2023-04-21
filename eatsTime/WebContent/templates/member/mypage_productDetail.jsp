@@ -7,7 +7,7 @@
 <link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage_productDetail.css">
-<title>제품명</title>
+<title>이츠타임 - 판매 상품</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />

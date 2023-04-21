@@ -13,7 +13,7 @@
 	<jsp:include page="../header.jsp" />
 	<div class="css-luwwab">
 		<div class="css-833hqy">
-			<div class="css-1v4whg">마이컬리</div>
+			<div class="css-1v4whg">마이타임</div>
 			<!--css-1v4whg ecbxmj2  --> 
 			<ul class="css-1x9bshx">
 				<li><a class="css-g4g0eu" id="li-1">주문내역

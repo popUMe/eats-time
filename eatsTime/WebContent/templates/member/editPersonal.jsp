@@ -7,13 +7,13 @@
 <link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/editPersonal.css">
-<title>컬리 - 마켓컬리/뷰티컬리</title>
+<title>이츠타임 - 회원 정보 수정</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
 	<div class="css-luwwab eug5r8l1">
 		<div class="css-833hqy">
-			<div class="css-1v4whg">마이컬리</div>
+			<div class="css-1v4whg">마이타임</div>
 			<!--css-1v4whg ecbxmj2  -->
 			<ul class="css-1x9bshx">
 				<li><a class="css-g4g0eu" id="li-1">주문내역
@@ -62,9 +62,11 @@
 			<a href="/mypage/inquiry/list" class="css-196gwz9 e19l01ug3">
 
 				<div class="css-rmee6s">
-					<span class="css-1sdidca">도움이 필요하신가요 ?</span> <span
-						class="css-rnnx2x">1:1 문의하기</span>
-				</div> <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+					<span class="css-1sdidca">도움이 필요하신가요 ?</span> 
+					<span class="css-rnnx2x">1:1 문의하기</span>
+				</div> 
+				
+				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
 					viewBox="0 0 24 24">
 				<defs>
 				<path id="gfk9q0rhta" d="M1.657 1.657L9.657 1.657 9.657 9.657"></path></defs>
