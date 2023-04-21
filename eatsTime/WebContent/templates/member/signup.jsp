@@ -143,6 +143,7 @@
 									class="css-u52dqk" value="">
 							</div>
 						</div>
+						<br>
 						<div class="css-jmalg">
 							<div class="css-176lya2">
 								<input data-testid="input-box" id="subAddress" name="subAddress"
@@ -150,14 +151,10 @@
 									value="">
 							</div>
 						</div>
-						<span color="#5f0080" class="css-8x20hx eq6ygzw0">샛별배송</span><span
-							class="css-vukl2m eq6ygzw0">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
 					</div>
 					<div class="css-1w0ksfz">
 						<button class="css-chai22 " type="button">
-							<span class="css-ymwvow "><img
-								src="https://res.kurly.com/pc/service/cart/2007/ico_search.svg"
-								alt="" class="css-1m3kac1">재검색</span>
+							<span class="css-ymwvow ">검색</span>
 						</button>
 					</div>
 				</div>
