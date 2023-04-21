@@ -3,6 +3,8 @@
  */
 
 
+//메뉴 마우스 오버 & 아웃
+
 let $mousepoint1 = $("#li-1");
 let $mousepoint2 = $("#li-2");
 let $mousepoint3 = $("#li-3");
@@ -45,6 +47,7 @@ $mousepoint3.on("mouseover", function() {
 
 });
 
+/*성별 radio 체크*/
 const inputmale = document.querySelector("#gender-man");
 const inputfemale = document.querySelector("#gender-woman");
 const inputnone = document.querySelector("#gender-none");
@@ -100,7 +103,7 @@ const divnone = document.querySelector("#divnone");
     });
 
 
-
+/*유효성 검사*/
 /*비밀번호 입력창 태그*/
 let passwordVal = $("#originalPassword").value;
 
@@ -125,7 +128,7 @@ password.bind('focus', function() {
 })
 
 
-
+//에러2 : 새 비밀번호 입력 
 newPassword.bind('focus', function() {
 
 	newPassword.blur(function(e) {
@@ -133,23 +136,30 @@ newPassword.bind('focus', function() {
 		
 		if ($(e.target).val() == ""){
 			$(".error2").text("10자 이상 입력");
+			
 		} if($(e.target).val().length<10){
-		
 			$(".error2").text("10자 이상 입력");
 		}
-		if($(e.target).val().length>9){
+		
+		if($(e.target).val().length>9 ){
+			
+			if(!fn_pwChk($(e.target).val())){
 			$(".error2").text("영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합");
+				
+			}
+			if(fn_pwChk($(e.target).val())){
+			$(".error2").text("");
+				
+			}
 		}
-//		else{
-//			$(".error2").text("");
-//		}
 
-		nowpassword=$(e.target).val();
-	})
+		nowpassword=$(e.target).val();	
+	
+})
 
 })
 
-//새 비밀번호 재입력
+//에러3 : 새 비밀번호 재입력
 rePassword.bind('focus', function() {
 
 	rePassword.blur(function(e) {
@@ -167,21 +177,26 @@ rePassword.bind('focus', function() {
 
 
 
-/*이름 입력창 태그*/
-let name = $("#name");
+/*이메일, 이름 입력창 태그*/
 let email = $("#email");
+let name = $("#name");
 
+/*에러4 : 이름 입력*/
+name.bind('focus', function() {
 
-/*이메일 유효성검사 함수*/
-function fn_emailChk(email) {
-	let regExp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{1,4}$/;
-	if (!regExp.test(email)) {
-		return false;
-	}
-	return true;
-}
+	name.blur(function(e) {
 
+		if ($(e.target).val() == "") {
+			$(".error4").text("이름을 입력해주세요");
+		} else {
+			$(".error4").text("");
+		}
 
+	})
+
+})
+
+/*에러 5 : 이메일 입력*/
 email.bind('focus', function() {
 
 	email.blur(function(e) {
@@ -198,26 +213,31 @@ email.bind('focus', function() {
 
 })
 
-name.bind('focus', function() {
-
-	name.blur(function(e) {
-
-		if ($(e.target).val() == "") {
-			$(".error4").text("이름을 입력해주세요");
-		} else {
-			$(".error4").text("");
-		}
-
-	})
-
-})
 
 
 
 
+/*password 유효성 검사 함수*/
+function fn_pwChk(newPassword) {
+  // 검증에 사용할 정규식 변수 regExp에 저장
+  let regExp = /^(?!((?:[A-Za-z]+)|(?:[~!@#$%^&*()_+=]+)|(?:[0-9]+))$)[A-Za-z\d~!@#$%^&*()_+=]{10,}$/;
+  if (!regExp.test(newPassword)) {
+    //정규식에 맞지않으면 return null
+    return false;
+  }
+  return true;
+};
 
 
 
+/*이메일 유효성검사 함수*/
+function fn_emailChk(email) {
+	let regExp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{1,4}$/;
+	if (!regExp.test(email)) {
+		return false;
+	}
+	return true;
+}
 
 
 
