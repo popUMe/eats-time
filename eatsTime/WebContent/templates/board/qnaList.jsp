@@ -31,7 +31,7 @@
 }
 
 </style>
-<title>이츠타임 - 1:1 문의</title>
+<title>이츠타임 - [1:1 문의]</title>
 </head>
 <body>
 <jsp:include page="../header.jsp" />
