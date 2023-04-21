@@ -109,9 +109,9 @@
 	text-align: center;
 	overflow: hidden;
 	width: 100%;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background-color: rgb(255, 255, 255);
-	border: 1px solid rgb(95, 0, 128);
+	border: 1px solid #ff4f32;
 }
 .css-chai22 {
 	display: block;
@@ -119,9 +119,9 @@
 	text-align: center;
 	overflow: hidden;
 	width: 100%;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background-color: rgb(255, 255, 255);
-	border: 1px solid rgb(95, 0, 128);
+	border: 1px solid #ff4f32;
 }
 /*중복확인 부분 span태그*/
 .css-1w0ksfz>button>span {
@@ -142,9 +142,9 @@
 	width: 100%;
 	height: 44px;
 	border-radius: 4px;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background-color: rgb(255, 255, 255);
-	border: 1px solid rgb(95, 0, 128);
+	border: 1px solid #ff4f32;
 }
 /*주소 검색부분 span태그*/
 .css-1schgvv>span {
@@ -242,7 +242,7 @@ input[type=radio] {
 	display: inline-block;
 	position: relative;
 	border-radius: 50%;
-	background-color: rgb(95, 0, 128);
+	background-color: #ff4f32;
 }
 
 /*성별 선택 안함 부분div태그*/
@@ -415,11 +415,11 @@ svg:not(:root) {
 /*약관보기 a태그*/
 .css-7chi73 {
 	padding-right: 22px;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	letter-spacing: 0px;
 }
 /*약관보기 after*/
-.css-7chi73::after {
+/* .css-7chi73::after {
 	content: "";
 	display: inline-block;
 	margin-left: 4px;
@@ -428,7 +428,7 @@ svg:not(:root) {
 	background:
 		url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiB2aWV3Qm94PSIwIDAgNiAxMSI+CiAgICA8cGF0aCBmaWxsPSIjNUYwMDgwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDExTDYgNS41IDEgMCAwIDEuMSA0IDUuNSAwIDkuOXoiLz4KPC9zdmc+Cg==)
 		50% 50%/6px 9px no-repeat;
-}
+} */
 
 /*약관동의 sns선택 div태그*/
 .css-1qsjbts {
@@ -458,7 +458,7 @@ svg:not(:root) {
 		url(https://res.kurly.com/pc/service/common/2006/ico_sub_dot.svg) 0px
 		0px/16px 20px no-repeat;
 	font-size: 12px;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	line-height: 18px;
 	letter-spacing: -0.5px;
 }
@@ -480,7 +480,7 @@ svg:not(:root) {
 	height: 56px;
 	border-radius: 3px;
 	color: rgb(255, 255, 255);
-	background-color: rgb(95, 0, 128);
+	background-color: #ff4f32;
 	border: 0px none;
 }
 /*가입하기 버튼 span태그*/
@@ -557,8 +557,7 @@ path[fill="#fff"] {
 	padding: 0px 18px;
 	font-size: 16px;
 	font-weight: 500;
-	color: rgb(95, 0, 128);
+	color: #ff4f32;
 	background: transparent;
 	padding-top: 18px;
 }
-
