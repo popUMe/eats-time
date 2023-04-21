@@ -57,7 +57,7 @@
 							<label for="phone" class="css-c3g9of">휴대폰 번호</label>
 							<div height="46" class="css-1iilz1t">
 								<input id="phone" name="phone" placeholder="휴대폰 번호를 입력해 주세요"
-									type="text" height="46" class="css-17iio5j input-content3"
+									type="tel" height="46" class="css-17iio5j input-content3"
 									maxlength='11' numberOnly value="">
 								<button class="css-118q5z4 textbutton3" size="16"
 									id="delete-input" aria-label="delete-input" type="button"
@@ -103,6 +103,8 @@
 					<!-- 폰인증후 버튼 -->
 					<button class="css-1s9rhb5 phone-confirmButton button" type="button"
 						disabled="" radius="4">
+						
+						
 						<span class="css-ymwvow button-text">확인</span>
 					</button>
 				</div>

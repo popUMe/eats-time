@@ -403,14 +403,16 @@ button.plus-on{display: inline-flex;
 
 .css-we1gxf {
     display: flex;
-    padding: 10px 0px 6px;
+    padding: 10px 0px 39.5px;
 }
 
-
+.timenotice h2{
+	text-align: center;
+}
 
 .css-we1gxf .lottie-timer {
-    width: 36px;
-    height: 47px;
+    width: 40px;
+    height: 51px;
     margin-right: 5px;
 }
 
@@ -475,7 +477,7 @@ button.plus-on{display: inline-flex;
 	
 	padding-top: 20px;
     font-size: 25px;
-    color: rgb(51, 51, 51);
+    color: #ff4f32;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.26px;
@@ -491,7 +493,7 @@ button.plus-on{display: inline-flex;
 }
 
 .date{
-    font-size: 30px; 
+    font-size: 20px; 
     color: rgb(255, 79, 50);  /* 흰색 */
     font-weight: bold;
 }
@@ -500,4 +502,3 @@ button.plus-on{display: inline-flex;
     font-weight: bold;
     color: rgb(255, 79, 50);  /*보라색 */
 }
-

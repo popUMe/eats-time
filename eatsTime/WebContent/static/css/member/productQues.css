@@ -38,10 +38,19 @@
     border: 1px solid rgb(242, 242, 242);
 }
 
-ol, ul {
+ul {
     list-style-type: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
-
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
 /* 주문 내역*/
 
 .css-g4g0eu {
@@ -79,26 +88,14 @@ svg:not(:root) {
     color: rgb(102, 102, 102);
 }
 
+/* 개인 정보 수정 
 .css-g4g0eu.active, .css-g4g0eu:hover {
     background-color: rgb(250, 250, 250);
     color: #ff4f32;
     font-weight: 500;
-} 
+}*/
 
-.css-g4g0eu {
-    cursor: pointer;
-    border-bottom: 1px solid rgb(242, 242, 242);
-    padding: 15px 13px 15px 20px;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    line-height: 19px;
-    letter-spacing: -0.3px;
-    font-size: 14px;
-    color: rgb(102, 102, 102);
-}
+
 
 .css-g4g0eu.active, .css-g4g0eu:hover {
     background-color: rgb(250, 250, 250);
@@ -262,6 +259,7 @@ ul {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    padding-left:0px;
 }
 
 li {
@@ -505,6 +503,10 @@ svg:not(:root) {
     transition: border 300ms ease-out 0s;
 }
 
+.css-dz42d5:hover{
+    border: rgb(0, 0, 0);
+}
+
 .css-r0xkg0 {
     position: relative;
     width: 100%;
@@ -519,4 +521,7 @@ svg:not(:root) {
 
 
 
-
+.css-1bnotis {
+    transition: fill 300ms ease-out 0s;
+    transform: rotate(180deg);
+}
