@@ -7,7 +7,7 @@
 <link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/notice.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
-<title>이츠타임 - [공지사항]</title>
+<title>이츠타임 - 공지사항</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
