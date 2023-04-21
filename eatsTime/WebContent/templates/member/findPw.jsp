@@ -9,7 +9,7 @@
 	href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/findPw.css">
-<title>컬리 - 마켓컬리/뷰티컬리</title>
+<title>이츠타임 - [비밀번호 찾기]</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
