@@ -9,7 +9,7 @@
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/static/css/member/login.css" />
     <meta charset="UTF-8">
-    <title>로그인페이지</title>
+    <title>이츠타임-[로그인]</title>
 </head>
 <body>
 <div class="css-1bb6q2p">

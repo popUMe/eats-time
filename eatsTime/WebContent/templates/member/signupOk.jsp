@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/all.css">
 <meta charset="UTF-8">
-<title>회원가입 완료</title>
+<title>이츠타임-[회원가입 완료]</title>
 </head>
 <body>
 	<div class="css-1qho7a0 erwg4uz0">

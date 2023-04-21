@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/member/signup.css" />
 <meta charset="UTF-8">
-<title>회원가입 페이지</title>
+<title>이츠타임-[회원가입]</title>
 </head>
 <body>
 	<form>
