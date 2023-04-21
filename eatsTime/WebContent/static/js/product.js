@@ -7,6 +7,7 @@ $(document).ready(function(){
     // 상품 리스트 페이지 : svg 변경
     $('.e1isxf3i0').click(function() {
         $(this).children('.css-17kh8wb').toggleClass('filter-on');
+        $(this).parent(".css-x67gaa").siblings().find('.css-17kh8wb').removeClass('filter-on');
     });
 
 	// 상품 리스트 페이지 : 페이지 컨트롤러
