@@ -111,7 +111,8 @@
 						</div>
 					</div> -->
 					<!-- 배송주소 부분 -->
-					<div id="checkout-shipping-details" class="css-1y0xj4c e1pxan881 addressDelivery">
+					<div id="checkout-shipping-details"
+						class="css-1y0xj4c e1pxan881 addressDelivery">
 						<div class="css-1gshg9u e150alo82">
 							<span class="css-ln1csn e150alo81">배송 주소</span>
 							<div class="css-82a6rk e150alo80">
@@ -128,25 +129,25 @@
 													value="김인진" style="visibility: hidden">
 											</div>
 											<div class="css-iqoq9n e1pxan880">
-												<button class="css-q8bpgr e4nu7ef3" type="button" width="60"
-													height="30" radius="3">
+												<button class="css-q8bpgr e4nu7ef3" id="address_kakao"
+													name="address_kakao" type="button" width="60" height="30"
+													radius="3">
 													<span class="css-ymwvow e4nu7ef1">입력</span>
 												</button>
 											</div>
 										</div>
 										<br>
 										<div height="44" class="css-t7kbxx e1uzxhvi3">
-											<input data-testid="input-box" id="receiver-name" name="name"
-												placeholder="이름을 입력해 주세요" type="text" required=""
-												height="44" class="css-1quw3ub e1uzxhvi2" value="(주소)"
-												readonly>
+											<input data-testid="input-box" id="deliveryAddress" name="deliveryAddress"
+												placeholder="" type="text" required="" height="44"
+												class="css-1quw3ub e1uzxhvi2" value="(주소)" readonly>
 										</div>
 										<br>
 										<div height="44" class="css-t7kbxx e1uzxhvi3">
-											<input data-testid="input-box" id="receiver-name" name="name"
-												placeholder="이름을 입력해 주세요" type="text" required=""
+											<input data-testid="input-box" id="deliveryAddressDetail" name="deliveryAddressDetail"
+												name="subAddress" placeholder="" type="text" required=""
 												height="44" class="css-1quw3ub e1uzxhvi2" value="(상세주소)"
-												readonly>
+												>
 										</div>
 										<br>
 										<!-- <p class="css-1tak4sl eh5sxvr3" style="display: padding-top: 5px;">주문 상품이 <span style="font-weight: bold">'픽업'</span>일 경우 판매자의 주소를
@@ -158,8 +159,8 @@
 					</div>
 
 					<!-- 픽업주소 부분 -->
-					<div id="checkout-shipping-details" class="css-1y0xj4c e1pxan881 addressPickup"
-						style="display: none">
+					<div id="checkout-shipping-details"
+						class="css-1y0xj4c e1pxan881 addressPickup" style="display: none">
 						<div class="css-1gshg9u e150alo82">
 							<span class="css-ln1csn e150alo81">픽업 주소</span>
 							<div class="css-82a6rk e150alo80">
@@ -174,23 +175,24 @@
 													required="" height="44" class="css-1quw3ub e1uzxhvi2"
 													value="김인진" style="visibility: hidden">
 											</div>
-											<div class="css-iqoq9n e1pxan880">
+											<!-- 픽업은 입력버튼 필요 없어서 주석 -->
+											<!-- div class="css-iqoq9n e1pxan880">
 												<button class="css-q8bpgr e4nu7ef3" type="button" width="60"
 													height="30" radius="3">
 													<span class="css-ymwvow e4nu7ef1">입력</span>
 												</button>
-											</div>
+											</div> -->
 										</div>
 										<br>
 										<div height="44" class="css-t7kbxx e1uzxhvi3">
-											<input data-testid="input-box" id="receiver-name" name="name"
+											<input data-testid="input-box" id="pickupAddress" name="pickupAddress"
 												placeholder="이름을 입력해 주세요" type="text" required=""
 												height="44" class="css-1quw3ub e1uzxhvi2" value="(주소)"
 												readonly>
 										</div>
 										<br>
 										<div height="44" class="css-t7kbxx e1uzxhvi3">
-											<input data-testid="input-box" id="receiver-name" name="name"
+											<input data-testid="input-box" id=pickupAddressDetail" name="pickupAddressDetail"
 												placeholder="이름을 입력해 주세요" type="text" required=""
 												height="44" class="css-1quw3ub e1uzxhvi2" value="(상세주소)"
 												readonly>
@@ -771,7 +773,23 @@
 	<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script
+	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
+	/* 주소 api  */
+	window.onload = function() {
+		document.getElementById("address_kakao").addEventListener("click",function() { //주소입력칸을 클릭하면
+		//카카오 지도 발생
+		new daum.Postcode({
+			oncomplete : function(data) { //선택시 입력값 세팅
+				document.getElementById("deliveryAddress").value = data.address; // 주소 넣기
+				document.querySelector("input[name=deliveryAddressDetail]").value=""; //상세 주소 초기화
+				document.querySelector("input[name=deliveryAddressDetail]").focus(); //상세 주소 포커싱
+			}
+		}).open();
+	});
+}
+	
 	/* 동의 부분 모달 */
 	$(".agreeButton1").on("click", function() {
 		/* 	$('.banner-online').fadeIn(); */
@@ -816,15 +834,15 @@
 	function clearInput4() {
 		document.getElementById("receiver-input4").value = "";
 	}
-	
+
 	/* 픽업정보 테스트 */
-	$('#addressTest').on('click', function(){
+	$('#addressTest').on('click', function() {
 		$('.addressDelivery').hide();
 		$('.addressPickup').show();
 	});
-	
+
 	/* 배송정보 테스트 */
-	$('#addressTest2').on('click', function(){
+	$('#addressTest2').on('click', function() {
 		$('.addressDelivery').show();
 		$('.addressPickup').hide();
 	});
