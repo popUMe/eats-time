@@ -21,10 +21,10 @@ duplicateCheckButtons.forEach((button) => {
     } else {
       checkDuplicate(targetInput.value, (isDuplicate) => {
         if (isDuplicate) { // 중복되는 경우
-          modalContent.innerText = "중복된 아이디/이메일입니다.";
+          modalContent.innerText = "중복된 아이디입니다.";
           modal.style.display = "block";
         } else { // 중복되지 않는 경우
-          modalContent.innerText = "사용 가능한 아이디/이메일입니다.";
+          modalContent.innerText = "사용 가능한 아이디입니다.";
           modal.style.display = "block";
         }
       });
@@ -71,12 +71,20 @@ function validateRequiredFields() {
   }
   
   // 아이디 검사 (6~16자 영문 혹은 영문과 숫자 조합)
-  const memberId = document.getElementById('memberId').value;
-  const memberIdRegex = /^[a-zA-Z0-9]{6,16}$/;
-  if (!memberIdRegex.test(memberId)) {
-    alert('아이디는 6~16자의 영문 혹은 영문과 숫자 조합이어야 합니다.');
-    return false;
-  }
+ memberId.keyup(function() {
+
+	if (memberId.val() == "") {
+		$(".error1").text("가입 시 등록한 아이디를 입력해주세요");
+		memberIdCheck1 = false;
+		memberIdCheck2 = false;
+	} else {
+		$(".error1").text("");
+		memberIdCheck1 = true;
+		memberIdCheck2 = true;
+	}
+	EmailCheckflag()
+	PhoneCheckflag()
+})
   
   // 비밀번호 검사
   var pw = $("#password").val();
@@ -104,13 +112,22 @@ function validateRequiredFields() {
     return false;
   }
   
-  // 이메일 검사
-  const email = document.getElementById('email').value;
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (!emailRegex.test(email)) {
-    alert('유효한 이메일 주소를 입력해주세요.');
-    return false;
-  }
+ /*이메일 유효성검사*/
+email.keyup(function() {
+	if (email.val() == "") {
+		$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
+		emailCheck = false;
+	} else if (!fn_emailChk(email.val())) {
+		$(".error2").text("올바른 이메일 형식을 입력해 주세요");
+		emailCheck = false;
+	} else {
+		$(".error2").text("");
+		emailCheck = true;
+	}
+
+	EmailCheckflag()
+
+})
 
   
   // 모든 검사를 통과한 경우
@@ -143,16 +160,70 @@ function validateRequiredFields() {
   return true;
 }
 
-// 휴대폰 유효성 검사
-function isHpFormat(hp){
-	if(hp == ""){
-		return true;
+
+/*휴대폰 번호 유효성 검사*/
+
+  $(document).ready(function() {
+    $('#mobileNumber').on('focus', function() {
+      $(this).on('blur', function(e) {
+        if ($(e.target).val() === '') {
+          $('.error3').text('가입 시 등록한 휴대폰 번호를 입력해주세요');
+        } else {
+          $('.error3').text('');
+        }
+      });
+    });
+  });
+  
+$(".input-content1").keyup(function() {
+	if ($(".input-content1").val().length == 0) {
+		$(".textbutton1").css('visibility', 'hidden');
+	} else {
+		$(".textbutton1").css('visibility', 'visible');
 	}
-	var phoneRule = /^(01[016789]{1})[0-9]{3,4}[0-9]{4}$/;
-	return phoneRule.test(hp);
-}
+});
+
+$('.textbutton1').on("click", function() {
+	buttons.prop("background", "rgb(221, 221, 221)");
+	buttons.attr("disabled", "");
+	$(".input-content1").val("");
+	$(".textbutton1").css('visibility', 'hidden');
+	$(".error1").text("가입 시 등록한 아이디를 입력해주세요");
+	/*이름 플래그 초기화*/
+		memberIdCheck1 = false;
+		memberIdCheck2 = false;
+})
+
+/* 탭으로 이동금지 */
+$('.textbutton1').attr("tabindex", "-1");
+$('.textbutton2').attr("tabindex", "-1");
+$('.textbutton3').attr("tabindex", "-1");
+$('.textbutton4').attr("tabindex", "-1");
 
 
+
+
+/*이메일*/
+$(".input-content2").keyup(function() {
+	if ($(".input-content2").val().length == 0) {
+		$(".textbutton2").css('visibility', 'hidden');
+	} else {
+		$(".textbutton2").css('visibility', 'visible');
+	}
+});
+
+$('.textbutton2').on("click", function() {
+	buttons.prop("background", "rgb(221, 221, 221)");
+	buttons.attr("disabled", "");
+	$(".input-content2").val("");
+	$(".textbutton2").css('visibility', 'hidden');
+	$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
+	/*이메일 플래그 초기화*/
+	emailCheck = false;
+})
+
+
+/* 카카오 주소 api*/
 $('.css-1schgvv').on('click', function() {
   new daum.Postcode({
     oncomplete: function(data) {
@@ -173,21 +244,59 @@ $('.css-1schgvv').on('click', function() {
 });
 
 
+const inputmale = document.querySelector("#gender-man");
+const inputfemale = document.querySelector("#gender-woman");
+const inputnone = document.querySelector("#gender-none");
 
 
-$(document).ready(function() {
-  // 성별 라디오 버튼 클릭 이벤트
-  $('input[type="radio"][name="gender"]').on('click', function() {
-    // 선택한 라디오 버튼의 값을 가져옴
-    var selectedValue = $(this).val();
-    
-    // 선택한 라디오 버튼에 해당하는 체크박스를 체크 처리
-    $('input[type="checkbox"][value="' + selectedValue + '"]').prop('checked', true);
-    
-    // 선택하지 않은 라디오 버튼에 해당하는 체크박스를 체크 해제 처리
-    $('input[type="checkbox"][value!="' + selectedValue + '"]').prop('checked', false);
-  });
-});
+const spanmale = document.querySelector("#male");
+const spanfemale = document.querySelector("#female");
+const spannone = document.querySelector("#none");
+
+const divmale = document.querySelector("#divmale");
+const divfemale = document.querySelector("#divfemale");
+const divnone = document.querySelector("#divnone");
+
+
+ inputmale.addEventListener("click", () => {
+        spanmale.style.background="#5f0080";
+		divmale.style.background="#fff";
+		
+		spanfemale.style.background="#fff";
+		spanfemale.style.border="1px solid #dddddd";
+
+		spannone.style.background="#fff";
+		spanfemale.style.border="1px solid #dddddd";
+		
+		
+		
+    });
+
+
+ inputfemale.addEventListener("click", () => {
+        spanfemale.style.background="#5f0080";
+		divfemale.style.background="#fff";
+		
+		spanmale.style.background="#fff";
+		spanmale.style.border="1px solid #dddddd";
+		
+		spannone.style.background="#fff";
+		spannone.style.border="1px solid #dddddd";
+    });
+
+
+ inputnone.addEventListener("click", () => {
+        spannone.style.background="#5f0080";
+		divnone.style.background="#fff";
+		
+		spanmale.style.background="#fff";
+		spanmale.style.border="1px solid #dddddd";
+		
+		spanfemale.style.background="#fff";
+		spanfemale.style.border="1px solid #dddddd";
+    });
+
+
 function validateBirthday() {
   var year = document.getElementsByName("birthYear")[0].value;
   var month = document.getElementsByName("birthMonth")[0].value;
@@ -211,22 +320,41 @@ function validateBirthday() {
 }
 
 
+const $allAgreeCheckboxes = $(".css-s5xdrg input:not(#TermsAgreeAll)");
+const $requiredChecks = $(".css-s5xdrg input[type='checkbox']");
 
-const $all = $(".all");
-const $checkboxes = $(".term");
-
-$all.on("click", function(){
-  $checkboxes.prop("checked", $(this).is(":checked"));
+$allAgreeCheckboxes.on("click", function() {
+  $requiredChecks.prop("checked", $(this).is(":checked"));
 });
 
-// 체크 박스 중 한 개라도 false일 경우 전체동의 해제
-$checkboxes.on("click", function(){
-  $all.prop("checked", $checkboxes.filter(":checked").length == 3);
-});
-
-$('#RequiredTermsOfPrivacy').on("click", function() {
-  // 체크박스 클릭시 동작할 코드 작성
-  if ($('#RequiredTermsOfPrivacy').is(":checked")) {
-    $('#buttonId').click();
+$requiredChecks.on("click", function() {
+  if (!$allAgreeCheckboxes.is(":checked")) {
+    $allAgreeCheckboxes.prop("checked", $requiredChecks.filter(":checked").length === $requiredChecks.length);
   }
 });
+
+$("#RequiredTermsOfPrivacy").on("click", function() {
+  if ($("#RequiredTermsOfPrivacy").is(":checked")) {
+    $("#buttonId").click();
+  }
+});
+
+function goInfo() {
+  const check = $requiredChecks.is(":checked");
+  if (!check) {
+    const modalMessage = "<span>서비스를 이용하시기 위해서는</span><span>필수 약관에 동의해주세요!</span>";
+    showWarnModal(modalMessage);
+    return;
+  }
+
+  step = 2;
+
+  $("div.css-qsz6yg").hide();
+  $("div.css-1rlf2l5").hide();
+  $("div.css-9hbb7g").show();
+  $("#back").show();
+
+  $([document.documentElement, document.body]).animate({
+    scrollTop: 0
+  }, 300);
+}
