@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" href="https://www.kurly.com//favicon.ico" />
 <link rel="stylesheet" type="text/css"	href="${pageContext.request.contextPath}/static/css/admin/adminQna.css">
 <meta charset="UTF-8">
-<title>문의내역</title>
+<title>문의내역 - 관리자모드</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
