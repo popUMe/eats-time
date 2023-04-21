@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/noticeList.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
 <title>이츠타임 - 공지사항 목록</title>
