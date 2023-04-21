@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html lang="ko"><head>
     <title>문의내역</title>
+    <link rel="icon" href="https://www.kurly.com//favicon.ico" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminNoticeWrite.css">
 </head>
 <body>
     <div class="board_wrap">
         <div class="board_title">
-            <h1>문의내역</h1>
+            <h1>문의내역 - 관리자모드</h1>
         </div>
         <div class="board_view_wrap">
             <div class="board_view">
