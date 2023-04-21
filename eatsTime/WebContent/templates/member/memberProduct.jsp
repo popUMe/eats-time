@@ -4,14 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/memberProduct.css">
-<title>컬리 - 마켓컬리/뷰티컬리</title>
+<title>이츠타임 - 주문 내역</title>
 </head>
 <body>
+	<jsp:include page="../header.jsp" />
+
 	<div class="css-luwwab">
 		<div class="css-833hqy">
-			<div class="css-1v4whg">마이컬리</div>
+			<div class="css-1v4whg">마이타임</div>
 			<!--css-1v4whg ecbxmj2  -->
 			<ul class="css-1x9bshx">
 				<li><a class="active css-g4g0eu" id="li-1">주문내역
@@ -166,6 +169,7 @@
 	</div>
 	</div>
 	</div>
+		<jsp:include page="../footer.jsp" />
 	
 	</body>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

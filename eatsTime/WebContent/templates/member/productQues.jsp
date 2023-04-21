@@ -4,14 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/productQues.css">
-<title>컬리 - 마켓컬리/뷰티컬리</title>
+<title>이츠타임 - 나의 문의</title>
 </head>
 <body>
+	<jsp:include page="../header.jsp" />
+
 <div class="css-luwwab">
 		<div class="css-833hqy">
-			<div class="css-1v4whg">마이컬리</div>
+			<div class="css-1v4whg">마이타임</div>
 			<!--css-1v4whg ecbxmj2  -->
 			<ul class="css-1x9bshx">
 				<li><a class="css-g4g0eu" id="li-1">주문내역
@@ -127,56 +130,68 @@
 							style="opacity: 1; height: auto;">
 							<div class="inquiry-detail-content" style=display:none;>
 								<div class="content-row">
-									<div class="subject-wrap">
-										<div class="icon-wrap">
-											<span
-												style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
-												style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
-													alt="" aria-hidden="true"
-													src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2724%27%20height=%2724%27/%3e"
-													style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
-												alt="질문"
-												src="https://res.kurly.com/kurly/ico/2021/question_24_24_purple.svg"
-												decoding="async" data-nimg="intrinsic" class="css-0"
-												style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-												srcset="https://res.kurly.com/kurly/ico/2021/question_24_24_purple.svg 1x, https://res.kurly.com/kurly/ico/2021/question_24_24_purple.svg 2x"></span>
+										<div class="subject-wrap">
+											<div class="icon-wrap">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+												    <g fill="none" fill-rule="evenodd">
+												        <g>
+												            <g>
+												                <g>
+												                    <g transform="translate(-525 -1109) translate(425 753) translate(0 336) translate(100 20)">
+												                        <circle cx="12" cy="12" r="12" fill="#ff4f32"/>
+												                        <path fill="#FFF" d="M11.946 7.5c2.456 0 4.446 1.99 4.446 4.446 0 .907-.271 1.75-.737 2.453l.845.843-1.258 1.258-.843-.845c-.703.466-1.546.737-2.453.737-2.455 0-4.446-1.99-4.446-4.446C7.5 9.491 9.49 7.5 11.946 7.5zm0 1.778c-1.473 0-2.668 1.195-2.668 2.668s1.195 2.668 2.668 2.668c.412 0 .802-.094 1.15-.26l-.369-.37 1.258-1.257.369.369c.166-.348.26-.738.26-1.15 0-1.473-1.195-2.668-2.668-2.668z"/>
+																                    </g>
+																                </g>
+																            </g>
+																        </g>
+																</svg>
+												<span
+													style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+													style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+														alt="" aria-hidden="true"
+														src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2724%27%20height=%2724%27/%3e"
+														style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span>
+
+												</span>
+											</div>
+											<p class="contents">냉동 후 해동해서 먹어도 되나요??</p>
 										</div>
-										<p class="contents">냉동 후 해동해서 먹어도 되나요??</p>
 									</div>
-								</div>
 								<div class="actions-wrap">
 									<button class="btn-text">수정 및 삭제</button>
 								</div>
 							</div>
 						</div></li>
 				</ul>
-				<ul class="css-1e86ru9 e5s6lu41">
-		<li class="css-dz42d5 e1mr9o7z1"><button
+		<ul class="css-1e86ru9 e5s6lu41">
+		<li class="css-dz42d5 hover1 e1mr9o7z1"><button
 				class="css-r0xkg0 e1mr9o7z0">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="44"
 					viewBox="0 0 24 44" class="css-10u8c e18c41jv0">
-								<g fill="none" fill-rule="evenodd">
-								<path d="M0 0H24V44H0z"
+					<g fill="none" fill-rule="evenodd">
+					<path d="M0 0H24V44H0z"
 						transform="translate(-617 -2125) translate(607 2125) translate(10)"></path>
-								<path fill="#eee"
+					<path fill="#eee"
 						d="M15.146 13.646c.196-.195.512-.195.708 0 .173.174.192.443.057.638l-.057.07L8.207 22l7.647 7.646c.173.174.192.443.057.638l-.057.07c-.174.173-.443.192-.638.057l-.07-.057-8-8c-.173-.174-.192-.443-.057-.638l.057-.07 8-8z"
 						transform="translate(-617 -2125) translate(607 2125) translate(10)"></path></g></svg>
 			</button></li>
-		<li class="css-dz42d5 e1mr9o7z1"><button
-				class="css-r0xkg0 e1mr9o7z0">
+		<li class="css-dz42d5 hover2 e1mr9o7z1"><button class="css-r0xkg0 e1mr9o7z0">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="44"
 					viewBox="0 0 24 44" class="e5s6lu40 css-1bnotis e18c41jv0">
-								<g fill="none" fill-rule="evenodd">
-								<path d="M0 0H24V44H0z"
+					<g fill="none" fill-rule="evenodd">
+					<path d="M0 0H24V44H0z"
 						transform="translate(-617 -2125) translate(607 2125) translate(10)"></path>
-								<path fill="#eee"
-		d="M15.146 13.646c.196-.195.512-.195.708 0 .173.174.192.443.057.638l-.057.07L8.207 22l7.647 7.646c.173.174.192.443.057.638l-.057.07c-.174.173-.443.192-.638.057l-.07-.057-8-8c-.173-.174-.192-.443-.057-.638l.057-.07 8-8z"
-		transform="translate(-617 -2125) translate(607 2125) translate(10)"></path>
+					<path fill="#eee"
+						d="M15.146 13.646c.196-.195.512-.195.708 0 .173.174.192.443.057.638l-.057.07L8.207 22l7.647 7.646c.173.174.192.443.057.638l-.057.07c-.174.173-.443.192-.638.057l-.07-.057-8-8c-.173-.174-.192-.443-.057-.638l.057-.07 8-8z"
+						transform="translate(-617 -2125) translate(607 2125) translate(10)"></path></g></svg>
 			</button></li>
 	</ul>
 			</main>
 		</div>
 	</div>
+				</div>
+		<jsp:include page="../footer.jsp" />
+	
 </body>
 
 

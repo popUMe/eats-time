@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="https://www.kurly.com//favicon.ico" />
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage_productDetail.css">
-<title>제품명</title>
+<title>이츠타임 - 판매 상품</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
@@ -96,8 +96,8 @@
 					 
 				</div>
 <!-- 				여기 초시계 -->
-				<h2 class="sellnotice">판매임박!</h2>
-				<h3 class="timenotice">유통기간 : **********까지</h3>
+				<h2 class="sellnotice">판매임박</h2>
+				<h3 class="timenotice">서두르세요!</h3>
 				<div class="e1e6st7u5 css-we1gxf e17lobue1">
 				
 				
@@ -136,12 +136,13 @@
 		</div>
 		
 <!-- 		시간 표시 -->
+		<div class="clocktime">
 		<div id="date" class="date"></div>
 		<div class="time" id="time"></div>
+		</div>
 <!-- 			<span>09</span><span>12</span><span>52</span> -->
 	</div>
  
-
 
 
 				<div class="css-1bp09d0 e17iylht1">

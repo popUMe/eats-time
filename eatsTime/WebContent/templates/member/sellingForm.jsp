@@ -4,11 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/member/productUploadForm.css">
-<title>컬리 - 마켓컬리/뷰티컬리</title>
+<title>이츠타임 - 판매등록</title>
 </head>
 <body>
 	
@@ -190,9 +191,10 @@
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-detailwrite">
-								<input data-testid="input-box" id="password" name="password"
-									placeholder="안내사항을 작성해주세요" type="password" autocomplete="off"
-									class="productDetail" value="">
+									<textarea placeholder="안내사항을 작성해주세요" class="productDetail" value=""></textarea>
+<!-- 								<input data-testid="input-box" id="notice" name="notice" -->
+<!-- 									placeholder="안내사항을 작성해주세요" type="textarea" autocomplete="off" -->
+<!-- 									class="productDetail" value=""> -->
 							</div>
 						</div>
 					</div>
