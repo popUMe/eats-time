@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="https://www.kurly.com//favicon.ico" />
-<title>이츠타임 - [메인]</title>
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <link rel="stylesheet"
@@ -16,6 +15,7 @@
 	href="${pageContext.request.contextPath}/static/css/product/productListAll.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/product/productList.css">
+<title>이츠타임 - 메인</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" />
