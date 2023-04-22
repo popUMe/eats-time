@@ -91,9 +91,9 @@
 		
 		
 	<div class="css-1bsokvi">
-		<h3 class="css-yi2ox5 e1jm6dy14">주문번호 2300016310030</h3>
-		<span class="css-1mlk737 e1jm6dy12">배송 또는 상품에 문제가 있나요?
-		<a	href="/mypage/inquiry/list" class="css-1s2o3jp e1jm6dy11"> 1:1 문의하기
+		<h3 class="css-yi2ox5">주문번호 2300016310030</h3>
+		<span class="css-1mlk737">배송 또는 상품에 문제가 있나요?
+		<a	href="/mypage/inquiry/list" class="css-1s2o3jp"> 1:1 문의하기
 				<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDkgMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cGF0aCBkPSJtMiA0IDUgNS01IDUiIHN0cm9rZT0iIzVGMDA4MCIgc3Ryb2tlLXdpZHRoPSIxLjMiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="
 				alt="purpleArrowRight" class="e1jm6dy10 css-cb2xrd eflljbi0">
 		</a></span>

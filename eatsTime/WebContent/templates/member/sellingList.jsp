@@ -5,12 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
-<title>Insert title here</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/sellingList.css">
+<title>이츠타임 - 판매목록</title>
 </head>
 <body>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css">
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/sellingList.css">
-	<title>이츠타임 - 판매목록</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
@@ -46,7 +45,7 @@
 							<g>
 							<g
 								transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
-							<use class="point2" stroke="#5f0080" stroke-linecap="round"
+							<use class="point2" stroke="#ff4f32" stroke-linecap="round"
 								stroke-width="1.8" stroke-linejoin="round"
 								transform="rotate(45 5.657 5.657)" xlink:href="#gfk9q0rhta"></use></g></g></g></g></g></svg></a></li>
 
@@ -131,11 +130,11 @@
 						<div class="content-alter">
 
 							<div class="icon1">
-								<img class="icon-insert" src="insert.png" />
+								<img class="icon-insert" src="${pageContext.request.contextPath}/static/image/insert.png" />
 							</div>
 						
 				<div class="icon2">
-								<img class="icon-delete" src="delete.png" />
+								<img class="icon-delete" src="${pageContext.request.contextPath}/static/image/delete.png" />
 							</div>
 						
 						
@@ -172,11 +171,11 @@
 						<div class="content-alter">
 
 							<div class="icon1">
-								<img class="icon-insert" src="insert.png" />
+								<img class="icon-insert" src="${pageContext.request.contextPath}/static/image/insert.png" />
 							</div>
 
 							<div class="icon2">
-								<img class="icon-delete" src="delete.png" />
+								<img class="icon-delete" src="${pageContext.request.contextPath}/static/image/delete.png" />
 							</div>
 
 
