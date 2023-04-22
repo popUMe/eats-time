@@ -1,6 +1,7 @@
 package com.eatsTime.member.domain;
 
 public class MemberVO {
+	
 	private Long memberId;
 	private String memberIdentification;
 	private String memberPw;
@@ -8,7 +9,7 @@ public class MemberVO {
 	private String memberEmail;
 	private String memberPhoneNumber;
 	private String memberAddress;
-	private String memberAddressdetail; 
+	private String memberAddressDetail; 
 	private String memberGender;
 	private String memberBirthday;
 	private String memberGrade;
@@ -73,12 +74,12 @@ public class MemberVO {
 		this.memberAddress = memberAddress;
 	}
 
-	String getMemberAddressdetail() {
-		return memberAddressdetail;
+	String getMemberAddressDetail() {
+		return memberAddressDetail;
 	}
 
-	void setMemberAddressdetail(String memberAddressdetail) {
-		this.memberAddressdetail = memberAddressdetail;
+	void setMemberAddressDetail(String memberAddressDetail) {
+		this.memberAddressDetail = memberAddressDetail;
 	}
 
 	String getMemberGender() {
@@ -125,8 +126,8 @@ public class MemberVO {
 	public String toString() {
 		return "MemberVO [memberId=" + memberId + ", memberIdentification=" + memberIdentification + ", memberPw="
 				+ memberPw + ", memberName=" + memberName + ", memberEmail=" + memberEmail + ", memberPhoneNumber="
-				+ memberPhoneNumber + ", memberAddress=" + memberAddress + ", memberAddressdetail="
-				+ memberAddressdetail + ", memberGender=" + memberGender + ", memberBirthday=" + memberBirthday
+				+ memberPhoneNumber + ", memberAddress=" + memberAddress + ", memberAddressDetail="
+				+ memberAddressDetail + ", memberGender=" + memberGender + ", memberBirthday=" + memberBirthday
 				+ ", memberGrade=" + memberGrade + ", memberJoinedDate=" + memberJoinedDate + ", memberStatus="
 				+ memberStatus + "]";
 	}
@@ -155,6 +156,5 @@ public class MemberVO {
 			return false;
 		return true;
 	}
-	
 	
 }

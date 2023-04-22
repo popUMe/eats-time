@@ -7,7 +7,15 @@
    </settings>
    
    <typeAliases>
+      <typeAlias type="com.eatsTime.member.domain.AnswerBoardVO" alias="answerBoardVO"/>
+      <typeAlias type="com.eatsTime.member.domain.FileVO" alias="fileVO"/>
+      <typeAlias type="com.eatsTime.member.domain.InquiryBoardVO" alias="inquiryBoardVO"/>
+      <typeAlias type="com.eatsTime.member.domain.MainDTO" alias="mainDTO"/>
       <typeAlias type="com.eatsTime.member.domain.MemberVO" alias="memberVO"/>
+      <typeAlias type="com.eatsTime.member.domain.NotificationBoardVO" alias="notificationBoardVO"/>
+      <typeAlias type="com.eatsTime.member.domain.ProductVO" alias="productVO"/>
+      <typeAlias type="com.eatsTime.member.domain.PurchaseVO" alias="purchaseVO"/>
+      <typeAlias type="com.eatsTime.member.domain.SaleVO" alias="saleVO"/>
    </typeAliases>
 
    <environments default="mysql">
@@ -23,6 +31,14 @@
    </environments>
    
    <mappers>
+      <mapper resource="com/eatsTime/mybatis/mapper/answerboardMapper.xml"/>
+      <mapper resource="com/eatsTime/mybatis/mapper/fileMapper.xml"/>
+      <mapper resource="com/eatsTime/mybatis/mapper/inquiryboardMapper.xml"/>
+      <mapper resource="com/eatsTime/mybatis/mapper/mainMapper.xml"/>
       <mapper resource="com/eatsTime/mybatis/mapper/memberMapper.xml"/>
+      <mapper resource="com/eatsTime/mybatis/mapper/notificationboardMapper.xml"/>
+      <mapper resource="com/eatsTime/mybatis/mapper/productMapper.xml"/>
+      <mapper resource="com/eatsTime/mybatis/mapper/purchaseMapper.xml"/>
+      <mapper resource="com/eatsTime/mybatis/mapper/saleMapper.xml"/>
    </mappers>
 </configuration>

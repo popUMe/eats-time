@@ -3,15 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<jsp:include page="../header.jsp" />
-<link rel="icon" href="https://www.kurly.com//favicon.ico" />
+<meta charset="UTF-8">
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/member/signup.css" />
-<meta charset="UTF-8">
-<title>이츠타임-[회원가입]</title>
+<title>이츠타임 - 회원가입</title>
 </head>
+<jsp:include page="../header.jsp" />
 <body>
 	<form>
 		<div class="css-pculus">
@@ -238,7 +238,7 @@
 				<!--개인정보 이용 약관 동의 -->
 				<form>
 				<div class="css-1eo0fey "></div>
-				<div class="css-y8aj3r ">
+				<!-- <div class="css-y8aj3r ">
 					<div class="css-2yzr8b ">
 						<div class="css-1y8737n ">
 							<label class="css-1obgjqh ">이용약관동의<span
@@ -349,7 +349,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				</form>
 				<!-- 가입하기  -->
 				<div class="css-137ca2h">
