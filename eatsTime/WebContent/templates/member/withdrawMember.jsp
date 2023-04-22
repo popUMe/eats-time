@@ -124,13 +124,13 @@
 				</div>
 				<div class="css-1w0ksfz e744wfw2"></div>
 			</div>
-			<div class="css-1pjgd36 e744wfw6">
-				<div class="css-1y8737n e744wfw5">
+			<div class="css-1pjgd36">
+				<div class="css-1y8737n">
 					<label for="newPassword" class="css-1obgjqh e744wfw4">새
 						비밀번호</label>
 				</div>
-				<div class="css-82a6rk e744wfw3">
-					<div class="css-1waqr6j e1uzxhvi6">
+				<div class="css-82a6rk">
+					<div class="css-1waqr6j">
 						<div class="css-176lya2 e1uzxhvi3">
 							<input data-testid="input-box" id="newPassword"
 								name="newPassword" placeholder="새 비밀번호를 입력해 주세요" type="password"
@@ -197,7 +197,7 @@
 								data-gtm-form-interact-field-id="5">
 						</div>
 					</div>
-					<div class="css-shoa2s e744wfw1">
+					<div class="css-shoa2s">
 						<p class="css-1ozil7i error5"></p>
 					</div>
 				</div>
@@ -220,7 +220,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="css-1w0ksfz e744wfw2">
+				<div class="css-1w0ksfz">
 					<button class="css-ufulao e4nu7ef3" type="button">
 						<span class="css-ymwvow e4nu7ef1">다른번호 인증</span>
 					</button>

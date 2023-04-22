@@ -14,7 +14,6 @@ let $point2 = $("use.point2");
 let $point3 = $("use.point3");
 
 $mousepoint1.on("mouseover", function() {
-
 	$point1.css("stroke", "#ff4f32");
 
 });
@@ -64,7 +63,25 @@ const divfemale = document.querySelector("#divfemale");
 const divnone = document.querySelector("#divnone");
 
 
+
+$checkAutoLogin.addEventListener("change", function(){
+    let isChecked = $(this).prop("checked");
+    isChecked ? checkedAutoLogin() : notCheckedAutoLogin();
+});
+
+
+
+
+
+
+
+
  inputmale.addEventListener("click", () => {
+		
+		let isChecked = $(this).prop("checked");
+		
+		console.log()
+	
         spanmale.style.background="#ff4f32";
 		divmale.style.background="#fff";
 		
