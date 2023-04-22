@@ -3,7 +3,7 @@ package com.eatsTime.file.domain;
 public class FileVO {
 	
 	private Long fileId;
-	private Long memberId;
+	private Long productId;
 	private String fileName;
 	private String fileOriginalName;
 	private String fileSize;
@@ -18,12 +18,12 @@ public class FileVO {
 		this.fileId = fileId;
 	}
 
-	public Long getMemberId() {
-		return memberId;
+	public Long getproductId() {
+		return productId;
 	}
 
-	public void setMemberId(Long memberId) {
-		this.memberId = memberId;
+	public void setproductId(Long productId) {
+		this.productId = productId;
 	}
 
 	public String getFileName() {
@@ -52,7 +52,7 @@ public class FileVO {
 
 	@Override
 	public String toString() {
-		return "FileVO [fileId=" + fileId + ", memberId=" + memberId + ", fileName=" + fileName + ", fileOriginalName="
+		return "FileVO [fileId=" + fileId + ", productId=" + productId + ", fileName=" + fileName + ", fileOriginalName="
 				+ fileOriginalName + ", fileSize=" + fileSize + "]";
 	}
 
