@@ -3,6 +3,7 @@ package com.eatsTime.product.domain;
 public class ProductVO {
 	
 	private Long productId;
+	private Long memberId;
 	private boolean productCategory;
 	private String productName;
 	private int productPrice;
@@ -20,6 +21,14 @@ public class ProductVO {
 
 	public void setProductId(Long productId) {
 		this.productId = productId;
+	}
+
+	public Long getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(Long memberId) {
+		this.memberId = memberId;
 	}
 
 	public boolean isProductCategory() {
@@ -88,8 +97,8 @@ public class ProductVO {
 
 	@Override
 	public String toString() {
-		return "ProductVO [productId=" + productId + ", productCategory=" + productCategory + ", productName="
-				+ productName + ", productPrice=" + productPrice + ", productDate=" + productDate
+		return "ProductVO [productId=" + productId + ", memberId=" + memberId + ", productCategory=" + productCategory
+				+ ", productName=" + productName + ", productPrice=" + productPrice + ", productDate=" + productDate
 				+ ", productExpirationDate=" + productExpirationDate + ", productStock=" + productStock
 				+ ", productAddress=" + productAddress + ", productAddresDetail=" + productAddresDetail + "]";
 	}
