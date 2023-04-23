@@ -13,6 +13,7 @@
       <typeAlias type="com.eatsTime.main.domain.MainDTO" alias="mainDTO"/>
       <typeAlias type="com.eatsTime.member.domain.MemberVO" alias="memberVO"/>
       <typeAlias type="com.eatsTime.notificationboard.domain.NotificationBoardVO" alias="notificationBoardVO"/>
+      <typeAlias type="com.eatsTime.notificationboard.domain.NotificationBoardDTO" alias="notificationBoardDTO"/>
       <typeAlias type="com.eatsTime.product.domain.ProductVO" alias="productVO"/>
       <typeAlias type="com.eatsTime.purchase.domain.PurchaseVO" alias="purchaseVO"/>
       <typeAlias type="com.eatsTime.sale.domain.SaleVO" alias="saleVO"/>
