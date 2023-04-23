@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="notificationboard">
-   
+
+	<insert id="insert">
+   		insert into tbl_notificationboard
+		(member_id, notb_title, notb_content)
+		values(1, #{notbTitle}, #{notbContent})
+	</insert>
+	
+	<select id="selectAllAdmin" resultType="notificationBoardDTO">
+		select n.notb_id, n.notb_title, m.member_name, n.notb_date
+		from tbl_member m join tbl_notificationboard n
+		on m.member_id = n.member_id
+	</select>
+		
 </mapper>

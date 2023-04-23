@@ -2,7 +2,7 @@
  * 공지사항 
  */
 
-	$(document).ready(function() {
+/*	$(document).ready(function() {
 			$("#chkAll").click(function() {
 				if($("#chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
 				else $("input[name=chk]").prop("checked", false);
@@ -44,4 +44,7 @@
 			    console.log("Deleted item ids: " + checkedItemIds.join(", "));
 			  });
 			});
+*/
+
+
 		

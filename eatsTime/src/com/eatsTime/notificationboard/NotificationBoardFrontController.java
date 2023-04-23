@@ -9,21 +9,27 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
 import com.eatsTime.member.controller.JoinOkController;
+import com.eatsTime.notificationboard.controller.WriteOkController;
 
 public class NotificationBoardFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
+		System.out.println("ë“¤ì–´ì˜´");
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
-
-//		¿©±â if¹® else if¹® ¿¹½Ã´Ï±î °¢ ÇÁ·ÐÆ® ÄÁÆ®·Ñ·¯¿¡ ¸ÂÃç¼­ ¼öÁ¤ÇØ¼­ ÀÛ¾÷
-		if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
+		
+		if(target.equals("adminindex")) {
+			result = new Result();
+			result.setPath("templates/admin/adminIndex.jsp");		
+		} else if(target.equals("adminNoticeWrite")) {
+			result = new Result();
+			result.setPath("templates/admin/adminNoticeWrite.jsp");
+		}else if(target.equals("writeOk")) {
+			System.out.println("writeOk ë“¤ì–´ì˜´");
+			result = new WriteOkController().execute(req, resp);
 			
-		} else if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
 		}
 		
 		if(result != null) {
