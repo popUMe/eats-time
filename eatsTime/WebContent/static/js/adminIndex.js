@@ -1,7 +1,7 @@
 /**
  * 공지사항 
  */
-
+/*체크박스 */
 	$(document).ready(function() {
 			$("#chkAll").click(function() {
 				if($("#chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
@@ -17,6 +17,7 @@
 			});
 		});
 		
+/* 페이징 */
 		$(function() {
 			  var paging = $('.paging');
 			  var btns = paging.find('a');
@@ -27,6 +28,8 @@
 			  });
 			});
 		
+		
+	/* 버튼 클릭시 기능 */
 		$(function() {
 			  $('#add-btn').click(function() {
 			    location.href = 'adminNoticeWrite.jsp';
