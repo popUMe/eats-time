@@ -319,42 +319,4 @@ function validateBirthday() {
   return true;
 }
 
-
-const $allAgreeCheckboxes = $(".css-s5xdrg input:not(#TermsAgreeAll)");
-const $requiredChecks = $(".css-s5xdrg input[type='checkbox']");
-
-$allAgreeCheckboxes.on("click", function() {
-  $requiredChecks.prop("checked", $(this).is(":checked"));
-});
-
-$requiredChecks.on("click", function() {
-  if (!$allAgreeCheckboxes.is(":checked")) {
-    $allAgreeCheckboxes.prop("checked", $requiredChecks.filter(":checked").length === $requiredChecks.length);
-  }
-});
-
-$("#RequiredTermsOfPrivacy").on("click", function() {
-  if ($("#RequiredTermsOfPrivacy").is(":checked")) {
-    $("#buttonId").click();
-  }
-});
-
-function goInfo() {
-  const check = $requiredChecks.is(":checked");
-  if (!check) {
-    const modalMessage = "<span>서비스를 이용하시기 위해서는</span><span>필수 약관에 동의해주세요!</span>";
-    showWarnModal(modalMessage);
-    return;
-  }
-
-  step = 2;
-
-  $("div.css-qsz6yg").hide();
-  $("div.css-1rlf2l5").hide();
-  $("div.css-9hbb7g").show();
-  $("#back").show();
-
-  $([document.documentElement, document.body]).animate({
-    scrollTop: 0
-  }, 300);
-}
+document.getElementById("RequiredTermsCondition").click();
