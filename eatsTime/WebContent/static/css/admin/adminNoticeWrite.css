@@ -42,7 +42,7 @@ a {
     font-size: 0;
 }
 
-.btn a {
+.btn {
     display: inline-block;
     min-width: 80px;
     margin-left: 10px;
@@ -52,11 +52,11 @@ a {
     font-size: 1.4rem;
 }
 
-.btn a:first-child {
+.btn :first-child {
     margin-left: 0;
 }
 
-.btn a.on {
+.btn .on {
     background: #000;
     color: #fff;
 }

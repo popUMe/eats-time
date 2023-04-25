@@ -25,7 +25,7 @@
 		<h1>공지사항 관리</h1>
 				<div id=table-container>
 		<div class="btn">
-		  <button id="add-btn">작성</button>
+		  <button id="add-btn" onclick="javascript:location.href='${pageContext.request.contextPath}/adminNoticeWrite.notificationboard'">작성</button>
   		<button id="delete-btn">삭제</button>
   		</div>
   	<table class="overflow" id="pagingul">

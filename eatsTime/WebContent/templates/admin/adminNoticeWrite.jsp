@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<div class="btn">
-				<input type="submit"> <button>취소</button>
+				<input type="submit"> <button onclick="javascript:location.href='/eatsTime/listOk.notificationboard">취소</button>
 			</div>
 			</div>
 		</form>

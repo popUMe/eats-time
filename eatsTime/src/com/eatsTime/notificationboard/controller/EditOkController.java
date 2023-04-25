@@ -9,17 +9,26 @@ import javax.servlet.http.HttpServletResponse;
 import com.eatsTime.Action;
 import com.eatsTime.Result;
 import com.eatsTime.notificationboard.dao.NotificationBoardDAO;
+import com.eatsTime.notificationboard.domain.NotificationBoardVO;
 
-public class EditController implements Action {
+public class EditOkController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("EditController 들어옴");
+		System.out.println("editOk 컨트롤러 들어옴");
 		NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
+		NotificationBoardVO notificationBoardVO = new NotificationBoardVO();
 		Result result = new Result();
 		Long notbId = Long.valueOf(req.getParameter("notbId"));
-		req.setAttribute("notificationboard", notificationBoardDAO.viewBoard(notbId));
+		notificationBoardVO.setNotbId(notbId);
+		notificationBoardVO.setNotbTitle(req.getParameter("notbTitle"));
+		notificationBoardVO.setNotbContent(req.getParameter("notbContent"));
 		
-		result.setPath("templates/admin/adminNoticeEdit.jsp");
+		notificationBoardDAO.edit(notificationBoardVO);
+		
+		result.setPath(req.getContextPath() + "/viewOk.notificationboard?notbId=" + notbId);
+		result.setRedirect(true);
+		
 		return result;
 	}
 

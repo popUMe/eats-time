@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,24 +15,24 @@
 			<h1>공지사항 - 관리자모드</h1>
 		</div>
 		<form action="editOk.notificationboard" method="post">
+		<input type="hidden" name="notbId" value="${notificationboard.notbId}">
 		<div class="board_write_wrap">
 			<div class="board_write">
 				<div class="title">
 					<dl>
 						<dt>제목</dt>
 						<dd>
-							<input name="notbTitle" type="text" placeholder="제목 입력">
+							<input name="notbTitle" type="text" placeholder="제목 입력" value="${notificationboard.notbTitle}">
 						</dd>
 					</dl>
 				</div>
 				<div class="cont">
-					<textarea name="notbContent" placeholder="내용 입력">
-					</textarea>
+					<textarea name="notbContent" placeholder="내용 입력"><c:out value="${notificationboard.notbContent}"/></textarea>
 				</div>
 			</div>
 			<div class="btn">
-			 <a href="adminNoticeView.jsp" class="on">수정</a>
-			 <a href="adminNoticeView.jsp">취소</a>
+			 <button type="submit" class="on">수정</button>
+			 <a href="${pageContext.request.contextPath}/listOk.notificationboard">취소</a>
 			</div>
 		</div>
 		</form>
