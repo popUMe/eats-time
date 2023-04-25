@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-<title>공지사항</title>
-<link rel="icon" href="https://www.kurly.com//favicon.ico" />
+<meta charset="UTF-8">
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminNoticeWrite.css">
+<title>문의내역 - 관리자모드</title>
 </head>
 <body>
 	<div class="board_wrap">

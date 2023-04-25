@@ -1,13 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>eatsTime</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>eatsTime</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- AnswerBoardFrontController 설정 -->
+	<servlet>
+		<servlet-name>AnswerBoard</servlet-name>
+		<servlet-class>com.eatsTime.answerboard.AnswerFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AnswerBoard</servlet-name>
+		<url-pattern>*.answerBoard</url-pattern>
+	</servlet-mapping>
+ 
+ 
+	<!-- FileFrontController 설정 -->
+	<servlet>
+		<servlet-name>File</servlet-name>
+		<servlet-class>com.eatsTime.file.FileFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>File</servlet-name>
+		<url-pattern>*.file</url-pattern>
+	</servlet-mapping>
+ 
+ 
+	<!-- InquiryFrontController 설정 -->
+	<servlet>
+		<servlet-name>Inquiryboard</servlet-name>
+		<servlet-class>com.eatsTime.inquiryboard.InquiryFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Inquiryboard</servlet-name>
+		<url-pattern>*.inquiryboard</url-pattern>
+	</servlet-mapping>
+ 
+ 
+	<!-- MainFrontController 설정 -->
+	<servlet>
+		<servlet-name>Main</servlet-name>
+		<servlet-class>com.eatsTime.main.MainFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Main</servlet-name>
+		<url-pattern>*.main</url-pattern>
+	</servlet-mapping>
+ 
+ 
+	<!-- MemberFrontController 설정 -->
+	<servlet>
+		<servlet-name>Member</servlet-name>
+		<servlet-class>com.eatsTime.member.MemberFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Member</servlet-name>
+		<url-pattern>*.member</url-pattern>
+	</servlet-mapping>
+ 
+ 
+	<!-- NotificationBoardFrontController 설정 -->
+	<servlet>
+		<servlet-name>Notificationboard</servlet-name>
+		<servlet-class>com.eatsTime.notificationboard.NotificationBoardFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Notificationboard</servlet-name>
+		<url-pattern>*.notificationboard</url-pattern>
+	</servlet-mapping>
+ 
+ 
+	<!-- ProductFrontController 설정 -->
+	<servlet>
+		<servlet-name>Product</servlet-name>
+		<servlet-class>com.eatsTime.product.ProductFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Product</servlet-name>
+		<url-pattern>*.product</url-pattern>
+	</servlet-mapping>
+ 
+ 
+	<!-- PurchaseFrontController 설정 -->
+	<servlet>
+		<servlet-name>Purchase</servlet-name>
+		<servlet-class>com.eatsTime.purchase.PurchaseFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Purchase</servlet-name>
+		<url-pattern>*.purchase</url-pattern>
+	</servlet-mapping>
+ 
+ 
+	<!-- SaleFrontController 설정 -->
+	<servlet>
+		<servlet-name>Sale</servlet-name>
+		<servlet-class>com.eatsTime.sale.SaleFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Sale</servlet-name>
+		<url-pattern>*.sale</url-pattern>
+	</servlet-mapping>
+
 </web-app>
