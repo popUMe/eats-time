@@ -47,10 +47,10 @@
 									<div id="last-temp"></div>
 								</div>
 								<div class="arrow prev">
-									<img src="../static/image/arrow.png">
+									<img src="${pageContext.request.contextPath}/static/image/arrow.png">
 								</div>
 								<div class="arrow next">
-									<img src="../static/image/arrow.png">
+									<img src="${pageContext.request.contextPath}/static/image/arrow.png">
 								</div>
 
 								<div class="dots" style="display: none">
@@ -1164,6 +1164,7 @@
 	<jsp:include page="footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script src="${pageContext.request.contextPath}/static/js/index.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/product.js"></script>
 </html>

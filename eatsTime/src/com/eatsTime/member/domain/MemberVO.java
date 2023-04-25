@@ -18,107 +18,107 @@ public class MemberVO {
 	
 	public MemberVO() {;}
 
-	Long getMemberId() {
+	public Long getMemberId() {
 		return memberId;
 	}
 
-	void setMemberId(Long memberId) {
+	public void setMemberId(Long memberId) {
 		this.memberId = memberId;
 	}
 
-	String getMemberIdentification() {
+	public String getMemberIdentification() {
 		return memberIdentification;
 	}
 
-	void setMemberIdentification(String memberIdentification) {
+	public void setMemberIdentification(String memberIdentification) {
 		this.memberIdentification = memberIdentification;
 	}
 
-	String getMemberPw() {
+	public String getMemberPw() {
 		return memberPw;
 	}
 
-	void setMemberPw(String memberPw) {
+	public void setMemberPw(String memberPw) {
 		this.memberPw = memberPw;
 	}
 
-	String getMemberName() {
+	public String getMemberName() {
 		return memberName;
 	}
 
-	void setMemberName(String memberName) {
+	public void setMemberName(String memberName) {
 		this.memberName = memberName;
 	}
 
-	String getMemberEmail() {
+	public String getMemberEmail() {
 		return memberEmail;
 	}
 
-	void setMemberEmail(String memberEmail) {
+	public void setMemberEmail(String memberEmail) {
 		this.memberEmail = memberEmail;
 	}
 
-	String getMemberPhoneNumber() {
+	public String getMemberPhoneNumber() {
 		return memberPhoneNumber;
 	}
 
-	void setMemberPhoneNumber(String memberPhoneNumber) {
+	public void setMemberPhoneNumber(String memberPhoneNumber) {
 		this.memberPhoneNumber = memberPhoneNumber;
 	}
 
-	String getMemberAddress() {
+	public String getMemberAddress() {
 		return memberAddress;
 	}
 
-	void setMemberAddress(String memberAddress) {
+	public void setMemberAddress(String memberAddress) {
 		this.memberAddress = memberAddress;
 	}
 
-	String getMemberAddressDetail() {
+	public String getMemberAddressDetail() {
 		return memberAddressDetail;
 	}
 
-	void setMemberAddressDetail(String memberAddressDetail) {
+	public void setMemberAddressDetail(String memberAddressDetail) {
 		this.memberAddressDetail = memberAddressDetail;
 	}
 
-	String getMemberGender() {
+	public String getMemberGender() {
 		return memberGender;
 	}
 
-	void setMemberGender(String memberGender) {
+	public void setMemberGender(String memberGender) {
 		this.memberGender = memberGender;
 	}
 
-	String getMemberBirthday() {
+	public String getMemberBirthday() {
 		return memberBirthday;
 	}
 
-	void setMemberBirthday(String memberBirthday) {
+	public void setMemberBirthday(String memberBirthday) {
 		this.memberBirthday = memberBirthday;
 	}
 
-	String getMemberGrade() {
+	public String getMemberGrade() {
 		return memberGrade;
 	}
 
-	void setMemberGrade(String memberGrade) {
+	public void setMemberGrade(String memberGrade) {
 		this.memberGrade = memberGrade;
 	}
 
-	String getMemberJoinedDate() {
+	public String getMemberJoinedDate() {
 		return memberJoinedDate;
 	}
 
-	void setMemberJoinedDate(String memberJoinedDate) {
+	public void setMemberJoinedDate(String memberJoinedDate) {
 		this.memberJoinedDate = memberJoinedDate;
 	}
 
-	boolean isMemberStatus() {
+	public boolean isMemberStatus() {
 		return memberStatus;
 	}
 
-	void setMemberStatus(boolean memberStatus) {
+	public void setMemberStatus(boolean memberStatus) {
 		this.memberStatus = memberStatus;
 	}
 
