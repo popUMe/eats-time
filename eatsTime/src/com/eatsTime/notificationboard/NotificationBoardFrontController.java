@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+import com.eatsTime.notificationboard.controller.EditController;
 import com.eatsTime.notificationboard.controller.ListOkController;
 import com.eatsTime.notificationboard.controller.ViewOkController;
 import com.eatsTime.notificationboard.controller.WriteOkController;
@@ -37,6 +38,9 @@ public class NotificationBoardFrontController extends HttpServlet {
 		}else if(target.equals("viewOk")) {
 			System.out.println("viewOk 들어옴");
 			result = new ViewOkController().execute(req, resp);
+		}else if(target.equals("adminEdit")) {
+			System.out.println("adminEdit 들어옴");
+			result = new EditController().execute(req, resp);
 		}
 		
 		if(result != null) {

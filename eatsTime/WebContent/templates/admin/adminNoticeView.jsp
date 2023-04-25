@@ -17,28 +17,28 @@
 		</div>
 		<div id="notificationboard" class="board_view_wrap">
 			<div class="board_view">
-				<div class="title">${notbTitle}</div>
+				<div class="title"><c:out value="${notbTitle}"/></div>
 				<div class="info">
 					<dl id="id_wrapper">
 						<dt>번호</dt>
-						<dd>${notbId}</dd>
+						<dd><c:out value="${notbId}"/></dd>
 					</dl>
 					<dl id="date_wrapper">
 						<dt>작성일</dt>
-						<dd>${notbDate}</dd>
+						<dd><c:out value="${notbDate}"/></dd>
 					</dl>
 					<dl id="hit_wrapper">
 						<dt>조회</dt>
-						<dd>${notbHit}</dd>
+						<dd><c:out value="${notbHit}"/></dd>
 					</dl>
 				</div>
 				<div id="content_wrapper">
-					<div class="cont"><pre>${notbContent}</pre></div>
+					<div class="cont"><pre><c:out value="${notbContent}"/></pre></div>
 				</div>
 			</div>
 			<div class="btn">
-				<a href="${pageContext.request.contextPath}/listOk.notificationboard" class="on">목록</a> <a
-					href="adminEdit.notificationboard">수정</a>
+				<a href="${pageContext.request.contextPath}/listOk.notificationboard" class="on">목록</a> 
+				<a href="${pageContext.request.contextPath}/eatsTime/adminEdit.notificationboard?notbId=${notbId}">수정</a>
 			</div>
 		</div>
 	</div>
