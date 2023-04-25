@@ -20,7 +20,7 @@
 			</div>
 			<div class="btn">
 				<a href="${pageContext.request.contextPath}/listOk.notificationboard" class="on">목록</a> <a
-					href="adminNoticeEdit.jsp">수정</a>
+					href="adminEdit.notificationboard?notbId=`${notificationboard.notbId}`">수정</a>
 			</div>
 		</div>
 	</div>
