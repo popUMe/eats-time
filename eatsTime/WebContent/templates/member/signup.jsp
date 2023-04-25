@@ -13,7 +13,7 @@
 </head>
 <jsp:include page="../header.jsp" />
 <body>
-	<form>
+	<form action="${pageContext.request.contextPath}/joinOk.member" name="join" method="post">
 		<div class="css-pculus">
 			<div class="css-o5dw7d">회원가입</div>
 			<div class="css-mhmtvt">
@@ -28,7 +28,7 @@
 						<div class="css-82a6rk">
 							<div class="css-jmalg">
 								<div class="css-176lya2">
-									<input data-testid="input-box" id="memberId" name="memberId"
+									<input data-testid="input-box" id="memberId" name="memberIdentification"
 										placeholder="아이디를 입력해주세요" type="text" required=""
 										class="css-u52dqk" value="">
 								</div>
@@ -58,7 +58,7 @@
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="password" name="password"
+								<input data-testid="input-box" id="password" name="memberPw"
 									placeholder="비밀번호를 입력해주세요" type="password" autocomplete="off"
 									class="css-u52dqk" value="" aria-autocomplete="list">
 							</div>
@@ -88,7 +88,7 @@
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="name" name="name"
+								<input data-testid="input-box" id="name" name="memberName"
 									placeholder="이름을 입력해 주세요" type="text" required=""
 									class="css-u52dqk" value="">
 							</div>
@@ -103,7 +103,7 @@
 					<div class="css-82a6rk ">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="email" name="email"
+								<input data-testid="input-box" id="email" name="memberEmail"
 									placeholder="예: marketkurly@kurly.com" type="text" required=""
 									class="css-u52dqk" value="">
 							</div>
@@ -123,7 +123,7 @@
 						<div class="css-jmalg">
 							<div class="css-176lya2">
 								<input data-testid="input-box" id="mobileNumber"
-									name="mobileNumber" placeholder="숫자만 입력해주세요." type="tel"
+									name="memberPhoneNumber" placeholder="숫자만 입력해주세요." type="tel"
 									required="" class="css-u52dqk" value="">
 							</div>
 						</div>
@@ -138,7 +138,7 @@
 					<div class="css-82a6rk">
 						<div class="css-1yjqrpx ">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="numberAddress" name="address"
+								<input data-testid="input-box" id="numberAddress" name="memberAddress"
 									placeholder="주소를 검색해 주세요" type="text" readonly=""
 									class="css-u52dqk" value="">
 							</div>
@@ -146,7 +146,7 @@
 						<br>
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="subAddress" name="subAddress"
+								<input data-testid="input-box" id="subAddress" name="memberAddressDetail"
 									placeholder="나머지 주소를 입력해주세요" type="text" class="css-u52dqk"
 									value="">
 							</div>
@@ -167,7 +167,7 @@
 							<div class="css-14wodj6">
 							
 								<label class="css-z9g6s0" for="gender-man">
-								<input id="gender-man" name="gender" type="radio" 
+								<input id="gender-man" name="memberGender" type="radio" 
 								class="css-1pes2r6" value="MALE">
 									<span class="css-198i9ca" id="male">
 									<div class="css-1dahn5m" id=divmale></div></span>
@@ -176,7 +176,7 @@
 								
 								
 								<label class="css-z9g6s0" for="gender-woman"> 
-								<input id="gender-woman" name="gender" type="radio"
+								<input id="gender-woman" name="memberGender" type="radio"
 								class="css-1pes2r6" value="FEMALE" checked="">
 
 									<span class="css-5xw1m2" id="female">
@@ -186,7 +186,7 @@
 								</label> 
 
 								<label class="css-z9g6s0" for="gender-none">
-								<input id="gender-none" name="gender" type="radio" class="css-1pes2r6" value="NONE">
+								<input id="gender-none" name="memberGender" type="radio" class="css-1pes2r6" value="NONE">
 									<span class="css-198i9ca" id="none">
 										<div class="css-1dahn5m" id="divnone"></div>
 									</span>
@@ -209,7 +209,7 @@
 						<div class="css-18n8lnw ">
 							<div class="css-1dkwuq4 ">
 								<div height="40" class="css-xsmgyi ">
-									<input data-testid="input-box" name="birthYear"
+									<input data-testid="input-box" name="memberBirthday"
 										placeholder="YYYY" type="text" height="40" class="css-151eme7"
 										value="1995">
 								</div>
@@ -217,7 +217,7 @@
 							<span class="css-5lnvt6 "></span>
 							<div class="css-1dkwuq4 ">
 								<div height="40" class="css-xsmgyi ">
-									<input data-testid="input-box" name="birthMonth"
+									<input data-testid="input-box" name="memberBirthday"
 										placeholder="MM" type="text" height="40" class="css-151eme7 "
 										value="05">
 								</div>
@@ -225,7 +225,7 @@
 							<span class="css-5lnvt6 "></span>
 							<div class="css-1dkwuq4 ">
 								<div height="40" class="css-xsmgyi ">
-									<input data-testid="input-box" name="birthDay" placeholder="DD"
+									<input data-testid="input-box" name="memberBirthday" placeholder="DD"
 										type="text" height="40" class="css-151eme7 e1uzxhvi2"
 										value="15">
 								</div>
