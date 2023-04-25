@@ -17,6 +17,24 @@
 		</div>
 		<div id="notificationboard" class="board_view_wrap">
 			<div class="board_view">
+				<div class="title">${notbTitle}</div>
+				<div class="info">
+					<dl id="id_wrapper">
+						<dt>번호</dt>
+						<dd>${notbId}</dd>
+					</dl>
+					<dl id="date_wrapper">
+						<dt>작성일</dt>
+						<dd>${notbDate}</dd>
+					</dl>
+					<dl id="hit_wrapper">
+						<dt>조회</dt>
+						<dd>${notbHit}</dd>
+					</dl>
+				</div>
+				<div id="content_wrapper">
+					<div class="cont"><pre>${notbContent}</pre></div>
+				</div>
 			</div>
 			<div class="btn">
 				<a href="${pageContext.request.contextPath}/listOk.notificationboard" class="on">목록</a> <a
@@ -26,9 +44,5 @@
 	</div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script>
-const notificationboard = JSON.parse(`${notificationboard}`);
-console.log(notificationboard);
-</script>
 <script src="${pageContext.request.contextPath}/static/js/adminNoticeView.js"></script>	
 </html>

@@ -12,6 +12,7 @@ import org.json.JSONObject;
 import com.eatsTime.Action;
 import com.eatsTime.Result;
 import com.eatsTime.notificationboard.dao.NotificationBoardDAO;
+import com.eatsTime.notificationboard.domain.NotificationBoardVO;
 
 public class ViewOkController implements Action {
 
@@ -21,10 +22,13 @@ public class ViewOkController implements Action {
 		NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
 		Long notbId = Long.valueOf(req.getParameter("notbId"));
 		Result result = new Result();
-		JSONObject notificationboard = new JSONObject(notificationBoardDAO.viewBoard(notbId));
-		System.out.println(notificationboard);
-		req.setAttribute("notificationboard", notificationboard);
-		result.setPath(req.getContextPath() + "/templates/admin/adminNoticeView.jsp");
+		NotificationBoardVO notificationboard = notificationBoardDAO.viewBoard(notbId);
+		req.setAttribute("notbTitle", notificationboard.getNotbTitle());
+		req.setAttribute("notbId", notificationboard.getNotbId());
+		req.setAttribute("notbHit", notificationboard.getNotbHit());
+		req.setAttribute("notbContent", notificationboard.getNotbDate());
+		req.setAttribute("notbContent", notificationboard.getNotbContent());
+		result.setPath("/templates/admin/adminNoticeView.jsp");
 		
 		return result;
 	}
