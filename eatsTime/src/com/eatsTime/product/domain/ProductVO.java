@@ -11,7 +11,7 @@ public class ProductVO {
 	private String productExpirationDate;
 	private int productStock;
 	private String productAddress;
-	private String productAddresDetail;
+	private String productAddressDetail;
 	
 	public ProductVO() {;}
 
@@ -87,12 +87,12 @@ public class ProductVO {
 		this.productAddress = productAddress;
 	}
 
-	public String getProductAddresDetail() {
-		return productAddresDetail;
+	public String getProductAddressDetail() {
+		return productAddressDetail;
 	}
 
-	public void setProductAddresDetail(String productAddresDetail) {
-		this.productAddresDetail = productAddresDetail;
+	public void setProductAddressDetail(String productAddressDetail) {
+		this.productAddressDetail = productAddressDetail;
 	}
 
 	@Override
@@ -100,7 +100,7 @@ public class ProductVO {
 		return "ProductVO [productId=" + productId + ", memberId=" + memberId + ", productCategory=" + productCategory
 				+ ", productName=" + productName + ", productPrice=" + productPrice + ", productDate=" + productDate
 				+ ", productExpirationDate=" + productExpirationDate + ", productStock=" + productStock
-				+ ", productAddress=" + productAddress + ", productAddresDetail=" + productAddresDetail + "]";
+				+ ", productAddress=" + productAddress + ", productAddressDetail=" + productAddressDetail + "]";
 	}
 
 	@Override
@@ -127,5 +127,8 @@ public class ProductVO {
 			return false;
 		return true;
 	}
+
+	
+
 	
 }

@@ -27,6 +27,7 @@
 <script>
    let contextPath = "${pageContext.request.contextPath}"
    let productId = JSON.parse(`${productId}`);
+   console.log(productId);
 </script>
 <script src="${pageContext.request.contextPath}/static/js/productDetail.js"></script>
 
