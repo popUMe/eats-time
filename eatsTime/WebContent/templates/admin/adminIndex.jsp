@@ -29,6 +29,13 @@
   		<button id="delete-btn">삭제</button>
   		</div>
   	<table class="overflow" id="pagingul">
+  		<tr>
+			<th style="width:30px"><input type="checkbox" id="chkAll" name="chkAll"/></th>
+				<th>공지번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+			<th>작성날짜</th>
+		</tr>
 	</table>
 		<div id="paging-wrap">
 			<div class="paging">
