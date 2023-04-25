@@ -29,7 +29,10 @@ public class ProductDetailOkController implements Action {
       
       JSONObject json = new JSONObject(productDAO.selectProductDetail(productId));
       
-      req.setAttribute("productId", json.toString());
+//     js에도 쓰기위해
+      req.setAttribute("product", json.toString());
+//      jsp에서 쓰기위해
+      req.setAttribute("productId", productDAO.selectProductDetail(productId));
       
       result.setPath("/templates/product/productDetail.jsp");
       
