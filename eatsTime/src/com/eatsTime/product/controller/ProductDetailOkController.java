@@ -28,7 +28,6 @@ public class ProductDetailOkController implements Action {
       String productId = req.getParameter("productId");
       
       JSONObject json = new JSONObject(productDAO.selectProductDetail(productId));
-
       
       req.setAttribute("productId", json.toString());
       
