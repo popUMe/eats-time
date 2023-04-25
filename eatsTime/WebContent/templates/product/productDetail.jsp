@@ -48,8 +48,7 @@
 						<dt class="css-lytdfk epzddad1"><c:out value="${productId.productCategory ? '배송' : '픽업'}"/></dt>
 						<dd class="css-1k8t52o epzddad0">
 							<p class="css-c02hqi e6qx2kx1"><c:out value="${productId.productCategory ? '배송' : '픽업'}"/></p>
-							<p class="css-uy94b2 e6qx2kx0">업체 별도 배송 (픽업제품의 경우 운영시간 별도 확인
-								요망)</p>
+							<p class="css-uy94b2 e6qx2kx0">업체 별도 배송<br>(픽업제품의 경우 운영시간 별도 확인 요망)</p>
 						</dd>
 					</dl>
 
