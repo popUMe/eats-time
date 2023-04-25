@@ -1,6 +1,10 @@
 package com.eatsTime.member;
 
 import java.io.IOException;
+<<<<<<< HEAD
+=======
+import java.util.Iterator;
+>>>>>>> master
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+<<<<<<< HEAD
 import com.eatsTime.member.controller.JoinOkController;
 
 public class MemberFrontController extends HttpServlet {
@@ -30,11 +35,52 @@ public class MemberFrontController extends HttpServlet {
 			if(result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
 			}else {
+=======
+import com.eatsTime.member.controller.DeleteOkController;
+import com.eatsTime.member.controller.JoinOkController;
+import com.eatsTime.member.controller.ModifyController;
+import com.eatsTime.member.controller.ModifyOkController;
+
+public class MemberFrontController extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("UTF-8");
+		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
+		Result result = null;
+		if (target.equals("index")) {
+			result = new Result();
+			result.setPath("/templates/index.jsp");
+
+		} else if (target.equals("modify")) {
+			result = new ModifyController().execute(req, resp);
+			
+		} else if (target.equals("delete")) {
+			result = new Result();
+			result.setPath("/templates/member/lastPageWithdraw.jsp");
+
+		} else if (target.equals("deleteOk")) {
+			result = new Result();
+			result = new DeleteOkController().execute(req, resp);
+
+		} else if (target.equals("modifyOk")) {
+			result = new ModifyOkController().execute(req, resp);
+		}
+
+		if (result != null) {
+			if (result.isRedirect()) {
+				resp.sendRedirect(result.getPath());
+			} else {
+>>>>>>> master
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
 		}
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> master
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);

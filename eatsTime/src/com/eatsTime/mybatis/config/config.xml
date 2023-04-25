@@ -6,14 +6,24 @@
       <setting name="mapUnderscoreToCamelCase" value="true"/>
    </settings>
    
+<<<<<<< HEAD
     <typeAliases>
+=======
+   <typeAliases>
+>>>>>>> master
       <typeAlias type="com.eatsTime.answerboard.domain.AnswerBoardVO" alias="answerBoardVO"/>
       <typeAlias type="com.eatsTime.file.domain.FileVO" alias="fileVO"/>
       <typeAlias type="com.eatsTime.inquiryboard.domain.InquiryBoardVO" alias="inquiryBoardVO"/>
       <typeAlias type="com.eatsTime.main.domain.MainDTO" alias="mainDTO"/>
       <typeAlias type="com.eatsTime.member.domain.MemberVO" alias="memberVO"/>
       <typeAlias type="com.eatsTime.notificationboard.domain.NotificationBoardVO" alias="notificationBoardVO"/>
+<<<<<<< HEAD
       <typeAlias type="com.eatsTime.product.domain.ProductVO" alias="productVO"/>
+=======
+      <typeAlias type="com.eatsTime.notificationboard.domain.NotificationBoardDTO" alias="notificationBoardDTO"/>
+      <typeAlias type="com.eatsTime.product.domain.ProductVO" alias="productVO"/>
+      <typeAlias type="com.eatsTime.product.domain.ProductDTO" alias="productDTO"/>
+>>>>>>> master
       <typeAlias type="com.eatsTime.purchase.domain.PurchaseVO" alias="purchaseVO"/>
       <typeAlias type="com.eatsTime.sale.domain.SaleVO" alias="saleVO"/>
    </typeAliases>

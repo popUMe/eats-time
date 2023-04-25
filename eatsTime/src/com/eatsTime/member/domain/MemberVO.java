@@ -18,6 +18,7 @@ public class MemberVO {
 	
 	public MemberVO() {;}
 
+<<<<<<< HEAD
 	Long getMemberId() {
 		return memberId;
 	}
@@ -119,6 +120,109 @@ public class MemberVO {
 	}
 
 	void setMemberStatus(boolean memberStatus) {
+=======
+	public Long getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(Long memberId) {
+		this.memberId = memberId;
+	}
+
+	public String getMemberIdentification() {
+		return memberIdentification;
+	}
+
+	public void setMemberIdentification(String memberIdentification) {
+		this.memberIdentification = memberIdentification;
+	}
+
+	public String getMemberPw() {
+		return memberPw;
+	}
+
+	public void setMemberPw(String memberPw) {
+		this.memberPw = memberPw;
+	}
+
+	public String getMemberName() {
+		return memberName;
+	}
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+
+	public String getMemberEmail() {
+		return memberEmail;
+	}
+
+	public void setMemberEmail(String memberEmail) {
+		this.memberEmail = memberEmail;
+	}
+
+	public String getMemberPhoneNumber() {
+		return memberPhoneNumber;
+	}
+
+	public void setMemberPhoneNumber(String memberPhoneNumber) {
+		this.memberPhoneNumber = memberPhoneNumber;
+	}
+
+	public String getMemberAddress() {
+		return memberAddress;
+	}
+
+	public void setMemberAddress(String memberAddress) {
+		this.memberAddress = memberAddress;
+	}
+
+	public String getMemberAddressDetail() {
+		return memberAddressDetail;
+	}
+
+	public void setMemberAddressDetail(String memberAddressDetail) {
+		this.memberAddressDetail = memberAddressDetail;
+	}
+
+	public String getMemberGender() {
+		return memberGender;
+	}
+
+	public void setMemberGender(String memberGender) {
+		this.memberGender = memberGender;
+	}
+
+	public String getMemberBirthday() {
+		return memberBirthday;
+	}
+
+	public void setMemberBirthday(String memberBirthday) {
+		this.memberBirthday = memberBirthday;
+	}
+
+	public String getMemberGrade() {
+		return memberGrade;
+	}
+
+	public void setMemberGrade(String memberGrade) {
+		this.memberGrade = memberGrade;
+	}
+
+	public String getMemberJoinedDate() {
+		return memberJoinedDate;
+	}
+
+	public void setMemberJoinedDate(String memberJoinedDate) {
+		this.memberJoinedDate = memberJoinedDate;
+	}
+
+	public boolean isMemberStatus() {
+		return memberStatus;
+	}
+
+	public void setMemberStatus(boolean memberStatus) {
+>>>>>>> master
 		this.memberStatus = memberStatus;
 	}
 

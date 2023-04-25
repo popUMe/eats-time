@@ -1,17 +1,15 @@
 package com.eatsTime.product.domain;
 
-import java.lang.constant.Constable;
-
 public class ProductVO {
 	
 	private Long productId;
-	private String memberId;
-	private String productCategory;
+	private Long memberId;
+	private boolean productCategory;
 	private String productName;
-	private String productPrice;
+	private int productPrice;
 	private String productDate;
 	private String productExpirationDate;
-	private String productStock;
+	private int productStock;
 	private String productAddress;
 	private String productAddresDetail;
 	
@@ -25,20 +23,20 @@ public class ProductVO {
 		this.productId = productId;
 	}
 
-	public String getMemberId() {
+	public Long getMemberId() {
 		return memberId;
 	}
 
-	public void setMemberId(String string) {
-		this.memberId = string;
+	public void setMemberId(Long memberId) {
+		this.memberId = memberId;
 	}
 
-	public String isProductCategory() {
+	public boolean isProductCategory() {
 		return productCategory;
 	}
 
-	public void setProductCategory(String string) {
-		this.productCategory = string;
+	public void setProductCategory(boolean productCategory) {
+		this.productCategory = productCategory;
 	}
 
 	public String getProductName() {
@@ -49,12 +47,12 @@ public class ProductVO {
 		this.productName = productName;
 	}
 
-	public String getProductPrice() {
+	public int getProductPrice() {
 		return productPrice;
 	}
 
-	public void setProductPrice(String string) {
-		this.productPrice = string;
+	public void setProductPrice(int productPrice) {
+		this.productPrice = productPrice;
 	}
 
 	public String getProductDate() {
@@ -73,12 +71,12 @@ public class ProductVO {
 		this.productExpirationDate = productExpirationDate;
 	}
 
-	public Constable getProductStock() {
+	public int getProductStock() {
 		return productStock;
 	}
 
-	public void setProductStock(String string) {
-		this.productStock = string;
+	public void setProductStock(int productStock) {
+		this.productStock = productStock;
 	}
 
 	public String getProductAddress() {

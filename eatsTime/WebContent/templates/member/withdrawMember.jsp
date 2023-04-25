@@ -10,11 +10,22 @@
 	href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/member/withdrawMember.css">
+<<<<<<< HEAD
+=======
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/static/css/modal/modal.css">
+>>>>>>> master
 <title>이츠타임 - 개인 정보 수정</title>
 </head>
+
 <body>
 	<jsp:include page="../header.jsp" />
 	<div class="css-luwwab">
+		<div class="modal">
+			<div class="warn-modal">
+				<div id="content-wrap"></div>
+			</div>
+		</div>
 		<div class="css-833hqy">
 			<div class="css-1v4whg">마이타임</div>
 			<!--css-1v4whg ecbxmj2  -->
@@ -113,7 +124,11 @@
 								<div class="css-176lya2 e1uzxhvi3">
 									<input data-testid="input-box" id="userId"
 										name="memberIdentification" type="text" readonly=""
+<<<<<<< HEAD
 										class="css-u52dqk e1uzxhvi2" value="msy2559">
+=======
+										class="css-u52dqk e1uzxhvi2" value="">
+>>>>>>> master
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -193,7 +208,11 @@
 								<div class="css-176lya2">
 									<input data-testid="input-box" id="name" name="memberName"
 										placeholder="이름을 입력해 주세요" type="text"
+<<<<<<< HEAD
 										class="css-u52dqk e1uzxhvi2" value="문소영"
+=======
+										class="css-u52dqk e1uzxhvi2" value=""
+>>>>>>> master
 										data-gtm-form-interact-field-id="4">
 								</div>
 							</div>
@@ -212,7 +231,11 @@
 								<div class="css-176lya2 e1uzxhvi3">
 									<input data-testid="input-box" id="email" name="memberEmail"
 										placeholder="이메일을 입력해 주세요" type="text"
+<<<<<<< HEAD
 										class="css-u52dqk e1uzxhvi2" value="msy2559@naver.com"
+=======
+										class="css-u52dqk e1uzxhvi2" value=""
+>>>>>>> master
 										data-gtm-form-interact-field-id="5">
 								</div>
 							</div>
@@ -235,7 +258,11 @@
 								<div class="css-176lya2 e1uzxhvi3">
 									<input data-testid="input-box" id="mobileNumber"
 										name="memberPhoneNumber" placeholder="숫자만 입력해 주세요" type="text"
+<<<<<<< HEAD
 										readonly="" class="css-u52dqk e1uzxhvi2" value="01085532559">
+=======
+										class="css-u52dqk e1uzxhvi2" value="">
+>>>>>>> master
 								</div>
 							</div>
 						</div>
@@ -257,19 +284,31 @@
 
 								<label class="css-z9g6s0" for="gender-man"> <input
 									id="gender-man" name="memberGender" type="radio"
+<<<<<<< HEAD
 									class="css-1pes2r6" value="m"> <span
+=======
+									class="css-1pes2r6" value="MALE"> <span
+>>>>>>> master
 									class="css-198i9ca" id="male">
 										<div class="css-1dahn5m" id=divmale></div>
 								</span> <span class="css-mgd87h">남자</span>
 								</label> <label class="css-z9g6s0" for="gender-woman"> <input
 									id="gender-woman" name="memberGender" type="radio"
+<<<<<<< HEAD
 									class="css-1pes2r6" value="f" checked=""> <span
+=======
+									class="css-1pes2r6" value="FEMALE" checked=""> <span
+>>>>>>> master
 									class="css-5xw1m2" id="female">
 										<div class="css-1vic0rk" id="divfemale"></div>
 								</span> <span class="css-mgd87h">여자</span>
 								</label> <label class="css-z9g6s0" for="gender-none"> <input
 									id="gender-none" name="memberGender" type="radio"
+<<<<<<< HEAD
 									class="css-1pes2r6" value="n"> <span
+=======
+									class="css-1pes2r6" value="NONE"> <span
+>>>>>>> master
 									class="css-198i9ca" id="none">
 										<div class="css-1dahn5m" id="divnone"></div>
 								</span> <span class="css-mgd87h">선택안함</span>
@@ -292,7 +331,11 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthYear" id="birthYear"
 											placeholder="YYYY" type="text" height="40"
+<<<<<<< HEAD
 											class="css-151eme7 e1uzxhvi2" value="2000">
+=======
+											class="css-151eme7 e1uzxhvi2" value="1999">
+>>>>>>> master
 									</div>
 								</div>
 								<span class="css-5lnvt6 e9ted1s0"></span>
@@ -300,7 +343,11 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthMonth"
 											id="birthMonth" placeholder="MM" type="text" height="40"
+<<<<<<< HEAD
 											class="css-151eme7 e1uzxhvi2" value="02">
+=======
+											class="css-151eme7 e1uzxhvi2" value="04">
+>>>>>>> master
 									</div>
 								</div>
 								<span class="css-5lnvt6 e9ted1s0"></span>
@@ -308,7 +355,11 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthDay" id="birthDay"
 											placeholder="DD" type="text" height="40"
+<<<<<<< HEAD
 											class="css-151eme7 e1uzxhvi2" value="10">
+=======
+											class="css-151eme7 e1uzxhvi2" value="06">
+>>>>>>> master
 									</div>
 								</div>
 								<input type="hidden" name="memberBirthday">
@@ -317,13 +368,24 @@
 						<div class="css-1w0ksfz e744wfw2"></div>
 					</div>
 
+					<!-- 아이디 테스트용 인풋 박스 -->
+					<input type="hidden" name="memberId" value="1">
 
 					<div class="css-14332pf e1m8ervv0">
+<<<<<<< HEAD
 						<button class="css-ufulao e4nu7ef3" type="button">
 							<span class="css-ymwvow e4nu7ef1">탈퇴하기</span>
 						</button>
 						<button class="css-1qirdbn e4nu7ef3" type="button"
 							onclick="send()">
+=======
+						<button class="css-ufulao e4nu7ef3" type="button"
+							onclick="location.href='delete.member'">
+							<span class="css-ymwvow e4nu7ef1">탈퇴하기</span>
+
+						</button>
+						<button class="css-1qirdbn e4nu7ef3" type="button" id="modify">
+>>>>>>> master
 							<span class="css-ymwvow e4nu7ef1">회원정보수정</span>
 						</button>
 					</div>
@@ -336,6 +398,7 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<<<<<<< HEAD
 <script
 	src="${pageContext.request.contextPath}/static/js/withdrawMember.js"></script>
 <script>
@@ -348,5 +411,85 @@
 	$("input[name='memberBirthday']").val(
 			$("#birthYear").val() + $("#birthMonth").val()
 					+ $("#birthDay").val());
+=======
+
+<script
+	src="${pageContext.request.contextPath}/static/js/withdrawMember.js"></script>
+<script
+	src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
+
+<script>
+	let obj = `${obj}`;
+	member = JSON.parse(obj);
+
+	/* 로딩 끝나고 나서 마이페이지 불러오기 */
+	$(document).ready(function() {
+
+		/* 아이디 */
+		$('#userId').val(member.memberIdentification);
+
+		/* 생일 */
+		let birth = member.memberBirthday;
+		let birthYYYY = new Date(birth).getFullYear();
+		let birthMM = ('0' + (new Date(birth).getMonth() + 1)).slice(-2);
+		let birthDD = ('0' + new Date(birth).getDate()).slice(-2);
+		$('#birthYear').val(birthYYYY);
+		$('#birthMonth').val(birthMM);
+		$('#birthDay').val(birthDD);
+		/* 이름 */
+		$("#name").val(member.memberName);
+
+		/* 이메일 */
+		$("#memberEmail").val(member.memberEmail);
+
+		/* 휴대폰 */
+		$("#memberPhoneNumber").val(member.memberPhoneNumber);
+
+		/* 성별 */
+		$("#memberGender").val(member.membermemberGender);
+
+	});
+	
+	/* 생일 합치기 */
+	let sumBirthDay = $("#birthYear").val() + $("#birthMonth").val()
+			+ $("#birthDay").val();
+	$("input[name='memberBirthday']").val(sumBirthDay);
+	$memberBirthday = $("input[name='memberBirthday']").val();
+	console.log($("input[name='memberBirthday']").val());
+	/* 		document.modifyForm.submit();
+	 }
+	 */
+	/* 회원수정 ajax */
+
+	$(function() {
+		$("#modify").on("click", getData);
+	});
+
+	//	$('#button').on('click', function(){
+	//		console.log('1');
+	//	});
+
+	function getData() {
+		$.ajax({
+			type : "post",
+			url : "modifyOk.member",
+			data : {
+				memberId : '1',
+				memberIdentification : $('#userId').val(),
+				memberPw : $('#newPassword').val(),
+				memberName : $('#name').val(),
+				memberEmail : $('#email').val(),
+				memberPhoneNumber : $('#mobileNumber').val(),
+				memberGender : $("input[type='radio'][name='memberGender']")
+						.val(),
+				memberBirthday : $memberBirthday
+			},
+			//	 	data: {memberId: $(this).val()},
+			success : function() {
+				showWarnModal("수정 완료되었습니다.");
+			}
+		});
+	}
+>>>>>>> master
 </script>
 </html>
