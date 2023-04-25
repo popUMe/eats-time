@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
-import com.eatsTime.member.controller.JoinOkController;
+import com.eatsTime.notificationboard.controller.ListOkController;
+import com.eatsTime.notificationboard.controller.ViewOkController;
 import com.eatsTime.notificationboard.controller.WriteOkController;
 
 public class NotificationBoardFrontController extends HttpServlet {
@@ -20,16 +21,22 @@ public class NotificationBoardFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
+		System.out.println(target);
+		
 		if(target.equals("adminindex")) {
 			result = new Result();
-			result.setPath("templates/admin/adminIndex.jsp");		
+			result.setPath("templates/admin/adminIndex.jsp");
 		} else if(target.equals("adminNoticeWrite")) {
 			result = new Result();
 			result.setPath("templates/admin/adminNoticeWrite.jsp");
 		}else if(target.equals("writeOk")) {
 			System.out.println("writeOk 들어옴");
-			result = new WriteOkController().execute(req, resp);
-			
+			result = new WriteOkController().execute(req, resp);			
+		}else if(target.equals("listOk")) {
+			result = new ListOkController().execute(req, resp);	
+		}else if(target.equals("viewOk")) {
+			System.out.println("viewOk 들어옴");
+			result = new ViewOkController().execute(req, resp);
 		}
 		
 		if(result != null) {

@@ -12,6 +12,23 @@
 		select n.notb_id, n.notb_title, m.member_name, n.notb_date
 		from tbl_member m join tbl_notificationboard n
 		on m.member_id = n.member_id
+		order by n.notb_id desc
+		limit #{offset}, #{rowCount}		
 	</select>
-		
+	
+	<select id="viewBoard" resultType="notificationBoardVO">
+		select notb_id, notb_title, notb_content, notb_date, notb_hit
+		from tbl_notificationboard
+		where notb_id = #{notbId}
+	</select>
+	
+	<select id="getTotal" resultType="_int">
+		select count(notb_id) from tbl_notificationboard
+	</select>
+	
+	<update id="edit">
+		update tbl_notificationboard
+		set notb_title = #{notbTitle}, notb_content = #{notbContent}
+		where notb_id = #{notbId}
+	</update>		
 </mapper>
