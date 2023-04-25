@@ -19,6 +19,8 @@ public class EditOkController implements Action {
 		NotificationBoardVO notificationBoardVO = new NotificationBoardVO();
 		Result result = new Result();
 		
+		
+		
 		return null;
 	}
 
