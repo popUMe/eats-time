@@ -18,109 +18,6 @@ public class MemberVO {
 	
 	public MemberVO() {;}
 
-<<<<<<< HEAD
-	Long getMemberId() {
-		return memberId;
-	}
-
-	void setMemberId(Long memberId) {
-		this.memberId = memberId;
-	}
-
-	String getMemberIdentification() {
-		return memberIdentification;
-	}
-
-	void setMemberIdentification(String memberIdentification) {
-		this.memberIdentification = memberIdentification;
-	}
-
-	String getMemberPw() {
-		return memberPw;
-	}
-
-	void setMemberPw(String memberPw) {
-		this.memberPw = memberPw;
-	}
-
-	String getMemberName() {
-		return memberName;
-	}
-
-	void setMemberName(String memberName) {
-		this.memberName = memberName;
-	}
-
-	String getMemberEmail() {
-		return memberEmail;
-	}
-
-	void setMemberEmail(String memberEmail) {
-		this.memberEmail = memberEmail;
-	}
-
-	String getMemberPhoneNumber() {
-		return memberPhoneNumber;
-	}
-
-	void setMemberPhoneNumber(String memberPhoneNumber) {
-		this.memberPhoneNumber = memberPhoneNumber;
-	}
-
-	String getMemberAddress() {
-		return memberAddress;
-	}
-
-	void setMemberAddress(String memberAddress) {
-		this.memberAddress = memberAddress;
-	}
-
-	String getMemberAddressDetail() {
-		return memberAddressDetail;
-	}
-
-	void setMemberAddressDetail(String memberAddressDetail) {
-		this.memberAddressDetail = memberAddressDetail;
-	}
-
-	String getMemberGender() {
-		return memberGender;
-	}
-
-	void setMemberGender(String memberGender) {
-		this.memberGender = memberGender;
-	}
-
-	String getMemberBirthday() {
-		return memberBirthday;
-	}
-
-	void setMemberBirthday(String memberBirthday) {
-		this.memberBirthday = memberBirthday;
-	}
-
-	String getMemberGrade() {
-		return memberGrade;
-	}
-
-	void setMemberGrade(String memberGrade) {
-		this.memberGrade = memberGrade;
-	}
-
-	String getMemberJoinedDate() {
-		return memberJoinedDate;
-	}
-
-	void setMemberJoinedDate(String memberJoinedDate) {
-		this.memberJoinedDate = memberJoinedDate;
-	}
-
-	boolean isMemberStatus() {
-		return memberStatus;
-	}
-
-	void setMemberStatus(boolean memberStatus) {
-=======
 	public Long getMemberId() {
 		return memberId;
 	}
@@ -222,7 +119,6 @@ public class MemberVO {
 	}
 
 	public void setMemberStatus(boolean memberStatus) {
->>>>>>> master
 		this.memberStatus = memberStatus;
 	}
 

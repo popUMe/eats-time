@@ -8,31 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
-<<<<<<< HEAD
-import com.eatsTime.member.controller.JoinOkController;
-=======
 import com.eatsTime.notificationboard.controller.ListOkController;
 import com.eatsTime.notificationboard.controller.ViewOkController;
 import com.eatsTime.notificationboard.controller.WriteOkController;
->>>>>>> master
 
 public class NotificationBoardFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-<<<<<<< HEAD
-		
-		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
-		Result result = null;
-
-//		¿©±â if¹® else if¹® ¿¹½Ã´Ï±î °¢ ÇÁ·ÐÆ® ÄÁÆ®·Ñ·¯¿¡ ¸ÂÃç¼­ ¼öÁ¤ÇØ¼­ ÀÛ¾÷
-		if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
-			
-		} else if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
-=======
-		System.out.println("ë“¤ì–´ì˜´");
+		System.out.println("µé¾î¿È");
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
@@ -46,14 +30,13 @@ public class NotificationBoardFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("templates/admin/adminNoticeWrite.jsp");
 		}else if(target.equals("writeOk")) {
-			System.out.println("writeOk ë“¤ì–´ì˜´");
+			System.out.println("writeOk µé¾î¿È");
 			result = new WriteOkController().execute(req, resp);			
 		}else if(target.equals("listOk")) {
 			result = new ListOkController().execute(req, resp);	
 		}else if(target.equals("viewOk")) {
-			System.out.println("viewOk ë“¤ì–´ì˜´");
+			System.out.println("viewOk µé¾î¿È");
 			result = new ViewOkController().execute(req, resp);
->>>>>>> master
 		}
 		
 		if(result != null) {

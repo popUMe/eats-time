@@ -1,14 +1,10 @@
 package com.eatsTime.member.dao;
 
-<<<<<<< HEAD
-import org.apache.ibatis.session.SqlSession;
-=======
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
 import com.eatsTime.member.domain.MemberVO;
->>>>>>> master
 import com.eatsTime.mybatis.config.MyBatisConfig;
 
 public class MemberDAO {
@@ -17,8 +13,6 @@ public class MemberDAO {
 	public MemberDAO() {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
-<<<<<<< HEAD
-=======
 	
 	// 마이페이지 불러오기
 	public List<MemberVO> selectAll(MemberVO memberVO) {
@@ -34,6 +28,5 @@ public class MemberDAO {
 	public void delete(String memberId) {
 		sqlSession.delete("member.delete", memberId);
 	}
->>>>>>> master
 
 }
