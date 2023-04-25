@@ -13,22 +13,20 @@
 		<div class="board_title">
 			<h1>공지사항 - 관리자모드</h1>
 		</div>
+		<form action="editOk.notificationboard" method="post">
 		<div class="board_write_wrap">
 			<div class="board_write">
 				<div class="title">
 					<dl>
 						<dt>제목</dt>
 						<dd>
-							<input type="text" placeholder="제목 입력" value="제목">
+							<input name="notbTitle" type="text" placeholder="제목 입력">
 						</dd>
 					</dl>
 				</div>
 				<div class="cont">
-					<textarea placeholder="내용 입력">
-내용
-내용
-내용
-						</textarea>
+					<textarea name="notbContent" placeholder="내용 입력">
+					</textarea>
 				</div>
 			</div>
 			<div class="btn">
@@ -36,6 +34,7 @@
 			 <a href="adminNoticeView.jsp">취소</a>
 			</div>
 		</div>
+		</form>
 	</div>
 
 </body>
