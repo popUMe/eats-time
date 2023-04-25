@@ -99,7 +99,7 @@
     height: 54px;
     border-radius: 3px;
     color: #fff;
-    background-color: #5f0080;
+    background-color: #ff4f32;
     border: 0 none;
 }
 /*로그인 버튼안의 글자부분*/
@@ -122,9 +122,9 @@
     width: 100%;
     height: 54px;
     border-radius: 3px;
-    color: #5f0080;
+    color: #ff4f32;
     background-color: #fff;
-    border: 1px solid #5f0080;
+    border: 1px solid #ff4f32;
 }
 
 

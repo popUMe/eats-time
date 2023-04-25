@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="https://www.kurly.com//favicon.ico" />
-<title>이츠타임 - [메인]</title>
+<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <link rel="stylesheet"
@@ -16,6 +15,7 @@
 	href="${pageContext.request.contextPath}/static/css/product/productListAll.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/product/productList.css">
+<title>이츠타임 - 메인</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" />
@@ -47,10 +47,10 @@
 									<div id="last-temp"></div>
 								</div>
 								<div class="arrow prev">
-									<img src="../static/image/arrow.png">
+									<img src="${pageContext.request.contextPath}/static/image/arrow.png">
 								</div>
 								<div class="arrow next">
-									<img src="../static/image/arrow.png">
+									<img src="${pageContext.request.contextPath}/static/image/arrow.png">
 								</div>
 
 								<div class="dots" style="display: none">
@@ -1164,6 +1164,7 @@
 	<jsp:include page="footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script src="${pageContext.request.contextPath}/static/js/index.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/product.js"></script>
 </html>

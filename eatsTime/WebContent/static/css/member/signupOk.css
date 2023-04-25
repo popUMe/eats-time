@@ -24,7 +24,7 @@
 .css-1921apv {
     width: 600px;
     margin: 0px auto;
-    border-top: 2px solid rgb(106, 54, 100);
+    border-top: 2px solid #ff4f32;
     color: rgb(76, 76, 76);
 }
 
@@ -32,7 +32,7 @@
     width: 100%;
     display: flex;
     text-align: left;
-    border-bottom: 1px solid rgb(106, 54, 100);
+    border-bottom: 1px solid #ff4f32;
 }
 
 .css-1idmn86 {

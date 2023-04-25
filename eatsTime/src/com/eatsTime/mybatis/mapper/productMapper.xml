@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+
+   <!-- 페이징 -->
+   <!-- 파일, 맴버, 상품, 판매 조인 -->
+   <select id="selectAll" resultType="productDTO">
+   select s.sale_content, b.* from tbl_sale s join
+      (select
+      file_name,
+      a.*
+      from
+      tbl_file f
+      join (
+      select
+      p.*,
+      member_identification,
+      member_name
+      from
+      tbl_member m
+      join tbl_product p on
+      m.member_id = p.member_id) a
+      on
+      f.file_id = a.file_id) b on s.product_id = b.product_id
+      <where>
+         <choose>
+            <when test="category == 'pickUp'.toString()">
+               product_category = '0'
+            </when>
+            <when test="category == 'send'.toString()">
+               product_category = '1'
+            </when>
+         </choose>
+      </where>
+
+      <choose>
+         <when test="sort=='recent'.toString()">
+            order by product_id desc
+         </when>
+         <when test="sort=='lowPrice'.toString()">
+            order by product_price asc
+         </when>
+         <when test="sort=='highPrice'.toString()">
+            order by product_price desc
+         </when>
+      </choose>
+      limit #{offset}, #{rowCount}
+   </select>
+
+
+
+   <!-- 총 상품개수 -->
+   <select id="getTotal" resultType="_int">
+      select count(product_id) FROM
+      tbl_product
+      <where>
+         <choose>
+            <when test="category == 'pickUp'.toString()">
+            product_category = '0'
+            </when>
+            <when test="category == 'send'.toString()">
+            product_category = '1'
+            </when>
+            <otherwise>
+            </otherwise>
+         </choose>
+      </where>
+   </select>
+
+   <!-- 배송 제품 총 개수 -->
+      <select id="getDeliveryTotal" resultType="_int">
+      select count(product_id) FROM
+      tbl_product where product_category = '1'
+      </select>
+
+   <!-- 배송 제품 페이징 -->
+   <select id="selectDeliveryAll" resultType="productDTO">
+    select s.sale_content, b.* from tbl_sale s join
+      (select
+      file_name,
+      a.*
+      from
+      tbl_file f
+      join (
+      select
+      p.*,
+      member_identification,
+      member_name
+      from
+      tbl_member m
+      join tbl_product p on
+      m.member_id = p.member_id) a
+      on
+      f.file_id = a.file_id and a.product_category = '1') b on s.product_id = b.product_id
+      <choose>
+         <when test="sort=='recent'.toString()">
+            order by product_id desc
+         </when>
+         <when test="sort=='lowPrice'.toString()">
+            order by product_price asc
+         </when>
+         <when test="sort=='highPrice'.toString()">
+            order by product_price desc
+         </when>
+      </choose>
+      limit #{offset}, #{rowCount}
+   </select>
+   
+   
+      <!-- 픽업 제품 총 개수 -->
+      <select id="getPickUpTotal" resultType="_int">
+      select count(product_id) FROM
+      tbl_product where product_category = '0'
+      </select>
+
+   <!-- 픽업 제품 페이징 -->
+   <select id="selectPickUpAll" resultType="productDTO">
+    select s.sale_content, b.* from tbl_sale s join
+      (select
+      file_name,
+      a.*
+      from
+      tbl_file f
+      join (
+      select
+      p.*,
+      member_identification,
+      member_name
+      from
+      tbl_member m
+      join tbl_product p on
+      m.member_id = p.member_id) a
+      on
+      f.file_id = a.file_id and a.product_category = '0') b on s.product_id = b.product_id
+      <choose>
+         <when test="sort=='recent'.toString()">
+            order by product_id desc
+         </when>
+         <when test="sort=='lowPrice'.toString()">
+            order by product_price asc
+         </when>
+         <when test="sort=='highPrice'.toString()">
+            order by product_price desc
+         </when>
+      </choose>
+      limit #{offset}, #{rowCount}
+   </select>
+
+
+   <!-- 게시글 상세보기 -->
+   <!-- 상세보기안에 판매 게시글 내용 넣기위한 조인 -->
+      <select id="selectProductDetail" resultType="productDTO">
+      select s.sale_content, b.* from tbl_sale s join
+      (select
+      file_name,
+      a.*
+      from
+      tbl_file f
+      join (
+      select
+      p.*,
+      member_identification,
+      member_name
+      from
+      tbl_member m
+      join tbl_product p on
+      m.member_id = p.member_id) a
+      on
+      f.file_id = a.file_id) b on s.product_id = b.product_id and b.product_id = #{productId}
+      </select>
+
+
+</mapper>

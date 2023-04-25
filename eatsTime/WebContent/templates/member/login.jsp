@@ -2,16 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <jsp:include page="../header.jsp" />
+    <meta charset="UTF-8">
     <link rel="icon" href="https://www.kurly.com//favicon.ico" />
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/static/css/all.css">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/static/css/member/login.css" />
-    <meta charset="UTF-8">
-    <title>이츠타임-[로그인]</title>
+   	<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
+    <title>이츠타임 - 로그인</title>
 </head>
 <body>
+    <jsp:include page="../header.jsp" />
 <div class="css-1bb6q2p">
     <div class="css-a7gihu">로그인</div>
     <div class="css-1axolzg">
