@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="purchase">
-   
+<!-- 	<select id="select"
+		resultType="com.eatsTime.purchase.domain.PurchaseListDTO">
+		B.product_id,
+		B.product_name,B.product_price,B.product_category, A.pur_id,
+		A.member_id from
+		tbl_purchase A, tbl_product B
+		where A.product_id = B.product_id
+	</select> -->
 </mapper>

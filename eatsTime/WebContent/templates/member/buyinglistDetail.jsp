@@ -92,7 +92,7 @@
 		
 	<div class="css-1bsokvi">
 		<h3 class="css-yi2ox5">주문번호 2300016310030</h3>
-		<span class="css-1mlk737">배송 또는 상품에 문제가 있나요?
+		<span class="css-1mlk737" style="visibility: hidden">배송 또는 상품에 문제가 있나요?
 		<a	href="/mypage/inquiry/list" class="css-1s2o3jp"> 1:1 문의하기
 				<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDkgMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cGF0aCBkPSJtMiA0IDUgNS01IDUiIHN0cm9rZT0iIzVGMDA4MCIgc3Ryb2tlLXdpZHRoPSIxLjMiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="
 				alt="purpleArrowRight" class="e1jm6dy10 css-cb2xrd eflljbi0">
@@ -109,11 +109,11 @@
 					class="css-1ekh7sh ecmuszp2">수량</span>
 			</div>
 		</div>
-		<span class="css-l71t3l ecmuszp1">배송여부</span>
+		<!-- <span class="css-l71t3l ecmuszp1">배송여부</span> -->
 		
 	</div>	
 		
-		<span class="css-15leche e1egl70z0">주문취소는 [주문완료] 상태일 경우에만 가능합니다.</span>
+		<span class="css-15leche e1egl70z0" style="visibility:hidden">주문취소는 [주문완료] 상태일 경우에만 가능합니다.</span>
 
 			
 			
@@ -137,7 +137,7 @@
 
 
 
-		<div class="css-1bsokvi"><h3 class="css-yi2ox5">주문정보</h3></div>
+<!-- 		<div class="css-1bsokvi"><h3 class="css-yi2ox5">주문정보</h3></div>
 		<ul class="css-hig5bx">
 		<li class="css-8homh5"><span class="css-9i2eur">주문번호</span><span
 			class="css-thgwm0">2300016310030</span></li>
@@ -145,7 +145,7 @@
 				분</span><span class="css-thgwm0">문소영</span></li>
 		<li class="css-8homh5"><span class="css-9i2eur eu7fh4o1">결제일시</span><span
 			class="css-thgwm0">2023-03-20 16:31:24</span></li>
-		</ul>
+		</ul> -->
 		
 		
 		<div class="css-1bsokvi"><h3 class="css-yi2ox5">배송정보</h3></div>

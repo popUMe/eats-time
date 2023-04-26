@@ -162,7 +162,7 @@
 									<input data-testid="input-box" id="newPassword" name="memberPw"
 										placeholder="새 비밀번호를 입력해 주세요" type="password"
 										autocomplete="off" class="css-u52dqk e1uzxhvi2" value=""
-										aria-autocomplete="list" data-gtm-form-interact-field-id="2">
+										aria-autocomplete="list">
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -183,7 +183,7 @@
 										name="newPasswordConfirm" placeholder="새 비밀번호를 다시 입력해 주세요"
 										type="password" autocomplete="off"
 										class="css-u52dqk e1uzxhvi2" value=""
-										data-gtm-form-interact-field-id="3">
+										>
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -202,7 +202,7 @@
 									<input data-testid="input-box" id="name" name="memberName"
 										placeholder="이름을 입력해 주세요" type="text"
 										class="css-u52dqk e1uzxhvi2" value=""
-										data-gtm-form-interact-field-id="4">
+										>
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -221,7 +221,7 @@
 									<input data-testid="input-box" id="email" name="memberEmail"
 										placeholder="이메일을 입력해 주세요" type="text"
 										class="css-u52dqk e1uzxhvi2" value=""
-										data-gtm-form-interact-field-id="5">
+										>
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -229,7 +229,7 @@
 							</div>
 						</div>
 						<div class="css-1w0ksfz e744wfw2">
-							<button class="css-ufulao e4nu7ef3" type="button">
+							<button class="css-ufulao e4nu7ef3" type="button" id="checkEmail">
 								<span class="css-ymwvow e4nu7ef1">중복확인</span>
 							</button>
 						</div>
@@ -263,24 +263,32 @@
 						<div class="css-82a6rk">
 							<div class="css-14wodj6">
 
-								<label class="css-z9g6s0" for="gender-man"> <input
-									id="gender-man" name="memberGender" type="radio"
-									class="css-1pes2r6" value="MALE"> <span
-									class="css-198i9ca" id="male">
+								<label class="css-z9g6s0" for="gender-man">
+									<input id="gender-man" name="memberGender" type="radio" class="css-1pes2r6" value="MALE" checked>
+									<span class="css-198i9ca" id="male">
 										<div class="css-1dahn5m" id=divmale></div>
-								</span> <span class="css-mgd87h">남자</span>
-								</label> <label class="css-z9g6s0" for="gender-woman"> <input
-									id="gender-woman" name="memberGender" type="radio"
-									class="css-1pes2r6" value="FEMALE" checked=""> <span
-									class="css-5xw1m2" id="female">
+									</span>
+									<span class="css-mgd87h">남자</span>
+								</label>
+								
+								
+								
+								<label class="css-z9g6s0" for="gender-woman">
+									<input id="gender-woman" name="memberGender" type="radio" class="css-1pes2r6" value="FEMALE">
+									<span class="css-5xw1m2" id="female">
 										<div class="css-1vic0rk" id="divfemale"></div>
-								</span> <span class="css-mgd87h">여자</span>
-								</label> <label class="css-z9g6s0" for="gender-none"> <input
-									id="gender-none" name="memberGender" type="radio"
-									class="css-1pes2r6" value="NONE"> <span
-									class="css-198i9ca" id="none">
+									</span>
+									<span class="css-mgd87h">여자</span>
+								</label>
+								
+								
+								
+								<label class="css-z9g6s0" for="gender-none">
+									<input id="gender-none" name="memberGender" type="radio" class="css-1pes2r6" value="NONE">
+									<span class="css-198i9ca" id="none">
 										<div class="css-1dahn5m" id="divnone"></div>
-								</span> <span class="css-mgd87h">선택안함</span>
+									</span>
+									<span class="css-mgd87h">선택안함</span>
 								</label>
 
 							</div>
@@ -300,7 +308,7 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthYear" id="birthYear"
 											placeholder="YYYY" type="text" height="40"
-											class="css-151eme7 e1uzxhvi2" value="1999">
+											class="css-151eme7 e1uzxhvi2" value="">
 									</div>
 								</div>
 								<span class="css-5lnvt6 e9ted1s0"></span>
@@ -308,7 +316,7 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthMonth"
 											id="birthMonth" placeholder="MM" type="text" height="40"
-											class="css-151eme7 e1uzxhvi2" value="04">
+											class="css-151eme7 e1uzxhvi2" value="">
 									</div>
 								</div>
 								<span class="css-5lnvt6 e9ted1s0"></span>
@@ -316,7 +324,7 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthDay" id="birthDay"
 											placeholder="DD" type="text" height="40"
-											class="css-151eme7 e1uzxhvi2" value="06">
+											class="css-151eme7 e1uzxhvi2" value="">
 									</div>
 								</div>
 								<input type="hidden" name="memberBirthday">
@@ -371,38 +379,35 @@
 		$('#birthYear').val(birthYYYY);
 		$('#birthMonth').val(birthMM);
 		$('#birthDay').val(birthDD);
+		
 		/* 이름 */
-		$("#name").val(member.memberName);
+		$('#name').val(member.memberName);
 
 		/* 이메일 */
-		$("#memberEmail").val(member.memberEmail);
+		$('#email').val(member.memberEmail);
 
 		/* 휴대폰 */
-		$("#memberPhoneNumber").val(member.memberPhoneNumber);
-
+		$('#mobileNumber').val(member.memberPhoneNumber);
 		/* 성별 */
-		$("#memberGender").val(member.membermemberGender);
+		$('input[type="radio"][name="memberGender"][value="'+member.memberGender+'"]').trigger('click');
 
+		sumBirth();
 	});
-	
-	/* 생일 합치기 */
-	let sumBirthDay = $("#birthYear").val() + $("#birthMonth").val()
-			+ $("#birthDay").val();
-	$("input[name='memberBirthday']").val(sumBirthDay);
-	$memberBirthday = $("input[name='memberBirthday']").val();
-	console.log($("input[name='memberBirthday']").val());
 	/* 		document.modifyForm.submit();
 	 }
 	 */
+	 function sumBirth(){
+		 /* 생일 합치기 */
+		let sumBirthDay = $("#birthYear").val() + $("#birthMonth").val()
+				+ $("#birthDay").val();
+		$("input[name='memberBirthday']").val(sumBirthDay);
+	 }
+	 
+	 
 	/* 회원수정 ajax */
-
 	$(function() {
 		$("#modify").on("click", getData);
 	});
-
-	//	$('#button').on('click', function(){
-	//		console.log('1');
-	//	});
 
 	function getData() {
 		$.ajax({
@@ -415,9 +420,11 @@
 				memberName : $('#name').val(),
 				memberEmail : $('#email').val(),
 				memberPhoneNumber : $('#mobileNumber').val(),
-				memberGender : $("input[type='radio'][name='memberGender']")
-						.val(),
-				memberBirthday : $memberBirthday
+				memberGender : $("input[type='radio'][name='memberGender']:checked").val(),
+				memberBirthday : $("input[name='memberBirthday']").val()
+			},
+			beforeSend: function(xhr){
+				sumBirth();
 			},
 			//	 	data: {memberId: $(this).val()},
 			success : function() {
@@ -425,5 +432,6 @@
 			}
 		});
 	}
+
 </script>
 </html>

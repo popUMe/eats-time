@@ -23,7 +23,7 @@
 		member_phonenumber=#{memberPhoneNumber},
 		member_gender=#{memberGender}, member_birthday=#{memberBirthday}
 		where
-		member_Id = 1
+		member_Id = #{memberId}
 	</update>
 
 	<update id="delete" parameterType="_int">
@@ -32,5 +32,5 @@
 		member_status= 0
 		where member_id = 1
 	</update>
-
+	
 </mapper>

@@ -21,6 +21,11 @@ public class ModifyOkController implements Action {
 		MemberVO memberVO = new MemberVO();
 		Result result = new Result();
 
+//		Long boardId = Long.valueOf(req.getParameter("memberId"));
+		
+		memberVO.setMemberId(1L);
+//		memberVO.setMemberId(boardId);
+		
 		memberVO.setMemberIdentification(req.getParameter("memberIdentification"));
 		memberVO.setMemberPw(req.getParameter("memberPw"));
 		memberVO.setMemberName(req.getParameter("memberName"));

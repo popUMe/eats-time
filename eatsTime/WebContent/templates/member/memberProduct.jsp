@@ -120,14 +120,14 @@
 						</dl>
 					</div>
 				</div>
-				<div class="css-s5xdrg">
+				<!-- <div class="css-s5xdrg">
 					<span class="css-1fdt947">배송완료</span>
 					<div class="css-1bbz142">
 						<button class="css-oyz24n" type="button" height="36" radius="3">
 							<span class="css-ymwvow">1:1 문의</span>
 						</button>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="css-4wlxei">
@@ -159,10 +159,10 @@
 						</dl>
 					</div>
 				</div>
-				<div class="css-s5xdrg">
+<!-- 				<div class="css-s5xdrg">
 					<span class="css-1fdt947">취소완료</span>
 					<div class="css-1bbz142"></div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="css-bx0kqw"></div>

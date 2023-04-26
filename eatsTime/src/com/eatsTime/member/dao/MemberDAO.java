@@ -14,18 +14,18 @@ public class MemberDAO {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	// ¸¶ÀÌÆäÀÌÁö ºÒ·¯¿À±â
+	// ë§ˆì´í˜ì´ì§€ ë¶ˆëŸ¬ì˜¤ê¸°
 	public List<MemberVO> selectAll(MemberVO memberVO) {
 		return sqlSession.selectList("member.selectAll", memberVO);
 	}
 	
-	// È¸¿øÁ¤º¸¼öÁ¤
+	// ë§ˆì´í˜ì´ì§€ ìˆ˜ì •
 	public void update(MemberVO memberVO) {
 		sqlSession.update("member.update", memberVO);
 	}
 	
-	// È¸¿øÅ»Åğ
-	public void delete(String memberId) {
+	// íšŒì›íƒˆí‡´
+	public void delete(Long memberId) {
 		sqlSession.delete("member.delete", memberId);
 	}
 

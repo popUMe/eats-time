@@ -22,7 +22,6 @@ public class ProductDAO {
       return sqlSession.selectList("product.selectAll", pagable);
    }
    
-   
    // 상품 전체 개수
    
    public int getTotal(HashMap<String, Object> pagable) {
