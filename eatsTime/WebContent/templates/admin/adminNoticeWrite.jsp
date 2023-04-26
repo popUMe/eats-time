@@ -27,9 +27,12 @@
 					<textarea name="notbContent" inputmode="text" placeholder="내용 입력"></textarea>
 				</div>
 			</div>
-			<div class="btn">
-				<input type="submit"> <button onclick="javascript:location.href='/eatsTime/listOk.notificationboard">취소</button>
+			<div class="btn" style="background-color:black;">
+				<button type="submit" class="on" style="cursor:pointer; border:none;">제출</button>
 			</div>
+			<div class="btn">
+				<a href="listOk.notificationboard" style="cursor:pointer">취소</a>
+			</div>	
 			</div>
 		</form>
 	</div>

@@ -36,14 +36,11 @@
 					<div class="cont"><pre><c:out value="${notbContent}"/></pre></div>
 				</div>
 			</div>
-			<div class="btn">
+			<div class="btn" style="background-color: black;">
 				<a href="${pageContext.request.contextPath}/listOk.notificationboard" class="on">목록</a>
 			</div> 
 			<div class="btn">
 				<a href="${pageContext.request.contextPath}/adminEdit.notificationboard?notbId=${notbId}">수정</a>
-			</div>
-			<div class="btn">
-				<a href="${pageContext.request.contextPath}/deleteOk.notificationboard?notbId=${notbId}">삭제</a>
 			</div>
 		</div>
 	</div>

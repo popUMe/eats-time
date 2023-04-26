@@ -30,11 +30,11 @@
 					<textarea name="notbContent" placeholder="내용 입력"><c:out value="${notificationboard.notbContent}"/></textarea>
 				</div>
 			</div>
-			<div class="btn">
-			 <button type="submit" class="on">수정</button>
+			<div class="btn" style="background-color:black;">
+			 <button type="submit" class="on" style="border:none; cursor:pointer;">수정</button>
 			 </div>
 			<div class="btn">
-			 <a href="${pageContext.request.contextPath}/listOk.notificationboard">취소</a>
+			 <a href="listOk.notificationboard">취소</a>
 			</div>
 		</div>
 		</form>

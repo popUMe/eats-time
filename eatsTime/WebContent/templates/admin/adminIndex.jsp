@@ -24,9 +24,10 @@
 	<div class="content">
 		<h1>공지사항 관리</h1>
 		<div id=table-container>
+		<form action="deleteOk.notificationboard" method="post">
 		<div class="btn">
-		<a id="add-btn" href="adminNoticeWrite.notificationboard">작성</a>
-  		<button id="delete-btn">삭제</button>
+		<button type="button" id="add-btn" onclick="location.href='adminNoticeWrite.notificationboard'">작성</button>
+  		<button id="delete-btn" type="submit">삭제</button>
   		</div>
   	<table class="overflow" id="pagingul">
   		<tr>
@@ -37,6 +38,7 @@
 			<th>작성날짜</th>
 		</tr>
 	</table>
+		</form>
 		<div id="paging-wrap">
 			<div class="paging">
 				<c:if test="${prev}">

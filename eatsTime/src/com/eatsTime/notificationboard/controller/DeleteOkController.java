@@ -1,6 +1,7 @@
 package com.eatsTime.notificationboard.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,10 +18,13 @@ public class DeleteOkController implements Action {
 		System.out.println("DeleteOk Controller 들어옴");
 		Result result = new Result();
 		NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
-		Long notbId = Long.valueOf(req.getParameter("notbId"));
 		
-		notificationBoardDAO.delete(notbId);
-		
+		String[] array = req.getParameterValues("chk");
+		System.out.println(array[0]);
+		for(int i = 0; i < array.length; i++) {
+			notificationBoardDAO.delete(Long.valueOf(array[i]));
+		}		
+						
 		result.setPath(req.getContextPath() + "/listOk.notificationboard");
 		result.setRedirect(true);
 		
