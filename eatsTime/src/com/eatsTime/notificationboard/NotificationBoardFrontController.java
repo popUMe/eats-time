@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+import com.eatsTime.notificationboard.controller.DeleteOkController;
 import com.eatsTime.notificationboard.controller.EditController;
 import com.eatsTime.notificationboard.controller.EditOkController;
 import com.eatsTime.notificationboard.controller.ListOkController;
@@ -31,6 +32,7 @@ public class NotificationBoardFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("templates/admin/adminIndex.jsp");
 		} else if(target.equals("adminNoticeWrite")) {
+			System.out.println("write 들어옴");
 			result = new Result();
 			result.setPath("templates/admin/adminNoticeWrite.jsp");
 		}else if(target.equals("writeOk")) {
@@ -53,6 +55,9 @@ public class NotificationBoardFrontController extends HttpServlet {
 		}else if(target.equals("editOk")) {
 			System.out.println("editOk 들어옴");
 			result = new EditOkController().execute(req, resp);
+		}else if(target.equals("deleteOk")) {
+			System.out.println("deleteOk 들어옴");
+			result = new DeleteOkController().execute(req, resp);
 		}
 		
 		if(result != null) {

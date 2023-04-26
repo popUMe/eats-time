@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import com.eatsTime.mybatis.config.MyBatisConfig;
 import com.eatsTime.notificationboard.domain.Criteria;
+import com.eatsTime.notificationboard.domain.Criteria2;
 import com.eatsTime.notificationboard.domain.NotificationBoardDTO;
 import com.eatsTime.notificationboard.domain.NotificationBoardVO;
 
@@ -21,6 +22,10 @@ public class NotificationBoardDAO {
 	
 	public List<NotificationBoardDTO> selectAllAdmin(Criteria criteria){
 		return sqlSession.selectList("notificationboard.selectAllAdmin", criteria);
+	}
+	
+	public List<NotificationBoardDTO> selectAll(Criteria2 criteria2){
+		return sqlSession.selectList("notificationboard.selectAll", criteria2);
 	}
 	
 	public NotificationBoardDTO viewBoard(Long notbId){

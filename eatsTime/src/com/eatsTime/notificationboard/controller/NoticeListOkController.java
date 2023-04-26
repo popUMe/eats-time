@@ -13,6 +13,7 @@ import com.eatsTime.Action;
 import com.eatsTime.Result;
 import com.eatsTime.notificationboard.dao.NotificationBoardDAO;
 import com.eatsTime.notificationboard.domain.Criteria;
+import com.eatsTime.notificationboard.domain.Criteria2;
 
 public class NoticeListOkController implements Action {
 		@Override
@@ -23,17 +24,17 @@ public class NoticeListOkController implements Action {
 			JSONArray jsonArray = new JSONArray();
 			String temp = req.getParameter("page");
 			int page = temp == null ? 1 : Integer.parseInt(temp);
-			Criteria criteria = new Criteria(page, notificationBoardDAO.getTotal());
+			Criteria2 criteria2 = new Criteria2(page, notificationBoardDAO.getTotal());
 			
 			
-			notificationBoardDAO.selectAllAdmin(criteria).stream().map(notificationboard -> new JSONObject(notificationboard)).forEach(jsonArray::put);			
+			notificationBoardDAO.selectAll(criteria2).stream().map(notificationboard -> new JSONObject(notificationboard)).forEach(jsonArray::put);			
 			req.setAttribute("notificationboards", jsonArray.toString());
 			req.setAttribute("total", notificationBoardDAO.getTotal());
 			req.setAttribute("page", page);
-			req.setAttribute("startPage", criteria.getStartPage());
-			req.setAttribute("endPage", criteria.getEndPage());
-			req.setAttribute("prev", criteria.isPrev());
-			req.setAttribute("next", criteria.isNext());
+			req.setAttribute("startPage", criteria2.getStartPage());
+			req.setAttribute("endPage", criteria2.getEndPage());
+			req.setAttribute("prev", criteria2.isPrev());
+			req.setAttribute("next", criteria2.isNext());
 			result.setPath("templates/board/noticeList.jsp");
 			return result;
 		}

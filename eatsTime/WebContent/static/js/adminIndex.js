@@ -11,7 +11,7 @@ function showList(){
 		for(let i=0; i<notificationboards.length; i++){
 		text += `
 				<tr>
-			    <td><input type="checkbox" name="chk"></td>
+			    <td><input type="checkbox" name="chk" value="${notificationboards[i].notbId}"></td>
 				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards[i].notbId}'" name="notbId">공지번호: ${notificationboards[i].notbId}</td>
 				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards[i].notbId}'" name="notbTitle"><a>${notificationboards[i].notbTitle}</a></td>
 				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards[i].notbId}'" name="memberName">${notificationboards[i].memberName}</td>

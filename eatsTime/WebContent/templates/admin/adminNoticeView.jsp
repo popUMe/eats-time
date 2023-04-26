@@ -42,6 +42,9 @@
 			<div class="btn">
 				<a href="${pageContext.request.contextPath}/adminEdit.notificationboard?notbId=${notbId}">수정</a>
 			</div>
+			<div class="btn">
+				<a href="${pageContext.request.contextPath}/deleteOk.notificationboard?notbId=${notbId}">삭제</a>
+			</div>
 		</div>
 	</div>
 </body>

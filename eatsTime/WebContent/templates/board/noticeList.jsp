@@ -68,20 +68,10 @@
 			<div class="css-1kbzkwh e14yho7m0">
 				<div class="css-sxxs1g eytury60">
 				<c:if test="${prev}">
-	                	<a href="${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="/static/image/prev.png" width="15px"></a>
+	             <a href="${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/prev.png" width="15px"></a>
                 </c:if>	
-                <c:forEach var="i" begin="${startPage}" end="${endPage}">
-                	<c:choose>
-                		<c:when test="${i eq page}">
-			                <a href="javascript:void(0)" class="active"><c:out value="${i}"/></a>
-                		</c:when>
-                		<c:otherwise>
-			               <a href="${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${i}"><c:out value="${i}"/></a>
-                		</c:otherwise>
-                	</c:choose>
-                </c:forEach>
                 <c:if test="${next}">
-	                  <a href="${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="/static/image/next.png" width="15px"></a>
+	                  <a href="${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/next.png" width="15px"></a>
                 </c:if>
 				</div>
 			</div>

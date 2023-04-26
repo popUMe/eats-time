@@ -21,12 +21,11 @@
 	</div>
 	<div id=:logo></div>
 	
-	<form action="deleteOk.notificationBoard" method="post">
 	<div class="content">
 		<h1>공지사항 관리</h1>
-				<div id=table-container>
+		<div id=table-container>
 		<div class="btn">
-		  <button id="add-btn" onclick="javascript:location.href='${pageContext.request.contextPath}/adminNoticeWrite.notificationboard'">작성</button>
+		<a id="add-btn" href="adminNoticeWrite.notificationboard">작성</a>
   		<button id="delete-btn">삭제</button>
   		</div>
   	<table class="overflow" id="pagingul">
@@ -41,7 +40,7 @@
 		<div id="paging-wrap">
 			<div class="paging">
 				<c:if test="${prev}">
-	                	<a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="/static/image/prev.png" width="15px"></a>
+	                	<a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/prev.png" width="15px"></a>
                 </c:if>	
                 <c:forEach var="i" begin="${startPage}" end="${endPage}">
                 	<c:choose>
@@ -54,13 +53,12 @@
                 	</c:choose>
                 </c:forEach>
                 <c:if test="${next}">
-	                  <a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="/static/image/next.png" width="15px"></a>
+	                  <a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/next.png" width="15px"></a>
                 </c:if>
 			</div>
 		</div>	
 	</div>
 	</div>
-	</form>
 </body>
 <script>
 let notificationboards = JSON.parse(`${notificationboards}`);

@@ -32,6 +32,8 @@
 			</div>
 			<div class="btn">
 			 <button type="submit" class="on">수정</button>
+			 </div>
+			<div class="btn">
 			 <a href="${pageContext.request.contextPath}/listOk.notificationboard">취소</a>
 			</div>
 		</div>

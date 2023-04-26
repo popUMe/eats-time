@@ -14,15 +14,17 @@ public class DeleteOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
+		System.out.println("DeleteOk Controller 들어옴");
 		Result result = new Result();
+		NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
 		Long notbId = Long.valueOf(req.getParameter("notbId"));
-		boolean chk = Boolean.getBoolean(req.getParameter("chk"));
 		
+		notificationBoardDAO.delete(notbId);
 		
+		result.setPath(req.getContextPath() + "/listOk.notificationboard");
+		result.setRedirect(true);
 		
-		
-		return null;
+		return result;
 	}
 
 }
