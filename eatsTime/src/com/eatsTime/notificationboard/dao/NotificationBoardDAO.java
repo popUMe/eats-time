@@ -23,7 +23,7 @@ public class NotificationBoardDAO {
 		return sqlSession.selectList("notificationboard.selectAllAdmin", criteria);
 	}
 	
-	public NotificationBoardVO viewBoard(Long notbId){
+	public NotificationBoardDTO viewBoard(Long notbId){
 		return sqlSession.selectOne("notificationboard.viewBoard", notbId);
 	}
 	
@@ -33,6 +33,10 @@ public class NotificationBoardDAO {
 	
 	public void edit(NotificationBoardVO notificationBoardVO) {
 		sqlSession.update("notificationboard.edit", notificationBoardVO);
+	}
+	
+	public void delete(Long notbId) {
+		sqlSession.delete("notificationboard.delete", notbId);
 	}
 
 }

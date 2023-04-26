@@ -18,7 +18,7 @@ public class ListOkController implements Action {
 	
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("listOk 들어옴");
+		System.out.println("ListOk 컨트롤러 들어옴");
 		NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();

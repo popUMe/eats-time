@@ -21,6 +21,7 @@
 	</div>
 	<div id=:logo></div>
 	
+	<form action="deleteOk.notificationBoard" method="post">
 	<div class="content">
 		<h1>공지사항 관리</h1>
 				<div id=table-container>
@@ -58,7 +59,8 @@
 			</div>
 		</div>	
 	</div>
-</div>
+	</div>
+	</form>
 </body>
 <script>
 let notificationboards = JSON.parse(`${notificationboards}`);
