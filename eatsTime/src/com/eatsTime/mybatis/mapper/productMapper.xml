@@ -168,6 +168,13 @@
       on
       f.file_id = a.file_id) b on s.product_id = b.product_id and b.product_id = #{productId}
       </select>
+      
+        <!-- 결제창에 불러올 회원 + 상품 + 사진 정보 -->
+   <!-- 상세보기안에 판매 게시글 내용 넣기위한 조인 -->
+      <select id="selectPurchase" resultType="productDTO">
+      select *, file_name from tbl_file f join tbl_product p where product_id = #{productId} ;
+      </select>
+      
 
 
 </mapper>
