@@ -53,4 +53,9 @@ public class ProductDAO {
       return sqlSession.selectOne("product.selectProductDetail", productId);
    }
    
+   // 결제페이지에서 상품이랑 회원정보 불러오는 쿼리
+   public ProductDTO selectPurchase(String productId){
+      return sqlSession.selectOne("product.selectProductDetail", productId);
+   }
+   
 }

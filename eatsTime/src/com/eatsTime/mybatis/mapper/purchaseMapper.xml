@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="purchase">
+
 <!-- 	<select id="select"
 		resultType="com.eatsTime.purchase.domain.PurchaseListDTO">
-		B.product_id,
-		B.product_name,B.product_price,B.product_category, A.pur_id,
-		A.member_id from
-		tbl_purchase A, tbl_product B
-		where A.product_id = B.product_id
+		B.product_id, B.product_name,B.product_price,B.product_category, A.pur_id,
+		A.member_id from tbl_purchase A, tbl_product B where A.product_id =
+		B.product_id
 	</select> -->
+
+	<!-- 구매정보 insert -->
+	<insert id="insertPurchase">
+		insert into tbl_purchase
+		(member_id, product_id,
+		pur_name, pur_phone_number, pur_address,
+		pur_address_detail,
+		pur_location, pur_pw, pur_total_price)
+		VALUES(#{memberId},
+		#{productId}, #{purName}, #{purPhoneNumber} ,
+		#{purAddress},
+		#{purAddressDetail}, #{purLocation}, #{purPw},
+		#{purTotalPrice})
+	</insert>
+
 </mapper>

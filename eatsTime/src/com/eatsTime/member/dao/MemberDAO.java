@@ -8,9 +8,9 @@ import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
 
 public class MemberDAO {
-	public SqlSession sqlSession;
+   public SqlSession sqlSession;
 
-	public MemberDAO() {
+   public MemberDAO() {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
@@ -28,5 +28,10 @@ public class MemberDAO {
 	public void delete(Long memberId) {
 		sqlSession.delete("member.delete", memberId);
 	}
+
+   // 특정 회원정보 조회
+   public MemberVO selectMember(Long memberId) {
+      return sqlSession.selectOne("member.selectMember", memberId);
+   }
 
 }
