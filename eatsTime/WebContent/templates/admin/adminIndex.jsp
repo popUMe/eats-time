@@ -24,16 +24,37 @@
 	<div class="content">
 		<h1>공지사항 관리</h1>
 		<div id=table-container>
+<<<<<<< HEAD
+=======
+		<form action="deleteOk.notificationboard" method="post">
+>>>>>>> b5a2917
 		<div class="btn">
-		  <button id="add-btn">작성</button>
-  		<button id="delete-btn">삭제</button>
+		<button type="button" id="add-btn" onclick="location.href='adminNoticeWrite.notificationboard'">작성</button>
+  		<button id="delete-btn" type="submit">삭제</button>
   		</div>
   	<table class="overflow" id="pagingul">
+  		<tr>
+			<th style="width:30px"><input type="checkbox" id="chkAll" name="chkAll"/></th>
+				<th>공지번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+			<th>작성날짜</th>
+		</tr>
+		<c:forEach var="notificationboards" items="${notificationboards}">
+				<tr>
+			    <td><input type="checkbox" name="chk" value="${notificationboards.notbId}"></td>
+				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbId">${notificationboards.notbId}</td>
+				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbTitle"><a>${notificationboards.notbTitle}</a></td>
+				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="memberName">${notificationboards.memberName}</td>
+				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbDate">${notificationboards.notbDate}</td>
+			    </tr>
+		</c:forEach>
 	</table>
+		</form>
 		<div id="paging-wrap">
 			<div class="paging">
 				<c:if test="${prev}">
-	                	<a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="/static/image/prev.png" width="15px"></a>
+	                	<a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/prev.png" width="15px"></a>
                 </c:if>	
                 <c:forEach var="i" begin="${startPage}" end="${endPage}">
                 	<c:choose>
@@ -46,16 +67,14 @@
                 	</c:choose>
                 </c:forEach>
                 <c:if test="${next}">
-	                  <a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="/static/image/next.png" width="15px"></a>
+	                  <a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/next.png" width="15px"></a>
                 </c:if>
 			</div>
 		</div>	
 	</div>
-</div>
+	</div>
 </body>
 <script>
-let notificationboards = JSON.parse(`${notificationboards}`);
-console.log(notificationboards);
 </script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/adminIndex.js"></script>	

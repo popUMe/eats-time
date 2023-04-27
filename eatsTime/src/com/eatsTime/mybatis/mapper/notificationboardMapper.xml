@@ -9,17 +9,25 @@
 	</insert>
 	
 	<select id="selectAllAdmin" resultType="notificationBoardDTO">
-		select n.notb_id, n.notb_title, m.member_name, n.notb_date
+		select n.notb_id, n.notb_title, n.notb_content, m.member_name, n.notb_date
 		from tbl_member m join tbl_notificationboard n
 		on m.member_id = n.member_id
 		order by n.notb_id desc
 		limit #{offset}, #{rowCount}		
 	</select>
 	
-	<select id="viewBoard" resultType="notificationBoardVO">
-		select notb_id, notb_title, notb_content, notb_date, notb_hit
-		from tbl_notificationboard
-		where notb_id = #{notbId}
+	<select id="selectAll" resultType="notificationBoardDTO">
+		select n.notb_id, n.notb_title, n.notb_content, m.member_name, n.notb_date
+		from tbl_member m join tbl_notificationboard n
+		on m.member_id = n.member_id
+		order by n.notb_id desc
+		limit #{offset}, #{rowCount}		
+	</select>
+	
+	<select id="viewBoard" resultType="notificationBoardDTO">
+		select m.member_name, notb_id, notb_title, notb_content, notb_date, notb_hit, m.member_id
+		from tbl_member m join tbl_notificationboard n
+		on m.member_id = n.member_id and notb_id = #{notbId}
 	</select>
 	
 	<select id="getTotal" resultType="_int">
@@ -30,5 +38,9 @@
 		update tbl_notificationboard
 		set notb_title = #{notbTitle}, notb_content = #{notbContent}
 		where notb_id = #{notbId}
-	</update>		
+	</update>
+	
+	<delete id="delete">
+		delete from tbl_notificationboard where notb_id = #{notbId}
+	</delete>		
 </mapper>

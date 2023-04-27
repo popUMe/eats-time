@@ -39,7 +39,7 @@ a {
     font-size: 0;
 }
 
-.btn a {
+.btn {
     display: inline-block;
     min-width: 80px;
     margin-left: 10px;
@@ -49,12 +49,14 @@ a {
     font-size: 1.4rem;
 }
 
-.btn a:first-child {
+.btn :first-child {
     margin-left: 0;
 }
 
-.btn a.on {
-    background: #000;
+.btn .on {
+	margin: 0;
+	padding: 0;
+    background-color: #000;
     color: #fff;
 }
 
