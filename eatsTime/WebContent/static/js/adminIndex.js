@@ -1,3 +1,6 @@
+
+	
+
 /**
  * 공지사항 
  */
@@ -22,8 +25,7 @@ function showList(){
 		}
 		$table.append(text);
 	}
-
-/*$(document).ready(function() {
+$(document).ready(function() {
 			$("#chkAll").click(function() {
 				if($("#chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
 				else $("input[name=chk]").prop("checked", false);
@@ -48,6 +50,7 @@ function showList(){
 			  });
 			});
 		
+		
 		$(function() {
 			  $('#add-btn').click(function() {
 			    location.href = 'adminNoticeWrite.jsp';
@@ -65,6 +68,6 @@ function showList(){
 			    console.log("Deleted item ids: " + checkedItemIds.join(", "));
 			  });
 			});
-*/
+
 
 		

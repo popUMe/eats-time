@@ -23,7 +23,7 @@
 	
 	<div class="content">
 		<h1>공지사항 관리</h1>
-				<div id=table-container>
+		<div id=table-container>
 		<div class="btn">
 		  <button id="add-btn">작성</button>
   		<button id="delete-btn">삭제</button>

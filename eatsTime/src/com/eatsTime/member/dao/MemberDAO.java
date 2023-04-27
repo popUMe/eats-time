@@ -1,5 +1,6 @@
 package com.eatsTime.member.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -33,5 +34,24 @@ public class MemberDAO {
    public MemberVO selectMember(Long memberId) {
       return sqlSession.selectOne("member.selectMember", memberId);
    }
+   
+	//	회원가입
+	public void insert(MemberVO memberVO) {
+		sqlSession.insert("member.insert", memberVO);
+	}
+	
+//	아이디 중복검사
+	public String selectIdentification(String memberIdentification) {
+		return sqlSession.selectOne("memberIdentification", memberIdentification);
+	}
+	
+//	로그인
+	public Long login(String memberIdentification, String memberPw) {
+		HashMap<String, String> loginMap = new HashMap<String, String>();
+		loginMap.put("memberIdentification", memberIdentification);
+		loginMap.put("memberPw", memberPw);
+		
+		return sqlSession.selectOne("member.login", loginMap);
+	}
 
 }

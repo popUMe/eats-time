@@ -115,7 +115,7 @@ function validateRequiredFields() {
  /*이메일 유효성검사*/
 email.keyup(function() {
 	if (email.val() == "") {
-		$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
+		$(".error2").text("가입 시 등록한 이메일을 	");
 		emailCheck = false;
 	} else if (!fn_emailChk(email.val())) {
 		$(".error2").text("올바른 이메일 형식을 입력해 주세요");
@@ -133,7 +133,7 @@ email.keyup(function() {
   // 모든 검사를 통과한 경우
   return true;
 }
-
+/*
 const button = document.querySelector('.css-18m884r');
 button.addEventListener('click', function() {
   if (validateRequiredFields()) {
@@ -151,7 +151,7 @@ function validateRequiredFields() {
   for (var i = 0; i < requiredFields.length; i++) {
     if (!requiredFields[i].value) {
       // 필수 입력 필드 중 입력되지 않은 필드가 있을 경우 오류 메시지 출력
-      alert(requiredFields[i].getAttribute('name') + '을(를) 입력해주세요.');
+      alert(requiredFields[i].getAttribute("name") + '을(를) 입력해주세요.');
       return false;
     }
   }
@@ -159,7 +159,7 @@ function validateRequiredFields() {
   // 모든 필수 입력 필드가 입력되었을 경우 true 반환
   return true;
 }
-
+*/
 
 /*휴대폰 번호 유효성 검사*/
 
@@ -298,9 +298,9 @@ const divnone = document.querySelector("#divnone");
 
 
 function validateBirthday() {
-  var year = document.getElementsByName("birthYear")[0].value;
-  var month = document.getElementsByName("birthMonth")[0].value;
-  var day = document.getElementsByName("birthDay")[0].value;
+  var year = document.getElementsByName("memberBirthday")[0].value;
+  var month = document.getElementsByName("memberBirthday")[1].value;
+  var day = document.getElementsByName("memberBirthday")[2].value;
 
   // 생년월일이 입력되지 않았을 경우
   if (year == "" || month == "" || day == "") {
@@ -319,7 +319,7 @@ function validateBirthday() {
   return true;
 }
 
-
+/*
 const $allAgreeCheckboxes = $(".css-s5xdrg input:not(#TermsAgreeAll)");
 const $requiredChecks = $(".css-s5xdrg input[type='checkbox']");
 
@@ -358,3 +358,4 @@ function goInfo() {
     scrollTop: 0
   }, 300);
 }
+*/

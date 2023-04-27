@@ -12,7 +12,7 @@ a{
 	text-decoration: none;
 	color: #000;
 }
-
+/* 로고 */
 #logo {
 	width: 150px;
 	height:100px;
@@ -23,7 +23,7 @@ a{
   background-repeat: no-repeat;
 }
 
-
+/*왼쪽 사이드바*/
 #sidebar {
 	position: relative;
 	z-index: 0;
@@ -41,7 +41,7 @@ a{
 	font-weight: 800;
 	
 }
-
+/*사이드바 안 목차*/
 #sidebar a {
 	margin-left: 20px;
 	padding: 10px;
@@ -55,7 +55,7 @@ a{
 	background-color: #FFFAFA;
 }
 
-
+/* 작성, 삭제 등 버튼*/
 .btn{
 	display: flex;
     justify-content: space-between;	
@@ -94,11 +94,12 @@ a{
     font-weight: bold;
 }
 
+
 .content {
 	margin-left: 250px;
 }
 
-
+/* 페이지 버튼*/
 
 .paging {
 			margin-top: 20px;
@@ -126,6 +127,8 @@ h1 {
 	width: 1245px;
 	padding: 20px;
 }
+
+/* 가운데 테이블 */
 #table-container{
 	position:relative;
 	width:100%;

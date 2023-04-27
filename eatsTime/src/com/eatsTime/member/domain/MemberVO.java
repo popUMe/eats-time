@@ -1,5 +1,5 @@
 package com.eatsTime.member.domain;
-
+import java.sql.Timestamp;
 public class MemberVO {
    
    private Long memberId;

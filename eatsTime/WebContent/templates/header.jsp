@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,13 +17,13 @@
 		<div class="css-t79vuj e15sbxqa2">
 			<!-- 헤더 오른쪽 위(회원가입, 로그인, 고객센터) 부분 -->
 
-			<!-- <c:choose> -->
-			<!-- <c:when test="${sessionId eq null}"> -->
+<c:choose>
+<c:when test="${sessionScope.memberId eq null}">
 
 			<div class="css-fexq9b eo7pjfk4">
 				<a class="css-1g7d8zf eo7pjfk2" href="member/signup.jsp">회원가입</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
-				<a class="css-1pu21l0 eo7pjfk2" href="member/login.jsp">로그인</a>
+				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.member">로그인</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
 					<a class="css-1pu21l0 eo7pjfk2" href="board/noticeList.jsp">고객센터<span
@@ -35,14 +36,14 @@
 				</div>
 			</div>
 
-			<!-- </c:when> -->
-			<!-- <c:otherwise> -->
 
-			<!-- DB 구현 이후 화면 추가 작업 예정 -->
-			<!-- <div class="css-fexq9b eo7pjfk4">
+</c:when>
+ <c:otherwise>
+
+			<div class="css-fexq9b eo7pjfk4">
 				<a class="css-1g7d8zf eo7pjfk2" href="member/signup.jsp">마이페이지</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
-				<a class="css-1pu21l0 eo7pjfk2" href="member/login.jsp">로그아웃</a>
+				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/logout.member">로그아웃</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
 					<a class="css-1pu21l0 eo7pjfk2" href="board/noticeList.jsp">고객센터<span
@@ -54,8 +55,8 @@
 				</div>
 			</div> -->
 
-			<!-- </c:otherwise> -->
-			<!-- </c:choose> -->
+		</c:otherwise>
+ </c:choose>
 
 			<!-- 헤더 로고, 검색창, 장바구니 등 라인 부분 -->
 			<div class="css-r7wmjj e15sbxqa3">
