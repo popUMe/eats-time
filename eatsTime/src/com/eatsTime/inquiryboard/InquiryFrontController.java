@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+import com.eatsTime.inquiryboard.controller.ListOkController;
+import com.eatsTime.inquiryboard.controller.WriteOkController;
 import com.eatsTime.member.controller.JoinOkController;
 
 public class InquiryFrontController extends HttpServlet {
@@ -18,14 +20,20 @@ public class InquiryFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 
-//		¿©±â if¹® else if¹® ¿¹½Ã´Ï±î °¢ ÇÁ·ÐÆ® ÄÁÆ®·Ñ·¯¿¡ ¸ÂÃç¼­ ¼öÁ¤ÇØ¼­ ÀÛ¾÷
-		if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
-			
-		} else if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
-		}
 		
+			
+		if(target.equals("writeQuestion")) {
+			System.out.println("writeQuestion í”„ì»¨ ë“¤ì–´ì˜´");
+			result=new Result();
+			result.setPath("templates/member/writeQuestion.jsp");
+		
+ 
+		} else if(target.equals("writeOk")) {
+			System.out.println("writeOk í”„ì»¨ ë“¤ì–´ì˜´");
+			result = new WriteOkController().execute(req, resp);
+		}else if(target.equals("listOk")) {
+			result = new ListOkController().execute(req, resp);
+		}
 		if(result != null) {
 			if(result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
@@ -40,3 +48,4 @@ public class InquiryFrontController extends HttpServlet {
 		doGet(req, resp);
 	}
 }
+ 
