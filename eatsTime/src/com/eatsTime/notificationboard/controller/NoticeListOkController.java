@@ -21,14 +21,12 @@ public class NoticeListOkController implements Action {
 			System.out.println("NoticeListOk 컨트롤러 들어옴");
 			NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
 			Result result = new Result();
-			JSONArray jsonArray = new JSONArray();
 			String temp = req.getParameter("page");
 			int page = temp == null ? 1 : Integer.parseInt(temp);
 			Criteria2 criteria2 = new Criteria2(page, notificationBoardDAO.getTotal());
 			
 			
-			notificationBoardDAO.selectAll(criteria2).stream().map(notificationboard -> new JSONObject(notificationboard)).forEach(jsonArray::put);			
-			req.setAttribute("notificationboards", jsonArray.toString());
+			req.setAttribute("notificationboards", notificationBoardDAO.selectAll(criteria2));
 			req.setAttribute("total", notificationBoardDAO.getTotal());
 			req.setAttribute("page", page);
 			req.setAttribute("startPage", criteria2.getStartPage());

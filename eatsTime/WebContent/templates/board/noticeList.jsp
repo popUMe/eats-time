@@ -68,10 +68,14 @@
 			<div class="css-1kbzkwh e14yho7m0">
 				<div class="css-sxxs1g eytury60">
 				<c:if test="${prev}">
-	             <a href="${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/prev.png" width="15px"></a>
+	             <button onclick="location.href='noticeListOk.notificationboard?page=${startPage - 1}'" class="css-rzcdhr e1hbwyso0">
+	             	<div class="css-7qb0sc e1ilyb3p0">이전</div>
+	             </button>
                 </c:if>	
                 <c:if test="${next}">
-	                  <a href="${pageContext.request.contextPath}/noticeListOk.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/next.png" width="15px"></a>
+	                 <button onclick="location.href='noticeListOk.notificationboard?page=${endPage + 1}'" class="css-1jwilit e1pk9060">
+	                 	<div class="css-7qb0sc e1ilyb3p0">다음</div>
+	                 </button>
                 </c:if>
 				</div>
 			</div>

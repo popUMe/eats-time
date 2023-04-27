@@ -37,6 +37,15 @@
 				<th>작성자</th>
 			<th>작성날짜</th>
 		</tr>
+		<c:forEach var="notificationboards" items="${notificationboards}">
+				<tr>
+			    <td><input type="checkbox" name="chk" value="${notificationboards.notbId}"></td>
+				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbId">${notificationboards.notbId}</td>
+				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbTitle"><a>${notificationboards.notbTitle}</a></td>
+				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="memberName">${notificationboards.memberName}</td>
+				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbDate">${notificationboards.notbDate}</td>
+			    </tr>
+		</c:forEach>
 	</table>
 		</form>
 		<div id="paging-wrap">
@@ -63,8 +72,6 @@
 	</div>
 </body>
 <script>
-let notificationboards = JSON.parse(`${notificationboards}`);
-console.log(notificationboards);
 </script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/adminIndex.js"></script>	

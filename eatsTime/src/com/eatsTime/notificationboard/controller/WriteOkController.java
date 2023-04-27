@@ -24,7 +24,8 @@ public class WriteOkController implements Action {
 		
 		String notbTitle = req.getParameter("notbTitle");
 		String notbContent = req.getParameter("notbContent");
-		
+		System.out.println(notbTitle);
+		System.out.println(notbContent);
 		
 		notificationBoardVO.setNotbTitle(notbTitle);
 		notificationBoardVO.setNotbContent(notbContent);

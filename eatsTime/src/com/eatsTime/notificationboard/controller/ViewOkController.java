@@ -23,6 +23,7 @@ public class ViewOkController implements Action {
 		NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
 		Long notbId = Long.valueOf(req.getParameter("notbId"));
 		Result result = new Result();
+		
 		NotificationBoardDTO notificationboard = notificationBoardDAO.viewBoard(notbId);
 		req.setAttribute("notbTitle", notificationboard.getNotbTitle());
 		req.setAttribute("notbId", notificationboard.getNotbId());
