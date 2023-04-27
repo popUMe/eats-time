@@ -112,12 +112,12 @@ $(document).ready(function() {
                            <div class="e1c07x4813 css-1kth2sq e3um3060">
                               <span
                                  style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
-<<<<<<< HEAD
+
                                  <img alt="상품 이미지" src="${contextPath}/static/image/productImage/${product.fileName}" decoding="async" data-nimg="fill"
-=======
+
 
                                  <img alt="상품 이미지" src="${contextPath}/upload/${product.fileName}" decoding="async" data-nimg="fill"
->>>>>>> master
+
                                  class="css-0" sizes="100vw">
                               </span>
                               <div>

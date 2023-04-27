@@ -1,46 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="main">
-    <select id="selectAll" resultType="productDTO">
-   select s.sale_content, b.* from tbl_sale s join
-      (select
-      file_name,
-      a.*
-      from
-      tbl_file f
-      join (
-      select
-      p.*,
-      member_identification,
-      member_name
-      from
-      tbl_member m
-      join tbl_product p on
-      m.member_id = p.member_id) a
-      on
-      f.file_id = a.file_id) b on s.product_id = b.product_id
-      <where>
-         <choose>
-            <when test="category == 'pickUp'.toString()">
-               product_category = '0'
-            </when>
-            <when test="category == 'send'.toString()">
-               product_category = '1'
-            </when>
-         </choose>
-      </where>
 
-      <choose>
-         <when test="sort=='recent'.toString()">
-            order by product_id desc
-         </when>
-         <when test="sort=='lowPrice'.toString()">
-            order by product_price asc
-         </when>
-         <when test="sort=='highPrice'.toString()">
-            order by product_price desc
-         </when>
-      </choose>
-      limit #{offset}, #{rowCount}
-   </select>
+	<insert id="insert">
+		insert into tbl_product
+		(member_id, product_category,
+		product_name, product_price, product_date,
+		product_expiration_date,product_stock,product_address,product_addres_detail)
+		values(#{memberId}, #{productCategory}, #{productName},
+		#{productPrice}, #{productDate}, #{productExpirationDate},
+		#{productStock}, #{productAddress}, #{productAddresDetail})
+	</insert>
+
+	<select id="selectAll" resultType="productDTO">
+		select s.sale_content, b.* from tbl_sale s join
+		(selectfile_name,a.*from tbl_file f 
+		join ( select p.*, member_identification, member_name from tbl_member m
+		join tbl_product p on m.member_id = p.member_id) a on f.file_id = a.file_id) b on s.product_id = b.product_id
+		<where>
+			<choose>
+				<when test="category == 'pickUp'.toString()">
+					product_category = '0'
+				</when>
+				<when test="category == 'send'.toString()">
+					product_category = '1'
+				</when>
+			</choose>
+		</where>
+
+		<choose>
+			<when test="sort=='recent'.toString()">
+				order by product_id desc
+			</when>
+			<when test="sort=='lowPrice'.toString()">
+				order by product_price asc
+			</when>
+			<when test="sort=='highPrice'.toString()">
+				order by product_price desc
+			</when>
+		</choose>
+		limit #{offset}, #{rowCount}
+	</select>
+
+	<insert id="insertmember">
+		insert into tbl_member
+		(member_identification, member_pw, member_name, member_email, member_phonenumber, member_address, member_addressdetail, member_gender, member_birthday,
+		member_grade, member_joineddate, member_status)
+		values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail},#{memberPhoneNumber},#{memberAddress},#{memberAddressDetail},#{memberGender},#{memberBirthday})
+	</insert>
+
+	<select id="selectAll" parameterType="memberVO" resultType="memberVO">
+		select
+		member_identification,
+		member_pw,
+		member_name,
+		member_email,
+		member_phonenumber,
+		member_gender,
+		member_birthday
+		from tbl_member
+		where member_id = 1
+	</select>
+
+	<insert id="insertsale">
+		insert into tbl_sale
+		(member_id, product_id, sale_title, sale_content, sale_date)
+		values(#{memberId}, #{productId}, '#{saleTitle}', '#{saleContent}', #{saleDate});
+	</insert>
+		
+
+	<sql id="search">
+		<trim prefixOverrides="or">
+			<foreach item="type" collection="types">
+				<trim prefix="or">
+					<choose>
+						<when test="type == 'title'.toString()">
+							product_title like concat('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'content'.toString()">
+							prduct_content like concat('%', #{keyword}, '%')
+						</when>
+						<when test="type == 'writer'.toString()">
+							member_name like concat('%', #{keyword}, '%')
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+
+
+
+
+
 </mapper>

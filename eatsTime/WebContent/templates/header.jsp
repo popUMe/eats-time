@@ -71,11 +71,20 @@
 				<!-- 검색창 부분 -->
 				<div class="css-pqw0uk e1493ofl4">
 					<div class="css-w444a2 e1493ofl1">
+					<form action="${pageContext.request.contextPath}/serchOk.main" name="search-form">
+						<select name="type">
+			        		<option value="title&content&writer" ${type == null ? 'selected' : ''}>전체</option>
+			        		<option value="title" ${type == 'title' ? 'selected' : ''}>제목</option>
+			        		<option value="content" ${type == 'content' ? 'selected' : ''}>내용</option>
+			        		<option value="writer" ${type == 'writer' ? 'selected' : ''}>작성자</option>
+			        		<option value="content&writer" ${type == 'content&writer' ? 'selected' : ''}>내용 또는 작성자</option>
+			        	</select>
 						<input id="gnb_search" placeholder="검색어를 입력해주세요" required=""
 							class="css-11ntk83 e1493ofl3" value=""
 							onkeypress="if( event.keyCode == 13 ){search();}">
 						<button id="submit" aria-label="submit"
 							class="css-ywxmlw e1493ofl0" onclick="search();"></button>
+						</form>
 					</div>
 				</div>
 				<!-- 헤더 오른쪽 장바구니 등 부분 -->

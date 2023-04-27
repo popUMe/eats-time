@@ -1165,6 +1165,10 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>let contextPath = "${pageContext.request.contextPath}"</script>
+<script>
+   let contextPath = "${pageContext.request.contextPath}"
+   let products = JSON.parse(`${product}`);
+</script>
 <script src="${pageContext.request.contextPath}/static/js/index.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/product.js"></script>
 </html>
