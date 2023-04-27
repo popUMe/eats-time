@@ -5,6 +5,7 @@
  * 공지사항 
  */
 
+<<<<<<< HEAD
 showList();
 
 
@@ -25,6 +26,8 @@ function showList(){
 		}
 		$table.append(text);
 	}
+=======
+>>>>>>> b5a2917
 $(document).ready(function() {
 			$("#chkAll").click(function() {
 				if($("#chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
@@ -40,6 +43,7 @@ $(document).ready(function() {
 			});
 		});
 		
+<<<<<<< HEAD
 		$(function() {
 			  var paging = $('.paging');
 			  var btns = paging.find('a');
@@ -69,5 +73,8 @@ $(document).ready(function() {
 			  });
 			});
 
+=======
+
+>>>>>>> b5a2917
 
 		
