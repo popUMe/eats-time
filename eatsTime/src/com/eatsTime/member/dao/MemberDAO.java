@@ -8,25 +8,30 @@ import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
 
 public class MemberDAO {
-	public SqlSession sqlSession;
+   public SqlSession sqlSession;
 
-	public MemberDAO() {
+   public MemberDAO() {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
-	}
-	
-	// ¸¶ÀÌÆäÀÌÁö ºÒ·¯¿À±â
-	public List<MemberVO> selectAll(MemberVO memberVO) {
-		return sqlSession.selectList("member.selectAll", memberVO);
-	}
-	
-	// È¸¿øÁ¤º¸¼öÁ¤
-	public void update(MemberVO memberVO) {
-		sqlSession.update("member.update", memberVO);
-	}
-	
-	// È¸¿øÅ»Åğ
-	public void delete(String memberId) {
-		sqlSession.delete("member.delete", memberId);
-	}
+   }
+   
+   //             Ò·     
+   public List<MemberVO> selectAll(MemberVO memberVO) {
+      return sqlSession.selectList("member.selectAll", memberVO);
+   }
+   
+   // È¸          
+   public void update(MemberVO memberVO) {
+      sqlSession.update("member.update", memberVO);
+   }
+   
+   // È¸  Å»  
+   public void delete(String memberId) {
+      sqlSession.delete("member.delete", memberId);
+   }
+   
+   // íŠ¹ì • íšŒì›ì •ë³´ ì¡°íšŒ
+   public MemberVO selectMember(Long memberId) {
+      return sqlSession.selectOne("member.selectMember", memberId);
+   }
 
 }
