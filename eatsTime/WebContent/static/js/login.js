@@ -1,29 +1,23 @@
 const form = document.querySelector('form');
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
+const $id = $("input#userid");
+const $password = $("input#password");
 
-  const userid = form.userid.value;
-  const password = form.password.value;
+function send(){
+    if(!$id.val()){
+        showWarnModal("아이디를 입력해주세요!");
+        $id.next().fadeIn(500);
+        return;
+    }
+    if(!$password.val()){
+        showWarnModal("비밀번호를 입력해주세요!");
+        $password.next().fadeIn(500);
+        return;
+    }
 
-  const authenticated = authentication(userid, password);
-
-  if (authenticated) {
-    window.location.href = "../index.jsp";
-  } else {
-    $('.banner-online').fadeIn();
-    $('#modal').fadeIn();
-    $('html').css('overflow-y', 'hidden');
-  }
-});
-
-function authentication(userid, password) {
-  if (userid === 'test' && password === '0000') {
-    return true;
-  } else {
-    return false;
-  }
+    document.login.submit();
 }
+
 
 $('.close-button').click(function() {
   $('.banner-online').fadeOut();

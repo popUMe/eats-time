@@ -27,7 +27,7 @@ public Result execute(HttpServletRequest req, HttpServletResponse resp) throws I
 	}else {
 //		로그인 성공
 		session.setAttribute("memberId", memberId);
-		result.setPath(req.getContextPath() + "/list.board");
+		result.setPath(req.getContextPath() + "/templates/index.jsp");
 	}
 	
 	return result;

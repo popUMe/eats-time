@@ -299,8 +299,8 @@ const divnone = document.querySelector("#divnone");
 
 function validateBirthday() {
   var year = document.getElementsByName("memberBirthday")[0].value;
-  var month = document.getElementsByName("memberBirthday")[0].value;
-  var day = document.getElementsByName("memberBirthday")[0].value;
+  var month = document.getElementsByName("memberBirthday")[1].value;
+  var day = document.getElementsByName("memberBirthday")[2].value;
 
   // 생년월일이 입력되지 않았을 경우
   if (year == "" || month == "" || day == "") {

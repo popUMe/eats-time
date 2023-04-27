@@ -102,9 +102,9 @@
 					</div>
 					<div class="css-82a6rk ">
 						<div class="css-jmalg">
-							<div class="css-176lya2">
+							<div class="css-176lya3">
 								<input data-testid="input-box" id="email" name="memberEmail"
-									placeholder="예: marketkurly@kurly.com" type="text" required=""
+									placeholder="예: marketkurly@kurly.com" type="email" required=""
 									class="css-u52dqk" value="">
 							</div>
 						</div>
@@ -210,24 +210,8 @@
 							<div class="css-1dkwuq4 ">
 								<div height="40" class="css-xsmgyi ">
 									<input data-testid="input-box" name="memberBirthday"
-										placeholder="YYYY" type="text" height="40" class="css-151eme7"
-										value="1995">
-								</div>
-							</div>
-							<span class="css-5lnvt6 "></span>
-							<div class="css-1dkwuq4 ">
-								<div height="40" class="css-xsmgyi ">
-									<input data-testid="input-box" name="memberBirthday"
-										placeholder="MM" type="text" height="40" class="css-151eme7 "
-										value="05">
-								</div>
-							</div>
-							<span class="css-5lnvt6 "></span>
-							<div class="css-1dkwuq4 ">
-								<div height="40" class="css-xsmgyi ">
-									<input data-testid="input-box" name="memberBirthday" placeholder="DD"
-										type="text" height="40" class="css-151eme7 e1uzxhvi2"
-										value="15">
+										placeholder="YYYYMMDD" type="text" height="40" class="css-151eme7"
+										value="0000-00-00">
 								</div>
 							</div>
 						</div>
