@@ -4,6 +4,7 @@
 
 /*상세*/
 
+let resultNum = 0;
 
 
       //상품 상세 페이지 : 수량 감소 btn
@@ -25,6 +26,8 @@
       }
 
       $('#numberUpDown').text(num);
+
+      resultNum = num;
    });
    //상품 상세 페이지 : 수량 증가 btn
    $('#increaseQuantity').click(function() {
@@ -44,4 +47,18 @@
       }
 
       $('#numberUpDown').text(num);
+
+      resultNum = num;
+
    });
+
+
+
+$(".cart-button").on("click", function(){
+   if(!`${product.memberId}`){
+      showWarnModal("로그인 후 사용해주세요")
+   }else {
+   location.href = `${contextPath}/purchaseOk.purchase?productId=${product.productId}&memberId=1&count=${$(".count").text()}`;
+   }
+   
+})

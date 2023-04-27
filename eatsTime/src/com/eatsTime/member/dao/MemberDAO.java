@@ -9,12 +9,32 @@ import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
 
 public class MemberDAO {
-	public SqlSession sqlSession;
+   public SqlSession sqlSession;
 
-	public MemberDAO() {
+   public MemberDAO() {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
-	}
-	
+   }
+   
+   //             ҷ     
+   public List<MemberVO> selectAll(MemberVO memberVO) {
+      return sqlSession.selectList("member.selectAll", memberVO);
+   }
+   
+   // ȸ          
+   public void update(MemberVO memberVO) {
+      sqlSession.update("member.update", memberVO);
+   }
+   
+   // ȸ  Ż  
+   public void delete(String memberId) {
+      sqlSession.delete("member.delete", memberId);
+   }
+   
+   // 특정 회원정보 조회
+   public MemberVO selectMember(Long memberId) {
+      return sqlSession.selectOne("member.selectMember", memberId);
+   }
+   
 	//	회원가입
 	public void insert(MemberVO memberVO) {
 		sqlSession.insert("member.insert", memberVO);
@@ -32,21 +52,6 @@ public class MemberDAO {
 		loginMap.put("memberPw", memberPw);
 		
 		return sqlSession.selectOne("member.login", loginMap);
-	}
-	
-	// ���������� �ҷ�����
-	public List<MemberVO> selectAll(MemberVO memberVO) {
-		return sqlSession.selectList("member.selectAll", memberVO);
-	}
-	
-	// ȸ����������
-	public void update(MemberVO memberVO) {
-		sqlSession.update("member.update", memberVO);
-	}
-	
-	// ȸ��Ż��
-	public void delete(String memberId) {
-		sqlSession.delete("member.delete", memberId);
 	}
 
 }
