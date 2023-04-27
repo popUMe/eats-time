@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +71,7 @@
 							<div class="css-3o6rrk e1cfowvj2">${notificationboards.notbId}</div>
 							<div class="css-fzefrb e1cfowvj2">${notificationboards.notbTitle}</div>
 							<div class="css-3d2kks e1cfowvj2">${notificationboards.memberName}</div>
-							<div class="css-b1hszl e1cfowvj2">${notificationboards.notbDate}</div>
+							<div class="css-b1hszl e1cfowvj2"><c:out value="${fn:split(notificationboards.notbDate,' ')[0]}"/></div>
 						</div>
 					</a>
 				</li>
@@ -96,10 +97,6 @@
 	</div>
 	<jsp:include page="../footer.jsp" />
 </body>
-<script>
-let notificationboards = JSON.parse(`${notificationboards}`);
-console.log(notificationboards);
-</script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/noticeList.js"></script>
 </html>

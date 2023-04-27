@@ -24,10 +24,7 @@
 	<div class="content">
 		<h1>공지사항 관리</h1>
 		<div id=table-container>
-<<<<<<< HEAD
-=======
 		<form action="deleteOk.notificationboard" method="post">
->>>>>>> b5a2917
 		<div class="btn">
 		<button type="button" id="add-btn" onclick="location.href='adminNoticeWrite.notificationboard'">작성</button>
   		<button id="delete-btn" type="submit">삭제</button>
