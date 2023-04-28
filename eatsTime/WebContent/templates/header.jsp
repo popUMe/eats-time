@@ -106,13 +106,13 @@
 				<ul class="css-1887xqd e17w4cfr5">
 					<li class="css-59mmhh e17w4cfr4">
 					<span class="css-1xyu7j9 e17w4cfr2">
-					<a href="${pageContext.request.contextPath}/productListAll.main">배송&픽업</a></span></li>
+					<a href="${pageContext.request.contextPath}/productListOk.product">배송&픽업</a></span></li>
 					<li class="css-59mmhh e17w4cfr4">
 					<span class="css-1xyu7j9 e17w4cfr2">
-					<a href="${pageContext.request.contextPath}/productListDelivery.main">배송</a></span></li>
+					<a href="${pageContext.request.contextPath}/productListDeliveryOk.product">배송</a></span></li>
 					<li class="css-59mmhh e17w4cfr4">
 					<span class="css-1xyu7j9 e17w4cfr2">
-					<a href="${pageContext.request.contextPath}/productListPickup.main">픽업</a></span></li>
+					<a href="${pageContext.request.contextPath}/productListPickUpOk.product">픽업</a></span></li>
 					<li class="css-59mmhh e17w4cfr4">
 					<span class="css-1xyu7j9 e17w4cfr2">
 					<a href="${pageContext.request.contextPath}/serviceInfo.main">이츠타임</a></span></li>
