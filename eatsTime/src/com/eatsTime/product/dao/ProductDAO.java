@@ -17,38 +17,36 @@ public class ProductDAO {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
    }
    
-//   상품 전체 조회
+//   ��ǰ ��ü ��ȸ
    public List<ProductDTO> selectAll(HashMap<String, Object> pagable){
       return sqlSession.selectList("product.selectAll", pagable);
    }
-   
-   // 상품 전체 개수
    
    public int getTotal(HashMap<String, Object> pagable) {
       return sqlSession.selectOne("product.getTotal", pagable);
    }
    
-   // 배송제품 총개수
+   // �����ǰ �Ѱ���
    public int getDeliveryTotal() {
       return sqlSession.selectOne("product.getDeliveryTotal");
    }
    
-   //배송 제품 페이징 조회
+   //��� ��ǰ ����¡ ��ȸ
    public List<ProductDTO> selectDeliveryAll(HashMap<String, Object> pagable){
       return sqlSession.selectList("product.selectDeliveryAll", pagable);
    }
    
-   // 픽업제품 총개수
+   // �Ⱦ���ǰ �Ѱ���
    public int getPickUpTotal() {
       return sqlSession.selectOne("product.getPickUpTotal");
    }
    
-   //픽업 제품 페이징 조회
+   //�Ⱦ� ��ǰ ����¡ ��ȸ
    public List<ProductDTO> selectPickUpAll(HashMap<String, Object> pagable){
       return sqlSession.selectList("product.selectPickUpAll", pagable);
    }
    
-   // 상품 상세보기
+   // ��ǰ �󼼺���
    public ProductDTO selectProductDetail(String productId){
       return sqlSession.selectOne("product.selectProductDetail", productId);
    }

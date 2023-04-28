@@ -39,4 +39,9 @@ public class ModifyOkController implements Action {
 		result.setPath(req.getContextPath() + "/index.member?memberIdentification=&memberPw");
 		return result;
 	}
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> master

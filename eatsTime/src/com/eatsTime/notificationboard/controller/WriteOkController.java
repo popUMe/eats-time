@@ -19,19 +19,21 @@ public class WriteOkController implements Action {
 		NotificationBoardDAO notificationBoardDAO = new NotificationBoardDAO();
 		NotificationBoardVO notificationBoardVO = new NotificationBoardVO();
 		Result result = new Result();
+		
+//		HttpSession session = req.getSession();
+		
 		String notbTitle = req.getParameter("notbTitle");
 		String notbContent = req.getParameter("notbContent");
-		System.out.println(req.getParameter("notbTitle"));
 		System.out.println(notbTitle);
 		System.out.println(notbContent);
 		
 		notificationBoardVO.setNotbTitle(notbTitle);
 		notificationBoardVO.setNotbContent(notbContent);
+//		notificationBoardVO.setMemberId((Long)session.getAttribute("memberId"));
 		
-		notificationBoardDAO.insert(notificationBoardVO);
-		
-		result.setRedirect(true);
+		notificationBoardDAO.insert(notificationBoardVO);		
 		result.setPath(req.getContextPath() + "/listOk.notificationboard");
+		result.setRedirect(true);
 		
 		return result;
 	}

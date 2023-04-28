@@ -4,9 +4,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	
 }
-
 
 a{
 	text-decoration: none;
@@ -15,12 +13,17 @@ a{
 
 #logo {
 	width: 150px;
-	height:100px;
-  position: relative;
-  top: 10px;
-  left: 30px;
-  background-image: url(../../image/logo.png);
-  background-repeat: no-repeat;
+	height: 63px;
+	position: relative;
+	top: 10px;
+	margin-left: 30px;
+	margin-bottom : 25px;
+}
+
+#logo .logo {
+	display : inline-block;
+	width : 100%;
+	height : 100%;
 }
 
 
@@ -42,7 +45,7 @@ a{
 	
 }
 
-#sidebar a {
+#sidebar .nav_list {
 	margin-left: 20px;
 	padding: 10px;
 	font-size: 16px;
@@ -72,6 +75,7 @@ a{
 	right: 0;
 	background: #fff;
     color: #000;
+    cursor : pointer;
     
   }
   
@@ -80,6 +84,7 @@ a{
  	margin-right: 100px;
  	background-color:#fff;
  	color: #000;
+    cursor : pointer;
  }
 
 #add-btn, #delete-btn {
@@ -101,23 +106,30 @@ a{
 
 
 .paging {
-			margin-top: 20px;
-			text-align: center;
-			padding-right: 200px;
-		}
+	margin-top: 20px;
+	text-align: center;
+	padding-right: 200px;
+}
+
 .paging a {
-			display: inline-block;
-			margin-right: 3px;
-			padding: 5px 10px;
-			border: 1px solid #ccc;
-			border-radius: 3px;
-			text-decoration: none;
-			color: #333;
-		}
+	display: inline-block;
+	margin-right: 3px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #333;
+}
+		
+.paging a:hover,
 .paging .active {
 	background-color: #333;
     color: #fff;
 		}
+
+.paging a img {
+	 vertical-align: middle;
+}
 
 h1 {
 	font-size: 32px;
