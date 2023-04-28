@@ -321,7 +321,7 @@
 						</div>
 						<div class="css-1w0ksfz e744wfw2"></div>
 					</div>
-					
+
 					<!-- 아이디 테스트용 인풋 박스 -->
 					<input type="hidden" name="memberId" value="1">
 
@@ -354,41 +354,38 @@
 	let obj = `${obj}`;
 	member = JSON.parse(obj);
 	/* 로딩 끝나고 나서 마이페이지 불러오기 */
-<<<<<<< HEAD
-	$(document).ready(
-			function() {
 
-				/* 아이디 */
-				$('#userId').val(member.memberIdentification);
+	$(document).ready(function() {
 
-				/* 생일 */
-				let birth = member.memberBirthday;
-				let birthYYYY = new Date(birth).getFullYear();
-				let birthMM = ('0' + (new Date(birth).getMonth() + 1))
-						.slice(-2);
-				let birthDD = ('0' + new Date(birth).getDate()).slice(-2);
-				$('#birthYear').val(birthYYYY);
-				$('#birthMonth').val(birthMM);
-				$('#birthDay').val(birthDD);
+			/* 아이디 */
+			$('#userId').val(member.memberIdentification);
 
-				/* 이름 */
-				$('#name').val(member.memberName);
+			/* 생일 */
+			let birth = member.memberBirthday;
+			let birthYYYY = new Date(birth).getFullYear();
+			let birthMM = ('0' + (new Date(birth).getMonth() + 1))
+					.slice(-2);
+			let birthDD = ('0' + new Date(birth).getDate()).slice(-2);
+			$('#birthYear').val(birthYYYY);
+			$('#birthMonth').val(birthMM);
+			$('#birthDay').val(birthDD);
 
-				/* 이메일 */
-				$('#email').val(member.memberEmail);
+			/* 이름 */
+			$('#name').val(member.memberName);
 
-				/* 휴대폰 */
-				$('#mobileNumber').val(member.memberPhoneNumber);
-				/* 성별 */
-				$(
-						'input[type="radio"][name="memberGender"][value="'
-								+ member.memberGender + '"]').trigger('click');
+			/* 이메일 */
+			$('#email').val(member.memberEmail);
 
-				sumBirth();
-			});
-	/* 		document.modifyForm.submit();
-	 }
-	 */
+			/* 휴대폰 */
+			$('#mobileNumber').val(member.memberPhoneNumber);
+			/* 성별 */
+			$(
+					'input[type="radio"][name="memberGender"][value="'
+							+ member.memberGender + '"]').trigger('click');
+
+			sumBirth();
+		});
+
 	function sumBirth() {
 		/* 생일 합치기 */
 		let sumBirthDay = $("#birthYear").val() + $("#birthMonth").val()
@@ -396,49 +393,11 @@
 		$("input[name='memberBirthday']").val(sumBirthDay);
 	}
 
-=======
-	$(document).ready(function() {
-		/* 아이디 */
-		$('#userId').val(member.memberIdentification);
-		/* 생일 */
-		let birth = member.memberBirthday;
-		let birthYYYY = new Date(birth).getFullYear();
-		let birthMM = ('0' + (new Date(birth).getMonth() + 1)).slice(-2);
-		let birthDD = ('0' + new Date(birth).getDate()).slice(-2);
-		$('#birthYear').val(birthYYYY);
-		$('#birthMonth').val(birthMM);
-		$('#birthDay').val(birthDD);
-		/* 이름 */
-		$("#name").val(member.memberName);
-		/* 이메일 */
-		$("#memberEmail").val(member.memberEmail);
-		/* 휴대폰 */
-		$("#memberPhoneNumber").val(member.memberPhoneNumber);
-		/* 성별 */
-		$("#memberGender").val(member.membermemberGender);
-	});
-	
-	/* 생일 합치기 */
-	let sumBirthDay = $("#birthYear").val() + $("#birthMonth").val()
-			+ $("#birthDay").val();
-	$("input[name='memberBirthday']").val(sumBirthDay);
-	$memberBirthday = $("input[name='memberBirthday']").val();
-	console.log($("input[name='memberBirthday']").val());
-	/* 		document.modifyForm.submit();
-	 }
-	 */
->>>>>>> master
 	/* 회원수정 ajax */
 	$(function() {
 		$("#modify").on("click", getData);
 	});
-<<<<<<< HEAD
 
-=======
-	//	$('#button').on('click', function(){
-	//		console.log('1');
-	//	});
->>>>>>> master
 	function getData() {
 		$.ajax({
 			type : "post",

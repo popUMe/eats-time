@@ -43,7 +43,7 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 		member_phonenumber=#{memberPhoneNumber},
 		member_gender=#{memberGender}, member_birthday=#{memberBirthday}
 		where
-		member_Id = #{memberId}
+		member_Id = 1
 	</update>
 
 	<update id="delete" parameterType="_int">
@@ -52,8 +52,6 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 		member_status= 0
 		where member_id = 1
 	</update>
-<<<<<<< HEAD
-=======
 	
 	<!-- 0426 추가 -->
 	<!-- 관리자페이지 - 회원 전체 조회 -->
@@ -75,8 +73,6 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 		set member_status = #{status}
 		where member_id = #{memberId}
 	</update>
-
->>>>>>> master
    
    <!-- 원하는 회원 정보 조회 -->
       <select id="selectMember" resultType="memberVO">

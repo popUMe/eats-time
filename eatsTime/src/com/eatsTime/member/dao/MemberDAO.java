@@ -15,7 +15,6 @@ public class MemberDAO {
 
    public MemberDAO() {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
-<<<<<<< HEAD
 	}
 	
 	// 마이페이지 불러오기
@@ -33,11 +32,6 @@ public class MemberDAO {
 		sqlSession.delete("member.delete", memberId);
 	}
 
-=======
-   }
-   
-   
->>>>>>> master
    // 특정 회원정보 조회
    public MemberVO selectMember(Long memberId) {
       return sqlSession.selectOne("member.selectMember", memberId);
@@ -48,21 +42,7 @@ public class MemberDAO {
 		sqlSession.insert("member.insert", memberVO);
 	}
 	
-	// ���������� �ҷ�����
-	public List<MemberVO> selectAll(MemberVO memberVO) {
-		return sqlSession.selectList("member.selectAll", memberVO);
-	}
 	
-	// ȸ����������
-	public void update(MemberVO memberVO) {
-		sqlSession.update("member.update", memberVO);
-	}
-	
-	// ȸ��Ż��
-	public void delete(String memberId) {
-		sqlSession.delete("member.delete", memberId);
-	}
-
 //	아이디 중복검사
 	public String selectIdentification(String memberIdentification) {
 		return sqlSession.selectOne("memberIdentification", memberIdentification);

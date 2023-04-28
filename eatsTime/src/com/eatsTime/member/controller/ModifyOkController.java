@@ -6,8 +6,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONObject;
-
 import com.eatsTime.Action;
 import com.eatsTime.Result;
 import com.eatsTime.member.dao.MemberDAO;
@@ -39,9 +37,5 @@ public class ModifyOkController implements Action {
 		result.setPath(req.getContextPath() + "/index.member?memberIdentification=&memberPw");
 		return result;
 	}
-<<<<<<< HEAD
 }
-=======
 
-}
->>>>>>> master
