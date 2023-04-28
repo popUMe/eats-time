@@ -6,8 +6,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONObject;
-
 import com.eatsTime.Action;
 import com.eatsTime.Result;
 import com.eatsTime.member.dao.MemberDAO;
@@ -21,6 +19,11 @@ public class ModifyOkController implements Action {
 		MemberVO memberVO = new MemberVO();
 		Result result = new Result();
 
+//		Long boardId = Long.valueOf(req.getParameter("memberId"));
+		
+		memberVO.setMemberId(1L);
+//		memberVO.setMemberId(boardId);
+		
 		memberVO.setMemberIdentification(req.getParameter("memberIdentification"));
 		memberVO.setMemberPw(req.getParameter("memberPw"));
 		memberVO.setMemberName(req.getParameter("memberName"));
@@ -31,8 +34,8 @@ public class ModifyOkController implements Action {
 		memberDAO.update(memberVO);
 		
 		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/index.member");
+		result.setPath(req.getContextPath() + "/index.member?memberIdentification=&memberPw");
 		return result;
 	}
-
 }
+

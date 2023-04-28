@@ -162,7 +162,7 @@
 									<input data-testid="input-box" id="newPassword" name="memberPw"
 										placeholder="새 비밀번호를 입력해 주세요" type="password"
 										autocomplete="off" class="css-u52dqk e1uzxhvi2" value=""
-										aria-autocomplete="list" data-gtm-form-interact-field-id="2">
+										aria-autocomplete="list">
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -182,8 +182,7 @@
 									<input data-testid="input-box" id="newPasswordConfirm"
 										name="newPasswordConfirm" placeholder="새 비밀번호를 다시 입력해 주세요"
 										type="password" autocomplete="off"
-										class="css-u52dqk e1uzxhvi2" value=""
-										data-gtm-form-interact-field-id="3">
+										class="css-u52dqk e1uzxhvi2" value="">
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -201,8 +200,7 @@
 								<div class="css-176lya2">
 									<input data-testid="input-box" id="name" name="memberName"
 										placeholder="이름을 입력해 주세요" type="text"
-										class="css-u52dqk e1uzxhvi2" value=""
-										data-gtm-form-interact-field-id="4">
+										class="css-u52dqk e1uzxhvi2" value="">
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -220,8 +218,7 @@
 								<div class="css-176lya2 e1uzxhvi3">
 									<input data-testid="input-box" id="email" name="memberEmail"
 										placeholder="이메일을 입력해 주세요" type="text"
-										class="css-u52dqk e1uzxhvi2" value=""
-										data-gtm-form-interact-field-id="5">
+										class="css-u52dqk e1uzxhvi2" value="">
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -229,7 +226,7 @@
 							</div>
 						</div>
 						<div class="css-1w0ksfz e744wfw2">
-							<button class="css-ufulao e4nu7ef3" type="button">
+							<button class="css-ufulao e4nu7ef3" type="button" id="checkEmail">
 								<span class="css-ymwvow e4nu7ef1">중복확인</span>
 							</button>
 						</div>
@@ -265,13 +262,13 @@
 
 								<label class="css-z9g6s0" for="gender-man"> <input
 									id="gender-man" name="memberGender" type="radio"
-									class="css-1pes2r6" value="MALE"> <span
+									class="css-1pes2r6" value="MALE" checked> <span
 									class="css-198i9ca" id="male">
 										<div class="css-1dahn5m" id=divmale></div>
 								</span> <span class="css-mgd87h">남자</span>
 								</label> <label class="css-z9g6s0" for="gender-woman"> <input
 									id="gender-woman" name="memberGender" type="radio"
-									class="css-1pes2r6" value="FEMALE" checked=""> <span
+									class="css-1pes2r6" value="FEMALE"> <span
 									class="css-5xw1m2" id="female">
 										<div class="css-1vic0rk" id="divfemale"></div>
 								</span> <span class="css-mgd87h">여자</span>
@@ -300,7 +297,7 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthYear" id="birthYear"
 											placeholder="YYYY" type="text" height="40"
-											class="css-151eme7 e1uzxhvi2" value="1999">
+											class="css-151eme7 e1uzxhvi2" value="">
 									</div>
 								</div>
 								<span class="css-5lnvt6 e9ted1s0"></span>
@@ -308,7 +305,7 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthMonth"
 											id="birthMonth" placeholder="MM" type="text" height="40"
-											class="css-151eme7 e1uzxhvi2" value="04">
+											class="css-151eme7 e1uzxhvi2" value="">
 									</div>
 								</div>
 								<span class="css-5lnvt6 e9ted1s0"></span>
@@ -316,7 +313,7 @@
 									<div height="40" class="css-xsmgyi e1uzxhvi3">
 										<input data-testid="input-box" name="birthDay" id="birthDay"
 											placeholder="DD" type="text" height="40"
-											class="css-151eme7 e1uzxhvi2" value="06">
+											class="css-151eme7 e1uzxhvi2" value="">
 									</div>
 								</div>
 								<input type="hidden" name="memberBirthday">
@@ -332,7 +329,6 @@
 						<button class="css-ufulao e4nu7ef3" type="button"
 							onclick="location.href='delete.member'">
 							<span class="css-ymwvow e4nu7ef1">탈퇴하기</span>
-
 						</button>
 						<button class="css-1qirdbn e4nu7ef3" type="button" id="modify">
 							<span class="css-ymwvow e4nu7ef1">회원정보수정</span>
@@ -342,6 +338,7 @@
 			</div>
 		</div>
 	</div>
+
 	<jsp:include page="../footer.jsp" />
 
 </body>
@@ -357,43 +354,50 @@
 	let obj = `${obj}`;
 	member = JSON.parse(obj);
 	/* 로딩 끝나고 나서 마이페이지 불러오기 */
+
 	$(document).ready(function() {
-		/* 아이디 */
-		$('#userId').val(member.memberIdentification);
-		/* 생일 */
-		let birth = member.memberBirthday;
-		let birthYYYY = new Date(birth).getFullYear();
-		let birthMM = ('0' + (new Date(birth).getMonth() + 1)).slice(-2);
-		let birthDD = ('0' + new Date(birth).getDate()).slice(-2);
-		$('#birthYear').val(birthYYYY);
-		$('#birthMonth').val(birthMM);
-		$('#birthDay').val(birthDD);
-		/* 이름 */
-		$("#name").val(member.memberName);
-		/* 이메일 */
-		$("#memberEmail").val(member.memberEmail);
-		/* 휴대폰 */
-		$("#memberPhoneNumber").val(member.memberPhoneNumber);
-		/* 성별 */
-		$("#memberGender").val(member.membermemberGender);
-	});
-	
-	/* 생일 합치기 */
-	let sumBirthDay = $("#birthYear").val() + $("#birthMonth").val()
-			+ $("#birthDay").val();
-	$("input[name='memberBirthday']").val(sumBirthDay);
-	$memberBirthday = $("input[name='memberBirthday']").val();
-	console.log($("input[name='memberBirthday']").val());
-	/* 		document.modifyForm.submit();
-	 }
-	 */
+
+			/* 아이디 */
+			$('#userId').val(member.memberIdentification);
+
+			/* 생일 */
+			let birth = member.memberBirthday;
+			let birthYYYY = new Date(birth).getFullYear();
+			let birthMM = ('0' + (new Date(birth).getMonth() + 1))
+					.slice(-2);
+			let birthDD = ('0' + new Date(birth).getDate()).slice(-2);
+			$('#birthYear').val(birthYYYY);
+			$('#birthMonth').val(birthMM);
+			$('#birthDay').val(birthDD);
+
+			/* 이름 */
+			$('#name').val(member.memberName);
+
+			/* 이메일 */
+			$('#email').val(member.memberEmail);
+
+			/* 휴대폰 */
+			$('#mobileNumber').val(member.memberPhoneNumber);
+			/* 성별 */
+			$(
+					'input[type="radio"][name="memberGender"][value="'
+							+ member.memberGender + '"]').trigger('click');
+
+			sumBirth();
+		});
+
+	function sumBirth() {
+		/* 생일 합치기 */
+		let sumBirthDay = $("#birthYear").val() + $("#birthMonth").val()
+				+ $("#birthDay").val();
+		$("input[name='memberBirthday']").val(sumBirthDay);
+	}
+
 	/* 회원수정 ajax */
 	$(function() {
 		$("#modify").on("click", getData);
 	});
-	//	$('#button').on('click', function(){
-	//		console.log('1');
-	//	});
+
 	function getData() {
 		$.ajax({
 			type : "post",
@@ -405,9 +409,13 @@
 				memberName : $('#name').val(),
 				memberEmail : $('#email').val(),
 				memberPhoneNumber : $('#mobileNumber').val(),
-				memberGender : $("input[type='radio'][name='memberGender']")
+				memberGender : $(
+						"input[type='radio'][name='memberGender']:checked")
 						.val(),
-				memberBirthday : $memberBirthday
+				memberBirthday : $("input[name='memberBirthday']").val()
+			},
+			beforeSend : function(xhr) {
+				sumBirth();
 			},
 			//	 	data: {memberId: $(this).val()},
 			success : function() {

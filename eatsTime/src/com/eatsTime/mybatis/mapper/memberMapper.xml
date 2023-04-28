@@ -35,16 +35,16 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 		where member_id = 1
 	</select>
 
-   <update id="update" parameterType="memberVO">
-      update tbl_member
-      set
-      member_identification=#{memberIdentification}, member_pw=#{memberPw},
-      member_name=#{memberName}, member_email=#{memberEmail},
-      member_phonenumber=#{memberPhoneNumber},
-      member_gender=#{memberGender}, member_birthday=#{memberBirthday}
-      where
-      member_Id = 1
-   </update>
+	<update id="update" parameterType="memberVO">
+		update tbl_member
+		set
+		member_identification=#{memberIdentification}, member_pw=#{memberPw},
+		member_name=#{memberName}, member_email=#{memberEmail},
+		member_phonenumber=#{memberPhoneNumber},
+		member_gender=#{memberGender}, member_birthday=#{memberBirthday}
+		where
+		member_Id = 1
+	</update>
 
 	<update id="delete" parameterType="_int">
 		update tbl_member
@@ -73,7 +73,6 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 		set member_status = #{status}
 		where member_id = #{memberId}
 	</update>
-
    
    <!-- 원하는 회원 정보 조회 -->
       <select id="selectMember" resultType="memberVO">
