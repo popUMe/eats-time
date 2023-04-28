@@ -18,6 +18,8 @@
       <typeAlias type="com.eatsTime.product.domain.ProductDTO" alias="productDTO"/>
       <typeAlias type="com.eatsTime.purchase.domain.PurchaseVO" alias="purchaseVO"/>
       <typeAlias type="com.eatsTime.sale.domain.SaleVO" alias="saleVO"/>
+      <!-- 4월 26일 김인진 PurchaseListDTO 추가 -->
+      <typeAlias type="com.eatsTime.purchase.domain.PurchaseListDTO" alias="purchaseListDTO"/>
    </typeAliases>
 
    <environments default="mysql">

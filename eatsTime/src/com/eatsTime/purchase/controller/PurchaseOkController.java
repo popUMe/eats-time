@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,14 +28,14 @@ public class PurchaseOkController implements Action {
          ProductDAO productDAO = new ProductDAO();
          MemberDAO memberDAO = new MemberDAO();
          String productId = req.getParameter("productId");
-         Long memberId = Long.valueOf(req.getParameter("memberId"));
+         Long memberId = (Long)req.getSession().getAttribute("memberId");
          String count = req.getParameter("count");
          
          System.out.println(memberId);
          System.out.println(memberDAO.selectMember(memberId));
          
          JSONObject jsonProduct = new JSONObject(productDAO.selectPurchase(productId));
-         JSONObject jsonMember = new JSONObject(productDAO.selectPurchase(productId));
+         JSONObject jsonMember = new JSONObject(memberDAO.selectMember(memberId));
 
          
         req.setAttribute("productId", jsonProduct.toString());

@@ -1,5 +1,5 @@
 package com.eatsTime.member.domain;
-
+import java.sql.Timestamp;
 public class MemberVO {
    
    private Long memberId;
@@ -140,8 +140,26 @@ public class MemberVO {
       return result;
    }
 
-   @Override
-   public boolean equals(Object obj) {
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MemberVO other = (MemberVO) obj;
+		if (memberId == null) {
+			if (other.memberId != null)
+				return false;
+		} else if (!memberId.equals(other.memberId))
+			return false;
+		return true;
+	}
+	
+
+   public boolean equals1(Object obj) {
       if (this == obj)
          return true;
       if (obj == null)
@@ -157,4 +175,5 @@ public class MemberVO {
       return true;
    }
    
+
 }
