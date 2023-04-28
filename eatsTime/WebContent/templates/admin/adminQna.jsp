@@ -17,74 +17,75 @@
 </style>
 </head>
 <body>
+
 	<div id="sidebar">
-		<div id="logo"></div>
-		<a href="adminIndex.jsp">공지사항</a> <a href="adminMember.jsp">회원관리</a> <a
-			href="adminQna.jsp">문의내역</a>
+	 	<div id="logo">
+	 		<a class="logo" href="${pageContext.request.contextPath}/lisOk.notificationboard">
+	 			<img src="${pageContext.request.contextPath}/static/image/logo.png" alt="이츠타임 로고">
+	 		</a>
+	 	</div>
+		<a class="nav_list" href="${pageContext.request.contextPath}/lisOk.notificationboard">공지사항</a> 
+		<a class="nav_list" href="${pageContext.request.contextPath}/listOk.member">회원관리</a> 
+		<a class="nav_list" href="${pageContext.request.contextPath}/lisOk.Inquiryboard">문의내역</a>
 	</div>
-	<div id=:logo></div>
 
 	<div class="content">
 		<h1>문의 관리</h1>
-		<div id=table-container>
+		<div class="con-wrap">
+			<div id=table-container>
+		
 			<div class="btn">
 				<button id="add-btn">작성</button>
 				<button id="delete-btn">삭제</button>
 			</div>
-			<table>
-				<tr>
-					<th style="width: 30px"><input type="checkbox" id="chkAll"
-						name="chkAll" /></th>
-					<th>문의번호</th>
-					<th>제목</th>
-					<th>작성자</th>
-					<th>작성날짜</th>
-					<th>상태</th>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="chk"></td>
-					<td>5</td>
-					<td><a href="adminQnaView.jsp">2,500</a></td>
-					<td>$500</td>
-					<td>$500</td>
-					<td>답변 완료</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="chk"></td>
-					<td>4</td>
-					<td><a href="adminQnaView.jsp">2,500</a></td>
-					<td>110</td>
-					<td>$550</td>
-					<td>답변 대기</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="chk"></td>
-					<td>3</td>
-					<td><a href="adminQnaView.jsp">2,500</a></td>
-					<td>120</td>
-					<td>120</td>
-					<td>답변 대기</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="chk"></td>
-					<td>2</td>
-					<td><a href="adminQnaView.jsp">2,500</a></td>
-					<td>130</td>
-					<td>$650</td>
-					<td>답변 대기</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="chk"></td>
-					<td>1</td>
-					<td><a href="adminQnaView.jsp">2,500</a></td>
-					<td>140</td>
-					<td>$700</td>
-					<td>답변 대기</td>
-				</tr>
-			</table>
-			<div class="paging">
-				<a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a>
-				<a href="#">4</a> <a href="#">5</a>
+				<div class="table-wrap">
+					<table>
+						<tr>
+							<th style="width: 30px"><input type="checkbox" id="chkAll"
+								name="chkAll" /></th>
+							<th>문의번호</th>
+							<th>제목</th>
+							<th>작성자</th>
+							<th>작성날짜</th>
+							<th>상태</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="chk"></td>
+							<td>5</td>
+							<td><a href="adminQnaView.jsp">2,500</a></td>
+							<td>$500</td>
+							<td>$500</td>
+							<td>답변 완료</td>
+						</tr>
+						
+					</table>
+				</div>
+				
+				<!-- [S] 페이지 컨트롤러 -->
+				<div id="paging" class="paging">
+	               	<c:if test="${prev}">
+	                	<a href="${pageContext.request.contextPath}/listOk.member?page=${startPage - 1}" class="paging paging-move">
+	                		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC">
+	                	</a>
+	               	</c:if>
+	               	<c:forEach var="i" begin="${startPage}" end="${endPage}">
+	               		<c:choose>
+	               			<c:when test="${i eq page}">
+			                	<a href="javascript:void(0)" class="page-list active"><c:out value="${i}"/></a>
+	               			</c:when>
+	               			<c:otherwise>
+			                    <a href="${pageContext.request.contextPath}/listOk.member?page=${i}" class="page-list"><c:out value="${i}"/></a>
+	               			</c:otherwise>
+	               		</c:choose>
+	               	</c:forEach>
+	               	<c:if test="${next}">
+	                    <a href="${pageContext.request.contextPath}/listOk.member?page=${endPage + 1}" class="paging paging-move">
+	                    	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg==">
+	                    </a>
+	               	</c:if>
+	          	</div>
+	          	<!-- [E] 페이지 컨트롤러 -->
+			
 			</div>
 		</div>
 	</div>
