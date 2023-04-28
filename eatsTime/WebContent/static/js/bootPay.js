@@ -13,8 +13,7 @@
    $('.payButton').on(
          "click",
          function() {
-            
-            console.log($('#receiver-input1').val());
+	
             if ($('#deliveryAddress').is(':visible')) {
                if ($('#deliveryAddress').val() ==''
                      || $('#deliveryAddressDetail').val()=='') {
@@ -39,7 +38,7 @@
             }
 
             BootPay.request({
-   price: '1000', 
+   price: `${productId.productCategory}` == 'true' ? `${productId.productPrice*count+3000}` : `${productId.productPrice*count}`, 
    application_id: "644829ab922c3400216cdcc2",
    name: `${productId.productName}`, 
    pg: 'nicepay',
@@ -50,7 +49,7 @@
          item_name: `${productId.productName}`,
          qty: count,
          unique: '1234', 
-         price: 1000, 
+         price:  `${productId.productCategory}` == 'true' ? `${productId.productPrice*count+3000}` : `${productId.productPrice*count}`, 
       }
    ],
    user_info: {

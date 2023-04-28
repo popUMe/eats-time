@@ -13,7 +13,7 @@
 </head>
 <jsp:include page="../header.jsp" />
 <body>
-	<form>
+	<form action="${pageContext.request.contextPath}/joinOk.member" name="join" method="post">
 		<div class="css-pculus">
 			<div class="css-o5dw7d">회원가입</div>
 			<div class="css-mhmtvt">
@@ -28,7 +28,7 @@
 						<div class="css-82a6rk">
 							<div class="css-jmalg">
 								<div class="css-176lya2">
-									<input data-testid="input-box" id="memberId" name="memberId"
+									<input data-testid="input-box" id="memberId" name="memberIdentification"
 										placeholder="아이디를 입력해주세요" type="text" required=""
 										class="css-u52dqk" value="">
 								</div>
@@ -58,7 +58,7 @@
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="password" name="password"
+								<input data-testid="input-box" id="password" name="memberPw"
 									placeholder="비밀번호를 입력해주세요" type="password" autocomplete="off"
 									class="css-u52dqk" value="" aria-autocomplete="list">
 							</div>
@@ -88,7 +88,7 @@
 					<div class="css-82a6rk">
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="name" name="name"
+								<input data-testid="input-box" id="name" name="memberName"
 									placeholder="이름을 입력해 주세요" type="text" required=""
 									class="css-u52dqk" value="">
 							</div>
@@ -102,9 +102,9 @@
 					</div>
 					<div class="css-82a6rk ">
 						<div class="css-jmalg">
-							<div class="css-176lya2">
-								<input data-testid="input-box" id="email" name="email"
-									placeholder="예: marketkurly@kurly.com" type="text" required=""
+							<div class="css-176lya3">
+								<input data-testid="input-box" id="email" name="memberEmail"
+									placeholder="예: marketkurly@kurly.com" type="email" required=""
 									class="css-u52dqk" value="">
 							</div>
 						</div>
@@ -123,7 +123,7 @@
 						<div class="css-jmalg">
 							<div class="css-176lya2">
 								<input data-testid="input-box" id="mobileNumber"
-									name="mobileNumber" placeholder="숫자만 입력해주세요." type="tel"
+									name="memberPhoneNumber" placeholder="숫자만 입력해주세요." type="tel"
 									required="" class="css-u52dqk" value="">
 							</div>
 						</div>
@@ -138,7 +138,7 @@
 					<div class="css-82a6rk">
 						<div class="css-1yjqrpx ">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="numberAddress" name="address"
+								<input data-testid="input-box" id="numberAddress" name="memberAddress"
 									placeholder="주소를 검색해 주세요" type="text" readonly=""
 									class="css-u52dqk" value="">
 							</div>
@@ -146,7 +146,7 @@
 						<br>
 						<div class="css-jmalg">
 							<div class="css-176lya2">
-								<input data-testid="input-box" id="subAddress" name="subAddress"
+								<input data-testid="input-box" id="subAddress" name="memberAddressDetail"
 									placeholder="나머지 주소를 입력해주세요" type="text" class="css-u52dqk"
 									value="">
 							</div>
@@ -167,7 +167,7 @@
 							<div class="css-14wodj6">
 							
 								<label class="css-z9g6s0" for="gender-man">
-								<input id="gender-man" name="gender" type="radio" 
+								<input id="gender-man" name="memberGender" type="radio" 
 								class="css-1pes2r6" value="MALE">
 									<span class="css-198i9ca" id="male">
 									<div class="css-1dahn5m" id=divmale></div></span>
@@ -176,7 +176,7 @@
 								
 								
 								<label class="css-z9g6s0" for="gender-woman"> 
-								<input id="gender-woman" name="gender" type="radio"
+								<input id="gender-woman" name="memberGender" type="radio"
 								class="css-1pes2r6" value="FEMALE" checked="">
 
 									<span class="css-5xw1m2" id="female">
@@ -186,7 +186,7 @@
 								</label> 
 
 								<label class="css-z9g6s0" for="gender-none">
-								<input id="gender-none" name="gender" type="radio" class="css-1pes2r6" value="NONE">
+								<input id="gender-none" name="memberGender" type="radio" class="css-1pes2r6" value="NONE">
 									<span class="css-198i9ca" id="none">
 										<div class="css-1dahn5m" id="divnone"></div>
 									</span>
@@ -209,25 +209,9 @@
 						<div class="css-18n8lnw ">
 							<div class="css-1dkwuq4 ">
 								<div height="40" class="css-xsmgyi ">
-									<input data-testid="input-box" name="birthYear"
-										placeholder="YYYY" type="text" height="40" class="css-151eme7"
-										value="1995">
-								</div>
-							</div>
-							<span class="css-5lnvt6 "></span>
-							<div class="css-1dkwuq4 ">
-								<div height="40" class="css-xsmgyi ">
-									<input data-testid="input-box" name="birthMonth"
-										placeholder="MM" type="text" height="40" class="css-151eme7 "
-										value="05">
-								</div>
-							</div>
-							<span class="css-5lnvt6 "></span>
-							<div class="css-1dkwuq4 ">
-								<div height="40" class="css-xsmgyi ">
-									<input data-testid="input-box" name="birthDay" placeholder="DD"
-										type="text" height="40" class="css-151eme7 e1uzxhvi2"
-										value="15">
+									<input data-testid="input-box" name="memberBirthday"
+										placeholder="YYYYMMDD" type="text" height="40" class="css-151eme7"
+										value="0000-00-00">
 								</div>
 							</div>
 						</div>
@@ -236,7 +220,6 @@
 					<div class="css-1w0ksfz"></div>
 				</div>
 				<!--개인정보 이용 약관 동의 -->
-				<form>
 				<div class="css-1eo0fey "></div>
 				<!-- <div class="css-y8aj3r ">
 					<div class="css-2yzr8b ">
@@ -246,8 +229,8 @@
 						</div>
 						<div class="css-82a6rk ">
 							<div class="css-ov2xfu ">
-								<label class="css-msja7w " for="TermsAgreeAll">
-							<input id="TermsAgreeAll" type="checkbox" class="css-agvwxo ">
+								<label class="css-msja7w " for="allAgreeCheckboxes">
+							<input id="allAgreeCheckboxes" type="checkbox" class="css-agvwxo ">
 								<div class="css-79hxr7">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
@@ -255,19 +238,14 @@
 							0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z"
 							stroke="#ddd" fill="#fff">
 							</path>
-							
 							<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 							</path>
 							</svg>
 								</div>
-								
 								<span>전체 동의합니다.</span>
-								
 								</label>
-								
 								<p class="css-nygcgj ">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
 							</div>
-							
 							<div class="css-ov2xfu ">
 								<div class="css-s5xdrg ">
 								<label class="css-1mjkje9 " for="RequiredTermsCondition">
@@ -349,8 +327,15 @@
 							</div>
 						</div>
 					</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+				</div>
+=======
+=======
+>>>>>>> master
 				</div> -->
 				</form>
+>>>>>>> master
 				<!-- 가입하기  -->
 				<div class="css-137ca2h">
 					<button class="css-18m884r" type="submit" width="240" height="56"
@@ -370,7 +355,6 @@
 			<div class="modal-content"></div>
 			<div class="close-button" style="cursor: pointer;">확인</div>
 		</div>
-	</form>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/signup.js"></script>

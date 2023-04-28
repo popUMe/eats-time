@@ -19,8 +19,6 @@ import com.eatsTime.member.domain.MemberVO;
 
 public class ModifyController implements Action {
 
-//	@Override
-//	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();
@@ -37,7 +35,7 @@ public class ModifyController implements Action {
 				obj.put("memberName", listMap.get(i).getMemberName().toString());
 				obj.put("memberEmail", listMap.get(i).getMemberEmail().toString());
 				obj.put("memberPhoneNumber", listMap.get(i).getMemberPhoneNumber().toString());
-				obj.put("membermemberGender", listMap.get(i).getMemberGender().toString());
+				obj.put("memberGender", listMap.get(i).getMemberGender().toString());
 				obj.put("memberBirthday", listMap.get(i).getMemberBirthday());
 			}
 		} catch (JSONException e) {

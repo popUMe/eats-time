@@ -27,22 +27,19 @@ a {
     margin-bottom: 30px;
 }
 
-.board_title strong {
-    font-size: 3rem;
-}
 
 .board_title p {
     margin-top: 5px;
     font-size: 1.4rem;
 }
-
+/*등록, 취소 버튼*/
 .btn {
     margin-top: 30px;
     text-align: center;
     font-size: 0;
 }
 
-.btn a {
+.btn {
     display: inline-block;
     min-width: 80px;
     margin-left: 10px;
@@ -52,12 +49,14 @@ a {
     font-size: 1.4rem;
 }
 
-.btn a:first-child {
+.btn :first-child {
     margin-left: 0;
 }
 
-.btn a.on {
-    background: #000;
+.btn .on {
+	margin: 0;
+	padding: 0;
+    background-color: #000;
     color: #fff;
 }
 
@@ -110,9 +109,6 @@ a {
     font-size: 1.4rem;
 }
 
-.board_view .info dl dt {
-
-}
 
 .board_view .info dl dd {
     margin-left: 10px;

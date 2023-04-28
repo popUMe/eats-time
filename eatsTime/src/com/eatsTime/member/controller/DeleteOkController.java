@@ -17,8 +17,8 @@ public class DeleteOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();
 		Result result = new Result();
-		String memberId = req.getParameter("memberId");
-		
+//		Long memberId = Long.valueOf(req.getParameter("memberId"));
+		Long memberId = 1L;
 		memberDAO.delete(memberId);
 		
 		result.setPath(req.getContextPath() + "/index.member");

@@ -13,6 +13,7 @@ import com.eatsTime.product.controller.ProductDetailOkController;
 import com.eatsTime.product.controller.ProductListDeliveryOkController;
 import com.eatsTime.product.controller.ProductListOkController;
 import com.eatsTime.product.controller.ProductListPickUpOkController;
+import com.eatsTime.product.controller.ProductUploadOkController;
 
 public class ProductFrontController extends HttpServlet {
    @Override
@@ -23,7 +24,7 @@ public class ProductFrontController extends HttpServlet {
       Result result = null;
       System.out.println(target);
 
-//           if   else if      ôϱ         Ʈ   Ʈ ѷ       缭      ؼ   ۾ 
+
       if(target.equals("productListOk")){
          result = new ProductListOkController().execute(req, resp);
       }else if(target.equals("productListDeliveryOk")) {
@@ -31,7 +32,11 @@ public class ProductFrontController extends HttpServlet {
       }else if(target.equals("productListPickUpOk")) {
          result = new ProductListPickUpOkController().execute(req, resp);
       }else if(target.equals("productDetailOk")) {
-          result = new ProductDetailOkController().execute(req, resp);        
+          result = new ProductDetailOkController().execute(req, resp);
+        // 4월 28일 김인진 부분
+        // 상품 등록 프론트 컨트롤러
+      } else if(target.equals("productUploadOk")) {
+          result = new ProductUploadOkController().execute(req, resp);
       }
       
       if(result != null) {

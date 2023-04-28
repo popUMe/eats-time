@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
+<link rel="icon"
+	href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/all.css">
 <link rel="stylesheet"
@@ -12,7 +13,7 @@
 <title>이츠타임 - 상품 등록</title>
 </head>
 <body>
-	
+
 
 	<jsp:include page="../header.jsp" />
 	<div class="css-pculus">
@@ -22,36 +23,6 @@
 				<span class="css-qq9ke6">*</span> 필수입력사항
 			</div>
 			<div class="css-y8aj3r">
-				<div class="css-1pjgd36">
-					<div class="css-1y8737n">
-						<label class="css-1obgjqh">상품 이미지<span class="css-qq9ke6">*</span></label>
-					</div>
-					<div class="css-82a6rk">
-						<div class="css-jmalg">
-							<div class="css-176lya2">
-
-								<label for="attach">
-
-									<div class="css-u52dqk">
-										<span class="css-ymwvow">상품 사진을 등록해주세요.</span>
-										<p class="css-imagerule">* 이미지 규격 : 123x123</p>
-									</div>
-
-								</label> <input type="file" id="attach" style="display: none;">
-
-								<div class="image">
-									<div class="cancel" style="display: none";>X</div>
-									<!--이미지를 없애는 X 버튼-->
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
-
-
-
-				</div>
 				<div class="css-1pjgd36">
 					<div class="css-1y8737n">
 						<label class="css-1obgjqh">상품명<span class="css-qq9ke6">*</span></label>
@@ -93,68 +64,11 @@
 						<div class="css-jmalg">
 							<div class="css-176lya2">
 								<input type="text" id="sellcount" name="sellcount"
-									placeholder="판매 가능한 수량을 입력해주세요" 
-									autocomplete="off" class="css-u52dqk" value="">
+									placeholder="판매 가능한 수량을 입력해주세요" autocomplete="off"
+									class="css-u52dqk" value="">
 							</div>
 						</div>
 					</div>
-					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
-				</div>
-				<div class="css-1pjgd36">
-					<div class="css-1y8737n">
-						<label class="css-1obgjqh">판매 및 발송지 주소<span
-							class="css-qq9ke6">*</span></label>
-					</div>
-					<div class="css-82a6rk">
-						<div class="css-jmalg">
-							<div class="css-176lya2">
-								<input id="passwordConfirm"
-									name="passwordConfirm" placeholder="판매할 주소를 입력해주세요"
-									type="text" autocomplete="off" class="css-u52dqk" value="">
-							</div>
-						</div>
-					</div>
-					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
-				</div>
-
-				<div class="css-1pjgd36">
-					<div class="css-1y8737n">
-						<label class="css-1obgjqh">판매 유형<span class="css-qq9ke6">*</span></label>
-					</div>
-					
-					
-					
-		<div class="css-82a6rk">
-			<div class="css-14wodj6">
-		
-			<label class="css-z9g6s0" for="delivery">
-			<input id="delivery" name="pickup" type="radio"
-			class="css-1pes2r6" value="DELIVERY">
-				
-			<span class="css-198i9ca" id="deliveryspan">
-			<div class="css-1dahn5m" id="divdelivery"></div>
-			</span>
-				
-												<span class="css-mgd87h">배송</span>
-			</label>
-		
-		
-			<label class="css-z9g6s0" for="pickup">
-			<input id="pickup" name="pickup"
-			type="radio" class="css-1pes2r6" value="">
-			<span class="css-198i9ca" id="pickupspan">
-			<div class="css-1dahn5m" id="divpickup"></div></span>
-			<span class="css-mgd87h">픽업</span>
-			</label>
-				
-				
-		</div>
-	</div>				
-					
-					
-					
-					
-					
 					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
 				</div>
 
@@ -175,16 +89,120 @@
 							</div>
 						</div>
 					</div>
-					<!-- 					<div class="css-1w0ksfz e744wfw2"> -->
-					<!-- 						<button class="css-ufulao e4nu7ef3" type="button" disabled=""> -->
-					<!-- 							<span class="css-ymwvow e4nu7ef1">인증번호 받기</span> -->
-					<!-- 						</button> -->
-					<!-- 					</div> -->
+				</div>
+
+
+				<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">판매 유형<span class="css-qq9ke6">*</span></label>
+					</div>
+
+
+					<div class="css-82a6rk">
+						<div class="css-14wodj6"
+							style="display: flex; justify-content: flex-start;">
+
+							<label class="css-z9g6s0" for="delivery"
+								style="padding-right: 40px;"> <input id="delivery"
+								name="pickup" type="radio" class="css-1pes2r6" value="DELIVERY">
+								<span class="css-198i9ca" id="deliveryspan">
+									<div class="css-1dahn5m" id="divdelivery"></div>
+							</span> <span class="css-mgd87h">배송</span>
+							</label> <label class="css-z9g6s0" for="pickup"> <input
+								id="pickup" name="pickup" type="radio" class="css-1pes2r6"
+								value=""> <span class="css-198i9ca" id="pickupspan">
+									<div class="css-1dahn5m" id="divpickup"></div>
+							</span> <span class="css-mgd87h">픽업</span>
+							</label>
+
+
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+			</div>
+
+			<div class="css-1pjgd36">
+				<div class="css-1y8737n">
+					<label class="css-1obgjqh">배송&픽업주소<span class="css-qq9ke6">*</span></label>
+				</div>
+				<div style="display: flex; width: 77%;">
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
+								<input style="width: 90%" id="address" name="passwordConfirm"
+									placeholder="배송이나 픽업 관련 주소를 입력해주세요" type="text"
+									autocomplete="off" class="css-u52dqk" value="" readonly>
+							</div>
+						</div>
+					</div>
+
+					<button class="css-ufulao e4nu7ef3" type="button"
+						id="addressSearch">
+						<span class="css-ymwvow e4nu7ef1">검색</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="css-1pjgd36">
+				<div class="css-1y8737n">
+					<label class="css-1obgjqh">상세주소<span class="css-qq9ke6">*</span></label>
+				</div>
+				<div style="display: flex; width: 77%;">
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
+								<input style="width: 90%" id="addressDetail"
+									name="passwordConfirm" placeholder="상세주소를 입력해주세요" type="text"
+									autocomplete="off" class="css-u52dqk" value="">
+							</div>
+						</div>
+					</div>
+
+					<button class="css-ufulao e4nu7ef3" type="button" id="checkEmail"
+						style="visibility: hidden;">
+						<span class="css-ymwvow e4nu7ef1">검색</span>
+					</button>
+				</div>
+			</div>
+			
+							<div class="css-1pjgd36">
+					<div class="css-1y8737n">
+						<label class="css-1obgjqh">상품 이미지<span class="css-qq9ke6">*</span></label>
+					</div>
+					<div class="css-82a6rk">
+						<div class="css-jmalg">
+							<div class="css-176lya2">
+
+								<label for="attach">
+
+									<div class="css-u52dqk">
+										<span class="css-ymwvow">상품 사진을 등록해주세요</span>
+										<p class="css-imagerule">* 이미지 규격 : 123x123</p>
+									</div>
+
+								</label> <input type="file" id="attach" style="display: none;">
+
+								<div class="image">
+									<div class="cancel" style="display: none";>X</div>
+									<!--이미지를 없애는 X 버튼-->
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- 					<div class="css-1w0ksfz e744wfw2"></div> -->
+
+
+
 				</div>
 
 
 
-			</div>
 			<div class="css-1eo0fey"></div>
 
 			<div class="css-137ca2h">
@@ -198,7 +216,28 @@
 	<jsp:include page="../footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/productUploadForm.js"></script>
-
+<script
+	src="${pageContext.request.contextPath}/static/js/productUploadForm.js"></script>
+<script
+	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+	window.onload = function() {
+		document
+				.getElementById("addressSearch")
+				.addEventListener(
+						"click",
+						function() { //주소입력칸을 클릭하면
+							//카카오 지도 발생
+							new daum.Postcode(
+									{
+										oncomplete : function(data) { //선택시 입력값 세팅
+											document.getElementById("address").value = data.address; // 주소 넣기
+											document.getElementById(
+													"addressDetail").focus(); //상세입력 포커싱
+										}
+									}).open();
+						});
+	}
+</script>
 
 </html>
