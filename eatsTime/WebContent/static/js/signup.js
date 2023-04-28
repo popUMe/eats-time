@@ -319,6 +319,9 @@ function validateBirthday() {
   return true;
 }
 
+
+document.getElementById("RequiredTermsCondition").click();
+
 /*
 const $allAgreeCheckboxes = $(".css-s5xdrg input:not(#TermsAgreeAll)");
 const $requiredChecks = $(".css-s5xdrg input[type='checkbox']");
@@ -359,3 +362,4 @@ function goInfo() {
   }, 300);
 }
 */
+

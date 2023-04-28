@@ -4,26 +4,29 @@
 body {
 	margin: 0;
 	padding: 0;
-	
 }
-
 
 a{
 	text-decoration: none;
 	color: #000;
 }
-/* 로고 */
+
 #logo {
 	width: 150px;
-	height:100px;
-  position: relative;
-  top: 10px;
-  left: 30px;
-  background-image: url(../../image/logo.png);
-  background-repeat: no-repeat;
+	height: 63px;
+	position: relative;
+	top: 10px;
+	margin-left: 30px;
+	margin-bottom : 25px;
 }
 
-/*왼쪽 사이드바*/
+#logo .logo {
+	display : inline-block;
+	width : 100%;
+	height : 100%;
+}
+
+
 #sidebar {
 	position: relative;
 	z-index: 0;
@@ -41,8 +44,8 @@ a{
 	font-weight: 800;
 	
 }
-/*사이드바 안 목차*/
-#sidebar a {
+
+#sidebar .nav_list {
 	margin-left: 20px;
 	padding: 10px;
 	font-size: 16px;
@@ -55,7 +58,7 @@ a{
 	background-color: #FFFAFA;
 }
 
-/* 작성, 삭제 등 버튼*/
+
 .btn{
 	display: flex;
     justify-content: space-between;	
@@ -72,6 +75,7 @@ a{
 	right: 0;
 	background: #fff;
     color: #000;
+    cursor : pointer;
     
   }
   
@@ -80,6 +84,7 @@ a{
  	margin-right: 100px;
  	background-color:#fff;
  	color: #000;
+    cursor : pointer;
  }
 
 #add-btn, #delete-btn {
@@ -94,31 +99,37 @@ a{
     font-weight: bold;
 }
 
-
 .content {
 	margin-left: 250px;
 }
 
-/* 페이지 버튼*/
+
 
 .paging {
-			margin-top: 20px;
-			text-align: center;
-			padding-right: 200px;
-		}
+	margin-top: 20px;
+	text-align: center;
+	padding-right: 200px;
+}
+
 .paging a {
-			display: inline-block;
-			margin-right: 3px;
-			padding: 5px 10px;
-			border: 1px solid #ccc;
-			border-radius: 3px;
-			text-decoration: none;
-			color: #333;
-		}
+	display: inline-block;
+	margin-right: 3px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #333;
+}
+		
+.paging a:hover,
 .paging .active {
 	background-color: #333;
     color: #fff;
 		}
+
+.paging a img {
+	 vertical-align: middle;
+}
 
 h1 {
 	font-size: 32px;
@@ -127,8 +138,6 @@ h1 {
 	width: 1245px;
 	padding: 20px;
 }
-
-/* 가운데 테이블 */
 #table-container{
 	position:relative;
 	width:100%;

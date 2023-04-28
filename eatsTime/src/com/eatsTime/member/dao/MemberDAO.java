@@ -5,8 +5,10 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.eatsTime.member.domain.Criteria;
 import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
+import com.mysql.cj.Session;
 
 public class MemberDAO {
    public SqlSession sqlSession;
@@ -15,20 +17,6 @@ public class MemberDAO {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
    }
    
-   //             ҷ     
-   public List<MemberVO> selectAll(MemberVO memberVO) {
-      return sqlSession.selectList("member.selectAll", memberVO);
-   }
-   
-   // ȸ          
-   public void update(MemberVO memberVO) {
-      sqlSession.update("member.update", memberVO);
-   }
-   
-   // ȸ  Ż  
-   public void delete(String memberId) {
-      sqlSession.delete("member.delete", memberId);
-   }
    
    // 특정 회원정보 조회
    public MemberVO selectMember(Long memberId) {
@@ -40,6 +28,21 @@ public class MemberDAO {
 		sqlSession.insert("member.insert", memberVO);
 	}
 	
+	// ���������� �ҷ�����
+	public List<MemberVO> selectAll(MemberVO memberVO) {
+		return sqlSession.selectList("member.selectAll", memberVO);
+	}
+	
+	// ȸ����������
+	public void update(MemberVO memberVO) {
+		sqlSession.update("member.update", memberVO);
+	}
+	
+	// ȸ��Ż��
+	public void delete(String memberId) {
+		sqlSession.delete("member.delete", memberId);
+	}
+
 //	아이디 중복검사
 	public String selectIdentification(String memberIdentification) {
 		return sqlSession.selectOne("memberIdentification", memberIdentification);
@@ -53,5 +56,27 @@ public class MemberDAO {
 		
 		return sqlSession.selectOne("member.login", loginMap);
 	}
+	
+	
+//	관리자페이지 - 회원 전체 조회
+	public List<MemberVO> selectAllMember(Criteria criteria) {
+		return sqlSession.selectList("member.selectAllMember", criteria);
+	}
+	
+//	페이징처리 전체 회원 개수 조회
+	public int getTotal() {
+		return sqlSession.selectOne("member.getTotal");
+	}
+
+	
+//	관리자페이지 - 회원 상태 변경
+	public void updateStatus(Long memberId, boolean status) {
+		HashMap<String, Object> updateMap = new HashMap();
+		updateMap.put("memberId", memberId);
+		updateMap.put("status", status);
+		sqlSession.update("member.updateStatus", updateMap);
+	}
+	
+	
 
 }

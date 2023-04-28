@@ -220,7 +220,6 @@
 					<div class="css-1w0ksfz"></div>
 				</div>
 				<!--개인정보 이용 약관 동의 -->
-				<form>
 				<div class="css-1eo0fey "></div>
 				<!-- <div class="css-y8aj3r ">
 					<div class="css-2yzr8b ">
@@ -230,8 +229,8 @@
 						</div>
 						<div class="css-82a6rk ">
 							<div class="css-ov2xfu ">
-								<label class="css-msja7w " for="TermsAgreeAll">
-							<input id="TermsAgreeAll" type="checkbox" class="css-agvwxo ">
+								<label class="css-msja7w " for="allAgreeCheckboxes">
+							<input id="allAgreeCheckboxes" type="checkbox" class="css-agvwxo ">
 								<div class="css-79hxr7">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
@@ -239,19 +238,14 @@
 							0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z"
 							stroke="#ddd" fill="#fff">
 							</path>
-							
 							<path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 							</path>
 							</svg>
 								</div>
-								
 								<span>전체 동의합니다.</span>
-								
 								</label>
-								
 								<p class="css-nygcgj ">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
 							</div>
-							
 							<div class="css-ov2xfu ">
 								<div class="css-s5xdrg ">
 								<label class="css-1mjkje9 " for="RequiredTermsCondition">
@@ -333,8 +327,15 @@
 							</div>
 						</div>
 					</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+				</div>
+=======
+=======
+>>>>>>> master
 				</div> -->
 				</form>
+>>>>>>> master
 				<!-- 가입하기  -->
 				<div class="css-137ca2h">
 					<button class="css-18m884r" type="submit" width="240" height="56"
@@ -354,7 +355,6 @@
 			<div class="modal-content"></div>
 			<div class="close-button" style="cursor: pointer;">확인</div>
 		</div>
-	</form>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/signup.js"></script>
