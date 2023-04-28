@@ -3,7 +3,7 @@ package com.eatsTime.product.domain;
 public class ProductDTO {
 
    
-   private Long productId;
+   public Long productId;
    private boolean productCategory;
    private String productName;
    private int productPrice;
