@@ -27,36 +27,27 @@ public class ListOkController implements Action {
 		String temp = req.getParameter("page");
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 		
-		JSONArray jsonArray=new JSONArray();
+//		JSONArray jsonArray=new JSONArray();
 		
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		Criteria criteria = new Criteria(page, boardDAO.getTotal());
 		
 		pagable.put("offset", criteria.getOffset());
-			
-		
-		
 		pagable.put("rowCount", criteria.getRowCount());
 
-		boardDAO.selectAll(pagable).stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
 		
-		req.setAttribute("boards", jsonArray.toString());
-		
-	      
-	      
-	      
-	      req.setAttribute("realEndPage", criteria.getRealEndPage());
-	      req.setAttribute("product", jsonArray.toString());
-	      req.setAttribute("total", boardDAO.getTotal());
-	      req.setAttribute("page", page);
-	      req.setAttribute("startPage", criteria.getStartPage());
-	      req.setAttribute("endPage", criteria.getEndPage());
-	      req.setAttribute("prev", criteria.isPrev());
-	      req.setAttribute("next", criteria.isNext());
-	      
-	      result.setPath("templates/board/qnaList.jsp");
-		
-	      return result;
+		req.setAttribute("boards", boardDAO.selectAll(pagable));
+		req.setAttribute("realEndPage", criteria.getRealEndPage());
+		req.setAttribute("total", boardDAO.getTotal());
+		req.setAttribute("page", page);
+		req.setAttribute("startPage", criteria.getStartPage());
+		req.setAttribute("endPage", criteria.getEndPage());
+		req.setAttribute("prev", criteria.isPrev());
+		req.setAttribute("next", criteria.isNext());
+
+		result.setPath("templates/board/qnaList.jsp");
+
+		return result;
 	}
 
 }

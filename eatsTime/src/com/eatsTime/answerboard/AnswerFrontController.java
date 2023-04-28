@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+import com.eatsTime.controller.AnswerOkController;
 import com.eatsTime.member.controller.JoinOkController;
 
 public class AnswerFrontController extends HttpServlet {
@@ -18,11 +19,10 @@ public class AnswerFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 
-//		여기 if문 else if문 예시니까 각 프론트 컨트롤러에 맞춰서 수정해서 작업
-		if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
+		if(target.equals("answerOk")) {
+			result = new AnswerOkController().execute(req, resp);
 			
-		} else if(target.equals("joinOk")) {
+		} else if(target.equals("")) {
 			result = new JoinOkController().execute(req, resp);
 		}
 		

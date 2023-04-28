@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="inquiryboard">
    
-   
    <select id="select" resultType="inquiryBoardVO">
-		select inqb_id ,product_id, member_id , inqb_title , inqb_content , inqb_date, inqb_complete 
+		select inqb_id, product_id, member_id, inqb_title, inqb_content, inqb_date, inqb_complete
 		from tbl_inquireboard
+		where inqb_id = #{inqbId}
 	</select>
-   
+
    
 <!--    게시글 추가 -->
    <insert id="insert">
@@ -41,10 +41,21 @@
 <!-- 	게시글 수정 -->
 
 	<update id="update">
-		update tbl_inquireboard
-		set inqb_title=#{inqbTitle}, inqb_content=#{inqbContent}
-		where inqb_id=#{inqbId}
+	update tbl_inquireboard
+	set inqb_title=#{inqbTitle}, inqb_content=#{inqbContent}
+	where inqb_id=#{inqbId}
 	</update>
+
+	<!-- 게시글 삭제 -->
+	<delete id="delete">
+		delete from tbl_inquireboard
+		where inqb_id = #{inqbId}
+	</delete>
 	
+	<select id="answer" resultType="inquiryboardDTO">
+		select i.inqb_id, a.ansb_title, a.ansb_content,a.ansb_date
+		from tbl_inquireboard i, tbl_answerboard a
+		on i.inqb_id=a.inqb_id;
+	</select>
 	
 </mapper>
