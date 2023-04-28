@@ -15,10 +15,4 @@ $(document).ready(function() {
 				if(total != checked) $("#chkAll").prop("checked", false);
 				else $("#chkAll").prop("checked", true); 
 			});
-		});
-		
-
-
-		
-
-		
+		});		
