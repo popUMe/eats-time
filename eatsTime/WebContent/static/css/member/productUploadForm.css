@@ -39,7 +39,7 @@
 .css-1pjgd36 {
     display: inline-flex;
     width: 100%;
-    padding: 10px 20px;
+    padding: 18px 20px;
 }
 .css-1obgjqh {
     font-weight: 500;
@@ -164,6 +164,7 @@
 	display: inline-block;
 	line-height: 20px;
 	vertical-align: middle;
+	padding-top: 10px;
 }
 
 
@@ -446,7 +447,7 @@ svg:not(:root) {
 	display: flex;
 	line-height: 20px;
 	vertical-align: middle;
-	padding-bottom:10px;
+	padding-top: 10px;
 }
 
 /* input[type='radio'] { */
@@ -509,3 +510,21 @@ div.cancel{
             line-height: 15px;
         }
 
+/* 주소 검색 css */
+.css-1w0ksfz > button {
+    height: 44px;
+    border-radius: 3px;
+}
+
+.css-ufulao {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 20%;
+    height: 46px;
+    border-radius: 3px;
+    color: #ff4f32;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ff4f32;
+}
