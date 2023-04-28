@@ -12,10 +12,11 @@ public class PurchaseListDTO {
 	private String purAddressDetail;
 	private String purLocation;
 	private String purPw;
-	private boolean purDeliver;
+	private String purTotalPrice;
 	private boolean productCategory;
 	private String productName;
 	private int productPrice;
+	private String fileOriginalName;
 
 	public PurchaseListDTO() {;}
 
@@ -99,12 +100,12 @@ public class PurchaseListDTO {
 		this.purPw = purPw;
 	}
 
-	public boolean isPurDeliver() {
-		return purDeliver;
+	public String getPurTotalPrice() {
+		return purTotalPrice;
 	}
 
-	public void setPurDeliver(boolean purDeliver) {
-		this.purDeliver = purDeliver;
+	public void setPurTotalPrice(String purTotalPrice) {
+		this.purTotalPrice = purTotalPrice;
 	}
 
 	public boolean isProductCategory() {
@@ -131,13 +132,21 @@ public class PurchaseListDTO {
 		this.productPrice = productPrice;
 	}
 
+	public String getFileOriginalName() {
+		return fileOriginalName;
+	}
+
+	public void setFileOriginalName(String fileOriginalName) {
+		this.fileOriginalName = fileOriginalName;
+	}
+
 	@Override
 	public String toString() {
 		return "PurchaseListDTO [purId=" + purId + ", memberId=" + memberId + ", productId=" + productId + ", purDate="
 				+ purDate + ", purName=" + purName + ", purPhoneNumber=" + purPhoneNumber + ", purAddress=" + purAddress
 				+ ", purAddressDetail=" + purAddressDetail + ", purLocation=" + purLocation + ", purPw=" + purPw
-				+ ", purDeliver=" + purDeliver + ", productCategory=" + productCategory + ", productName=" + productName
-				+ ", productPrice=" + productPrice + "]";
+				+ ", purTotalPrice=" + purTotalPrice + ", productCategory=" + productCategory + ", productName="
+				+ productName + ", productPrice=" + productPrice + ", fileOriginalName=" + fileOriginalName + "]";
 	}
 
 	@Override

@@ -182,8 +182,7 @@
 									<input data-testid="input-box" id="newPasswordConfirm"
 										name="newPasswordConfirm" placeholder="새 비밀번호를 다시 입력해 주세요"
 										type="password" autocomplete="off"
-										class="css-u52dqk e1uzxhvi2" value=""
-										>
+										class="css-u52dqk e1uzxhvi2" value="">
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -201,8 +200,7 @@
 								<div class="css-176lya2">
 									<input data-testid="input-box" id="name" name="memberName"
 										placeholder="이름을 입력해 주세요" type="text"
-										class="css-u52dqk e1uzxhvi2" value=""
-										>
+										class="css-u52dqk e1uzxhvi2" value="">
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -220,8 +218,7 @@
 								<div class="css-176lya2 e1uzxhvi3">
 									<input data-testid="input-box" id="email" name="memberEmail"
 										placeholder="이메일을 입력해 주세요" type="text"
-										class="css-u52dqk e1uzxhvi2" value=""
-										>
+										class="css-u52dqk e1uzxhvi2" value="">
 								</div>
 							</div>
 							<div class="css-shoa2s">
@@ -263,32 +260,24 @@
 						<div class="css-82a6rk">
 							<div class="css-14wodj6">
 
-								<label class="css-z9g6s0" for="gender-man">
-									<input id="gender-man" name="memberGender" type="radio" class="css-1pes2r6" value="MALE" checked>
-									<span class="css-198i9ca" id="male">
+								<label class="css-z9g6s0" for="gender-man"> <input
+									id="gender-man" name="memberGender" type="radio"
+									class="css-1pes2r6" value="MALE" checked> <span
+									class="css-198i9ca" id="male">
 										<div class="css-1dahn5m" id=divmale></div>
-									</span>
-									<span class="css-mgd87h">남자</span>
-								</label>
-								
-								
-								
-								<label class="css-z9g6s0" for="gender-woman">
-									<input id="gender-woman" name="memberGender" type="radio" class="css-1pes2r6" value="FEMALE">
-									<span class="css-5xw1m2" id="female">
+								</span> <span class="css-mgd87h">남자</span>
+								</label> <label class="css-z9g6s0" for="gender-woman"> <input
+									id="gender-woman" name="memberGender" type="radio"
+									class="css-1pes2r6" value="FEMALE"> <span
+									class="css-5xw1m2" id="female">
 										<div class="css-1vic0rk" id="divfemale"></div>
-									</span>
-									<span class="css-mgd87h">여자</span>
-								</label>
-								
-								
-								
-								<label class="css-z9g6s0" for="gender-none">
-									<input id="gender-none" name="memberGender" type="radio" class="css-1pes2r6" value="NONE">
-									<span class="css-198i9ca" id="none">
+								</span> <span class="css-mgd87h">여자</span>
+								</label> <label class="css-z9g6s0" for="gender-none"> <input
+									id="gender-none" name="memberGender" type="radio"
+									class="css-1pes2r6" value="NONE"> <span
+									class="css-198i9ca" id="none">
 										<div class="css-1dahn5m" id="divnone"></div>
-									</span>
-									<span class="css-mgd87h">선택안함</span>
+								</span> <span class="css-mgd87h">선택안함</span>
 								</label>
 
 							</div>
@@ -332,7 +321,7 @@
 						</div>
 						<div class="css-1w0ksfz e744wfw2"></div>
 					</div>
-
+					
 					<!-- 아이디 테스트용 인풋 박스 -->
 					<input type="hidden" name="memberId" value="1">
 
@@ -340,7 +329,6 @@
 						<button class="css-ufulao e4nu7ef3" type="button"
 							onclick="location.href='delete.member'">
 							<span class="css-ymwvow e4nu7ef1">탈퇴하기</span>
-
 						</button>
 						<button class="css-1qirdbn e4nu7ef3" type="button" id="modify">
 							<span class="css-ymwvow e4nu7ef1">회원정보수정</span>
@@ -350,6 +338,7 @@
 			</div>
 		</div>
 	</div>
+
 	<jsp:include page="../footer.jsp" />
 
 </body>
@@ -366,44 +355,47 @@
 	member = JSON.parse(obj);
 
 	/* 로딩 끝나고 나서 마이페이지 불러오기 */
-	$(document).ready(function() {
+	$(document).ready(
+			function() {
 
-		/* 아이디 */
-		$('#userId').val(member.memberIdentification);
+				/* 아이디 */
+				$('#userId').val(member.memberIdentification);
 
-		/* 생일 */
-		let birth = member.memberBirthday;
-		let birthYYYY = new Date(birth).getFullYear();
-		let birthMM = ('0' + (new Date(birth).getMonth() + 1)).slice(-2);
-		let birthDD = ('0' + new Date(birth).getDate()).slice(-2);
-		$('#birthYear').val(birthYYYY);
-		$('#birthMonth').val(birthMM);
-		$('#birthDay').val(birthDD);
-		
-		/* 이름 */
-		$('#name').val(member.memberName);
+				/* 생일 */
+				let birth = member.memberBirthday;
+				let birthYYYY = new Date(birth).getFullYear();
+				let birthMM = ('0' + (new Date(birth).getMonth() + 1))
+						.slice(-2);
+				let birthDD = ('0' + new Date(birth).getDate()).slice(-2);
+				$('#birthYear').val(birthYYYY);
+				$('#birthMonth').val(birthMM);
+				$('#birthDay').val(birthDD);
 
-		/* 이메일 */
-		$('#email').val(member.memberEmail);
+				/* 이름 */
+				$('#name').val(member.memberName);
 
-		/* 휴대폰 */
-		$('#mobileNumber').val(member.memberPhoneNumber);
-		/* 성별 */
-		$('input[type="radio"][name="memberGender"][value="'+member.memberGender+'"]').trigger('click');
+				/* 이메일 */
+				$('#email').val(member.memberEmail);
 
-		sumBirth();
-	});
+				/* 휴대폰 */
+				$('#mobileNumber').val(member.memberPhoneNumber);
+				/* 성별 */
+				$(
+						'input[type="radio"][name="memberGender"][value="'
+								+ member.memberGender + '"]').trigger('click');
+
+				sumBirth();
+			});
 	/* 		document.modifyForm.submit();
 	 }
 	 */
-	 function sumBirth(){
-		 /* 생일 합치기 */
+	function sumBirth() {
+		/* 생일 합치기 */
 		let sumBirthDay = $("#birthYear").val() + $("#birthMonth").val()
 				+ $("#birthDay").val();
 		$("input[name='memberBirthday']").val(sumBirthDay);
-	 }
-	 
-	 
+	}
+
 	/* 회원수정 ajax */
 	$(function() {
 		$("#modify").on("click", getData);
@@ -420,10 +412,12 @@
 				memberName : $('#name').val(),
 				memberEmail : $('#email').val(),
 				memberPhoneNumber : $('#mobileNumber').val(),
-				memberGender : $("input[type='radio'][name='memberGender']:checked").val(),
+				memberGender : $(
+						"input[type='radio'][name='memberGender']:checked")
+						.val(),
 				memberBirthday : $("input[name='memberBirthday']").val()
 			},
-			beforeSend: function(xhr){
+			beforeSend : function(xhr) {
 				sumBirth();
 			},
 			//	 	data: {memberId: $(this).val()},
@@ -432,6 +426,5 @@
 			}
 		});
 	}
-
 </script>
 </html>

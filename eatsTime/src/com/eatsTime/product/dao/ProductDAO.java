@@ -58,4 +58,11 @@ public class ProductDAO {
       return sqlSession.selectOne("product.selectProductDetail", productId);
    }
    
+   // 4월 28일 김인진 부분
+   // 상품 등록
+   public void insert(ProductVO productVO) {
+	   sqlSession.insert("product.insert", productVO);
+   }
+   
+   
 }

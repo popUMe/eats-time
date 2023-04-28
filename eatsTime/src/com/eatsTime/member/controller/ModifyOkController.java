@@ -36,8 +36,7 @@ public class ModifyOkController implements Action {
 		memberDAO.update(memberVO);
 		
 		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/index.member");
+		result.setPath(req.getContextPath() + "/index.member?memberIdentification=&memberPw");
 		return result;
 	}
-
 }

@@ -19,8 +19,6 @@ import com.eatsTime.member.domain.MemberVO;
 
 public class ModifyController implements Action {
 
-//	@Override
-//	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();

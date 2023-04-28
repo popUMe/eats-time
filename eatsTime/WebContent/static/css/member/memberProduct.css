@@ -465,3 +465,66 @@ img, legend {
 	width: 1px;
 	height: 1px;
 }
+
+/* 강사님 css */
+section.content-container {
+    flex-grow: 1 !important;
+}
+
+h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile > div {
+    align-items: center;
+    display: flex;
+}
+
+.writer {
+    margin-left: 5px;
+    font-weight: 400;
+    color: rgb(126, 128, 130);
+}
+
+#show-reply {
+    color: rgb(235 124 120);
+}
+
+.title {
+    font-weight: 400;
+    margin: 8px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#detail-title h2{
+    font-size: 32px;
+}
+
+.read-count {
+    color: rgb(235 124 120);
+}
+
+#detail-read-count {
+    font-weight: 400;
+    color: rgb(126, 128, 130);
+}
+
+.date {
+    font-weight: 200;
+}
