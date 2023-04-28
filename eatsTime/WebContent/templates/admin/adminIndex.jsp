@@ -15,11 +15,10 @@
 <body>
 <div id="sidebar">
 	 	 <div id="logo"></div>
-		<a href="adminIndex.jsp">공지사항</a> 
+		<a href="{pageContext.request.contextPath}/listOk.notification">공지사항</a> 
 		<a href="adminMember.jsp">회원관리</a> 
 		<a href="adminQna.jsp">문의내역</a>
 	</div>
-	<div id=:logo></div>
 	
 	<div class="content">
 		<h1>공지사항 관리</h1>
