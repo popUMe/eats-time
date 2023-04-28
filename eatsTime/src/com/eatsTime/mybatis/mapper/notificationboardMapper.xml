@@ -38,9 +38,12 @@
 		update tbl_notificationboard
 		set notb_title = #{notbTitle}, notb_content = #{notbContent}
 		where notb_id = #{notbId}
-	</update>
-	
+
+	</update>		
+
+
 	<delete id="delete">
 		delete from tbl_notificationboard where notb_id = #{notbId}
 	</delete>		
 </mapper>
+

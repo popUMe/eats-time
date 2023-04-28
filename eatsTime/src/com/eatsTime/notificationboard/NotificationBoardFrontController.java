@@ -21,7 +21,7 @@ public class NotificationBoardFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-		System.out.println("들어옴");
+		System.out.println("����");
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
@@ -36,15 +36,20 @@ public class NotificationBoardFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("templates/admin/adminNoticeWrite.jsp");
 		}else if(target.equals("writeOk")) {
-			System.out.println("writeOk 들어옴");
+			System.out.println("writeOk ����");
 			result = new WriteOkController().execute(req, resp);			
 		}else if(target.equals("listOk")) {
 			result = new ListOkController().execute(req, resp);	
+
+		}else if(target.equals("viewOk")) {
+			System.out.println("viewOk ����");
+
 		}else if(target.equals("noticeListOk")) {
 			System.out.println("noticeListOk 들어옴");
 			result = new NoticeListOkController().execute(req, resp);	
 		}		else if(target.equals("viewOk")) {
 			System.out.println("viewOk 들어옴");
+
 			result = new ViewOkController().execute(req, resp);
 		}else if(target.equals("noticeViewOk")) {
 			System.out.println("noticeViewOk 들어옴");

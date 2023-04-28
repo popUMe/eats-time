@@ -356,13 +356,10 @@
 <script>
 	let obj = `${obj}`;
 	member = JSON.parse(obj);
-
 	/* 로딩 끝나고 나서 마이페이지 불러오기 */
 	$(document).ready(function() {
-
 		/* 아이디 */
 		$('#userId').val(member.memberIdentification);
-
 		/* 생일 */
 		let birth = member.memberBirthday;
 		let birthYYYY = new Date(birth).getFullYear();
@@ -373,16 +370,12 @@
 		$('#birthDay').val(birthDD);
 		/* 이름 */
 		$("#name").val(member.memberName);
-
 		/* 이메일 */
 		$("#memberEmail").val(member.memberEmail);
-
 		/* 휴대폰 */
 		$("#memberPhoneNumber").val(member.memberPhoneNumber);
-
 		/* 성별 */
 		$("#memberGender").val(member.membermemberGender);
-
 	});
 	
 	/* 생일 합치기 */
@@ -395,15 +388,12 @@
 	 }
 	 */
 	/* 회원수정 ajax */
-
 	$(function() {
 		$("#modify").on("click", getData);
 	});
-
 	//	$('#button').on('click', function(){
 	//		console.log('1');
 	//	});
-
 	function getData() {
 		$.ajax({
 			type : "post",

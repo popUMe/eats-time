@@ -23,7 +23,7 @@ public class ProductFrontController extends HttpServlet {
       Result result = null;
       System.out.println(target);
 
-//           if   else if      ôϱ         Ʈ   Ʈ ѷ       缭      ؼ   ۾ 
+
       if(target.equals("productListOk")){
          result = new ProductListOkController().execute(req, resp);
       }else if(target.equals("productListDeliveryOk")) {
