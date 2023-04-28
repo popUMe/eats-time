@@ -11,10 +11,21 @@ import com.eatsTime.mybatis.config.MyBatisConfig;
 import com.mysql.cj.Session;
 
 public class MemberDAO {
-	public SqlSession sqlSession;
+   public SqlSession sqlSession;
 
-	public MemberDAO() {
+   public MemberDAO() {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+   }
+   
+   
+   // 특정 회원정보 조회
+   public MemberVO selectMember(Long memberId) {
+      return sqlSession.selectOne("member.selectMember", memberId);
+   }
+   
+	//	회원가입
+	public void insert(MemberVO memberVO) {
+		sqlSession.insert("member.insert", memberVO);
 	}
 	
 	// ���������� �ҷ�����
@@ -30,6 +41,20 @@ public class MemberDAO {
 	// ȸ��Ż��
 	public void delete(String memberId) {
 		sqlSession.delete("member.delete", memberId);
+	}
+
+//	아이디 중복검사
+	public String selectIdentification(String memberIdentification) {
+		return sqlSession.selectOne("memberIdentification", memberIdentification);
+	}
+	
+//	로그인
+	public Long login(String memberIdentification, String memberPw) {
+		HashMap<String, String> loginMap = new HashMap<String, String>();
+		loginMap.put("memberIdentification", memberIdentification);
+		loginMap.put("memberPw", memberPw);
+		
+		return sqlSession.selectOne("member.login", loginMap);
 	}
 	
 	

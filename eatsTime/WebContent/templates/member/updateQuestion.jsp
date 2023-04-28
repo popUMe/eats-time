@@ -7,7 +7,7 @@
 <link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/writeQuestion.css" />
-<title>이츠타임 - 1:1 문의 작성</title>
+<title>이츠타임 - 1:1 문의 수정</title>
 </head>
 <body>
 <jsp:include page="../header.jsp" />
@@ -81,7 +81,7 @@
          <div class="css-185m8ch e1153ede0">
          
          
-            <form action="${pageContext.request.contextPath}/writeOk.inquiryboard" id="formtag" name="writeForm" method="post" >
+            <form action="${pageContext.request.contextPath}/updateOk.inquiryboard" id="formtag" name="writeForm" method="post" >
                <div class="css-17bp14q e1vbjq4w3">
                   <div class="css-mm5tap e1vbjq4w2">
                      <label for="inquiry-subject">
@@ -92,7 +92,7 @@
                   <div class="css-12l4j2c e1vbjq4w1">
                      <div class="css-1waqr6j e1uzxhvi6">
                         <div height="44" class="css-t7kbxx e1uzxhvi3">
-                           <input data-testid="input-box" id="inquiry-subject" name="inqbTitle" placeholder="제목을 입력해주세요" type="text" height="44" class="css-1quw3ub e1uzxhvi2" value="" autocomplete="off">
+                           <input data-testid="input-box" id="inquiry-subject" name="inqbTitle" placeholder="제목을 입력해주세요" type="text" height="44" class="css-1quw3ub e1uzxhvi2" value="${inqbTitle}" autocomplete="off">
                         </div>
                      </div>
                   </div>
@@ -109,7 +109,7 @@
                      <div class="css-12l4j2c e1vbjq4w1">
                         <div class="css-0 e1tjt2bn7">
                            <div class="css-1gua357 e1tjt2bn5">
-                              <textarea id="inquiry-contents" inputmode="text" aria-label="textarea-message" name="inqbContent" class="css-5etceh e1tjt2bn1" maxlength="5000"></textarea>
+                              <textarea id="inquiry-contents" inputmode="text" aria-label="textarea-message" name="inqbContent" class="css-5etceh e1tjt2bn1" value="${inqbContent}" maxlength="5000"></textarea>
                               <div class="placeholder css-1ofzfyp e1tjt2bn6">
                                  <div class="css-168e7y9 e1fgvk593">
                                     <strong class="css-c2iqrm e1fgvk592">1:1 문의 작성 전 확인해주세요</strong>
@@ -146,7 +146,7 @@
                   </div>
                </div>
                <div class="css-1spu0j4 ebvrvv11">
-                  <button onclick="document.getElementById('formtag').submit();" disabled="disabled" class="css-13kn1it ebvrvv10">등록</button>
+                  <button onclick=document.getElementById(“formtag“).submit() disabled="disabled" class="css-13kn1it ebvrvv10">수정</button>
                </div>
             </form>
          </div>
@@ -185,7 +185,7 @@
                  }
                
                </style>
-               <div class="popup-content css-15yaaju e1k5padi2">1:1 문의가 정상적으로 접수되었습니다.</div>
+               <div class="popup-content css-15yaaju e1k5padi2">1:1 문의가 정상적으로 수정되었습니다.</div>
                <div class="popup-footer css-1ol9ch1 e1k5padi0">
                   <button onclick="location.href='${pageContext.request.contextPath}/templates/board/qnaList.jsp'" class="css-1necch4 e1k5padi1">확인</button>
                </div>

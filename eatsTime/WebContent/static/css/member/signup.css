@@ -272,7 +272,7 @@ input[type=radio] {
 	padding-bottom: 0px;
 }
 /*생년월일 입력 div태그*/
-.css-xsmgyi {
+.birth {
 	position: relative;
 	height: 40px;
 }
@@ -307,7 +307,7 @@ input[type=radio] {
 	line-height: 40px;
 }
 /*생년월일 입력 div태그*/
-.css-xsmgyi {
+.birth {
 	position: relative;
 	height: 40px;
 }
