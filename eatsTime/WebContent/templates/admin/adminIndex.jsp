@@ -14,13 +14,16 @@
 </head>
 <body>
 <div id="sidebar">
-	 	 <div id="logo"></div>
-		<a href="adminIndex.jsp">공지사항</a>
-		<a href="adminMember.jsp">회원관리</a>
-		<a href="adminQna.jsp">문의내역</a>
-	</div>
-	<div id=:logo></div>
-	
+       <div id="logo">
+          <a class="logo" href="${pageContext.request.contextPath}/lisOk.notificationboard">
+             <img src="${pageContext.request.contextPath}/static/image/logo.png" alt="이츠타임 로고">
+          </a>
+       </div>
+      <a class="nav_list" href="${pageContext.request.contextPath}/listOk.notificationboard">공지사항</a> 
+      <a class="nav_list" href="${pageContext.request.contextPath}/listOk.member">회원관리</a> 
+      <a class="nav_list" href="${pageContext.request.contextPath}/listOk.Inquiryboard">문의내역</a>
+   </div>
+
 	<div class="content">
 		<h1>공지사항 관리</h1>
 		<div id=table-container>

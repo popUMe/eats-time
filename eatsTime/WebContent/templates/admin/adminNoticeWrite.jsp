@@ -12,9 +12,6 @@
 		<div class="board_title">
 			<h1>공지작성 - 관리자모드</h1>
 		</div>
-
-		<div class="board_write_wrap">
-
 		<form action="writeOk.notificationboard" method="post">
 			<div class="board_write_wrap">
 
@@ -23,37 +20,24 @@
 					<dl>
 						<dt>제목</dt>
 						<dd>
-
-							<input type="text" placeholder="제목 입력">
-
-							<input name="notbTitle" type="text" placeholder="제목 입력">
-
+							<input id="title" name="notbTitle" type="text" placeholder="제목 입력">
 						</dd>
 					</dl>
 				</div>
 				<div class="cont">
-
-					<textarea inputmode="text" placeholder="내용 입력"></textarea>
+					<textarea id="content" name="notbContent" inputmode="text" placeholder="내용 입력"></textarea>
 				</div>
-			</div>
-			<div class="btn">
-				<a href="adminIndex.jsp" class="on">등록</a> <a href="adminIndex.jsp">취소</a>
-			</div>
-		</div>
-
-					<textarea name="notbContent" inputmode="text" placeholder="내용 입력"></textarea>
-				</div>
+			</div>		
 			</div>
 			<div class="btn" style="background-color:black;">
 				<button type="submit" class="on" style="cursor:pointer; border:none;">제출</button>
 			</div>
 			<div class="btn">
 				<a href="listOk.notificationboard" style="cursor:pointer">취소</a>
-			</div>	
-			</div>
+			</div>						
 		</form>
-
-	</div>
-
+		</div>
 </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/adminNoticeWrite.js"></script>	
 </html>
