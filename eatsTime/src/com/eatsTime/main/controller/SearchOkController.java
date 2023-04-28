@@ -15,10 +15,11 @@ import com.eatsTime.main.dao.MainDAO;
 import com.eatsTime.main.domain.Criteria;
 import com.eatsTime.main.domain.Search;
 
-public class SerchOkController implements Action {
+public class SearchOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		System.out.println("들어옴1");
 		MainDAO mainDAO = new MainDAO();
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
@@ -39,8 +40,8 @@ public class SerchOkController implements Action {
 		pagable.put("rowCount", criteria.getRowCount());
 		pagable.put("sort", sort);
 		
-		mainDAO.selectMainList().stream().map(board -> new JSONObject(board)).forEach(jsonArray::put);
-		req.setAttribute("boards", jsonArray.toString());
+		mainDAO.selectAll1(pagable).stream().map(main -> new JSONObject(main)).forEach(jsonArray::put);
+		req.setAttribute("main", jsonArray.toString());
 		req.setAttribute("total", mainDAO.getTotal(search));
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", criteria.getStartPage());

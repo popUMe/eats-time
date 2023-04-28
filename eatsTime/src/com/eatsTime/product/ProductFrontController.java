@@ -21,6 +21,7 @@ public class ProductFrontController extends HttpServlet {
       
       String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
       Result result = null;
+      System.out.println(target);
 
 
       if(target.equals("productListOk")){

@@ -1,5 +1,6 @@
 package com.eatsTime.member.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -8,25 +9,49 @@ import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
 
 public class MemberDAO {
-	public SqlSession sqlSession;
+   public SqlSession sqlSession;
 
-	public MemberDAO() {
+   public MemberDAO() {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+   }
+   
+   //             Ò·     
+   public List<MemberVO> selectAll(MemberVO memberVO) {
+      return sqlSession.selectList("member.selectAll", memberVO);
+   }
+   
+   // È¸          
+   public void update(MemberVO memberVO) {
+      sqlSession.update("member.update", memberVO);
+   }
+   
+   // È¸  Å»  
+   public void delete(String memberId) {
+      sqlSession.delete("member.delete", memberId);
+   }
+   
+   // íŠ¹ì • íšŒì›ì •ë³´ ì¡°íšŒ
+   public MemberVO selectMember(Long memberId) {
+      return sqlSession.selectOne("member.selectMember", memberId);
+   }
+   
+	//	íšŒì›ê°€ì…
+	public void insert(MemberVO memberVO) {
+		sqlSession.insert("member.insert", memberVO);
 	}
 	
-	// ¸¶ÀÌÆäÀÌÁö ºÒ·¯¿À±â
-	public List<MemberVO> selectAll(MemberVO memberVO) {
-		return sqlSession.selectList("member.selectAll", memberVO);
+//	ì•„ì´ë”” ì¤‘ë³µê²€ì‚¬
+	public String selectIdentification(String memberIdentification) {
+		return sqlSession.selectOne("memberIdentification", memberIdentification);
 	}
 	
-	// È¸¿øÁ¤º¸¼öÁ¤
-	public void update(MemberVO memberVO) {
-		sqlSession.update("member.update", memberVO);
-	}
-	
-	// È¸¿øÅ»Åğ
-	public void delete(String memberId) {
-		sqlSession.delete("member.delete", memberId);
+//	ë¡œê·¸ì¸
+	public Long login(String memberIdentification, String memberPw) {
+		HashMap<String, String> loginMap = new HashMap<String, String>();
+		loginMap.put("memberIdentification", memberIdentification);
+		loginMap.put("memberPw", memberPw);
+		
+		return sqlSession.selectOne("member.login", loginMap);
 	}
 
 }

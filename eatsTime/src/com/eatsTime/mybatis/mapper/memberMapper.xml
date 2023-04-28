@@ -2,7 +2,27 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
 
-	<select id="selectAll" parameterType="memberVO" resultType="memberVO">
+	<select id="">
+		select date_format(now(), '%y%m%d%h%i%s')
+	</select>
+	
+   	<insert id="insert">
+	insert into tbl_member
+(member_identification, member_pw, member_name, member_email, member_phone_number, member_address, member_address_detail, 
+member_gender, member_birthday, member_grade, member_joined_date, member_status)
+values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{memberPhoneNumber}, #{memberAddress}, 
+#{memberAddressDetail}, #{memberGender}, #{memberBirthday}, 'PURCHASER', CURRENT_TIMESTAMP, '1')
+	</insert>
+   
+   <select id="selectIdentification" resultType="string">
+   	select member_identification from tbl_member where member_identification = #{memberIdentification}
+   </select>
+   
+   <select id="login" resultType="long">
+   select member_id from tbl_member where member_identification = #{memberIdentification} and member_pw = #{memberPw}
+   </select>
+   
+   <select id="selectAll" parameterType="memberVO" resultType="memberVO">
 		select
 		member_identification,
 		member_pw,
@@ -15,16 +35,16 @@
 		where member_id = 1
 	</select>
 
-	<update id="update" parameterType="memberVO">
-		update tbl_member
-		set
-		member_identification=#{memberIdentification}, member_pw=#{memberPw},
-		member_name=#{memberName}, member_email=#{memberEmail},
-		member_phonenumber=#{memberPhoneNumber},
-		member_gender=#{memberGender}, member_birthday=#{memberBirthday}
-		where
-		member_Id = 1
-	</update>
+   <update id="update" parameterType="memberVO">
+      update tbl_member
+      set
+      member_identification=#{memberIdentification}, member_pw=#{memberPw},
+      member_name=#{memberName}, member_email=#{memberEmail},
+      member_phonenumber=#{memberPhoneNumber},
+      member_gender=#{memberGender}, member_birthday=#{memberBirthday}
+      where
+      member_Id = 1
+   </update>
 
 	<update id="delete" parameterType="_int">
 		update tbl_member
@@ -32,5 +52,22 @@
 		member_status= 0
 		where member_id = 1
 	</update>
-
+   
+   <!-- 원하는 회원 정보 조회 -->
+      <select id="selectMember" resultType="memberVO">
+      select
+      member_id,
+      member_identification,
+      member_pw,
+      member_name,
+      member_email,
+      member_phonenumber,
+      member_gender,
+      member_birthday,
+      member_grade,
+      member_joineddate,
+      member_status
+      from tbl_member
+      where member_id = #{memberId}
+   </select>
 </mapper>

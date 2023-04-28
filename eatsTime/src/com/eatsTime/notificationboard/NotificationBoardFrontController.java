@@ -8,7 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+import com.eatsTime.notificationboard.controller.DeleteOkController;
+import com.eatsTime.notificationboard.controller.EditController;
+import com.eatsTime.notificationboard.controller.EditOkController;
 import com.eatsTime.notificationboard.controller.ListOkController;
+import com.eatsTime.notificationboard.controller.NoticeListOkController;
+import com.eatsTime.notificationboard.controller.NoticeViewOkController;
 import com.eatsTime.notificationboard.controller.ViewOkController;
 import com.eatsTime.notificationboard.controller.WriteOkController;
 
@@ -16,7 +21,7 @@ public class NotificationBoardFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-		System.out.println("µé¾î¿È");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
@@ -27,16 +32,37 @@ public class NotificationBoardFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("templates/admin/adminIndex.jsp");
 		} else if(target.equals("adminNoticeWrite")) {
+			System.out.println("write ë“¤ì–´ì˜´");
 			result = new Result();
 			result.setPath("templates/admin/adminNoticeWrite.jsp");
 		}else if(target.equals("writeOk")) {
-			System.out.println("writeOk µé¾î¿È");
+			System.out.println("writeOk ï¿½ï¿½ï¿½ï¿½");
 			result = new WriteOkController().execute(req, resp);			
 		}else if(target.equals("listOk")) {
 			result = new ListOkController().execute(req, resp);	
+
 		}else if(target.equals("viewOk")) {
-			System.out.println("viewOk µé¾î¿È");
+			System.out.println("viewOk ï¿½ï¿½ï¿½ï¿½");
+
+		}else if(target.equals("noticeListOk")) {
+			System.out.println("noticeListOk ë“¤ì–´ì˜´");
+			result = new NoticeListOkController().execute(req, resp);	
+		}		else if(target.equals("viewOk")) {
+			System.out.println("viewOk ë“¤ì–´ì˜´");
+
 			result = new ViewOkController().execute(req, resp);
+		}else if(target.equals("noticeViewOk")) {
+			System.out.println("noticeViewOk ë“¤ì–´ì˜´");
+			result = new NoticeViewOkController().execute(req, resp);
+		}else if(target.equals("adminEdit")) {
+			System.out.println("adminEdit ë“¤ì–´ì˜´");
+			result = new EditController().execute(req, resp);
+		}else if(target.equals("editOk")) {
+			System.out.println("editOk ë“¤ì–´ì˜´");
+			result = new EditOkController().execute(req, resp);
+		}else if(target.equals("deleteOk")) {
+			System.out.println("deleteOk ë“¤ì–´ì˜´");
+			result = new DeleteOkController().execute(req, resp);
 		}
 		
 		if(result != null) {

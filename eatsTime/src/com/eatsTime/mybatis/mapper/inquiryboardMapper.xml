@@ -2,4 +2,49 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="inquiryboard">
    
+   
+   <select id="select" resultType="inquiryBoardVO">
+		select inqb_id ,product_id, member_id , inqb_title , inqb_content , inqb_date, inqb_complete 
+		from tbl_inquireboard
+	</select>
+   
+   
+<!--    게시글 추가 -->
+   <insert id="insert">
+   	insert into tbl_inquireboard
+   	(member_id, inqb_title, inqb_content)
+   	values (#{memberId}, #{inqbTitle}, #{inqbContent})
+   </insert>
+      
+<!--    게시글 전체 조회 -->
+	<select id="selectAll" resultType="inquiryBoardVO">
+	select inqb_id ,product_id, member_id , inqb_title , inqb_content , inqb_date, inqb_complete
+	from tbl_inquireboard
+	order by inqb_id desc
+	limit #{offset}, #{rowCount}
+	</select>
+	
+	
+<!--    게시글 전체 개수 조회 -->
+	<select id="getTotal" resultType="_int">
+		select count(inqb_id)
+		from tbl_inquireboard
+	</select>
+	
+<!-- 	게시글 답변 상태 -->
+<!-- 	<select id="complete" resultType="String"> -->
+<!-- 		select replace(inqb_complete, false, "답변 대기"),  -->
+<!-- 		replace(inqb_complete, true, "답변 완료") -->
+<!-- 		from tbl_inquireboard -->
+<!-- 	</select> -->
+	
+<!-- 	게시글 수정 -->
+
+	<update id="update">
+		update tbl_inquireboard
+		set inqb_title=#{inqbTitle}, inqb_content=#{inqbContent}
+		where inqb_id=#{inqbId}
+	</update>
+	
+	
 </mapper>

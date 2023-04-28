@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,33 +17,33 @@
 		<div class="css-t79vuj e15sbxqa2">
 			<!-- 헤더 오른쪽 위(회원가입, 로그인, 고객센터) 부분 -->
 
-			<!-- <c:choose> -->
-			<!-- <c:when test="${sessionId eq null}"> -->
+<c:choose>
+<c:when test="${sessionScope.memberId eq null}">
 
 			<div class="css-fexq9b eo7pjfk4">
-				<a class="css-1g7d8zf eo7pjfk2" href="member/signup.jsp">회원가입</a>
+				<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/signup.main">회원가입</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
-				<a class="css-1pu21l0 eo7pjfk2" href="member/login.jsp">로그인</a>
+				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.main">로그인</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
-					<a class="css-1pu21l0 eo7pjfk2" href="board/noticeList.jsp">고객센터<span
+					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeList.main">고객센터<span
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
-						<a class="css-12olpw6 ecncdj40" href="board/noticeList.jsp">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="board/qnaList.jsp">1:1
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeList.main">공지사항</a>
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/qnaList.main">1:1
 							문의</a>
 					</div>
 				</div>
 			</div>
 
-			<!-- </c:when> -->
-			<!-- <c:otherwise> -->
 
-			<!-- DB 구현 이후 화면 추가 작업 예정 -->
-			<!-- <div class="css-fexq9b eo7pjfk4">
+</c:when>
+ <c:otherwise>
+
+			<div class="css-fexq9b eo7pjfk4">
 				<a class="css-1g7d8zf eo7pjfk2" href="member/signup.jsp">마이페이지</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
-				<a class="css-1pu21l0 eo7pjfk2" href="member/login.jsp">로그아웃</a>
+				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/logout.member">로그아웃</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
 					<a class="css-1pu21l0 eo7pjfk2" href="board/noticeList.jsp">고객센터<span
@@ -54,8 +55,8 @@
 				</div>
 			</div> -->
 
-			<!-- </c:otherwise> -->
-			<!-- </c:choose> -->
+		</c:otherwise>
+ </c:choose>
 
 			<!-- 헤더 로고, 검색창, 장바구니 등 라인 부분 -->
 			<div class="css-r7wmjj e15sbxqa3">
@@ -65,26 +66,17 @@
 						src="${pageContext.request.contextPath}/static/image/logo_98x42.png"
 						alt="마켓컬리 로고" class="css-17mnrrx e1s3pt0j0">
 					<button class="active css-j0ug0x ekdqe1a1"
-						onclick="location.href='index.jsp'">이츠타임</button>
+						onclick="location.href=${pageContext.request.contextPath}/indexpage.main">이츠타임</button>
 					<button class=" css-1sia941 ekdqe1a0" style="visibility: hidden">삭제예정</button>
 				</div>
 				<!-- 검색창 부분 -->
 				<div class="css-pqw0uk e1493ofl4">
 					<div class="css-w444a2 e1493ofl1">
-					<form action="${pageContext.request.contextPath}/serchOk.main" name="search-form">
-						<select name="type">
-			        		<option value="title&content&writer" ${type == null ? 'selected' : ''}>전체</option>
-			        		<option value="title" ${type == 'title' ? 'selected' : ''}>제목</option>
-			        		<option value="content" ${type == 'content' ? 'selected' : ''}>내용</option>
-			        		<option value="writer" ${type == 'writer' ? 'selected' : ''}>작성자</option>
-			        		<option value="content&writer" ${type == 'content&writer' ? 'selected' : ''}>내용 또는 작성자</option>
-			        	</select>
 						<input id="gnb_search" placeholder="검색어를 입력해주세요" required=""
 							class="css-11ntk83 e1493ofl3" value=""
 							onkeypress="if( event.keyCode == 13 ){search();}">
 						<button id="submit" aria-label="submit"
 							class="css-ywxmlw e1493ofl0" onclick="search();"></button>
-						</form>
 					</div>
 				</div>
 				<!-- 헤더 오른쪽 장바구니 등 부분 -->
@@ -112,18 +104,18 @@
 				</div>
 				<!-- 헤더 버튼 부분 -->
 				<ul class="css-1887xqd e17w4cfr5">
-					<li class="css-59mmhh e17w4cfr4"><span
-						class="css-1xyu7j9 e17w4cfr2"><a
-							href="product/productListAll.jsp">배송&픽업</a></span></li>
-					<li class="css-59mmhh e17w4cfr4"><span
-						class="css-1xyu7j9 e17w4cfr2"><a
-							href="product/productListDelivery.jsp">배송</a></span></li>
-					<li class="css-59mmhh e17w4cfr4"><span
-						class="css-1xyu7j9 e17w4cfr2"><a
-							href="product/productListPickup.jsp">픽업</a></span></li>
-					<li class="css-59mmhh e17w4cfr4"><span
-						class="css-1xyu7j9 e17w4cfr2"><a
-							href="product/productListAll.jsp">이츠타임</a></span></li>
+					<li class="css-59mmhh e17w4cfr4">
+					<span class="css-1xyu7j9 e17w4cfr2">
+					<a href="${pageContext.request.contextPath}/productListAll.main">배송&픽업</a></span></li>
+					<li class="css-59mmhh e17w4cfr4">
+					<span class="css-1xyu7j9 e17w4cfr2">
+					<a href="${pageContext.request.contextPath}/productListDelivery.main">배송</a></span></li>
+					<li class="css-59mmhh e17w4cfr4">
+					<span class="css-1xyu7j9 e17w4cfr2">
+					<a href="${pageContext.request.contextPath}/productListPickup.main">픽업</a></span></li>
+					<li class="css-59mmhh e17w4cfr4">
+					<span class="css-1xyu7j9 e17w4cfr2">
+					<a href="${pageContext.request.contextPath}/serviceInfo.main">이츠타임</a></span></li>
 				</ul>
 				<!-- 헤더 샛별, 택배 배송안내 부분 -->
 				<div class="css-s5xdrg e17w4cfr0" style="visibility: hidden">
@@ -149,10 +141,8 @@
 			$(".css-1qolcqm .menu").hide();
 		});
 	});
-
 	/* 검색 기능 */
 	/* 	let input = document.getElemetById("gnb_search");
-
 	 input.addEventListner("keyup", function(event) {
 	 if (event.keyCode === 13) {
 	 event.preventDefault();
@@ -160,7 +150,7 @@
 	 }
 	 }); */
 	function search() {
-		alert("검색기능");
+		
 	}
 </script>
 </html>

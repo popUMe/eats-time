@@ -8,18 +8,20 @@
 	import javax.servlet.http.HttpServletResponse;
 	
 	import com.eatsTime.Result;
-	import com.eatsTime.product.controller.ProductListOkController;
+import com.eatsTime.main.controller.SearchOkController;
 	
 	public class MainFrontController extends HttpServlet {
 	    @Override
 	    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	    System.out.println("들어옴0");
 	        req.setCharacterEncoding("UTF-8");
 	
 	        String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 	        Result result = null;
-	
-	        if(target.equals("productListOk")) {
-	            result = new ProductListOkController().execute(req, resp);
+	        System.out.print(target);
+	        if(target.equals("searchOk")) {
+	            result = new SearchOkController().execute(req, resp);
+	            System.out.println("들어옴4");
 	        } else if(target.equals("indexPage")) {
 	        	result = new Result();
 	        	result.setPath("/templates/index.jsp");
@@ -41,12 +43,16 @@
 	        } else if (target.equals("login")) {
 	        	result = new Result();
 	        	result.setPath("/templates/member/login.jsp");
-	        } else if (target.equals("noticeList")) {
-	        	result = new Result();
-	        	result.setPath("/templates/board/noticeList.jsp");
+	    
 	        } else if (target.equals("qnaList")) {
 	        	result = new Result();
 	        	result.setPath("/templates/board/qnaList.jsp");
+	        } else if (target.equals("notice")) {
+	        	result = new Result();
+	        	result.setPath("/templates/board/notice.jsp");
+	        } else if (target.equals("noticeList")) {
+	        	result = new Result();
+	        	result.setPath("/templates/board/noticeList.jsp");
 	        }
 	        
 	

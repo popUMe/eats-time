@@ -8,13 +8,10 @@ public class Criteria {
 	private boolean prev;
 	private boolean next;
 	private String sort;
-	private String type;
-	private String keyword;
+
 	
 	public Criteria(int page, int total, String sort, String type, String keyword) {
 		this(page, total, sort);
-		this.type = type;
-		this.keyword = keyword;
 	}
 	
 	public Criteria(int page, int total, String sort) {
@@ -25,9 +22,9 @@ public class Criteria {
 	
 	
 	public Criteria(int page, int total) {
-	//	ÇÑ ÆäÀÌÁö¿¡ Ãâ·ÂµÇ´Â °Ô½Ã±ÛÀÇ °³¼ö
+	//	ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÂµÇ´ï¿½ ï¿½Ô½Ã±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		rowCount = 16;
-	//	ÇÑ ÆäÀÌÁö¿¡¼­ ³ª¿À´Â ÆäÀÌÁö ¹öÆ°ÀÇ °³¼ö
+	//	ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		int pageCount = 5;
 		
 		offset = (page - 1) * rowCount;
@@ -89,9 +86,6 @@ public class Criteria {
 		this.next = next;
 	}
 	
-	public String[] getTypes() {
-		return type == null ? new String[] {} : type.split("&");
-	}
 }
 
 
