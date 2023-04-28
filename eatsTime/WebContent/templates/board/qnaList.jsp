@@ -142,7 +142,7 @@
                      </div>
                   </div>
 					<div class="css-1oe9o3r eula2qn2">   
-                     <button type="button" onclick="location.href='${pageContext.request.contextPath}/update.inquiryboard?inqbId=${boards.inqbId}'" class="css-qv4hdm eula2qn1">수정</button>
+                     <button type="button" onclick="location.href=`${pageContext.request.contextPath}/update.inquiryboard?inqbId=${boards.inqbId}`" class="css-qv4hdm eula2qn1">수정</button>
                      <div class="css-ord49b eula2qn0"></div>
                      <button type="button"  class="css-qv4hdm deletebtn">삭제</button>
                   </div>  

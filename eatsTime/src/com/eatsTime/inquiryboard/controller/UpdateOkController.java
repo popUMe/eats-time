@@ -19,13 +19,17 @@ public class UpdateOkController implements Action{
 	InquiryBoardDAO boardDAO=new InquiryBoardDAO();
 	Result result=new Result();
 	InquiryBoardVO boardVO=new InquiryBoardVO();
-	Long inqbId = Long.valueOf(req.getParameter("inqbId"));
-
-	boardVO.setInqbId(inqbId);
+//	Long inqbId = Long.valueOf(req.getParameter("inqbId"));
+//
+//	boardVO.setInqbId(inqbId);
 	boardVO.setInqbTitle(req.getParameter("inqbTitle"));
 	boardVO.setInqbContent(req.getParameter("inqbContent"));
 	
 	boardDAO.update(boardVO);
+	
+	System.out.println("updateOk 컨트롤러 들어옴");
+	
+	
 	result.setPath(req.getContextPath() + "/listOk.inquiryboard");
 	
 	

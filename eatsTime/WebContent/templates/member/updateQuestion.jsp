@@ -136,8 +136,7 @@
 							</div>
 						</div>
 						<div class="css-1spu0j4 ebvrvv11">
-							<button onclick="document.getElementById('formtag').submit();"
-								disabled="disabled" class="css-13kn1it ebvrvv10">수정</button>
+							<button onclick="location.href='${pageContext.request.contextPath}/updateOk.inquiryboard'" disabled="disabled" class="css-13kn1it ebvrvv10">수정</button>
 						</div>
 					</form>
 				</div>
