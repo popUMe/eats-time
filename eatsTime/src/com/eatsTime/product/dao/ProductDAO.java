@@ -17,39 +17,36 @@ public class ProductDAO {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
    }
    
-//   »óÇ° ÀüÃ¼ Á¶È¸
+//   ï¿½ï¿½Ç° ï¿½ï¿½Ã¼ ï¿½ï¿½È¸
    public List<ProductDTO> selectAll(HashMap<String, Object> pagable){
       return sqlSession.selectList("product.selectAll", pagable);
    }
-   
-   
-   // »óÇ° ÀüÃ¼ °³¼ö
    
    public int getTotal(HashMap<String, Object> pagable) {
       return sqlSession.selectOne("product.getTotal", pagable);
    }
    
-   // ¹è¼ÛÁ¦Ç° ÃÑ°³¼ö
+   // ï¿½ï¿½ï¿½ï¿½ï¿½Ç° ï¿½Ñ°ï¿½ï¿½ï¿½
    public int getDeliveryTotal() {
       return sqlSession.selectOne("product.getDeliveryTotal");
    }
    
-   //¹è¼Û Á¦Ç° ÆäÀÌÂ¡ Á¶È¸
+   //ï¿½ï¿½ï¿½ ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½Â¡ ï¿½ï¿½È¸
    public List<ProductDTO> selectDeliveryAll(HashMap<String, Object> pagable){
       return sqlSession.selectList("product.selectDeliveryAll", pagable);
    }
    
-   // ÇÈ¾÷Á¦Ç° ÃÑ°³¼ö
+   // ï¿½È¾ï¿½ï¿½ï¿½Ç° ï¿½Ñ°ï¿½ï¿½ï¿½
    public int getPickUpTotal() {
       return sqlSession.selectOne("product.getPickUpTotal");
    }
    
-   //ÇÈ¾÷ Á¦Ç° ÆäÀÌÂ¡ Á¶È¸
+   //ï¿½È¾ï¿½ ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½Â¡ ï¿½ï¿½È¸
    public List<ProductDTO> selectPickUpAll(HashMap<String, Object> pagable){
       return sqlSession.selectList("product.selectPickUpAll", pagable);
    }
    
-   // »óÇ° »ó¼¼º¸±â
+   // ï¿½ï¿½Ç° ï¿½ó¼¼ºï¿½ï¿½ï¿½
    public ProductDTO selectProductDetail(String productId){
       return sqlSession.selectOne("product.selectProductDetail", productId);
    }
@@ -58,5 +55,12 @@ public class ProductDAO {
    public ProductDTO selectPurchase(String productId){
       return sqlSession.selectOne("product.selectProductDetail", productId);
    }
+   
+   // 4ì›” 28ì¼ ê¹€ì¸ì§„ ë¶€ë¶„
+   // ìƒí’ˆ ë“±ë¡
+   public void insert(ProductVO productVO) {
+	   sqlSession.insert("product.insert", productVO);
+   }
+   
    
 }

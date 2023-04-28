@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import com.eatsTime.Result;
 import com.eatsTime.member.controller.DeleteOkController;
 import com.eatsTime.member.controller.JoinOkController;
-import com.eatsTime.member.controller.ListOkController;
 import com.eatsTime.member.controller.LoginOkController;
 import com.eatsTime.member.controller.ModifyController;
 import com.eatsTime.member.controller.ModifyOkController;
 import com.eatsTime.member.controller.UpdateStatusOkController;
+import com.eatsTime.notificationboard.controller.ListOkController;
 
 public class MemberFrontController extends HttpServlet {
 
