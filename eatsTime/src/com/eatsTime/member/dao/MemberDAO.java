@@ -1,11 +1,14 @@
 package com.eatsTime.member.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.eatsTime.member.domain.Criteria;
 import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
+import com.mysql.cj.Session;
 
 public class MemberDAO {
 	public SqlSession sqlSession;
@@ -14,19 +17,41 @@ public class MemberDAO {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	// ¸¶ÀÌÆäÀÌÁö ºÒ·¯¿À±â
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
 	public List<MemberVO> selectAll(MemberVO memberVO) {
 		return sqlSession.selectList("member.selectAll", memberVO);
 	}
 	
-	// È¸¿øÁ¤º¸¼öÁ¤
+	// È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void update(MemberVO memberVO) {
 		sqlSession.update("member.update", memberVO);
 	}
 	
-	// È¸¿øÅ»Åğ
+	// È¸ï¿½ï¿½Å»ï¿½ï¿½
 	public void delete(String memberId) {
 		sqlSession.delete("member.delete", memberId);
 	}
+	
+	
+//	ê´€ë¦¬ìí˜ì´ì§€ - íšŒì› ì „ì²´ ì¡°íšŒ
+	public List<MemberVO> selectAllMember(Criteria criteria) {
+		return sqlSession.selectList("member.selectAllMember", criteria);
+	}
+	
+//	í˜ì´ì§•ì²˜ë¦¬ ì „ì²´ íšŒì› ê°œìˆ˜ ì¡°íšŒ
+	public int getTotal() {
+		return sqlSession.selectOne("member.getTotal");
+	}
+
+	
+//	ê´€ë¦¬ìí˜ì´ì§€ - íšŒì› ìƒíƒœ ë³€ê²½
+	public void updateStatus(Long memberId, boolean status) {
+		HashMap<String, Object> updateMap = new HashMap();
+		updateMap.put("memberId", memberId);
+		updateMap.put("status", status);
+		sqlSession.update("member.updateStatus", updateMap);
+	}
+	
+	
 
 }
