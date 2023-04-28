@@ -15,6 +15,7 @@ import com.eatsTime.member.controller.LoginOkController;
 import com.eatsTime.member.controller.ModifyController;
 import com.eatsTime.member.controller.ModifyOkController;
 import com.eatsTime.member.controller.UpdateStatusOkController;
+import com.eatsTime.member.dao.MemberDAO;
 
 public class MemberFrontController extends HttpServlet {
 

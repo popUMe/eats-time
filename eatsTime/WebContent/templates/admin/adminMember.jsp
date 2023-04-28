@@ -17,11 +17,11 @@
 	
 	<div id="sidebar">
 	 	<div id="logo">
-	 		<a class="logo" href="${pageContext.request.contextPath}/lisOk.notificationboard">
+	 		<a class="logo" href="${pageContext.request.contextPath}/adminindex.notificationboard">
 	 			<img src="${pageContext.request.contextPath}/static/image/logo.png" alt="이츠타임 로고">
 	 		</a>
 	 	</div>
-		<a class="nav_list" href="${pageContext.request.contextPath}/lisOk.notificationboard">공지사항</a> 
+		<a class="nav_list" href="${pageContext.request.contextPath}/adminindex.notificationboard">공지사항</a> 
 		<a class="nav_list" href="${pageContext.request.contextPath}/listOk.member">회원관리</a> 
 		<a class="nav_list" href="${pageContext.request.contextPath}/lisOk.Inquiryboard">문의내역</a>
 	</div>
