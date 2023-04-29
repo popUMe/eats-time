@@ -90,9 +90,9 @@
 				<div class="css-185m8ch e1153ede0">
 
 
-					<form
-						action="${pageContext.request.contextPath}/updateOk.inquiryboard"
-						id="formtag" name="writeForm" method="post">
+					<form action="${pageContext.request.contextPath}/updateOk.inquiryboard?inqbId=${boards.inqbId}"
+						id="formtag" name="writeForm" method="post" >
+						<input type="hidden" name="inqbId">
 						<div class="css-17bp14q e1vbjq4w3">
 							<div class="css-mm5tap e1vbjq4w2">
 								<label for="inquiry-subject"> 제목 <span
@@ -104,8 +104,8 @@
 									<div height="44" class="css-t7kbxx e1uzxhvi3">
 										<input data-testid="input-box" id="inquiry-subject"
 											name="inqbTitle" placeholder="제목을 입력해주세요" type="text"
-											height="44" class="css-1quw3ub e1uzxhvi2" autocomplete="off"
-											value="${boards.inqbTitle}" />
+											height="44" class="css-1quw3ub e1uzxhvi2" autocomplete="off" value="${boards.inqbTitle}">
+											
 									</div>
 								</div>
 							</div>
@@ -118,13 +118,14 @@
 									</label>
 								</div>
 								<!-- 내용을 작성할 곳 -->
+								
 								<div class="css-12l4j2c e1vbjq4w1">
 									<div class="css-0 e1tjt2bn7">
 										<div class="css-1gua357 e1tjt2bn5">
 											<textarea id="inquiry-contents" inputmode="text"
 												aria-label="textarea-message" name="inqbContent"
 												class="css-5etceh e1tjt2bn1" maxlength="5000"
-												/>${boards.inqbContent}</textarea>
+												>${boards.inqbContent}</textarea>
 										
 											<span class="content-length-counter css-dbwxb9 e1tjt2bn0">
 												<span> <span class="css-14kcwq8 e1tjt2bn2">0자</span>
@@ -136,7 +137,7 @@
 							</div>
 						</div>
 						<div class="css-1spu0j4 ebvrvv11">
-							<button onclick="location.href='${pageContext.request.contextPath}/updateOk.inquiryboard'" disabled="disabled" class="css-13kn1it ebvrvv10">수정</button>
+							<button onclick="document.getElementById('formtag').submit();" disabled="disabled" class="css-13kn1it ebvrvv10">수정</button>
 						</div>
 					</form>
 				</div>

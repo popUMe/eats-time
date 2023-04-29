@@ -8,6 +8,7 @@
    
    <typeAliases>
       <typeAlias type="com.eatsTime.answerboard.domain.AnswerBoardVO" alias="answerBoardVO"/>
+      <typeAlias type="com.eatsTime.answerboard.domain.AnswerBoardDTO" alias="answerBoardDTO"/>
       <typeAlias type="com.eatsTime.file.domain.FileVO" alias="fileVO"/>
       <typeAlias type="com.eatsTime.inquiryboard.domain.InquiryBoardVO" alias="inquiryBoardVO"/>
       <typeAlias type="com.eatsTime.inquiryboard.domain.InquiryBoardDTO" alias="inquiryBoardDTO"/>

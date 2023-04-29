@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
-import com.eatsTime.controller.AnswerOkController;
+import com.eatsTime.controller.AnswerListOkController;
+import com.eatsTime.controller.DetailOkController;
 import com.eatsTime.member.controller.JoinOkController;
 
 public class AnswerFrontController extends HttpServlet {
@@ -17,13 +18,15 @@ public class AnswerFrontController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
+		System.out.println(target);
 		Result result = null;
 
-		if(target.equals("answerOk")) {
-			result = new AnswerOkController().execute(req, resp);
+		if(target.equals("answerList")) {
+			System.out.println("AnswerList fk 들어옴");
+			result = new AnswerListOkController().execute(req, resp);
 			
-		} else if(target.equals("")) {
-			result = new JoinOkController().execute(req, resp);
+		} else if(target.equals("detailOk")) {
+			result = new DetailOkController().execute(req, resp);
 		}
 		
 		if(result != null) {

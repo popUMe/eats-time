@@ -1,4 +1,4 @@
-package com.eatsTime.inquiryboard.controller;
+package com.eatsTime.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -7,31 +7,34 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import com.eatsTime.Action;
 import com.eatsTime.Result;
-import com.eatsTime.inquiryboard.dao.InquiryBoardDAO;
-import com.eatsTime.inquiryboard.domain.Criteria;
+import com.eatsTime.answerboard.dao.AnswerBoardDAO;
+import com.eatsTime.answerboard.domain.AnswerBoardDTO;
+import com.eatsTime.answerboard.domain.Criteria;
 
-public class ListOkController implements Action {
+public class AnswerListOkController implements Action{
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		resp.setContentType("text/html;charset=utf-8");
-		System.out.println("ListOkController 들어옴");
 
-		InquiryBoardDAO boardDAO=new InquiryBoardDAO();
+		resp.setContentType("text/html;charset=utf-8");
+
+		System.out.println("AnswerListOkController 들어옴");
+
+		AnswerBoardDAO boardDAO=new AnswerBoardDAO();
+//		AnswerBoardDTO boardDTO=new AnswerBoardDTO();
+		
 		Result result=new Result();
 		
 		String temp = req.getParameter("page");
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 		
-//		JSONArray jsonArray=new JSONArray();
 		
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		Criteria criteria = new Criteria(page, boardDAO.getTotal());
+		
+		System.out.println(criteria);
 		
 		pagable.put("offset", criteria.getOffset());
 		pagable.put("rowCount", criteria.getRowCount());
@@ -46,9 +49,12 @@ public class ListOkController implements Action {
 		req.setAttribute("prev", criteria.isPrev());
 		req.setAttribute("next", criteria.isNext());
 
-		result.setPath("templates/board/qnaList.jsp");
-
+		System.out.println("여기까지 오나");	
+		System.out.println(boardDAO.selectAll(pagable));
+		
+		result.setPath("templates/admin/adminQna.jsp");
+		
 		return result;
-	}
 
+	}
 }

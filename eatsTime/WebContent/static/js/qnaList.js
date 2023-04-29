@@ -111,23 +111,34 @@ $(".canceldeletion").on("click", function() {
 	$("body").css('overflow', 'auto');
 });
 
-/*확인버튼 클릭 시 모달창 : 삭제 완료*/
+/*확인버튼 클릭 시 모달창 : 삭제 완료
 $(".yesdeletion").click(function() {
 	console.log("들어옴");
 	$(this).closest("#modal1").fadeOut();
-	/* $("#modal2").css('display', 'block');*/
+	/* $("#modal2").css('display', 'block');
 	$("#modal2").fadeIn();
-});
+	location.href=`contextPath/deleteOk.inquiryboard?inqbId=${boards.inqbId}`
+});*/
 
-$(".deleteioncomplete").on("click", function(){
-	let i=$(".deleteioncomplete").index($(this));
-	console.log(i);
-	location.href=`$contextPath/deleteOk.inquiryboard?inqbId=${i}`;
-	
-})
 
 /* 확인 버튼 클릭 시 '삭제 완료' 종료*/
-$(".deleteioncomplete").on("click", function() {
+$(".yesdeletion").on("click", function() {
 	$("#modal2").fadeOut();
 	$("body").css('overflow', 'auto');
+	let i=$(".deleteioncomplete").index($(this));
+	console.log(i);
+	location.href=`deleteOk.inquiryboard?inqbId=${bor}`;
 });
+
+
+//$(".deleteioncomplete").on("click", function(){
+//	
+//})
+
+//$(".deleteioncomplete").on("click", function() {
+//	$("#modal2").fadeOut();
+//	$("body").css('overflow', 'auto');
+//// 	let i=$(".deleteioncomplete").index($(this));
+//// 	console.log(i);
+//	location.href=`deleteOk.inquiryboard?inqbId=${inqbId}`;
+//});

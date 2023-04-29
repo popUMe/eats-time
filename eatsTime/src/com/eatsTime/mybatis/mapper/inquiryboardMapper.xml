@@ -52,10 +52,6 @@
 		where inqb_id = #{inqbId}
 	</delete>
 	
-	<select id="answer" resultType="inquiryboardDTO">
-		select i.inqb_id, a.ansb_title, a.ansb_content,a.ansb_date
-		from tbl_inquireboard i, tbl_answerboard a
-		on i.inqb_id=a.inqb_id;
-	</select>
+	
 	
 </mapper>
