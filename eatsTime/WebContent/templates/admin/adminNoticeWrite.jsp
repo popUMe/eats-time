@@ -20,17 +20,17 @@
 					<dl>
 						<dt>제목</dt>
 						<dd>
-							<input id="title" name="notbTitle" type="text" placeholder="제목 입력">
+							<input id="board-title" name="notbTitle" type="text" placeholder="제목 입력">
 						</dd>
 					</dl>
 				</div>
 				<div class="cont">
-					<textarea id="content" name="notbContent" inputmode="text" placeholder="내용 입력"></textarea>
+					<textarea id="board-content" name="notbContent" inputmode="text" placeholder="내용 입력"></textarea>
 				</div>
 			</div>		
 			</div>
 			<div class="btn" style="background-color:black;">
-				<button type="submit" class="on" style="cursor:pointer; border:none;">제출</button>
+				<button disabled id="write-ok" type="submit" class="on" style="cursor:pointer; border:none;">제출</button>
 			</div>
 			<div class="btn">
 				<a href="listOk.notificationboard" style="cursor:pointer">취소</a>

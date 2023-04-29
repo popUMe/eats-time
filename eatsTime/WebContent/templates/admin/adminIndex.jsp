@@ -30,7 +30,7 @@
 		<form action="deleteOk.notificationboard" method="post">
 		<div class="btn">
 		<button type="button" id="add-btn" onclick="location.href='adminNoticeWrite.notificationboard'">작성</button>
-  		<button id="delete-btn" type="submit">삭제</button>
+  		<button disabled id="delete-btn" type="submit">삭제</button>
   		</div>
   	<table class="overflow" id="pagingul">
   		<tr>
