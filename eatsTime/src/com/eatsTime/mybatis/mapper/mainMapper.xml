@@ -54,9 +54,15 @@
 		limit #{offset}, #{rowCount}
 	</select>
 
-
-
-
+<select id="getTotal" parameterType="Search" resultType="java.lang.Integer">
+    select * from (
+        select p.product_id, p.name, p.price, p.description, f.file_id, f.file_name, m.member_id, m.member_name
+        from product p
+        join file f on p.product_id = f.product_id
+        join member m on p.member_id = m.member_id
+        where p.name = #{name}
+    ) as result;
+</select>
 
 
 

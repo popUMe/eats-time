@@ -25,15 +25,7 @@ import com.eatsTime.main.controller.SearchOkController;
 	        } else if(target.equals("indexPage")) {
 	        	result = new Result();
 	        	result.setPath("/templates/index.jsp");
-	        } else if(target.equals("productListAll")) {
-	        	result = new Result();
-	        	result.setPath("/templates/product/productListAll.jsp");
-	        } else if(target.equals("productListDelivery")) {
-	        	result = new Result();
-	        	result.setPath("/templates/product/productListDelivery.jsp");
-	        } else if(target.equals("productListPickup")) {
-	        	result = new Result();
-	        	result.setPath("/templates/product/productListPickup.jsp");
+	        
 	        } else if(target.equals("serviceInfo")) {
 	        	result = new Result();
 	        	result.setPath("/templates/service_info.jsp");
@@ -53,7 +45,7 @@ import com.eatsTime.main.controller.SearchOkController;
 	        } else if (target.equals("noticeList")) {
 	        	result = new Result();
 	        	result.setPath("/templates/board/noticeList.jsp");
-	        }
+	        } 
 	        
 	
 	        if(result != null) {
