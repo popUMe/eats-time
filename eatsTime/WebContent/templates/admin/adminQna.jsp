@@ -14,8 +14,7 @@
 
 <style>
 @import
-	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap')
-	;
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 </style>
 </head>
 <body>
@@ -44,7 +43,7 @@
 				<button id="add-btn">작성</button>
 				<button id="delete-btn">삭제</button>
 			</div>
-<<<<<<< HEAD
+
 			
 							<!-- 게시글 목록 -->
                   
