@@ -16,8 +16,8 @@
 	
 	<!--    게시글 전체 조회 -->
 	<select id="selectAll" resultType="answerBoardDTO">
-	select m.member_id, m.member_identification, i.inqb_id, i.inqb_title , i.inqb_content, a.ansb_title, a.ansb_content,a.ansb_date, i.inqb_complete
-	from tbl_inquireboard i join tbl_answerboard a on i.inqb_id=a.inqb_id join tbl_member m on m.member_id=i.member_id
+	select m.member_id, m.member_identification, i.inqb_id, i.inqb_title , i.inqb_content, i.inqb_complete
+	from tbl_inquireboard i join tbl_member m on m.member_id=i.member_id
 	order by i.inqb_id desc
 	limit #{offset}, #{rowCount}
 	</select>
