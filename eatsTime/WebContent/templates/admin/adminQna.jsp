@@ -19,21 +19,32 @@
 </style>
 </head>
 <body>
+
 	<div id="sidebar">
-		<div id="logo"></div>
-		<a href="adminIndex.jsp">공지사항</a> <a href="adminMember.jsp">회원관리</a> <a
-			href="adminQna.jsp">문의내역</a>
+	 	<div id="logo">
+	 		<a class="logo" href="${pageContext.request.contextPath}/adminindex.notificationboard">
+	 			<img src="${pageContext.request.contextPath}/static/image/logo.png" alt="이츠타임 로고">
+	 		</a>
+	 	</div>
+		<a class="nav_list" href="${pageContext.request.contextPath}/adminindex.notificationboard">공지사항</a> 
+		<a class="nav_list" href="${pageContext.request.contextPath}/listOk.member">회원관리</a> 
+		<a class="nav_list" href="${pageContext.request.contextPath}/lisOk.Inquiryboard">문의내역</a>
 	</div>
+
 	
 	<div id=:logo></div>
 
+
 	<div class="content">
 		<h1>문의 관리</h1>
-		<div id=table-container>
+		<div class="con-wrap">
+			<div id=table-container>
+		
 			<div class="btn">
 				<button id="add-btn">작성</button>
 				<button id="delete-btn">삭제</button>
 			</div>
+<<<<<<< HEAD
 			
 							<!-- 게시글 목록 -->
                   
@@ -121,6 +132,7 @@
 <!-- 				<a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a> -->
 <!-- 				<a href="#">4</a> <a href="#">5</a> -->
 <!-- 			</div> -->
+
 		</div>
 	</div>
 </body>

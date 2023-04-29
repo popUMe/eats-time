@@ -1,6 +1,7 @@
 package com.eatsTime.answerboard.domain;
 
 public class AnswerBoardDTO {
+
 	
 	private Long ansbId;
 	private String ansbTitle;
@@ -159,6 +160,6 @@ public class AnswerBoardDTO {
 	
 	
 	
-	
+
 
 };

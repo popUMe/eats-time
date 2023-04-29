@@ -33,9 +33,7 @@
 			</div>
 			<div class="css-1xvp3jp ezf0ge90">
 				<div>
-					<p>
-						<c:out value="${notbContent}"/>
-					</p>
+					<pre><p style="font-family: Noto Sans, malgun gothic, AppleGothic, dotum, sans-serif;"><c:out value="${notbContent}"/></p></pre>
 				</div>
 			</div>
 			<div class="css-d7qwpj e1p3kiis0">
