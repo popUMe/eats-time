@@ -33,8 +33,8 @@ public class JoinOkController implements Action {
 		
 		memberDAO.insert(memberVO);
 		
-		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/login.member");
+//		result.setRedirect(true);
+		result.setPath(req.getContextPath() + "/templates/member/signupOk.jsp");
 		
 		
 		return result;

@@ -283,7 +283,6 @@ function validateBirthday() {
 }
 
 
-document.getElementById("RequiredTermsCondition").click();
 
 /*
 const $allAgreeCheckboxes = $(".css-s5xdrg input:not(#TermsAgreeAll)");
