@@ -72,8 +72,8 @@
 				<!-- 검색창 부분 -->
 				<div class="css-pqw0uk e1493ofl4">
 					<div class="css-w444a2 e1493ofl1">
-						<input id="gnb_search" placeholder="검색어를 입력해주세요" required=""
-							class="css-11ntk83 e1493ofl3" value=""
+						<input id="gnb_search" name="keyword" placeholder="검색어를 입력해주세요" required=""
+							class="css-11ntk83 e1493ofl3" value="${keyword}"
 							onkeypress="if( event.keyCode == 13 ){search();}">
 						<button id="submit" aria-label="submit"
 							class="css-ywxmlw e1493ofl0" onclick="search();"></button>
@@ -149,7 +149,8 @@
 	 document.getElementById("submit").click();
 	 }
 	 }); */
-	function search() {
+		function search() {
+		 location.href=`${pageContext.request.contextPath}/productListOk.product?category=${category}&keyword=` + $("#gnb_search").val();
 		
 	}
 </script>
