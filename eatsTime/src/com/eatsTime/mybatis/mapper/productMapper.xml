@@ -31,6 +31,12 @@
 					product_category = '1'
 				</when>
 			</choose>
+			
+			<choose>
+				<when test="keyword != null">
+					and product_name like concat('%', #{keyword}, '%')
+				</when>
+			</choose>
 		</where>
 
 		<choose>
@@ -61,10 +67,14 @@
 				<when test="category == 'send'.toString()">
 					product_category = '1'
 				</when>
-				<otherwise>
-				</otherwise>
+			</choose>
+			<choose>
+				<when test="keyword != null">
+					and product_name like concat('%', #{keyword}, '%')
+				</when>
 			</choose>
 		</where>
+
 	</select>
 
 	<!-- 배송 제품 총 개수 -->
