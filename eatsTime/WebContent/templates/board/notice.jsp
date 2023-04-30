@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,25 +21,23 @@
 		<div class="css-1t45bai erzmnr90">
 			<div class="css-1dhg94g e1pwb5hv0">
 				<div class="css-1xrh39a e1pwb5hv2">제목</div>
-				<div class="css-8vgw34 e1pwb5hv1">[안내] 서비스 오픈 안내문</div>
+				<div class="css-8vgw34 e1pwb5hv1"><c:out value="${notbTitle}"/></div>
 			</div>
 			<div class="css-1dhg94g e1pwb5hv0">
 				<div class="css-1xrh39a e1pwb5hv2">작성자</div>
-				<div class="css-8vgw34 e1pwb5hv1">이츠타임</div>
+				<div class="css-8vgw34 e1pwb5hv1"><c:out value="${memberName}"/></div>
 			</div>
 			<div class="css-1dhg94g e1pwb5hv0">
 				<div class="css-1xrh39a e1pwb5hv2">작성일</div>
-				<div class="css-8vgw34 e1pwb5hv1">2023.05.03</div>
+				<div class="css-8vgw34 e1pwb5hv1"><c:out value="${notbDate}"/></div>
 			</div>
 			<div class="css-1xvp3jp ezf0ge90">
 				<div>
-					<p>
-						<img alt="image" src="${pageContext.request.contextPath}/static/image/notice_001.jpg">
-					</p>
+					<pre><p style="font-family: Noto Sans, malgun gothic, AppleGothic, dotum, sans-serif;"><c:out value="${notbContent}"/></p></pre>
 				</div>
 			</div>
 			<div class="css-d7qwpj e1p3kiis0">
-				<button onclick="location.href='noticeList.jsp'" class="css-214ym4 e4nu7ef3" type="button" width="150" height="42" radius="0">
+				<button onclick="location.href='${pageContext.request.contextPath}/noticeListOk.notificationboard'" class="css-214ym4 e4nu7ef3" type="button" width="150" height="42" radius="0">
 					<span class="css-ymwvow e4nu7ef1">목록</span>
 				</button>
 			</div>		

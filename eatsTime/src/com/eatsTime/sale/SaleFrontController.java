@@ -8,33 +8,33 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
-import com.eatsTime.member.controller.JoinOkController;
+import com.eatsTime.product.controller.ProductListDeliveryOkController;
+import com.eatsTime.product.controller.ProductListOkController;
 
 public class SaleFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-		
+
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 
-//		¿©±â if¹® else if¹® ¿¹½Ã´Ï±î °¢ ÇÁ·ĞÆ® ÄÁÆ®·Ñ·¯¿¡ ¸ÂÃç¼­ ¼öÁ¤ÇØ¼­ ÀÛ¾÷
-		if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
-			
-		} else if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
+		// ì‘ì—… ë‹¤ì‹œ í•´ì•¼í•¨ ì—¬ê¸°ëŠ” ê·¸ëƒ¥ ì¨ë†“ì€ê±°
+		if (target.equals("productListOk")) {
+			result = new ProductListOkController().execute(req, resp);
+		} else if (target.equals("productListDeliveryOk")) {
+			result = new ProductListDeliveryOkController().execute(req, resp);
 		}
-		
-		if(result != null) {
-			if(result.isRedirect()) {
+
+		if (result != null) {
+			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
-			}else {
+			} else {
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
 		}
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);

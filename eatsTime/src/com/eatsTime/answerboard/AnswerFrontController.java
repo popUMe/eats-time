@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+import com.eatsTime.controller.AnswerListOkController;
+import com.eatsTime.controller.DetailOkController;
+import com.eatsTime.inquiryboard.controller.DeleteOkController;
 import com.eatsTime.member.controller.JoinOkController;
 
 public class AnswerFrontController extends HttpServlet {
@@ -16,14 +19,19 @@ public class AnswerFrontController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
+		System.out.println(target);
 		Result result = null;
 
-//		¿©±â if¹® else if¹® ¿¹½Ã´Ï±î °¢ ÇÁ·ÐÆ® ÄÁÆ®·Ñ·¯¿¡ ¸ÂÃç¼­ ¼öÁ¤ÇØ¼­ ÀÛ¾÷
-		if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
+		if(target.equals("answerList")) {
+			System.out.println("AnswerList fk ë“¤ì–´ì˜´");
+			result = new AnswerListOkController().execute(req, resp);
 			
-		} else if(target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
+		} else if(target.equals("detailOk")) {
+			result = new DetailOkController().execute(req, resp);
+		
+		} else if(target.equals("deleteOk")) {
+			System.out.println("deleteOk ë“¤ì–´ì˜´");
+			result = new DeleteOkController().execute(req, resp);
 		}
 		
 		if(result != null) {

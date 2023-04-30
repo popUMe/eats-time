@@ -17,18 +17,34 @@
 		</div>
 		<div id="notificationboard" class="board_view_wrap">
 			<div class="board_view">
+				<div class="title"><c:out value="${notbTitle}"/></div>
+				<div class="info">
+					<dl id="id_wrapper">
+						<dt>번호</dt>
+						<dd><c:out value="${notbId}"/></dd>
+					</dl>
+					<dl id="date_wrapper">
+						<dt>작성일</dt>
+						<dd><c:out value="${notbDate}"/></dd>
+					</dl>
+					<dl id="hit_wrapper">
+						<dt>조회</dt>
+						<dd><c:out value="${notbHit}"/></dd>
+					</dl>
+				</div>
+				<div id="content_wrapper">
+					<div class="cont"><pre><c:out value="${notbContent}"/></pre></div>
+				</div>
 			</div>
+			<div class="btn" style="background-color: black;">
+				<a href="${pageContext.request.contextPath}/listOk.notificationboard" class="on">목록</a>
+			</div> 
 			<div class="btn">
-				<a href="${pageContext.request.contextPath}/listOk.notificationboard" class="on">목록</a> <a
-					href="adminNoticeEdit.jsp">수정</a>
+				<a href="${pageContext.request.contextPath}/adminEdit.notificationboard?notbId=${notbId}">수정</a>
 			</div>
 		</div>
 	</div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script>
-const notificationboard = JSON.parse(`${notificationboard}`);
-console.log(notificationboard);
-</script>
 <script src="${pageContext.request.contextPath}/static/js/adminNoticeView.js"></script>	
 </html>

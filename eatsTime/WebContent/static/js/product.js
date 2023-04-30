@@ -40,7 +40,7 @@ $(document).ready(function() {
       } else {
          sort = 'highPrice'
       }
-      location.href = `${contextPath}/productListOk.product?sort=${sort}&category=${category}`;
+      location.href = `${contextPath}/productListOk.product?sort=${sort}&category=${category}&keyword=${keyword}`;
    });
 
    /* 배송 */
@@ -55,7 +55,7 @@ $(document).ready(function() {
       } else {
          sort = 'highPrice'
       }
-      location.href = `${contextPath}/productListDeliveryOk.product?sort=${sort}`;
+      location.href = `${contextPath}/productListDeliveryOk.product?sort=${sort}&keyword=${keyword}`;
    });
 
    /* 픽업 */
@@ -70,7 +70,7 @@ $(document).ready(function() {
       } else {
          sort = 'highPrice'
       }
-      location.href = `${contextPath}/productListPickUpOk.product?sort=${sort}`;
+      location.href = `${contextPath}/productListPickUpOk.product?sort=${sort}&keyword=${keyword}`;
    });
 
 
@@ -85,7 +85,8 @@ $(document).ready(function() {
       } else if (i == 1) {
          category = 'pickUp';
       }
-      location.href = `${contextPath}/productListOk.product?sort=${sort}&category=${category}`;
+
+      location.href = `${contextPath}/productListOk.product?sort=${sort}&category=${category}&keyword=${keyword}`;
 
    });
 
@@ -102,7 +103,9 @@ $(document).ready(function() {
 
    function showList() {
       const $div = $(".css-11kh0cw");
+	const $notDiv = $(".notFind");
       let text = "";
+	 let notFindText="";
 
       products.forEach(product => {
 
@@ -114,8 +117,11 @@ $(document).ready(function() {
                                  style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
 
                                  <img alt="상품 이미지" src="${contextPath}/upload/${product.fileName}" decoding="async" data-nimg="fill"
-                                 class="css-0" sizes="100vw">
 
+
+                                 <img alt="상품 이미지" src="${contextPath}/upload/${product.fileName}" decoding="async" data-nimg="fill"
+
+                                 class="css-0" sizes="100vw">
                               </span>
                               <div>
                               </div>
@@ -139,13 +145,11 @@ $(document).ready(function() {
       });
 
       if (products.length == 0) {
-         text += `
-         <li>
-              <div>
-               현재 상품이 없습니다.
-            </div>
-         </li>
+         notFindText = `
+      <div class="css-1lo9184 ezccri60">검색된 상품이 없습니다.</div>
       `
+	$notDiv.append(notFindText);
+	return;
       }
 
       $div.append(text);

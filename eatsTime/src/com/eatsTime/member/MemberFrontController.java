@@ -13,10 +13,13 @@ import com.eatsTime.member.controller.CheckIdOkController;
 import com.eatsTime.member.controller.DeleteOkController;
 import com.eatsTime.member.controller.JoinOkController;
 import com.eatsTime.member.controller.LoginController;
+import com.eatsTime.member.controller.ListOkController;
 import com.eatsTime.member.controller.LoginOkController;
 import com.eatsTime.member.controller.LogoutController;
 import com.eatsTime.member.controller.ModifyController;
 import com.eatsTime.member.controller.ModifyOkController;
+import com.eatsTime.member.controller.UpdateStatusOkController;
+import com.eatsTime.member.dao.MemberDAO;
 
 public class MemberFrontController extends HttpServlet {
 
@@ -68,8 +71,20 @@ public class MemberFrontController extends HttpServlet {
 
 		} else if (target.equals("modifyOk")) {
 			result = new ModifyOkController().execute(req, resp);
+		
+		} 
+		
+//		관리자페이지 - 회원 전체조회
+		else if (target.equals("listOk")) {
+			result = new ListOkController().execute(req, resp);
 		}
-
+		
+//		관리자페이지 - 회원 상태변경
+		else if(target.equals("updateStatusOk")) {
+			result = new UpdateStatusOkController().execute(req, resp);
+		}
+		
+		
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());

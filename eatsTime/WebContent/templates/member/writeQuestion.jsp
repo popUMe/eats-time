@@ -187,7 +187,7 @@
                </style>
                <div class="popup-content css-15yaaju e1k5padi2">1:1 문의가 정상적으로 접수되었습니다.</div>
                <div class="popup-footer css-1ol9ch1 e1k5padi0">
-                  <button onclick="location.href='${pageContext.request.contextPath}/templates/board/qnaList.jsp'" class="css-1necch4 e1k5padi1">확인</button>
+                  <button type="submit" onclick="location.href='${pageContext.request.contextPath}/listOk.inquiryboard'" class="css-1necch4 e1k5padi1">확인</button>
                </div>
             </div>
          </div>

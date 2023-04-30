@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +37,7 @@
 									<g>
 										<g transform="translate(-339 -398) translate(0 386) translate(339 12) translate(4.69 6.343)">
 											<use stroke="#333" stroke-linecap="round" stroke-width="1.8" stroke-linejoin="round" transform="rotate(45 5.657 5.657)" xlink:href="#gfk9q0rhta">
-											</use>
+											S</use>
 										</g>
 									</g>
 								</g>
@@ -62,26 +64,32 @@
 			</div>
 		<!-- 게시글 목록 -->
 			<ul class="css-1fttcpj e1cfowvj5">
+			<c:forEach var="notificationboards" items="${notificationboards}">
 				<li>
-					<a href="notice.jsp">
+					<a href="${pageContext.request.contextPath}/noticeViewOk.notificationboard?notbId=${notificationboards.notbId}">
 						<div class="css-14yglsw e1cfowvj4">
-							<div class="css-3o6rrk e1cfowvj2">공지</div>
-							<div class="css-fzefrb e1cfowvj2">[안내] 샛별배송 서비스 확장 안내(2023.04.01~)</div>
-							<div class="css-3d2kks e1cfowvj2">이츠타임</div>
-							<div class="css-b1hszl e1cfowvj2">2023.04.14</div>
+							<div class="css-3o6rrk e1cfowvj2">${notificationboards.notbId}</div>
+							<div class="css-fzefrb e1cfowvj2">${notificationboards.notbTitle}</div>
+							<div class="css-3d2kks e1cfowvj2">${notificationboards.memberName}</div>
+							<div class="css-b1hszl e1cfowvj2"><c:out value="${fn:split(notificationboards.notbDate,' ')[0]}"/></div>
 						</div>
 					</a>
 				</li>
+				</c:forEach>
 			</ul>
 		<!-- 페이지 앞/뒤로 넘기기 버튼 -->
 			<div class="css-1kbzkwh e14yho7m0">
 				<div class="css-sxxs1g eytury60">
-					<button type="button" class="css-rzcdhr e1hbwyso0">
-						<div class="css-7qb0sc e1ilyb3p0">이전</div>
-					</button>
-					<button type="button" class="css-1jwilit e1pk9060">
-						<div class="css-7qb0sc e1ilyb3p0">다음</div>
-					</button>
+				<c:if test="${prev}">
+	             <button onclick="location.href='noticeListOk.notificationboard?page=${startPage - 1}'" class="css-rzcdhr e1hbwyso0">
+	             	<div class="css-7qb0sc e1ilyb3p0">이전</div>
+	             </button>
+                </c:if>	
+                <c:if test="${next}">
+	                 <button onclick="location.href='noticeListOk.notificationboard?page=${endPage + 1}'" class="css-1jwilit e1pk9060">
+	                 	<div class="css-7qb0sc e1ilyb3p0">다음</div>
+	                 </button>
+                </c:if>
 				</div>
 			</div>
 		</div>
@@ -89,4 +97,6 @@
 	</div>
 	<jsp:include page="../footer.jsp" />
 </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/noticeList.js"></script>
 </html>

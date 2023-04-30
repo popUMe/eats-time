@@ -114,3 +114,4 @@ function autoSlide() {
         check = true;
     }, 700);
 }
+

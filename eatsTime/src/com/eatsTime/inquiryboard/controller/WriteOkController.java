@@ -36,7 +36,7 @@ public class WriteOkController implements Action {
 	
 //	System.out.println(boardVO);
 	
-	result.setPath(req.getContextPath() + "/templates/member/qnaList.jsp");
+	result.setPath(req.getContextPath() + "/listOk.inquiryboard");
 	result.setRedirect(true);
 	
 	return result;

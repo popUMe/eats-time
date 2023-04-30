@@ -22,11 +22,10 @@ public class UpdateController implements Action{
 
 			Long inqbId=Long.valueOf(req.getParameter("inqbId"));
 			
-			req.setAttribute("board", boardDAO.select(inqbId));
+			req.setAttribute("boards", boardDAO.select(inqbId));
 			
-			result.setPath("templates/member/updateQuetion.jsp");
+			result.setPath("templates/member/updateQuestion.jsp");
 
-			result.setPath(null);
 
 			return result;
 	}

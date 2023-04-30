@@ -14,25 +14,30 @@
 		</div>
 		<form action="writeOk.notificationboard" method="post">
 			<div class="board_write_wrap">
+
 			<div class="board_write">
 				<div class="title">
 					<dl>
 						<dt>제목</dt>
 						<dd>
-							<input name="notbTitle" type="text" placeholder="제목 입력">
+							<input id="board-title" name="notbTitle" type="text" placeholder="제목 입력">
 						</dd>
 					</dl>
 				</div>
 				<div class="cont">
-					<textarea name="notbContent" inputmode="text" placeholder="내용 입력"></textarea>
+					<textarea id="board-content" name="notbContent" inputmode="text" placeholder="내용 입력"></textarea>
 				</div>
+			</div>		
+			</div>
+			<div class="btn" style="background-color:black;">
+				<button disabled id="write-ok" type="submit" class="on" style="cursor:pointer; border:none;">제출</button>
 			</div>
 			<div class="btn">
-				<input type="submit"> <button>취소</button>
-			</div>
-			</div>
+				<a href="listOk.notificationboard" style="cursor:pointer">취소</a>
+			</div>						
 		</form>
-	</div>
-
+		</div>
 </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/adminNoticeWrite.js"></script>	
 </html>
