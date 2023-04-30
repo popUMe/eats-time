@@ -53,7 +53,7 @@
 						<a class="css-12olpw6 ecncdj40" href="board/qnaList.jsp">1:1 문의</a>
 					</div>
 				</div>
-			</div> -->
+			</div>
 
 		</c:otherwise>
  </c:choose>
