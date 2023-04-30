@@ -34,4 +34,9 @@ public class AnswerBoardDAO {
 		return sqlSession.selectOne("answerboard.select");
 	}
 	
+//	전체 게시글 리스트에서 게시글 삭제
+	public void delete(Long InqbId) {
+		System.out.println("AnswerBoardDao 들어옴");
+		sqlSession.delete("answerboard.delete", InqbId);
+	}
 }
