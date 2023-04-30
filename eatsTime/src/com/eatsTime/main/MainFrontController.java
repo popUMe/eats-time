@@ -19,35 +19,12 @@ import com.eatsTime.main.controller.SearchOkController;
 	        String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 	        Result result = null;
 	        System.out.print(target);
-	        if(target.equals("searchOk")) {
-	            result = new SearchOkController().execute(req, resp);
+	        if(target.equals("indexPage")) {
+	            result = new Result(); // null check 후 객체 생성
+	            result.setPath("/templates/index.jsp");
 	            System.out.println("들어옴4");
-	        } else if(target.equals("indexPage")) {
-	        	result = new Result();
-	        	result.setPath("/templates/index.jsp");
-	        
-	        } else if(target.equals("serviceInfo")) {
-	        	result = new Result();
-	        	result.setPath("/templates/service_info.jsp");
-	        } else if (target.equals("signup")) {
-	        	result = new Result();
-	        	result.setPath("/templates/member/signup.jsp");
-	        } else if (target.equals("login")) {
-	        	result = new Result();
-	        	result.setPath("/templates/member/login.jsp");
-	    
-	        } else if (target.equals("qnaList")) {
-	        	result = new Result();
-	        	result.setPath("/templates/board/qnaList.jsp");
-	        } else if (target.equals("notice")) {
-	        	result = new Result();
-	        	result.setPath("/templates/board/notice.jsp");
-	        } else if (target.equals("noticeList")) {
-	        	result = new Result();
-	        	result.setPath("/templates/board/noticeList.jsp");
 	        } 
-	        
-	
+
 	        if(result != null) {
 	            if(result.isRedirect()) {
 	                resp.sendRedirect(result.getPath());
@@ -55,7 +32,7 @@ import com.eatsTime.main.controller.SearchOkController;
 	                req.getRequestDispatcher(result.getPath()).forward(req, resp);
 	            }
 	        }
-	    }
+	        }
 	
 	    @Override
 	    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

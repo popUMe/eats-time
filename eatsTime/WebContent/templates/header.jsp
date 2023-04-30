@@ -21,16 +21,16 @@
 <c:when test="${sessionScope.memberId eq null}">
 
 			<div class="css-fexq9b eo7pjfk4">
-				<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/signup.main">회원가입</a>
+				<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/signup.member">회원가입</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
-				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.main">로그인</a>
+				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.member">로그인</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
-					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeList.main">고객센터<span
+					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeList.notificationboard">고객센터<span
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeList.main">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/qnaList.main">1:1
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeList.notificationboard">공지사항</a>
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/qnaList.notificationboard">1:1
 							문의</a>
 					</div>
 				</div>
@@ -76,7 +76,7 @@
 							class="css-11ntk83 e1493ofl3" value="">
 						<button id="submit" aria-label="submit"
 							class="css-ywxmlw e1493ofl0" 
-							onclick="location.href='${pageContext.request.contextPath}/searchOk.main'"></button>
+							onclick="location.href='${pageContext.request.contextPath}/productListOk.product'"></button>
 					</div>
 				</div>
 				<!-- 헤더 오른쪽 장바구니 등 부분 -->

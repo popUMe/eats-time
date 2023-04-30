@@ -55,10 +55,13 @@ let resultNum = 0;
 
 
 $(".cart-button").on("click", function(){
-   if(!`${product.memberId}`){
-      showWarnModal("로그인 후 사용해주세요")
+   if(memberId == ''){
+      showWarnModal("로그인 후 사용해주세요");
+	$('#content-wrap').on("click", function(){
+		location.href = `${contextPath}/login.member`;
+	});	
    }else {
-   location.href = `${contextPath}/purchaseOk.purchase?productId=${product.productId}&memberId=1&count=${$(".count").text()}`;
+   location.href = `${contextPath}/purchaseOk.purchase?productId=${product.productId}&memberId=${memberId}&count=${$(".count").text()}`;
    }
    
 })

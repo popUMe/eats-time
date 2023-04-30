@@ -16,8 +16,8 @@ public class InquiryBoardDAO {
 	}
 	
 	
-	public InquiryBoardDAO select(Long boardId) {
-		return sqlSession.selectOne("inquiryboard.select", boardId);
+	public InquiryBoardVO select(Long inqbId) {
+		return sqlSession.selectOne("inquiryboard.select", inqbId);
 	}
 	
 //	게시글 전체 조회
@@ -53,8 +53,8 @@ public class InquiryBoardDAO {
 	}
 	
 //	게시글 삭제
-	public void delete(Long boardId) {
-		sqlSession.delete("inquiryboard.delete", boardId);
+	public void delete(Long inqbId) {
+		sqlSession.delete("inquiryboard.delete", inqbId);
 	}
 	
 	
