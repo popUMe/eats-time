@@ -59,9 +59,9 @@ public class LoginOkController implements Action{
 			String memberGrade = loginVO.getMemberGrade();
 			
 			if("ADMIN".equals(memberGrade)) {
-				result.setPath(req.getContextPath() + "/templates/admin/adminIndex.jsp");
+				result.setPath(req.getContextPath() + "/adminindex.notificationboard");
 			} else {
-				result.setPath(req.getContextPath() + "/templates/index.jsp");
+				result.setPath(req.getContextPath() + "/index.member");
 			}
 
 			if(autoLogin) {

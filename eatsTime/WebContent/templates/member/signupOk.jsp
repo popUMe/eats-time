@@ -18,10 +18,10 @@
 		<div class="css-eqy22p e8mwi4j6">
 			<p class="css-b6e74t e8mwi4j5">회원가입이 완료되었습니다.</p>
 			<div class="css-1921apv e8mwi4j4">
-								<div class="css-1crdca1 e8mwi4j0">
+				<div class="css-1crdca1 e8mwi4j0">
 					<button class="css-7os9p2 e4nu7ef3" type="button"
-						onclick="location.href='signup.jsp'" height="46" radius="3">
-						<span class="css-ymwvow e4nu7ef1">마이페이지로 이동</span>
+						onclick="location.href='${pageContext.request.contextPath}/index.member'" height="46" radius="3">
+						<span class="css-ymwvow e4nu7ef1">홈페이지로 이동</span>
 					</button>
 				</div>
 			</div>
