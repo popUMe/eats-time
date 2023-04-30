@@ -24,11 +24,19 @@ public class AnswerFrontController extends HttpServlet {
 		if(target.equals("answerList")) {
 			System.out.println("AnswerList fk 들어옴");
 			result = new AnswerListOkController().execute(req, resp);
-			
 		} else if(target.equals("detailOk")) {
+			System.out.println("detailOk 로 보낼 fk 들어옴");
 			result = new DetailOkController().execute(req, resp);
-		}
-		
+		} else if(target.equals("writeAnswer"))
+			System.out.println("writeAnswer 프컨 들어옴");
+			result=new Result();
+			result.setPath("templates/member/writeQuestion.jsp");
+		} else if(target.equals("answerWrite"))
+			System.out.println("answerWrite 프컨 들어옴");
+			result=new AnswerWriteOkController().execute(req,resp);
+		} 
+ 		
+
 		if(result != null) {
 			if(result.isRedirect()) {
 				resp.sendRedirect(result.getPath());

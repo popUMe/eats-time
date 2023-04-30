@@ -176,7 +176,7 @@
 							</div>
 						</li>
 					</ul>
-					모달창(정말 삭제하시겠습니까>) 
+<!-- 					모달창(정말 삭제하시겠습니까>)  -->
 					<div id="modal1"
 						class="swal2-container swal2-center swal2-backdrop-show"
 						style="overflow-y: auto; display: none;">

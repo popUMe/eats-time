@@ -30,8 +30,13 @@ public class AnswerBoardDAO {
 	}
 	
 //	게시글 상세 조회
-	public AnswerBoardDTO select(Long InqbId) {
+	public AnswerBoardDTO select(Long inqbId) {
 		return sqlSession.selectOne("answerboard.select");
+	}
+//	답글 추가
+	public void insert(AnswerBoardVO boardVO) {
+		System.out.println("AnswerBoardDao 들어옴");
+		sqlSession.insert("answerboard.insert", boardVO);
 	}
 	
 }

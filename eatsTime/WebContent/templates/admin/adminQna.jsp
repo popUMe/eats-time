@@ -49,7 +49,7 @@
                   
                  
 			<table>
-			 
+			 <tbody>
 				<tr>
 					<th style="width: 30px"><input type="checkbox" id="chkAll"
 						name="chkAll" /></th>
@@ -63,12 +63,13 @@
 				<tr>
 					<td><input type="checkbox" name="chk"></td>
 					<td>${boards.inqbId}</td>
-					<td><a href="javascript:location.href='${contextPath}/detailOk.board?boardId=${boards.inqbId}'">${boards.inqbTitle}</a></td>
+				<a href="${pageContext.request.contextPath}/detailOk.answerBoard?inqbId=${boards.inqbId}"><td>${boards.inqbTitle}</td></a>
 					<td>${boards.memberIdentification}</td>
-					<td>${boards.ansbDate}</td>
+					<td>${boards.inqbDate}</td>     
 					<td>${boards.inqbComplete ? "답변완료" : "답변미완료"}</td>
 				</tr>
 				</c:forEach>
+				</tbody>
 			</table>
 			
 				<!-- 페이지 앞/뒤로 넘기기 버튼 -->
