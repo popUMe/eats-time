@@ -18,7 +18,7 @@
 			<!-- 헤더 오른쪽 위(회원가입, 로그인, 고객센터) 부분 -->
 
 <c:choose>
-<c:when test="${sessionScope.memberId eq null}">
+<c:when test="${sessionScope.LOGIN_INFO eq null}">
 
 			<div class="css-fexq9b eo7pjfk4">
 				<a class="css-1g7d8zf eo7pjfk2" href="member/signup.jsp">회원가입</a>
@@ -41,7 +41,14 @@
  <c:otherwise>
 
 			<div class="css-fexq9b eo7pjfk4">
-				<a class="css-1g7d8zf eo7pjfk2" href="member/signup.jsp">마이페이지</a>
+				<c:choose>
+					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'SELLER'}">
+						<a class="css-1g7d8zf eo7pjfk2" href="/templates/member/seller_list.jsp">마이페이지</a>
+					</c:when>
+					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'PURCHASER'}">
+						<a class="css-1g7d8zf eo7pjfk2" href="/templates/member/buyinglistDetail.jsp">마이페이지</a>
+					</c:when>
+				</c:choose>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/logout.member">로그아웃</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
@@ -53,7 +60,7 @@
 						<a class="css-12olpw6 ecncdj40" href="board/qnaList.jsp">1:1 문의</a>
 					</div>
 				</div>
-			</div> -->
+			</div> 
 
 		</c:otherwise>
  </c:choose>

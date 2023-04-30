@@ -10,217 +10,153 @@ const modal = document.getElementById("modal");
 const modalContent = modal.querySelector(".modal-content");
 const closeButton = modal.querySelector(".close-button");
 
-duplicateCheckButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const targetInput = button.parentElement.previousElementSibling.querySelector("input");
-    const inputRegex = /^[a-zA-Z0-9]{6,16}$/; // 6자이상 16자 이하의 영문 혹은 영문과 숫자 조합을 검사하는 정규표현식
+const $joinInputs = $("div.join input[type='text'], div.join input[type='password'], div.join input[type='email'], div.join input[type='tel']");
+const idRegex = /^(?!(?:[0-9]+)$)([a-zA-Z]|[0-9a-zA-Z]){6,16}$/;
+const passwordNumberRegex =/[0-9]/g;
+const passwordEnglishRegex = /[a-z]/ig;
+const passwordSpecialCharacterRegex = /[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi;
+const nameRegex = /^[가-힣|a-z|A-Z|]+$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ ;
+const phoneRegex = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
 
-    if (!inputRegex.test(targetInput.value)) { // 입력값이 정규표현식과 매치되지 않을 경우
-      modalContent.innerText = "6자 이상 16자 이하의 영문 혹은 영문과 숫자 조합으로 입력해주세요.";
-      modal.style.display = "block";
-    } else {
-      checkDuplicate(targetInput.value, (isDuplicate) => {
-        if (isDuplicate) { // 중복되는 경우
-          modalContent.innerText = "중복된 아이디입니다.";
-          modal.style.display = "block";
-        } else { // 중복되지 않는 경우
-          modalContent.innerText = "사용 가능한 아이디입니다.";
-          modal.style.display = "block";
-        }
-      });
+// 이미 사용중인 아이디 입니다. 다른 아이디를 입력해주세요.
+let joinBlurMessages = ["아이디를 입력하세요.", "비밀번호를 입력하세요.", "비밀번호 확인을 위해 한번 더 입력하세요.", "이름을 입력하세요.", "이메일을 입력하세요.",  "휴대폰 번호를 입력하세요."];
+let joinRegexMessages = ["영문 혹은 영문과 숫자를 조합하여 6자~16자로 입력해주세요.", "영어, 숫자, 특수문자를 섞어서 10~20자로 입력해주세요.", "위 비밀번호와 일치하지 않습니다. 다시 입력해주세요.", "이름을 확인해주세요.", "이메일 주소를 확인해주세요.", "휴대폰 번호를 확인하세요."];
+const $joinHelp = $("div.join p.help");
+let joinCheck;
+let joinCheckAll = [false, false, false, false, false, false];
+let checkId = false, checkEmail = false;
+
+$joinInputs.eq(5).on("focus", function(){
+    $(this).val($(this).val().replaceAll("-", ""));
+});
+
+
+$joinInputs.on("blur", function(){
+    let i = $joinInputs.index($(this));
+	console.log();
+    let value = $(this).val();
+
+
+    if(!value){
+        $joinHelp.eq(i).text(joinBlurMessages[i]).css('color', 'red');
+        joinCheck = false;
+        joinCheckAll[i] = joinCheck;
+        return;
     }
-  });
-});
 
-closeButton.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+	$joinHelp.eq(i).text("");
+    $joinHelp.eq(i).css('color', 'black');
 
-function checkDuplicate(value, callback) {
-  // 서버와 통신하여 value에 해당하는 아이디나 이메일이 중복되는지 확인하는 코드
-  // 중복이 아닌 경우 true를, 중복인 경우 false를 반환
-  callback(false); // 임시로 항상 중복이라고 가정함
-}
 
-// 회원가입 버튼 클릭 이벤트 핸들러 등록
-const signUpButton = document.querySelector(".css-o5dw7d");
-signUpButton.addEventListener("click", () => {
-  if (!memberIdInput.value || !passwordInput.value || !passwordConfirmInput.value || !nameInput.value || !emailInput.value) {
-    alert("모든 필수 입력란을 채워주세요.");
-    return;
-  }
+    switch(i){
+        case 0:
+            joinCheck = value.length > 5 && value.length < 17 && idRegex.test(value) && !specialCharacterRegex.test(value);
+            break;
+        case 1:
+            let numberCheck = value.search(passwordNumberRegex);
+            let englishCheck = value.search(passwordEnglishRegex);
+            let specialCharacterCheck = value.search(passwordSpecialCharacterRegex);
 
-  if (passwordInput.value !== passwordConfirmInput.value) {
-    alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
-    return;
-  }
+            var condition1 = (numberCheck >= 0 && englishCheck >= 0) && (englishCheck >= 0 && specialCharacterCheck >= 0) && (specialCharacterCheck >= 0 && numberCheck >= 0)
+            var condition2 = value.length > 9 && value.length < 21;
+            var condition3 = value.search(/\s/) < 0;
+            
+            joinCheck = condition1 && condition2 && condition3;
+            break;
+        case 2:
+            joinCheck = $joinInputs.eq(i-1).val() == value;
+            break;
+        case 3:
+			joinCheck = value.length > 1 && value.length < 21 && nameRegex.test(value) && !specialCharacterRegex.test(value);
+            break;
+        case 4:
+			joinCheck = emailRegex.test(value);
+            break;
+        case 5:
+            joinCheck = phoneRegex.test(value);
+            if(joinCheck){
+                $(this).val(value.replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`));
+            }
+            break;
 
-  // 서버와 통신하여 회원가입 정보를 저장하는 코드
-  // 회원가입에 성공한 경우 회원가입 완료 페이지로 이동
-  // 회원가입에 실패한 경우 실패 메시지 출력
-});
-
-function validateRequiredFields() {
-  // 필수 입력 항목인지 검사
-  const requiredFields = document.querySelectorAll('input[required]');
-  for (let i = 0; i < requiredFields.length; i++) {
-    if (!requiredFields[i].value) {
-      alert('필수 입력 항목을 모두 입력해주세요.');
-      return false;
     }
-  }
-  
-  // 아이디 검사 (6~16자 영문 혹은 영문과 숫자 조합)
- memberId.keyup(function() {
 
-	if (memberId.val() == "") {
-		$(".error1").text("가입 시 등록한 아이디를 입력해주세요");
-		memberIdCheck1 = false;
-		memberIdCheck2 = false;
-	} else {
-		$(".error1").text("");
-		memberIdCheck1 = true;
-		memberIdCheck2 = true;
+    joinCheckAll[i] = joinCheck;
+
+    if(!joinCheck){
+        $joinHelp.eq(i).text(joinRegexMessages[i]);
+		$joinHelp.eq(i).css('color', 'red')
+        return;
+    }
+
+	if(i != 0) {
+	    $joinHelp.eq(i).text("");
+
 	}
-	EmailCheckflag()
-	PhoneCheckflag()
-})
-  
-  // 비밀번호 검사
-  var pw = $("#password").val();
-  var num = pw.search(/[0-9]/g);
-  var eng = pw.search(/[a-z]/ig);
-  var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
-
-  if(pw.length < 8 || pw.length > 20){
-    alert("8자리 ~ 20자리 이내로 입력해주세요.");
-    return false;
-  } else if(pw.search(/\s/) != -1){
-    alert("비밀번호는 공백 없이 입력해주세요.");
-    return false;
-  } else if(num < 0 || eng < 0 || spe < 0 ){
-    alert("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
-    return false;
-  } else {
-    console.log("통과"); 
-  }
-  
-  // 비밀번호 확인 검사
-  const passwordConfirm = document.getElementById('passwordConfirm').value;
-  if (pw !== passwordConfirm) {
-    alert('비밀번호가 일치하지 않습니다.');
-    return false;
-  }
-  
- /*이메일 유효성검사*/
-email.keyup(function() {
-	if (email.val() == "") {
-		$(".error2").text("가입 시 등록한 이메일을 	");
-		emailCheck = false;
-	} else if (!fn_emailChk(email.val())) {
-		$(".error2").text("올바른 이메일 형식을 입력해 주세요");
-		emailCheck = false;
-	} else {
-		$(".error2").text("");
-		emailCheck = true;
-	}
-
-	EmailCheckflag()
-
-})
-
-  
-  // 모든 검사를 통과한 경우
-  return true;
-}
-/*
-const button = document.querySelector('.css-18m884r');
-button.addEventListener('click', function() {
-  if (validateRequiredFields()) {
-    // 유효성 검사를 통과한 경우, 회원가입 로직 실행
-    // ...
-  }
 });
 
-// 필수 입력 필드 검사 함수
-function validateRequiredFields() {
-  // 필수 입력 필드 선택자
-  var requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
-  
-  // 필수 입력 필드를 하나씩 검사
-  for (var i = 0; i < requiredFields.length; i++) {
-    if (!requiredFields[i].value) {
-      // 필수 입력 필드 중 입력되지 않은 필드가 있을 경우 오류 메시지 출력
-      alert(requiredFields[i].getAttribute("name") + '을(를) 입력해주세요.');
-      return false;
+$('#idCheck').on('click', function() {
+    const memberId = $('input[name="memberIdentification"]').val();
+    if(!memberId) {
+        alert('아이디를 입력해주세요.');
+        return;
     }
-  }
-  
-  // 모든 필수 입력 필드가 입력되었을 경우 true 반환
-  return true;
-}
-*/
 
-/*휴대폰 번호 유효성 검사*/
-
-  $(document).ready(function() {
-    $('#mobileNumber').on('focus', function() {
-      $(this).on('blur', function(e) {
-        if ($(e.target).val() === '') {
-          $('.error3').text('가입 시 등록한 휴대폰 번호를 입력해주세요');
-        } else {
-          $('.error3').text('');
+    $.ajax({
+        url: "checkIdOk.member",
+        data: { memberIdentification: memberId },
+        async: false,
+        success: function(result) {
+            result = JSON.parse(result);
+            if(result.check) {
+                alert('사용 가능한 아이디입니다.');
+                checkId = true;
+            } else {
+                alert('이미 사용 중인 아이디입니다.');
+                checkId = false;
+            }
+        },
+        error: function(xhr, status, error) {
+            alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
         }
-      });
     });
-  });
-  
-$(".input-content1").keyup(function() {
-	if ($(".input-content1").val().length == 0) {
-		$(".textbutton1").css('visibility', 'hidden');
-	} else {
-		$(".textbutton1").css('visibility', 'visible');
-	}
 });
 
-$('.textbutton1').on("click", function() {
-	buttons.prop("background", "rgb(221, 221, 221)");
-	buttons.attr("disabled", "");
-	$(".input-content1").val("");
-	$(".textbutton1").css('visibility', 'hidden');
-	$(".error1").text("가입 시 등록한 아이디를 입력해주세요");
-	/*이름 플래그 초기화*/
-		memberIdCheck1 = false;
-		memberIdCheck2 = false;
-})
-
-/* 탭으로 이동금지 */
-$('.textbutton1').attr("tabindex", "-1");
-$('.textbutton2').attr("tabindex", "-1");
-$('.textbutton3').attr("tabindex", "-1");
-$('.textbutton4').attr("tabindex", "-1");
 
 
 
+// 중복확인 버튼 클릭 이벤트 리스너 추가
+$("#emailCheck").on("click", function() {
+    // 이메일 주소가 입력되었는지 확인
+    let emailValue = $("input[name='memberEmail']").val();
+    if (emailValue === "") {
+        alert("이메일 주소를 입력해주세요.");
+        return;
+    }
 
-/*이메일*/
-$(".input-content2").keyup(function() {
-	if ($(".input-content2").val().length == 0) {
-		$(".textbutton2").css('visibility', 'hidden');
-	} else {
-		$(".textbutton2").css('visibility', 'visible');
-	}
+    // 서버로 이메일 주소 전송
+    $.ajax({
+        url: "checkEmailOk.member",
+        type: "post",
+        data: {memberEmail: emailValue},
+        success: function(result) {
+            let $help = $("input[name='memberEmail']").next();
+            let checkEmail = false;
+            result = JSON.parse(result);
+            if(result.check) {
+                alert('사용 가능한 아이디입니다.');
+                checkId = true;
+            } else {
+                alert('이미 사용 중인 아이디입니다.');
+                checkId = false;
+            }
+        },
+        error: function() {
+            alert("오류가 발생했습니다.");
+        }
+    });
 });
-
-$('.textbutton2').on("click", function() {
-	buttons.prop("background", "rgb(221, 221, 221)");
-	buttons.attr("disabled", "");
-	$(".input-content2").val("");
-	$(".textbutton2").css('visibility', 'hidden');
-	$(".error2").text("가입 시 등록한 이메일을 입력해주세요");
-	/*이메일 플래그 초기화*/
-	emailCheck = false;
-})
 
 
 /* 카카오 주소 api*/
@@ -258,6 +194,16 @@ const divfemale = document.querySelector("#divfemale");
 const divnone = document.querySelector("#divnone");
 
 
+const inputpurchaser = document.querySelector("#grade-purchaser");
+const inputseller = document.querySelector("#grade-seller");
+
+
+const spanpurchaser = document.querySelector("#purchaser");
+const spanseller = document.querySelector("#seller");
+
+const divpurchaser = document.querySelector("#divpurchaser");
+const divseller = document.querySelector("#divseller");
+
  inputmale.addEventListener("click", () => {
         spanmale.style.background="#5f0080";
 		divmale.style.background="#fff";
@@ -267,8 +213,6 @@ const divnone = document.querySelector("#divnone");
 
 		spannone.style.background="#fff";
 		spanfemale.style.border="1px solid #dddddd";
-		
-		
 		
     });
 
@@ -295,6 +239,25 @@ const divnone = document.querySelector("#divnone");
 		spanfemale.style.background="#fff";
 		spanfemale.style.border="1px solid #dddddd";
     });
+
+
+ inputpurchaser.addEventListener("click", () => {
+        spanpurchaser.style.background="#5f0080";
+		divpurchaser.style.background="#fff";
+		
+		spanseller.style.background="#fff";
+		spanseller.style.border="1px solid #dddddd";
+    });
+
+
+ inputseller.addEventListener("click", () => {
+        spanseller.style.background="#5f0080";
+		divseller.style.background="#fff";
+		
+		spanpurchaser.style.background="#fff";
+		spanpurchaser.style.border="1px solid #dddddd";
+    });
+
 
 
 function validateBirthday() {

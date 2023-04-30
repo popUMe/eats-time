@@ -27,6 +27,7 @@ public class JoinOkController implements Action {
 		memberVO.setMemberAddress(req.getParameter("memberAddress"));
 		memberVO.setMemberAddressDetail(req.getParameter("memberAddressDetail"));
 		memberVO.setMemberGender(req.getParameter("memberGender"));
+		memberVO.setMemberGrade(req.getParameter("memberGrade"));
 		memberVO.setMemberBirthday(req.getParameter("memberBirthday"));
 		
 		

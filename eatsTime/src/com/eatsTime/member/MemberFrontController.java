@@ -8,9 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+import com.eatsTime.member.controller.CheckEmailOkController;
+import com.eatsTime.member.controller.CheckIdOkController;
 import com.eatsTime.member.controller.DeleteOkController;
 import com.eatsTime.member.controller.JoinOkController;
+import com.eatsTime.member.controller.LoginController;
 import com.eatsTime.member.controller.LoginOkController;
+import com.eatsTime.member.controller.LogoutController;
 import com.eatsTime.member.controller.ModifyController;
 import com.eatsTime.member.controller.ModifyOkController;
 
@@ -22,25 +26,28 @@ public class MemberFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("join")) {
+		if(target.equals("checkIdOk")) {
+		result = new CheckIdOkController().execute(req, resp);		
+		} 	
+		else if(target.equals("checkEmailOk")) {
+			result = new CheckEmailOkController	().execute(req, resp);		
+		 
+		}	else if(target.equals("join")) {
 			result = new Result();
 			result.setPath("templates/member/signup.jsp");
 			
 		} else if(target.equals("joinOk")) {
 			result = new JoinOkController().execute(req, resp);
 			
+			
 		} else if(target.equals("login")) {
-			result = new Result();
-			result.setPath("templates/member/login.jsp");
+			result = new LoginController().execute(req, resp);
 					
 		} else if(target.equals("loginOk")) {
 			result = new LoginOkController().execute(req,resp);
 			
 		} else if(target.equals("logout")) {
-			req.getSession().invalidate();
-			result = new Result();
-			result.setPath("templates/member/login.jsp");
-			
+			result = new LogoutController().execute(req, resp);			
 		}
 		
 		
