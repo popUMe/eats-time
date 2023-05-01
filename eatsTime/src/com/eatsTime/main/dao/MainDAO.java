@@ -9,10 +9,9 @@ import com.eatsTime.inquiryboard.domain.InquiryBoardVO;
 import com.eatsTime.main.domain.Criteria;
 import com.eatsTime.main.domain.MainDTO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
-import com.eatsTime.product.domain.ProductDTO;
-import com.eatsTime.product.domain.ProductVO;
 
 
+@SuppressWarnings("unused")
 public class MainDAO {
 	
 	private static SqlSession sqlSession;
@@ -22,9 +21,7 @@ public class MainDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	 public ProductDTO selectProductDetail(String productId){
-	      return sqlSession.selectOne("product.selectProductDetail", productId);
-	   }
+	
 	public int getTotal() {
 		return 0;
 	}
