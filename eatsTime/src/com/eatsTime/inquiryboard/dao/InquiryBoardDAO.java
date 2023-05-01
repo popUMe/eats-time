@@ -22,10 +22,10 @@ public class InquiryBoardDAO {
 		return sqlSession.selectOne("inquiryboard.select", inqbId);
 	}
 	public AnswerBoardDTO selectanswer(Long inqbId) {
-		return sqlSession.selectOne("inquiryboard.select", inqbId);
+		return sqlSession.selectOne("inquiryboard.answer", inqbId);
 	}
 //	게시글 전체 조회
-	public List<InquiryBoardVO> selectAll(HashMap<String, Object> pagable){
+	public List<InquiryBoardDTO> selectAll(HashMap<String, Object> pagable){
 		return sqlSession.selectList("inquiryboard.selectAll", pagable);
 	}
 	

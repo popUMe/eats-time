@@ -10,6 +10,7 @@
 	href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/static/css/admin/adminQna.css">
+<link rel="stylesheet" type="text/css"	href="${pageContext.request.contextPath}/static/css/admin/adminIndex.css">
 <title>문의내역 - 관리자모드</title>
 
 <style>
@@ -68,13 +69,13 @@
 						<td>${boards.inqbTitle}</td>
 						<td>${boards.memberIdentification}</td>
 						<td>${boards.inqbDate}</td>     
-						<td>${boards.inqbComplete ? "답변 미완료" : "답변완료"}</td>
+						<td>${boards.inqbComplete ? '답변 미완료' : '답변 완료'}</td>
 						</tr>
 				</c:forEach>
 				</tbody>
 			</table>
-			
-				<!-- 페이지 앞/뒤로 넘기기 버튼 -->
+			         
+				<!-- 페이지 앞/뒤로 넘기기 버튼 --> 
 				<div class="css-15jhycr e3tf63e0">
 				
 					<div class="css-sxxs1g eytury60">
@@ -145,5 +146,6 @@
 <script src="${pageContext.request.contextPath}/static/js/adminQna.js"></script>
 <script>
 	let contextPath = `${pageContext.request.contextPath}`;
+	console.log(`${boards}`);
 </script>
 </html>
