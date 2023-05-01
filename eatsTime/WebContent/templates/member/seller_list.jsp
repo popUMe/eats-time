@@ -118,8 +118,8 @@
 	let contextPath = `${pageContext.request.contextPath}`;
 	console.log(products);
 </script>
-<script
-	src="${pageContext.request.contextPath}/static/js/seller_list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/seller_list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/sell_register_btn.js"></script>
 </html>
 
 
