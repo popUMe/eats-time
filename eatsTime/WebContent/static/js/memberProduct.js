@@ -125,6 +125,20 @@ function showPurchaseList() {
 										</dl>
 									</div>
 								</div>
+								<div class="content-alter">
+									<div class="selldiv" style="visibility:hidden"><input type="button" class="selling" value="판매하기"> </div>
+									<div class="content-button">
+										<div class="icon1">
+											<img class="icon-insert"
+												src="/static/image/insert.png"/>
+										</div>
+					
+										<div class="icon2">
+											<img class="icon-delete"
+												src="/static/image/delete.png"/>
+										</div>
+									</div>
+								</div>							
 							</div>
 			`;
 		/*if(files[board.boardId]){

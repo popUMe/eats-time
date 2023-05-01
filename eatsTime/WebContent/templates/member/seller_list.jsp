@@ -19,7 +19,7 @@
 	<div class="css-luwwab">
 		<div class="css-833hqy">
 			<div class="css-1v4whg">마이타임</div>
-			<!--css-1v4whg ecbxmj2  -->
+			<!--css-1v4whg ecbxmj2-->
 			<ul class="css-1x9bshx">
 				<li><a class="active css-g4g0eu" id="li-1">상품 목록 <svg
 							xmlns="http://www.w3.org/2000/svg" width="19" height="19"
