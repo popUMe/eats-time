@@ -8,35 +8,39 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
-import com.eatsTime.product.controller.ProductListDeliveryOkController;
-import com.eatsTime.product.controller.ProductListOkController;
+import com.eatsTime.sale.controller.DummyProductOkController;
+import com.eatsTime.sale.controller.SaleListOkController;
+import com.eatsTime.sale.controller.SaleRegisterOkController;
 
 public class SaleFrontController extends HttpServlet {
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
+   @Override
+   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      req.setCharacterEncoding("UTF-8");
 
-		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
-		Result result = null;
+      String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
+      Result result = null;
+      
+      if (target.equals("saleRegisterOk")) {
+         result = new SaleRegisterOkController().execute(req, resp);
+         
+      } else if (target.equals("dummyProductOk")) {
+         result = new DummyProductOkController().execute(req, resp);
+         
+      } else if (target.equals("saleListOk")) {
+          result = new SaleListOkController().execute(req, resp);
+       }
+      
+      if (result != null) {
+         if (result.isRedirect()) {
+            resp.sendRedirect(result.getPath());
+         } else {
+            req.getRequestDispatcher(result.getPath()).forward(req, resp);
+         }
+      }
+   }
 
-		// 작업 다시 해야함 여기는 그냥 써놓은거
-		if (target.equals("productListOk")) {
-			result = new ProductListOkController().execute(req, resp);
-		} else if (target.equals("productListDeliveryOk")) {
-			result = new ProductListDeliveryOkController().execute(req, resp);
-		}
-
-		if (result != null) {
-			if (result.isRedirect()) {
-				resp.sendRedirect(result.getPath());
-			} else {
-				req.getRequestDispatcher(result.getPath()).forward(req, resp);
-			}
-		}
-	}
-
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
-	}
+   @Override
+   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      doGet(req, resp);
+   }
 }
