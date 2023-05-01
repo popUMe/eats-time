@@ -381,7 +381,6 @@
 >>>>>>> master
 				</div> -->
 				</form>
->>>>>>> master
 				<!-- 가입하기  -->
 				<div class="css-137ca2h">
 					<button class="css-18m884r" type="submit" width="240" height="56"

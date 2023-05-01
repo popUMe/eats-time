@@ -62,16 +62,6 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
       where
       member_Id = 1
    </update>
-	<update id="update" parameterType="memberVO">
-		update tbl_member
-		set
-		member_identification=#{memberIdentification}, member_pw=#{memberPw},
-		member_name=#{memberName}, member_email=#{memberEmail},
-		member_phone_number=#{memberPhoneNumber},
-		member_gender=#{memberGender}, member_birthday=#{memberBirthday}
-		where
-		member_Id = 1
-	</update>
 
 	<update id="delete" parameterType="_int">
 		update tbl_member

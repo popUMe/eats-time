@@ -20,8 +20,8 @@
 			<div class="css-1921apv e8mwi4j4">
 				<div class="css-1crdca1 e8mwi4j0">
 					<button class="css-7os9p2 e4nu7ef3" type="button"
-						onclick="location.href='${pageContext.request.contextPath}/index.member'" height="46" radius="3">
-						<span class="css-ymwvow e4nu7ef1">홈페이지로 이동</span>
+						onclick="location.href='${pageContext.request.contextPath}/login.member'" height="46" radius="3">
+						<span class="css-ymwvow e4nu7ef1">로그인페이지로 이동</span>
 					</button>
 				</div>
 			</div>

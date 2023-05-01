@@ -117,9 +117,9 @@ $('#idCheck').on('click', function() {
                 checkId = false;
             }
         },
-        error: function(xhr, status, error) {
+        /* error: function(xhr, status, error) {
             alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
-        }
+        } */
     });
 });
 
@@ -145,16 +145,16 @@ $("#emailCheck").on("click", function() {
             let checkEmail = false;
             result = JSON.parse(result);
             if(result.check) {
-                alert('사용 가능한 아이디입니다.');
+                alert('사용 가능한 이메일입니다.');
                 checkId = true;
             } else {
-                alert('이미 사용 중인 아이디입니다.');
+                alert('이미 사용 중인 이메일입니다.');
                 checkId = false;
             }
         },
-        error: function() {
+      /*  error: function() {
             alert("오류가 발생했습니다.");
-        }
+        } */
     });
 });
 
