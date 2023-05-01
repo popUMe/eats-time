@@ -46,53 +46,46 @@
 			<form action="${pageContext.request.contextPath}/deleteOk.answerBoard" name="delete-form">
 				<div id=table-container>
 
-					<div class="btn">
-						<button type="button" class="btns" id="add-btn">작성</button>
-						<button type="submit" class="btns" id="delete-btn" disabled>삭제</button>
-					</div>
+			
+							<!-- 게시글 목록 -->
+                  
+                 
+			<table>
+			 <tbody>
+				<tr>
+					<th style="width: 30px"><input type="checkbox" id="chkAll"
+						name="chkAll" /></th>
+					<th>문의번호</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>작성날짜</th>
+					<th>상태</th>
+				</tr>
+				<c:forEach var="boards" items="${boards}">
+						<tr onclick="location.href='${pageContext.request.contextPath}/detailOk.answerBoard?inqbId=${boards.inqbId}'" style="cursor:hand">
+						<td><input type="checkbox" name="chk"></td>
+						<td>${boards.inqbId}</td>
+						<td>${boards.inqbTitle}</td>
+						<td>${boards.memberIdentification}</td>
+						<td>${boards.inqbDate}</td>     
+						<td>${boards.inqbComplete ? "답변 미완료" : "답변완료"}</td>
+						</tr>
+				</c:forEach>
+				</tbody>
+			</table>
+			
+				<!-- 페이지 앞/뒤로 넘기기 버튼 -->
+				<div class="css-15jhycr e3tf63e0">
+				
+					<div class="css-sxxs1g eytury60">
+     			 <!-- [S] 페이지 컨트롤러 -->
+               <div class="css-rdz8z7 e82lnfz1">
+<!-- 					<div class="btn"> -->
+<!-- 						<button type="button" class="btns" id="add-btn">작성</button> -->
+<!-- 						<button type="submit" class="btns" id="delete-btn" disabled>삭제</button> -->
+<!-- 					</div> -->
 
-					<!-- 게시글 목록 -->
-					<div class="table-wrap">
-						<table>
-							<tr>
-								<th style="width: 30px"><input type="checkbox" id="chkAll"
-									name="chkAll" /></th>
-								<th>문의번호</th>
-								<th>제목</th>
-								<th>작성자</th>
-								<th>작성날짜</th>
-								<th>상태</th>
-							</tr>
-							
-							<c:forEach var="boards" items="${boards}">
-								<tr>
-									<td><input type="checkbox" name="chk" value="${answerBoard.inqbId}"></td>
-									<td>${boards.inqbId}</td>
-									<td><a
-										href="javascript:location.href='${contextPath}/detailOk.board?boardId=${boards.inqbId}'">${boards.inqbTitle}</a></td>
-									<td>${boards.memberIdentification}</td>
-									<td>${boards.ansbDate}</td>
-									<td>${boards.inqbComplete ? "답변완료" : "답변미완료"}</td>
-								</tr>
-							</c:forEach>
-							
-						</table>
-					</div>
-
-					<!-- 페이지 앞/뒤로 넘기기 버튼 -->
-					<div class="css-15jhycr e3tf63e0">
-						<div class="css-sxxs1g eytury60">
-							<!-- [S] 페이지 컨트롤러 -->
-							<div class="css-rdz8z7 e82lnfz1">
-
-								<!-- 처음 페이지로 이동하기 -->
-								<a class="css-1d20dg7 e82lnfz0"
-									href="${pageContext.request.contextPath}/answerList.answerBoard?page=1">
-									<img
-									src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAQAAABwkq/rAAAAHUlEQVR42mNgAIPi/8X/kWkwA8SE0UQIMJAsCKMBBzk27fqtkcYAAAAASUVORK5CYII="
-									alt="처음 페이지로 이동하기 아이콘">
-								</a>
-
+             
 								<!-- 이전 페이지로 이동하기 -->
 								<c:if test="${prev}">
 									<a class="css-1d20dg7 e82lnfz0"

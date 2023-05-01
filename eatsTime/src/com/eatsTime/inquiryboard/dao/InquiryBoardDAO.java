@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.eatsTime.answerboard.domain.AnswerBoardDTO;
+import com.eatsTime.inquiryboard.domain.InquiryBoardDTO;
 import com.eatsTime.inquiryboard.domain.InquiryBoardVO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
 
@@ -19,7 +21,9 @@ public class InquiryBoardDAO {
 	public InquiryBoardVO select(Long inqbId) {
 		return sqlSession.selectOne("inquiryboard.select", inqbId);
 	}
-	
+	public AnswerBoardDTO selectanswer(Long inqbId) {
+		return sqlSession.selectOne("inquiryboard.select", inqbId);
+	}
 //	게시글 전체 조회
 	public List<InquiryBoardVO> selectAll(HashMap<String, Object> pagable){
 		return sqlSession.selectList("inquiryboard.selectAll", pagable);
@@ -57,5 +61,11 @@ public class InquiryBoardDAO {
 		sqlSession.delete("inquiryboard.delete", inqbId);
 	}
 	
-	
+//	게시글 답변 조회
+
+	public InquiryBoardDTO answer(Long inqbId) {
+		return sqlSession.selectOne("inquiryboard.answer", inqbId);
+
+	}
+
 }

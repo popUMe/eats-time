@@ -29,9 +29,9 @@ public class InquiryFrontController extends HttpServlet {
 		
  
 		} else if(target.equals("writeOk")) {
-			System.out.println("writeOk 프컨 들어옴");
 			result = new WriteOkController().execute(req, resp);
-		}else if(target.equals("listOk")) {
+		} else if(target.equals("listOk")) {
+			System.out.println("listOk 들어옴");
 			result = new ListOkController().execute(req, resp);
 		}
 		if(result != null) {
