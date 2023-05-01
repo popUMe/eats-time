@@ -1,9 +1,7 @@
 package com.eatsTime.sale.controller;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Optional;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -14,16 +12,16 @@ import com.eatsTime.Result;
 import com.eatsTime.product.domain.ProductVO;
 import com.eatsTime.sale.dao.SaleDAO;
 
-public class DummyProductOkController implements Action {
+public class SaleRegisterFormController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {	
 		Result result = new Result();
 		SaleDAO dao = new SaleDAO();
-		
-		ProductVO productVO = dao.test();
-		Date expDate = null;
-		
+		Long productId = Long.parseLong(Optional.ofNullable(req.getParameter("productId")).orElse("0"));
+		ProductVO productVO = dao.selectProduct(productId);
+		System.out.println(productVO.isProductCategory());
+		req.setAttribute("productCategory", productVO.isProductCategory());
 		req.setAttribute("productName", productVO.getProductName());
 		req.setAttribute("productPrice", productVO.getProductPrice());
 		req.setAttribute("productStock", productVO.getProductStock()); 
@@ -31,7 +29,7 @@ public class DummyProductOkController implements Action {
 		req.setAttribute("productAddress", productVO.getProductAddress());
 		req.setAttribute("productAddressDetail", productVO.getProductAddressDetail());
 		
-		result.setPath("templates/member/sellingForm.jsp");
+		result.setPath("/templates/member/sellingForm.jsp");
 		
 		return result;
 	}
