@@ -45,16 +45,17 @@ public class AnswerBoardDAO {
 		System.out.println("boardDAO select 문 들어옴");
 		return sqlSession.selectOne("answerboard.selectAnswer", inqbId);
 	}
-	
+
 //	전체 게시글 리스트에서 게시글 삭제
 	public void delete(Long InqbId) {
 		System.out.println("AnswerBoardDao 들어옴");
 		sqlSession.delete("answerboard.delete", InqbId);
 	}
-	
+
 //	답변 여부
 	public void yesno(Long inqbId) {
 		sqlSession.selectOne("answerboard.update", inqbId);
 
 	}
+
 }

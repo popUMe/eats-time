@@ -30,20 +30,21 @@ public class AnswerFrontController extends HttpServlet {
 		} else if(target.equals("detailOk")) {
 			System.out.println("detailOk 로 보낼 fk 들어옴");
 			result = new DetailOkController().execute(req, resp);
+
 		} else if(target.equals("writeAnswer")) {
 			System.out.println("writeAnswer 프컨 들어옴");
 			result=new Result();
 			result.setPath("templates/admin/adminQnaWrite.jsp");
 		
+		} else if(target.equals("deleteOk")) {
+			System.out.println("deleteOk 들어옴");
+			result = new DeleteOkController().execute(req, resp);
 		} else if(target.equals("writeOk")) {
 			System.out.println("writeOk 프컨 들어옴");
 			result = new AnswerWriteOkController().execute(req, resp);
 			
 		}
-		else if(target.equals("deleteOk")) {
-			System.out.println("deleteOk 들어옴");
-			result = new DeleteOkController().execute(req, resp);
-		} else if(target.equals("answerView")) {
+		 else if(target.equals("answerView")) {
 			System.out.println("answerView 들어옴");
 			result = new AnswerViewController().execute(req, resp);
 		}

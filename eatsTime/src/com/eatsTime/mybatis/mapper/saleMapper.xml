@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="sale">
-   
+	
+	<select id="test" resultType="productVO">
+		SELECT 
+			product_id, member_id, product_category, product_name, product_price, 
+			product_date, product_expiration_date, product_stock, product_address, product_address_detail
+		FROM tbl_product
+		where product_id = 3	
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO eatstime.tbl_sale
+		(member_id, product_id, sale_title, sale_content)
+		VALUES(#{memberId}, #{productId}, #{saleTitle}, #{saleContent})
+	</insert>
+	
+	<select id="selectList" resultType="saleVO">
+		SELECT sale_id, member_id, product_id, sale_title, sale_content, sale_date
+		FROM tbl_sale
+	</select>
+	
 </mapper>

@@ -27,13 +27,14 @@ public class JoinOkController implements Action {
 		memberVO.setMemberAddress(req.getParameter("memberAddress"));
 		memberVO.setMemberAddressDetail(req.getParameter("memberAddressDetail"));
 		memberVO.setMemberGender(req.getParameter("memberGender"));
+		memberVO.setMemberGrade(req.getParameter("memberGrade"));
 		memberVO.setMemberBirthday(req.getParameter("memberBirthday"));
 		
 		
 		memberDAO.insert(memberVO);
 		
-		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/login.member");
+//		result.setRedirect(true);
+		result.setPath(req.getContextPath() + "/templates/member/signupOk.jsp");
 		
 		
 		return result;
