@@ -43,10 +43,10 @@
 		<c:forEach var="notificationboards" items="${notificationboards}">
 				<tr>
 			    <td><input type="checkbox" name="chk" value="${notificationboards.notbId}"></td>
-				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbId">${notificationboards.notbId}</td>
-				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbTitle"><a>${notificationboards.notbTitle}</a></td>
-				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="memberName">${notificationboards.memberName}</td>
-				<td onclick="javascript:location.href='/eatsTime/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbDate">${notificationboards.notbDate}</td>
+				<td onclick="javascript:location.href='${pageContext.request.contextPath}/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbId">${notificationboards.notbId}</td>
+				<td onclick="javascript:location.href='${pageContext.request.contextPath}/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbTitle"><a>${notificationboards.notbTitle}</a></td>
+				<td onclick="javascript:location.href='${pageContext.request.contextPath}/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="memberName">${notificationboards.memberName}</td>
+				<td onclick="javascript:location.href='${pageContext.request.contextPath}/viewOk.notificationboard?notbId=${notificationboards.notbId}'" name="notbDate">${notificationboards.notbDate}</td>
 			    </tr>
 		</c:forEach>
 	</table>
