@@ -14,19 +14,30 @@
 		from tbl_inquireboard
 	</select>
 	
-	<!--    게시글 전체 조회 -->
+	<!-- 고객 내 게시글 전체 조회 -->
 	<select id="selectAll" resultType="answerBoardDTO">
-	select m.member_id, m.member_identification, i.inqb_id, i.inqb_title , i.inqb_content, i.inqb_date, i.inqb_complete
-	from tbl_inquireboard i join tbl_member m on m.member_id=i.member_id
-	order by i.inqb_id desc
-	limit #{offset}, #{rowCount}
+		select member_id, i.inqb_id, i.inqb_title , i.inqb_content, a.ansb_title,
+		a.ansb_content
+		from tbl_inquireboard i left join tbl_answerboard a on i.inqb_id
+		=a.inqb_id
+		where member_id = #{memberId}
+		order by inqb_id desc
+		limit #{offset}, #{rowCount};
 	</select>
 
+<!-- 관리자 고객 전체 게시글 전체 조회 -->
+	<select id="adminSelectAll" resultType="InquiryBoardDTO">
+		select i.inqb_id, i.inqb_title , i.inqb_content, m.member_identification, i.inqb_complete
+		from tbl_inquireboard i join tbl_member m
+		order by inqb_id desc
+		limit #{offset}, #{rowCount};
+	</select>
+ 
 <!-- 	게시글 답변 유무 -->
 
 
-
-	<update id="yesno">
+<!-- 답변을 달았을 떄 실행 UPDATE -->
+	<update id="selectyesno">
 	update tbl_inquireboard
 	set inqb_complete=0
 	where inqb_id=#{inqbId}

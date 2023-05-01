@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="sale">
 	
-	<select id="test" resultType="productVO">
+	<select id="selectProduct" resultType="productVO">
 		SELECT 
 			product_id, member_id, product_category, product_name, product_price, 
 			product_date, product_expiration_date, product_stock, product_address, product_address_detail
 		FROM tbl_product
-		where product_id = 3	
+		where product_id = #{productId}	
 	</select>
 	
 	<insert id="insert">
@@ -16,9 +16,12 @@
 		VALUES(#{memberId}, #{productId}, #{saleTitle}, #{saleContent})
 	</insert>
 	
-	<select id="selectList" resultType="saleVO">
-		SELECT sale_id, member_id, product_id, sale_title, sale_content, sale_date
-		FROM tbl_sale
+	<select id="selectList" resultType="saleDTO">
+select a.*, s.sale_id, s.member_id , s.sale_title, s.sale_content, s.sale_date
+from tbl_sale s join
+(SELECT p.product_id, f.file_name
+FROM tbl_file f join tbl_product p on f.product_id = p.product_id) a
+on s.product_id = a.product_id and member_id = #{memberId}
 	</select>
 	
 </mapper>

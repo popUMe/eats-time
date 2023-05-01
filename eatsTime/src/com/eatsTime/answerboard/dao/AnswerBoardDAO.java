@@ -29,6 +29,12 @@ public class AnswerBoardDAO {
 		 return sqlSession.selectList("answerboard.selectAll", pagable);
 	}
 	
+//	어드민 게시글 전체 조회
+	public List<InquiryBoardDTO> adminSelectAll(HashMap<String, Object> pagable){
+		System.out.println("어드민 boardDao 들어옴");
+		 return sqlSession.selectList("answerboard.adminSelectAll", pagable);
+	}
+	
 //	게시글 상세 조회
 	public AnswerBoardDTO select(Long inqbId) {
 		System.out.println("boardDAO select 문 들어옴");
@@ -47,15 +53,16 @@ public class AnswerBoardDAO {
 	}
 
 //	전체 게시글 리스트에서 게시글 삭제
-	public void delete(Long InqbId) {
+	public void delete(Long inqbId) {
 		System.out.println("AnswerBoardDao 들어옴");
-		sqlSession.delete("answerboard.delete", InqbId);
+		sqlSession.delete("answerboard.delete", inqbId);
 	}
 
 //	답변 여부
-	public void yesno(Long inqbId) {
-		sqlSession.selectOne("answerboard.update", inqbId);
+	public void updateyesno(Long inqbId) {
+		sqlSession.update("answerboard.selectyesno", inqbId);
 
 	}
+	
 
 }

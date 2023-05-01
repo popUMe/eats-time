@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 
 import com.eatsTime.Action;
 import com.eatsTime.Result;
+import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.sale.dao.SaleDAO;
 import com.eatsTime.sale.domain.SaleVO;
 
@@ -18,12 +19,16 @@ public class SaleRegisterOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		
 		Result result = new Result();
+		MemberVO memberVO = new MemberVO();
 		
 		HttpSession session = req.getSession();
+        memberVO = (MemberVO) session.getAttribute("LOGIN_INFO");
+        
+        Long memberId = memberVO.getMemberId();
+		
 		SaleDAO dao = new SaleDAO();
 		SaleVO saleVO = new SaleVO();
 		
-		Long memberId = Long.parseLong(String.valueOf( 1 /*session.getAttribute("memberId")*/));
 		Long productId = Long.parseLong("3" /*req.getParameter("productId")*/);
 		String saleTitle = req.getParameter("saleTitle");
 		String saleContent = req.getParameter("saleContent");

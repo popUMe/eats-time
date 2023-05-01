@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,10 +25,13 @@ public class ModifyController implements Action {
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
 		Result result = new Result();
+		HttpSession session = req.getSession();
+		memberVO = (MemberVO) session.getAttribute("LOGIN_INFO");
+		Long memberId = memberVO.getMemberId();
 		
 		JSONObject obj = new JSONObject();
 		List<MemberVO> listMap = new ArrayList();
-		listMap = memberDAO.selectAll(memberVO);
+		listMap = memberDAO.selectAll(memberId);
 		try {
 			for(int i = 0 ; i < listMap.size(); i++) {
 				obj.put("memberIdentification", listMap.get(i).getMemberIdentification().toString());

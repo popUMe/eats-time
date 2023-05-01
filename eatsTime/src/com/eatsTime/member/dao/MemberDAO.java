@@ -18,8 +18,8 @@ public class MemberDAO {
 	}
 	
 	// 마이페이지 불러오기
-	public List<MemberVO> selectAll(MemberVO memberVO) {
-		return sqlSession.selectList("member.selectAll", memberVO);
+	public List<MemberVO> selectAll(Long memberId) {
+		return sqlSession.selectList("member.selectAll", memberId);
 	}
 	
 	// 마이페이지 수정

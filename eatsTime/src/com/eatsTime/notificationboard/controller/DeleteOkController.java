@@ -25,7 +25,7 @@ public class DeleteOkController implements Action {
 			notificationBoardDAO.delete(Long.valueOf(array[i]));
 		}		
 						
-		result.setPath(req.getContextPath() + "/listOk.notificationboard");
+		result.setPath(req.getContextPath() + "/adminindex.notificationboard");
 		result.setRedirect(true);
 		
 		return result;

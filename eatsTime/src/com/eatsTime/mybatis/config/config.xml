@@ -24,6 +24,8 @@
       <typeAlias type="com.eatsTime.purchase.domain.PurchaseListDTO" alias="purchaseListDTO"/>
       <!-- 4월 29일 김인진 ProductListDTO 추가 -->
       <typeAlias type="com.eatsTime.product.domain.ProductListDTO" alias="productListDTO"/>
+      <!-- 4월 29일 김인진 SaleDTO 추가 -->
+      <typeAlias type="com.eatsTime.sale.domain.SaleDTO" alias="saleDTO"/>
    </typeAliases>
 
    <environments default="mysql">

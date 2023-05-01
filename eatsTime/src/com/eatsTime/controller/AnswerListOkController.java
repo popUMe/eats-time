@@ -23,7 +23,7 @@ public class AnswerListOkController implements Action{
 		System.out.println("AnswerListOkController 들어옴");
 
 		AnswerBoardDAO boardDAO=new AnswerBoardDAO();
-//		AnswerBoardDTO boardDTO=new AnswerBoardDTO();
+		AnswerBoardDTO boardDTO=new AnswerBoardDTO();
 		
 		Result result=new Result();
 		
@@ -40,7 +40,7 @@ public class AnswerListOkController implements Action{
 		pagable.put("rowCount", criteria.getRowCount());
 
 		
-		req.setAttribute("boards", boardDAO.selectAll(pagable));
+		req.setAttribute("boards", boardDAO.adminSelectAll(pagable));
 		req.setAttribute("realEndPage", criteria.getRealEndPage());
 		req.setAttribute("total", boardDAO.getTotal());
 		req.setAttribute("page", page);
@@ -52,7 +52,7 @@ public class AnswerListOkController implements Action{
 		
 		
 		System.out.println("여기까지 오나");	
-		System.out.println(boardDAO.selectAll(pagable));
+		System.out.println(boardDAO.adminSelectAll(pagable));
 		
 		result.setPath("templates/admin/adminQna.jsp");
 		

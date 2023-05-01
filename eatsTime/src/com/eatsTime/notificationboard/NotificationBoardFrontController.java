@@ -29,8 +29,8 @@ public class NotificationBoardFrontController extends HttpServlet {
 		System.out.println(target);
 		
 		if(target.equals("adminindex")) {
-			result = new Result();
-			result.setPath("templates/admin/adminIndex.jsp");
+			System.out.println("adminindex 들어옴");
+			result = new ListOkController().execute(req, resp);
 		}else if(target.equals("adminNoticeWrite")) {
 			System.out.println("write 들어옴");
 			result = new Result();
@@ -38,9 +38,6 @@ public class NotificationBoardFrontController extends HttpServlet {
 		}else if(target.equals("writeOk")) {
 			System.out.println("writeOk 들어옴");
 			result = new WriteOkController().execute(req, resp);
-		}else if(target.equals("listOk")) {
-			System.out.println("listOk 들어옴");
-			result = new ListOkController().execute(req, resp);	
 		}else if(target.equals("noticeListOk")) {
 			System.out.println("noticeListOk 들어옴");
 			result = new NoticeListOkController().execute(req, resp);	

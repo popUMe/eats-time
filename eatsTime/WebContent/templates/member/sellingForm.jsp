@@ -130,7 +130,7 @@
 								style="display: flex; justify-content: flex-start;">
 
 								<label class="css-z9g6s0" for="delivery" style="padding-right: 40px;"> 
-									<input type="radio" class="css-1pes2r6" value="DELIVERY">
+									<input type="radio" class="css-1pes2r6" value="" readonly>
 									 <span class="css-198i9ca" id="deliveryspan">
 									 	<div class="css-1dahn5m" id="divdelivery"></div>
 									</span> 
@@ -234,6 +234,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script type="text/javascript">
 	let productName = `${productName}`;
+	let productCategory = `${productCategory}`;
 </script>
 <script src="/static/js/sellingForm.js"></script>
 </html>
