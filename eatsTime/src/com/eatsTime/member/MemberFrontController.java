@@ -54,9 +54,8 @@ public class MemberFrontController extends HttpServlet {
 		}
 		
 		
-		if (target.equals("index")) {
-			result = new Result();
-			result.setPath("/templates/index.jsp");
+		if (target.equals("ListOk")) {
+			result = new ListOkController().execute(req, resp);
 
 		} else if (target.equals("modify")) {
 			result = new ModifyController().execute(req, resp);

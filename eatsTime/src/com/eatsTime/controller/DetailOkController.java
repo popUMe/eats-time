@@ -29,7 +29,6 @@ public class DetailOkController implements Action{
 	
 	
 	AnswerBoardDTO boardDTO = boardDAO.select(inqbId);
-	System.out.println(boardDTO);
 	req.setAttribute("boards",boardDTO);
 	req.setAttribute("inqbId", boardDTO.getInqbId());
 	req.setAttribute("inqbTitle", boardDTO.getInqbTitle());
@@ -38,6 +37,7 @@ public class DetailOkController implements Action{
 	req.setAttribute("inqbDate", boardDTO.getInqbDate());
 	
 	AnswerBoardDTO answerDTO=boardDAO.selectAnswer(inqbId);
+	
 	req.setAttribute("answers", answerDTO);
 	
 	

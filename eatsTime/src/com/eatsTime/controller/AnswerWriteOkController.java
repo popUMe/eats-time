@@ -45,12 +45,13 @@ public class AnswerWriteOkController implements Action{
 		System.out.println("dao 에 insert함");
 		
 		
-//		boardDAO.yesno(inqbId);
-//		Long ansbId = Long.valueOf(req.getParameter("ansbId"));
+		boardDAO.updateyesno(inqbId);
 
 		
 //		boardDTO = boardDAO.select(ansbId);
-
+		
+		
+		
 		
 		
 		//		boardDTO = boardDAO.select(ansbId);
