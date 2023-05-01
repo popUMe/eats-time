@@ -15,11 +15,11 @@
 <body>
 <div id="sidebar">
        <div id="logo">
-          <a class="logo" href="${pageContext.request.contextPath}/lisOk.notificationboard">
+          <a class="logo" href="${pageContext.request.contextPath}/adminindex.notificationboard">
              <img src="${pageContext.request.contextPath}/static/image/logo.png" alt="이츠타임 로고">
           </a>
        </div>
-      <a class="nav_list" href="${pageContext.request.contextPath}/listOk.notificationboard">공지사항</a> 
+      <a class="nav_list" href="${pageContext.request.contextPath}/adminindex.notificationboard">공지사항</a> 
       <a class="nav_list" href="${pageContext.request.contextPath}/listOk.member">회원관리</a> 
       <a class="nav_list" href="${pageContext.request.contextPath}/listOk.Inquiryboard">문의내역</a>
    </div>
@@ -54,7 +54,7 @@
 		<div id="paging-wrap">
 			<div class="paging">
 				<c:if test="${prev}">
-	                	<a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/prev.png" width="15px"></a>
+	                	<a href="${pageContext.request.contextPath}/adminindex.notificationboard?page=${startPage - 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/prev.png" width="15px"></a>
                 </c:if>	
                 <c:forEach var="i" begin="${startPage}" end="${endPage}">
                 	<c:choose>
@@ -62,12 +62,12 @@
 			                <a href="javascript:void(0)" class="active"><c:out value="${i}"/></a>
                 		</c:when>
                 		<c:otherwise>
-			               <a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${i}"><c:out value="${i}"/></a>
+			               <a href="${pageContext.request.contextPath}/adminindex.notificationboard?page=${i}"><c:out value="${i}"/></a>
                 		</c:otherwise>
                 	</c:choose>
                 </c:forEach>
                 <c:if test="${next}">
-	                  <a href="${pageContext.request.contextPath}/listOk.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/next.png" width="15px"></a>
+	                  <a href="${pageContext.request.contextPath}/adminindex.notificationboard?page=${endPage + 1}" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/image/next.png" width="15px"></a>
                 </c:if>
 			</div>
 		</div>	

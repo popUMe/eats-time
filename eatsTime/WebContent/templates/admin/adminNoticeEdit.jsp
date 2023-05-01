@@ -34,7 +34,7 @@
 			 <button disabled id="write-ok" type="submit" class="on" style="border:none; cursor:pointer;">수정</button>
 			 </div>
 			<div class="btn">
-			 <a href="listOk.notificationboard">취소</a>
+			 <a href="${pageContext.request.contextPath}/adminindex.notificationboard">취소</a>
 			</div>
 		</div>
 		</form>

@@ -37,7 +37,7 @@ public class WriteOkController implements Action {
 		notificationBoardVO.setNotbContent(notbContent);
 		
 		notificationBoardDAO.insert(notificationBoardVO);		
-		result.setPath(req.getContextPath() + "/listOk.notificationboard");
+		result.setPath(req.getContextPath() + "adminindex.notificationboard");
 		result.setRedirect(true);
 		
 		return result;
