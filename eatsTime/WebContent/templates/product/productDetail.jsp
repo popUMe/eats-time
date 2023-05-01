@@ -184,8 +184,9 @@
 <script>
 	let contextPath = "${pageContext.request.contextPath}"
 	let product = JSON.parse(`${product}`);
-	let memberId = `${sessionScope.memberId}`;
-	console.log(memberId);
+	let memberId = `${sessionScope.LOGIN_INFO.memberId}`;
+	console.log(`${sessionScope.LOGIN_INFO}`);
+	console.log(typeof memberId);
 </script>
 <script
 	src="${pageContext.request.contextPath}/static/js/modal/modal.js"></script>
