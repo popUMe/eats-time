@@ -5,7 +5,7 @@
 	<insert id="insert">
    		insert into tbl_notificationboard
 		(member_id, notb_title, notb_content)
-		values(1, #{notbTitle}, #{notbContent})
+		values(#{memberId}, #{notbTitle}, #{notbContent})
 	</insert>
 	
 	<select id="selectAllAdmin" resultType="notificationBoardDTO">
