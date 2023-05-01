@@ -189,18 +189,23 @@
 	<!-- 4월 28일 김인진 부분 -->
 	<!-- 상품 등록 -->
 	<insert id="insert">
-		INSERT INTO tbl_product
-		(member_id, product_category,
-		product_name, product_price,
-		product_expiration_date,
-		product_stock,
-		product_address,
-		product_address_detail)
-		VALUES(#{memberId},
-		'#{productCategory}', '#{productName}',
-		#{productPrice},
-		#{productExpirationDate}, #{productStock},
-		#{productAddress},
-		#productAddressDetail})
+		insert into tbl_product(member_id, product_category,
+		product_name, product_price, product_expiration_date, product_stock,
+		product_address, product_address_detail)
+		values(#{memberId},
+		#{productCategory}, #{productName}, #{productPrice},
+		#{productExpirationDate}, #{productStock}, #{productAddress},
+		#{productAddressDetail})
 	</insert>
+
+	<!-- 4월 29일 김인진 부분 -->
+	<!-- 구매 내역 -->
+	<select id="selectUploadListAll" resultType="productListDTO">
+		select p1.product_id,
+		p1.product_date, p1.product_name, p1.product_category, p1.product_price,
+		f.file_original_name, p1.member_id
+		from tbl_product
+		p1, tbl_file f
+		where p1.product_id = f.product_id and p1.member_id = 1
+	</select>
 </mapper>

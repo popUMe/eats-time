@@ -18,7 +18,6 @@ public class SaleFrontController extends HttpServlet {
 
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
-
 		// 작업 다시 해야함 여기는 그냥 써놓은거
 		if (target.equals("productListOk")) {
 			result = new ProductListOkController().execute(req, resp);

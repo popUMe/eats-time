@@ -31,6 +31,8 @@ public class ModifyOkController implements Action {
 		memberVO.setMemberPhoneNumber(req.getParameter("memberPhoneNumber"));
 		memberVO.setMemberGender(req.getParameter("memberGender"));
 		memberVO.setMemberBirthday(req.getParameter("memberBirthday"));
+		
+		System.out.println(req.getParameter("memberBirthday"));
 		memberDAO.update(memberVO);
 		
 		result.setRedirect(true);

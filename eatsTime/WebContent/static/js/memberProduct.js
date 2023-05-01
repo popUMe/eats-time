@@ -86,9 +86,6 @@ showPurchaseList();
 
 function showPurchaseList() {
 	purchases = JSON.parse(purchases);
-	console.log(purchases);
-
-	console.log(purchases.productCaterory);
 
 	/*<a href="javascript:location.href='${contextPath}/detailOk.board?boardId=${board.boardId}'">*/
 
