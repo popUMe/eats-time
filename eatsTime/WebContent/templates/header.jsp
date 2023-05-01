@@ -21,11 +21,8 @@
 <c:when test="${sessionScope.LOGIN_INFO eq null}">
 
 			<div class="css-fexq9b eo7pjfk4">
-<<<<<<< HEAD
+
 				<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/join.member">회원가입</a>
-=======
-				<a class="css-1g7d8zf eo7pjfk2" href="member/signup.jsp">회원가입</a>
->>>>>>> master
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.member">로그인</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
@@ -34,7 +31,7 @@
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
 						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.notificationboard">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/AnswerOk.answerboard">1:1
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/AnswerList.answerboard">1:1
 							문의</a>
 					</div>
 				</div>

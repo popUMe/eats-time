@@ -28,6 +28,10 @@ public class MainFrontController extends HttpServlet {
         else if(target.equals("ListOk")) {
             result = new ListOkController().execute(req, resp);
         } 
+        else if(target.equals("serviceInfo")) {
+        	result = new Result();
+        	result.setPath("/templates/service_info.jsp");
+        }
         if(result != null) {
             if(result.isRedirect()) {
                 resp.sendRedirect(result.getPath());

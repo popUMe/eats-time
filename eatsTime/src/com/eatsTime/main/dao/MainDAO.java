@@ -18,7 +18,6 @@ public class MainDAO {
 	private static SqlSession sqlSession;
 	
 	
-	
 	public MainDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}

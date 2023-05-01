@@ -9,8 +9,8 @@ public class MainDTO {
 	   private int productPrice;
 	   private String fileName;
 	   private String memberIdentification;
-	   private String memberName;
 	   private String saleContent;
+	   private String memberGrade;
 	   
 	   public MainDTO() {;}
 	   
@@ -45,23 +45,24 @@ public class MainDTO {
 		public void setMemberIdentification(String memberIdentification) {
 			this.memberIdentification = memberIdentification;
 		}
-		public String getMemberName() {
-			return memberName;
-		}
-		public void setMemberName(String memberName) {
-			this.memberName = memberName;
-		}
 		public String getSaleContent() {
 			return saleContent;
 		}
 		public void setSaleContent(String saleContent) {
 			this.saleContent = saleContent;
 		}
+		public String getMemberGrade() {
+			return memberGrade;
+		}
+
+		public void setMemberGrade(String memberGrade) {
+			this.memberGrade = memberGrade;
+		}
 		@Override
 		public String toString() {
 		    return "ProductDTO [productId=" + productId + ", productName="
 		            + productName + ", productPrice=" + productPrice  + ", fileName=" + fileName + ", memberIdentification=" + memberIdentification
-		            + ", memberName=" + memberName + ", saleContent=" + saleContent + "]";
+		            + ", memberGrade=" + memberGrade + ", saleContent=" + saleContent + "]";
 		}
 		@Override
 		public int hashCode() {
@@ -86,6 +87,7 @@ public class MainDTO {
 				return false;
 			return true;
 		}
+
 }
 		
 
