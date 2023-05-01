@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="main">
-
-		<sql id="search">
-		<trim prefixOverrides="or">
-			<foreach item="type" collection="types">
-				<trim prefix="or">
-					<choose>
-						<when test="type == 'name'.toString()">
-							product_name like concat('%', #{keyword}, '%')
-						</when>
-						<when test="type == 'id'.toString()">
-							file_id like concat('%', #{keyword}, '%')
-						</when>
-						<when test="type == 'name'.toString()">
-							member_name like concat('%', #{keyword}, '%')
-						</when>
-					</choose>
-				</trim>
-			</foreach>
-		</trim>
-	</sql>
-
-
-
-	<select id="selectAll" resultType="productDTO">
+<select id="selectAll" resultType="mainDTO">
 		select s.sale_content, b.* from tbl_sale s join
-		(selectfile_name,a.*from tbl_file f 
-		join ( select p.*, member_identification, member_name from tbl_member m
-		join tbl_product p on m.member_id = p.member_id) a on f.file_id = a.file_id) b on s.product_id = b.product_id
+		(select
+		file_name,
+		a.*
+		from
+		tbl_file f
+		join (
+		select
+		p.*,
+		member_identification,
+		member_name
+		from
+		tbl_member m
+		join tbl_product p on
+		m.member_id = p.member_id) a
+		on
+		f.file_id = a.file_id) b on s.product_id = b.product_id
 		<where>
 			<choose>
 				<when test="category == 'pickUp'.toString()">
@@ -36,6 +26,12 @@
 				</when>
 				<when test="category == 'send'.toString()">
 					product_category = '1'
+				</when>
+			</choose>
+			
+			<choose>
+				<when test="keyword != null">
+					and product_name like concat('%', #{keyword}, '%')
 				</when>
 			</choose>
 		</where>
@@ -52,13 +48,5 @@
 			</when>
 		</choose>
 		limit #{offset}, #{rowCount}
-	</select>
-
-
-
-
-
-
-
-
+</select>
 </mapper>
