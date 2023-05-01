@@ -108,16 +108,15 @@
 		<url-pattern>*.purchase</url-pattern>
 	</servlet-mapping>
  
- 
-	<!-- SaleFrontController 설정 -->
-	<servlet>
-		<servlet-name>Sale</servlet-name>
-		<servlet-class>com.eatsTime.sale.SaleFrontController</servlet-class>
-	</servlet>
+ 	<!-- PurchaseFrontController 설정 -->
+   <servlet>
+      <servlet-name>Sale</servlet-name>
+      <servlet-class>com.eatsTime.sale.SaleFrontController</servlet-class>
+   </servlet>
 
-	<servlet-mapping>
-		<servlet-name>Sale</servlet-name>
-		<url-pattern>*.sale</url-pattern>
-	</servlet-mapping>
+   <servlet-mapping>
+      <servlet-name>Sale</servlet-name>
+      <url-pattern>*.sale</url-pattern>
+   </servlet-mapping>
 
 </web-app>

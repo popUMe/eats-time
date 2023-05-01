@@ -18,24 +18,23 @@ public class ProductUploadOkController implements Action {
 		resp.setContentType("text/html;charset=utf-8");
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
-
 		ProductDAO productDAO = new ProductDAO(); 
 		ProductVO productVO = new ProductVO(); 
 		Result result = new Result();
 		
-		
-		Long memberId = Long.valueOf(req.getParameter("memberId"));
-		boolean productCategory =Boolean.parseBoolean(req.getParameter("productCategory"));
+//		Long memberId = Long.valueOf(req.getParameter("memberId"));
+//		int productCategory = Integer.parseInt(req.getParameter("productCategory"));
+		boolean productCategory = Boolean.parseBoolean(req.getParameter("productCategory"));
 		String productName = req.getParameter("productName");
-		int productPrice =  Integer.parseInt(req.getParameter("productPrice"));
+		int productPrice = Integer.parseInt(req.getParameter("productPrice"));
 		String productExpirationDate = req.getParameter("productExpirationDate");
 		int productStock = Integer.parseInt(req.getParameter("productStock"));
 		String productAddress = req.getParameter("productAddress");
 		String productAddressDetail = req.getParameter("productAddressDetail");
 		
 		
-		
-		productVO.setMemberId(memberId);
+//		productVO.setMemberId(memberId);
+		productVO.setMemberId(1L);
 		productVO.setProductCategory(productCategory);
 		productVO.setProductName(productName);
 		productVO.setProductPrice(productPrice);
@@ -44,12 +43,14 @@ public class ProductUploadOkController implements Action {
 		productVO.setProductAddress(productAddress);
 		productVO.setProductAddressDetail(productAddressDetail);
 		
+
+		
 		productDAO.insert(productVO);
 		
 		result.setRedirect(true);
 		result.setPath(req.getContextPath() + "/index.member");
 
-		return null;
+		return result;
 	}
 
 }

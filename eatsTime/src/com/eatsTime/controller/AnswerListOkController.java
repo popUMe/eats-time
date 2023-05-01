@@ -49,6 +49,8 @@ public class AnswerListOkController implements Action{
 		req.setAttribute("prev", criteria.isPrev());
 		req.setAttribute("next", criteria.isNext());
 
+		
+		
 		System.out.println("여기까지 오나");	
 		System.out.println(boardDAO.selectAll(pagable));
 		

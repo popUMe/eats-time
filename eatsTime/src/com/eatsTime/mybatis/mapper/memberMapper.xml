@@ -52,6 +52,7 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 		where member_id = 1
 	</select>
 
+
    <update id="update" parameterType="memberVO">
       update tbl_member
       set

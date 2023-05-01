@@ -31,12 +31,8 @@
 		from tbl_inquireboard
 	</select>
 	
-<!-- 	게시글 답변 상태 -->
-<!-- 	<select id="complete" resultType="String"> -->
-<!-- 		select replace(inqb_complete, false, "답변 대기"),  -->
-<!-- 		replace(inqb_complete, true, "답변 완료") -->
-<!-- 		from tbl_inquireboard -->
-<!-- 	</select> -->
+<!-- 게시글 답변  -->
+
 	
 <!-- 	게시글 수정 -->
 
@@ -51,7 +47,12 @@
 		delete from tbl_inquireboard
 		where inqb_id = #{inqbId}
 	</delete>
-	
-	
+
+	<!-- 게시글 답변 -->
+	<select id="answer" resultType="inquiryBoardDTO">
+		select i.inqb_id, i.inqb_title , i.inqb_content, a.ansb_title,
+		a.ansb_content
+		from tbl_inquireboard i join tbl_answerboard a on i.inqb_id=a.inqb_id;
+	</select>	
 	
 </mapper>

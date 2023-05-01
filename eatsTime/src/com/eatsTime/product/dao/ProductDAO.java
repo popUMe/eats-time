@@ -2,12 +2,12 @@ package com.eatsTime.product.dao;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
 import com.eatsTime.mybatis.config.MyBatisConfig;
 import com.eatsTime.product.domain.ProductDTO;
+import com.eatsTime.product.domain.ProductListDTO;
 import com.eatsTime.product.domain.ProductVO;
 
 public class ProductDAO {
@@ -61,6 +61,12 @@ public class ProductDAO {
    public void insert(ProductVO productVO) {
 	   sqlSession.insert("product.insert", productVO);
    }
+   
+   // 4월 29일 김인진 부분
+   // 등록 상품 리스트
+	public List<ProductListDTO> selectUploadListAll() {
+		return sqlSession.selectList("product.selectUploadListAll");
+	}
    
    
 }

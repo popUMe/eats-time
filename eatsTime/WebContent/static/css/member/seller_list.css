@@ -534,6 +534,39 @@ img, legend {
     border: 0px none;
 }
 
+/* 수정 삭제 */
+/* .content-alter {
+	display: flex;
+	margin-top: auto;
+} */
+.content-button {
+	display: flex;
+	justify-content: space-around;
+}
+
+.icon1 {
+	cursor: pointer;
+	padding-right: 30px;
+	margin-left: 15px;
+}
+
+.icon2 {
+	padding-right: 20px;
+	cursor: pointer;
+}
+
+/* 판매하기 버튼 */
+.selling {
+	text-align: center;
+	overflow: hidden;
+	width: 100px;
+	height: 40px;
+	border-radius: 3px;
+	color: rgb(255, 255, 255);
+	background-color: #ff4f32;
+	border: 0px none;
+	margin-bottom: 10px;
+}
 
 
 
