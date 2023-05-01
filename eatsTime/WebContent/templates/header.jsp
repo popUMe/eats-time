@@ -21,16 +21,16 @@
 <c:when test="${sessionScope.memberId eq null}">
 
 			<div class="css-fexq9b eo7pjfk4">
-				<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/signup.member">회원가입</a>
+				<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/join.member">회원가입</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.member">로그인</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
-					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeList.notificationboard">고객센터<span
+					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/listOk.notificationboard">고객센터<span
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeList.notificationboard">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/qnaList.notificationboard">1:1
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.notificationboard">공지사항</a>
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/AnswerOk.answerboard">1:1
 							문의</a>
 					</div>
 				</div>
@@ -53,7 +53,7 @@
 						<a class="css-12olpw6 ecncdj40" href="board/qnaList.jsp">1:1 문의</a>
 					</div>
 				</div>
-			</div> -->
+			</div>
 
 		</c:otherwise>
  </c:choose>
@@ -72,8 +72,11 @@
 				<!-- 검색창 부분 -->
 				<div class="css-pqw0uk e1493ofl4">
 					<div class="css-w444a2 e1493ofl1">
-						<input id="gnb_search" placeholder="검색어를 입력해주세요" required=""
-							class="css-11ntk83 e1493ofl3" value="">
+
+						<input id="gnb_search" name="keyword" placeholder="검색어를 입력해주세요" required=""
+							class="css-11ntk83 e1493ofl3" value="${keyword}"
+							onkeypress="if( event.keyCode == 13 ){search();}">
+
 						<button id="submit" aria-label="submit"
 							class="css-ywxmlw e1493ofl0" 
 							onclick="location.href='${pageContext.request.contextPath}/productListOk.product'"></button>
@@ -149,5 +152,12 @@
 	 document.getElementById("submit").click();
 	 }
 	 }); */
+
+
+		function search() {
+		 location.href=`${pageContext.request.contextPath}/productListOk.product?category=${category}&keyword=` + $("#gnb_search").val();
+		
+	}
+
 </script>
 </html>

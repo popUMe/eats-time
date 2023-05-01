@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.eatsTime.Result;
 import com.eatsTime.controller.AnswerListOkController;
 import com.eatsTime.controller.DetailOkController;
+import com.eatsTime.inquiryboard.controller.DeleteOkController;
 import com.eatsTime.member.controller.JoinOkController;
 
 public class AnswerFrontController extends HttpServlet {
@@ -27,6 +28,10 @@ public class AnswerFrontController extends HttpServlet {
 			
 		} else if(target.equals("detailOk")) {
 			result = new DetailOkController().execute(req, resp);
+		
+		} else if(target.equals("deleteOk")) {
+			System.out.println("deleteOk 들어옴");
+			result = new DeleteOkController().execute(req, resp);
 		}
 		
 		if(result != null) {
