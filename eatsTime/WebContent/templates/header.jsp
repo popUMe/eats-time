@@ -46,7 +46,7 @@
 						<a class="css-1g7d8zf eo7pjfk2" href="/templates/member/seller_list.jsp">마이페이지</a>
 					</c:when>
 					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'PURCHASER'}">
-						<a class="css-1g7d8zf eo7pjfk2" href="/templates/member/buyinglistDetail.jsp">마이페이지</a>
+						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/purchaseProduct.purchase">마이페이지</a>
 					</c:when>
 				</c:choose>
 				<div class="css-1qgm48u eo7pjfk0"></div>
