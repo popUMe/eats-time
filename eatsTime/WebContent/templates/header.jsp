@@ -21,16 +21,16 @@
 <c:when test="${sessionScope.LOGIN_INFO eq null}">
 
 			<div class="css-fexq9b eo7pjfk4">
-				<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/signup.main">회원가입</a>
+				<a class="css-1g7d8zf eo7pjfk2" href="member/signup.jsp">회원가입</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
-				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.main">로그인</a>
+				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.member">로그인</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
-					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeList.main">고객센터<span
+					<a class="css-1pu21l0 eo7pjfk2" href="board/noticeList.jsp">고객센터<span
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeList.main">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/qnaList.main">1:1
+						<a class="css-12olpw6 ecncdj40" href="board/noticeList.jsp">공지사항</a>
+						<a class="css-12olpw6 ecncdj40" href="board/qnaList.jsp">1:1
 							문의</a>
 					</div>
 				</div>
@@ -53,20 +53,17 @@
 				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/logout.member">로그아웃</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
-					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeList.main">고객센터<span
+					<a class="css-1pu21l0 eo7pjfk2" href="board/noticeList.jsp">고객센터<span
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeList.main">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/qnaList.main">1:1 문의</a>
+						<a class="css-12olpw6 ecncdj40" href="board/noticeList.jsp">공지사항</a>
+						<a class="css-12olpw6 ecncdj40" href="board/qnaList.jsp">1:1 문의</a>
 					</div>
 				</div>
 			</div> 
-=======
-			</div>
 
 		</c:otherwise>
  </c:choose>
-
 			<!-- 헤더 로고, 검색창, 장바구니 등 라인 부분 -->
 			<div class="css-r7wmjj e15sbxqa3">
 				<!-- 로고하고 마켓컬리, 뷰티컬리 부분 -->
