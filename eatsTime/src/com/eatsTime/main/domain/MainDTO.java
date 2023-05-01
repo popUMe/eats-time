@@ -7,11 +7,6 @@ public class MainDTO {
 	   public Long productId;
 	   private String productName;
 	   private int productPrice;
-	   private String productDate;
-	   private String productExpirationDate;
-	   private int productStock;
-	   private String productAddress;
-	   private String productAddressDetail;
 	   private String fileName;
 	   private String memberIdentification;
 	   private String memberName;
@@ -37,36 +32,6 @@ public class MainDTO {
 		}
 		public void setProductPrice(int productPrice) {
 			this.productPrice = productPrice;
-		}
-		public String getProductDate() {
-			return productDate;
-		}
-		public void setProductDate(String productDate) {
-			this.productDate = productDate;
-		}
-		public String getProductExpirationDate() {
-			return productExpirationDate;
-		}
-		public void setProductExpirationDate(String productExpirationDate) {
-			this.productExpirationDate = productExpirationDate;
-		}
-		public int getProductStock() {
-			return productStock;
-		}
-		public void setProductStock(int productStock) {
-			this.productStock = productStock;
-		}
-		public String getProductAddress() {
-			return productAddress;
-		}
-		public void setProductAddress(String productAddress) {
-			this.productAddress = productAddress;
-		}
-		public String getProductAddressDetail() {
-			return productAddressDetail;
-		}
-		public void setProductAddressDetail(String productAddressDetail) {
-			this.productAddressDetail = productAddressDetail;
 		}
 		public String getFileName() {
 			return fileName;
@@ -94,12 +59,9 @@ public class MainDTO {
 		}
 		@Override
 		public String toString() {
-			return "ProductDTO [productId=" + productId + ",  productName="
-					+ productName + ", productPrice=" + productPrice + ", productDate=" + productDate
-					+ ", productExpirationDate=" + productExpirationDate + ", productStock=" + productStock
-					+ ", productAddress=" + productAddress + ", productAddressDetail=" + productAddressDetail + ", fileName="
-					+ fileName + ", memberIdentification=" + memberIdentification + ", memberName=" + memberName
-					+ ", saleContent=" + saleContent + "]";
+		    return "ProductDTO [productId=" + productId + ", productName="
+		            + productName + ", productPrice=" + productPrice  + ", fileName=" + fileName + ", memberIdentification=" + memberIdentification
+		            + ", memberName=" + memberName + ", saleContent=" + saleContent + "]";
 		}
 		@Override
 		public int hashCode() {
