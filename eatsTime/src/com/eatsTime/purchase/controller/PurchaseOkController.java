@@ -5,14 +5,13 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.eatsTime.Action;
 import com.eatsTime.Result;
 import com.eatsTime.member.dao.MemberDAO;
+import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.product.dao.ProductDAO;
 import com.eatsTime.purchase.dao.PurchaseDAO;
 
@@ -27,8 +26,9 @@ public class PurchaseOkController implements Action {
          PurchaseDAO purchaseDAO = new PurchaseDAO();
          ProductDAO productDAO = new ProductDAO();
          MemberDAO memberDAO = new MemberDAO();
+         MemberVO memverVO = (MemberVO) req.getSession().getAttribute("LOGIN_INFO");
+         Long memberId = memverVO.getMemberId();
          String productId = req.getParameter("productId");
-         Long memberId = (Long)req.getSession().getAttribute("memberId");
          String count = req.getParameter("count");
          
          System.out.println(memberId);
