@@ -21,7 +21,7 @@
 		join tbl_product p on
 		m.member_id = p.member_id) a
 		on
-		f.file_id = a.file_id) b on s.product_id = b.product_id
+		f.product_id = a.product_id) b on s.product_id = b.product_id
 		<where>
 			<choose>
 				<when test="category == 'pickUp'.toString()">
@@ -102,7 +102,7 @@
 		join tbl_product p on
 		m.member_id = p.member_id) a
 		on
-		f.file_id = a.file_id and a.product_category = '1') b on s.product_id
+		f.product_id = a.product_id and a.product_category = '1') b on s.product_id
 		=
 		b.product_id
 		<choose>
@@ -145,7 +145,7 @@
 		join tbl_product p on
 		m.member_id = p.member_id) a
 		on
-		f.file_id = a.file_id and a.product_category = '0') b on s.product_id
+		f.product_id = a.product_id and a.product_category = '0') b on s.product_id
 		=
 		b.product_id
 		<choose>
@@ -183,7 +183,7 @@
 		join tbl_product p on
 		m.member_id = p.member_id) a
 		on
-		f.file_id = a.file_id) b on s.product_id = b.product_id and
+		f.product_id = a.product_id) b on s.product_id = b.product_id and
 		b.product_id =
 		#{productId}
 	</select>
