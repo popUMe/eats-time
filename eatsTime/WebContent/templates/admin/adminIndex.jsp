@@ -21,7 +21,7 @@
        </div>
       <a class="nav_list" href="${pageContext.request.contextPath}/adminindex.notificationboard">공지사항</a> 
       <a class="nav_list" href="${pageContext.request.contextPath}/listOk.member">회원관리</a> 
-      <a class="nav_list" href="${pageContext.request.contextPath}/listOk.Inquiryboard">문의내역</a>
+      <a class="nav_list" href="${pageContext.request.contextPath}/answerList.answerBoard">문의내역</a>
    </div>
 
 	<div class="content">
