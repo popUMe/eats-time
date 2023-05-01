@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
-import com.eatsTime.inquiryboard.controller.ListOkController;
+import com.eatsTime.main.controller.ListOkController;
+
 
 
 public class MainFrontController extends HttpServlet {
@@ -20,14 +21,15 @@ public class MainFrontController extends HttpServlet {
         String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
         Result result = null;
         System.out.print(target);
-        if(target.equals("indexPage")) {
+        if(target.equals("listOk")) {
             result = new Result(); // null check 후 객체 생성
-            result.setPath("/templates/index.jsp");
+            result = new ListOkController().execute(req, resp);
             System.out.println("들어옴4");
         } 
-        else if(target.equals("ListOk")) {
-            result = new ListOkController().execute(req, resp);
-        } 
+        else if(target.equals("serviceInfo")) {
+        	result = new Result();
+        	result.setPath("/templates/service_info.jsp");
+        }
         if(result != null) {
             if(result.isRedirect()) {
                 resp.sendRedirect(result.getPath());
