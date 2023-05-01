@@ -15,7 +15,6 @@ import com.eatsTime.main.controller.ListOkController;
 public class MainFrontController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("들어옴0");
         req.setCharacterEncoding("UTF-8");
 
         String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
@@ -24,7 +23,7 @@ public class MainFrontController extends HttpServlet {
         if(target.equals("listOk")) {
             result = new Result(); // null check 후 객체 생성
             result = new ListOkController().execute(req, resp);
-            System.out.println("들어옴4");
+       
         } 
         else if(target.equals("serviceInfo")) {
         	result = new Result();
