@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!--새로운 태그 fn List를 받을때 List에 length를 받을때 사용된다. -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -170,6 +170,8 @@
                   <div class="css-11kh0cw ef36txc5">
    
                   </div>
+                  <div class="notFind">
+                  </div>
 
                
 
@@ -178,14 +180,14 @@
             <div class="css-rdz8z7 e82lnfz1">
 
                <!-- 처음 페이지로 이동하기 -->
-               <a class="css-1d20dg7 e82lnfz0" href="${pageContext.request.contextPath}/productListOk.product?page=1&sort=${sort}&category=${category}"> <img
+               <a class="css-1d20dg7 e82lnfz0" href="${pageContext.request.contextPath}/productListOk.product?page=1&sort=${sort}&category=${category}&keyword=${keyword}"> <img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAQAAABwkq/rAAAAHUlEQVR42mNgAIPi/8X/kWkwA8SE0UQIMJAsCKMBBzk27fqtkcYAAAAASUVORK5CYII="
                   alt="처음 페이지로 이동하기 아이콘">
                </a>
 
                <!-- 이전 페이지로 이동하기 -->
             <c:if test="${prev}">
-               <a class="css-1d20dg7 e82lnfz0" href="${pageContext.request.contextPath}/productListOk.product?page=${startPage - 1}&sort=${sort}&category=${category}"> <img
+               <a class="css-1d20dg7 e82lnfz0" href="${pageContext.request.contextPath}/productListOk.product?page=${startPage - 1}&sort=${sort}&category=${category}&keyword=${keyword}"> <img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC"
                   alt="이전 페이지로 이동하기 아이콘">
                </a>
@@ -198,7 +200,7 @@
                      </c:when>
                      <c:otherwise>
                         <a
-                           href="${pageContext.request.contextPath}/productListOk.product?page=${i}&sort=${sort}&category=${category}"
+                           href="${pageContext.request.contextPath}/productListOk.product?page=${i}&sort=${sort}&category=${category}&keyword=${keyword}"
                            class="css-1d20dg7 e82lnfz0 page-list"><c:out value="${i}" /></a>
                      </c:otherwise>
                   </c:choose>
@@ -206,14 +208,14 @@
 
                <!-- 다음 페이지로 이동하기 -->
                <c:if test="${next}">
-               <a class="css-1d20dg7 e82lnfz0" href="${pageContext.request.contextPath}/productListOk.product?page=${endPage + 1}&sort=${sort}&category=${category}"> <img
+               <a class="css-1d20dg7 e82lnfz0" href="${pageContext.request.contextPath}/productListOk.product?page=${endPage + 1}&sort=${sort}&category=${category}&keyword=${keyword}"> <img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg=="
                   alt="다음 페이지로 이동하기 아이콘">
                </a>
                </c:if>
 
                <!-- 마지막 페이지로 이동하기 -->
-               <a class="css-1d20dg7 e82lnfz0" href="${pageContext.request.contextPath}/productListOk.product?page=${realEndPage}&sort=${sort}&category=${category}"> <img
+               <a class="css-1d20dg7 e82lnfz0" href="${pageContext.request.contextPath}/productListOk.product?page=${realEndPage}&sort=${sort}&category=${category}&keyword=${keyword}"> <img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAQAAABwkq/rAAAAIElEQVR42mMo/l/8n4GBgQFGQ5kgDowmQZCwAMImhDkAb0k27Zcisn8AAAAASUVORK5CYII="
                   alt="마지막 페이지로 이동하기 아이콘">
                </a>
@@ -239,6 +241,8 @@
    let products = JSON.parse(`${product}`);
    let category = `${category}`;
    let sort = `${sort}`;
+   let keyword= `${keyword}`;
+   console.log(keyword);
 </script>
 <script src="${pageContext.request.contextPath}/static/js/product.js"></script>
 <script>

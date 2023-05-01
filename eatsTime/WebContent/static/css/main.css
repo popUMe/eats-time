@@ -728,6 +728,15 @@ li {
 	text-align: -webkit-match-parent;
 }
 
+
+/* 유저 에이전트 시트 삭제 선언 */
+
+
+ul>li::marker { 
+	content: "" !important; 
+	}
+
+
 /* 푸터 컬리소개 ... 각 버튼 부분 */
 .css-1tfhwyj {
 	font-size: 14px;

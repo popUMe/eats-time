@@ -153,9 +153,9 @@
                                        <br>
                                        <div height="44" class="css-t7kbxx e1uzxhvi3">
                                           <input data-testid="input-box" id="deliveryAddressDetail"
-                                             name="purAddressDetail" name="subAddress" placeholder=""
+                                             name="purAddressDetail" name="subAddress" placeholder="(상세주소)"
                                              type="text" required="" height="44"
-                                             class="css-1quw3ub e1uzxhvi2" value="(상세주소)">
+                                             class="css-1quw3ub e1uzxhvi2" value="">
                                        </div>
                                        <br>
                                     </div>
@@ -707,7 +707,15 @@
 <script
    src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
-   console.log(`${!product.productCategory}`);
+  
+  let memberId = `${sessionScope.memberId}`;
+  
+  if(memberId == ''){
+      showWarnModal("로그인 후 사용해주세요");
+	$('#content-wrap').on("click", function(){
+		location.href = `${contextPath}/login.member`;
+	});	
+  
 
    /* 주소 api  */
    if ($('#address_kakao').length) {
@@ -794,41 +802,6 @@
       $('.addressPickup').hide();
       console.log($('.addressPickup').is(':visible'));
    });
-   /* let $input = $('receiver-name');
-   $(clearInput).on('click', function(){
-      $input.value = "";
-   }) */
 
-   /*    $('.payButton').on(
-    "click",
-    function() {
-   
-    console.log($('#receiver-input1').val());
-    if ($('#deliveryAddress').is(':visible')) {
-    if ($('#deliveryAddress').val("")
-    || $('#deliveryAddressDetail').val("")) {
-    showWarnModal("배송 주소를 입력해주세요");
-    return;
-    }
-    } 
-
-    if ($('#receiver-input1').val()=='') {
-    showWarnModal("받으실 분 성함을 입력해주세요");
-    return;
-    }
-
-    if ($('#receiver-input2').val() =='') {
-    showWarnModal("휴대폰을 입력해주세요");
-    return;
-    }
-
-    if ($('#receiver-input3').val()=='') {
-    showWarnModal("받으실 장소를 입력해주세요.");
-    return;
-    }
-
-    payment;
-
-    }); */
 </script>
 </html>

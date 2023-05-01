@@ -11,7 +11,7 @@ $(document).ready(function() {
 		members = JSON.parse(members);
 		const $tbody = $("#table-container .member-list");
 		let text = "";
-
+		
 		members.forEach(member => {
 			text += `
 			<tr>
