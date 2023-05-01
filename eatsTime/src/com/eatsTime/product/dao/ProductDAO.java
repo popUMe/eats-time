@@ -67,6 +67,11 @@ public class ProductDAO {
 	public List<ProductListDTO> selectUploadListAll() {
 		return sqlSession.selectList("product.selectUploadListAll");
 	}
-   
+	
+	// 5월 1일 김인진 부분
+	// 최근 게시글 번호 조회
+	public Long selectCurrentSequence() {
+		return sqlSession.selectOne("product.selectCurrentSequence");
+	}
    
 }

@@ -218,4 +218,10 @@
 		p1, tbl_file f
 		where p1.product_id = f.product_id and p1.member_id = 1
 	</select>
+	
+	<!-- 5월 1일 김인진 부분 -->
+	<!-- 최근 등록글 불러오기 -->
+		<select id="selectCurrentSequence" resultType="long">
+		select last_insert_id()
+	</select>
 </mapper>

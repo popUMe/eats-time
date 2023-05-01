@@ -22,7 +22,7 @@
 			</div>
 			<form
 				action="${pageContext.request.contextPath}/productUploadOk.product"
-				name="productUploadForm" method="get">
+				name="productUploadForm" method="post" enctype="multipart/form-data">
 				<div class="css-y8aj3r">
 					<!-- 상품명 -->
 					<div class="css-1pjgd36">
