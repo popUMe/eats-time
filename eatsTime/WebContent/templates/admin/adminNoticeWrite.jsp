@@ -33,7 +33,7 @@
 				<button disabled id="write-ok" type="submit" class="on" style="cursor:pointer; border:none;">제출</button>
 			</div>
 			<div class="btn">
-				<a href="listOk.notificationboard" style="cursor:pointer">취소</a>
+				<a href="${pageContext.request.contextPath}/adminindex.notificationboard" style="cursor:pointer">취소</a>
 			</div>						
 		</form>
 		</div>
