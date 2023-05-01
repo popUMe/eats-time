@@ -8,7 +8,14 @@ public class InquiryBoardDTO {
 	private String inqbContent;
 	private String inqbDate;
 	private boolean inqbComplete;
+	private String memberIdentification;
 
+	public String getMemberIdentification() {
+		return memberIdentification;
+	}
+	public void setMemberIdentification(String memberIdentification) {
+		this.memberIdentification = memberIdentification;
+	}
 	private Long ansbId;
 	private String ansbTitle;
 	private String ansbContent;

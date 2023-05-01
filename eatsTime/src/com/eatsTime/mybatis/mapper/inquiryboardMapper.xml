@@ -1,45 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="inquiryboard">
-   
-   <select id="select" resultType="inquiryBoardVO">
-		select inqb_id, product_id, member_id, inqb_title, inqb_content, inqb_date, inqb_complete
-		from tbl_inquireboard
-		where inqb_id = #{inqbId}
+
+	<select id="select" resultType="inquiryBoardVO">
+		select inqb_id, product_id,
+		m.member_id, inqb_title, inqb_content, inqb_date, inqb_complete
+		from
+		tbl_inquireboard i join tbl_member m
+		on m.member_id=i.member_id
+		and
+		inqb_id = #{inqbId}
 	</select>
 
-   
-<!--    게시글 추가 -->
-   <insert id="insert">
-   	insert into tbl_inquireboard
-   	(member_id, inqb_title, inqb_content)
-   	values (#{memberId}, #{inqbTitle}, #{inqbContent})
-   </insert>
-      
-<!--    게시글 전체 조회 -->
-	<select id="selectAll" resultType="inquiryBoardVO">
-	select inqb_id ,product_id, member_id , inqb_title , inqb_content , inqb_date, inqb_complete
-	from tbl_inquireboard
-	order by inqb_id desc
-	limit #{offset}, #{rowCount}
+
+
+	<!-- 게시글 추가 -->
+	<insert id="insert">
+		insert into tbl_inquireboard
+		(member_id, inqb_title,
+		inqb_content)
+		values (#{memberId}, #{inqbTitle}, #{inqbContent})
+	</insert>
+
+	<!-- 게시글 전체 조회 -->
+	<select id="selectAll" resultType="inquiryBoardDTO">
+		select member_id, i.inqb_id, i.inqb_title , i.inqb_content, a.ansb_title,
+		a.ansb_content, i.inqb_complete
+		from tbl_inquireboard i left join tbl_answerboard a on
+		i.inqb_id
+		=a.inqb_id
+		where member_id = #{memberId}
+		order by inqb_id desc
+		limit
+		#{offset}, #{rowCount}
 	</select>
-	
-	
-<!--    게시글 전체 개수 조회 -->
+
+
+	<!-- 게시글 전체 개수 조회 -->
 	<select id="getTotal" resultType="_int">
 		select count(inqb_id)
-		from tbl_inquireboard
+		from
+		tbl_inquireboard
 	</select>
-	
-<!-- 게시글 답변  -->
 
-	
-<!-- 	게시글 수정 -->
+	<!-- 게시글 답변 -->
+
+
+	<!-- 게시글 수정 -->
 
 	<update id="update">
-	update tbl_inquireboard
-	set inqb_title=#{inqbTitle}, inqb_content=#{inqbContent}
-	where inqb_id=#{inqbId}
+		update tbl_inquireboard
+		set inqb_title=#{inqbTitle},
+		inqb_content=#{inqbContent}
+		where inqb_id=#{inqbId}
 	</update>
 
 	<!-- 게시글 삭제 -->
@@ -50,9 +63,11 @@
 
 	<!-- 게시글 답변 -->
 	<select id="answer" resultType="inquiryBoardDTO">
-		select i.inqb_id, i.inqb_title , i.inqb_content, a.ansb_title,
+		select i.inqb_id, i.inqb_title ,
+		i.inqb_content, a.ansb_title,
 		a.ansb_content
-		from tbl_inquireboard i join tbl_answerboard a on i.inqb_id=a.inqb_id;
-	</select>	
-	
+		from tbl_inquireboard i
+		join tbl_answerboard a on i.inqb_id= a.inqb_id;
+	</select>
+
 </mapper>

@@ -131,7 +131,7 @@
                            <span class="css-14kcwq8 e1vd1n2i1">${boards.inqbDate}</span>
                         </div>
                         <div class="css-8e1vc1 e1cfowvj2">
-                           <span color="#999" class="css-14kcwq8 e1hz5ei00">${boards.inqbComplete ? "답변완료" : "답변미완료"}</span>
+                           <span color="#999" class="css-14kcwq8 e1hz5ei00">${boards.inqbComplete ? "답변미완료" : "답변완료"}</span>
                         </div>
                      </div>
                   </li>
@@ -153,24 +153,27 @@
                            <div class="css-ord49b eula2qn0"></div>
                            <button type="button" class="css-qv4hdm deletebtn">삭제</button>
                         </div>
-
-                        <div class="css-1tsgnig e1vtrp070">
+                         <div class="css-1tsgnig e1vtrp070">
                            <div class="css-b41fnw etpoi034">
                               <div class="css-1i2xt0r etpoi030">
                                  <span class="css-1non6l6 ey0f1wv0"></span>
                               </div>
+                             <c:choose>
+                             <c:when test="${boards.ansbTitle ne null}">
                               <div class="css-wm215i etpoi033">
-                                 <span type="ANSWER" class="css-kfh61x etpoi032">안녕하세요,
-                                    고객님</span> <br> <span type="ANSWER"
-                                    class="css-kfh61x etpoi032">고객님의 응원 말씀 덕에 오늘 저의 하루에
-                                    활기가 생겼습니다.</span> <br> <span type="ANSWER"
-                                    class="css-kfh61x etpoi032">저희 서비스를 애용해주셔서 감사하고,</span> <br>
-                                 <span type="ANSWER" class="css-kfh61x etpoi032">고객님의
-                                    만족을 위해 최선을 다하는 이츠타임이 되겠습니다.</span> <br> <span type="ANSWER"
-                                    class="css-kfh61x etpoi032">오늘도 기운 넘치는 하루 보내세요^^</span>
+                                 <span type="ANSWER" class="css-kfh61x etpoi032">${boards.ansbTitle}</span> <br> <span type="ANSWER"
+                                    class="css-kfh61x etpoi032">${boards.ansbContent}</span> <br> 
+                               
                                  <div class="css-iqoq9n e1b9s61w0"></div>
-                                 <div class="css-1kna94k etpoi031">2023.04.14</div>
+                                 <div class="css-1kna94k etpoi031">${boards.ansbDate}</div>
+                              </div> 
+                              </c:when>
+                              <c:otherwise>
+                              <div class="css-wm215i etpoi033">
+                              	<span type="ANSWER" class="css-kfh61x etpoi032">답변이 아직 등록되지 않았습니다.</span>
                               </div>
+                              </c:otherwise>
+                              </c:choose> 
                            </div>
                         </div>
                      </div>
