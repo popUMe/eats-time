@@ -14,25 +14,28 @@
 	<div class="board_wrap">
 		<div class="board_title">
 			<h1>답변작성 - 관리자모드</h1>
-		</div>
+		</div>  
+		<form action="${pageContext.request.contextPath}/writeOk.answerBoard?inqbId=${param.inqbId}" id="formtag" name="writeForm" method="post" >
 		<div class="board_write_wrap">
 			<div class="board_write">
+			
 				<div class="title">
 					<dl>
 						<dt>제목</dt>
 						<dd>
-							<input type="text" placeholder="제목 입력">
+							<input type="text" name="ansbTitle" placeholder="제목 입력">
 						</dd>
 					</dl>
 				</div>
 				<div class="cont">
-					<textarea placeholder="내용 입력"></textarea>
+					<textarea placeholder="내용 입력" name="ansbContent"></textarea>
 				</div>
 			</div>
 			<div class="btn">
-				<a href="adminQna.jsp" class="on">등록</a> <a href="adminQna.jsp">취소</a>
+				<button onclick="document.getElementById('formtag').submit()" class="on">등록</button> <!-- <a href="adminQna.jsp">취소 </a> -->
 			</div>
 		</div>
+		</form>
 	</div>
 
 </body>
