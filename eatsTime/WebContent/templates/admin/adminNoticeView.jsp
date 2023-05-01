@@ -37,7 +37,7 @@
 				</div>
 			</div>
 			<div class="btn" style="background-color: black;">
-				<a href="${pageContext.request.contextPath}/listOk.notificationboard" class="on">목록</a>
+				<a href="${pageContext.request.contextPath}/adminindex.notificationboard" class="on">목록</a>
 			</div> 
 			<div class="btn">
 				<a href="${pageContext.request.contextPath}/adminEdit.notificationboard?notbId=${notbId}">수정</a>
