@@ -8,13 +8,16 @@ public class AnswerBoardDTO {
 	private String ansbContent;
 	private String ansbDate;
 	private Long inqbId;
+	private String inqbComplete;
 	
 
 	private String inqbTitle ;
 	private String inqbContent;
 	private String inqbDate;
-	private boolean inqbComplete;
 	private String memberIdentification;
+	
+	
+	
 	public Long getAnsbId() {
 		return ansbId;
 	}
@@ -63,10 +66,11 @@ public class AnswerBoardDTO {
 	public void setInqbDate(String inqbDate) {
 		this.inqbDate = inqbDate;
 	}
-	public boolean isInqbComplete() {
+
+	public String getInqbComplete() {
 		return inqbComplete;
 	}
-	public void setInqbComplete(boolean inqbComplete) {
+	public void setInqbComplete(String inqbComplete) {
 		this.inqbComplete = inqbComplete;
 	}
 	public String getMemberIdentification() {
@@ -79,16 +83,7 @@ public class AnswerBoardDTO {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((ansbContent == null) ? 0 : ansbContent.hashCode());
-		result = prime * result + ((ansbDate == null) ? 0 : ansbDate.hashCode());
 		result = prime * result + ((ansbId == null) ? 0 : ansbId.hashCode());
-		result = prime * result + ((ansbTitle == null) ? 0 : ansbTitle.hashCode());
-		result = prime * result + (inqbComplete ? 1231 : 1237);
-		result = prime * result + ((inqbContent == null) ? 0 : inqbContent.hashCode());
-		result = prime * result + ((inqbDate == null) ? 0 : inqbDate.hashCode());
-		result = prime * result + ((inqbId == null) ? 0 : inqbId.hashCode());
-		result = prime * result + ((inqbTitle == null) ? 0 : inqbTitle.hashCode());
-		result = prime * result + ((memberIdentification == null) ? 0 : memberIdentification.hashCode());
 		return result;
 	}
 	@Override
@@ -100,52 +95,10 @@ public class AnswerBoardDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		AnswerBoardDTO other = (AnswerBoardDTO) obj;
-		if (ansbContent == null) {
-			if (other.ansbContent != null)
-				return false;
-		} else if (!ansbContent.equals(other.ansbContent))
-			return false;
-		if (ansbDate == null) {
-			if (other.ansbDate != null)
-				return false;
-		} else if (!ansbDate.equals(other.ansbDate))
-			return false;
 		if (ansbId == null) {
 			if (other.ansbId != null)
 				return false;
 		} else if (!ansbId.equals(other.ansbId))
-			return false;
-		if (ansbTitle == null) {
-			if (other.ansbTitle != null)
-				return false;
-		} else if (!ansbTitle.equals(other.ansbTitle))
-			return false;
-		if (inqbComplete != other.inqbComplete)
-			return false;
-		if (inqbContent == null) {
-			if (other.inqbContent != null)
-				return false;
-		} else if (!inqbContent.equals(other.inqbContent))
-			return false;
-		if (inqbDate == null) {
-			if (other.inqbDate != null)
-				return false;
-		} else if (!inqbDate.equals(other.inqbDate))
-			return false;
-		if (inqbId == null) {
-			if (other.inqbId != null)
-				return false;
-		} else if (!inqbId.equals(other.inqbId))
-			return false;
-		if (inqbTitle == null) {
-			if (other.inqbTitle != null)
-				return false;
-		} else if (!inqbTitle.equals(other.inqbTitle))
-			return false;
-		if (memberIdentification == null) {
-			if (other.memberIdentification != null)
-				return false;
-		} else if (!memberIdentification.equals(other.memberIdentification))
 			return false;
 		return true;
 	}

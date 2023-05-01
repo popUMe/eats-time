@@ -36,7 +36,7 @@ public class AnswerViewController implements Action{
 		
 		
 		
-//		req.setAttribute("boards", boardDAO.select(inqdId));
+		req.setAttribute("boards", boardDAO.select(inqdId));
 		req.setAttribute("inqbId", boardDTO.getInqbId());
 		req.setAttribute("inqbTitle", boardDTO.getInqbTitle());
 		req.setAttribute("inqbContent", boardDTO.getInqbContent());

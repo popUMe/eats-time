@@ -76,6 +76,9 @@
 				<button class="btn">
 					<a href="${pageContext.request.contextPath}/answerList.answerBoard" class="on">목록</a>
 				</button>
+				<button class="btn">
+					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?inqbId=${boards.inqbId}" class="on">삭제</a>
+				</button>
 			</div>
 		</div>
 

@@ -61,7 +61,7 @@ public class LoginOkController implements Action{
 			if("ADMIN".equals(memberGrade)) {
 				result.setPath(req.getContextPath() + "/adminindex.notificationboard");
 			} else {
-				result.setPath(req.getContextPath() + "/indexPage.main");
+				result.setPath(req.getContextPath() + "/listOk.main");
 			}
 
 			if(autoLogin) {
