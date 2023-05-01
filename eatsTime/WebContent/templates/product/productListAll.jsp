@@ -239,10 +239,12 @@
 <script>
    let contextPath = "${pageContext.request.contextPath}"
    let products = JSON.parse(`${product}`);
+   console.log(products);
    let category = `${category}`;
    let sort = `${sort}`;
    let keyword= `${keyword}`;
    console.log(keyword);
+   console.log(`${sessionScope.LOGIN_INFO.memberId}`);
 </script>
 <script src="${pageContext.request.contextPath}/static/js/product.js"></script>
 <script>
