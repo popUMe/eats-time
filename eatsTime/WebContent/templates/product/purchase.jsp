@@ -60,7 +60,7 @@
                   <!-- 상품 내용 부분 가겨 -->
                   <span class="css-1j31gob e17a7yib3"><span
                      class="css-jnogx7 e17a7yib0"><c:out
-                           value="${product.productPrice}" />원</span></span>
+                           value="${product.productPrice * count}" />원</span></span>
                </div>
                <!-- 주문자 정보 부분 -->
                <div class="css-12aowi2 edbbr7c2">
@@ -707,14 +707,6 @@
 <script
    src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
-  
-  let memberId = `${sessionScope.memberId}`;
-  
-  if(memberId == ''){
-      showWarnModal("로그인 후 사용해주세요");
-	$('#content-wrap').on("click", function(){
-		location.href = `${contextPath}/login.member`;
-	});	
   
 
    /* 주소 api  */
