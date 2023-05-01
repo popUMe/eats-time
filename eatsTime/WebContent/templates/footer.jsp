@@ -109,23 +109,23 @@
 					<ul class="css-zjik7 ek68y4g1">
 						<a href="https://instagram.com/marketkurly" target="_blank"
 							rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
-							src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
+							src=""
 							alt="컬리 인스타그램 바로가기"></a>
-						<a href="https://www.facebook.com/marketkurly" target="_blank"
+						<a href="" target="_blank"
 							rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
 							src="https://res.kurly.com/pc/ico/1810/ico_fb.png"
 							alt="컬리 페이스북 바로가기"></a>
-						<a href="https://blog.naver.com/marketkurly" target="_blank"
+						<a href="" target="_blank"
 							rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
-							src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
+							src=""
 							alt="컬리 네이버블로그 바로가기"></a>
-						<a href="https://m.post.naver.com/marketkurly" target="_blank"
+						<a href="" target="_blank"
 							rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
-							src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
+							src=""
 							alt="컬리 네이버포스트 바로가기"></a>
-						<a href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg"
+						<a href=""
 							target="_blank" rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
-							src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
+							src=""
 							alt="컬리 유튜브 바로가기"></a>
 					</ul>
 				</div>
