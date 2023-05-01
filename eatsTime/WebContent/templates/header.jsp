@@ -27,11 +27,11 @@
 				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/login.member">로그인</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
-					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/listOk.notificationboard">고객센터<span
+					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeListOk.notificationboard">고객센터<span
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.notificationboard">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/AnswerList.answerboard">1:1
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeListOk.notificationboard">공지사항</a>
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.inquiryboard">1:1
 							문의</a>
 					</div>
 				</div>
@@ -44,21 +44,21 @@
 			<div class="css-fexq9b eo7pjfk4">
 				<c:choose>
 					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'SELLER'}">
-						<a class="css-1g7d8zf eo7pjfk2" href="/templates/member/seller_list.jsp">마이페이지</a>
+						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/saleListOk.sale">마이페이지</a>
 					</c:when>
 					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'PURCHASER'}">
-						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/purchaseProduct.purchase">마이페이지</a>
+						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/SaleRegister.sale">마이페이지</a>
 					</c:when>
 				</c:choose>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/logout.member">로그아웃</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
-					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeList.main">고객센터<span
+					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/listOk.notificationboard">고객센터<span
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeList.main">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/qnaList.main">1:1 문의</a>
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.notificationboard">공지사항</a>
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.inquiryboard">1:1 문의</a>
 					</div>
 				</div>
 			</div> 
@@ -74,7 +74,7 @@
 						src="${pageContext.request.contextPath}/static/image/logo_98x42.png"
 						alt="마켓컬리 로고" class="css-17mnrrx e1s3pt0j0">
 					<button class="active css-j0ug0x ekdqe1a1"
-						onclick="location.href='${pageContext.request.contextPath}/indexPage.main'">이츠타임</button>
+						onclick="location.href='${pageContext.request.contextPath}/listOk.main'">이츠타임</button>
 					<button class=" css-1sia941 ekdqe1a0" style="visibility: hidden">삭제예정</button>
 				</div>
 				<!-- 검색창 부분 -->
