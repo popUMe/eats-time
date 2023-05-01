@@ -19,8 +19,8 @@ public class SaleDAO {
 		sqlSession.insert("sale.insert", saleVO);
 	}
 	
-	public ProductVO test() {
-		return sqlSession.selectOne("sale.test");
+	public ProductVO selectProduct(Long productId) {
+		return sqlSession.selectOne("sale.selectProduct", productId);
 	}
 	
 	public List<SaleVO> selectList(Long memberId) {
