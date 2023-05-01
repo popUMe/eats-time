@@ -14,7 +14,7 @@
 <jsp:include page="../header.jsp" />
 <body>
 	<form action="${pageContext.request.contextPath}/joinOk.member" name="join" method="post">
-		<div class="css-pculus">
+		<div class="css-pculus join">
 			<div class="css-o5dw7d">회원가입</div>
 			<div class="css-mhmtvt">
 				<div class="css-rb0i47">
@@ -29,17 +29,17 @@
 							<div class="css-jmalg">
 								<div class="css-176lya2">
 									<input data-testid="input-box" id="memberId" name="memberIdentification"
-										placeholder="아이디를 입력해주세요" type="text" required=""
+										placeholder="6~16자, 영문 혹은 영문+숫자" type="text" required=""
 										class="css-u52dqk" value="">
+										<p class="help"></p>
 								</div>
 							</div>
 							<div class="css-shoa2s">
-								<p class="css-1ozi17i">6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합</p>
 							</div>
 						</div>
 						<div class="css-1w0ksfz">
 							<button class="css-ufulao" type="button">
-								<span class="css-ymwvow">중복확인</span>
+								<span class="css-ymwvow" id="idCheck">중복확인</span>
 							</button>
 						</div>
 					</div>
@@ -61,6 +61,7 @@
 								<input data-testid="input-box" id="password" name="memberPw"
 									placeholder="비밀번호를 입력해주세요" type="password" autocomplete="off"
 									class="css-u52dqk" value="" aria-autocomplete="list">
+									<p class="help"></p>
 							</div>
 						</div>
 					</div>
@@ -76,6 +77,7 @@
 								<input data-testid="input-box" id="passwordConfirm"
 									name="passwordConfirm" placeholder="비밀번호를 한번 더 입력해주세요"
 									type="password" autocomplete="off" class="css-u52dqk" value="">
+								<p class="help"></p>
 							</div>
 						</div>
 					</div>
@@ -91,6 +93,7 @@
 								<input data-testid="input-box" id="name" name="memberName"
 									placeholder="이름을 입력해 주세요" type="text" required=""
 									class="css-u52dqk" value="">
+									<p class="help"></p>
 							</div>
 						</div>
 					</div>
@@ -105,13 +108,15 @@
 							<div class="css-176lya3">
 								<input data-testid="input-box" id="email" name="memberEmail"
 									placeholder="예: marketkurly@kurly.com" type="email" required=""
-									class="css-u52dqk" value="">
+									class="css-u53dqk" value="">
+									<p class="help"></p>
 							</div>
 						</div>
 					</div>
+					
 					<div class="css-1w0ksfz">
 						<button class="css-ufulao" type="button">
-							<span class="css-ymwvow">중복확인</span>
+							<span class="css-ymwvow" id="emailCheck">중복확인</span>
 						</button>
 					</div>
 				</div>
@@ -125,6 +130,7 @@
 								<input data-testid="input-box" id="mobileNumber"
 									name="memberPhoneNumber" placeholder="숫자만 입력해주세요." type="tel"
 									required="" class="css-u52dqk" value="">
+									<p class="help"></p>
 							</div>
 						</div>
 					</div>
@@ -199,6 +205,46 @@
 						
 						<div class="css-1w0ksfz"></div>
 					</div>
+
+			<!-- 등급 -->
+
+		<div class="css-1pjgd36">
+						<div class="css-1y8737n">
+							<label class="css-1obgjqh">등급</label>
+						</div>
+						<div class="css-82a6rk">
+							<div class="css-14wodj6">
+							
+								<label class="css-z9g6s0" for="grade-purchaser">
+								<input id="grade-purchaser" name="memberGrade" type="radio" 
+								class="css-1pes2r6" value="PURCHASER">
+									<span class="css-198i9ca" id="purchaser">
+									<div class="css-1dahn5m" id=divpurchaser></div></span>
+									<span class="css-mgd87h">소비자</span>
+								</label> 
+								
+								
+								<label class="css-z9g6s0" for="grade-seller"> 
+								<input id="grade-seller" name="memberGrade" type="radio"
+								class="css-1pes2r6" value="SELLER" checked="">
+
+									<span class="css-5xw1m2" id="seller">
+										<div class="css-1vic0rk" id="divseller"></div>
+									</span> 
+								<span class="css-mgd87h">판매자</span>
+								
+								</label> 
+
+									
+							</div>
+							
+						</div>
+						
+						<div class="css-1w0ksfz"></div>
+					</div>
+
+
+
 
 				<!-- 생년월일 -->
 				<div class="css-1pjgd36 ">
@@ -335,7 +381,6 @@
 >>>>>>> master
 				</div> -->
 				</form>
->>>>>>> master
 				<!-- 가입하기  -->
 				<div class="css-137ca2h">
 					<button class="css-18m884r" type="submit" width="240" height="56"
