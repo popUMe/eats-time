@@ -47,15 +47,16 @@ public class AnswerBoardDAO {
 	}
 
 //	전체 게시글 리스트에서 게시글 삭제
-	public void delete(Long InqbId) {
+	public void delete(Long inqbId) {
 		System.out.println("AnswerBoardDao 들어옴");
-		sqlSession.delete("answerboard.delete", InqbId);
+		sqlSession.delete("answerboard.delete", inqbId);
 	}
 
 //	답변 여부
 	public void yesno(Long inqbId) {
-		sqlSession.selectOne("answerboard.update", inqbId);
+		sqlSession.selectOne("answerboard.yesno", inqbId);
 
 	}
+	
 
 }

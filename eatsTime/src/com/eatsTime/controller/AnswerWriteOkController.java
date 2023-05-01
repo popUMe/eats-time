@@ -51,7 +51,7 @@ public class AnswerWriteOkController implements Action{
 		
 //		boardDTO = boardDAO.select(ansbId);
 
-		
+		boardDAO.yesno(inqbId);
 		
 		//		boardDTO = boardDAO.select(ansbId);
 //		req.setAttribute("reply", boardDAO.select(ansbId));
