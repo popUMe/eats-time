@@ -57,9 +57,7 @@ public class ListOkController implements Action {
 
 		req.setAttribute("realEndPage", criteria.getRealEndPage());
 		req.setAttribute("product", jsonArray.toString());
-		System.out.print("들어옴1131");
 		req.setAttribute("total", MainDAO.getTotal(pagable));
-		System.out.print("들어옴131");
 		
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", criteria.getStartPage());
@@ -73,7 +71,6 @@ public class ListOkController implements Action {
 		// forward여서 경로 앞에 추가로 안붙혀도 된다
 		// 프론트컨트롤러 안거치고 컨트롤러에서 바로 jsp로 게시글리스트쪽으로 이동
 		result.setPath("templates/index.jsp");
-		System.out.print("들어옴13131");
 		return result;
 	}
 }
