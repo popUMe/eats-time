@@ -131,7 +131,7 @@
 									<span class="css-14kcwq8 e1vd1n2i1">${boards.inqbDate}</span>
 								</div>
 								<div class="css-8e1vc1 e1cfowvj2">
-									<span color="#999" class="css-14kcwq8 e1hz5ei00">${boards.inqbComplete ? "답변완료" : "답변미완료"}</span>
+									<span color="#999" class="css-14kcwq8 e1hz5ei00">${boards.inqbComplete ? "답변미완료" : "답변완료"}</span>
 								</div>
 							</div>
 						</li>
@@ -160,10 +160,8 @@
 											<span class="css-1non6l6 ey0f1wv0"></span>
 										</div>
 										<div class="css-wm215i etpoi033">
-											<span type="ANSWER" class="css-kfh61x etpoi032">안녕하세요,
-												고객님</span> <br> <span type="ANSWER"
-												class="css-kfh61x etpoi032">고객님의 응원 말씀 덕에 오늘 저의 하루에
-												활기가 생겼습니다.</span> <br> <span type="ANSWER"
+											<span type="ANSWER" class="css-kfh61x etpoi032">${answer.ansbTitle}</span> <br> <span type="ANSWER"
+												class="css-kfh61x etpoi032">${answer.ansbContent}</span> <br> <span type="ANSWER"
 												class="css-kfh61x etpoi032">저희 서비스를 애용해주셔서 감사하고,</span> <br>
 											<span type="ANSWER" class="css-kfh61x etpoi032">고객님의
 												만족을 위해 최선을 다하는 이츠타임이 되겠습니다.</span> <br> <span type="ANSWER"

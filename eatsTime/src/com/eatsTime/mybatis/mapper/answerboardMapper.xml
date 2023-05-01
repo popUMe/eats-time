@@ -22,11 +22,32 @@
 	limit #{offset}, #{rowCount}
 	</select>
 
+<!-- 	게시글 답변 유무 -->
+
+
+
+	<update id="yesno">
+	update tbl_inquireboard
+	set inqb_complete=0
+	where inqb_id=#{inqbId}
+	</update>
+
+
+
+
+<!-- 답글 조회 -->
+	<select id="selectAnswer" resultType="answerBoardDTO">
+	select i.inqb_id, a.ansb_id, a.ansb_title, a.ansb_content,a.ansb_date
+	from tbl_answerboard a join tbl_inquireboard i on a.inqb_id= i.inqb_id and i.inqb_id = #{inqbId}
+	
+	</select>
+	
+	
 	<!--    게시글 추가 -->
    <insert id="insert">
    	insert into tbl_answerboard
-   	(ansb_id, ansb_title, ansb_content)
-   	values (#{ansbId}, #{ansbTitle}, #{ansbContent})
+   	(ansb_id, inqb_id, ansb_title, ansb_content, ansb_date)
+   	values (#{ansbId}, #{inqbId},#{ansbTitle}, #{ansbContent}, #{ansbDate})
    </insert>
       
 	
@@ -46,5 +67,10 @@
 <!-- 	</select> -->
 	
 	
+	<!-- 전체 게시글 리스트에서 게시글 삭제 -->
+	<delete id="delete">
+		delete from tbl_inquireboard
+		where inqb_id = #{inqbId}
+	</delete>
 	
 </mapper>

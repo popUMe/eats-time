@@ -12,6 +12,7 @@ import org.json.JSONObject;
 
 import com.eatsTime.Action;
 import com.eatsTime.Result;
+import com.eatsTime.answerboard.domain.AnswerBoardDTO;
 import com.eatsTime.inquiryboard.dao.InquiryBoardDAO;
 import com.eatsTime.inquiryboard.domain.Criteria;
 
@@ -36,6 +37,7 @@ public class ListOkController implements Action {
 		pagable.put("offset", criteria.getOffset());
 		pagable.put("rowCount", criteria.getRowCount());
 
+		AnswerBoardDTO boardDTO=new AnswerBoardDTO();
 		
 		req.setAttribute("boards", boardDAO.selectAll(pagable));
 		req.setAttribute("realEndPage", criteria.getRealEndPage());
@@ -46,6 +48,14 @@ public class ListOkController implements Action {
 		req.setAttribute("prev", criteria.isPrev());
 		req.setAttribute("next", criteria.isNext());
 
+		Long inqbId = Long.valueOf(req.getParameter("inqbId"));
+
+		req.setAttribute("answer", boardDAO.select(inqbId));
+		req.setAttribute("ansbTitle", boardDTO.getAnsbTitle());
+		req.setAttribute("ansbContent", boardDTO.getAnsbContent());
+		req.setAttribute("ansbDate", boardDTO.getAnsbDate());
+		
+		
 		result.setPath("templates/board/qnaList.jsp");
 
 		return result;

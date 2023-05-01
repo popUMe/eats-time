@@ -60,20 +60,21 @@
 					<th>상태</th>
 				</tr>
 				<c:forEach var="boards" items="${boards}">
-				<tr>
-					<td><input type="checkbox" name="chk"></td>
-					<td>${boards.inqbId}</td>
-				<a href="${pageContext.request.contextPath}/detailOk.answerBoard?inqbId=${boards.inqbId}"><td>${boards.inqbTitle}</td></a>
-					<td>${boards.memberIdentification}</td>
-					<td>${boards.inqbDate}</td>     
-					<td>${boards.inqbComplete ? "답변완료" : "답변미완료"}</td>
-				</tr>
+						<tr onclick="location.href='${pageContext.request.contextPath}/detailOk.answerBoard?inqbId=${boards.inqbId}'" style="cursor:hand">
+						<td><input type="checkbox" name="chk"></td>
+						<td>${boards.inqbId}</td>
+						<td>${boards.inqbTitle}</td>
+						<td>${boards.memberIdentification}</td>
+						<td>${boards.inqbDate}</td>     
+						<td>${boards.inqbComplete ? "답변 미완료" : "답변완료"}</td>
+						</tr>
 				</c:forEach>
 				</tbody>
 			</table>
 			
 				<!-- 페이지 앞/뒤로 넘기기 버튼 -->
 				<div class="css-15jhycr e3tf63e0">
+				
 					<div class="css-sxxs1g eytury60">
      			 <!-- [S] 페이지 컨트롤러 -->
                <div class="css-rdz8z7 e82lnfz1">
@@ -128,7 +129,7 @@
                </div>
                <!-- [E] 페이지 컨트롤러 -->
 			
-<!-- 			<div class="paging"> -->
+<!-- 			<div class="paging"> --> 
 <!-- 				<a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a> -->
 <!-- 				<a href="#">4</a> <a href="#">5</a> -->
 <!-- 			</div> -->
