@@ -61,7 +61,7 @@ function showProductUploadList() {
 	const $ul = $("#content-wrap ul");
 	let text = "";
 
-	products.forEach(product => {
+	products.forEach((product, i) => {
 		text += `
 			<li class="css-1c8nox">
 		        <div class="css-4wlxei">
@@ -90,7 +90,7 @@ function showProductUploadList() {
 									</div>
 								</div>
 								<div class="content-alter">
-									<div class="selldiv"><input type="button" class="selling" value="판매하기"> </div>
+									<div class="selldiv"><input type="button" class="selling" onclick="send(${i})" value="판매하기"> </div>
 									<div class="content-button">
 										<div class="icon1">
 											<img class="icon-insert"

@@ -18,11 +18,11 @@ public class FileVO {
 		this.fileId = fileId;
 	}
 
-	public Long getproductId() {
+	public Long getProductId() {
 		return productId;
 	}
 
-	public void setproductId(Long productId) {
+	public void setProductId(Long productId) {
 		this.productId = productId;
 	}
 
@@ -52,8 +52,8 @@ public class FileVO {
 
 	@Override
 	public String toString() {
-		return "FileVO [fileId=" + fileId + ", productId=" + productId + ", fileName=" + fileName + ", fileOriginalName="
-				+ fileOriginalName + ", fileSize=" + fileSize + "]";
+		return "FileVO [fileId=" + fileId + ", productId=" + productId + ", fileName=" + fileName
+				+ ", fileOriginalName=" + fileOriginalName + ", fileSize=" + fileSize + "]";
 	}
 
 	@Override
@@ -80,5 +80,5 @@ public class FileVO {
 			return false;
 		return true;
 	}
-	
+
 }

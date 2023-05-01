@@ -22,7 +22,7 @@
 			</div>
 			<form
 				action="${pageContext.request.contextPath}/productUploadOk.product"
-				name="productUploadForm" method="get">
+				name="productUploadForm" method="post" enctype="multipart/form-data">
 				<div class="css-y8aj3r">
 					<!-- 상품명 -->
 					<div class="css-1pjgd36">
@@ -177,7 +177,7 @@
 											<p class="css-imagerule">* 이미지 규격 : 123x123</p>
 										</div>
 
-									</label> <input type="file" id="attach" style="display: none;">
+									</label> <input type="file" name="fildUpload" id="attach" style="display: none;">
 
 									<div class="image">
 										<div class="cancel" style="display: none";>X</div>

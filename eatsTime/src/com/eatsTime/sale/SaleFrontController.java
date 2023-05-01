@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
-import com.eatsTime.sale.controller.DummyProductOkController;
+import com.eatsTime.sale.controller.SaleRegisterFormController;
 import com.eatsTime.sale.controller.SaleListOkController;
 import com.eatsTime.sale.controller.SaleRegisterOkController;
 
@@ -23,8 +23,8 @@ public class SaleFrontController extends HttpServlet {
       if (target.equals("saleRegisterOk")) {
          result = new SaleRegisterOkController().execute(req, resp);
          
-      } else if (target.equals("dummyProductOk")) {
-         result = new DummyProductOkController().execute(req, resp);
+      } else if (target.equals("saleRegisterForm")) {
+         result = new SaleRegisterFormController().execute(req, resp);
          
       } else if (target.equals("saleListOk")) {
           result = new SaleListOkController().execute(req, resp);
