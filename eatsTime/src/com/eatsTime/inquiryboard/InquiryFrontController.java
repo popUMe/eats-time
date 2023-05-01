@@ -8,9 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
+import com.eatsTime.inquiryboard.controller.DeleteOkController;
 import com.eatsTime.inquiryboard.controller.ListOkController;
+import com.eatsTime.inquiryboard.controller.UpdateController;
+import com.eatsTime.inquiryboard.controller.UpdateOkController;
 import com.eatsTime.inquiryboard.controller.WriteOkController;
-import com.eatsTime.member.controller.JoinOkController;
 
 public class InquiryFrontController extends HttpServlet {
 	@Override
@@ -33,6 +35,12 @@ public class InquiryFrontController extends HttpServlet {
 		} else if(target.equals("listOk")) {
 			System.out.println("listOk 들어옴");
 			result = new ListOkController().execute(req, resp);
+		} else if(target.equals("update")) {
+			result = new UpdateController().execute(req, resp);
+		}else if(target.equals("updateOk")) {
+			result = new UpdateOkController().execute(req, resp);
+		}else if(target.equals("deleteOk")) {
+			result = new DeleteOkController().execute(req, resp);
 		}
 		if(result != null) {
 			if(result.isRedirect()) {
