@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import com.eatsTime.mybatis.config.MyBatisConfig;
 import com.eatsTime.product.domain.ProductVO;
 import com.eatsTime.sale.domain.SaleVO;
+import com.eatsTime.sale.domain.SaleDTO;
 
 public class SaleDAO {
 	public SqlSession sqlSession;
@@ -23,7 +24,7 @@ public class SaleDAO {
 		return sqlSession.selectOne("sale.selectProduct", productId);
 	}
 	
-	public List<SaleVO> selectList(Long memberId) {
+	public List<SaleDTO> selectList(Long memberId) {
 		return sqlSession.selectList("sale.selectList", memberId);
 	}
 

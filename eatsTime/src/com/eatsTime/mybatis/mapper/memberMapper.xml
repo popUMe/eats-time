@@ -39,7 +39,7 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 	 and member_pw = #{memberPw}
    </select>
    
-   <select id="selectAll" parameterType="memberVO" resultType="memberVO">
+   <select id="selectAll"  resultType="memberVO">
 		select
 		member_identification,
 		member_pw,
@@ -49,7 +49,7 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 		member_gender,
 		member_birthday
 		from tbl_member
-		where member_id = 1
+		where member_id = #{memberId}
 	</select>
 
 
@@ -61,14 +61,14 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
       member_phone_number=#{memberPhoneNumber},
       member_gender=#{memberGender}, member_birthday=#{memberBirthday}
       where
-      member_Id = 1
+      member_Id = #{memberId}
    </update>
 
 	<update id="delete" parameterType="_int">
 		update tbl_member
 		set
 		member_status= 0
-		where member_id = 1
+		where member_id = #{memberId}
 	</update>
 	
 	<!-- 0426 추가 -->

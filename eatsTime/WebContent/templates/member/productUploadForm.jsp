@@ -177,7 +177,7 @@
 											<p class="css-imagerule">* 이미지 규격 : 123x123</p>
 										</div>
 
-									</label> <input type="file" id="attach" style="display: none;">
+									</label> <input type="file" name="fildUpload" id="attach" style="display: none;">
 
 									<div class="image">
 										<div class="cancel" style="display: none";>X</div>

@@ -14,6 +14,7 @@ import com.eatsTime.Action;
 import com.eatsTime.Result;
 import com.eatsTime.file.dao.FileDAO;
 import com.eatsTime.file.domain.FileVO;
+import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.product.dao.ProductDAO;
 import com.eatsTime.product.domain.ProductVO;
 import com.oreilly.servlet.MultipartRequest;
@@ -33,8 +34,12 @@ public class ProductUploadOkController implements Action {
 		Result result = new Result();
 		FileDAO fileDAO = new FileDAO();
 		Path path = null;
+		MemberVO memberVO = new MemberVO();
 		
 		HttpSession session = req.getSession();
+		memberVO = (MemberVO) session.getAttribute("LOGIN_INFO");
+		Long memberId = memberVO.getMemberId();
+
 		String root = req.getServletContext().getRealPath("/") + "upload/";
 		int fileSize = 1024 * 1024 * 20;
 		
@@ -49,8 +54,7 @@ public class ProductUploadOkController implements Action {
 		String productAddress = multipartRequest.getParameter("productAddress");
 		String productAddressDetail = multipartRequest.getParameter("productAddressDetail");
 		
-//		productVO.setMemberId(memberId);
-		productVO.setMemberId(1L);
+		productVO.setMemberId(memberId);
 		productVO.setProductCategory(productCategory);
 		productVO.setProductName(productName);
 		productVO.setProductPrice(productPrice);
@@ -61,40 +65,25 @@ public class ProductUploadOkController implements Action {
 		
 		productDAO.insert(productVO);
 		
+		// ProductId 가져오기
 		fileVO.setProductId(productDAO.selectCurrentSequence());
 		
-		Enumeration<String> inputTypeFileNames = multipartRequest.getFileNames();
-		System.out.println("들어옴");
-		System.out.println(inputTypeFileNames);
+		// FineName 부분 
+		String fileName = multipartRequest.getFilesystemName("fildUpload");
+		// OriginalFileName 부분
+		String originalFileName = multipartRequest.getOriginalFileName("fildUpload");
+		// path 부분 정리(그래야 FileSize 구할 수 있음)
+		path = Path.of(root + fileName);
 		
-		String inputTypeFileName = inputTypeFileNames.nextElement();
-		System.out.println("----------------------------------");
-		System.out.println(inputTypeFileName);
-		String fileSystemName = multipartRequest.getFilesystemName(inputTypeFileName);
-				
-		fileVO.setFileName(fileSystemName);
-		fileVO.setFileOriginalName(multipartRequest.getOriginalFileName(inputTypeFileName));
-		path = Path.of(root + fileSystemName);
+		fileVO.setFileName(fileName);
+		fileVO.setFileOriginalName(originalFileName);
 		fileVO.setFileSize(String.valueOf(Files.size(path)));
 		
 		fileDAO.insert(fileVO);
 		
-		/*
-		 * while(inputTypeFileNames.hasMoreElements()) { String inputTypeFileName =
-		 * inputTypeFileNames.nextElement(); String fileSystemName =
-		 * multipartRequest.getFilesystemName(inputTypeFileName); if(fileSystemName ==
-		 * null) {continue;} fileVO.setFileName(fileSystemName);
-		 * fileVO.setFileOriginalName(multipartRequest.getOriginalFileName(
-		 * inputTypeFileName)); path = Path.of(root + fileSystemName);
-		 * fileVO.setFileSize(String.valueOf(Files.size(path)));
-		 * 
-		 * System.out.println(fileVO.getFileOriginalName()); System.out.println("들어옴");
-		 * fileDAO.insert(fileVO); }
-		 */
-		
 		
 		result.setRedirect(true);
-		result.setPath(req.getContextPath() + "/ProductUploadListOk.product");
+		result.setPath(req.getContextPath() + "/productUploadList.product");
 
 		return result;
 	}

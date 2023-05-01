@@ -10,14 +10,13 @@ sales.forEach((sale, i) => {
 	text += `
 		<div class="css-4wlxei">
 			<div class="css-1hbtwy0">
-				<span class="css-asma03">${sale.saleDate}</span><a
-					class="css-l9y4tx">판매내역 상세보기</a>
+				<span class="css-asma03">${sale.saleDate}</span>
 			</div>
 			<div class="css-7apail">
 				<div class="css-fhxb3m">
 					<img
-						src="https://img-cf.kurly.com/shop/data/goods/1637154387515l0.jpg"
-						alt="image" class="css-1oc1pau e1437c648">
+						src="${contextPath}/upload/${sale.fileName}"
+										alt="상품 이미지" class="css-1oc1pau">
 					<div class="css-1fttcpj e1437c647">
 						<dl class="css-1ccl3pq">
 							<dt class="css-dzjp62">상품명</dt>
@@ -29,7 +28,7 @@ sales.forEach((sale, i) => {
 						</dl>
 
 						<dl class="css-1ccl3pq">
-							<dt class="css-dzjp62">판매 ID</dt>
+							<dt class="css-dzjp62">판매 번호</dt>
 							<dd class="css-1i58pf4">${sale.saleId}</dd>
 						</dl>
 					</div>
