@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 
 import com.eatsTime.Action;
 import com.eatsTime.Result;
@@ -19,6 +19,9 @@ public class UpdateStatusOkController implements Action {
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
 		Result result = new Result();
+		
+		HttpSession session = req.getSession();
+		memberVO = (MemberVO) session.getAttribute("LOGIN_INFO");
 		
 		int page = Integer.parseInt(req.getParameter("page"));
 		String[] array = req.getParameterValues("chk");
