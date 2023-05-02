@@ -54,8 +54,6 @@
 			<table>
 			 <tbody>
 				<tr>
-					<th style="width: 30px"><input type="checkbox" id="chkAll"
-						name="chkAll" /></th>
 					<th>문의번호</th>
 					<th>제목</th>
 					<th>작성자</th>
@@ -64,7 +62,6 @@
 				</tr>
 				<c:forEach var="boards" items="${boards}">
 						<tr onclick="location.href='${pageContext.request.contextPath}/detailOk.answerBoard?inqbId=${boards.inqbId}'" style="cursor:hand">
-						<td><input type="checkbox" name="chk"></td>
 						<td>${boards.inqbId}</td>
 						<td>${boards.inqbTitle}</td>
 						<td>${boards.memberIdentification}</td>

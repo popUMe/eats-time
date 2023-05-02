@@ -71,11 +71,17 @@
 
 
 				<button class="btn">
-					<a href="${pageContext.request.contextPath}/answerList.answerBoard">목록</a>
+					<a href="${pageContext.request.contextPath}/answerList.answerBoard">질문 목록</a>
 				</button>
+				
+				<c:choose>
+					<c:when test="${answers ne null}">
 				<button class="btn">
-					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?ansbId=${boards.ansbId}&inqbId=${boards.inqbId}" >삭제</a>
+					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?ansbId=${boards.ansbId}&inqbId=${boards.inqbId}" >답변 삭제</a>
 				</button>
+				
+				</c:when>
+				</c:choose>
 			</div>
 		</div>
 
