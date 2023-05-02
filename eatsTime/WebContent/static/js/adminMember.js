@@ -18,6 +18,7 @@ $(document).ready(function() {
 			    <td><input type="checkbox" name="chk" value="${member.memberId}"></td>
 				<td>${member.memberId}</td>
 				<td>${member.memberName}</td>
+				<td>${member.memberGrade}</td>
 				<td>${member.memberJoinedDate}</td>
 				<td>${member.memberStatus}</td>
 			</tr>
@@ -102,6 +103,8 @@ $(document).ready(function() {
 	$(function() {
 		$("td:contains('true')").text("활성").css("color", "green");
 		$("td:contains('false')").text("비활성").css("color", "red");
+		$("td:contains('SELLER')").text("판매자");
+		$("td:contains('PURCHASER')").text("구매자");
 	});
 	
 	/* 활성화로 상태 변경 */
