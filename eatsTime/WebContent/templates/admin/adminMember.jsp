@@ -17,7 +17,7 @@
 	
 	<div id="sidebar">
 	 	<div id="logo">
-	 		<a class="logo" href="${pageContext.request.contextPath}/adminindex.notificationboard">
+	 		<a class="logo" href="${pageContext.request.contextPath}/listOk.main">
 	 			<img src="${pageContext.request.contextPath}/static/image/logo.png" alt="이츠타임 로고">
 	 		</a>
 	 	</div>
