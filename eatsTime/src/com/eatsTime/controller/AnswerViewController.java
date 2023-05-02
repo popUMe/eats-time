@@ -42,7 +42,7 @@ public class AnswerViewController implements Action{
 		req.setAttribute("inqbContent", boardDTO.getInqbContent());
 		req.setAttribute("memberIdentification", boardDTO.getMemberIdentification());
 		req.setAttribute("inqbDate", boardDTO.getInqbDate());
-//		req.setAttribute("ansbDate", boardDTO.getAnsbDate());
+		req.setAttribute("ansbDate", boardDTO.getAnsbDate());
 		
 		
 

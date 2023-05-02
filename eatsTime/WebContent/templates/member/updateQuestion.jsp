@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -179,7 +181,8 @@
 					<div class="popup-content css-15yaaju e1k5padi2">1:1 문의가
 						정상적으로 수정되었습니다.</div>
 					<div class="popup-footer css-1ol9ch1 e1k5padi0">
-						<button onclick="document.getElementById('formtag').submit();" 
+						<button
+							onclick="document.getElementById('formtag').submit();"
 							class="css-1necch4 e1k5padi1">확인</button>
 					</div>
 				</div>

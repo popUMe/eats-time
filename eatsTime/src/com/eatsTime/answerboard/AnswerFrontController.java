@@ -9,12 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.eatsTime.Result;
 import com.eatsTime.answerboard.controller.DeleteOkController;
+import com.eatsTime.controller.AnsUpdateController;
+import com.eatsTime.controller.AnsUpdateOkController;
 import com.eatsTime.controller.AnswerListOkController;
 import com.eatsTime.controller.AnswerViewController;
 import com.eatsTime.controller.AnswerWriteOkController;
 import com.eatsTime.controller.DetailOkController;
 
-import com.eatsTime.member.controller.JoinOkController;
+//import com.eatsTime.member.controller.JoinOkController;
 
 public class AnswerFrontController extends HttpServlet {
 	@Override
@@ -48,24 +50,31 @@ public class AnswerFrontController extends HttpServlet {
 		 else if(target.equals("answerView")) {
 			System.out.println("answerView 들어옴");
 			result = new AnswerViewController().execute(req, resp);
+			
 		}else if(target.equals("listOk")) {
 			System.out.println("answerView 들어옴");
 			result = new AnswerListOkController().execute(req, resp);
+		
+		}else if(target.equals("updateAnswer")) {
+		System.out.println("answerView 들어옴");
+		result = new AnsUpdateController().execute(req, resp);
+		}else if(target.equals("updateOk")) {
+			System.out.println("answerView 들어옴");
+			result = new AnsUpdateOkController().execute(req, resp);
 		}
 //		} else if(target.equals("answerWrite"))
 //			System.out.println("answerWrite 프컨 들어옴");
 //			result=new AnswerWriteOkController().execute(req,resp);
-//		} 
-// 		
+//		}
 	
-	if(result != null) {
-		if(result.isRedirect()) {
-			resp.sendRedirect(result.getPath());
-		}else {
-			req.getRequestDispatcher(result.getPath()).forward(req, resp);
-		}
+		if(result != null) {
+			if(result.isRedirect()) {
+				resp.sendRedirect(result.getPath());
+			}else {
+				req.getRequestDispatcher(result.getPath()).forward(req, resp);
+			}
+		}						
 	}
-}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
