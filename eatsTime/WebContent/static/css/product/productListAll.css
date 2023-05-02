@@ -23,7 +23,7 @@
 
 /* Filter */
 .css-1jgnig9 {
-	display: inline-block;
+   display: inline-block;
     width: 249px;
     vertical-align:center;
 }
@@ -33,7 +33,7 @@
 }
 
 .css-wy76no {
-	display: inline-block;
+   display: inline-block;
     font-weight: 500;
     font-size: 15px;
     color: rgb(51, 51, 51);
@@ -41,48 +41,48 @@
 }
 
 .ev2ab494 ul {
-	display: inline-block;
-	padding : 0;
-	margin : 0;
-	margin-top : 8px;
-	vertical-align: middle;
+   display: inline-block;
+   padding : 0;
+   margin : 0;
+   margin-top : 8px;
+   vertical-align: middle;
 }
 
 .ev2ab494 ul li {
-	display: inline-block;
-	float : left ;
+   display: inline-block;
+   float : left ;
 }
 
 .ev2ab494 ul li:nth-of-type(1),
 .ev2ab494 ul li:nth-of-type(2) {
-	margin-right : 16px;
-	
+   margin-right : 16px;
+   
 }
 
 /* .ev2ab494 ul::after {
-	display: block;
-	content :'';
-	clear : both;
+   display: block;
+   content :'';
+   clear : both;
 } */
 
 
 
 /* a 태그 박스 */
 .css-11y1fso .css-s5xdrg {
-	display: inline-block;
+   display: inline-block;
     -webkit-box-align: center;
     align-items: center;
     line-height: 16px;
 }
 
 .css-17kh8wb {
-	display: inline-block;
+   display: inline-block;
     -webkit-box-align: center;
     align-items: center;
 }
 
 .css-1buhy1h {
-	display: inline-block;
+   display: inline-block;
     margin-right: 4px;
     font-weight: 400;
     font-size: 14px;
@@ -100,7 +100,7 @@
 }
 
 .css-ryw54y {
-	display: inline-block;
+   display: inline-block;
     flex-shrink: 0;
     font-weight: 400;
     font-size: 12px;
@@ -108,25 +108,25 @@
     color: rgb(204, 204, 204);
 }
 
-	/* svg */
+   /* svg */
 .btn-on {
-	display: none;
+   display: none;
 }
 
 .css-17kh8wb.filter-on .btn-off {
-	display: none;
+   display: none;
 }
 
 .css-17kh8wb.filter-on .btn-on {
-	display: block;
+   display: block;
 }
-	
+   
 
 
 
 /* 초기화 버튼 */
 .css-7pv5zq {
-	display: inline-block;
+   display: inline-block;
     pointer-events: none;
 }
 
@@ -137,21 +137,21 @@
     color: rgb(221, 221, 221);
 }
 
-	/* 초기화 버튼 on */
-	.css-1kwyt96 {
-	    margin-left: 5px;
-	    font-weight: 500;
-	    color: rgb(102, 102, 102);
-	}
+   /* 초기화 버튼 on */
+   .css-1kwyt96 {
+       margin-left: 5px;
+       font-weight: 500;
+       color: rgb(102, 102, 102);
+   }
 
 
 
 /* 제품 개수/필터 선택 */
 
 .wrap-filter {
-	display: inline-block;
-	width : 781px;
-	margin-left : 16px;
+   display: inline-block;
+   width : 781px;
+   margin-left : 16px;
 }
 
 .css-1d3w5wq {
@@ -173,7 +173,7 @@
 }
 
 
-	/* 요소 */
+   /* 요소 */
 .css-crqql1 {
     font-size: 14px;
     font-weight: 500;
@@ -220,7 +220,7 @@
 }
 
 .css-5uzvtq.firstLi::before {
-	display:none;
+   display:none;
 }
 
 
@@ -229,6 +229,12 @@
 /* product list */
 
 .css-11kh0cw {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 249px);
+    gap: 31px 18px;
+    width: 100%;
+}
+.css-11kh0cw2 {
     display: grid;
     grid-template-columns: repeat(auto-fill, 249px);
     gap: 31px 18px;
@@ -260,7 +266,7 @@
 }
 
 .css-1kth2sq .css-0 {
-	position: absolute;
+   position: absolute;
     inset: 0px;
     box-sizing: border-box;
     padding: 0px;
@@ -396,7 +402,7 @@
 
 .css-1d20dg7:hover {
     background-color: rgb(247, 247, 247);
-	
+   
 }
 
 
@@ -417,4 +423,3 @@
     margin: 0px auto 16px;
     background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHN0cm9rZT0iI0Q5RDlEOSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxwYXRoIGQ9Ik0zNy42MTMgMTkuMzEyYzAgNS43NjgtMi41MDggMTAuNzgzLTYuNTIgMTQuMDQ0LTMuMjYgMi43NTgtNy4yNzIgNC4yNjMtMTEuNzg2IDQuMjYzQzkuMDI1IDM3LjYxOSAxIDI5LjM0MyAxIDE5LjMxMiAxIDkuMDMgOS4yNzYgMS4wMDYgMTkuMzA3IDEuMDA2IDI5LjMzNy43NTUgMzcuNjEzIDkuMDMgMzcuNjEzIDE5LjMxMnpNNDYuMTM5IDQ2LjEzOSAzMi43MDQgMzIuNzA0Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=) 50% 50% no-repeat;
 }
-
