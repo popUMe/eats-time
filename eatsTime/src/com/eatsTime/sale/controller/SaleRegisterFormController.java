@@ -6,6 +6,7 @@ import java.util.Optional;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.eatsTime.Action;
 import com.eatsTime.Result;
@@ -20,7 +21,10 @@ public class SaleRegisterFormController implements Action {
 		SaleDAO dao = new SaleDAO();
 		Long productId = Long.parseLong(Optional.ofNullable(req.getParameter("productId")).orElse("0"));
 		ProductVO productVO = dao.selectProduct(productId);
-		System.out.println(productVO.isProductCategory());
+		HttpSession session = req.getSession();
+		
+		session.setAttribute("productId", productId);
+		
 		req.setAttribute("productCategory", productVO.isProductCategory());
 		req.setAttribute("productName", productVO.getProductName());
 		req.setAttribute("productPrice", productVO.getProductPrice());
@@ -28,6 +32,8 @@ public class SaleRegisterFormController implements Action {
 		req.setAttribute("productExpirationDate", productVO.getProductExpirationDate());
 		req.setAttribute("productAddress", productVO.getProductAddress());
 		req.setAttribute("productAddressDetail", productVO.getProductAddressDetail());
+		
+		req.setAttribute("productId", productVO.getProductId());
 		
 		result.setPath("/templates/member/sellingForm.jsp");
 		

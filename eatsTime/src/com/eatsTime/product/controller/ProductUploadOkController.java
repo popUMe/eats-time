@@ -78,6 +78,8 @@ public class ProductUploadOkController implements Action {
 		fileVO.setFileOriginalName(originalFileName);
 		fileVO.setFileSize(String.valueOf(Files.size(path)));
 		
+		System.out.println(String.valueOf(Files.size(path)));
+		
 		fileDAO.insert(fileVO);
 		
 		

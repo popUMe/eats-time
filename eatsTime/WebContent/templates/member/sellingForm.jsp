@@ -15,7 +15,7 @@
 <body>
 	<jsp:include page="../header.jsp" />
 	<div class="css-pculus">
-		<div class="css-o5dw7d">상품 등록</div>
+		<div class="css-o5dw7d">판매 등록</div>
 		<div class="css-mhmtvt">
 			<div class="css-rb0i47">
 				<span class="css-qq9ke6">*</span> 필수입력사항
@@ -191,11 +191,11 @@
 					</div>
 				</div>
 
-				<div class="css-1pjgd36">
+				<div class="css-1pjgd36" style="display: none">
 					<div class="css-1y8737n">
 						<label class="css-1obgjqh">상품 이미지<span class="css-qq9ke6">*</span></label>
 					</div>
-					<div class="css-82a6rk">
+					<div class="css-82a6rk" >
 						<div class="css-jmalg">
 							<div class="css-176lya2">
 
