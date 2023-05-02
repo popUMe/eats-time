@@ -44,10 +44,10 @@
 			<div class="css-fexq9b eo7pjfk4">
 				<c:choose>
 					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'SELLER'}">
-						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/saleListOk.sale">마이페이지</a>
+						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/productUploadList.product">마이페이지</a>
 					</c:when>
 					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'PURCHASER'}">
-						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/productUploadList.product">마이페이지</a>
+						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/purchaseProduct.purchase">마이페이지</a>
 					</c:when>
 				</c:choose>
 				<div class="css-1qgm48u eo7pjfk0"></div>
