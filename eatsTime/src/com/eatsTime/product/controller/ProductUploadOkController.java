@@ -41,6 +41,9 @@ public class ProductUploadOkController implements Action {
 		Long memberId = memberVO.getMemberId();
 
 		String root = req.getServletContext().getRealPath("/") + "upload/";
+		System.out.println(req.getServletContext());
+		System.out.println(req.getServletContext().getRealPath("/"));
+		System.out.println(root);
 		int fileSize = 1024 * 1024 * 20;
 		
 		MultipartRequest multipartRequest = new MultipartRequest(req, root, fileSize, "UTF-8", new DefaultFileRenamePolicy());
