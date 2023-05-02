@@ -74,7 +74,7 @@
 					<a href="${pageContext.request.contextPath}/answerList.answerBoard">목록</a>
 				</button>
 				<button class="btn">
-					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?ansbId=${boards.ansbId}" >삭제</a>
+					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?ansbId=${boards.ansbId}&inqbId=${boards.inqbId}" >삭제</a>
 				</button>
 			</div>
 		</div>
