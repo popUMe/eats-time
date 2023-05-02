@@ -47,17 +47,17 @@
 						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/saleListOk.sale">마이페이지</a>
 					</c:when>
 					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'PURCHASER'}">
-						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/SaleRegister.sale">마이페이지</a>
+						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/productUploadList.product">마이페이지</a>
 					</c:when>
 				</c:choose>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/logout.member">로그아웃</a>
 				<div class="css-1qgm48u eo7pjfk0"></div>
 				<div class="css-1qolcqm eo7pjfk3" id="board">
-					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/listOk.notificationboard">고객센터<span
+					<a class="css-1pu21l0 eo7pjfk2" href="${pageContext.request.contextPath}/noticeListOk.notificationboard">고객센터<span
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.notificationboard">공지사항</a>
+						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeListOk.notificationboard">공지사항</a>
 						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.inquiryboard">1:1 문의</a>
 					</div>
 				</div>
@@ -160,12 +160,9 @@
 	 document.getElementById("submit").click();
 	 }
 	 }); */
-
-
 		function search() {
 		 location.href=`${pageContext.request.contextPath}/productListOk.product?category=${category}&keyword=` + $("#gnb_search").val();
 		
 	}
-
 </script>
 </html>

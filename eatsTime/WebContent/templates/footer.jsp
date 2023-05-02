@@ -39,7 +39,7 @@
 							</div>
 						</div> -->
 						<div class="css-ho1qnd eam2qm53">
-							<button class="css-1pgo3vb eam2qm55" onclick="location.href='header.jsp'">1:1 문의</button>
+							<button class="css-1pgo3vb eam2qm55" onclick="${pageContext.request.contextPath}/listOk.inquiryboard">1:1 문의</button>
 							<div class="css-1lxmeik eam2qm52">
 								365일<br>고객센터 운영시간에 순차적으로 답변드리겠습니다.
 							</div>
@@ -107,9 +107,9 @@
 						012 - 3456 - 7899
 					</div>
 					<ul class="css-zjik7 ek68y4g1">
-						<a href="https://instagram.com/marketkurly" target="_blank"
+						<a href="" target="_blank"
 							rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
-							src=""
+							src="https://res.kurly.com/pc/ico/1810/ico_instagram.png"
 							alt="컬리 인스타그램 바로가기"></a>
 						<a href="" target="_blank"
 							rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
@@ -117,15 +117,15 @@
 							alt="컬리 페이스북 바로가기"></a>
 						<a href="" target="_blank"
 							rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
-							src=""
+							src="https://res.kurly.com/pc/ico/1810/ico_blog.png"
 							alt="컬리 네이버블로그 바로가기"></a>
 						<a href="" target="_blank"
 							rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
-							src=""
+							src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png"
 							alt="컬리 네이버포스트 바로가기"></a>
 						<a href=""
 							target="_blank" rel="noreferrer" class="css-9ipg3 ek68y4g0"><img
-							src=""
+							src="https://res.kurly.com/pc/ico/1810/ico_youtube.png"
 							alt="컬리 유튜브 바로가기"></a>
 					</ul>
 				</div>
