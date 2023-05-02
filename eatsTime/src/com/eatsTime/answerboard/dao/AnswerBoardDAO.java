@@ -66,7 +66,7 @@ public class AnswerBoardDAO {
 	
 //	답변 여부
 	public void deleteanswer(Long ansbId) {
-		sqlSession.update("answerboard.selectyesno", ansbId);
+		sqlSession.update("answerboard.deleteanswer", ansbId);
 	}
 	
 
