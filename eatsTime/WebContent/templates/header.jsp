@@ -31,8 +31,6 @@
 						class="css-1lrerrk eo4j3y50"></span></a>
 					<div class="menu css-1ia5eje ecncdj41">
 						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/noticeListOk.notificationboard">공지사항</a>
-						<a class="css-12olpw6 ecncdj40" href="${pageContext.request.contextPath}/listOk.inquiryboard">1:1
-							문의</a>
 					</div>
 				</div>
 			</div>
@@ -44,10 +42,10 @@
 			<div class="css-fexq9b eo7pjfk4">
 				<c:choose>
 					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'SELLER'}">
-						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/saleListOk.sale">마이페이지</a>
+						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/productUploadList.product">마이페이지</a>
 					</c:when>
 					<c:when test="${sessionScope.LOGIN_INFO.memberGrade eq 'PURCHASER'}">
-						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/productUploadList.product">마이페이지</a>
+						<a class="css-1g7d8zf eo7pjfk2" href="${pageContext.request.contextPath}/purchaseProduct.purchase">마이페이지</a>
 					</c:when>
 				</c:choose>
 				<div class="css-1qgm48u eo7pjfk0"></div>

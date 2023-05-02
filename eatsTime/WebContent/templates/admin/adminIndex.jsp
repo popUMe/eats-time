@@ -15,7 +15,7 @@
 <body>
 <div id="sidebar">
        <div id="logo">
-          <a class="logo" href="${pageContext.request.contextPath}/adminindex.notificationboard">
+          <a class="logo" href="${pageContext.request.contextPath}/listOk.main">
              <img src="${pageContext.request.contextPath}/static/image/logo.png" alt="이츠타임 로고">
           </a>
        </div>
@@ -31,7 +31,8 @@
 		<div class="btn">
 		<button type="button" id="add-btn" onclick="location.href='adminNoticeWrite.notificationboard'">작성</button>
   		<button disabled id="delete-btn" type="submit">삭제</button>
-  		</div>
+  	</div>
+  		
   	<table class="overflow" id="pagingul">
   		<tr>
 			<th style="width:30px"><input type="checkbox" id="chkAll" name="chkAll"/></th>
