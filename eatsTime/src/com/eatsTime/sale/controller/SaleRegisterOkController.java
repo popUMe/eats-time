@@ -23,13 +23,16 @@ public class SaleRegisterOkController implements Action {
 		
 		HttpSession session = req.getSession();
         memberVO = (MemberVO) session.getAttribute("LOGIN_INFO");
+        Long productId = (Long) session.getAttribute("productId");
         
         Long memberId = memberVO.getMemberId();
 		
 		SaleDAO dao = new SaleDAO();
 		SaleVO saleVO = new SaleVO();
 		
-		Long productId = Long.parseLong("3" /*req.getParameter("productId")*/);
+//		Long productId = Long.parseLong("3" /*req.getParameter("productId")*/);
+//		Long productId = Long.parseLong(req.getParameter("productId"));
+		
 		String saleTitle = req.getParameter("saleTitle");
 		String saleContent = req.getParameter("saleContent");
 		
