@@ -30,7 +30,6 @@ public class DeleteOkController implements Action {
 		
 		memberDAO.delete(memberId);
 		
-		result.setPath(req.getContextPath() + "/listOk.main");
 		return null;
 	}
 

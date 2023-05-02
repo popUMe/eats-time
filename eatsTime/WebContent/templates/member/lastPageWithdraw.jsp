@@ -84,7 +84,7 @@
 					success : function() {
 						showWarnModal("고객님의 계정은 더이상 사용이 불가하며, 다시 사용을 원하실 경우 로그인 하여 요청해주시기 바랍니다.");
 						setTimeout(function(){
-							location.href = '${pageContext.request.contextPath}/index.member';	
+							location.href = '${pageContext.request.contextPath}/listOk.main';	
 						}, 2500);
 					}
 				});
