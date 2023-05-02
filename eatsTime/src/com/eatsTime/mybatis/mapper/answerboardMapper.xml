@@ -4,8 +4,9 @@
 
 <!-- 	게시글 세부사항 -->
     <select id="select" resultType="answerBoardDTO">
-	select m.member_id, m.member_identification, i.inqb_id, i.inqb_title , i.inqb_content, i.inqb_date, i.inqb_complete
-	from tbl_inquireboard i join tbl_member m on i.member_id=m.member_id and inqb_id = #{inqbId}
+    select m.member_id, m.member_identification, i.inqb_id, i.inqb_title , i.inqb_content, i.inqb_date, i.inqb_complete, a.ansb_id
+	from tbl_member m join tbl_inquireboard i on m.member_id=i.member_id left join tbl_answerboard a on i.inqb_id=a.inqb_id
+	where i.inqb_id = #{inqbId}
 	</select>
 	
 	<!--    게시글 전체 개수 조회 -->
@@ -16,7 +17,7 @@
 	
 	<!-- 고객 내 게시글 전체 조회 -->
 	<select id="selectAll" resultType="answerBoardDTO">
-		select member_id, i.inqb_id, i.inqb_title , i.inqb_content, a.ansb_title,
+		select member_id, i.inqb_id, i.inqb_title , i.inqb_content, a.ansb_id, a.ansb_title,
 		a.ansb_content
 		from tbl_inquireboard i left join tbl_answerboard a on i.inqb_id
 		=a.inqb_id
@@ -28,7 +29,7 @@
 <!-- 관리자 고객 전체 게시글 전체 조회 -->
 	<select id="adminSelectAll" resultType="InquiryBoardDTO">
 		select i.inqb_id, i.inqb_title , i.inqb_content, m.member_identification, i.inqb_complete, i.inqb_date
-		from tbl_inquireboard i join tbl_member m
+		from tbl_inquireboard i join tbl_member m on i.member_id =m.member_id 
 		order by inqb_id desc
 		limit #{offset}, #{rowCount};
 	</select>
@@ -43,7 +44,12 @@
 	where inqb_id=#{inqbId}
 	</update>
 
-
+<!-- 답변을 삭제 떄 실행 UPDATE -->
+	<update id="deleteanswer">
+	update tbl_inquireboard
+	set inqb_complete=1
+	where inqb_id=#{inqbId}
+	</update>
 
 
 <!-- 답글 조회 -->
@@ -57,8 +63,8 @@
 	<!--    게시글 추가 -->
    <insert id="insert">
    	insert into tbl_answerboard
-   	(ansb_id, inqb_id, ansb_title, ansb_content, ansb_date)
-   	values (#{ansbId}, #{inqbId},#{ansbTitle}, #{ansbContent}, #{ansbDate})
+   	(ansb_id, inqb_id, ansb_title, ansb_content)
+   	values (#{ansbId}, #{inqbId},#{ansbTitle}, #{ansbContent})
    </insert>
       
 	
@@ -80,8 +86,8 @@
 	
 	<!-- 전체 게시글 리스트에서 게시글 삭제 -->
 	<delete id="delete">
-		delete from tbl_inquireboard
-		where inqb_id = #{inqbId}
+		delete from tbl_answerboard
+		where ansb_id = #{ansbId}
 	</delete>
 	
 </mapper>

@@ -42,7 +42,6 @@ public class ListOkController implements Action {
 		req.setAttribute("category", category);
 		String temp = req.getParameter("page");
 		int page = temp == null ? 1 : Integer.parseInt(temp);
-
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		Criteria criteria = new Criteria(page, MainDAO.getTotal(pagable), sort, category);
 		pagable.put("offset", criteria.getOffset());

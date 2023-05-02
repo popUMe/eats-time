@@ -74,7 +74,7 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
 	<!-- 0426 추가 -->
 	<!-- 관리자페이지 - 회원 전체 조회 -->
 	<select id="selectAllMember" resultType="memberVO">
-		select member_id, member_name, member_joined_date, member_status
+		select member_id, member_name, member_joined_date, member_status, member_grade
 		from tbl_member
 		order by member_id desc
 		limit #{offset}, #{rowCount}

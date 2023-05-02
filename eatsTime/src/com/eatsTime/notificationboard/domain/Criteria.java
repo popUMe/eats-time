@@ -15,7 +15,7 @@ public class Criteria {
 	}
 	
 	public Criteria(int page, int total) {
-		rowCount = 10;
+		rowCount = 5;
 		int pageCount = 5;
 
 		offset = (page - 1) * rowCount;

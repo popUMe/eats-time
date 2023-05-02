@@ -17,11 +17,11 @@
 	
 	<div id="sidebar">
 	 	<div id="logo">
-	 		<a class="logo" href="${pageContext.request.contextPath}/listOk.notificationboard">
+	 		<a class="logo" href="${pageContext.request.contextPath}/adminindex.notificationboard">
 	 			<img src="${pageContext.request.contextPath}/static/image/logo.png" alt="이츠타임 로고">
 	 		</a>
 	 	</div>
-		<a class="nav_list" href="${pageContext.request.contextPath}/listOk.notificationboard">공지사항</a> 
+		<a class="nav_list" href="${pageContext.request.contextPath}/adminindex.notificationboard">공지사항</a> 
 		<a class="nav_list" href="${pageContext.request.contextPath}/listOk.member">회원관리</a> 
 		<a class="nav_list" href="${pageContext.request.contextPath}/answerList.answerBoard">문의내역</a>
 	</div>
@@ -46,6 +46,7 @@
 							<th style="width:30px"><input type="checkbox" id="chkAll" name="chkAll"/></th>
 							<th>회원번호</th>
 							<th>이름</th>
+							<th>회원정보</th>
 							<th>가입날짜</th>
 							<th>상태</th>
 						</tr>
