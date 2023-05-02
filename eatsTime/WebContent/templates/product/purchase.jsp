@@ -146,9 +146,9 @@
                                        <br>
                                        <div height="44" class="css-t7kbxx e1uzxhvi3">
                                           <input data-testid="input-box" id="deliveryAddress"
-                                             name="purAddress" placeholder="" type="text" required=""
+                                             name="purAddress" placeholder="(주소)" type="text" required=""
                                              height="44" class="css-1quw3ub e1uzxhvi2"
-                                             value="${member_id}" readonly>
+                                             value="" readonly>
                                        </div>
                                        <br>
                                        <div height="44" class="css-t7kbxx e1uzxhvi3">
@@ -724,10 +724,10 @@
                                     document
                                           .getElementById("deliveryAddress").value = data.address; // 주소 넣기
                                     document
-                                          .querySelector("input[name=deliveryAddressDetail]").value = ""; //상세 주소 초기화
+                                          .querySelector("input[name=purAddressDetail]").value = ""; //상세 주소 초기화
                                     document
                                           .querySelector(
-                                                "input[name=deliveryAddressDetail]")
+                                                "input[name=purAddressDetail]")
                                           .focus(); //상세 주소 포커싱
                                  }
                               }).open();

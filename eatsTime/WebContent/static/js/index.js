@@ -236,7 +236,7 @@ function showList() {
    $div.append(text);
    $banner.append(banner);
    $secondDiv.append(secondText);
-
+	$notDiv.append(notFindText);
 }
 
 
