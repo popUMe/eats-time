@@ -76,11 +76,10 @@
 			</table>
 			         
 				<!-- 페이지 앞/뒤로 넘기기 버튼 --> 
-				<div class="css-15jhycr e3tf63e0">
+				<div id="paging" class="paging">
+
 				
-					<div class="css-sxxs1g eytury60">
      			 <!-- [S] 페이지 컨트롤러 -->
-               <div class="css-rdz8z7 e82lnfz1">
 <!-- 					<div class="btn"> -->
 <!-- 						<button type="button" class="btns" id="add-btn">작성</button> -->
 <!-- 						<button type="submit" class="btns" id="delete-btn" disabled>삭제</button> -->
@@ -89,23 +88,21 @@
              
 								<!-- 이전 페이지로 이동하기 -->
 								<c:if test="${prev}">
-									<a class="css-1d20dg7 e82lnfz0"
+									<a class="paging paging-move"
 										href="${pageContext.request.contextPath}/answerList.answerBoard?page=${startPage - 1}">
-										<img
-										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC"
-										alt="이전 페이지로 이동하기 아이콘">
+										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGElEQVR42mNgAIPi/8X/4QwwE5PBQJADAAKSG3cyVhtXAAAAAElFTkSuQmCC">
 									</a>
 								</c:if>
 								<c:forEach var="i" begin="${startPage}" end="${endPage}">
 									<c:choose>
 										<c:when test="${i eq page}">
-											<a class="css-19yo1fh css-1d20dg7 e82lnfz0 page-list"><c:out
+											<a class="page-list active"><c:out
 													value="${i}" /></a>
 										</c:when>
 										<c:otherwise>
 											<a
 												href="${pageContext.request.contextPath}/answerList.answerBoard?page=${i}"
-												class="css-1d20dg7 e82lnfz0 page-list"><c:out
+												class="page-list"><c:out
 													value="${i}" /></a>
 										</c:otherwise>
 									</c:choose>
@@ -113,20 +110,16 @@
 
 								<!-- 다음 페이지로 이동하기 -->
 								<c:if test="${next}">
-									<a class="css-1d20dg7 e82lnfz0"
+									<a class="paging paging-move"
 										href="${pageContext.request.contextPath}/answerList.answerBoard?page=${endPage + 1}">
-										<img
-										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg=="
-										alt="다음 페이지로 이동하기 아이콘">
+										<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg==">
 									</a>
 								</c:if>
 
 								<!-- 마지막 페이지로 이동하기 -->
-								<a class="css-1d20dg7 e82lnfz0"
+								<a class="paging paging-move"
 									href="${pageContext.request.contextPath}/answerList.answerBoard?page=${realEndPage}">
-									<img
-									src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAQAAABwkq/rAAAAIElEQVR42mMo/l/8n4GBgQFGQ5kgDowmQZCwAMImhDkAb0k27Zcisn8AAAAASUVORK5CYII="
-									alt="마지막 페이지로 이동하기 아이콘">
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAAGUlEQVR42mMo/l/8nwECQEwCHEwGhAlRBgA2mht3SwgzrwAAAABJRU5ErkJggg==">
 								</a>
 							</div>
 							<!-- [E] 페이지 컨트롤러 -->
@@ -135,10 +128,9 @@
 							<!-- 				<a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a> -->
 							<!-- 				<a href="#">4</a> <a href="#">5</a> -->
 							<!-- 			</div> -->
+							</div>
 
-						</div>
-					</div>
-				</div>
+						
 			</form>
 </body>
 <script type="text/javascript"
@@ -147,5 +139,6 @@
 <script>
 	let contextPath = `${pageContext.request.contextPath}`;
 	console.log(`${boards}`);
+	
 </script>
 </html>
