@@ -137,9 +137,9 @@
 							</div>
 						</div>
 						<div class="css-1spu0j4 ebvrvv11">
-							<button onclick="document.getElementById('formtag').submit();" disabled="disabled" class="css-13kn1it ebvrvv10">수정</button>
+							<button disabled="disabled" class="css-13kn1it ebvrvv10">수정</button>
 						</div>
-					</form>
+					
 				</div>
 			</div>
 		</div>
@@ -179,14 +179,14 @@
 					<div class="popup-content css-15yaaju e1k5padi2">1:1 문의가
 						정상적으로 수정되었습니다.</div>
 					<div class="popup-footer css-1ol9ch1 e1k5padi0">
-						<button
-							onclick="location.href='${pageContext.request.contextPath}/templates/board/qnaList.jsp'"
+						<button onclick="document.getElementById('formtag').submit();" 
 							class="css-1necch4 e1k5padi1">확인</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	</form>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>

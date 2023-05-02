@@ -7,7 +7,7 @@ $(document).ready(function() {
 	/* 답변 상태 초기 디자인 */
 	$(function() {
 		$("td:contains('답변 완료')").css("color", "green");
-		$("td:contains('답변 대기')").css("color", "red");
+		$("td:contains('답변 미완료')").css("color", "red");
 	});
 
 

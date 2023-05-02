@@ -50,7 +50,7 @@
 			
 							<!-- 게시글 목록 -->
                   
-                 
+            <div class="table-wrap">
 			<table>
 			 <tbody>
 				<tr>
@@ -71,7 +71,7 @@
 				</c:forEach>
 				</tbody>
 			</table>
-			         
+			         </div>
 				<!-- 페이지 앞/뒤로 넘기기 버튼 --> 
 				<div id="paging" class="paging">
 
