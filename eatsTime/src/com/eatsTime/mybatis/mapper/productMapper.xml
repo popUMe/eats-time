@@ -57,8 +57,23 @@
 
 	<!-- 총 상품개수 -->
 	<select id="getTotal" resultType="_int">
-		select count(product_id) FROM
-		tbl_product
+select count(s.product_id) from tbl_sale s join
+		(select
+		file_name,
+		a.*
+		from
+		tbl_file f
+		join (
+		select
+		p.*,
+		member_identification,
+		member_name
+		from
+		tbl_member m
+		join tbl_product p on
+		m.member_id = p.member_id) a
+		on
+		f.product_id = a.product_id) b on s.product_id = b.product_id
 		<where>
 			<choose>
 				<when test="category == 'pickUp'.toString()">
@@ -79,9 +94,23 @@
 
 	<!-- 배송 제품 총 개수 -->
 	<select id="getDeliveryTotal" resultType="_int">
+	select count(s.product_id) from tbl_sale s join
+		(select
+		file_name,
+		a.*
+		from
+		tbl_file f
+		join (
 		select
-		count(product_id) FROM
-		tbl_product where product_category = '1'
+		p.*,
+		member_identification,
+		member_name
+		from
+		tbl_member m
+		join tbl_product p on
+		m.member_id = p.member_id) a
+		on
+		f.product_id = a.product_id) b on s.product_id = b.product_id where product_category = '1'
 	</select>
 
 	<!-- 배송 제품 페이징 -->
@@ -122,9 +151,23 @@
 
 	<!-- 픽업 제품 총 개수 -->
 	<select id="getPickUpTotal" resultType="_int">
-		select count(product_id)
-		FROM
-		tbl_product where product_category = '0'
+select count(s.product_id) from tbl_sale s join
+		(select
+		file_name,
+		a.*
+		from
+		tbl_file f
+		join (
+		select
+		p.*,
+		member_identification,
+		member_name
+		from
+		tbl_member m
+		join tbl_product p on
+		m.member_id = p.member_id) a
+		on
+		f.product_id = a.product_id) b on s.product_id = b.product_id where product_category = '0'
 	</select>
 
 	<!-- 픽업 제품 페이징 -->
