@@ -39,7 +39,7 @@
 							</div>
 						</div> -->
 						<div class="css-ho1qnd eam2qm53">
-							<button class="css-1pgo3vb eam2qm55" onclick="${pageContext.request.contextPath}/listOk.inquiryboard">1:1 문의</button>
+							<button class="css-1pgo3vb eam2qm55" onclick="location.href='${pageContext.request.contextPath}/listOk.inquiryboard'">1:1 문의</button>
 							<div class="css-1lxmeik eam2qm52">
 								365일<br>고객센터 운영시간에 순차적으로 답변드리겠습니다.
 							</div>
