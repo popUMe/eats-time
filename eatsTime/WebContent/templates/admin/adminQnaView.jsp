@@ -55,9 +55,9 @@
 							<div>
 								답변 내용 : <c:out value="${answers.ansbContent}" />
 							</div>
-<!-- 							<div> -->
-<%-- 								답변 시간 : <c:out value="${answers.ansbDate}" /> --%>
-<!-- 							</div> -->
+							<div>
+								답변 시간 : <c:out value="${answers.ansbDate}" />
+							</div>
 						</div>
 					</c:when>
 					<c:otherwise>
@@ -74,7 +74,7 @@
 					<a href="${pageContext.request.contextPath}/answerList.answerBoard">목록</a>
 				</button>
 				<button class="btn">
-					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?inqbId=${boards.inqbId}" >삭제</a>
+					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?ansbId=${boards.ansbId}" >삭제</a>
 				</button>
 			</div>
 		</div>

@@ -164,6 +164,7 @@
                                  <span class="css-1non6l6 ey0f1wv0"></span>
                               </div>
                              <c:choose>
+                             
                              <c:when test="${boards.ansbTitle ne null}">
                               <div class="css-wm215i etpoi033">
                                  <span type="ANSWER" class="css-kfh61x etpoi032">${boards.ansbTitle}</span> <br> <span type="ANSWER"
@@ -173,11 +174,13 @@
                                  <div class="css-1kna94k etpoi031">${boards.ansbDate}</div>
                               </div> 
                               </c:when>
+                              
                               <c:otherwise>
                               <div class="css-wm215i etpoi033">
                               	<span type="ANSWER" class="css-kfh61x etpoi032">답변이 아직 등록되지 않았습니다.</span>
                               </div>
                               </c:otherwise>
+                              
                               </c:choose> 
                            </div>
                         </div>
@@ -188,7 +191,6 @@
                <div id="modal1"
                   class="swal2-container swal2-center swal2-backdrop-show"
                   style="overflow-y: auto; display: none;">
-                  모달박스
                   <div class="swal2-popup swal2-modal swal2-show"
                      style="display: flex;">
                      <div class="swal2-content">

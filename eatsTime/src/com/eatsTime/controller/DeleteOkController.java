@@ -25,7 +25,7 @@ public class DeleteOkController implements Action{
 
 		System.out.println("삭제완료");
 
-		result.setPath(req.getContextPath() + "/answerList.answerboard");
+		result.setPath(req.getContextPath() + "/detailOk.answerboard");
 		result.setRedirect(true);
 		
 		return result;
