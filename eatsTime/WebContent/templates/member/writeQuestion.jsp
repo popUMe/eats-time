@@ -146,9 +146,9 @@
                   </div>
                </div>
                <div class="css-1spu0j4 ebvrvv11">
-                  <button onclick="document.getElementById('formtag').submit();" disabled="disabled" class="css-13kn1it ebvrvv10">등록</button>
+                  <button disabled="disabled" class="css-13kn1it ebvrvv10">등록</button>
                </div>
-            </form>
+            
          </div>
       </div>
    </div>
@@ -187,12 +187,13 @@
                </style>
                <div class="popup-content css-15yaaju e1k5padi2">1:1 문의가 정상적으로 접수되었습니다.</div>
                <div class="popup-footer css-1ol9ch1 e1k5padi0">
-                  <button type="submit" onclick="location.href='${pageContext.request.contextPath}/listOk.inquiryboard'" class="css-1necch4 e1k5padi1">확인</button>
+                  <button type="submit" onclick="document.getElementById('formtag').submit();" class="css-1necch4 e1k5padi1">확인</button>
                </div>
             </div>
          </div>
       </div>
    </div>
+   </form>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script> </script>

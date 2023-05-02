@@ -40,6 +40,14 @@ public class AnswerBoardDAO {
 		System.out.println("boardDAO select 문 들어옴");
 		return sqlSession.selectOne("answerboard.select", inqbId);
 	}
+	
+
+//	게시글 상세 조회 ansb
+	public AnswerBoardDTO selectqs(Long ansbId) {
+		System.out.println("boardDAO selectqs 문 들어옴");
+		return sqlSession.selectOne("answerboard.selectqs", ansbId);
+	}
+	
 //	답변 작성
 	public void insert(AnswerBoardVO boardVO) {
 		System.out.println("AnswerBoardDao 들어옴");
@@ -69,5 +77,10 @@ public class AnswerBoardDAO {
 		sqlSession.update("answerboard.deleteanswer", ansbId);
 	}
 	
-
+//관리자 답변 수정
+	public void updateanswer(AnswerBoardDTO boardDTO) {
+		sqlSession.update("answerboard.updateanswer", boardDTO);
+	}
+	
+	
 }
