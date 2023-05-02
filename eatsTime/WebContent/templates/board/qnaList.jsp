@@ -146,6 +146,8 @@
                               <div class="css-1kl96ir ewad2cu1"></div>
                            </div>
                         </div>
+                        <c:choose>
+                        <c:when test="${boards.ansbTitle eq null}">
                         <div class="css-1oe9o3r eula2qn2">
                            <button type="button"
                               onclick="location.href=`${pageContext.request.contextPath}/update.inquiryboard?inqbId=${boards.inqbId}`"
@@ -153,6 +155,9 @@
                            <div class="css-ord49b eula2qn0"></div>
                            <button type="button" class="css-qv4hdm deletebtn">삭제</button>
                         </div>
+                        </c:when>
+                        </c:choose> 
+                        
                          <div class="css-1tsgnig e1vtrp070">
                            <div class="css-b41fnw etpoi034">
                               <div class="css-1i2xt0r etpoi030">
