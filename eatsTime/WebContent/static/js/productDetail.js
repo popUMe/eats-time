@@ -6,6 +6,7 @@
 
 let resultNum = 0;
 
+$(".total-price").text(`${product.productPrice}원`);
 
       //상품 상세 페이지 : 수량 감소 btn
    $('#decreaseQuantity').click(function() {
@@ -28,6 +29,7 @@ let resultNum = 0;
       $('#numberUpDown').text(num);
 
       resultNum = num;
+$(".total-price").text(`${product.productPrice * num}원`);
    });
    //상품 상세 페이지 : 수량 증가 btn
    $('#increaseQuantity').click(function() {
@@ -49,6 +51,7 @@ let resultNum = 0;
       $('#numberUpDown').text(num);
 
       resultNum = num;
+$(".total-price").text(`${product.productPrice * num}원`);
 
    });
 

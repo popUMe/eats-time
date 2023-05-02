@@ -137,8 +137,7 @@
 												aria-label="수량올리기" class="css-18y6jr4 e1hx75jb0"></button>
 										</div>
 										<div>
-											<span class="css-1foiu5e e1bjklo10"><c:out
-													value="${productId.productPrice}" />원</span>
+											<span class="css-1foiu5e e1bjklo10 total-price"></span>
 										</div>
 									</div>
 								</div>
@@ -149,9 +148,8 @@
 						<div class="css-ixlb9s eebc7rx8">
 							<div class="css-yhijln eebc7rx7">
 								<span class="css-w1is7v eebc7rx6">총 상품금액 :</span> <span
-									class="css-x4cdgl eebc7rx5"><c:out
-										value="${productId.productPrice}" /></span> <span
-									class="css-1jb8hmu eebc7rx4">원</span>
+									class="css-x4cdgl eebc7rx5"></span> <span
+									class="css-1jb8hmu eebc7rx4 total-price"></span>
 							</div>
 						</div>
 					</div>
