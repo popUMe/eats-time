@@ -92,6 +92,12 @@
 	<script>
 		showWarnModal("아이디 또는 비밀번호를<br>확인해주세요");
 	</script>
+</c:if>
+	
+<c:if test="${not empty param.status}">
+	<script>
+		showWarnModal("탈퇴 또는 정지된 회원입니다. 고객센터로 문의해주시기 바랍니다");
+	</script>
 </c:if>	
 
 </main>

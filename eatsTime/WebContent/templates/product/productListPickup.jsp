@@ -197,6 +197,7 @@
    let products = JSON.parse(`${product}`);
    let category = `${category}`;
    let sort = `${sort}`;
+   let keyword= `${keyword}`;
 </script>
 <script src="${pageContext.request.contextPath}/static/js/product.js"></script>
 </html>

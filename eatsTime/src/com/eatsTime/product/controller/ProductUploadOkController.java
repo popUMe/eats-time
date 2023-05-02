@@ -3,7 +3,6 @@ package com.eatsTime.product.controller;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -78,6 +77,8 @@ public class ProductUploadOkController implements Action {
 		fileVO.setFileName(fileName);
 		fileVO.setFileOriginalName(originalFileName);
 		fileVO.setFileSize(String.valueOf(Files.size(path)));
+		
+		System.out.println(String.valueOf(Files.size(path)));
 		
 		fileDAO.insert(fileVO);
 		
