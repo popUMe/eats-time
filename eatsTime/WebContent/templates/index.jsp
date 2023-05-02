@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="${pageContext.request.contextPath}/static/image/favicon.png" />
+<link rel="icon"
+	href="${pageContext.request.contextPath}/static/image/favicon.png" />
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/static/css/main.css" />
 <link rel="stylesheet"
@@ -47,10 +48,12 @@
 									<div id="last-temp"></div>
 								</div>
 								<div class="arrow prev">
-									<img src="${pageContext.request.contextPath}/static/image/arrow.png">
+									<img
+										src="${pageContext.request.contextPath}/static/image/arrow.png">
 								</div>
 								<div class="arrow next">
-									<img src="${pageContext.request.contextPath}/static/image/arrow.png">
+									<img
+										src="${pageContext.request.contextPath}/static/image/arrow.png">
 								</div>
 
 								<div class="dots" style="display: none">
@@ -193,10 +196,12 @@
 					</div>
 				</div>
 				
+
+
 				<!-- 이상품어때요? -->
 				<div class="css-emt8cc e12kjs5e0">
 					<div id="container" class="css-1i60c0e e13nsthd2">
-					
+
 
 						<!-- [S] title -->
 						<h3 class="css-i804ml eaf14xt0">이 상품 어때요?</h3>
@@ -204,35 +209,61 @@
 
 						<!-- [S] contents -->
 						<div class="css-pzlq5x e13nsthd1">
-
+						
+							
 							<!-- [S] 제품리스트 wrap -->
 							<div class="css-1d3w5wq ef36txc6">
-
+								   <!-- index img 배너 -->
+                     <%--    <div class="css-127g5zj e17fdfn91">
+                           <div class="css-59n5un e1ne12di0">
+                              <a href="${pageContext.request.contextPath}/serviceInfo.main"
+                                 class="css-1lougm2 ezbfqia4"><span
+                                 style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                                    alt="eatsTime 소개" sizes="100vw"
+                                    src="${pageContext.request.contextPath}/static/image/main_banner_min01.jpg"
+                                    decoding="async" data-nimg="fill" class="css-0"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span></a>
+                           </div>
+                        </div> --%>
 								<!-- [S] 제품 리스트 -->
-								<div class="css-11kh0cw ef36txc5">
-
-								</div>
+								<div class="css-11kh0cw ef36txc5"></div>
 								<!-- [E] 제품 리스트 -->
 
 
 							</div>
+							
+							
 							<!-- [E] 제품리스트 -->
+							
 						</div>
+                      
 						<!-- [E] contents -->
 					</div>
+					   <!-- index img 배너 -->
+                        <div class="css-127g5zj e17fdfn91">
+                           <div class="css-59n5un e1ne12di0">
+                              <a href="${pageContext.request.contextPath}/serviceInfo.main"
+                                 class="css-1lougm2 ezbfqia4"><span
+                                 style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img
+                                    alt="eatsTime 소개" sizes="100vw"
+                                    src="${pageContext.request.contextPath}/static/image/main_banner_min01.jpg"
+                                    decoding="async" data-nimg="fill" class="css-0"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"></span></a>
+                           </div>
+                        </div>
 
 				</div>
 
 			</div>
 		</div>
 	</div>
-	
+
 	<jsp:include page="footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>let contextPath = "${pageContext.request.contextPath}"
-		let products = JSON.parse(`${product}`);
-		
+<script>
+	let contextPath = "${pageContext.request.contextPath}"
+	let products = JSON.parse(`${product}`);
 </script>
 <script src="${pageContext.request.contextPath}/static/js/index.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/product.js"></script>
