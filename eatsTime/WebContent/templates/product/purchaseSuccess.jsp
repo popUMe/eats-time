@@ -203,9 +203,6 @@
                </ul>
             </div>
             <div class="css-a0s0c2 e1ax7ftx0">
-               <button class="css-o6ldsh e4nu7ef3" type="button">
-                  <span class="css-ymwvow e4nu7ef1">주문 상세보기</span>
-               </button>
                <button class="css-6682oh e4nu7ef3" type="button" onclick="location.href='${pageContext.request.contextPath}/productListOk.product';">
                   <span class="css-ymwvow e4nu7ef1">쇼핑 계속하기</span>
                </button>

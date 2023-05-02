@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.eatsTime.Action;
 import com.eatsTime.Result;
@@ -18,11 +19,12 @@ public class ModifyOkController implements Action {
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
 		Result result = new Result();
-
-//		Long boardId = Long.valueOf(req.getParameter("memberId"));
 		
-		memberVO.setMemberId(1L);
-//		memberVO.setMemberId(boardId);
+		HttpSession session = req.getSession();
+		memberVO = (MemberVO) session.getAttribute("LOGIN_INFO");
+		Long memberId = memberVO.getMemberId();
+
+		memberVO.setMemberId(memberId);
 		
 		memberVO.setMemberIdentification(req.getParameter("memberIdentification"));
 		memberVO.setMemberPw(req.getParameter("memberPw"));
@@ -32,7 +34,6 @@ public class ModifyOkController implements Action {
 		memberVO.setMemberGender(req.getParameter("memberGender"));
 		memberVO.setMemberBirthday(req.getParameter("memberBirthday"));
 		
-		System.out.println(req.getParameter("memberBirthday"));
 		memberDAO.update(memberVO);
 		
 		result.setRedirect(true);

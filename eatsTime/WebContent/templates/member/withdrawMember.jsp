@@ -190,7 +190,7 @@
 								<p class="css-1ozil7i error5"></p>
 							</div>
 						</div>
-						<div class="css-1w0ksfz e744wfw2">
+						<div class="css-1w0ksfz e744wfw2" style="visibility:hidden">
 							<button class="css-ufulao e4nu7ef3" type="button" id="checkEmail">
 								<span class="css-ymwvow e4nu7ef1">중복확인</span>
 							</button>

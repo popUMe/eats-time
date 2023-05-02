@@ -64,7 +64,7 @@ values(#{memberIdentification}, #{memberPw}, #{memberName}, #{memberEmail}, #{me
       member_Id = #{memberId}
    </update>
 
-	<update id="delete" parameterType="_int">
+	<update id="delete">
 		update tbl_member
 		set
 		member_status= 0

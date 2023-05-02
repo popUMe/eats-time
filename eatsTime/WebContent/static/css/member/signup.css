@@ -280,6 +280,7 @@ input[type=radio] {
 	height: 44px;
 	display: flex;
 	-webkit-box-align: center;
+	justify-content: center;
 	align-items: center;
 	width: 100%;
 	border: 1px solid rgb(204, 204, 204);
@@ -316,19 +317,6 @@ input[type=radio] {
 /*생년월일 입력 span태그*/
 .css-5lnvt6 {
 	height: 100%;
-}
-/*생년월일 입력 after태그*/
-.css-5lnvt6::after {
-	content: "/";
-	font-size: 14px;
-	color: rgb(204, 204, 204);
-	text-align: center;
-	line-height: 40px;
-}
-/*생년월일 입력 div태그*/
-.birth {
-	position: relative;
-	height: 40px;
 }
 /**/
 .css-1eo0fey {

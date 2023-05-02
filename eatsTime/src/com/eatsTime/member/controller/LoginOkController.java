@@ -46,11 +46,14 @@ public class LoginOkController implements Action{
 		memberVO.setMemberIdentification(memberIdentification);
 		memberVO.setMemberPw(memberPw);
 		MemberVO loginVO = memberDAO.login(memberVO);
-
 		
+
 		if(loginVO == null) {
 			//		로그인 실패
 			result.setPath(req.getContextPath() + "/login.member?login=false");
+			// 		탈퇴 계정 로그인
+		} else if(loginVO.isMemberStatus() == false) {
+			result.setPath(req.getContextPath() + "/login.member?status=false");
 		}
 		else {
 			//		로그인 성공 purchaser seller admin

@@ -247,17 +247,19 @@
 
 
 				<!-- 생년월일 -->
-				<div class="css-1pjgd36 ">
+				<div class="css-1pjgd36">
 					<div class="css-1y8737n ">
 						<label class="css-1obgjqh ">생년월일</label>
 					</div>
-					<div class="css-82a6rk ">
+					<div class="css-82a6rk birth" >
 						<div class="css-18n8lnw ">
 							<div class="css-1dkwuq4 ">
 								<div height="40" class="css-xsmgyi ">
+								<span>
 									<input data-testid="input-box" name="memberBirthday"
-										placeholder="YYYYMMDD" type="text" height="40" class="css-151eme7"
-										value="0000-00-00">
+										placeholder="YYYYMMDD" type="date" height="40" class="css-151eme7"
+										value="sysdate">
+										</span>
 								</div>
 							</div>
 						</div>
