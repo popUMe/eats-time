@@ -48,7 +48,7 @@
 	<update id="deleteanswer">
 	update tbl_inquireboard
 	set inqb_complete=1
-	where ansb_id=#{ansbId}
+	where inqb_id=#{inqbId}
 	</update>
 
 
