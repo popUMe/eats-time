@@ -48,7 +48,8 @@ public class AnswerListOkController implements Action{
 		req.setAttribute("endPage", criteria.getEndPage());
 		req.setAttribute("prev", criteria.isPrev());
 		req.setAttribute("next", criteria.isNext());
-
+		req.setAttribute("inqbDate", boardDTO.getInqbDate());
+		req.setAttribute("ansbDate", boardDTO.getAnsbDate());
 		
 		
 		System.out.println("여기까지 오나");	

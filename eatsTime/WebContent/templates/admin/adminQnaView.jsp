@@ -40,31 +40,28 @@
 
 				</div>
 				<div class="cont">
-					<br>
 					<c:out value="${inqbContent}" />
 
 				</div>
 
 				<c:choose>
 					<c:when test="${answers ne null}">
-						<div>
-							답변
+						<div style='font-size:18px; padding-left:10px; padding-top:20px;'>
+							[관리자 답변]
 							<div>
 								답변 제목 :
 								<c:out value="${answers.ansbTitle}" />
 							</div>
 							<div>
-								답변 내용 :
-								<c:out value="${answers.ansbContent}" />
+								답변 내용 : <c:out value="${answers.ansbContent}" />
 							</div>
-							<div>
-								답변 시간 :
-								<c:out value="${answers.ansbDate}" />
-							</div>
+<!-- 							<div> -->
+<%-- 								답변 시간 : <c:out value="${answers.ansbDate}" /> --%>
+<!-- 							</div> -->
 						</div>
 					</c:when>
 					<c:otherwise>
-						<div>답변이 등록 되지 않았습니다. 기다려주세요</div>
+						<div style='font-size:15px;'>답변이 등록 되지 않았으니 달아주세요.</div>
 						<button class="btn"
 							onclick="location.href='${pageContext.request.contextPath}/writeAnswer.answerBoard?inqbId=${boards.inqbId}'"
 							style="cursor: pointer;">등록</button>
@@ -74,10 +71,10 @@
 
 
 				<button class="btn">
-					<a href="${pageContext.request.contextPath}/answerList.answerBoard" class="on">목록</a>
+					<a href="${pageContext.request.contextPath}/answerList.answerBoard">목록</a>
 				</button>
 				<button class="btn">
-					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?inqbId=${boards.inqbId}" class="on">삭제</a>
+					<a href="${pageContext.request.contextPath}/deleteAnswer.answerBoard?inqbId=${boards.inqbId}" >삭제</a>
 				</button>
 			</div>
 		</div>
