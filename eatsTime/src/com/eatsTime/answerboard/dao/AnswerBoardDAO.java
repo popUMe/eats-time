@@ -47,21 +47,26 @@ public class AnswerBoardDAO {
 	}
 	
 //	답변 조회
-	public AnswerBoardDTO selectAnswer(Long inqbId) {
+	public AnswerBoardDTO selectAnswer(Long ansbId) {
 		System.out.println("boardDAO select 문 들어옴");
-		return sqlSession.selectOne("answerboard.selectAnswer", inqbId);
+		return sqlSession.selectOne("answerboard.selectAnswer", ansbId);
 	}
 
 //	전체 게시글 리스트에서 게시글 삭제
-	public void delete(Long inqbId) {
+	public void delete(Long ansbId) {
 		System.out.println("AnswerBoardDao 들어옴");
-		sqlSession.delete("answerboard.delete", inqbId);
+		sqlSession.delete("answerboard.delete", ansbId);
 	}
 
 //	답변 여부
 	public void updateyesno(Long inqbId) {
 		sqlSession.update("answerboard.selectyesno", inqbId);
 
+	}
+	
+//	답변 여부
+	public void deleteanswer(Long ansbId) {
+		sqlSession.update("answerboard.selectyesno", ansbId);
 	}
 	
 

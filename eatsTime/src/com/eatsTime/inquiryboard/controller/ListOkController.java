@@ -35,7 +35,7 @@ public class ListOkController implements Action {
 		
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		Criteria criteria = new Criteria(page, boardDAO.getTotal());
-		
+
 		HttpSession session = req.getSession();
 		memberVO = (MemberVO) session.getAttribute("LOGIN_INFO");
 		
@@ -56,14 +56,11 @@ public class ListOkController implements Action {
 		System.out.println(boardDAO.selectAll(pagable));
 		
 		
-		AnswerBoardDTO answerboardDTO=new AnswerBoardDTO();
-		
-		AnswerBoardDAO answerboardDAO=new AnswerBoardDAO();
+//		AnswerBoardDTO answerboardDTO=new AnswerBoardDTO();
+//		
+//		AnswerBoardDAO answerboardDAO=new AnswerBoardDAO();
 
-//		Long inqbId = answerboardDTO.getInqbId();
-//
-//		answerboardDAO.updateyesno(inqbId);
-		
+
 	
 
 		result.setPath("templates/board/qnaList.jsp");

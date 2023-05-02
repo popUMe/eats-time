@@ -5,11 +5,13 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.eatsTime.Action;
 import com.eatsTime.Result;
 import com.eatsTime.inquiryboard.dao.InquiryBoardDAO;
 import com.eatsTime.inquiryboard.domain.InquiryBoardVO;
+import com.eatsTime.member.domain.MemberVO;
 
 
 public class WriteOkController implements Action {
@@ -21,6 +23,7 @@ public class WriteOkController implements Action {
 
 	InquiryBoardVO boardVO = new InquiryBoardVO();
 	InquiryBoardDAO boardDAO = new InquiryBoardDAO();
+	MemberVO memberVO = new MemberVO();
 	
 	Result result=new Result();
 	
@@ -28,7 +31,10 @@ public class WriteOkController implements Action {
 	System.out.println(req.getParameter("inqbTitle"));
 	System.out.println(req.getParameter("inqbContent"));
 	
-	boardVO.setMemberId(1L);
+	HttpSession session = req.getSession();
+	memberVO = (MemberVO) session.getAttribute("LOGIN_INFO");
+	
+	boardVO.setMemberId(memberVO.getMemberId());
 	boardVO.setInqbTitle(req.getParameter("inqbTitle"));
 	boardVO.setInqbContent(req.getParameter("inqbContent"));
 	

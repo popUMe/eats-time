@@ -44,9 +44,6 @@ public class DetailOkController implements Action{
 	
 	
 	
-	
-	
-	
 	result.setPath("templates/admin/adminQnaView.jsp");
 	
 	return result;

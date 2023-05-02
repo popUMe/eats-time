@@ -18,10 +18,14 @@ public class DeleteOkController implements Action {
 		AnswerBoardDAO boardDAO = new AnswerBoardDAO();
 		Result result = new Result();
 		
-		Long inqbId = Long.valueOf(req.getParameter("inqbId"));
-		boardDAO.delete(inqbId);
+		
+		Long ansbId = Long.valueOf(req.getParameter("ansbId"));
+		boardDAO.delete(ansbId);
 
 		System.out.println("삭제완료");
+		
+		boardDAO.deleteanswer(ansbId);
+
 		result.setPath(req.getContextPath() + "/listOk.answerBoard");
 		result.setRedirect(true);
 
