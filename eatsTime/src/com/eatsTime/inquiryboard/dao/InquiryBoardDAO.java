@@ -17,7 +17,6 @@ public class InquiryBoardDAO {
       sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	
 	public InquiryBoardVO select(Long inqbId) {
 		return sqlSession.selectOne("inquiryboard.select", inqbId);
 	}
@@ -39,7 +38,6 @@ public class InquiryBoardDAO {
 		System.out.println("InquiryBoardDao 들어옴");
 		sqlSession.insert("inquiryboard.insert", boardVO);
 	}
-	
 	
 //	게시글 답변 상태
 	public String complete() {
