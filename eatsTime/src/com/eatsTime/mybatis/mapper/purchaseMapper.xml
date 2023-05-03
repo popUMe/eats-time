@@ -24,7 +24,7 @@
 		from tbl_product
 		p1, tbl_purchase p2, tbl_file f
 		where p1.product_id = p2.product_id and
-		p2.product_id = f.product_id
+		p2.product_id = f.product_id and p2.member_id = #{memberId}
 	</select>
 
 	<!-- 구매내역 상세 select -->
