@@ -23,7 +23,6 @@ public class DetailOkController implements Action{
 	
 	System.out.println("detailOk 들어옴");
 	
-	System.out.println(Long.valueOf(req.getParameter("inqbId")));
 	Long inqbId = Long.valueOf(req.getParameter("inqbId"));
 
 	
@@ -35,13 +34,11 @@ public class DetailOkController implements Action{
 	req.setAttribute("inqbContent", boardDTO.getInqbContent());
 	req.setAttribute("memberIdentification", boardDTO.getMemberIdentification());
 	req.setAttribute("inqbDate", boardDTO.getInqbDate());
+	req.setAttribute("ansbDate", boardDTO.getAnsbDate());
 	
 	AnswerBoardDTO answerDTO=boardDAO.selectAnswer(inqbId);
 	
 	req.setAttribute("answers", answerDTO);
-	
-	
-	
 	
 	
 	result.setPath("templates/admin/adminQnaView.jsp");
