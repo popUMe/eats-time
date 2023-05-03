@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.eatsTime.member.domain.MemberVO;
 import com.eatsTime.mybatis.config.MyBatisConfig;
 import com.eatsTime.purchase.domain.PurchaseListDTO;
 import com.eatsTime.purchase.domain.PurchaseVO;
@@ -21,8 +22,8 @@ public class PurchaseDAO {
    }
    
    // 구매내역 조회
-	public List<PurchaseListDTO> selectAll() {
-		return sqlSession.selectList("purchase.selectAll");
+	public List<PurchaseListDTO> selectAll(Long memberId) {
+		return sqlSession.selectList("purchase.selectAll", memberId);
 	}
 	
 	// 구매내역 상세 조회
